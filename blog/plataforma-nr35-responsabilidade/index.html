@@ -1123,6 +1123,105 @@ body {
 @media(max-width:560px){
   .blog-cta__btn-primary, .blog-cta__btn-secondary { width: 100%; justify-content: center; }
 }
+
+/* ===================================================
+   MOBILE FIXES — experts panel 2026-04-15
+   =================================================== */
+
+/* 1. TOC: accordion no mobile */
+@media (max-width: 960px) {
+  .toc-sidebar {
+    order: -1; /* move para antes do conteudo no grid */
+    background: #f8fafb;
+    border-radius: 12px;
+    border: 1px solid #e5e7eb;
+    overflow: hidden;
+    margin-bottom: 0;
+  }
+  .toc-wrapper { position: static; padding: 0; }
+  .toc-wrapper details { }
+  .toc-title {
+    padding: 14px 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 700;
+    font-size: 14px;
+    color: #111;
+    user-select: none;
+    margin-bottom: 0;
+  }
+  .toc-title::after {
+    content: '▾';
+    font-size: 16px;
+    color: #6b7280;
+    transition: transform .25s;
+  }
+  .toc-sidebar.toc-open .toc-title::after {
+    transform: rotate(-180deg);
+  }
+  .toc-list {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .3s ease, padding .3s ease;
+    padding: 0 20px;
+  }
+  .toc-sidebar.toc-open .toc-list {
+    max-height: 400px;
+    padding: 0 20px 16px;
+  }
+  .article-layout {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    padding: 24px 20px;
+  }
+}
+
+/* 2. Hero padding: cobrir 481–640px */
+@media (max-width: 640px) {
+  .hero-section { padding: 28px 16px 36px; }
+  .hero-section h1 { font-size: clamp(22px, 6vw, 28px); }
+}
+
+/* 3. Related grid: 1 coluna mobile, 2 tablet */
+@media (max-width: 640px) {
+  .blog-related__grid,
+  .related-grid { grid-template-columns: 1fr !important; }
+  .blog-related-section { padding: 40px 0; }
+  .blog-related__title { font-size: 20px; margin-bottom: 20px; }
+}
+@media (min-width: 641px) and (max-width: 900px) {
+  .blog-related__grid,
+  .related-grid { grid-template-columns: repeat(2, 1fr) !important; }
+}
+
+/* 4. Footer: 2 colunas tablet, 1 coluna mobile */
+@media (max-width: 768px) {
+  .ft-std__grid { grid-template-columns: 1fr 1fr; gap: 32px; }
+  .ft-std { padding: 40px 0 0; }
+  .ft-std__bot { flex-direction: column; align-items: flex-start; gap: 8px; }
+}
+@media (max-width: 480px) {
+  .ft-std__grid { grid-template-columns: 1fr; gap: 28px; }
+  .ft-std__brand { margin-bottom: 4px; }
+}
+
+/* 5. mobile-bar: safe-area iPhone */
+.mobile-bar {
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+body { padding-bottom: calc(64px + env(safe-area-inset-bottom, 0px)); }
+@media (min-width: 769px) { body { padding-bottom: 0; } }
+
+/* 6. Eliminar page-loader: mostrar conteudo imediato */
+.page-loader { display: none !important; }
+
+/* 7. Right sidebar: espaçamento correto ao empilhar */
+@media (max-width: 960px) {
+  .right-sidebar { margin-top: 32px; }
+  .sidebar-author { margin-bottom: 24px; }
+}
 </style>
 <script type="application/ld+json">
 {
@@ -1156,8 +1255,7 @@ body {
 <body>
 
 <!-- LOADER -->
-<div class="page-loader" id="pageLoader">
-  <div class="spinner"></div>
+
   <div class="loader-text">Segurança em altura começa no planejamento</div>
 </div>
 
@@ -1904,5 +2002,27 @@ window.addEventListener('scroll', function() {
 </script>
 
 
+<script>
+
+// TOC accordion mobile
+(function(){
+  var toc = document.querySelector('.toc-sidebar');
+  var title = toc && toc.querySelector('.toc-title');
+  if(!toc || !title) return;
+  function isMobile(){ return window.innerWidth <= 960; }
+  title.addEventListener('click', function(){
+    if(!isMobile()) return;
+    toc.classList.toggle('toc-open');
+  });
+  // Auto-close when a link is clicked on mobile
+  var links = toc.querySelectorAll('.toc-list a');
+  links.forEach(function(a){
+    a.addEventListener('click', function(){
+      if(isMobile()) toc.classList.remove('toc-open');
+    });
+  });
+})();
+
+</script>
 </body>
 </html>
