@@ -23,7 +23,7 @@
 <link rel="preconnect" href="https://img.youtube.com">
 <link rel="preconnect" href="https://pub-bd2efcc812524f54a8c492f90052f3bd.r2.dev">
 
-<link rel="preload" as="image" href="https://movemaquinas.com.br/assets/hero-bg-BTR42O46.jpg" fetchpriority="high">
+<link rel="preload" as="image" href="/assets/hero-bg.webp" type="image/webp" fetchpriority="high">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
 <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"></noscript>
 <script type="application/ld+json">
@@ -189,7 +189,10 @@ p{color:var(--c-text-lt);line-height:1.75}
 <section class="hero" id="heroSection">
   <div class="hero__bg">
     <div class="hero__slide hero__slide--active">
-      <img src="https://movemaquinas.com.br/assets/hero-bg-BTR42O46.jpg" alt="Empilhadeira Clark em operação" width="1920" height="1080" fetchpriority="high">
+      <picture>
+        <source srcset="/assets/hero-bg.webp" type="image/webp">
+        <img src="/assets/hero-bg.jpg" alt="Empilhadeira Clark em operação em Goiânia — MoveMáquinas" width="1440" height="810" fetchpriority="high">
+      </picture>
     </div>
     <div class="hero__slide">
       <picture><source srcset="/assets/clark/empilhadeira-eletrica/lep-20-35/site_lep_factory_1.webp" type="image/webp"><img src="/assets/clark/empilhadeira-eletrica/lep-20-35/site_lep_factory_1.jpg" alt="Empilhadeira elétrica Clark LEP em armazém — MoveMáquinas Goiânia" width="1200" height="675" loading="lazy"></picture>
