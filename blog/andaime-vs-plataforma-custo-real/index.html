@@ -872,6 +872,89 @@ body {
   background: var(--color-primary); color: #fff;
 }
 
+/* ── SIDEBAR NOVA (sb-block) ── */
+.sb-block {
+  border-radius: 14px; padding: 22px; margin-bottom: 20px;
+}
+.sb-block__title {
+  font-size: 11px; font-weight: 700; text-transform: uppercase;
+  letter-spacing: .08em; color: var(--color-text-muted);
+  margin-bottom: 16px;
+}
+
+/* Autor */
+.sb-block--author { background: var(--color-surface); }
+.sb-author {
+  display: flex; gap: 12px; align-items: center; margin-bottom: 12px;
+}
+.sb-author__avatar {
+  width: 56px; height: 56px; border-radius: 50%;
+  object-fit: cover; flex-shrink: 0;
+  border: 2px solid var(--color-primary);
+}
+.sb-author__name {
+  font-size: 14px; font-weight: 700; color: var(--color-dark); margin-bottom: 2px;
+}
+.sb-author__role {
+  font-size: 12px; color: var(--color-text-muted); line-height: 1.4;
+}
+.sb-author__bio {
+  font-size: 13px; color: var(--color-text-muted); line-height: 1.6;
+  margin-bottom: 12px;
+}
+.sb-author__link {
+  font-size: 13px; font-weight: 600; color: var(--color-primary);
+  text-decoration: none;
+}
+.sb-author__link:hover { text-decoration: underline; }
+
+/* Artigos relacionados */
+.sb-block--related { background: #fff; border: 1px solid var(--color-border); }
+.sb-related-list { display: flex; flex-direction: column; gap: 12px; }
+.sb-related-item {
+  display: flex; align-items: flex-start; gap: 10px;
+  font-size: 13px; color: var(--color-text); line-height: 1.45;
+  text-decoration: none; transition: color .2s;
+}
+.sb-related-item:hover { color: var(--color-primary); }
+.sb-related-dot {
+  width: 7px; height: 7px; border-radius: 50%;
+  background: var(--color-primary); flex-shrink: 0; margin-top: 5px;
+}
+
+/* CTA */
+.sb-block--cta {
+  background: linear-gradient(145deg, #0f1f15 0%, #1a3020 100%);
+  border: 1px solid rgba(29,150,72,.2);
+}
+.sb-cta__eyebrow {
+  font-size: 11px; font-weight: 700; text-transform: uppercase;
+  letter-spacing: .08em; color: #4ade80; margin-bottom: 10px;
+}
+.sb-cta__title {
+  font-size: 19px; font-weight: 800; color: #fff;
+  line-height: 1.2; margin-bottom: 10px;
+}
+.sb-cta__desc {
+  font-size: 13px; color: rgba(255,255,255,.65);
+  line-height: 1.6; margin-bottom: 18px;
+}
+.sb-cta__btn {
+  display: flex; align-items: center; justify-content: center;
+  gap: 8px; width: 100%; padding: 12px;
+  border-radius: 8px; font-size: 14px; font-weight: 700;
+  text-decoration: none; transition: all .2s; margin-bottom: 8px;
+}
+.sb-cta__btn--wa {
+  background: var(--color-whatsapp); color: #fff;
+}
+.sb-cta__btn--wa:hover { background: #1da851; transform: translateY(-1px); }
+.sb-cta__btn--sec {
+  background: rgba(255,255,255,.08); color: rgba(255,255,255,.85);
+  border: 1px solid rgba(255,255,255,.15); margin-bottom: 0;
+}
+.sb-cta__btn--sec:hover { background: rgba(255,255,255,.15); }
+
 /* ── EQUIPMENT CARDS SECTION ── */
 .blog-equip-section {
   background: #f8f9fa; padding: 72px 0; border-top: 1px solid #e5e7eb;
@@ -1206,8 +1289,8 @@ body { padding-bottom: calc(64px + env(safe-area-inset-bottom, 0px)); }
 @media (max-width: 960px) {
   .right-sidebar { margin-top: 32px; }
   .sidebar-author { margin-bottom: 24px; }
-  /* sidebar-cta some no mobile: micro-cta no conteúdo já serve */
-  .sidebar-cta { display: none; }
+  /* sidebar CTA some no mobile: micro-cta no conteúdo já serve */
+  .sb-block--cta { display: none; }
 }
 </style>
 <script type="application/ld+json">
@@ -1810,34 +1893,52 @@ body { padding-bottom: calc(64px + env(safe-area-inset-bottom, 0px)); }
   <!-- RIGHT SIDEBAR -->
   <aside class="right-sidebar">
     <div class="sidebar-sticky">
-      <div class="sidebar-cta">
-        <h4>Custo andaime vs plataforma?</h4>
-        <p>Receba comparativo personalizado com custo por m² executado para a sua obra.</p>
-        <a href="https://wa.me/5562982637300?text=Ol%C3%A1%2C%20quero%20comparar%20custo%20andaime%20vs%20plataforma%20para%20minha%20obra" class="btn-sidebar">Pedir comparativo</a>
-      </div>
-      <div class="sidebar-related">
-        <h4>Artigos relacionados</h4>
-        <a href="/blog/plataforma-nr35-responsabilidade/" class="sidebar-related-item">
-          <div class="item-title">NR-35 e Trabalho em Altura</div>
-          <div class="item-meta">10 min · Segurança</div>
-        </a>
-        <a href="#" class="sidebar-related-item">
-          <div class="item-title">Por que Andaime e o Vilão do Cronograma</div>
-          <div class="item-meta">8 min · Produtividade</div>
-        </a>
-        <a href="#" class="sidebar-related-item">
-          <div class="item-title">Plataforma para Obra: Tesoura ou Articulada</div>
-          <div class="item-meta">9 min · Equipamento</div>
-        </a>
+
+      <!-- 1. SOBRE O AUTOR -->
+      <div class="sb-block sb-block--author">
+        <div class="sb-block__title">Sobre o autor</div>
+        <div class="sb-author">
+          <picture><source srcset="/assets/authors/marcio-lima.webp" type="image/webp"><img src="/assets/authors/marcio-lima.jpg" alt="Márcio Lima" class="sb-author__avatar" width="56" height="56" loading="lazy"></picture>
+          <div>
+            <div class="sb-author__name">Márcio Lima</div>
+            <div class="sb-author__role">Diretor Comercial · MoveMáquinas<br>Especialista em acesso em altura</div>
+          </div>
+        </div>
+        <p class="sb-author__bio">Mais de 20 anos no mercado de locação de equipamentos. Responsável por mais de 2.000 treinamentos NR-11 na região Centro-Oeste.</p>
+        <a href="/author/marcio-lima" class="sb-author__link">Ver perfil completo →</a>
       </div>
 
-      <!-- AUTHOR CARD -->
-      <div class="sidebar-author">
-        <picture><source srcset="/assets/authors/marcio-lima.webp" type="image/webp"><img src="/assets/authors/marcio-lima.jpg" alt="Márcio Lima — Diretor Comercial MoveMáquinas" class="sidebar-author__avatar" width="72" height="72" loading="lazy"></picture>
-        <div class="sidebar-author__name">Márcio Lima</div>
-        <div class="sidebar-author__role">Diretor Comercial · MoveMáquinas<br>Especialista em acesso em altura</div>
-        <a href="/author/marcio-lima" class="sidebar-author__link">Ver perfil do autor</a>
+      <!-- 2. ARTIGOS RELACIONADOS -->
+      <div class="sb-block sb-block--related">
+        <div class="sb-block__title">Artigos relacionados</div>
+        <nav class="sb-related-list">
+          <a href="/blog/plataforma-nr35-responsabilidade/" class="sb-related-item">
+            <span class="sb-related-dot"></span>
+            <span>NR-35 e Trabalho em Altura: O que o Engenheiro Precisa Garantir</span>
+          </a>
+          <a href="/blog/alugar-ou-comprar" class="sb-related-item">
+            <span class="sb-related-dot"></span>
+            <span>Alugar ou Comprar Empilhadeira: Quando Vale Cada Opção</span>
+          </a>
+          <a href="#" class="sb-related-item">
+            <span class="sb-related-dot"></span>
+            <span>Plataforma para Obra: Tesoura ou Articulada?</span>
+          </a>
+        </nav>
       </div>
+
+      <!-- 3. CTA -->
+      <div class="sb-block sb-block--cta">
+        <div class="sb-cta__eyebrow">MoveMáquinas · Goiânia</div>
+        <div class="sb-cta__title">Alugue seu equipamento</div>
+        <p class="sb-cta__desc">Plataformas elevatórias com manutenção inclusa, entrega em obra e suporte técnico 24h. Orçamento em até 2h.</p>
+        <a href="https://wa.me/5562982637300?text=Ol%C3%A1%2C%20vim%20do%20artigo%20andaime%20vs%20plataforma%20e%20quero%20um%20or%C3%A7amento" class="sb-cta__btn sb-cta__btn--wa" target="_blank" rel="noopener">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.11.546 4.093 1.502 5.814L0 24l6.336-1.663A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75c-1.875 0-3.65-.506-5.17-1.387l-.37-.22-3.843 1.008 1.026-3.746-.24-.384A9.715 9.715 0 012.25 12 9.75 9.75 0 0112 2.25 9.75 9.75 0 0121.75 12 9.75 9.75 0 0112 21.75z"/></svg>
+          WhatsApp
+        </a>
+        <a href="/servicos" class="sb-cta__btn sb-cta__btn--sec">Solicitar orçamento</a>
+      </div>
+
     </div>
   </aside>
 
