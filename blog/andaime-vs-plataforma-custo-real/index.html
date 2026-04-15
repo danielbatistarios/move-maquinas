@@ -240,7 +240,7 @@ body {
   padding: 40px 24px 48px;
 }
 .hero-inner { max-width: 800px; margin: 0 auto; }
-.breadcrumb { display: none !important; /* hidden */
+.breadcrumb {
   display: flex; gap: 8px; font-size: 13px;
   color: var(--color-text-muted); margin-bottom: 16px; flex-wrap: wrap;
 }
@@ -886,6 +886,29 @@ body {
   .article-content h2 { font-size: 22px; }
   .comparison-table { font-size: 12px; }
   .comparison-table th, .comparison-table td { padding: 8px 10px; }
+}
+
+
+@media (max-width: 1024px) {
+  .article-layout {
+    grid-template-columns: 1fr;
+    padding: 24px 16px;
+  }
+  .toc-sidebar, .right-sidebar { display: none; }
+  .hero-section h1 { font-size: 28px; }
+}
+@media (max-width: 768px) {
+  .main-nav { display: none; }
+  .mobile-toggle { display: flex; }
+  .hero-section { padding: 36px 20px 44px; }
+  .hero-section h1 { font-size: 24px; }
+  .opening-scene { padding: 28px 20px; }
+  .opening-scene p { font-size: 16px; }
+  .pattern-break p { font-size: 18px; }
+  .article-content h2 { font-size: 24px; }
+  .micro-cta { flex-direction: column; text-align: center; }
+  .author-box { flex-direction: column; text-align: center; }
+  .author-box .ab-avatar { margin: 0 auto; }
 }
 
 /* ===== HEADER PADRÃO ===== */
