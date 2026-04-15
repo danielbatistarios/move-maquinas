@@ -891,52 +891,7 @@ body {
 
 /* ── SEÇÕES PÓS-ARTIGO ── */
 
-/* Equipamentos */
-.blog-equip-section {
-  background: #f8fafb;
-  border-top: 1px solid #e5e7eb;
-  padding: 72px 0;
-}
-.blog-equip__inner {
-  max-width: 1200px; margin: 0 auto; padding: 0 24px;
-}
-.blog-equip__label {
-  font-size: 12px; font-weight: 700; text-transform: uppercase;
-  letter-spacing: .08em; color: var(--color-primary); margin-bottom: 12px;
-}
-.blog-equip__title {
-  font-size: clamp(22px, 3vw, 32px); font-weight: 800; color: #111;
-  margin-bottom: 40px; letter-spacing: -.02em;
-}
-.blog-equip__title em { font-style: italic; color: var(--color-primary); }
-.blog-equip__grid {
-  display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px;
-  margin-bottom: 28px;
-}
-.blog-equip__card {
-  background: #fff; border-radius: 14px; overflow: hidden;
-  border: 1px solid #e5e7eb; text-decoration: none;
-  transition: transform .25s, box-shadow .25s;
-  display: flex; flex-direction: column;
-}
-.blog-equip__card:hover { transform: translateY(-6px); box-shadow: 0 16px 40px rgba(0,0,0,.10); }
-.blog-equip__card-img { height: 180px; }
-.blog-equip__card-body { padding: 18px 20px; flex: 1; display: flex; flex-direction: column; gap: 4px; }
-.blog-equip__badge {
-  display: inline-block; font-size: 11px; font-weight: 700;
-  color: var(--color-primary); background: rgba(29,150,72,.1);
-  padding: 3px 10px; border-radius: 20px; width: fit-content; margin-bottom: 4px;
-}
-.blog-equip__card-name { font-size: 16px; font-weight: 700; color: #111; }
-.blog-equip__card-specs { font-size: 13px; color: #6b7280; margin-bottom: 8px; }
-.blog-equip__link { font-size: 13px; font-weight: 700; color: var(--color-primary); margin-top: auto; }
-.blog-equip__all {
-  display: block; text-align: center; font-size: 14px; font-weight: 700;
-  color: var(--color-primary); text-decoration: none;
-}
-.blog-equip__all:hover { text-decoration: underline; }
-@media(max-width:900px){ .blog-equip__grid { grid-template-columns: repeat(2,1fr); } }
-@media(max-width:560px){ .blog-equip__grid { grid-template-columns: 1fr; } }
+
 
 /* Artigos Relacionados */
 .blog-related-section {
@@ -1071,8 +1026,8 @@ body {
     <div class="hero-meta">
       <a href="/author/marcio-lima"><div class="author-avatar" style="cursor:pointer;">M</div></a>
       <div>
-        <strong style="color:var(--color-dark)">Marcio</strong> · Diretor Comercial, MoveMáquinas<br>
-        Abril 2026 · 12 min de leitura
+        <strong style="color:rgba(255,255,255,.9)">Márcio</strong><span style="color:rgba(255,255,255,.6)"> · Diretor Comercial, MoveMáquinas</span><br>
+        <span style="color:rgba(255,255,255,.5)">Abril 2026 · 10 min de leitura</span>
       </div>
     </div>
   </div>
@@ -1619,101 +1574,12 @@ body {
   </form>
 </section>
 
-<!-- RELATED ARTICLES -->
-<section class="related-section reveal">
-  <h2>Você também pode gostar</h2>
-  <div class="related-grid">
-    <a href="/blog/plataforma-nr35-responsabilidade/" class="related-card">
-      <div class="rc-img">&#9888;</div>
-      <div class="rc-body">
-        <span class="rc-badge">Segurança</span>
-        <div class="rc-title">NR-35 e Trabalho em Altura: O que o Engenheiro Precisa Garantir</div>
-        <div class="rc-meta">10 min · Abril 2026</div>
-      </div>
-    </a>
-    <a href="/blog/por-que-andaime-vilao-cronograma/" class="related-card">
-      <div class="rc-img">&#9203;</div>
-      <div class="rc-body">
-        <span class="rc-badge">Produtividade</span>
-        <div class="rc-title">Por que Andaime e o Vilao do Cronograma</div>
-        <div class="rc-meta">8 min · Abril 2026</div>
-      </div>
-    </a>
-    <a href="/blog/plataforma-obra-tesoura-articulada/" class="related-card">
-      <div class="rc-img">&#9650;</div>
-      <div class="rc-body">
-        <span class="rc-badge">Equipamento</span>
-        <div class="rc-title">Plataforma para Obra: Tesoura ou Articulada</div>
-        <div class="rc-meta">9 min · Marco 2026</div>
-      </div>
-    </a>
-  </div>
-</section>
 
-<!-- FINAL CTA -->
-<section class="final-cta reveal">
-  <h2>O custo real aparece quando você mede por metro executado</h2>
-  <p>MoveMáquinas: locação de plataformas com manutenção inclusa, comparativo de custo personalizado e suporte técnico 24h. Mais de 20 anos em Goiania e regiao.</p>
-  <div class="final-cta-buttons">
-    <a href="https://wa.me/5562982637300?text=Ol%C3%A1%2C%20vim%20pelo%20artigo%20andaime%20vs%20plataforma%20e%20quero%20um%20comparativo" class="btn-final-wa">
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.126.553 4.12 1.52 5.856L0 24l6.336-1.652A11.95 11.95 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75c-1.875 0-3.63-.51-5.14-1.396l-.37-.218-3.76.98.998-3.648-.24-.382A9.71 9.71 0 0 1 2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75z"/></svg>
-      WhatsApp: (62) 98263-7300
-    </a>
-    <a href="tel:+556232111515" class="btn-final-tel">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-      Ligar: (62) 3211-1515
-    </a>
-  </div>
-</section>
 
-<!-- FOOTER -->
 
-<!-- SEÇÃO EQUIPAMENTOS -->
-<section class="blog-equip-section">
-  <div class="blog-equip__inner">
-    <div class="blog-equip__label">Equipamentos disponíveis para locação</div>
-    <h2 class="blog-equip__title">Plataformas e empilhadeiras que <em>podem resolver o seu problema</em></h2>
-    <div class="blog-equip__grid">
-      <a href="/servicos" class="blog-equip__card">
-        <div class="blog-equip__card-img" style="background:url('/assets/clark/empilhadeira-combustao/gts-25-30-33/clark_gts20-33_clipped-for-web.jpg') center/cover no-repeat"></div>
-        <div class="blog-equip__card-body">
-          <span class="blog-equip__badge">Mais locado</span>
-          <div class="blog-equip__card-name">Plataforma Tesoura</div>
-          <div class="blog-equip__card-specs">Até 15m · Piso interno ou externo</div>
-          <span class="blog-equip__link">Ver opções →</span>
-        </div>
-      </a>
-      <a href="/servicos" class="blog-equip__card">
-        <div class="blog-equip__card-img" style="background:url('/assets/clark/empilhadeira-eletrica/lep-20-35/site_lep_factory_1.jpg') center/cover no-repeat"></div>
-        <div class="blog-equip__card-body">
-          <span class="blog-equip__badge">Para obra vertical</span>
-          <div class="blog-equip__card-name">Plataforma Articulada</div>
-          <div class="blog-equip__card-specs">Até 16m · Acesso restrito</div>
-          <span class="blog-equip__link">Ver opções →</span>
-        </div>
-      </a>
-      <a href="/servicos" class="blog-equip__card">
-        <div class="blog-equip__card-img" style="background:url('/assets/clark/empilhadeira-combustao/c60-70-75-80/clark_c60-80_application-for-web_01.jpg') center/cover no-repeat"></div>
-        <div class="blog-equip__card-body">
-          <span class="blog-equip__badge">Distribuidor Clark</span>
-          <div class="blog-equip__card-name">Empilhadeira Clark</div>
-          <div class="blog-equip__card-specs">Combustão ou elétrica · 1,5 a 8t</div>
-          <span class="blog-equip__link">Ver catálogo →</span>
-        </div>
-      </a>
-      <a href="/servicos" class="blog-equip__card">
-        <div class="blog-equip__card-img" style="background:url('/assets/clark/transpaleteira/swx16/clark_swx16_application1.jpg') center/cover no-repeat"></div>
-        <div class="blog-equip__card-body">
-          <span class="blog-equip__badge">Armazém</span>
-          <div class="blog-equip__card-name">Transpaleteira Elétrica</div>
-          <div class="blog-equip__card-specs">Clark · 1.500 a 2.000 kg</div>
-          <span class="blog-equip__link">Ver opções →</span>
-        </div>
-      </a>
-    </div>
-    <a href="/servicos" class="blog-equip__all">Ver todos os equipamentos →</a>
-  </div>
-</section>
+
+
+
 
 <!-- ARTIGOS RELACIONADOS -->
 <section class="blog-related-section">
