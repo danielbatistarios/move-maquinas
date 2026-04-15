@@ -278,6 +278,17 @@ body {
   line-height: 1.4;
 }
 .toc-list a:hover { color: var(--color-primary); }
+.toc-list li.toc-h3 { margin-bottom: 2px; }
+.toc-list li.toc-h3 a {
+  padding: 4px 12px 4px 24px; font-size: 12px;
+  color: var(--color-text-muted); border-left-color: transparent;
+}
+.toc-list li.toc-h3 a:hover { color: var(--color-primary); }
+.toc-list li.toc-h3 a.active {
+  color: var(--color-primary); font-weight: 600;
+  background: var(--color-primary-light); border-left-color: var(--color-primary);
+}
+
 .toc-list a.active {
   color: var(--color-primary); border-left-color: var(--color-primary);
   font-weight: 600; background: var(--color-primary-light);
@@ -1117,6 +1128,10 @@ body {
         <li><a href="#quando-comprar">Quando comprar faz sentido</a></li>
         <li><a href="#conta-24-meses">A conta de 24 meses</a></li>
         <li><a href="#custos-ocultos">Custos ocultos da compra</a></li>
+        <li class="toc-h3"><a href="#custo-parada">Parada não planejada</a></li>
+        <li class="toc-h3"><a href="#custo-obsolescencia">Obsolescência</a></li>
+        <li class="toc-h3"><a href="#custo-armazenagem">Armazenagem e seguro</a></li>
+        <li class="toc-h3"><a href="#custo-treinamento">Treinamento de operadores</a></li>
         <li><a href="#capex-vs-opex">CAPEX vs OPEX</a></li>
         <li><a href="#perguntas-frequentes">Perguntas frequentes</a></li>
       </ul>
@@ -1353,16 +1368,16 @@ body {
 
     <p>Comprar empilhadeira é como comprar imóvel. O preço de aquisição é só o começo. A conta real inclui tudo que vem depois.</p>
 
-    <h3>Tempo de parada não planejada</h3>
+    <h3 id="custo-parada">Tempo de parada não planejada</h3>
     <p>Empilhadeira própria que quebra depende do seu prazo para consertar. Peça importada? 15 a 45 dias. Técnico indisponível? Mais uma semana. Cada dia parado custa entre R$ 400 e R$ 800 em produtividade perdida. Na locação, o fornecedor substitui a máquina. Seu galpão não para.</p>
 
-    <h3>Obsolescência e desvalorização real</h3>
+    <h3 id="custo-obsolescencia">Obsolescência e desvalorização real</h3>
     <p>A depreciação contábil é de 20% ao ano. A desvalorização de mercado pode ser maior, especialmente em modelos a combustão que perdem espaço para elétricos. Revender uma máquina de 5 anos exige paciência, desconto e às vezes intermediário.</p>
 
-    <h3>Custo de armazenagem e seguro</h3>
+    <h3 id="custo-armazenagem">Custo de armazenagem e seguro</h3>
     <p>Empilhadeira parada ocupa espaço no galpão, precisa de cobertura e continua exigindo seguro. Em períodos de baixa demanda, é patrimônio que custa para existir. Para entender a <a href="#">depreciação e impacto fiscal</a> dessa escolha, vale a leitura do artigo sobre imobilizado.</p>
 
-    <h3>Treinamento e habilitação de operadores</h3>
+    <h3 id="custo-treinamento">Treinamento e habilitação de operadores</h3>
     <p>Máquina própria exige operador habilitado por NR-11, reciclagem periódica e gestão de documentação. Na locação, o custo do treinamento existe igualmente, mas o risco de operar com máquina sem laudo de inspeção atualizado fica com o locador.</p>
 
     <div class="expert-quote reveal">

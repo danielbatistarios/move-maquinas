@@ -278,6 +278,17 @@ body {
   line-height: 1.4;
 }
 .toc-list a:hover { color: var(--color-primary); }
+.toc-list li.toc-h3 { margin-bottom: 2px; }
+.toc-list li.toc-h3 a {
+  padding: 4px 12px 4px 24px; font-size: 12px;
+  color: var(--color-text-muted); border-left-color: transparent;
+}
+.toc-list li.toc-h3 a:hover { color: var(--color-primary); }
+.toc-list li.toc-h3 a.active {
+  color: var(--color-primary); font-weight: 600;
+  background: var(--color-primary-light); border-left-color: var(--color-primary);
+}
+
 .toc-list a.active {
   color: var(--color-primary); border-left-color: var(--color-primary);
   font-weight: 600; background: var(--color-primary-light);
@@ -1147,12 +1158,18 @@ body {
     <div class="toc-wrapper">
       <div class="toc-title">Neste artigo</div>
       <ul class="toc-list" id="tocList">
-        <li><a href="#erro-diária">Por que comparar só a diária e o erro</a></li>
+        <li><a href="#erro-diária">Por que comparar só a diária</a></li>
         <li><a href="#breakdown-andaime">6 linhas de custo do andaime</a></li>
         <li><a href="#breakdown-plataforma">3 linhas zeradas da plataforma</a></li>
         <li><a href="#comparativo-lado-a-lado">Comparativo lado a lado</a></li>
-        <li><a href="#cenário-500m2">Cenário 500 m² em 30 dias</a></li>
+        <li class="toc-h3"><a href="#premissas-comparativo">Premissas</a></li>
+        <li class="toc-h3"><a href="#cenario-andaime">Cenário A: Andaime</a></li>
+        <li class="toc-h3"><a href="#cenario-plataforma">Cenário B: Plataforma</a></li>
+        <li><a href="#cenário-500m2">500 m² em 30 dias</a></li>
         <li><a href="#andaime-ganha">Quando o andaime ganha</a></li>
+        <li class="toc-h3"><a href="#andaime-longa-permanencia">Obra de longa permanência</a></li>
+        <li class="toc-h3"><a href="#andaime-piso-irregular">Piso irregular</a></li>
+        <li class="toc-h3"><a href="#andaime-plataforma-ampla">Plataforma de trabalho ampla</a></li>
         <li><a href="#faq">Perguntas frequentes</a></li>
       </ul>
     </div>
@@ -1441,7 +1458,7 @@ body {
     <p>Nesse volume de servico, o andaime não apenas custa mais. Ele ameaca o prazo. As premissas estao abertas para que você ajuste a sua realidade.</p>
 
     <div class="scenario-card">
-      <h3>Premissas</h3>
+      <h3 id="premissas-comparativo">Premissas</h3>
       <ul>
         <li>Área total de servico: 500 m² de fachada</li>
         <li>Prazo: 30 dias corridos (22 dias uteis)</li>
@@ -1452,7 +1469,7 @@ body {
     </div>
 
     <div class="scenario-card">
-      <h3>Cenário A: Andaime fachadeiro</h3>
+      <h3 id="cenario-andaime">Cenário A: Andaime fachadeiro</h3>
       <ul>
         <li>Aluguel: 500 m² x R$ 12/m²/mes = R$ 6.000</li>
         <li>Montagem (3 frentes): 500 m² x R$ 20/m² = R$ 10.000</li>
@@ -1468,7 +1485,7 @@ body {
     <p class="bucket-bridge">E com plataforma?</p>
 
     <div class="scenario-card">
-      <h3>Cenário B: Plataforma tesoura 12 m</h3>
+      <h3 id="cenario-plataforma">Cenário B: Plataforma tesoura 12 m</h3>
       <ul>
         <li>Locação mensal: R$ 3.500 (valor medio)</li>
         <li>Mobilizacao ida + volta: R$ 1.300</li>
@@ -1505,7 +1522,7 @@ body {
     <p>Nem toda obra pede plataforma. Existem pelo menos tres situacoes onde o andaime fachadeiro entrega custo menor por metro quadrado executado.</p>
 
     <div class="scenario-card">
-      <h3>1. Obra de longa permanencia com uma única frente</h3>
+      <h3 id="andaime-longa-permanencia">1. Obra de longa permanência com uma única frente</h3>
       <p>Quando a fachada tem uma única frente linear, sem mudancas de posição, e o prazo e superior a 90 dias. O andaime e montado uma vez e o custo de montagem se dilui.</p>
       <p>Exemplo: pintura de fachada continua em edificio residencial com acesso livre.</p>
     </div>
@@ -1513,13 +1530,13 @@ body {
     <p class="bucket-bridge">O segundo caso envolve o terreno, não o equipamento.</p>
 
     <div class="scenario-card">
-      <h3>2. Areas com piso irregular ou sem capacidade de carga</h3>
+      <h3 id="andaime-piso-irregular">2. Áreas com piso irregular ou sem capacidade de carga</h3>
       <p>Plataformas tesoura exigem piso nivelado e com capacidade para suportar o peso do equipamento. Terrenos com desnivel acentuado, solo não compactado ou lajes com restricao de carga favorecem o andaime.</p>
       <p>Nesse caso, uma <a href="/aluguel/plataforma-elevatoria/articulada/">plataforma articulada</a> pode ser alternativa, mas precisa de avaliacao técnica.</p>
     </div>
 
     <div class="scenario-card">
-      <h3>3. Obras com necessidade de plataforma de trabalho ampla</h3>
+      <h3 id="andaime-plataforma-ampla">3. Obras com necessidade de plataforma de trabalho ampla</h3>
       <p>Quando o servico exige que varios trabalhadores operem simultaneamente na mesma altura, como concretagem de vigas ou instalação de paineis grandes, o andaime oferece superficie de trabalho continua que a plataforma não replica.</p>
     </div>
 
