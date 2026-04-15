@@ -1365,7 +1365,7 @@ document.querySelectorAll('a[href^="#"]').forEach(function(a){a.addEventListener
 function loadVideo(el,id){var img=el.querySelector('img');var play=el.querySelector('.vid-card__play');var title=el.querySelector('.vid-card__title');if(img)img.style.display='none';if(play)play.style.display='none';if(title)title.style.display='none';var iframe=document.createElement('iframe');iframe.src='https://www.youtube.com/embed/'+id+'?autoplay=1&rel=0';iframe.allow='autoplay;encrypted-media';iframe.allowFullscreen=true;el.appendChild(iframe)}
 
 /* ========== MUDANCA 2: Equipment Showcase JS ========== */
-var R2='/assets/clark/';
+var R2='https://pub-bd2efcc812524f54a8c492f90052f3bd.r2.dev/assets/clark/';
 var products=[
   {name:'S25/30/35',cat:'combustão',catLabel:'Combustão',desc:'Empilhadeira a Combustão S-Series Clark',cap:'2.500-3.500 kg',speed:'21,2 km/h',energy:'GLP ou Diesel',type:'Combustão',badge:'Mais Vendido',img:R2+'empilhadeira-combustão/gts-25-30-33/clark_gts20-33_clipped-for-web.jpg',gallery:[R2+'empilhadeira-combustão/gts-25-30-33/clark_gts20-33_clipped-for-web.jpg',R2+'empilhadeira-combustão/gts-25-30-33/clark_gts20-33_clipped_2-for-web.jpg',R2+'empilhadeira-combustão/gts-25-30-33/gts20-33-application-1039443432.jpg']},
   {name:'C60/70/75/80',cat:'combustão',catLabel:'Combustão',desc:'Empilhadeira Heavy Duty Serie C Clark',cap:'6.000-8.000 kg',speed:'25 km/h',energy:'GLP ou Diesel',type:'Combustão',badge:'',img:R2+'empilhadeira-combustão/c60-70-75-80/clark_c70_clipped-for-web.jpg',gallery:[R2+'empilhadeira-combustão/c60-70-75-80/clark_c70_clipped-for-web.jpg',R2+'empilhadeira-combustão/c60-70-75-80/clark_c60-80_application-for-web_01.jpg',R2+'empilhadeira-combustão/c60-70-75-80/clark_c60-80_detail_operator_compartment-for-web.jpg']},
