@@ -801,18 +801,57 @@ p{color:var(--c-text-lt);line-height:1.75}
 <div class="sticky"><a href="https://wa.me/5562982637300" class="btn btn--wa" target="_blank"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.5.5 0 00.612.638l4.68-1.228A11.953 11.953 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0z"/></svg>WhatsApp</a><a href="tel:+5562982637300" class="btn btn--primary"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2" transform="scale(.6) translate(4,4)"/></svg>Ligar</a></div>
 
 <script>
-/* Scroll progress */
-!function(){var b=document.querySelector('.scroll-bar');window.addEventListener('scroll',function(){var h=document.documentElement.scrollHeight-innerHeight;b.style.width=(h>0?(scrollY/h)*100:0)+'%'},{passive:!0})}();
-/* Reveal */
-!function(){var els=document.querySelectorAll('.rv');if(!els.length)return;var io=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting){x.target.classList.add('is-v');io.unobserve(x.target)}})},{threshold:.1,rootMargin:'0px 0px -40px 0px'});els.forEach(function(el){io.observe(el)})}();
-/* Carousel scroll */
-function scrollCarousel(id,dir){var t=document.getElementById(id);var w=t.querySelector(':first-child').offsetWidth+20;t.scrollBy({left:w*dir,behavior:'smooth'})}
-/* Smooth anchors */
-document.querySelectorAll('a[href^="#"]').forEach(function(a){a.addEventListener('click',function(e){var el=document.querySelector(this.getAttribute('href'));if(el){e.preventDefault();el.scrollIntoView({behavior:'smooth'})}})});
-/* Video click-to-play */
-function loadVideo(el,id){var img=el.querySelector('img');var play=el.querySelector('.vid-card__play');var title=el.querySelector('.vid-card__title');if(img)img.style.display='none';if(play)play.style.display='none';if(title)title.style.display='none';var iframe=document.createElement('iframe');iframe.src='https://www.youtube.com/embed/'+id+'?autoplay=1&rel=0';iframe.allow='autoplay;encrypted-media';iframe.allowFullscreen=true;el.appendChild(iframe)}
+/* ============================================================
+   PRIORIDADE 1 — Executa imediato (above-the-fold crítico)
+   ============================================================ */
 
-/* ========== MUDANCA 2: Equipment Showcase JS ========== */
+/* Hero Carousel Crossfade — acima da dobra, precisa estar pronto */
+!function(){
+  var slides=document.querySelectorAll('.hero__slide');
+  var dots=document.querySelectorAll('.hero__dot');
+  if(!slides.length||slides.length<2)return;
+  var current=0,total=slides.length,timer;
+  function goTo(idx){
+    slides[current].classList.remove('hero__slide--active');
+    if(dots[current])dots[current].classList.remove('hero__dot--active');
+    current=((idx%total)+total)%total;
+    slides[current].classList.add('hero__slide--active');
+    if(dots[current])dots[current].classList.add('hero__dot--active');
+  }
+  function startTimer(){timer=setInterval(function(){goTo(current+1)},5000)}
+  function resetTimer(){clearInterval(timer);startTimer()}
+  dots.forEach(function(dot){dot.addEventListener('click',function(){goTo(parseInt(this.dataset.slide));resetTimer()})});
+  var hero=document.getElementById('heroSection');
+  if(hero){hero.addEventListener('mouseenter',function(){clearInterval(timer)});hero.addEventListener('mouseleave',startTimer)}
+  startTimer();
+}();
+
+/* Smooth anchors — event delegation, custo zero */
+document.addEventListener('click',function(e){
+  var a=e.target.closest('a[href^="#"]');
+  if(!a)return;
+  var el=document.querySelector(a.getAttribute('href'));
+  if(el){e.preventDefault();el.scrollIntoView({behavior:'smooth'})}
+});
+
+/* Video click-to-play — só executa quando o usuário clica */
+function loadVideo(el,id){
+  var img=el.querySelector('img'),play=el.querySelector('.vid-card__play'),title=el.querySelector('.vid-card__title');
+  if(img)img.style.display='none';if(play)play.style.display='none';if(title)title.style.display='none';
+  var iframe=document.createElement('iframe');
+  iframe.src='https://www.youtube.com/embed/'+id+'?autoplay=1&rel=0';
+  iframe.allow='autoplay;encrypted-media';iframe.allowFullscreen=true;
+  el.appendChild(iframe);
+}
+
+/* Carousel scroll helper — chamado via onclick inline */
+function scrollCarousel(id,dir){var t=document.getElementById(id);var w=t.querySelector(':first-child').offsetWidth+20;t.scrollBy({left:w*dir,behavior:'smooth'})}
+
+/* ============================================================
+   PRIORIDADE 2 — IntersectionObserver (inicializa ao entrar na viewport)
+   ============================================================ */
+
+/* Products data — definido aqui mas showcase só inicializa quando visível */
 var R2='/assets/clark/';
 var products=[
   {name:'S25/30/35',cat:'combustão',catLabel:'Combustão',desc:'Empilhadeira a Combustão S-Series Clark',cap:'2.500-3.500 kg',speed:'21,2 km/h',energy:'GLP ou Diesel',type:'Combustão',badge:'Mais Vendido',img:R2+'empilhadeira-combustao/gts-25-30-33/clark_gts20-33_clipped-for-web.jpg',gallery:[R2+'empilhadeira-combustao/gts-25-30-33/clark_gts20-33_clipped-for-web.jpg',R2+'empilhadeira-combustao/gts-25-30-33/clark_gts20-33_clipped_2-for-web.jpg',R2+'empilhadeira-combustao/gts-25-30-33/gts20-33-application-1039443432.jpg']},
@@ -836,121 +875,94 @@ function selectProduct(idx){
   document.getElementById('eqFeatCat').textContent=p.catLabel;
   var badge=document.getElementById('eqFeatBadge');
   if(p.badge){badge.textContent=p.badge;badge.style.display='inline-flex'}else{badge.style.display='none'}
-  /* Gallery */
   var gallery=document.getElementById('eqFeatGallery');
   var dotsContainer=document.getElementById('eqFeatDots');
   if(gallery&&p.gallery){
     var html='';
-    for(var i=0;i<p.gallery.length;i++){
-      html+='<div class="eq-featured__gallery-slide"><img src="'+p.gallery[i]+'" alt="Clark '+p.name+' foto '+(i+1)+'" loading="lazy"></div>';
-    }
-    gallery.innerHTML=html;
-    gallery.scrollLeft=0;
+    for(var i=0;i<p.gallery.length;i++){html+='<div class="eq-featured__gallery-slide"><img src="'+p.gallery[i]+'" alt="Clark '+p.name+' foto '+(i+1)+'" loading="lazy"></div>'}
+    gallery.innerHTML=html;gallery.scrollLeft=0;
     if(dotsContainer){
       var dotsHtml='';
-      for(var i=0;i<p.gallery.length;i++){
-        dotsHtml+='<span class="eq-featured__gallery-dot'+(i===0?' active':'')+'"></span>';
-      }
+      for(var i=0;i<p.gallery.length;i++){dotsHtml+='<span class="eq-featured__gallery-dot'+(i===0?' active':'')+'"></span>'}
       dotsContainer.innerHTML=dotsHtml;
       gallery.onscroll=function(){
-        var scrollLeft=gallery.scrollLeft;
-        var slideWidth=gallery.offsetWidth;
-        var activeIdx=Math.round(scrollLeft/slideWidth);
-        dotsContainer.querySelectorAll('.eq-featured__gallery-dot').forEach(function(d,i){
-          d.classList.toggle('active',i===activeIdx);
-        });
+        var activeIdx=Math.round(gallery.scrollLeft/gallery.offsetWidth);
+        dotsContainer.querySelectorAll('.eq-featured__gallery-dot').forEach(function(d,i){d.classList.toggle('active',i===activeIdx)});
       };
     }
   }
-  /* Update active mini-card */
   document.querySelectorAll('.eq-mini').forEach(function(m){m.classList.remove('active')});
   var target=document.querySelector('.eq-mini[data-idx="'+idx+'"]');
   if(target)target.classList.add('active');
 }
 
-/* Hero Carousel Crossfade */
+/* Equipment showcase + pills — inicializa só quando a seção entra na viewport */
 !function(){
-  var slides = document.querySelectorAll('.hero__slide');
-  var dots = document.querySelectorAll('.hero__dot');
-  if (!slides.length || slides.length < 2) return;
-  var current = 0, total = slides.length, timer;
-
-  function goTo(idx) {
-    slides[current].classList.remove('hero__slide--active');
-    if(dots[current]) dots[current].classList.remove('hero__dot--active');
-    current = ((idx % total) + total) % total;
-    slides[current].classList.add('hero__slide--active');
-    if(dots[current]) dots[current].classList.add('hero__dot--active');
-  }
-  function startTimer() { timer = setInterval(function(){ goTo(current + 1); }, 5000); }
-  function resetTimer() { clearInterval(timer); startTimer(); }
-
-  dots.forEach(function(dot) {
-    dot.addEventListener('click', function() { goTo(parseInt(this.dataset.slide)); resetTimer(); });
-  });
-
-  var hero = document.getElementById('heroSection');
-  if(hero) {
-    hero.addEventListener('mouseenter', function() { clearInterval(timer); });
-    hero.addEventListener('mouseleave', startTimer);
-  }
-  startTimer();
-}();
-
-/* Counter Animation */
-!function(){
-  var counters = document.querySelectorAll('[data-count]');
-  if (!counters.length) return;
-  var animated = false;
-  var observer = new IntersectionObserver(function(entries) {
-    if (entries[0].isIntersecting && !animated) {
-      animated = true;
-      counters.forEach(function(el) {
-        var target = parseInt(el.dataset.count);
-        var prefix = el.dataset.prefix || '';
-        var current = 0;
-        var step = Math.ceil(target / 35);
-        var iv = setInterval(function() {
-          current = Math.min(current + step, target);
-          el.textContent = prefix + current.toLocaleString('pt-BR');
-          if (current >= target) clearInterval(iv);
-        }, 50);
+  var section=document.getElementById('equipamentos');
+  if(!section)return;
+  var initialized=false;
+  new IntersectionObserver(function(entries,obs){
+    if(!entries[0].isIntersecting||initialized)return;
+    initialized=true;
+    obs.disconnect();
+    /* Gallery arrows */
+    document.getElementById('galleryPrev')?.addEventListener('click',function(){var g=document.getElementById('eqFeatGallery');if(g)g.scrollBy({left:-g.offsetWidth,behavior:'smooth'})});
+    document.getElementById('galleryNext')?.addEventListener('click',function(){var g=document.getElementById('eqFeatGallery');if(g)g.scrollBy({left:g.offsetWidth,behavior:'smooth'})});
+    /* Category pills */
+    var pills=document.querySelectorAll('#eqPills .eq-pill');
+    var minis=document.querySelectorAll('#eqMiniGrid .eq-mini');
+    var catDefaults={'todos':0,'combustão':0,'elétrica':2,'transpaleteira':4,'selecionadora':6,'rebocador':7};
+    pills.forEach(function(pill){
+      pill.addEventListener('click',function(){
+        pills.forEach(function(p){p.classList.remove('active')});
+        this.classList.add('active');
+        var cat=this.dataset.cat;
+        minis.forEach(function(m){m.style.display=(cat==='todos'||m.dataset.cat===cat)?'':'none'});
+        if(catDefaults[cat]!==undefined)selectProduct(catDefaults[cat]);
       });
-      observer.disconnect();
-    }
-  }, { threshold: 0.3 });
-  var trustBar = document.querySelector('.hero__trust-bar');
-  if (trustBar) observer.observe(trustBar);
-}();
-
-/* Category pill filter */
-!function(){
-  var pills=document.querySelectorAll('#eqPills .eq-pill');
-  var minis=document.querySelectorAll('#eqMiniGrid .eq-mini');
-  /* Default products per category (first of each) */
-  var catDefaults={todos:0,combustão:0,elétrica:2,transpaleteira:4,selecionadora:6,rebocador:7};
-  pills.forEach(function(pill){
-    pill.addEventListener('click',function(){
-      pills.forEach(function(p){p.classList.remove('active')});
-      this.classList.add('active');
-      var cat=this.dataset.cat;
-      minis.forEach(function(m){
-        if(cat==='todos'||m.dataset.cat===cat){m.style.display=''}else{m.style.display='none'}
-      });
-      /* Select default product for this category */
-      if(catDefaults[cat]!==undefined){selectProduct(catDefaults[cat])}
     });
-  });
+  },{rootMargin:'200px 0px',threshold:0}).observe(section);
 }();
 
-/* Gallery arrows */
-document.getElementById('galleryPrev')?.addEventListener('click', function() {
-  var g = document.getElementById('eqFeatGallery');
-  if (g) g.scrollBy({ left: -g.offsetWidth, behavior: 'smooth' });
-});
-document.getElementById('galleryNext')?.addEventListener('click', function() {
-  var g = document.getElementById('eqFeatGallery');
-  if (g) g.scrollBy({ left: g.offsetWidth, behavior: 'smooth' });
+/* Counter animation — inicializa quando a trust bar entra na viewport */
+!function(){
+  var counters=document.querySelectorAll('[data-count]');
+  if(!counters.length)return;
+  var trustBar=document.querySelector('.hero__trust-bar');
+  if(!trustBar)return;
+  var animated=false;
+  new IntersectionObserver(function(entries,obs){
+    if(!entries[0].isIntersecting||animated)return;
+    animated=true;obs.disconnect();
+    counters.forEach(function(el){
+      var target=parseInt(el.dataset.count),prefix=el.dataset.prefix||'',curr=0,step=Math.ceil(target/35);
+      var iv=setInterval(function(){curr=Math.min(curr+step,target);el.textContent=prefix+curr.toLocaleString('pt-BR');if(curr>=target)clearInterval(iv)},50);
+    });
+  },{threshold:0.3}).observe(trustBar);
+}();
+
+/* Reveal animations — IO com rootMargin para pré-inicializar 80px antes */
+!function(){
+  var els=document.querySelectorAll('.rv');
+  if(!els.length)return;
+  var io=new IntersectionObserver(function(e){
+    e.forEach(function(x){if(x.isIntersecting){x.target.classList.add('is-v');io.unobserve(x.target)}})
+  },{threshold:.08,rootMargin:'0px 0px -40px 0px'});
+  els.forEach(function(el){io.observe(el)});
+}();
+
+/* ============================================================
+   PRIORIDADE 3 — requestIdleCallback (não-crítico, quando browser estiver livre)
+   ============================================================ */
+(window.requestIdleCallback||function(cb){setTimeout(cb,200)})(function(){
+  /* Scroll progress bar */
+  var b=document.querySelector('.scroll-bar');
+  if(b){
+    window.addEventListener('scroll',function(){
+      var h=document.documentElement.scrollHeight-innerHeight;
+      b.style.width=(h>0?(scrollY/h)*100:0)+'%';
+    },{passive:true});
+  }
 });
 </script>
 <style media="print" id="nc-css">
