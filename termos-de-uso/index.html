@@ -357,6 +357,9 @@
 .breadcrumb { display: none; }
 @media (max-width: 860px) {
   .hdr__nav { display: none; }
+  .hdr__mob { display: block; }
+  .hdr__nav.open { display: flex; flex-direction: column; align-items: flex-start; position: absolute; top: 60px; left: 0; right: 0; background: #fff; padding: 16px 24px; border-top: 1px solid #e5e5e5; box-shadow: 0 8px 24px rgba(0,0,0,.1); gap: 12px; z-index: 200; }
+  .hdr__nav.open a { color: #1a1a1a !important; font-size: 15px; }
 }
 </style>
 </head>
