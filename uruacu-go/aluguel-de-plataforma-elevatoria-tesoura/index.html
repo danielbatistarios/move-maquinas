@@ -16,7 +16,11 @@
 <meta name="geo.placename" content="Uruaçu, Goiás, Brasil">
 <meta name="geo.position" content="-14.5237;-49.1407">
 <meta name="ICBM" content="-14.5237, -49.1407">
+<link rel="preload" as="image" href="/assets/logo-move-maquinas.webp" type="image/webp">
 <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://img.youtube.com">
+<link rel="preconnect" href="https://pub-bd2efcc812524f54a8c492f90052f3bd.r2.dev">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
 <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet"></noscript>
@@ -206,7 +210,7 @@ p { color: var(--color-text-light); line-height: 1.8; }
 .btn { display: inline-flex; align-items: center; gap: 8px; padding: 14px 24px; border-radius: var(--radius); font-size: 1rem; font-weight: 700; text-decoration: none; cursor: pointer; border: none; transition: transform .15s, box-shadow .15s, background .15s; min-height: 48px; line-height: 1; font-family: var(--font-family); }
 .btn:hover { transform: translateY(-1px); box-shadow: var(--shadow-md); }
 .btn--wa { background: var(--color-whatsapp); color: var(--color-white); position: relative; overflow: hidden; }
-.btn--wa::after { content: ""; position: absolute; top: 0; left: -100%; width: 60%; height: 100%; background: linear-gradient(90deg, transparent, rgba(255,255,255,.15), transparent); animation: btn-shimmer 3s ease-in-out 2s infinite; }
+.btn--wa::after { content: ""; position: absolute; top: 0; left: -100%; width: 60%; height: 100%; background: linear-gradient(90deg, transparent, rgba(255,255,255,.15), transparent); animation: btn-shimmer 3s ease-in-out 2s 2; }
 @keyframes btn-shimmer { 0% { left: -100%; } 40%,100% { left: 150%; } }
 .btn--outline { background: transparent; color: var(--color-primary); border: 2px solid var(--color-primary); }
 .btn--outline:hover { background: var(--color-primary); color: var(--color-white); }
@@ -407,7 +411,7 @@ p { color: var(--color-text-light); line-height: 1.8; }
 /* ===== FLOAT WA ===== */
 .float-wa { position: fixed; right: 20px; bottom: max(28px, calc(env(safe-area-inset-bottom, 0px) + 28px)); z-index: 999; background: var(--color-whatsapp); color: var(--color-white); width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; text-decoration: none; box-shadow: var(--shadow-lg); transition: transform .2s, box-shadow .2s; }
 .float-wa:hover { transform: scale(1.08); box-shadow: 0 8px 28px rgba(37,211,102,.4); }
-.float-wa::before { content: ""; position: absolute; inset: 0; border-radius: 50%; background: inherit; z-index: -1; animation: wa-pulse 2s ease-in-out 1s 3; }
+.float-wa::before { content: ""; position: absolute; inset: 0; border-radius: 50%; background: inherit; z-index: -1; animation: wa-pulse 2s ease-in-out 1s 2; }
 @keyframes wa-pulse { 0%,100%{transform:scale(1);opacity:.6} 50%{transform:scale(1.35);opacity:0} }
 
 /* ===== SECTION HELPERS ===== */
@@ -523,24 +527,80 @@ p { color: var(--color-text-light); line-height: 1.8; }
   0%, 100% { box-shadow: 0 0 0 0 rgba(37,211,102,.4); }
   50% { box-shadow: 0 0 0 12px rgba(37,211,102,0); }
 }
-.btn--wa { animation: wa-glow 2.5s ease-in-out 3s 3; }
+.btn--wa { animation: wa-glow 2.5s ease-in-out 3s 2; }
 
 /* ===== FLOAT WA BOUNCE ===== */
 @keyframes float-bounce {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-6px); }
 }
-.float-wa { animation: float-bounce 3s ease-in-out 5s 2; }
+.float-wa { animation: float-bounce 3s ease-in-out 5s 1; }
 
 /* ===== REDUCED MOTION ===== */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition: none !important; }
   .reveal { opacity: 1; transform: none; }
 }
+/* ===== FOOTER ===== */
+.ft{background:#1a1a1a;color:rgba(255,255,255,.8);padding:64px 0 80px}
+.ft__grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1.5fr;gap:48px;margin-bottom:48px}
+.ft__logo{height:36px;filter:brightness(0) invert(1);margin-bottom:12px}
+.ft__brand p{font-size:13px;color:rgba(255,255,255,.45);max-width:260px}
+.ft__social{display:flex;gap:10px;margin-top:16px}
+.ft__social a{width:32px;height:32px;border-radius:50%;background:rgba(255,255,255,.07);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.5);transition:all .2s}
+.ft__social a:hover{background:var(--color-primary);color:#fff}
+.ft__col h4{font-size:12px;font-weight:700;color:#fff;margin-bottom:14px;text-transform:uppercase;letter-spacing:.06em}
+.ft__col li{margin-bottom:8px}
+.ft__col a{font-size:13px;color:rgba(255,255,255,.45);transition:color .2s;text-decoration:none}
+.ft__col a:hover{color:var(--color-primary)}
+.ft__ci{display:flex;align-items:flex-start;gap:10px;margin-bottom:12px}
+.ft__ci svg{flex-shrink:0;color:var(--color-primary);margin-top:2px}
+.ft__ci p{font-size:13px;color:rgba(255,255,255,.45);margin:0}
+.ft__ci a{color:rgba(255,255,255,.6);text-decoration:none}
+.ft__ci a:hover{color:var(--color-primary)}
+.ft__bot{border-top:1px solid rgba(255,255,255,.07);padding-top:20px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;font-size:11px;color:rgba(255,255,255,.3)}
+.ft__bot a{color:rgba(255,255,255,.3);text-decoration:none}
+.ft__bot a:hover{color:var(--color-primary)}
+@media(max-width:768px){.ft__grid{grid-template-columns:1fr;gap:28px}}
+
+/* ===== HEADER NAV ===== */
+.hdr { position: sticky; top: 0; z-index: 100; background: #fff; box-shadow: 0 1px 4px rgba(0,0,0,.1); }
+.hdr__in { max-width: 1200px; margin: 0 auto; padding: 0 24px; height: 60px; display: flex; align-items: center; justify-content: space-between; }
+.hdr__logo { height: 32px; width: auto; }
+.hdr__nav { display: flex; align-items: center; gap: 24px; }
+.hdr__nav a { font-size: 13px; font-weight: 600; color: var(--color-text); text-decoration: none; transition: color .2s; }
+.hdr__nav a:hover { color: var(--color-primary); }
+.hdr__cta { background: var(--color-primary) !important; color: #fff !important; padding: 8px 16px; border-radius: var(--radius); font-weight: 700 !important; white-space: nowrap; }
+.hdr__cta:hover { background: var(--color-primary-dark) !important; }
+.hdr__mob { display: none; background: none; border: none; cursor: pointer; padding: 4px; }
+@media (max-width: 860px) {
+  .hdr__nav { display: none; }
+  
+/* ===== BREADCRUMB ===== */
+.breadcrumb { display: none; }
 </style>
 </head>
 <body>
 
+
+<!-- ========== HEADER ========== -->
+<header class="hdr">
+  <div class="hdr__in">
+    <a href="/"><picture><source srcset="/assets/logo-move-maquinas.webp" type="image/webp"><img src="/assets/logo-move-maquinas.png" alt="Movemáquinas" class="hdr__logo" width="130" height="32" fetchpriority="high"></picture></a>
+    <button class="hdr__mob" aria-label="Menu" onclick="this.nextElementSibling.classList.toggle('open')">
+      <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+    </button>
+    <nav class="hdr__nav">
+      <a href="/">Início</a>
+      <a href="/servicos">Locação</a>
+      <a href="/venda-de-maquinas-clark">Venda de Máquinas Clark</a>
+      <a href="/goiania-go/curso-de-operador-de-empilhadeira">Curso Operador de Empilhadeira</a>
+      <a href="/cidades-atendidas">Cidades Atendidas</a>
+      <a href="/blog">Blog</a>
+      <a href="https://wa.me/5562982637300" class="hdr__cta" target="_blank" rel="noopener">Fale Conosco</a>
+    </nav>
+  </div>
+</header>
 <!-- Scroll progress indicator -->
 <div class="scroll-progress" aria-hidden="true"></div>
 
@@ -548,7 +608,7 @@ p { color: var(--color-text-light); line-height: 1.8; }
 <header role="banner" class="breadcrumb" aria-label="Navegação estrutural">
   <div class="container">
     <ol class="breadcrumb__list">
-      <li><a href="/"><img src="https://movemaquinas.com.br/assets/logo-move-maquinas-B2l9eWy_.png" alt="Movemáquinas" class="breadcrumb__logo" width="110" height="22" loading="eager"></a></li>
+      <li><a href="/"><picture><source srcset="/assets/logo-move-maquinas.webp" type="image/webp"><img src="/assets/logo-move-maquinas.png" alt="Movemáquinas" class="breadcrumb__logo" width="110" height="22" loading="eager"></picture></a></li>
       <li><a href="/uruacu-go/">Equipamentos em Uruaçu</a></li>
       <li><span aria-current="page">Plataforma Tesoura em Uruaçu</span></li>
     </ol>
@@ -586,9 +646,9 @@ p { color: var(--color-text-light); line-height: 1.8; }
 
       <!-- VIDEO NO HERO -->
       <aside class="hero__card" aria-label="Vídeo do produto" style="background:transparent;border:none;backdrop-filter:none;-webkit-backdrop-filter:none;padding:0;">
-        <div style="border-radius:var(--radius-lg);overflow:hidden;aspect-ratio:9/16;background:#000;cursor:pointer;box-shadow:var(--shadow-lg);" onclick="this.innerHTML='<iframe src=\'https://www.youtube.com/embed/RGVOTvukhvA?autoplay=1&rel=0\' allow=\'autoplay;encrypted-media\' allowfullscreen style=\'width:100%;height:100%;border:0;\'></iframe>'">
+        <div style="border-radius:var(--radius-lg);overflow:hidden;aspect-ratio:9/16;background:#000;cursor:pointer;box-shadow:var(--shadow-lg);" onclick="this.innerHTML='<iframe src=\'https://www.youtube.com/embed/2eA2VWmQO-8?autoplay=1&rel=0\' allow=\'autoplay;encrypted-media\' allowfullscreen style=\'width:100%;height:100%;border:0;\'></iframe>'">
           <div style="position:relative;width:100%;height:100%;display:flex;align-items:center;justify-content:center;">
-            <img src="https://img.youtube.com/vi/RGVOTvukhvA/oar2.jpg" alt="Veja a plataforma tesoura de 8 metros em ação" style="width:100%;height:100%;object-fit:cover;" loading="eager">
+            <img src="https://img.youtube.com/vi/2eA2VWmQO-8/mqdefault.jpg" alt="Veja a plataforma tesoura de 8 metros em ação" style="width:100%;height:100%;object-fit:cover;" loading="eager">
             <div style="position:absolute;width:64px;height:64px;background:rgba(0,0,0,.55);backdrop-filter:blur(4px);border-radius:50%;display:flex;align-items:center;justify-content:center;">
               <svg width="28" height="28" viewBox="0 0 24 24" fill="#fff"><polygon points="5 3 19 12 5 21 5 3"/></svg>
             </div>
@@ -764,13 +824,13 @@ p { color: var(--color-text-light); line-height: 1.8; }
     <div class="shorts-gallery">
       <div class="shorts-item" onclick="this.innerHTML='<iframe src=\'https://www.youtube.com/embed/uv6PPxyUuq4?autoplay=1&rel=0\' allow=\'autoplay;encrypted-media\' allowfullscreen></iframe>'">
         <div class="shorts-item__poster">
-          <img src="https://img.youtube.com/vi/uv6PPxyUuq4/oar2.jpg" alt="Plataforma elevatória de 7 a 12 metros" loading="lazy">
+          <img src="https://img.youtube.com/vi/uv6PPxyUuq4/mqdefault.jpg" alt="Plataforma elevatória de 7 a 12 metros" loading="lazy">
           <div class="shorts-item__play"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg></div>
         </div>
       </div>
       <div class="shorts-item" onclick="this.innerHTML='<iframe src=\'https://www.youtube.com/embed/wypDJ3U1D1k?autoplay=1&rel=0\' allow=\'autoplay;encrypted-media\' allowfullscreen></iframe>'">
         <div class="shorts-item__poster">
-          <img src="https://img.youtube.com/vi/wypDJ3U1D1k/oar2.jpg" alt="Plataformas elevatórias: conheça os modelos" loading="lazy">
+          <img src="https://img.youtube.com/vi/wypDJ3U1D1k/mqdefault.jpg" alt="Plataformas elevatórias: conheça os modelos" loading="lazy">
           <div class="shorts-item__play"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg></div>
         </div>
       </div>
@@ -1184,7 +1244,7 @@ p { color: var(--color-text-light); line-height: 1.8; }
     <div class="split split--reverse reveal">
       <div class="video-wrap">
         <div class="video-wrap__poster" onclick="this.parentElement.innerHTML='<iframe src=\'https://www.youtube.com/embed/nz21reej4UY?autoplay=1&rel=0\' allow=\'autoplay;encrypted-media\' allowfullscreen title=\'Conheça a Movemáquinas\'></iframe>'" role="button" aria-label="Reproduzir vídeo institucional Movemáquinas">
-          <img src="https://img.youtube.com/vi/nz21reej4UY/maxresdefault.jpg" alt="Vídeo Movemáquinas: locação de plataforma tesoura para frigoríficos e indústrias em Uruaçu-GO" width="640" height="360" loading="lazy">
+          <img src="https://img.youtube.com/vi/nz21reej4UY/sddefault.jpg" alt="Vídeo Movemáquinas: locação de plataforma tesoura para frigoríficos e indústrias em Uruaçu-GO" width="640" height="360" loading="lazy">
           <div class="video-wrap__play"><svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg></div>
         </div>
       </div>
@@ -1657,6 +1717,19 @@ p { color: var(--color-text-light); line-height: 1.8; }
     </div>
     <address class="cta-final__note">Movemáquinas &middot; Av. Eurico Viana, 4913, Parque das Flores, Goiânia - GO &middot; CNPJ 32.428.258/0001-80</address>
   </div>
+</footer>
+
+<!-- ========== FOOTER ========== -->
+<footer class="ft">
+<div class="container">
+  <div class="ft__grid">
+    <div class="ft__brand"><picture><source srcset="/assets/logo-move-maquinas.webp" type="image/webp"><img src="/assets/logo-move-maquinas.png" alt="Movemáquinas" class="ft__logo" width="140" height="36" loading="lazy"></picture><p>Mais de 20 anos oferecendo soluções completas em empilhadeiras e equipamentos industriais em Goiás, DF, Tocantins e Mato Grosso.</p><div class="ft__social"><a href="https://www.instagram.com/move.maquinas/" target="_blank" rel="noopener" aria-label="Instagram"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="12" height="12" rx="3"/><circle cx="8" cy="8" r="3"/></svg></a><a href="https://www.facebook.com/p/MoveM%C3%A1quinas-61554634312846/" target="_blank" rel="noopener" aria-label="Facebook"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 2H2v12h5v-4H5V8h2V6.5C7 4.6 8.1 3.5 9.9 3.5H12v2.3h-1.3c-.7 0-1.2.4-1.2 1V8h2.5l-.4 2H9.5v4H14V2z"/></svg></a><a href="https://www.youtube.com/@movemaquinas" target="_blank" rel="noopener" aria-label="YouTube"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="4" width="12" height="9" rx="2"/><path d="M10 8.5L7 10V7l3 1.5z" fill="currentColor" stroke="none"/></svg></a></div></div>
+    <div class="ft__col"><h4>Serviços</h4><ul><li><a href="/goiania-go/aluguel-de-empilhadeira-combustao">Locação de Empilhadeira</a></li><li><a href="/goiania-go/aluguel-de-plataforma-elevatoria-articulada">Locação de Plataforma Elevatória</a></li><li><a href="/goiania-go/aluguel-de-transpaleteira">Locação de Transpaleteira</a></li><li><a href="/venda-de-maquinas-clark">Venda de Máquinas Clark</a></li><li><a href="/goiania-go/curso-de-operador-de-empilhadeira">Curso de Operador de Empilhadeira</a></li></ul></div>
+    <div class="ft__col"><h4>Links Rápidos</h4><ul><li><a href="/">Início</a></li><li><a href="/sobre">Sobre Nós</a></li><li><a href="/cidades-atendidas">Cidades Atendidas</a></li><li><a href="/blog">Blog</a></li><li><a href="/contato">Contato</a></li><li><a href="/trabalhe-conosco">Trabalhe Conosco</a></li></ul></div>
+    <div class="ft__col"><h4>Contato</h4><div class="ft__ci"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2" transform="scale(.6) translate(3,3)"/></svg><p><a href="https://wa.me/5562982637300">(62) 98263-7300</a> Gabriel — Locação<br><a href="https://wa.me/5562981753350">(62) 98175-3350</a> Kaio — Peças</p></div><div class="ft__ci"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12" transform="scale(.6) translate(3,3)"/></svg><p><a href="mailto:contato@movemaquinas.com.br">contato@movemaquinas.com.br</a></p></div><div class="ft__ci"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" transform="scale(.6) translate(3,3)"/></svg><p>Av. Eurico Viana, 4913<br>Goiânia - GO | 74593-590</p></div></div>
+  </div>
+  <div class="ft__bot"><p>&copy; 2026 Movemáquinas. CNPJ: 32.428.258/0001-80</p><div style="display:flex;gap:16px"><a href="/politica-de-privacidade">Privacidade</a><a href="/termos-de-uso">Termos</a><a href="/cookies">Cookies</a></div></div>
+</div>
 </footer>
 
 <!-- ========== STICKY CTA ========== -->

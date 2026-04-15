@@ -14,7 +14,11 @@
 <meta property="og:image" content="https://movemaquinas.com.br/assets/hero-bg-BTR42O46.jpg">
 <meta property="og:url" content="https://movemaquinas.com.br/politica-de-privacidade">
 <meta name="robots" content="index, follow">
+<link rel="preload" as="image" href="/assets/logo-move-maquinas.webp" type="image/webp">
 <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://img.youtube.com">
+<link rel="preconnect" href="https://pub-bd2efcc812524f54a8c492f90052f3bd.r2.dev">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
 <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet"></noscript>
@@ -131,7 +135,7 @@ a:hover { color: var(--color-primary-btn); text-decoration: underline; }
 /* ===== FLOAT WA ===== */
 .float-wa { position: fixed; right: 20px; bottom: max(28px, calc(env(safe-area-inset-bottom, 0px) + 28px)); z-index: 999; background: var(--color-whatsapp); color: var(--color-white); width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; text-decoration: none; box-shadow: 0 4px 16px rgba(37,211,102,.35); transition: transform .2s, box-shadow .2s; }
 .float-wa:hover { transform: scale(1.08); box-shadow: 0 8px 28px rgba(37,211,102,.4); }
-.float-wa::before { content: ""; position: absolute; inset: 0; border-radius: 50%; background: inherit; z-index: -1; animation: wa-pulse 2s ease-in-out 1s 3; }
+.float-wa::before { content: ""; position: absolute; inset: 0; border-radius: 50%; background: inherit; z-index: -1; animation: wa-pulse 2s ease-in-out 1s 2; }
 @keyframes wa-pulse { 0% { transform: scale(1); opacity: .6; } 100% { transform: scale(1.6); opacity: 0; } }
 
 /* ===== RESPONSIVE ===== */

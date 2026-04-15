@@ -255,7 +255,7 @@ p { color: var(--color-text-light); line-height: 1.8; }
 /* --- FLOATING WA --- */
 .float-wa { position: fixed; right: 20px; bottom: max(28px, calc(env(safe-area-inset-bottom, 0px) + 28px)); z-index: 999; background: var(--color-whatsapp); color: #fff; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; text-decoration: none; box-shadow: var(--shadow-lg); transition: transform .2s, box-shadow .2s; }
 .float-wa:hover { transform: scale(1.08); box-shadow: 0 8px 28px rgba(37,211,102,.4); }
-.float-wa::before { content: ""; position: absolute; inset: 0; border-radius: 50%; background: inherit; z-index: -1; animation: wa-pulse 2s ease-in-out 1s 3; }
+.float-wa::before { content: ""; position: absolute; inset: 0; border-radius: 50%; background: inherit; z-index: -1; animation: wa-pulse 2s ease-in-out 1s 2; }
 @keyframes wa-pulse { 0%,100%{transform:scale(1);opacity:.6} 50%{transform:scale(1.35);opacity:0} }
 
 /* --- MOBILE --- */
@@ -296,7 +296,7 @@ p { color: var(--color-text-light); line-height: 1.8; }
 <nav class="breadcrumb" aria-label="Navegacao estrutural">
   <div class="container">
     <ol class="breadcrumb__list">
-      <li><a href="https://movemaquinas.com.br"><img src="https://movemaquinas.com.br/assets/logo-move-maquinas-B2l9eWy_.png" alt="Movemáquinas" class="breadcrumb__logo" width="110" height="22" loading="eager"></a></li>
+      <li><a href="https://movemaquinas.com.br"><picture><source srcset="/assets/logo-move-maquinas.webp" type="image/webp"><img src="/assets/logo-move-maquinas.png" alt="Movemáquinas" class="breadcrumb__logo" width="110" height="22" loading="eager"></picture></a></li>
       <li><span aria-current="page">Luziania — GO</span></li>
     </ol>
   </div>
@@ -498,7 +498,7 @@ p { color: var(--color-text-light); line-height: 1.8; }
     <div class="split reveal">
       <div class="video-wrap">
         <div class="video-wrap__poster" onclick="this.parentElement.innerHTML='<iframe src=\'https://www.youtube.com/embed/nz21reej4UY?autoplay=1&rel=0\' allow=\'autoplay;encrypted-media\' allowfullscreen title=\'Video institucional Movemáquinas\'></iframe>'" role="button" aria-label="Reproduzir video institucional da Movemáquinas">
-          <img src="https://img.youtube.com/vi/nz21reej4UY/maxresdefault.jpg" alt="Video institucional Movemáquinas" width="640" height="360" loading="lazy">
+          <img src="https://img.youtube.com/vi/nz21reej4UY/sddefault.jpg" alt="Video institucional Movemáquinas" width="640" height="360" loading="lazy">
           <div class="video-wrap__play"><svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg></div>
         </div>
       </div>
@@ -593,7 +593,7 @@ p { color: var(--color-text-light); line-height: 1.8; }
     <div class="split split--reverse reveal">
       <div class="video-wrap">
         <div class="video-wrap__poster" onclick="this.parentElement.innerHTML='<iframe src=\'https://www.youtube.com/embed/Nare91cVYo4?autoplay=1&rel=0\' allow=\'autoplay;encrypted-media\' allowfullscreen title=\'Investimento em locacao de equipamentos para Luziania\'></iframe>'" role="button" aria-label="Reproduzir video sobre precos">
-          <img src="https://img.youtube.com/vi/Nare91cVYo4/maxresdefault.jpg" alt="Quanto custa locar equipamento em Luziania — video Movemáquinas" width="640" height="360" loading="lazy">
+          <img src="https://img.youtube.com/vi/Nare91cVYo4/sddefault.jpg" alt="Quanto custa locar equipamento em Luziania — video Movemáquinas" width="640" height="360" loading="lazy">
           <div class="video-wrap__play"><svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg></div>
         </div>
       </div>

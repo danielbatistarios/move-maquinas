@@ -249,10 +249,66 @@ img { max-width: 100%; height: auto; }
 .seo-toggle svg{transition:transform .3s}
 .seo-expandable.expanded+.seo-toggle svg{transform:rotate(180deg)}
 @media(max-width:768px){.seo-expandable{max-height:120px}}
+/* ===== FOOTER ===== */
+.ft{background:#1a1a1a;color:rgba(255,255,255,.8);padding:64px 0 80px}
+.ft__grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1.5fr;gap:48px;margin-bottom:48px}
+.ft__logo{height:36px;filter:brightness(0) invert(1);margin-bottom:12px}
+.ft__brand p{font-size:13px;color:rgba(255,255,255,.45);max-width:260px}
+.ft__social{display:flex;gap:10px;margin-top:16px}
+.ft__social a{width:32px;height:32px;border-radius:50%;background:rgba(255,255,255,.07);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.5);transition:all .2s}
+.ft__social a:hover{background:var(--color-primary);color:#fff}
+.ft__col h4{font-size:12px;font-weight:700;color:#fff;margin-bottom:14px;text-transform:uppercase;letter-spacing:.06em}
+.ft__col li{margin-bottom:8px}
+.ft__col a{font-size:13px;color:rgba(255,255,255,.45);transition:color .2s;text-decoration:none}
+.ft__col a:hover{color:var(--color-primary)}
+.ft__ci{display:flex;align-items:flex-start;gap:10px;margin-bottom:12px}
+.ft__ci svg{flex-shrink:0;color:var(--color-primary);margin-top:2px}
+.ft__ci p{font-size:13px;color:rgba(255,255,255,.45);margin:0}
+.ft__ci a{color:rgba(255,255,255,.6);text-decoration:none}
+.ft__ci a:hover{color:var(--color-primary)}
+.ft__bot{border-top:1px solid rgba(255,255,255,.07);padding-top:20px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;font-size:11px;color:rgba(255,255,255,.3)}
+.ft__bot a{color:rgba(255,255,255,.3);text-decoration:none}
+.ft__bot a:hover{color:var(--color-primary)}
+@media(max-width:768px){.ft__grid{grid-template-columns:1fr;gap:28px}}
+
+/* ===== HEADER NAV ===== */
+.hdr { position: sticky; top: 0; z-index: 100; background: #fff; box-shadow: 0 1px 4px rgba(0,0,0,.1); }
+.hdr__in { max-width: 1200px; margin: 0 auto; padding: 0 24px; height: 60px; display: flex; align-items: center; justify-content: space-between; }
+.hdr__logo { height: 32px; width: auto; }
+.hdr__nav { display: flex; align-items: center; gap: 24px; }
+.hdr__nav a { font-size: 13px; font-weight: 600; color: var(--color-text); text-decoration: none; transition: color .2s; }
+.hdr__nav a:hover { color: var(--color-primary); }
+.hdr__cta { background: var(--color-primary) !important; color: #fff !important; padding: 8px 16px; border-radius: var(--radius); font-weight: 700 !important; white-space: nowrap; }
+.hdr__cta:hover { background: var(--color-primary-dark) !important; }
+.hdr__mob { display: none; background: none; border: none; cursor: pointer; padding: 4px; }
+@media (max-width: 860px) {
+  .hdr__nav { display: none; }
+  
+/* ===== BREADCRUMB ===== */
+.breadcrumb { display: none; }
 </style>
 </head>
 <body>
 
+
+<!-- ========== HEADER ========== -->
+<header class="hdr">
+  <div class="hdr__in">
+    <a href="/"><picture><source srcset="/assets/logo-move-maquinas.webp" type="image/webp"><img src="/assets/logo-move-maquinas.png" alt="Movemáquinas" class="hdr__logo" width="130" height="32" fetchpriority="high"></picture></a>
+    <button class="hdr__mob" aria-label="Menu" onclick="this.nextElementSibling.classList.toggle('open')">
+      <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+    </button>
+    <nav class="hdr__nav">
+      <a href="/">Início</a>
+      <a href="/servicos">Locação</a>
+      <a href="/venda-de-maquinas-clark">Venda de Máquinas Clark</a>
+      <a href="/goiania-go/curso-de-operador-de-empilhadeira">Curso Operador de Empilhadeira</a>
+      <a href="/cidades-atendidas">Cidades Atendidas</a>
+      <a href="/blog">Blog</a>
+      <a href="https://wa.me/5562982637300" class="hdr__cta" target="_blank" rel="noopener">Fale Conosco</a>
+    </nav>
+  </div>
+</header>
 <!-- ========== BREADCRUMB ========== -->
 <nav class="breadcrumb" aria-label="Breadcrumb">
   <div class="container">
@@ -339,7 +395,7 @@ img { max-width: 100%; height: auto; }
       </div>
       <div class="split-media">
         <div class="video-wrapper" id="videoWrapper" data-video="nz21reej4UY">
-          <img src="https://img.youtube.com/vi/nz21reej4UY/maxresdefault.jpg" alt="Video institucional Move Maquinas" class="video-poster" loading="lazy">
+          <img src="https://img.youtube.com/vi/nz21reej4UY/sddefault.jpg" alt="Video institucional Move Maquinas" class="video-poster" loading="lazy">
           <div class="video-play" aria-label="Reproduzir video">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
           </div>
