@@ -711,33 +711,7 @@ p{color:var(--c-text-lt);line-height:1.75}
 .ft-std__bot{max-width:1200px;margin:40px auto 0;padding:20px 24px;border-top:1px solid #222;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;font-size:12px;color:#666}
 .ft-std__bot a{color:#666;text-decoration:none}
 .ft-std__bot a:hover{color:#999}
-@media(max-width:768px){
-  .ft-std{padding:40px 0 0}
-  .ft-std__grid{display:flex;flex-direction:column;gap:0;padding:0}
-  /* Brand — centralizado, compacto */
-  .ft-std__brand{text-align:center;padding:0 24px 28px;border-bottom:1px solid #222}
-  .ft-std__brand p{font-size:12px;color:#777;margin-top:8px;line-height:1.5}
-  .ft-std__social{justify-content:center;margin-top:14px;gap:16px}
-  .ft-std__social a{width:36px;height:36px;border:1px solid #333;border-radius:50%;display:flex;align-items:center;justify-content:center}
-  /* Links — 2 colunas, sem título, separado por linha */
-  .ft-std__col:nth-child(2),.ft-std__col:nth-child(3){display:grid;grid-template-columns:1fr 1fr;grid-template-rows:auto;gap:0}
-  .ft-std__col:nth-child(2){padding:20px 24px 0;border-bottom:none}
-  .ft-std__col:nth-child(3){padding:4px 24px 20px;border-bottom:1px solid #222}
-  .ft-std__col:nth-child(2) h4,.ft-std__col:nth-child(3) h4{display:none}
-  .ft-std__col:nth-child(2) ul,.ft-std__col:nth-child(3) ul{display:contents}
-  .ft-std__col:nth-child(2) ul li,.ft-std__col:nth-child(3) ul li{margin-bottom:0}
-  .ft-std__col:nth-child(2) ul a,.ft-std__col:nth-child(3) ul a{display:block;padding:7px 0;font-size:13px;color:#888}
-  /* Contato — lista limpa */
-  .ft-std__col:last-child{padding:20px 24px 28px;border-bottom:1px solid #222}
-  .ft-std__col:last-child h4{font-size:11px;color:#555;margin-bottom:12px;letter-spacing:.08em}
-  .ft-std__ci{margin-bottom:8px;gap:10px;align-items:center}
-  .ft-std__ci p{font-size:13px}
-  /* Bottom bar */
-  .ft-std__bot{margin-top:0;padding:16px 24px;flex-direction:column;align-items:center;text-align:center;gap:6px;border-top:none}
-  .ft-std__bot p{color:#555;font-size:11px}
-  .ft-std__bot div{gap:12px;justify-content:center}
-  .ft-std__bot div a{font-size:11px}
-}
+@media(max-width:768px){.ft-std__grid{grid-template-columns:1fr;gap:32px}}
 
 </style>
 </head>
