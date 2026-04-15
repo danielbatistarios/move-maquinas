@@ -529,16 +529,24 @@ body {
   font-size: 15px; color: var(--color-text);
   margin-bottom: 16px; line-height: 1.6;
 }
+.micro-cta .cta-actions {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 12px;
+}
 .micro-cta .cta-button {
   display: inline-block; background: var(--color-btn);
   color: white; padding: 12px 24px; border-radius: 8px;
   font-size: 14px; font-weight: 600; text-decoration: none;
-  transition: background .2s; margin-right: 12px;
+  transition: background .2s;
 }
 .micro-cta .cta-button:hover { background: #148a3e; }
 .micro-cta .cta-link {
   font-size: 14px; font-weight: 600; color: var(--color-primary);
   text-decoration: underline;
+}
+@media (max-width: 480px) {
+  .micro-cta { padding: 20px; }
+  .micro-cta .cta-button { width: 100%; text-align: center; }
+  .micro-cta .cta-link { width: 100%; text-align: center; display: block; }
 }
 
 /* ── CHECKLIST ── */
@@ -1761,7 +1769,10 @@ body { padding-bottom: calc(64px + env(safe-area-inset-bottom, 0px)); }
     <div class="micro-cta">
       <h3>Compare o custo real para a sua obra</h3>
       <p>A MoveMáquinas fornece orçamento detalhado com custo por m² de servico executado para o seu cenário. Scissor lift, articulada ou telescopica, a recomendacao parte da sua metragem e do seu prazo.</p>
-      <p><a href="https://wa.me/5562982637300" class="cta-button">Solicitar orçamento com comparativo</a> <a href="/servicos" class="cta-link">Ver plataformas disponiveis</a></p>
+      <div class="cta-actions">
+        <a href="https://wa.me/5562982637300" class="cta-button">Solicitar orçamento com comparativo</a>
+        <a href="/servicos" class="cta-link">Ver plataformas disponíveis</a>
+      </div>
     </div>
 
     <!-- AUTHOR BOX -->
