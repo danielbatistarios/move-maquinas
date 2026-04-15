@@ -1,0 +1,20 @@
+.btn--wa { background: var(--color-whatsapp); color: var(--color-white); }
+.btn--wa:hover { background: #20bd5a; transform: translateY(-1px); text-decoration: none; color: var(--color-white); }
+.btn--outline-white { background: transparent; color: var(--color-white); border: 2px solid rgba(255,255,255,.3); }
+.btn--outline-white:hover { border-color: rgba(255,255,255,.6); text-decoration: none; color: var(--color-white); }
+.site-footer address { font-style: normal; font-size: 14px; color: rgba(255,255,255,.5); line-height: 1.7; margin-top: 16px; }
+
+/* ===== FLOAT WA ===== */
+.float-wa { position: fixed; right: 20px; bottom: max(28px, calc(env(safe-area-inset-bottom, 0px) + 28px)); z-index: 999; background: var(--color-whatsapp); color: var(--color-white); width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; text-decoration: none; box-shadow: 0 4px 16px rgba(37,211,102,.35); transition: transform .2s, box-shadow .2s; }
+.float-wa:hover { transform: scale(1.08); box-shadow: 0 8px 28px rgba(37,211,102,.4); }
+.float-wa::before { content: ""; position: absolute; inset: 0; border-radius: 50%; background: inherit; z-index: -1; animation: wa-pulse 2s ease-in-out 1s 2; }
+@keyframes wa-pulse { 0% { transform: scale(1); opacity: .6; } 100% { transform: scale(1.6); opacity: 0; } }
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 767px) {
+  .float-wa { display: none; }
+  .page-header { padding: 40px 0 36px; }
+  .policy-content { padding: 32px 0 48px; }
+  .policy-content h2 { font-size: 1.2rem; margin-top: 36px; }
+  .site-footer__actions { flex-direction: column; align-items: center; }
+}

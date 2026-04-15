@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Blog | Move Maquinas — Conteudo Tecnico sobre Equipamentos Industriais</title>
 <meta name="description" content="Blog da Move Maquinas: guias, comparativos, cases e analises sobre empilhadeiras, plataformas elevatorias, transpaleteiras, pecas e normas NR-11.">
+<link rel="preload" href="../assets/fonts/inter-latin-w400.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="canonical" href="/blog">
 <meta name="robots" content="index, follow">
 <meta property="og:title" content="Blog | Move Maquinas">
@@ -16,14 +17,10 @@
 <meta property="og:site_name" content="Move Maquinas">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preload" as="image" href="/assets/logo-move-maquinas.webp" type="image/webp">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preconnect" href="https://img.youtube.com">
 <link rel="preconnect" href="https://pub-bd2efcc812524f54a8c492f90052f3bd.r2.dev">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" media="print" onload="this.media='all'">
-<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"></noscript>
-<noscript><style>.reveal{opacity:1;transform:none}</style></noscript>
+<noscript></noscript>
+<noscript></noscript>
 <style>
 /* ===== HEADER PADRÃO ===== */
 .hdr { position: sticky; top: 0; z-index: 100; background: #fff; box-shadow: 0 1px 4px rgba(0,0,0,.1); }
@@ -349,11 +346,15 @@ footer{background:#111;padding:48px 0 120px;color:#cbd5e1}
   .hdr__nav.open a { color: #1a1a1a !important; font-size: 15px; }
 }
 </style>
+<style>
+@font-face{font-family:'Inter';font-style:normal;font-weight:400 900;font-display:swap;src:url('../assets/fonts/inter-latin-w400.woff2') format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+.reveal{opacity:1;transform:none}
+</style>
 </head>
 <body>
 <header class="hdr">
   <div class="hdr__in">
-    <a href="/"><picture><source srcset="/assets/logo-move-maquinas.webp" type="image/webp"><img src="/assets/logo-move-maquinas.png" alt="Movemáquinas" class="hdr__logo" width="130" height="32" fetchpriority="high"></picture></a>
+    <a href="/"><picture><source srcset="/assets/logo-move-maquinas.webp" type="image/webp"><picture><source srcset="/assets/logo-move-maquinas.webp" type="image/webp"><img src="/assets/logo-move-maquinas.png" alt="Movemáquinas" class="hdr__logo" width="130" height="32" ></picture></picture></a>
     <button class="hdr__mob" aria-label="Menu" onclick="this.nextElementSibling.classList.toggle('open')">
       <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
     </button>
@@ -1156,7 +1157,7 @@ footer{background:#111;padding:48px 0 120px;color:#cbd5e1}
 <footer class="ft-std">
 <div class="ft-std__grid">
   <div class="ft-std__brand">
-    <img src="/assets/logo-move-maquinas.png" alt="Movemáquinas" class="ft-std__logo" width="130" height="32" loading="lazy">
+    <picture><source srcset="/assets/logo-move-maquinas.webp" type="image/webp"><img src="/assets/logo-move-maquinas.png" alt="Movemáquinas" class="ft-std__logo" width="130" height="32" loading="lazy"></picture>
     <p>Mais de 20 anos oferecendo soluções completas em empilhadeiras e equipamentos industriais em Goiás, DF, Tocantins e Mato Grosso.</p>
     <div class="ft-std__social">
       <a href="https://www.instagram.com/move.maquinas/" target="_blank" rel="noopener" aria-label="Instagram"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg></a>
@@ -1190,5 +1191,6 @@ footer{background:#111;padding:48px 0 120px;color:#cbd5e1}
   <div style="display:flex;gap:16px"><a href="/politica-de-privacidade">Privacidade</a><a href="/termos-de-uso">Termos</a><a href="/cookies">Cookies</a></div>
 </div>
 </footer>
+
 </body>
 </html>

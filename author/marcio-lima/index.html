@@ -6,6 +6,8 @@
 <meta name="theme-color" content="#1D9648">
 <title>Márcio Lima | Especialista em Locação de Equipamentos Industriais</title>
 <meta name="description" content="Márcio Lima é Diretor Comercial da Move Máquinas, com mais de 20 anos de experiência em locação de empilhadeiras, plataformas elevatórias e equipamentos industriais no Centro-Oeste do Brasil.">
+<link rel="preload" href="../../assets/fonts/inter-latin-w400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" as="image" href="/assets/authors/marcio-lima.jpg" type="image/jpg" fetchpriority="high">
 <link rel="canonical" href="/author/marcio-lima">
 <meta property="og:title" content="Márcio Lima | Move Máquinas">
 <meta property="og:description" content="Diretor Comercial da Move Máquinas. +20 anos no mercado de equipamentos industriais em Goiás.">
@@ -14,59 +16,10 @@
 <meta property="og:image" content="/assets/authors/marcio-lima.jpg">
 <meta property="profile:first_name" content="Márcio">
 <meta property="profile:last_name" content="Lima">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
-<noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet"></noscript>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "Person",
-      "@id": "https://movemaquinas.com.br/author/marcio-lima#person",
-      "name": "Márcio Lima",
-      "jobTitle": "Diretor Comercial",
-      "worksFor": {
-        "@type": "Organization",
-        "@id": "https://movemaquinas.com.br/#organization",
-        "name": "Move Máquinas"
-      },
-      "image": "/assets/authors/marcio-lima.jpg",
-      "url": "https://movemaquinas.com.br/author/marcio-lima",
-      "sameAs": [
-        "https://www.instagram.com/movemaquinas/",
-        "https://www.youtube.com/@movemaquinas"
-      ],
-      "knowsAbout": [
-        "Locação de empilhadeiras",
-        "Plataformas elevatórias",
-        "Transpaleteiras elétricas",
-        "Equipamentos industriais Clark",
-        "NR-11",
-        "NR-35",
-        "Logística industrial",
-        "Movimentação de cargas"
-      ],
-      "description": "Diretor Comercial da Move Máquinas com mais de 20 anos de experiência no mercado de locação e venda de equipamentos industriais no Centro-Oeste do Brasil. Distribuidor autorizado Clark em Goiás."
-    },
-    {
-      "@type": "ProfilePage",
-      "mainEntity": { "@id": "https://movemaquinas.com.br/author/marcio-lima#person" },
-      "url": "https://movemaquinas.com.br/author/marcio-lima",
-      "name": "Márcio Lima - Move Máquinas"
-    },
-    {
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Move Máquinas", "item": "https://movemaquinas.com.br" },
-        { "@type": "ListItem", "position": 2, "name": "Márcio Lima", "item": "https://movemaquinas.com.br/author/marcio-lima" }
-      ]
-    }
-  ]
-}
-</script>
+<noscript></noscript>
+
 <style>
+@font-face{font-family:'Inter';font-style:normal;font-weight:400 900;font-display:swap;src:url('../../assets/fonts/inter-latin-w400.woff2') format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
 :root {
   --color-primary: #1D9648;
   --color-primary-btn: #16A149;
@@ -400,91 +353,63 @@ a { text-decoration: none; }
   min-height: 52px; line-height: 1;
 }
 .btn:hover { transform: translateY(-2px); box-shadow: var(--shadow-lg); }
-.btn--wa { background: var(--color-whatsapp); color: #fff; }
-.btn--ghost {
-  background: rgba(255,255,255,.12); color: #fff;
-  border: 2px solid rgba(255,255,255,.25);
-}
-.btn--ghost:hover { background: rgba(255,255,255,.2); }
-.cta-final__nap {
-  margin-top: 24px; font-size: 0.8rem; color: rgba(255,255,255,.5);
-}
-
-/* ===================== FOOTER ===================== */
-.footer {
-  background: var(--color-dark);
-  color: rgba(255,255,255,.5);
-  text-align: center;
-  padding: 28px 0;
-  font-size: 0.78rem;
-}
-.footer strong { color: rgba(255,255,255,.8); }
-
-/* ===================== RESPONSIVE ===================== */
-@media (max-width: 767px) {
-  .author-hero { padding: 48px 0; }
-  .author-hero__inner { flex-direction: column; text-align: center; gap: 24px; }
-  .author-hero__photo { width: 140px; height: 140px; }
-  .author-hero__name { font-size: 1.8rem; }
-  .author-hero__badges { justify-content: center; }
-  .author-hero__social { justify-content: center; }
-  .bio__grid { grid-template-columns: 1fr; gap: 32px; }
-  .timeline { padding-left: 32px; }
-  .timeline::before { left: 11px; }
-  .timeline__dot { left: -32px; }
-  .articles-grid { grid-template-columns: 1fr; }
-  .cta-final__actions { flex-direction: column; align-items: center; }
-  .cta-final__actions .btn { width: 100%; max-width: 340px; justify-content: center; }
-}
-@media (prefers-reduced-motion: reduce) {
-  .reveal { opacity: 1; transform: none; transition: none; }
-}
-/* ===== HEADER PADRÃO ===== */
-.hdr { position: sticky; top: 0; z-index: 100; background: #fff; box-shadow: 0 1px 4px rgba(0,0,0,.1); }
-.hdr__in { max-width: 1200px; margin: 0 auto; padding: 0 24px; height: 60px; display: flex; align-items: center; justify-content: space-between; }
-.hdr__logo { height: 32px; width: auto; }
-.hdr__nav { display: flex; align-items: center; gap: 24px; }
-.hdr__nav a { font-size: 13px; font-weight: 600; color: #1a1a1a; text-decoration: none; transition: color .2s; }
-.hdr__nav a:hover { color: #1D9648; }
-.hdr__cta { background: #1D9648 !important; color: #fff !important; padding: 8px 16px; border-radius: 6px; font-weight: 700 !important; white-space: nowrap; }
-.hdr__cta:hover { background: #157a38 !important; }
-.hdr__mob { display: none; background: none; border: none; cursor: pointer; padding: 8px; color: #1a1a1a; line-height: 0; }
-@media (max-width: 860px) {
-  .hdr__nav { display: none; }
-  .hdr__mob { display: block; }
-  .hdr__nav.open { display: flex; flex-direction: column; align-items: flex-start; position: absolute; top: 60px; left: 0; right: 0; background: #fff; padding: 16px 24px; border-top: 1px solid #e5e5e5; box-shadow: 0 8px 24px rgba(0,0,0,.1); gap: 12px; z-index: 200; }
-  .hdr__nav.open a { color: #1a1a1a !important; font-size: 15px; }
-}
-/* ===== FOOTER PADRÃO ===== */
-.ft-std { background: #111; color: #ccc; padding: 56px 0 0; font-size: 13px; }
-.ft-std__grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1.5fr; gap: 40px; max-width: 1200px; margin: 0 auto; padding: 0 24px; }
-.ft-std__logo { height: 36px; width: auto; filter: brightness(0) invert(1); margin-bottom: 12px; }
-.ft-std__brand p { color: #999; line-height: 1.6; max-width: 260px; }
-.ft-std__social { display: flex; gap: 12px; margin-top: 16px; }
-.ft-std__social a { color: #999; transition: color .2s; }
-.ft-std__social a:hover { color: #1D9648; }
-.ft-std__col h4 { color: #fff; font-size: 13px; font-weight: 700; margin-bottom: 14px; text-transform: uppercase; letter-spacing: .05em; }
-.ft-std__col ul { list-style: none; padding: 0; margin: 0; }
-.ft-std__col ul li { margin-bottom: 8px; }
-.ft-std__col ul a { color: #999; text-decoration: none; transition: color .2s; }
-.ft-std__col ul a:hover { color: #1D9648; }
-.ft-std__ci { display: flex; gap: 10px; margin-bottom: 12px; align-items: flex-start; }
-.ft-std__ci svg { flex-shrink: 0; margin-top: 2px; color: #1D9648; }
-.ft-std__ci p { color: #999; margin: 0; line-height: 1.5; }
-.ft-std__ci a { color: #999; text-decoration: none; }
-.ft-std__ci a:hover { color: #1D9648; }
-.ft-std__bot { max-width: 1200px; margin: 40px auto 0; padding: 20px 24px; border-top: 1px solid #222; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; font-size: 12px; color: #666; }
-.ft-std__bot a { color: #666; text-decoration: none; }
-.ft-std__bot a:hover { color: #999; }
-@media(max-width:768px){ .ft-std__grid { grid-template-columns: 1fr; gap: 32px; } }
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://movemaquinas.com.br/author/marcio-lima#person",
+      "name": "Márcio Lima",
+      "jobTitle": "Diretor Comercial",
+      "worksFor": {
+        "@type": "Organization",
+        "@id": "https://movemaquinas.com.br/#organization",
+        "name": "Move Máquinas"
+      },
+      "image": "/assets/authors/marcio-lima.jpg",
+      "url": "https://movemaquinas.com.br/author/marcio-lima",
+      "sameAs": [
+        "https://www.instagram.com/movemaquinas/",
+        "https://www.youtube.com/@movemaquinas"
+      ],
+      "knowsAbout": [
+        "Locação de empilhadeiras",
+        "Plataformas elevatórias",
+        "Transpaleteiras elétricas",
+        "Equipamentos industriais Clark",
+        "NR-11",
+        "NR-35",
+        "Logística industrial",
+        "Movimentação de cargas"
+      ],
+      "description": "Diretor Comercial da Move Máquinas com mais de 20 anos de experiência no mercado de locação e venda de equipamentos industriais no Centro-Oeste do Brasil. Distribuidor autorizado Clark em Goiás."
+    },
+    {
+      "@type": "ProfilePage",
+      "mainEntity": { "@id": "https://movemaquinas.com.br/author/marcio-lima#person" },
+      "url": "https://movemaquinas.com.br/author/marcio-lima",
+      "name": "Márcio Lima - Move Máquinas"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Move Máquinas", "item": "https://movemaquinas.com.br" },
+        { "@type": "ListItem", "position": 2, "name": "Márcio Lima", "item": "https://movemaquinas.com.br/author/marcio-lima" }
+      ]
+    }
+  ]
+}
+</script>
+
 </head>
 <body>
 
 <!-- BREADCRUMB -->
 <header class="hdr">
   <div class="hdr__in">
-    <a href="/"><picture><source srcset="/assets/logo-move-maquinas.webp" type="image/webp"><img src="/assets/logo-move-maquinas.png" alt="Movemáquinas" class="hdr__logo" width="130" height="32" fetchpriority="high"></picture></a>
+    <a href="/"><picture><source srcset="/assets/logo-move-maquinas.webp" type="image/webp"><picture><source srcset="/assets/logo-move-maquinas.webp" type="image/webp"><img src="/assets/logo-move-maquinas.png" alt="Movemáquinas" class="hdr__logo" width="130" height="32" ></picture></picture></a>
     <button class="hdr__mob" aria-label="Menu" onclick="this.nextElementSibling.classList.toggle('open')">
       <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
     </button>
@@ -504,7 +429,7 @@ a { text-decoration: none; }
 <section class="author-hero" itemscope itemtype="https://schema.org/Person">
   <div class="container">
     <div class="author-hero__inner">
-      <img class="author-hero__photo reveal" src="/assets/authors/marcio-lima.jpg" alt="Márcio Lima, Diretor Comercial da Move Máquinas" width="180" height="180" loading="eager" itemprop="image">
+      <picture><source srcset="/assets/authors/marcio-lima.webp" type="image/webp"><img class="author-hero__photo reveal" src="/assets/authors/marcio-lima.jpg" alt="Márcio Lima, Diretor Comercial da Move Máquinas" width="180" height="180" loading="eager" itemprop="image"></picture>
       <div class="author-hero__info">
         <h1 class="author-hero__name reveal reveal-d1" itemprop="name">Márcio Lima</h1>
         <p class="author-hero__title reveal reveal-d1" itemprop="jobTitle">Diretor Comercial, Move Máquinas</p>
@@ -636,7 +561,7 @@ a { text-decoration: none; }
     <span class="quote-section__mark">"</span>
     <p class="quote-section__text">Quando um cliente nos escolhe, ele sabe que não vai precisar de mais ninguém. São mais de 20 anos entregando resultado, e a maioria dos contratos é renovado mês após mês. Isso só acontece quando você resolve o problema de verdade.</p>
     <div class="quote-section__author">
-      <img src="/assets/authors/marcio-lima.jpg" alt="Márcio Lima" width="48" height="48" loading="lazy">
+      <picture><source srcset="/assets/authors/marcio-lima.webp" type="image/webp"><img src="/assets/authors/marcio-lima.jpg" alt="Márcio Lima" width="48" height="48" loading="lazy"></picture>
       <div class="quote-section__author-info">
         <div class="quote-section__author-name">Márcio Lima</div>
         <div class="quote-section__author-title">Diretor Comercial, Move Máquinas</div>
@@ -701,7 +626,7 @@ a { text-decoration: none; }
 <footer class="ft-std">
   <div class="ft-std__grid">
     <div class="ft-std__brand">
-      <picture><source srcset="/assets/logo-move-maquinas.webp" type="image/webp"><img src="/assets/logo-move-maquinas.png" alt="Movemáquinas" class="ft-std__logo" width="130" height="36" loading="lazy"></picture>
+      <picture><source srcset="/assets/logo-move-maquinas.webp" type="image/webp"><picture><source srcset="/assets/logo-move-maquinas.webp" type="image/webp"><img src="/assets/logo-move-maquinas.png" alt="Movemáquinas" class="ft-std__logo" width="130" height="36" loading="lazy"></picture></picture>
       <p>Distribuidor exclusivo Clark no Centro-Oeste. Locação de empilhadeiras, plataformas elevatórias e transpaleteiras com manutenção inclusa.</p>
       <div class="ft-std__social">
         <a href="https://www.instagram.com/move.maquinas/" target="_blank" rel="noopener" aria-label="Instagram"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
@@ -758,5 +683,6 @@ a { text-decoration: none; }
   }
 })();
 </script>
+<link rel="stylesheet" href="styles-b957531e.css">
 </body>
 </html>

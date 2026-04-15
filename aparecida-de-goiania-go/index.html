@@ -3,10 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="https://www.cloudflare.com/favicon.ico" />
+    <link rel="preload" href="../assets/fonts/inter-latin-w400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="icon" href="https://www.cloudflare.com/favicon.ico" />
     <title>Not Found</title>
-    <style>
-      body {
+    
+  <style>
+@font-face{font-family:'Inter';font-style:normal;font-weight:400 900;font-display:swap;src:url('../assets/fonts/inter-latin-w400.woff2') format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+body {
         font-family: system-ui;
         font-weight: 300;
         font-size: 1.25rem;
@@ -95,14 +98,14 @@
         font-weight: 700;
         margin-bottom: 0.75rem;
       }
-    </style>
-  </head>
+</style>
+</head>
   <body>
     
 <!-- ========== HEADER ========== -->
 <header class="hdr">
   <div class="hdr__in">
-    <a href="/"><picture><source srcset="/assets/logo-move-maquinas.webp" type="image/webp"><img src="/assets/logo-move-maquinas.png" alt="Movemáquinas" class="hdr__logo" width="130" height="32" fetchpriority="high"></picture></a>
+    <a href="/"><picture><source srcset="/assets/logo-move-maquinas.webp" type="image/webp"><picture><source srcset="/assets/logo-move-maquinas.webp" type="image/webp"><img src="/assets/logo-move-maquinas.png" alt="Movemáquinas" class="hdr__logo" width="130" height="32" ></picture></picture></a>
     <button class="hdr__mob" aria-label="Menu" onclick="this.nextElementSibling.classList.toggle('open')">
       <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
     </button>
@@ -625,7 +628,7 @@
 <footer class="ft">
 <div class="container">
   <div class="ft__grid">
-    <div class="ft__brand"><picture><source srcset="/assets/logo-move-maquinas.webp" type="image/webp"><img src="/assets/logo-move-maquinas.png" alt="Movemáquinas" class="ft__logo" width="140" height="36" loading="lazy"></picture><p>Mais de 20 anos oferecendo soluções completas em empilhadeiras e equipamentos industriais em Goiás, DF, Tocantins e Mato Grosso.</p><div class="ft__social"><a href="https://www.instagram.com/move.maquinas/" target="_blank" rel="noopener" aria-label="Instagram"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="12" height="12" rx="3"/><circle cx="8" cy="8" r="3"/></svg></a><a href="https://www.facebook.com/p/MoveM%C3%A1quinas-61554634312846/" target="_blank" rel="noopener" aria-label="Facebook"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 2H2v12h5v-4H5V8h2V6.5C7 4.6 8.1 3.5 9.9 3.5H12v2.3h-1.3c-.7 0-1.2.4-1.2 1V8h2.5l-.4 2H9.5v4H14V2z"/></svg></a><a href="https://www.youtube.com/@movemaquinas" target="_blank" rel="noopener" aria-label="YouTube"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="4" width="12" height="9" rx="2"/><path d="M10 8.5L7 10V7l3 1.5z" fill="currentColor" stroke="none"/></svg></a></div></div>
+    <div class="ft__brand"><picture><source srcset="/assets/logo-move-maquinas.webp" type="image/webp"><picture><source srcset="/assets/logo-move-maquinas.webp" type="image/webp"><img src="/assets/logo-move-maquinas.png" alt="Movemáquinas" class="ft__logo" width="140" height="36" loading="lazy"></picture></picture><p>Mais de 20 anos oferecendo soluções completas em empilhadeiras e equipamentos industriais em Goiás, DF, Tocantins e Mato Grosso.</p><div class="ft__social"><a href="https://www.instagram.com/move.maquinas/" target="_blank" rel="noopener" aria-label="Instagram"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="12" height="12" rx="3"/><circle cx="8" cy="8" r="3"/></svg></a><a href="https://www.facebook.com/p/MoveM%C3%A1quinas-61554634312846/" target="_blank" rel="noopener" aria-label="Facebook"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 2H2v12h5v-4H5V8h2V6.5C7 4.6 8.1 3.5 9.9 3.5H12v2.3h-1.3c-.7 0-1.2.4-1.2 1V8h2.5l-.4 2H9.5v4H14V2z"/></svg></a><a href="https://www.youtube.com/@movemaquinas" target="_blank" rel="noopener" aria-label="YouTube"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="4" width="12" height="9" rx="2"/><path d="M10 8.5L7 10V7l3 1.5z" fill="currentColor" stroke="none"/></svg></a></div></div>
     <div class="ft__col"><h4>Serviços</h4><ul>
         <li><a href="/goiania-go/aluguel-de-plataforma-elevatoria-articulada">Plataforma Articulada</a></li>
         <li><a href="/goiania-go/aluguel-de-plataforma-elevatoria-tesoura">Plataforma Tesoura</a></li>
@@ -640,5 +643,6 @@
   <div class="ft__bot"><p>&copy; 2026 Movemáquinas. CNPJ: 32.428.258/0001-80</p><div style="display:flex;gap:16px"><a href="/politica-de-privacidade">Privacidade</a><a href="/termos-de-uso">Termos</a><a href="/cookies">Cookies</a></div></div>
 </div>
 </footer>
+
 </body>
 </html>
