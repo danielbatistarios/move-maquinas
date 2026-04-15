@@ -16,6 +16,7 @@
 <meta name="geo.placename" content="Goiânia, Goiás, Brasil">
 <meta name="geo.position" content="-16.7234;-49.2654">
 <meta name="ICBM" content="-16.7234, -49.2654">
+<link rel="preload" as="image" href="/assets/logo-move-maquinas.webp" type="image/webp">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preconnect" href="https://img.youtube.com">
@@ -583,7 +584,7 @@ p { color: var(--color-text-light); line-height: 1.8; }
 <!-- ========== HEADER ========== -->
 <header class="hdr">
   <div class="hdr__in">
-    <a href="/"><picture><source srcset="/assets/logo-move-maquinas.webp" type="image/webp"><img src="/assets/logo-move-maquinas.png" alt="Movemáquinas" class="hdr__logo" width="130" height="32"></picture></a>
+    <a href="/"><picture><source srcset="/assets/logo-move-maquinas.webp" type="image/webp"><img src="/assets/logo-move-maquinas.png" alt="Movemáquinas" class="hdr__logo" width="130" height="32" fetchpriority="high"></picture></a>
     <button class="hdr__mob" aria-label="Menu" onclick="this.nextElementSibling.classList.toggle('open')">
       <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
     </button>
