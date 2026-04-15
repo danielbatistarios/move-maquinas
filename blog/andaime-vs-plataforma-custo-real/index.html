@@ -163,6 +163,15 @@ html { scroll-behavior: smooth; }
   font-size: clamp(26px, 4.5vw, 42px); font-weight: 900; line-height: 1.15;
   color: #fff; margin-bottom: 24px; letter-spacing: -.025em;
 }
+.context-vector {
+  font-size: 17px; line-height: 1.65; color: rgba(255,255,255,.82);
+  margin: 16px 0 24px; max-width: 720px;
+  font-weight: 400;
+}
+@media (max-width: 600px) {
+  .context-vector { font-size: 15px; }
+}
+
 .hero-meta {
   display: flex; align-items: center; gap: 16px;
   font-size: 14px; color: rgba(255,255,255,.55); flex-wrap: wrap;
@@ -224,6 +233,22 @@ body {
 
 
 
+
+/* ── HERO IMAGE ── */
+.hero-img-wrap {
+  width: 100%; max-height: 460px; overflow: hidden;
+  background: #1a2f1e; display: flex; align-items: center; justify-content: center;
+}
+.hero-img-wrap img {
+  width: 100%; max-height: 460px; object-fit: cover; display: block;
+}
+.hero-img-placeholder {
+  width: 100%; height: 360px; background: #1a2f1e;
+  display: flex; align-items: center; justify-content: center;
+}
+@media (max-width: 600px) {
+  .hero-img-placeholder { height: 220px; }
+}
 
 /* ── LAYOUT 3 COLUNAS ── */
 .article-layout {
@@ -338,23 +363,19 @@ body {
 }
 .sidebar-related-item:hover .item-title { color: var(--color-primary); }
 
-/* ── OPENING SCENE ── */
+/* ── OPENING SCENE (Context Vector) ── */
 .opening-scene {
-  background: #1a1a1a; color: #fff; padding: 40px 32px;
-  border-radius: 12px; margin-bottom: 32px; position: relative;
+  background: transparent; padding: 0 0 24px;
+  border-radius: 0; margin-bottom: 24px; position: relative;
 }
-.opening-scene::before {
-  content: '\201C'; position: absolute; top: 12px; left: 16px;
-  font-size: 80px; color: rgba(29,150,72,.3); font-family: Georgia, serif;
-  line-height: 1;
-}
+.opening-scene::before { display: none; }
 .opening-scene p {
-  color: rgba(255,255,255,.88); font-size: 18px;
-  line-height: 1.8; position: relative; z-index: 1;
-  margin-bottom: 14px;
+  color: var(--color-text); font-size: 18px;
+  line-height: 1.8; font-style: italic;
+  position: relative; z-index: 1; margin-bottom: 14px;
 }
-.opening-scene p:last-child { margin-bottom: 0; }
-.opening-scene strong { color: #fff; }
+.opening-scene p:last-child { margin-bottom: 0; font-style: normal; font-weight: 600; color: var(--color-dark); }
+.opening-scene strong { color: var(--color-dark); }
 
 /* ── TLDR BOX ── */
 .tldr-box {
@@ -458,6 +479,18 @@ body {
 }
 .scenario-card ul { margin: 0 0 0 20px; }
 .scenario-card li { font-size: 15px; line-height: 1.7; margin-bottom: 6px; }
+
+/* ── TABLE SCROLL WRAPPER (mobile) ── */
+.table-scroll {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  width: 100%;
+  margin: 24px 0;
+}
+.table-scroll .comparison-table {
+  min-width: 480px;
+  margin: 0;
+}
 
 /* ── COMPARISON TABLE ── */
 .comparison-table {
@@ -921,12 +954,13 @@ body {
 @media (max-width: 600px) {
   .blog-equip__grid { grid-template-columns: 1fr; }
   .blog-equip__title { font-size: 22px; }
+  .key-findings { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 480px) {
   .hero-section { padding: 24px 16px 32px; }
   .article-layout { padding: 24px 16px; }
-  .opening-scene { padding: 28px 20px; }
+  .opening-scene { padding: 0 0 20px; }
   .opening-scene p { font-size: 16px; }
   .pattern-break p { font-size: 18px; }
   .footer-grid { grid-template-columns: 1fr; }
@@ -1168,6 +1202,8 @@ body { padding-bottom: calc(64px + env(safe-area-inset-bottom, 0px)); }
 @media (max-width: 960px) {
   .right-sidebar { margin-top: 32px; }
   .sidebar-author { margin-bottom: 24px; }
+  /* sidebar-cta some no mobile: micro-cta no conteúdo já serve */
+  .sidebar-cta { display: none; }
 }
 </style>
 <script type="application/ld+json">
@@ -1200,11 +1236,6 @@ body { padding-bottom: calc(64px + env(safe-area-inset-bottom, 0px)); }
 
 </head>
 <body>
-
-<!-- LOADER -->
-
-  <div class="loader-text">Os numeros contam a historia</div>
-</div>
 
 <!-- READING PROGRESS -->
 <div class="reading-progress" id="readingProgress"></div>
@@ -1239,6 +1270,7 @@ body { padding-bottom: calc(64px + env(safe-area-inset-bottom, 0px)); }
     </nav>
     <span class="category-badge">Plataformas Elevatorias</span>
     <h1>Andaime vs Plataforma Elevatoria: Custo Real por Metro de Obra</h1>
+    <p class="context-vector">Plataforma tesoura custa entre R$ 22 e R$ 38 por m² executado — andaime fachadeiro chega a R$ 78 quando se somam montagem, desmontagem e tempo ocioso. A diferença não está na diária: está em seis linhas de custo que a proposta da andaimeira não mostra. A escolha certa depende da metragem, do número de frentes e do prazo.</p>
     <div class="hero-meta">
       <a href="/author/marcio-lima"><div class="author-avatar" style="cursor:pointer;">M</div></a>
       <div>
@@ -1248,6 +1280,10 @@ body { padding-bottom: calc(64px + env(safe-area-inset-bottom, 0px)); }
     </div>
   </div>
 </section>
+
+<!-- HERO IMAGE -->
+<!-- TODO: substituir pelo src da foto real de andaime vs plataforma em obra -->
+<div class="hero-img-placeholder" aria-hidden="true"></div>
 
 <!-- LAYOUT 3 COLUNAS -->
 <div class="article-layout">
@@ -1345,6 +1381,7 @@ body { padding-bottom: calc(64px + env(safe-area-inset-bottom, 0px)); }
 
     <p>Quando todas aparecem juntas, o valor por metro quadrado executado sobe entre 3 e 5 vezes em relação a diária isolada.</p>
 
+    <div class="table-scroll">
     <table class="comparison-table">
       <caption>Breakdown de custo: andaime fachadeiro (faixas de mercado 2025-2026)</caption>
       <thead>
@@ -1387,6 +1424,7 @@ body { padding-bottom: calc(64px + env(safe-area-inset-bottom, 0px)); }
         </tr>
       </tbody>
     </table>
+    </div>
 
     <p>As linhas 4, 5 e 6 sao as que nunca aparecem na proposta da andaimeira. Mas aparecem no cronograma. E no bolso.</p>
 
@@ -1410,6 +1448,7 @@ body { padding-bottom: calc(64px + env(safe-area-inset-bottom, 0px)); }
 
     <p>A MoveMáquinas prática locação mensal entre R$ 2.800 e R$ 4.000, com manutenção preventiva inclusa no contrato.</p>
 
+    <div class="table-scroll">
     <table class="comparison-table">
       <caption>Breakdown de custo: plataforma tesoura 12 m (dados MoveMáquinas)</caption>
       <thead>
@@ -1452,6 +1491,7 @@ body { padding-bottom: calc(64px + env(safe-area-inset-bottom, 0px)); }
         </tr>
       </tbody>
     </table>
+    </div>
 
     <!-- MINI-BOX SPECS -->
     <div class="info-box">
@@ -1492,6 +1532,7 @@ body { padding-bottom: calc(64px + env(safe-area-inset-bottom, 0px)); }
 
     <p>Coloque as duas planilhas na mesma tela e uma coisa fica obvia. A diária conta uma historia. O custo por metro quadrado de servico executado conta outra, completamente diferente.</p>
 
+    <div class="table-scroll">
     <table class="comparison-table">
       <caption>Comparativo: andaime fachadeiro vs plataforma tesoura 12 m</caption>
       <thead>
@@ -1539,6 +1580,7 @@ body { padding-bottom: calc(64px + env(safe-area-inset-bottom, 0px)); }
         </tr>
       </tbody>
     </table>
+    </div>
 
     <div class="info-box">
       <p><strong>Como calculamos o custo por m² executado:</strong> somamos todas as linhas de custo direto e indireto do periodo (30 dias) e dividimos pela quantidade de m² que a equipe consegue executar nesse prazo, considerando dias uteis, esperas e remontagens.</p>
@@ -1810,69 +1852,6 @@ body { padding-bottom: calc(64px + env(safe-area-inset-bottom, 0px)); }
 
 
 
-
-<!-- EQUIPAMENTOS PARA LOCAÇÃO -->
-<section class="blog-equip-section">
-  <div class="blog-equip__inner">
-    <div class="blog-equip__header">
-      <div class="blog-equip__eyebrow">Frota disponível</div>
-      <h2 class="blog-equip__title">Equipamentos para locação em Goiânia e Centro-Oeste</h2>
-      <p class="blog-equip__sub">Plataformas elevatórias e empilhadeiras com manutenção inclusa e entrega em obra.</p>
-    </div>
-    <div class="blog-equip__grid">
-      <a href="/locacao-plataforma-tesoura-goiania" class="blog-equip__card">
-        <div class="blog-equip__img-wrap">
-          <picture><source srcset="/assets/clark/empilhadeira-eletrica/lep-20-35/site_lep_factory_1.webp" type="image/webp"><picture><source srcset="/assets/clark/empilhadeira-eletrica/lep-20-35/site_lep_factory_1.webp" type="image/webp"><img src="/assets/clark/empilhadeira-eletrica/lep-20-35/site_lep_factory_1.jpg" alt="Plataforma Tesoura para locação — MoveMáquinas Goiânia" loading="lazy" width="280" height="180"></picture></picture>
-        </div>
-        <div class="blog-equip__card-body">
-          <div class="blog-equip__card-tag">Plataforma</div>
-          <div class="blog-equip__card-name">Plataforma Tesoura</div>
-          <div class="blog-equip__card-desc">Elevação vertical estável para trabalhos internos e externos em superfícies planas. Ideal para manutenção industrial e instalações.</div>
-          <span class="blog-equip__card-cta">Ver modelos <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
-        </div>
-      </a>
-      <a href="/locacao-plataforma-articulada-goiania" class="blog-equip__card">
-        <div class="blog-equip__img-wrap">
-          <picture><source srcset="/assets/clark/empilhadeira-combustao/l25-30-35/l20-launch-header.webp" type="image/webp"><picture><source srcset="/assets/clark/empilhadeira-combustao/l25-30-35/l20-launch-header.webp" type="image/webp"><img src="/assets/clark/empilhadeira-combustao/l25-30-35/l20-launch-header.jpg" alt="Plataforma Articulada para locação — MoveMáquinas Goiânia" loading="lazy" width="280" height="180"></picture></picture>
-        </div>
-        <div class="blog-equip__card-body">
-          <div class="blog-equip__card-tag">Plataforma</div>
-          <div class="blog-equip__card-name">Plataforma Articulada</div>
-          <div class="blog-equip__card-desc">Alcance horizontal e vertical com articulação para contornar obstáculos. Ideal para fachadas e estruturas com difícil acesso.</div>
-          <span class="blog-equip__card-cta">Ver modelos <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
-        </div>
-      </a>
-      <a href="/locacao-empilhadeira-goiania" class="blog-equip__card">
-        <div class="blog-equip__img-wrap">
-          <picture><source srcset="/assets/clark/empilhadeira-eletrica/lep-20-35/lep-7.webp" type="image/webp"><img src="/assets/clark/empilhadeira-eletrica/lep-20-35/lep-7.jpg" alt="Empilhadeira Clark para locação" loading="lazy" width="280" height="180"></picture>
-        </div>
-        <div class="blog-equip__card-body">
-          <div class="blog-equip__card-tag">Empilhadeira</div>
-          <div class="blog-equip__card-name">Empilhadeira Clark</div>
-          <div class="blog-equip__card-desc">Linha completa Clark: elétrica e a combustão. Movimentação de cargas em galpões, armazéns e obras com alta produtividade.</div>
-          <span class="blog-equip__card-cta">Ver modelos <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
-        </div>
-      </a>
-      <a href="/locacao-transpaleteira-goiania" class="blog-equip__card">
-        <div class="blog-equip__img-wrap">
-          <picture><source srcset="/assets/clark/transpaleteira/swx16/clark_swx16_application1.webp" type="image/webp"><img src="/assets/clark/transpaleteira/swx16/clark_swx16_application1.jpg" alt="Transpaleteira Clark para locação" loading="lazy" width="280" height="180"></picture>
-        </div>
-        <div class="blog-equip__card-body">
-          <div class="blog-equip__card-tag">Transpaleteira</div>
-          <div class="blog-equip__card-name">Transpaleteira Elétrica</div>
-          <div class="blog-equip__card-desc">Movimentação ágil de paletes em espaços reduzidos. Baixo custo operacional e manutenção simplificada.</div>
-          <span class="blog-equip__card-cta">Ver modelos <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
-        </div>
-      </a>
-    </div>
-    <div class="blog-equip__cta-row">
-      <a href="https://wa.me/5562982637300?text=Ol%C3%A1%2C%20quero%20solicitar%20or%C3%A7amento%20de%20loca%C3%A7%C3%A3o" class="blog-equip__btn">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-        Solicitar orçamento de locação
-      </a>
-    </div>
-  </div>
-</section>
 
 <!-- ARTIGOS RELACIONADOS -->
 <section class="blog-related-section">
