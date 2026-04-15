@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://movemaquinas.com.br/sitemap.xml

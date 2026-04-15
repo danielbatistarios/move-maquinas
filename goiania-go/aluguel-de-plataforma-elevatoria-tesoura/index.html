@@ -18,6 +18,9 @@
 <meta name="ICBM" content="-16.7234, -49.2654">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://img.youtube.com">
+<link rel="preconnect" href="https://pub-bd2efcc812524f54a8c492f90052f3bd.r2.dev">
+<link rel="preload" as="image" href="https://img.youtube.com/vi/U5E2s753ITs/mqdefault.jpg">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
 <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet"></noscript>
 <script type="application/ld+json">
@@ -201,7 +204,7 @@ p { color: var(--color-text-light); line-height: 1.8; }
 .btn { display: inline-flex; align-items: center; gap: 8px; padding: 14px 24px; border-radius: var(--radius); font-size: 1rem; font-weight: 700; text-decoration: none; cursor: pointer; border: none; transition: transform .15s, box-shadow .15s, background .15s; min-height: 48px; line-height: 1; font-family: var(--font-family); }
 .btn:hover { transform: translateY(-1px); box-shadow: var(--shadow-md); }
 .btn--wa { background: var(--color-whatsapp); color: var(--color-white); position: relative; overflow: hidden; }
-.btn--wa::after { content: ""; position: absolute; top: 0; left: -100%; width: 60%; height: 100%; background: linear-gradient(90deg, transparent, rgba(255,255,255,.15), transparent); animation: btn-shimmer 3s ease-in-out 2s infinite; }
+.btn--wa::after { content: ""; position: absolute; top: 0; left: -100%; width: 60%; height: 100%; background: linear-gradient(90deg, transparent, rgba(255,255,255,.15), transparent); animation: btn-shimmer 3s ease-in-out 2s 2; }
 @keyframes btn-shimmer { 0% { left: -100%; } 40%,100% { left: 150%; } }
 .btn--outline { background: transparent; color: var(--color-primary); border: 2px solid var(--color-primary); }
 .btn--outline:hover { background: var(--color-primary); color: var(--color-white); }
@@ -402,7 +405,7 @@ p { color: var(--color-text-light); line-height: 1.8; }
 /* ===== FLOAT WA ===== */
 .float-wa { position: fixed; right: 20px; bottom: max(28px, calc(env(safe-area-inset-bottom, 0px) + 28px)); z-index: 999; background: var(--color-whatsapp); color: var(--color-white); width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; text-decoration: none; box-shadow: var(--shadow-lg); transition: transform .2s, box-shadow .2s; }
 .float-wa:hover { transform: scale(1.08); box-shadow: 0 8px 28px rgba(37,211,102,.4); }
-.float-wa::before { content: ""; position: absolute; inset: 0; border-radius: 50%; background: inherit; z-index: -1; animation: wa-pulse 2s ease-in-out 1s 3; }
+.float-wa::before { content: ""; position: absolute; inset: 0; border-radius: 50%; background: inherit; z-index: -1; animation: wa-pulse 2s ease-in-out 1s 2; }
 @keyframes wa-pulse { 0%,100%{transform:scale(1);opacity:.6} 50%{transform:scale(1.35);opacity:0} }
 
 /* ===== SECTION HELPERS ===== */
@@ -518,14 +521,14 @@ p { color: var(--color-text-light); line-height: 1.8; }
   0%, 100% { box-shadow: 0 0 0 0 rgba(37,211,102,.4); }
   50% { box-shadow: 0 0 0 12px rgba(37,211,102,0); }
 }
-.btn--wa { animation: wa-glow 2.5s ease-in-out 3s 3; }
+.btn--wa { animation: wa-glow 2.5s ease-in-out 3s 2; }
 
 /* ===== FLOAT WA BOUNCE ===== */
 @keyframes float-bounce {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-6px); }
 }
-.float-wa { animation: float-bounce 3s ease-in-out 5s 2; }
+.float-wa { animation: float-bounce 3s ease-in-out 5s 1; }
 
 /* ===== REDUCED MOTION ===== */
 @media (prefers-reduced-motion: reduce) {
@@ -640,7 +643,7 @@ p { color: var(--color-text-light); line-height: 1.8; }
       <aside class="hero__card" aria-label="Vídeo do produto" style="background:transparent;border:none;backdrop-filter:none;-webkit-backdrop-filter:none;padding:0;">
         <div style="border-radius:var(--radius-lg);overflow:hidden;aspect-ratio:9/16;background:#000;cursor:pointer;box-shadow:var(--shadow-lg);" onclick="this.innerHTML='<iframe src=\'https://www.youtube.com/embed/U5E2s753ITs?autoplay=1&rel=0\' allow=\'autoplay;encrypted-media\' allowfullscreen style=\'width:100%;height:100%;border:0;\'></iframe>'">
           <div style="position:relative;width:100%;height:100%;display:flex;align-items:center;justify-content:center;">
-            <img src="https://img.youtube.com/vi/U5E2s753ITs/hqdefault.jpg" alt="Veja a plataforma tesoura de 8 metros em ação" style="width:100%;height:100%;object-fit:cover;" loading="eager">
+            <img src="https://img.youtube.com/vi/U5E2s753ITs/mqdefault.jpg" alt="Veja a plataforma tesoura de 8 metros em ação" style="width:100%;height:100%;object-fit:cover;" loading="eager">
             <div style="position:absolute;width:64px;height:64px;background:rgba(0,0,0,.55);backdrop-filter:blur(4px);border-radius:50%;display:flex;align-items:center;justify-content:center;">
               <svg width="28" height="28" viewBox="0 0 24 24" fill="#fff"><polygon points="5 3 19 12 5 21 5 3"/></svg>
             </div>
@@ -816,19 +819,19 @@ p { color: var(--color-text-light); line-height: 1.8; }
     <div class="shorts-gallery">
       <div class="shorts-item" onclick="this.innerHTML='<iframe src=\'https://www.youtube.com/embed/uv6PPxyUuq4?autoplay=1&rel=0\' allow=\'autoplay;encrypted-media\' allowfullscreen></iframe>'">
         <div class="shorts-item__poster">
-          <img src="https://img.youtube.com/vi/uv6PPxyUuq4/oar2.jpg" alt="Plataforma elevatória de 7 a 12 metros" loading="lazy">
+          <img src="https://img.youtube.com/vi/uv6PPxyUuq4/mqdefault.jpg" alt="Plataforma elevatória de 7 a 12 metros" loading="lazy">
           <div class="shorts-item__play"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg></div>
         </div>
       </div>
       <div class="shorts-item" onclick="this.innerHTML='<iframe src=\'https://www.youtube.com/embed/wypDJ3U1D1k?autoplay=1&rel=0\' allow=\'autoplay;encrypted-media\' allowfullscreen></iframe>'">
         <div class="shorts-item__poster">
-          <img src="https://img.youtube.com/vi/wypDJ3U1D1k/oar2.jpg" alt="Plataformas elevatórias: conheça os modelos" loading="lazy">
+          <img src="https://img.youtube.com/vi/wypDJ3U1D1k/mqdefault.jpg" alt="Plataformas elevatórias: conheça os modelos" loading="lazy">
           <div class="shorts-item__play"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg></div>
         </div>
       </div>
       <div class="shorts-item" onclick="this.innerHTML='<iframe src=\'https://www.youtube.com/embed/U5E2s753ITs?autoplay=1&rel=0\' allow=\'autoplay;encrypted-media\' allowfullscreen></iframe>'">
         <div class="shorts-item__poster">
-          <img src="https://img.youtube.com/vi/U5E2s753ITs/hqdefault.jpg" alt="Aluguel de plataforma articulada em Goiânia" loading="lazy">
+          <img src="https://img.youtube.com/vi/U5E2s753ITs/mqdefault.jpg" alt="Aluguel de plataforma articulada em Goiânia" loading="lazy">
           <div class="shorts-item__play"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg></div>
         </div>
       </div>
@@ -1242,7 +1245,7 @@ p { color: var(--color-text-light); line-height: 1.8; }
     <div class="split split--reverse reveal">
       <div class="video-wrap">
         <div class="video-wrap__poster" onclick="this.parentElement.innerHTML='<iframe src=\'https://www.youtube.com/embed/nz21reej4UY?autoplay=1&rel=0\' allow=\'autoplay;encrypted-media\' allowfullscreen title=\'Conheça a Movemáquinas\'></iframe>'" role="button" aria-label="Reproduzir vídeo institucional Movemáquinas">
-          <img src="https://img.youtube.com/vi/nz21reej4UY/maxresdefault.jpg" alt="Vídeo institucional Movemáquinas: conheça o processo de aluguel de plataforma tesoura em Goiânia" width="640" height="360" loading="lazy">
+          <img src="https://img.youtube.com/vi/nz21reej4UY/sddefault.jpg" alt="Vídeo institucional Movemáquinas: conheça o processo de aluguel de plataforma tesoura em Goiânia" width="640" height="360" loading="lazy">
           <div class="video-wrap__play"><svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg></div>
         </div>
       </div>
