@@ -537,12 +537,47 @@ p { color: var(--color-text-light); line-height: 1.8; }
   *, *::before, *::after { animation: none !important; transition: none !important; }
   .reveal { opacity: 1; transform: none; }
 }
+
+/* ===== HEADER NAV ===== */
+.hdr { position: sticky; top: 0; z-index: 100; background: #fff; box-shadow: 0 1px 4px rgba(0,0,0,.1); }
+.hdr__in { max-width: 1200px; margin: 0 auto; padding: 0 24px; height: 60px; display: flex; align-items: center; justify-content: space-between; }
+.hdr__logo { height: 32px; width: auto; }
+.hdr__nav { display: flex; align-items: center; gap: 24px; }
+.hdr__nav a { font-size: 13px; font-weight: 600; color: var(--color-text); text-decoration: none; transition: color .2s; }
+.hdr__nav a:hover { color: var(--color-primary); }
+.hdr__cta { background: var(--color-primary) !important; color: #fff !important; padding: 8px 16px; border-radius: var(--radius); font-weight: 700 !important; white-space: nowrap; }
+.hdr__cta:hover { background: var(--color-primary-dark) !important; }
+.hdr__mob { display: none; background: none; border: none; cursor: pointer; padding: 4px; }
+@media (max-width: 860px) {
+  .hdr__nav { display: none; }
+  .hdr__nav.open { display: flex; flex-direction: column; align-items: flex-start; position: absolute; top: 60px; left: 0; right: 0; background: #fff; padding: 16px 24px; border-top: 1px solid var(--color-border); box-shadow: 0 8px 24px rgba(0,0,0,.1); gap: 12px; }
+  .hdr__mob { display: block; }
+}
 </style>
 </head>
 <body>
 
 <!-- Scroll progress indicator -->
 <div class="scroll-progress" aria-hidden="true"></div>
+
+<!-- ========== HEADER ========== -->
+<header class="hdr">
+  <div class="hdr__in">
+    <a href="/"><img src="https://movemaquinas.com.br/assets/logo-move-maquinas-B2l9eWy_.png" alt="Movemáquinas" class="hdr__logo" width="130" height="32"></a>
+    <button class="hdr__mob" aria-label="Menu" onclick="this.nextElementSibling.classList.toggle('open')">
+      <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+    </button>
+    <nav class="hdr__nav">
+      <a href="/">Início</a>
+      <a href="/servicos">Serviços</a>
+      <a href="/venda-de-maquinas-clark">Venda Clark</a>
+      <a href="/cidades-atendidas">Cidades Atendidas</a>
+      <a href="/blog">Blog</a>
+      <a href="/contato">Contato</a>
+      <a href="https://wa.me/5562982637300" class="hdr__cta" target="_blank" rel="noopener">Fale Conosco</a>
+    </nav>
+  </div>
+</header>
 
 <!-- ========== BREADCRUMB ========== -->
 <header role="banner" class="breadcrumb" aria-label="Navegação estrutural">
