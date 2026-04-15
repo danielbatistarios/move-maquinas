@@ -1,4 +1,9 @@
 User-agent: *
 Allow: /
 
+Disallow: /cookies
+Disallow: /politica-de-privacidade
+Disallow: /termos-de-uso
+Disallow: /trabalhe-conosco
+
 Sitemap: https://movemaquinas.com.br/sitemap.xml
