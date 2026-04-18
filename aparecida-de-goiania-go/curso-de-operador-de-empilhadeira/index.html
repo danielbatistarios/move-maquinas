@@ -137,7 +137,10 @@ p { color: var(--color-text-light); line-height: 1.8; }
 /* ===== BUTTONS ===== */
 .btn { display: inline-flex; align-items: center; gap: 8px; padding: 14px 24px; border-radius: var(--radius); font-size: 1rem; font-weight: 700; text-decoration: none; cursor: pointer; border: none; transition: transform .15s, box-shadow .15s, background .15s; min-height: 48px; line-height: 1; font-family: var(--font-family); }
 .btn:hover { transform: translateY(-1px); box-shadow: var(--shadow-md); }
-</style>
+
+    .hero__card-field input { width:100%; padding:10px 12px; border:1px solid #d1d5db; border-radius:8px; font-size:var(--font-small); font-family:inherit; background:#fff; color:var(--color-dark); outline:none; box-sizing:border-box; }
+    .hero__card-field input:focus { border-color:var(--color-primary); box-shadow:0 0 0 3px rgba(29,150,72,.15); }
+  </style>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -1239,6 +1242,10 @@ src="https://www.facebook.com/tr?id=1486077345864143&ev=PageView&noscript=1"
     msg += 'Quando iniciar: ' + inicio + '\n';
     msg += 'Já tem empilhadeira: ' + empilhadeira + '\n';
     msg += 'Cidade: ' + cidade;
+    var nome = (form.querySelector('[name="nome"]') ? form.querySelector('[name="nome"]').value.trim() : '') || '';
+    var tel = (form.querySelector('[name="tel"]') ? form.querySelector('[name="tel"]').value.trim() : '') || '';
+    msg += '\nNome: ' + nome;
+    msg += '\nTelefone: ' + tel;
     var _utms = (function(){ try { return JSON.parse(sessionStorage.getItem('utm_data')||'{}'); } catch(e){ return {}; } })();
     var _crmMediumMap = { cpc:'paid',ppc:'paid',paid:'paid',paid_social:'paid',banner:'paid',display:'paid',organic:'organic',referral:'organic',email:'organic',social:'organic' };
     var _crmMedium = _crmMediumMap[_utms.medium] || 'organic';
@@ -1265,7 +1272,7 @@ src="https://www.facebook.com/tr?id=1486077345864143&ev=PageView&noscript=1"
     fetch('https://backend.umdhub.com.br/api/leads/public/69b2f6d262e629a2c7a8d35a', {
       method: 'POST', keepalive: true,
       headers: { 'Content-Type': 'application/json', 'X-API-Key': 'sk_live_719213e5f48228a63a4be9aa357a65dc5568f3b740008a98d14b58229d1f7150' },
-      body: JSON.stringify({ segment: _crmSegment, description: _leadDesc, source: _crmSource, medium: _crmMedium, channel: _crmChannel, priority: 'medium', temperature: 'cold', qualifyStatus: 'pending', budget: 0, name: '', company: '', position: '', emails: [], phones: [] })
+      body: JSON.stringify({ segment: _crmSegment, description: _leadDesc, source: _crmSource, medium: _crmMedium, channel: _crmChannel, priority: 'medium', temperature: 'cold', qualifyStatus: 'pending', budget: 0, name: nome, company: '', position: '', emails: [], phones: tel ? [tel] : [] })
     })
     .then(_abrir).catch(_abrir);
     return;
@@ -1291,5 +1298,20 @@ src="https://www.facebook.com/tr?id=1486077345864143&ev=PageView&noscript=1"
 })();
 </script>
 <link rel="stylesheet" href="styles-b9bd9b91.css">
+<script>
+(function(){
+  document.querySelectorAll('.btn--wa, .sticky-cta__btn, .float-wa').forEach(function(el){
+    if (el.type === 'submit') return;
+    el.addEventListener('click', function(e){
+      e.preventDefault();
+      var form = document.getElementById('quoteForm');
+      if (!form) return;
+      form.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      var firstInput = form.querySelector('input, select');
+      if (firstInput) setTimeout(function(){ firstInput.focus(); }, 600);
+    });
+  });
+})();
+</script>
 </body>
 </html>
