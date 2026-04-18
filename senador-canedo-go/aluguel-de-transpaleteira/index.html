@@ -1469,9 +1469,8 @@ src="https://www.facebook.com/tr?id=1089167330085055&ev=PageView&noscript=1"
     var _isPaid = _crmMedium === 'paid';
     var _segMap = { google: _isPaid ? 'locacao-google-ads' : 'locacao-google-organico', microsoft: _isPaid ? 'locacao-google-ads' : 'locacao-google-organico', facebook: _isPaid ? 'locacao-facebook-ads' : 'locacao-facebook-organico', meta: _isPaid ? 'locacao-facebook-ads' : 'locacao-facebook-organico', instagram: _isPaid ? 'locacao-instagram-ads' : 'locacao-instagram-organico', tiktok: 'locacao-tiktok', linkedin: 'locacao-linkedin', email: 'locacao-email', referral: 'locacao-referral' };
     var _crmSegment = _segMap[_utms.source] || (_utms.source && _utms.source !== 'direct' ? 'locacao-outro' : 'locacao-direto');
-    var _leadName = (typeof nome !== 'undefined' ? nome : '') || '';
-    var _leadTel = (typeof tel !== 'undefined' ? tel : '') || '';
-    var _leadDesc = 'Locacao | ' + (_utms.source && _utms.source !== 'direct' ? 'Source: ' + _utms.source : 'Direto') + (_utms.medium && _utms.medium !== 'organic' ? ' | Medium: ' + _utms.medium : '') + (_utms.campaign ? ' | Campanha: ' + _utms.campaign : '');
+    var btn = form.querySelector('[type="submit"]');
+    var _leadDesc = msg.replace(/\n/g, ' | ').replace(/^[^|]+\| /, '') + (_utms.source && _utms.source !== 'direct' ? ' | Source: ' + _utms.source : '') + (_utms.medium && _utms.medium !== 'organic' ? ' | Medium: ' + _utms.medium : '') + (_utms.campaign ? ' | Campanha: ' + _utms.campaign : '');
     var _waUrl = 'https://wa.me/5562982637300?text=' + encodeURIComponent(msg);
     var _btn = btn;
     var _btnOriginal = _btn ? _btn.innerHTML : null;
@@ -1486,7 +1485,7 @@ src="https://www.facebook.com/tr?id=1089167330085055&ev=PageView&noscript=1"
     fetch('https://backend.umdhub.com.br/api/leads/public/69b2f6d262e629a2c7a8d35a', {
       method: 'POST', keepalive: true,
       headers: { 'Content-Type': 'application/json', 'X-API-Key': 'sk_live_719213e5f48228a63a4be9aa357a65dc5568f3b740008a98d14b58229d1f7150' },
-      body: JSON.stringify({ segment: _crmSegment, description: _leadDesc, source: _crmSource, medium: _crmMedium, channel: _crmChannel, priority: 'medium', temperature: 'cold', qualifyStatus: 'pending', budget: 0, name: _leadName, company: '', position: '', emails: [], phones: [_leadTel] })
+      body: JSON.stringify({ segment: _crmSegment, description: _leadDesc, source: _crmSource, medium: _crmMedium, channel: _crmChannel, priority: 'medium', temperature: 'cold', qualifyStatus: 'pending', budget: 0, name: '', company: '', position: '', emails: [], phones: [] })
     })
     .then(_abrir).catch(_abrir);
     return;
