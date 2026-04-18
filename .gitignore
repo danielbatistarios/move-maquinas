@@ -1,0 +1,19 @@
+# Arquivos de trabalho/template na raiz (não publicar no GitHub Pages)
+/*-TPL.html
+/*-FINAL.html
+/*-A.html
+/*-B.html
+/*-C.html
+/*-D.html
+/*-E.html
+/*-F.html
+/*-G.html
+/*-H.html
+# Scripts Python de build (manter apenas os principais)
+/_analyze*.py
+/build-cn*.py
+/build-caldas*.py
+# Ambientes e secrets
+.env
+__pycache__/
+*.pyc

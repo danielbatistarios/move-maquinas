@@ -1,0 +1,1969 @@
+{
+  "goiania-go": {
+    "display_name": "Goiânia",
+    "state": "GO",
+    "distancia_km": 0,
+    "populacao": "1.500.000",
+    "rodovia_principal": "BR-153, BR-060",
+    "rodovias_secundarias": [
+      "GO-040",
+      "Anel Viário",
+      "Via Expressa"
+    ],
+    "economia_dominante": "serviços, atacado/varejo, logística, indústria, construção civil",
+    "polos_industriais": [
+      "Distrito Industrial Leste",
+      "Polo da Moda (Setor Norte Ferroviário)",
+      "Ceasa Goiânia",
+      "Polo Empresarial"
+    ],
+    "bairros_comerciais": [
+      "Setor Norte Ferroviário",
+      "Setor Campinas",
+      "Setor Bueno",
+      "Setor Marista",
+      "Jardim Goiás",
+      "Setor Central",
+      "Setor Perimetral Norte"
+    ],
+    "setores_locais": [
+      "atacadistas",
+      "distribuidores",
+      "construção civil",
+      "logística",
+      "indústria alimentícia",
+      "comércio varejista"
+    ],
+    "entity_bridges": {
+      "empilhadeira_combustao": "galpões logísticos e CDs ao longo da BR-153, atacadistas do Polo da Moda",
+      "plataforma_articulada": "reforma de fachadas ACM no Setor Bueno e Marista, manutenção de galpões no Distrito Industrial",
+      "plataforma_tesoura": "manutenção predial em shoppings (Flamboyant, Passeio das Águas), pintura e instalações em galpões",
+      "transpaleteira": "conferência de fardos no Polo da Moda, câmaras frias no Ceasa, docas de atacadistas na Av. Independência",
+      "curso_nr11": "operadores de empilhadeira em CDs logísticos, atacadistas e indústrias do Distrito Industrial"
+    },
+    "pain_local": "Sede própria — entrega no mesmo dia, sem custo de deslocamento. Maior polo econômico do Centro-Oeste.",
+    "wikipedia": "https://pt.wikipedia.org/wiki/Goiânia"
+  },
+  "aparecida-de-goiania-go": {
+    "display_name": "Aparecida de Goiânia",
+    "state": "GO",
+    "distancia_km": 18,
+    "populacao": "600.000",
+    "rodovia_principal": "GO-040, BR-153",
+    "rodovias_secundarias": [
+      "Anel Viário"
+    ],
+    "economia_dominante": "indústria, logística, construção civil, comércio",
+    "polos_industriais": [
+      "DAIAG (Distrito Agroindustrial)",
+      "GAIAG (Polo Empresarial)",
+      "DIMAG",
+      "DIANOT",
+      "Polo Empresarial Goiás",
+      "Cidade Empresarial"
+    ],
+    "bairros_comerciais": [
+      "Vila Brasília",
+      "Jardim Tiradentes",
+      "Setor Garavelo",
+      "Cidade Livre",
+      "Parque Flamboyant Industrial"
+    ],
+    "setores_locais": [
+      "logística e distribuição",
+      "cosméticos",
+      "confeitaria",
+      "moveleiro",
+      "gráfico",
+      "farmoquímico",
+      "alimentício",
+      "construção civil"
+    ],
+    "entity_bridges": {
+      "empilhadeira_combustao": "galpões logísticos e indústrias do DAIAG, CDs de distribuição na BR-153",
+      "plataforma_articulada": "obras de condomínios no vetor sul, fachadas de galpões industriais no GAIAG",
+      "plataforma_tesoura": "manutenção interna de galpões no DAIAG e DIMAG, instalações elétricas industriais",
+      "transpaleteira": "atacadistas e distribuidoras da Cidade Livre, docas de expedição no DAIAG",
+      "curso_nr11": "operadores de indústrias do DAIAG e GAIAG, galpões logísticos"
+    },
+    "pain_local": "Segunda maior cidade de Goiás. PIB cresceu 192% em 11 anos. DAIAG em expansão — destravar investimentos. 18km de Goiânia, entrega no mesmo dia.",
+    "wikipedia": "https://pt.wikipedia.org/wiki/Aparecida_de_Goiânia"
+  },
+  "anapolis-go": {
+    "display_name": "Anápolis",
+    "state": "GO",
+    "distancia_km": 55,
+    "populacao": "400.000",
+    "rodovia_principal": "BR-153, BR-060",
+    "rodovias_secundarias": [
+      "GO-330",
+      "Ferrovia Norte-Sul",
+      "Ferrovia Centro-Atlântica"
+    ],
+    "economia_dominante": "indústria farmacêutica, alimentícia, automotiva, logística",
+    "polos_industriais": [
+      "DAIA (Distrito Agroindustrial de Anápolis)",
+      "Porto Seco (Estação Aduaneira Interior)",
+      "Plataforma Logística Multimodal"
+    ],
+    "bairros_comerciais": [
+      "Jundiaí",
+      "Centro",
+      "Vila Jaiara",
+      "Vila Santana",
+      "Setor Industrial Munir Calixto"
+    ],
+    "setores_locais": [
+      "farmacêutico (EMS, Teuto, Brainfarma, Neo Química)",
+      "alimentício",
+      "automotivo",
+      "logística multimodal",
+      "atacadista"
+    ],
+    "entity_bridges": {
+      "empilhadeira_combustao": "linhas de produção e armazéns do DAIA, indústrias farmacêuticas (movimentação de paletes de medicamentos)",
+      "plataforma_articulada": "manutenção de galpões industriais no DAIA, instalações de infraestrutura em fábricas",
+      "plataforma_tesoura": "manutenção interna de fábricas farmacêuticas (ambientes controlados), instalações elétricas no DAIA",
+      "transpaleteira": "câmaras frias de indústrias farmacêuticas (temperatura controlada), docas de expedição do DAIA",
+      "curso_nr11": "operadores das 200+ empresas do DAIA, certificação para indústrias farmacêuticas"
+    },
+    "pain_local": "DAIA é o segundo maior polo farmacêutico do Brasil com 200+ empresas. 55km de Goiânia via BR-153 — entrega em 24h. Indústria compõe 30% do PIB.",
+    "wikipedia": "https://pt.wikipedia.org/wiki/Anápolis"
+  },
+  "senador-canedo-go": {
+    "display_name": "Senador Canedo",
+    "state": "GO",
+    "distancia_km": 20,
+    "populacao": "130.000",
+    "rodovia_principal": "BR-153",
+    "rodovias_secundarias": [
+      "GO-403"
+    ],
+    "economia_dominante": "petroquímico, indústria, logística, construção civil",
+    "polos_industriais": [
+      "DASC (Distrito Agroindustrial)",
+      "DISC",
+      "Complexo Petroquímico (Petrobras, Realpetro, Petrobol)"
+    ],
+    "bairros_comerciais": [
+      "Centro",
+      "Jardim das Oliveiras",
+      "Residencial Canadá"
+    ],
+    "setores_locais": [
+      "petroquímico",
+      "moveleiro",
+      "alimentício",
+      "farmacêutico",
+      "plásticos",
+      "higiene/limpeza",
+      "construção civil"
+    ],
+    "entity_bridges": {
+      "empilhadeira_combustao": "complexo petroquímico e CDs de distribuição ao longo da BR-153",
+      "plataforma_articulada": "manutenção de tanques e estruturas no complexo petroquímico, obras de expansão industrial",
+      "plataforma_tesoura": "manutenção de galpões no DASC e DISC, instalações industriais",
+      "transpaleteira": "movimentação de paletes em indústrias de plásticos e higiene/limpeza do DISC",
+      "curso_nr11": "operadores do complexo petroquímico e indústrias dos distritos DASC/DISC"
+    },
+    "pain_local": "Complexo petroquímico gera demanda constante. PIB R$4,8 bi — indústria 36,7%. 20km de Goiânia, entrega no mesmo dia.",
+    "wikipedia": "https://pt.wikipedia.org/wiki/Senador_Canedo"
+  },
+  "brasilia-df": {
+    "display_name": "Brasília",
+    "state": "DF",
+    "distancia_km": 209,
+    "populacao": "3.000.000",
+    "rodovia_principal": "BR-060, BR-040",
+    "rodovias_secundarias": [
+      "BR-251",
+      "DF-001 (EPCT)"
+    ],
+    "economia_dominante": "administração pública, serviços, comércio, construção civil, tecnologia",
+    "polos_industriais": [
+      "SIA (Setor de Indústria e Abastecimento)",
+      "Polo JK (Santa Maria)",
+      "Ceilândia Industrial"
+    ],
+    "bairros_comerciais": [
+      "SIA",
+      "Taguatinga",
+      "Ceilândia",
+      "Samambaia",
+      "Águas Claras",
+      "Asa Norte",
+      "Asa Sul"
+    ],
+    "setores_locais": [
+      "construção civil (obras governamentais)",
+      "logística e distribuição",
+      "varejo/atacado",
+      "tecnologia",
+      "hotelaria"
+    ],
+    "entity_bridges": {
+      "empilhadeira_combustao": "galpões logísticos do SIA, CDs de supermercados e atacadistas em Taguatinga e Ceilândia",
+      "plataforma_articulada": "manutenção de edifícios governamentais, obras de fachada em Águas Claras e Asa Norte",
+      "plataforma_tesoura": "manutenção predial em shoppings e edifícios comerciais, obras internas de reforma",
+      "transpaleteira": "supermercados e atacadistas (Atacadão, Assaí), CDs logísticos no SIA",
+      "curso_nr11": "operadores de empilhadeira em CDs logísticos e obras de construção civil"
+    },
+    "pain_local": "209km de Goiânia via BR-060. Entrega em 48h. Demanda forte em construção civil e logística. Capital federal com maior gasto per capita do país.",
+    "wikipedia": "https://pt.wikipedia.org/wiki/Brasília"
+  },
+  "luziania-go": {
+    "display_name": "Luziânia",
+    "state": "GO",
+    "distancia_km": 198,
+    "populacao": "210.000",
+    "rodovia_principal": "BR-040",
+    "rodovias_secundarias": [
+      "BR-060",
+      "GO-010"
+    ],
+    "economia_dominante": "indústria (metalurgia, alimentos, químicos), agropecuária, comércio",
+    "polos_industriais": [
+      "DIAL (Distrito Agroindustrial de Luziânia)"
+    ],
+    "bairros_comerciais": [
+      "Centro",
+      "Jardim Ingá",
+      "Cidade Ocidental (proximidade)"
+    ],
+    "setores_locais": [
+      "metalurgia",
+      "alimentício",
+      "químico",
+      "plásticos",
+      "têxtil",
+      "calçados",
+      "agropecuária (feijão, milho, algodão)"
+    ],
+    "entity_bridges": {
+      "empilhadeira_combustao": "indústrias do DIAL (metalurgia, alimentício), armazéns agrícolas de grãos",
+      "plataforma_articulada": "manutenção de silos e galpões agrícolas, obras de construção civil",
+      "plataforma_tesoura": "manutenção interna de fábricas no DIAL, instalações industriais",
+      "transpaleteira": "movimentação de paletes em indústrias alimentícias e químicas do DIAL",
+      "curso_nr11": "operadores das 1.500 indústrias do município e empresas do DIAL"
+    },
+    "pain_local": "198km de Goiânia, Entorno do DF. DIAL com 24 empresas. 1.500 indústrias no município. PIB R$5,4 bi — indústria 30,6%.",
+    "wikipedia": "https://pt.wikipedia.org/wiki/Luziânia"
+  },
+  "trindade-go": {
+    "display_name": "Trindade",
+    "state": "GO",
+    "distancia_km": 18,
+    "populacao": "140.000",
+    "rodovia_principal": "GO-060",
+    "rodovias_secundarias": [
+      "BR-153 (proximidade)"
+    ],
+    "economia_dominante": "serviços, comércio, construção civil, indústria em expansão",
+    "polos_industriais": [
+      "Distrito Industrial (em implantação)",
+      "Condomínios industriais estratégicos"
+    ],
+    "bairros_comerciais": [
+      "Centro",
+      "Setor Maysa",
+      "Setor Sol Nascente"
+    ],
+    "setores_locais": [
+      "construção civil (condomínios residenciais)",
+      "comércio varejista",
+      "serviços",
+      "indústria emergente"
+    ],
+    "entity_bridges": {
+      "empilhadeira_combustao": "centros de distribuição e galpões ao longo da GO-060, obras de construção civil",
+      "plataforma_articulada": "construção de condomínios e edifícios residenciais, obras em altura no setor de expansão",
+      "plataforma_tesoura": "manutenção de galpões comerciais, instalações elétricas e hidráulicas em obras",
+      "transpaleteira": "supermercados e comércio varejista, centros de distribuição emergentes",
+      "curso_nr11": "operadores de construção civil e novos distritos industriais"
+    },
+    "pain_local": "Crescimento de 163% da população em 30 anos. PIB cresceu 159,2% em 10 anos. 18km de Goiânia — entrega no mesmo dia.",
+    "wikipedia": "https://pt.wikipedia.org/wiki/Trindade_(Goiás)"
+  },
+  "itumbiara-go": {
+    "display_name": "Itumbiara",
+    "state": "GO",
+    "distancia_km": 203,
+    "populacao": "105.000",
+    "rodovia_principal": "BR-153",
+    "rodovias_secundarias": [
+      "BR-419",
+      "GO-139"
+    ],
+    "economia_dominante": "agroindustrial (frigoríficos, grãos, etanol), logística, comércio",
+    "polos_industriais": [
+      "DIAGRI (Distrito Agroindustrial de Itumbiara)"
+    ],
+    "bairros_comerciais": [
+      "Centro",
+      "Setor Industrial",
+      "Vila São José"
+    ],
+    "setores_locais": [
+      "frigoríficos (JBS, BRF)",
+      "cooperativas agrícolas (Caramuru, Cargill)",
+      "usinas de etanol (Louis Dreyfus)",
+      "construção civil",
+      "logística"
+    ],
+    "entity_bridges": {
+      "empilhadeira_combustao": "carregamento de caminhões em frigoríficos JBS e BRF, armazéns de grãos Caramuru e Cargill",
+      "plataforma_articulada": "manutenção de silos e estruturas altas em cooperativas, instalações industriais no DIAGRI",
+      "plataforma_tesoura": "manutenção interna de frigoríficos e usinas, instalações elétricas em galpões",
+      "transpaleteira": "câmaras frias de frigoríficos (-18°C), docas de expedição de cooperativas agrícolas",
+      "curso_nr11": "operadores de frigoríficos JBS/BRF, cooperativas Caramuru/Cargill, usinas de etanol"
+    },
+    "pain_local": "Polo agroindustrial com JBS, BRF, Caramuru, Cargill, Louis Dreyfus. DIAGRI com 1M m². 203km via BR-153, entrega em 24-48h. PIB R$5,3 bi.",
+    "wikipedia": "https://pt.wikipedia.org/wiki/Itumbiara"
+  },
+  "caldas-novas-go": {
+    "display_name": "Caldas Novas",
+    "state": "GO",
+    "distancia_km": 170,
+    "populacao": "95.000",
+    "rodovia_principal": "GO-139",
+    "rodovias_secundarias": [
+      "BR-153 (via Itumbiara)"
+    ],
+    "economia_dominante": "turismo, hotelaria, construção civil, comércio, serviços",
+    "polos_industriais": [
+      "Parque Hoteleiro (106 hotéis, 140.000 leitos)"
+    ],
+    "bairros_comerciais": [
+      "Centro",
+      "Setor Turístico",
+      "Setor Itaici"
+    ],
+    "setores_locais": [
+      "hotelaria e resorts",
+      "construção civil (expansão hoteleira)",
+      "parques aquáticos",
+      "comércio turístico",
+      "serviços de alimentação"
+    ],
+    "entity_bridges": {
+      "empilhadeira_combustao": "obras de construção de novos resorts e hotéis, movimentação de materiais em canteiros",
+      "plataforma_articulada": "manutenção e reforma de fachadas de hotéis e resorts, instalação de painéis em parques aquáticos",
+      "plataforma_tesoura": "manutenção interna de hotéis (lobbies, áreas de piscina), pintura e instalações elétricas",
+      "transpaleteira": "estoque de hotéis e resorts (alimentos, lavanderia), centros de distribuição de alimentos turísticos",
+      "curso_nr11": "operadores de obras hoteleiras e manutenção de parques aquáticos"
+    },
+    "pain_local": "Maior polo hoteleiro do Brasil — 4M turistas/ano, 106 hotéis, 140.000 leitos. Construção civil em expansão constante. 170km de Goiânia, entrega em 24-48h.",
+    "wikipedia": "https://pt.wikipedia.org/wiki/Caldas_Novas"
+  },
+  "formosa-go": {
+    "display_name": "Formosa",
+    "state": "GO",
+    "distancia_km": 280,
+    "populacao": "115.000",
+    "rodovia_principal": "BR-020, GO-116",
+    "rodovias_secundarias": [
+      "BR-040 (proximidade)"
+    ],
+    "economia_dominante": "agropecuária (grãos, milho), comércio, serviços, administração pública",
+    "polos_industriais": [
+      "Área industrial com 4 indústrias do ProGoiás"
+    ],
+    "bairros_comerciais": [
+      "Centro",
+      "Setor Sul",
+      "Vila Rosa"
+    ],
+    "setores_locais": [
+      "agropecuária (milho, sorgo, soja)",
+      "armazenagem de grãos",
+      "comércio varejista",
+      "serviços educacionais",
+      "turismo"
+    ],
+    "entity_bridges": {
+      "empilhadeira_combustao": "armazéns graneleiros e cooperativas agrícolas, centros de distribuição",
+      "plataforma_articulada": "manutenção de silos e armazéns agrícolas, construção civil",
+      "plataforma_tesoura": "manutenção de galpões e instalações agropecuárias",
+      "transpaleteira": "movimentação de sacas em armazéns de grãos, comércio varejista",
+      "curso_nr11": "operadores de armazéns agrícolas e indústrias locais"
+    },
+    "pain_local": "Entorno do DF, 280km de Goiânia. PIB R$3,2 bi — cresceu 199% em 10 anos. 2º município mais populoso da região. Forte em agropecuária e armazenagem.",
+    "wikipedia": "https://pt.wikipedia.org/wiki/Formosa_(Goiás)"
+  },
+  "hidrolandia-go": {
+    "display_name": "Hidrolândia",
+    "state": "GO",
+    "distancia_km": 30,
+    "populacao": "22.000",
+    "rodovia_principal": "GO-020",
+    "rodovias_secundarias": [
+      "BR-153 (proximidade)"
+    ],
+    "economia_dominante": "agropecuária, hortifrutigranjeiro, comércio, serviços",
+    "polos_industriais": [],
+    "bairros_comerciais": [
+      "Centro"
+    ],
+    "setores_locais": [
+      "hortifrutigranjeiro (abastece Ceasa Goiânia)",
+      "pecuária leiteira",
+      "construção civil",
+      "comércio local"
+    ],
+    "entity_bridges": {
+      "empilhadeira_combustao": "armazéns e galpões de produtores hortifrutigranjeiros, cooperativas agrícolas",
+      "plataforma_articulada": "manutenção de galpões rurais e instalações agropecuárias",
+      "plataforma_tesoura": "construção civil local e manutenção de galpões",
+      "transpaleteira": "cooperativas e distribuidores hortifrutigranjeiros, câmaras frias de laticínios",
+      "curso_nr11": "operadores de cooperativas agrícolas e comércio local"
+    },
+    "pain_local": "30km de Goiânia — entrega no mesmo dia. Principal fornecedor de hortifrutigranjeiros para o Ceasa Goiânia.",
+    "wikipedia": "https://pt.wikipedia.org/wiki/Hidrolândia_(Goiás)"
+  },
+  "goianira-go": {
+    "display_name": "Goianira",
+    "state": "GO",
+    "distancia_km": 22,
+    "populacao": "47.000",
+    "rodovia_principal": "GO-070",
+    "rodovias_secundarias": [],
+    "economia_dominante": "agropecuária, comércio, serviços, indústria cerâmica",
+    "polos_industriais": [
+      "Polo cerâmico"
+    ],
+    "bairros_comerciais": [
+      "Centro",
+      "Setor Residencial Triunfo"
+    ],
+    "setores_locais": [
+      "cerâmica (tijolos, telhas)",
+      "agropecuária",
+      "comércio local",
+      "construção civil"
+    ],
+    "entity_bridges": {
+      "empilhadeira_combustao": "indústrias cerâmicas (movimentação de paletes de tijolos e telhas), armazéns agrícolas",
+      "plataforma_articulada": "manutenção de fornos e estruturas de cerâmicas, construção civil",
+      "plataforma_tesoura": "manutenção interna de fábricas de cerâmica",
+      "transpaleteira": "movimentação de paletes em cerâmicas e comércio local",
+      "curso_nr11": "operadores de indústrias cerâmicas e construção civil"
+    },
+    "pain_local": "22km de Goiânia — entrega no mesmo dia. Polo cerâmico com demanda por empilhadeiras para paletes de tijolos.",
+    "wikipedia": "https://pt.wikipedia.org/wiki/Goianira"
+  },
+  "inhumas-go": {
+    "display_name": "Inhumas",
+    "state": "GO",
+    "distancia_km": 40,
+    "populacao": "53.000",
+    "rodovia_principal": "GO-070, BR-153",
+    "rodovias_secundarias": [
+      "GO-222"
+    ],
+    "economia_dominante": "agropecuária, comércio, confecções, indústria alimentícia",
+    "polos_industriais": [
+      "Distrito Industrial de Inhumas"
+    ],
+    "bairros_comerciais": [
+      "Centro",
+      "Setor Industrial"
+    ],
+    "setores_locais": [
+      "confecções e têxtil",
+      "indústria alimentícia",
+      "agropecuária (milho, soja)",
+      "comércio varejista"
+    ],
+    "entity_bridges": {
+      "empilhadeira_combustao": "galpões de confecções e indústrias alimentícias, armazéns de grãos",
+      "plataforma_articulada": "manutenção de galpões industriais, construção civil",
+      "plataforma_tesoura": "instalações elétricas em fábricas de confecções",
+      "transpaleteira": "movimentação em fábricas de confecções (fardos), indústrias alimentícias",
+      "curso_nr11": "operadores de indústrias de confecções e alimentícias"
+    },
+    "pain_local": "40km de Goiânia — entrega em 24h. Polo de confecções com demanda por movimentação de fardos.",
+    "wikipedia": "https://pt.wikipedia.org/wiki/Inhumas"
+  },
+  "neropolis-go": {
+    "display_name": "Nerópolis",
+    "state": "GO",
+    "distancia_km": 25,
+    "populacao": "34.000",
+    "rodovia_principal": "BR-153",
+    "rodovias_secundarias": [
+      "GO-080"
+    ],
+    "economia_dominante": "logística, indústria alimentícia, agropecuária",
+    "polos_industriais": [
+      "Polo logístico da BR-153"
+    ],
+    "bairros_comerciais": [
+      "Centro",
+      "Setor Industrial"
+    ],
+    "setores_locais": [
+      "logística e CDs (corredor BR-153)",
+      "indústria alimentícia",
+      "agropecuária",
+      "construção civil"
+    ],
+    "entity_bridges": {
+      "empilhadeira_combustao": "CDs logísticos ao longo da BR-153, armazéns e galpões de distribuição",
+      "plataforma_articulada": "manutenção de galpões logísticos, construção civil",
+      "plataforma_tesoura": "manutenção interna de CDs e galpões",
+      "transpaleteira": "docas de expedição em CDs logísticos, cross-docking na BR-153",
+      "curso_nr11": "operadores de CDs logísticos e galpões de distribuição"
+    },
+    "pain_local": "25km de Goiânia — entrega no mesmo dia. Corredor logístico da BR-153 com galpões e CDs.",
+    "wikipedia": "https://pt.wikipedia.org/wiki/Nerópolis"
+  },
+  "ceres-go": {
+    "display_name": "Ceres",
+    "state": "GO",
+    "distancia_km": 200,
+    "populacao": "22.000",
+    "rodovia_principal": "BR-153",
+    "rodovias_secundarias": [
+      "GO-154"
+    ],
+    "economia_dominante": "agropecuária (milho, soja, arroz), pecuária de corte, comércio",
+    "polos_industriais": [
+      "Indústrias de farinha, móveis, cerealistas"
+    ],
+    "bairros_comerciais": [
+      "Centro"
+    ],
+    "setores_locais": [
+      "agricultura (milho, soja, arroz, cana)",
+      "pecuária de corte e leiteira",
+      "indústria moveleira",
+      "cerealistas",
+      "comércio regional"
+    ],
+    "entity_bridges": {
+      "empilhadeira_combustao": "cerealistas e armazéns de grãos, cooperativas agrícolas do Vale do São Patrício",
+      "plataforma_articulada": "manutenção de silos e armazéns graneleiros",
+      "plataforma_tesoura": "construção civil e manutenção de galpões agrícolas",
+      "transpaleteira": "movimentação de sacas em cerealistas e cooperativas, laticínios",
+      "curso_nr11": "operadores de cerealistas, armazéns e cooperativas agrícolas"
+    },
+    "pain_local": "Polo regional do Vale do São Patrício. 200km via BR-153. Agricultura forte (milho, soja, arroz). PIB R$734M.",
+    "wikipedia": "https://pt.wikipedia.org/wiki/Ceres_(Goiás)"
+  },
+  "goianesia-go": {
+    "display_name": "Goianésia",
+    "state": "GO",
+    "distancia_km": 168,
+    "populacao": "75.000",
+    "rodovia_principal": "BR-153",
+    "rodovias_secundarias": [
+      "GO-080"
+    ],
+    "economia_dominante": "sucroalcooleiro (usinas de cana/álcool/energia), agropecuária (soja, pecuária)",
+    "polos_industriais": [
+      "Usina Jalles Machado",
+      "Usina Goianésia",
+      "Usina Codora (Otávio Lage)"
+    ],
+    "bairros_comerciais": [
+      "Centro",
+      "Setor Industrial"
+    ],
+    "setores_locais": [
+      "usinas de açúcar, álcool e bioenergia",
+      "agropecuária (cana, soja)",
+      "pecuária (corte e leite)",
+      "comércio regional"
+    ],
+    "entity_bridges": {
+      "empilhadeira_combustao": "movimentação de sacas de açúcar em usinas, armazéns de grãos de soja",
+      "plataforma_articulada": "manutenção de caldeiras e estruturas altas em usinas, instalações industriais",
+      "plataforma_tesoura": "manutenção de equipamentos em usinas, instalações elétricas",
+      "transpaleteira": "armazéns de açúcar e subprodutos nas 3 usinas, docas de expedição",
+      "curso_nr11": "operadores de empilhadeira nas usinas Jalles Machado, Goianésia e Codora"
+    },
+    "pain_local": "3 usinas de álcool/açúcar/energia geram a maior parte de emprego e renda. 168km via BR-153. Polo sucroalcooleiro nacional.",
+    "wikipedia": "https://pt.wikipedia.org/wiki/Goianésia"
+  },
+  "jaragua-go": {
+    "display_name": "Jaraguá",
+    "state": "GO",
+    "distancia_km": 133,
+    "populacao": "50.000",
+    "rodovia_principal": "BR-153",
+    "rodovias_secundarias": [
+      "GO-080"
+    ],
+    "economia_dominante": "confecções e têxtil (Capital das Confecções), comércio, agropecuária",
+    "polos_industriais": [
+      "Polo de Confecções (1.300+ empresas)",
+      "Jaraguá Outlet (em construção)"
+    ],
+    "bairros_comerciais": [
+      "Centro",
+      "Polo Comercial de Confecções"
+    ],
+    "setores_locais": [
+      "confecções/jeans (80 mil peças/dia)",
+      "têxtil",
+      "comércio de moda",
+      "agropecuária"
+    ],
+    "entity_bridges": {
+      "empilhadeira_combustao": "galpões de confecções e estoque de tecidos, expedição de fardos de roupas",
+      "plataforma_articulada": "construção do Jaraguá Outlet, manutenção de galpões de confecções",
+      "plataforma_tesoura": "instalações e manutenção em fábricas têxteis",
+      "transpaleteira": "movimentação de fardos de roupas (80 mil peças/dia), docas de expedição para Polo da Moda de Goiânia",
+      "curso_nr11": "operadores das 1.300 empresas de confecções"
+    },
+    "pain_local": "Capital das Confecções do Centro-Oeste — 1.300 empresas, 80 mil peças/dia, 10 mil empregos diretos. 133km via BR-153. 850 vagas abertas no setor.",
+    "wikipedia": "https://pt.wikipedia.org/wiki/Jaraguá_(Goiás)"
+  },
+  "uruacu-go": {
+    "display_name": "Uruaçu",
+    "state": "GO",
+    "distancia_km": 280,
+    "populacao": "40.000",
+    "rodovia_principal": "BR-153",
+    "rodovias_secundarias": [
+      "GO-080"
+    ],
+    "economia_dominante": "agropecuária (aves, suínos, leite, cana, soja), indústria, comércio regional",
+    "polos_industriais": [
+      "Distrito Agroindustrial de Uruaçu (258 mil m², 31 empresas)"
+    ],
+    "bairros_comerciais": [
+      "Centro",
+      "Setor Industrial"
+    ],
+    "setores_locais": [
+      "avicultura e suinocultura",
+      "laticínios",
+      "indústria de grãos",
+      "moveleira",
+      "metalúrgica",
+      "cana-de-açúcar"
+    ],
+    "entity_bridges": {
+      "empilhadeira_combustao": "armazéns de grãos e silos, cooperativas agropecuárias, metalúrgicas do Distrito Industrial",
+      "plataforma_articulada": "manutenção de silos e estruturas altas no Distrito Industrial",
+      "plataforma_tesoura": "manutenção de galpões e fábricas no Distrito Agroindustrial",
+      "transpaleteira": "câmaras frias de frigoríficos de aves/suínos, armazéns de laticínios",
+      "curso_nr11": "operadores das 31 empresas do Distrito Agroindustrial"
+    },
+    "pain_local": "Polo econômico do Norte Goiano. 280km via BR-153. Distrito com 31 empresas. PIB R$1,3 bi — cresceu 190% em 15 anos.",
+    "wikipedia": "https://pt.wikipedia.org/wiki/Uruaçu"
+  },
+  "valparaiso-de-goias-go": {
+    "display_name": "Valparaíso de Goiás",
+    "state": "GO",
+    "distancia_km": 230,
+    "populacao": "200.000",
+    "rodovia_principal": "BR-040",
+    "rodovias_secundarias": [
+      "BR-060"
+    ],
+    "economia_dominante": "comércio e serviços, moveleiro, construção civil",
+    "polos_industriais": [
+      "Polo Moveleiro (120 fábricas)",
+      "Centro empresarial"
+    ],
+    "bairros_comerciais": [
+      "Centro",
+      "Etapa A/B/C",
+      "Jardim Céu Azul",
+      "Parque São Bernardo"
+    ],
+    "setores_locais": [
+      "comércio varejista (38% dos empregos)",
+      "moveleiro (120 fábricas)",
+      "construção civil",
+      "serviços"
+    ],
+    "entity_bridges": {
+      "empilhadeira_combustao": "fábricas de móveis do polo moveleiro, galpões de comércio",
+      "plataforma_articulada": "construção civil em expansão, manutenção predial",
+      "plataforma_tesoura": "manutenção de galpões comerciais e lojas",
+      "transpaleteira": "movimentação de estoque em supermercados e comércio varejista, docas do polo moveleiro",
+      "curso_nr11": "operadores do polo moveleiro e comércio"
+    },
+    "pain_local": "Entorno do DF, 230km de Goiânia. 200k habitantes — cresceu 27% em 5 anos. 25.440 empresas ativas. Polo moveleiro com 120 fábricas.",
+    "wikipedia": "https://pt.wikipedia.org/wiki/Valparaíso_de_Goiás"
+  },
+  "piracanjuba-go": {
+    "display_name": "Piracanjuba",
+    "state": "GO",
+    "distancia_km": 87,
+    "populacao": "28.000",
+    "rodovia_principal": "BR-153",
+    "rodovias_secundarias": [
+      "GO-217"
+    ],
+    "economia_dominante": "pecuária leiteira (maior bacia leiteira de GO), agropecuária, laticínios",
+    "polos_industriais": [
+      "Cooperativa COAPIL (2.400 associados)",
+      "Distrito Agroindustrial Codego"
+    ],
+    "bairros_comerciais": [
+      "Centro"
+    ],
+    "setores_locais": [
+      "pecuária leiteira (220 mil litros/dia)",
+      "laticínios",
+      "pecuária de corte",
+      "agricultura (milho, soja, algodão, sorgo)",
+      "cooperativas"
+    ],
+    "entity_bridges": {
+      "empilhadeira_combustao": "carregamento de caminhões-tanque e expedição em laticínios, armazéns da COAPIL",
+      "plataforma_articulada": "manutenção de silos e tanques de laticínios, estruturas agroindustriais",
+      "plataforma_tesoura": "manutenção interna de laticínios e cooperativas",
+      "transpaleteira": "câmaras frias de laticínios, movimentação de paletes de queijos e derivados do leite",
+      "curso_nr11": "operadores da COAPIL (2.400 associados) e laticínios"
+    },
+    "pain_local": "Maior bacia leiteira de Goiás — 220 mil litros/dia. COAPIL com 2.400 associados. 87km via BR-153. Laticínios operam 24h.",
+    "wikipedia": "https://pt.wikipedia.org/wiki/Piracanjuba"
+  },
+  "silvania-go": {
+    "display_name": "Silvânia",
+    "state": "GO",
+    "distancia_km": 82,
+    "populacao": "22.000",
+    "rodovia_principal": "BR-153",
+    "rodovias_secundarias": [
+      "GO-010"
+    ],
+    "economia_dominante": "agropecuária (pecuária, grãos), cerâmica (tijolos)",
+    "polos_industriais": [],
+    "bairros_comerciais": [
+      "Centro"
+    ],
+    "setores_locais": [
+      "pecuária (corte e leite)",
+      "agricultura (soja, milho)",
+      "cerâmica (tijolos)",
+      "comércio local"
+    ],
+    "entity_bridges": {
+      "empilhadeira_combustao": "armazéns de grãos e cooperativas agropecuárias",
+      "plataforma_articulada": "manutenção de silos e instalações agroindustriais",
+      "plataforma_tesoura": "construção civil e manutenção de galpões rurais",
+      "transpaleteira": "cooperativas agropecuárias, cerâmicas (paletes de tijolos)",
+      "curso_nr11": "operadores de cooperativas e cerâmicas"
+    },
+    "pain_local": "82km via BR-153. PIB per capita R$62,8 mil (acima da média estadual). Agropecuária responde por 59,6% do PIB.",
+    "wikipedia": "https://pt.wikipedia.org/wiki/Silvânia"
+  },
+  "itaberai-go": {
+    "display_name": "Itaberaí",
+    "state": "GO",
+    "distancia_km": 90,
+    "populacao": "44.700",
+    "rodovia_principal": "GO-070",
+    "rodovias_secundarias": [
+      "GO-156"
+    ],
+    "economia_dominante": "agropecuária (tomate, milho, soja, cana), pecuária intensiva, mineração (calcário)",
+    "polos_industriais": [
+      "Área industrial"
+    ],
+    "bairros_comerciais": [
+      "Centro"
+    ],
+    "setores_locais": [
+      "agricultura (tomate, milho, soja, cana)",
+      "pecuária intensiva",
+      "mineração de calcário",
+      "comércio regional"
+    ],
+    "entity_bridges": {
+      "empilhadeira_combustao": "armazéns de grãos e cooperativas, mineradoras de calcário",
+      "plataforma_articulada": "manutenção de silos e instalações de mineração",
+      "plataforma_tesoura": "manutenção de galpões agrícolas e mineradoras",
+      "transpaleteira": "cooperativas agrícolas e indústrias de processamento de tomate",
+      "curso_nr11": "operadores de cooperativas, mineradoras e armazéns"
+    },
+    "pain_local": "90km de Goiânia. PIB R$1,8 bi — indústria 23,2%. Grande produtor de tomate, milho e soja. Mineração de calcário.",
+    "wikipedia": "https://pt.wikipedia.org/wiki/Itaberaí"
+  },
+  "anicuns-go": {
+    "display_name": "Anicuns",
+    "state": "GO",
+    "distancia_km": 75,
+    "populacao": "18.300",
+    "rodovia_principal": "GO-060",
+    "rodovias_secundarias": [],
+    "economia_dominante": "agropecuária, indústria, comércio",
+    "polos_industriais": [],
+    "bairros_comerciais": [
+      "Centro"
+    ],
+    "setores_locais": [
+      "agropecuária",
+      "indústria local",
+      "comércio"
+    ],
+    "entity_bridges": {
+      "empilhadeira_combustao": "armazéns agrícolas e indústrias locais",
+      "plataforma_articulada": "manutenção de silos e galpões",
+      "plataforma_tesoura": "construção civil e manutenção industrial",
+      "transpaleteira": "cooperativas e comércio local",
+      "curso_nr11": "operadores de indústrias e cooperativas"
+    },
+    "pain_local": "75km de Goiânia via GO-060. PIB R$512M — indústria 22,2%. Entre as 26 melhores cidades de GO para negócios.",
+    "wikipedia": "https://pt.wikipedia.org/wiki/Anicuns"
+  },
+  "pirenopolis-go": {
+    "display_name": "Pirenópolis",
+    "state": "GO",
+    "distancia_km": 120,
+    "populacao": "25.000",
+    "rodovia_principal": "GO-338",
+    "rodovias_secundarias": [
+      "BR-153 (proximidade)"
+    ],
+    "economia_dominante": "turismo, mineração (quartzito/pedras), agropecuária, artesanato",
+    "polos_industriais": [
+      "Polo de mineração de quartzito"
+    ],
+    "bairros_comerciais": [
+      "Centro Histórico"
+    ],
+    "setores_locais": [
+      "turismo e hotelaria",
+      "mineração de pedras (quartzito)",
+      "artesanato em prata",
+      "agropecuária"
+    ],
+    "entity_bridges": {
+      "empilhadeira_combustao": "mineradoras de quartzito, armazéns de pedras para exportação",
+      "plataforma_articulada": "restauração de casarões históricos, manutenção de pousadas",
+      "plataforma_tesoura": "obras de turismo e hotelaria, manutenção predial",
+      "transpaleteira": "mineradoras (paletes de pedras), comércio e hotelaria",
+      "curso_nr11": "operadores de mineradoras e construção civil"
+    },
+    "pain_local": "120km de Goiânia. Cidade histórica com turismo forte + mineração de quartzito. Demanda sazonal em construção/restauração.",
+    "wikipedia": "https://pt.wikipedia.org/wiki/Pirenópolis"
+  },
+  "abadiania-go": {
+    "display_name": "Abadiânia",
+    "state": "GO",
+    "distancia_km": 100,
+    "populacao": "20.000",
+    "rodovia_principal": "BR-060",
+    "rodovias_secundarias": [
+      "GO-139"
+    ],
+    "economia_dominante": "agropecuária (pecuária, grãos), comércio local",
+    "polos_industriais": [],
+    "bairros_comerciais": [
+      "Centro"
+    ],
+    "setores_locais": [
+      "pecuária (corte e leite)",
+      "agricultura (milho, soja)",
+      "comércio local",
+      "turismo religioso/espiritual"
+    ],
+    "entity_bridges": {
+      "empilhadeira_combustao": "armazéns de grãos e cooperativas agropecuárias locais",
+      "plataforma_articulada": "manutenção de silos, galpões rurais e instalações agropecuárias",
+      "plataforma_tesoura": "construção civil local e manutenção de galpões",
+      "transpaleteira": "cooperativas agrícolas e laticínios, comércio local",
+      "curso_nr11": "operadores de cooperativas e armazéns agropecuários"
+    },
+    "pain_local": "100km via BR-060. Turismo espiritual gera demanda em construção civil e hotelaria.",
+    "wikipedia": "https://pt.wikipedia.org/wiki/Abadiânia"
+  },
+  "alexania-go": {
+    "display_name": "Alexânia",
+    "state": "GO",
+    "distancia_km": 85,
+    "populacao": "28.000",
+    "rodovia_principal": "BR-060",
+    "rodovias_secundarias": [
+      "GO-139"
+    ],
+    "economia_dominante": "agropecuária (pecuária, grãos), comércio local",
+    "polos_industriais": [],
+    "bairros_comerciais": [
+      "Centro"
+    ],
+    "setores_locais": [
+      "pecuária (corte e leite)",
+      "agricultura (milho, soja)",
+      "comércio local",
+      "outlet/comércio rodoviário"
+    ],
+    "entity_bridges": {
+      "empilhadeira_combustao": "armazéns de grãos e cooperativas agropecuárias locais",
+      "plataforma_articulada": "manutenção de silos, galpões rurais e instalações agropecuárias",
+      "plataforma_tesoura": "construção civil local e manutenção de galpões",
+      "transpaleteira": "cooperativas agrícolas e laticínios, comércio local",
+      "curso_nr11": "operadores de cooperativas e armazéns agropecuários"
+    },
+    "pain_local": "85km via BR-060. Corredor rodoviário Goiânia-Brasília com outlets e comércio.",
+    "wikipedia": "https://pt.wikipedia.org/wiki/Alexânia"
+  },
+  "pontalina-go": {
+    "display_name": "Pontalina",
+    "state": "GO",
+    "distancia_km": 120,
+    "populacao": "18.000",
+    "rodovia_principal": "GO-139",
+    "rodovias_secundarias": [
+      "BR-153 (proximidade)"
+    ],
+    "economia_dominante": "agropecuária, confecções/moda, construção civil",
+    "polos_industriais": [
+      "Distrito Agroindustrial (250 mil m²)",
+      "Polo de Confecção (Cuecas Don Juan, Dueme's)"
+    ],
+    "bairros_comerciais": [
+      "Centro"
+    ],
+    "setores_locais": [
+      "confecções e moda íntima",
+      "agropecuária",
+      "construção civil",
+      "alimentício"
+    ],
+    "entity_bridges": {
+      "empilhadeira_combustao": "galpões de confecções e indústrias alimentícias do Distrito Agroindustrial",
+      "plataforma_articulada": "manutenção de silos, galpões rurais e instalações agropecuárias",
+      "plataforma_tesoura": "construção civil local e manutenção de galpões",
+      "transpaleteira": "fábricas de confecções (fardos de tecido e peças prontas), indústrias alimentícias",
+      "curso_nr11": "operadores de cooperativas e armazéns agropecuários"
+    },
+    "pain_local": "120km via GO-139. Polo de confecção (Don Juan, Dueme's). Distrito Agroindustrial com 250 mil m². PIB R$717M — agropecuária 46,5%.",
+    "wikipedia": "https://pt.wikipedia.org/wiki/Pontalina"
+  },
+  "vianopolis-go": {
+    "display_name": "Vianópolis",
+    "state": "GO",
+    "distancia_km": 80,
+    "populacao": "13.000",
+    "rodovia_principal": "BR-153",
+    "rodovias_secundarias": [
+      "GO-010"
+    ],
+    "economia_dominante": "agropecuária (pecuária, grãos), comércio local",
+    "polos_industriais": [],
+    "bairros_comerciais": [
+      "Centro"
+    ],
+    "setores_locais": [
+      "pecuária (corte e leite)",
+      "agricultura (milho, soja)",
+      "comércio local",
+      "tomate, soja (25 mil hectares)"
+    ],
+    "entity_bridges": {
+      "empilhadeira_combustao": "armazéns de grãos e cooperativas agropecuárias locais",
+      "plataforma_articulada": "manutenção de silos, galpões rurais e instalações agropecuárias",
+      "plataforma_tesoura": "construção civil local e manutenção de galpões",
+      "transpaleteira": "cooperativas agrícolas e laticínios, comércio local",
+      "curso_nr11": "operadores de cooperativas e armazéns agropecuários"
+    },
+    "pain_local": "80km via BR-153. Agricultura diversificada com destaque para soja (25 mil hectares) e tomate.",
+    "wikipedia": "https://pt.wikipedia.org/wiki/Vianópolis"
+  },
+  "orizona-go": {
+    "display_name": "Orizona",
+    "state": "GO",
+    "distancia_km": 130,
+    "populacao": "16.000",
+    "rodovia_principal": "BR-153",
+    "rodovias_secundarias": [
+      "GO-010"
+    ],
+    "economia_dominante": "agropecuária (tomate, milho, soja, cana), indústria de processamento de tomate",
+    "polos_industriais": [
+      "Indústria de processamento de tomate"
+    ],
+    "bairros_comerciais": [
+      "Centro"
+    ],
+    "setores_locais": [
+      "tomate (processamento industrial)",
+      "milho e soja",
+      "cana-de-açúcar",
+      "pecuária leiteira",
+      "cachaça artesanal (exportação)"
+    ],
+    "entity_bridges": {
+      "empilhadeira_combustao": "indústria de processamento de tomate, armazéns de grãos",
+      "plataforma_articulada": "manutenção de silos, galpões rurais e instalações agropecuárias",
+      "plataforma_tesoura": "construção civil local e manutenção de galpões",
+      "transpaleteira": "fábricas de processamento de tomate (paletes de latas/embalagens), cooperativas",
+      "curso_nr11": "operadores de cooperativas e armazéns agropecuários"
+    },
+    "pain_local": "130km via BR-153. Polo de processamento de tomate (Goiás é líder nacional). PIB R$938M — agropecuária 59,2%. PIB per capita R$59,2 mil.",
+    "wikipedia": "https://pt.wikipedia.org/wiki/Orizona"
+  },
+  "edeia-go": {
+    "display_name": "Edéia",
+    "state": "GO",
+    "distancia_km": 110,
+    "populacao": "12.000",
+    "rodovia_principal": "GO-320",
+    "rodovias_secundarias": [
+      "BR-153 (proximidade)"
+    ],
+    "economia_dominante": "sucroalcooleiro (usina Tropical Bioenergia), agronegócio (grãos, cana)",
+    "polos_industriais": [
+      "Usina Tropical Bioenergia S/A"
+    ],
+    "bairros_comerciais": [
+      "Centro"
+    ],
+    "setores_locais": [
+      "usina de açúcar/álcool/bioenergia",
+      "agricultura (cana, grãos)",
+      "cooperativas agrícolas"
+    ],
+    "entity_bridges": {
+      "empilhadeira_combustao": "movimentação de sacas de açúcar na Usina Tropical Bioenergia, armazéns graneleiros",
+      "plataforma_articulada": "manutenção de silos, galpões rurais e instalações agropecuárias",
+      "plataforma_tesoura": "construção civil local e manutenção de galpões",
+      "transpaleteira": "armazéns de açúcar e subprodutos da usina, cooperativas de grãos",
+      "curso_nr11": "operadores de cooperativas e armazéns agropecuários"
+    },
+    "pain_local": "110km de Goiânia. Usina Tropical Bioenergia (GO-410). Goiás é 2º maior produtor de cana do Brasil.",
+    "wikipedia": "https://pt.wikipedia.org/wiki/Edéia"
+  },
+  "pires-do-rio-go": {
+    "display_name": "Pires do Rio",
+    "state": "GO",
+    "distancia_km": 150,
+    "populacao": "32.000",
+    "rodovia_principal": "BR-153",
+    "rodovias_secundarias": [
+      "GO-010"
+    ],
+    "economia_dominante": "avicultura (Capital Estadual da Avicultura), ferrovia, agropecuária",
+    "polos_industriais": [
+      "Friato/Nutriza Agroindustrial (avicultura integrada)",
+      "Entroncamento ferroviário"
+    ],
+    "bairros_comerciais": [
+      "Centro"
+    ],
+    "setores_locais": [
+      "avicultura industrial (Friato/Nutriza)",
+      "agropecuária (soja, milho)",
+      "ferrovia (conexão Norte-Sul)",
+      "comércio regional"
+    ],
+    "entity_bridges": {
+      "empilhadeira_combustao": "frigoríficos de aves Friato/Nutriza, armazéns de grãos, terminal ferroviário",
+      "plataforma_articulada": "manutenção de silos, galpões rurais e instalações agropecuárias",
+      "plataforma_tesoura": "construção civil local e manutenção de galpões",
+      "transpaleteira": "câmaras frias de frigoríficos de aves, docas de expedição de aves congeladas",
+      "curso_nr11": "operadores de cooperativas e armazéns agropecuários"
+    },
+    "pain_local": "150km via BR-153. Capital Estadual da Avicultura — Friato/Nutriza. PIB R$1,4 bi — indústria 30,7%. Entroncamento ferroviário. Cresceu 241% em 10 anos.",
+    "wikipedia": "https://pt.wikipedia.org/wiki/Pires_do_Rio"
+  },
+  "palmeiras-de-goias-go": {
+    "display_name": "Palmeiras de Goiás",
+    "state": "GO",
+    "distancia_km": 65,
+    "populacao": "25.000",
+    "rodovia_principal": "GO-060",
+    "rodovias_secundarias": [],
+    "economia_dominante": "agroindústria (abate bovino e aves), pecuária leiteira (110 mil litros/dia), agropecuária",
+    "polos_industriais": [
+      "Frigoríficos de bovinos e aves",
+      "Laticínios"
+    ],
+    "bairros_comerciais": [
+      "Centro"
+    ],
+    "setores_locais": [
+      "abate de bovinos (2.160 empregos)",
+      "abate de aves (1.876 empregos)",
+      "pecuária leiteira",
+      "agricultura (soja, milho, tomate)",
+      "laticínios"
+    ],
+    "entity_bridges": {
+      "empilhadeira_combustao": "frigoríficos de bovinos e aves (movimentação de carcaças e paletes), armazéns de grãos",
+      "plataforma_articulada": "manutenção de silos, galpões rurais e instalações agropecuárias",
+      "plataforma_tesoura": "construção civil local e manutenção de galpões",
+      "transpaleteira": "câmaras frias de frigoríficos (-18°C), docas de expedição de carnes, laticínios",
+      "curso_nr11": "operadores de cooperativas e armazéns agropecuários"
+    },
+    "pain_local": "65km via GO-060. 5º município que mais exporta em GO. Frigoríficos (bovino: 2.160 empregos, aves: 1.876). PIB R$1,8 bi — indústria 34,9%. Bacia leiteira 110 mil litros/dia.",
+    "wikipedia": "https://pt.wikipedia.org/wiki/Palmeiras_de_Goiás"
+  },
+  "firminopolis-go": {
+    "display_name": "Firminópolis",
+    "state": "GO",
+    "distancia_km": 85,
+    "populacao": "12.000",
+    "rodovia_principal": "GO-060",
+    "rodovias_secundarias": [],
+    "economia_dominante": "agropecuária (pecuária, grãos), comércio local",
+    "polos_industriais": [],
+    "bairros_comerciais": [
+      "Centro"
+    ],
+    "setores_locais": [
+      "pecuária (corte e leite)",
+      "agricultura (milho, soja)",
+      "comércio local"
+    ],
+    "entity_bridges": {
+      "empilhadeira_combustao": "armazéns de grãos e cooperativas agropecuárias locais",
+      "plataforma_articulada": "manutenção de silos, galpões rurais e instalações agropecuárias",
+      "plataforma_tesoura": "construção civil local e manutenção de galpões",
+      "transpaleteira": "cooperativas agrícolas e laticínios, comércio local",
+      "curso_nr11": "operadores de cooperativas e armazéns agropecuários"
+    },
+    "pain_local": "85km via GO-060. Economia agropecuária com foco em pecuária e grãos.",
+    "wikipedia": "https://pt.wikipedia.org/wiki/Firminópolis"
+  },
+  "bela-vista-de-goias-go": {
+    "display_name": "Bela Vista de Goiás",
+    "state": "GO",
+    "distancia_km": 45,
+    "populacao": "28.000",
+    "rodovia_principal": "GO-020",
+    "rodovias_secundarias": [],
+    "economia_dominante": "pecuária leiteira (3ª maior bacia de GO), laticínios, agropecuária",
+    "polos_industriais": [
+      "Laticínios Bela Vista (marca Piracanjuba — 6M litros/dia, R$2bi faturamento)"
+    ],
+    "bairros_comerciais": [
+      "Centro"
+    ],
+    "setores_locais": [
+      "laticínios (1.239 empregos diretos)",
+      "pecuária leiteira",
+      "agricultura (mandioca, milho, soja, arroz)",
+      "criação de avestruzes"
+    ],
+    "entity_bridges": {
+      "empilhadeira_combustao": "armazéns e linhas de produção do Laticínios Bela Vista (Piracanjuba)",
+      "plataforma_articulada": "manutenção de silos, galpões rurais e instalações agropecuárias",
+      "plataforma_tesoura": "construção civil local e manutenção de galpões",
+      "transpaleteira": "câmaras frias do Laticínios Bela Vista, movimentação de paletes de laticínios (180+ produtos)",
+      "curso_nr11": "operadores de cooperativas e armazéns agropecuários"
+    },
+    "pain_local": "45km de Goiânia. Sede do Laticínios Bela Vista (marca Piracanjuba) — 3ª maior indústria de laticínios do Brasil, 6M litros/dia, 180+ produtos. PIB R$1,5 bi — indústria 31,4%.",
+    "wikipedia": "https://pt.wikipedia.org/wiki/Bela_Vista_de_Goiás"
+  },
+  "goianapolis-go": {
+    "display_name": "Goianápolis",
+    "state": "GO",
+    "distancia_km": 30,
+    "populacao": "12.000",
+    "rodovia_principal": "GO-020",
+    "rodovias_secundarias": [],
+    "economia_dominante": "agropecuária diversificada, indústria leve, serviços",
+    "polos_industriais": [],
+    "bairros_comerciais": [
+      "Centro"
+    ],
+    "setores_locais": [
+      "pecuária (corte e leite)",
+      "agricultura (milho, soja)",
+      "comércio local"
+    ],
+    "entity_bridges": {
+      "empilhadeira_combustao": "armazéns de grãos e cooperativas agropecuárias locais",
+      "plataforma_articulada": "manutenção de silos, galpões rurais e instalações agropecuárias",
+      "plataforma_tesoura": "construção civil local e manutenção de galpões",
+      "transpaleteira": "cooperativas agrícolas e laticínios, comércio local",
+      "curso_nr11": "operadores de cooperativas e armazéns agropecuários"
+    },
+    "pain_local": "30km de Goiânia via GO-020. Agricultura dinâmica com produtos de alto valor agregado. PIB R$294M — indústria 22,1%.",
+    "wikipedia": "https://pt.wikipedia.org/wiki/Goianápolis"
+  },
+  "guapo-go": {
+    "display_name": "Guapó",
+    "state": "GO",
+    "distancia_km": 35,
+    "populacao": "14.000",
+    "rodovia_principal": "GO-040",
+    "rodovias_secundarias": [],
+    "economia_dominante": "agropecuária (pecuária, grãos), comércio local",
+    "polos_industriais": [],
+    "bairros_comerciais": [
+      "Centro"
+    ],
+    "setores_locais": [
+      "pecuária (corte e leite)",
+      "agricultura (milho, soja)",
+      "comércio local"
+    ],
+    "entity_bridges": {
+      "empilhadeira_combustao": "armazéns de grãos e cooperativas agropecuárias locais",
+      "plataforma_articulada": "manutenção de silos, galpões rurais e instalações agropecuárias",
+      "plataforma_tesoura": "construção civil local e manutenção de galpões",
+      "transpaleteira": "cooperativas agrícolas e laticínios, comércio local",
+      "curso_nr11": "operadores de cooperativas e armazéns agropecuários"
+    },
+    "pain_local": "35km de Goiânia via GO-040. Economia agropecuária.",
+    "wikipedia": "https://pt.wikipedia.org/wiki/Guapó"
+  },
+  "aragoiania-go": {
+    "display_name": "Aragoiânia",
+    "state": "GO",
+    "distancia_km": 30,
+    "populacao": "10.000",
+    "rodovia_principal": "GO-040",
+    "rodovias_secundarias": [],
+    "economia_dominante": "agropecuária (pecuária, grãos), comércio local",
+    "polos_industriais": [],
+    "bairros_comerciais": [
+      "Centro"
+    ],
+    "setores_locais": [
+      "pecuária (corte e leite)",
+      "agricultura (milho, soja)",
+      "comércio local"
+    ],
+    "entity_bridges": {
+      "empilhadeira_combustao": "armazéns de grãos e cooperativas agropecuárias locais",
+      "plataforma_articulada": "manutenção de silos, galpões rurais e instalações agropecuárias",
+      "plataforma_tesoura": "construção civil local e manutenção de galpões",
+      "transpaleteira": "cooperativas agrícolas e laticínios, comércio local",
+      "curso_nr11": "operadores de cooperativas e armazéns agropecuários"
+    },
+    "pain_local": "30km de Goiânia via GO-040. Economia agropecuária.",
+    "wikipedia": "https://pt.wikipedia.org/wiki/Aragoiânia"
+  },
+  "abadia-de-goias-go": {
+    "display_name": "Abadia de Goiás",
+    "state": "GO",
+    "distancia_km": 25,
+    "populacao": "8.500",
+    "rodovia_principal": "GO-040",
+    "rodovias_secundarias": [],
+    "economia_dominante": "agropecuária (pecuária, grãos), comércio local",
+    "polos_industriais": [],
+    "bairros_comerciais": [
+      "Centro"
+    ],
+    "setores_locais": [
+      "pecuária (corte e leite)",
+      "agricultura (milho, soja)",
+      "comércio local"
+    ],
+    "entity_bridges": {
+      "empilhadeira_combustao": "armazéns de grãos e cooperativas agropecuárias locais",
+      "plataforma_articulada": "manutenção de silos, galpões rurais e instalações agropecuárias",
+      "plataforma_tesoura": "construção civil local e manutenção de galpões",
+      "transpaleteira": "cooperativas agrícolas e laticínios, comércio local",
+      "curso_nr11": "operadores de cooperativas e armazéns agropecuários"
+    },
+    "pain_local": "25km de Goiânia via GO-040. Economia agropecuária.",
+    "wikipedia": "https://pt.wikipedia.org/wiki/Abadia_de_Goiás"
+  },
+  "bonfinopolis-go": {
+    "display_name": "Bonfinópolis",
+    "state": "GO",
+    "distancia_km": 30,
+    "populacao": "10.000",
+    "rodovia_principal": "GO-403",
+    "rodovias_secundarias": [],
+    "economia_dominante": "agropecuária (pecuária, grãos), comércio local",
+    "polos_industriais": [],
+    "bairros_comerciais": [
+      "Centro"
+    ],
+    "setores_locais": [
+      "pecuária (corte e leite)",
+      "agricultura (milho, soja)",
+      "comércio local"
+    ],
+    "entity_bridges": {
+      "empilhadeira_combustao": "armazéns de grãos e cooperativas agropecuárias locais",
+      "plataforma_articulada": "manutenção de silos, galpões rurais e instalações agropecuárias",
+      "plataforma_tesoura": "construção civil local e manutenção de galpões",
+      "transpaleteira": "cooperativas agrícolas e laticínios, comércio local",
+      "curso_nr11": "operadores de cooperativas e armazéns agropecuários"
+    },
+    "pain_local": "30km de Goiânia via GO-403. Economia agropecuária.",
+    "wikipedia": "https://pt.wikipedia.org/wiki/Bonfinópolis"
+  },
+  "brazabrantes-go": {
+    "display_name": "Brazabrantes",
+    "state": "GO",
+    "distancia_km": 30,
+    "populacao": "4.000",
+    "rodovia_principal": "GO-080",
+    "rodovias_secundarias": [],
+    "economia_dominante": "agropecuária (pecuária, grãos), comércio local",
+    "polos_industriais": [],
+    "bairros_comerciais": [
+      "Centro"
+    ],
+    "setores_locais": [
+      "pecuária (corte e leite)",
+      "agricultura (milho, soja)",
+      "comércio local"
+    ],
+    "entity_bridges": {
+      "empilhadeira_combustao": "armazéns de grãos e cooperativas agropecuárias locais",
+      "plataforma_articulada": "manutenção de silos, galpões rurais e instalações agropecuárias",
+      "plataforma_tesoura": "construção civil local e manutenção de galpões",
+      "transpaleteira": "cooperativas agrícolas e laticínios, comércio local",
+      "curso_nr11": "operadores de cooperativas e armazéns agropecuários"
+    },
+    "pain_local": "30km de Goiânia via GO-080. Economia agropecuária.",
+    "wikipedia": "https://pt.wikipedia.org/wiki/Brazabrantes"
+  },
+  "caldazinha-go": {
+    "display_name": "Caldazinha",
+    "state": "GO",
+    "distancia_km": 40,
+    "populacao": "4.000",
+    "rodovia_principal": "GO-020",
+    "rodovias_secundarias": [],
+    "economia_dominante": "agropecuária (pecuária, grãos), comércio local",
+    "polos_industriais": [],
+    "bairros_comerciais": [
+      "Centro"
+    ],
+    "setores_locais": [
+      "pecuária (corte e leite)",
+      "agricultura (milho, soja)",
+      "comércio local"
+    ],
+    "entity_bridges": {
+      "empilhadeira_combustao": "armazéns de grãos e cooperativas agropecuárias locais",
+      "plataforma_articulada": "manutenção de silos, galpões rurais e instalações agropecuárias",
+      "plataforma_tesoura": "construção civil local e manutenção de galpões",
+      "transpaleteira": "cooperativas agrícolas e laticínios, comércio local",
+      "curso_nr11": "operadores de cooperativas e armazéns agropecuários"
+    },
+    "pain_local": "40km de Goiânia via GO-020. Economia agropecuária.",
+    "wikipedia": "https://pt.wikipedia.org/wiki/Caldazinha"
+  },
+  "campo-limpo-de-goias-go": {
+    "display_name": "Campo Limpo de Goiás",
+    "state": "GO",
+    "distancia_km": 40,
+    "populacao": "7.000",
+    "rodovia_principal": "GO-070",
+    "rodovias_secundarias": [],
+    "economia_dominante": "agropecuária (pecuária, grãos), comércio local",
+    "polos_industriais": [],
+    "bairros_comerciais": [
+      "Centro"
+    ],
+    "setores_locais": [
+      "pecuária (corte e leite)",
+      "agricultura (milho, soja)",
+      "comércio local"
+    ],
+    "entity_bridges": {
+      "empilhadeira_combustao": "armazéns de grãos e cooperativas agropecuárias locais",
+      "plataforma_articulada": "manutenção de silos, galpões rurais e instalações agropecuárias",
+      "plataforma_tesoura": "construção civil local e manutenção de galpões",
+      "transpaleteira": "cooperativas agrícolas e laticínios, comércio local",
+      "curso_nr11": "operadores de cooperativas e armazéns agropecuários"
+    },
+    "pain_local": "40km de Goiânia via GO-070. Economia agropecuária.",
+    "wikipedia": "https://pt.wikipedia.org/wiki/Campo_Limpo_de_Goiás"
+  },
+  "caturai-go": {
+    "display_name": "Caturaí",
+    "state": "GO",
+    "distancia_km": 35,
+    "populacao": "5.000",
+    "rodovia_principal": "GO-070",
+    "rodovias_secundarias": [],
+    "economia_dominante": "agropecuária (pecuária, grãos), comércio local",
+    "polos_industriais": [],
+    "bairros_comerciais": [
+      "Centro"
+    ],
+    "setores_locais": [
+      "pecuária (corte e leite)",
+      "agricultura (milho, soja)",
+      "comércio local"
+    ],
+    "entity_bridges": {
+      "empilhadeira_combustao": "armazéns de grãos e cooperativas agropecuárias locais",
+      "plataforma_articulada": "manutenção de silos, galpões rurais e instalações agropecuárias",
+      "plataforma_tesoura": "construção civil local e manutenção de galpões",
+      "transpaleteira": "cooperativas agrícolas e laticínios, comércio local",
+      "curso_nr11": "operadores de cooperativas e armazéns agropecuários"
+    },
+    "pain_local": "35km de Goiânia via GO-070. Economia agropecuária.",
+    "wikipedia": "https://pt.wikipedia.org/wiki/Caturaí"
+  },
+  "cezarina-go": {
+    "display_name": "Cezarina",
+    "state": "GO",
+    "distancia_km": 65,
+    "populacao": "8.000",
+    "rodovia_principal": "GO-060",
+    "rodovias_secundarias": [],
+    "economia_dominante": "agropecuária (pecuária, grãos), comércio local",
+    "polos_industriais": [],
+    "bairros_comerciais": [
+      "Centro"
+    ],
+    "setores_locais": [
+      "pecuária (corte e leite)",
+      "agricultura (milho, soja)",
+      "comércio local"
+    ],
+    "entity_bridges": {
+      "empilhadeira_combustao": "armazéns de grãos e cooperativas agropecuárias locais",
+      "plataforma_articulada": "manutenção de silos, galpões rurais e instalações agropecuárias",
+      "plataforma_tesoura": "construção civil local e manutenção de galpões",
+      "transpaleteira": "cooperativas agrícolas e laticínios, comércio local",
+      "curso_nr11": "operadores de cooperativas e armazéns agropecuários"
+    },
+    "pain_local": "65km de Goiânia via GO-060. Economia agropecuária.",
+    "wikipedia": "https://pt.wikipedia.org/wiki/Cezarina"
+  },
+  "cristianopolis-go": {
+    "display_name": "Cristianópolis",
+    "state": "GO",
+    "distancia_km": 95,
+    "populacao": "3.500",
+    "rodovia_principal": "GO-020",
+    "rodovias_secundarias": [],
+    "economia_dominante": "agropecuária (pecuária, grãos), comércio local",
+    "polos_industriais": [],
+    "bairros_comerciais": [
+      "Centro"
+    ],
+    "setores_locais": [
+      "pecuária (corte e leite)",
+      "agricultura (milho, soja)",
+      "comércio local"
+    ],
+    "entity_bridges": {
+      "empilhadeira_combustao": "armazéns de grãos e cooperativas agropecuárias locais",
+      "plataforma_articulada": "manutenção de silos, galpões rurais e instalações agropecuárias",
+      "plataforma_tesoura": "construção civil local e manutenção de galpões",
+      "transpaleteira": "cooperativas agrícolas e laticínios, comércio local",
+      "curso_nr11": "operadores de cooperativas e armazéns agropecuários"
+    },
+    "pain_local": "95km de Goiânia via GO-020. Economia agropecuária.",
+    "wikipedia": "https://pt.wikipedia.org/wiki/Cristianópolis"
+  },
+  "crominia-go": {
+    "display_name": "Cromínia",
+    "state": "GO",
+    "distancia_km": 80,
+    "populacao": "3.800",
+    "rodovia_principal": "GO-217",
+    "rodovias_secundarias": [],
+    "economia_dominante": "agropecuária (pecuária, grãos), comércio local",
+    "polos_industriais": [],
+    "bairros_comerciais": [
+      "Centro"
+    ],
+    "setores_locais": [
+      "pecuária (corte e leite)",
+      "agricultura (milho, soja)",
+      "comércio local"
+    ],
+    "entity_bridges": {
+      "empilhadeira_combustao": "armazéns de grãos e cooperativas agropecuárias locais",
+      "plataforma_articulada": "manutenção de silos, galpões rurais e instalações agropecuárias",
+      "plataforma_tesoura": "construção civil local e manutenção de galpões",
+      "transpaleteira": "cooperativas agrícolas e laticínios, comércio local",
+      "curso_nr11": "operadores de cooperativas e armazéns agropecuários"
+    },
+    "pain_local": "80km de Goiânia via GO-217. Economia agropecuária.",
+    "wikipedia": "https://pt.wikipedia.org/wiki/Cromínia"
+  },
+  "damolandia-go": {
+    "display_name": "Damolândia",
+    "state": "GO",
+    "distancia_km": 45,
+    "populacao": "3.000",
+    "rodovia_principal": "GO-080",
+    "rodovias_secundarias": [],
+    "economia_dominante": "agropecuária (pecuária, grãos), comércio local",
+    "polos_industriais": [],
+    "bairros_comerciais": [
+      "Centro"
+    ],
+    "setores_locais": [
+      "pecuária (corte e leite)",
+      "agricultura (milho, soja)",
+      "comércio local"
+    ],
+    "entity_bridges": {
+      "empilhadeira_combustao": "armazéns de grãos e cooperativas agropecuárias locais",
+      "plataforma_articulada": "manutenção de silos, galpões rurais e instalações agropecuárias",
+      "plataforma_tesoura": "construção civil local e manutenção de galpões",
+      "transpaleteira": "cooperativas agrícolas e laticínios, comércio local",
+      "curso_nr11": "operadores de cooperativas e armazéns agropecuários"
+    },
+    "pain_local": "45km de Goiânia via GO-080. Economia agropecuária.",
+    "wikipedia": "https://pt.wikipedia.org/wiki/Damolândia"
+  },
+  "leopoldo-de-bulhoes-go": {
+    "display_name": "Leopoldo de Bulhões",
+    "state": "GO",
+    "distancia_km": 50,
+    "populacao": "8.500",
+    "rodovia_principal": "BR-153",
+    "rodovias_secundarias": [],
+    "economia_dominante": "agropecuária (pecuária, grãos), comércio local",
+    "polos_industriais": [],
+    "bairros_comerciais": [
+      "Centro"
+    ],
+    "setores_locais": [
+      "pecuária (corte e leite)",
+      "agricultura (milho, soja)",
+      "comércio local"
+    ],
+    "entity_bridges": {
+      "empilhadeira_combustao": "armazéns de grãos e cooperativas agropecuárias locais",
+      "plataforma_articulada": "manutenção de silos, galpões rurais e instalações agropecuárias",
+      "plataforma_tesoura": "construção civil local e manutenção de galpões",
+      "transpaleteira": "cooperativas agrícolas e laticínios, comércio local",
+      "curso_nr11": "operadores de cooperativas e armazéns agropecuários"
+    },
+    "pain_local": "50km de Goiânia via BR-153. Economia agropecuária.",
+    "wikipedia": "https://pt.wikipedia.org/wiki/Leopoldo_de_Bulhões"
+  },
+  "mairipotaba-go": {
+    "display_name": "Mairipotaba",
+    "state": "GO",
+    "distancia_km": 100,
+    "populacao": "3.000",
+    "rodovia_principal": "GO-320",
+    "rodovias_secundarias": [],
+    "economia_dominante": "agropecuária (pecuária, grãos), comércio local",
+    "polos_industriais": [],
+    "bairros_comerciais": [
+      "Centro"
+    ],
+    "setores_locais": [
+      "pecuária (corte e leite)",
+      "agricultura (milho, soja)",
+      "comércio local"
+    ],
+    "entity_bridges": {
+      "empilhadeira_combustao": "armazéns de grãos e cooperativas agropecuárias locais",
+      "plataforma_articulada": "manutenção de silos, galpões rurais e instalações agropecuárias",
+      "plataforma_tesoura": "construção civil local e manutenção de galpões",
+      "transpaleteira": "cooperativas agrícolas e laticínios, comércio local",
+      "curso_nr11": "operadores de cooperativas e armazéns agropecuários"
+    },
+    "pain_local": "100km de Goiânia via GO-320. Economia agropecuária.",
+    "wikipedia": "https://pt.wikipedia.org/wiki/Mairipotaba"
+  },
+  "nova-veneza-go": {
+    "display_name": "Nova Veneza",
+    "state": "GO",
+    "distancia_km": 30,
+    "populacao": "10.000",
+    "rodovia_principal": "GO-080",
+    "rodovias_secundarias": [],
+    "economia_dominante": "agropecuária (pecuária, grãos), comércio local",
+    "polos_industriais": [],
+    "bairros_comerciais": [
+      "Centro"
+    ],
+    "setores_locais": [
+      "pecuária (corte e leite)",
+      "agricultura (milho, soja)",
+      "comércio local"
+    ],
+    "entity_bridges": {
+      "empilhadeira_combustao": "armazéns de grãos e cooperativas agropecuárias locais",
+      "plataforma_articulada": "manutenção de silos, galpões rurais e instalações agropecuárias",
+      "plataforma_tesoura": "construção civil local e manutenção de galpões",
+      "transpaleteira": "cooperativas agrícolas e laticínios, comércio local",
+      "curso_nr11": "operadores de cooperativas e armazéns agropecuários"
+    },
+    "pain_local": "30km de Goiânia via GO-080. Economia agropecuária.",
+    "wikipedia": "https://pt.wikipedia.org/wiki/Nova_Veneza"
+  },
+  "petrolina-de-goias-go": {
+    "display_name": "Petrolina de Goiás",
+    "state": "GO",
+    "distancia_km": 50,
+    "populacao": "11.000",
+    "rodovia_principal": "GO-080",
+    "rodovias_secundarias": [],
+    "economia_dominante": "agropecuária (pecuária, grãos), comércio local",
+    "polos_industriais": [],
+    "bairros_comerciais": [
+      "Centro"
+    ],
+    "setores_locais": [
+      "pecuária (corte e leite)",
+      "agricultura (milho, soja)",
+      "comércio local"
+    ],
+    "entity_bridges": {
+      "empilhadeira_combustao": "armazéns de grãos e cooperativas agropecuárias locais",
+      "plataforma_articulada": "manutenção de silos, galpões rurais e instalações agropecuárias",
+      "plataforma_tesoura": "construção civil local e manutenção de galpões",
+      "transpaleteira": "cooperativas agrícolas e laticínios, comércio local",
+      "curso_nr11": "operadores de cooperativas e armazéns agropecuários"
+    },
+    "pain_local": "50km de Goiânia via GO-080. Economia agropecuária.",
+    "wikipedia": "https://pt.wikipedia.org/wiki/Petrolina_de_Goiás"
+  },
+  "santo-antonio-de-goias-go": {
+    "display_name": "Santo Antônio de Goiás",
+    "state": "GO",
+    "distancia_km": 20,
+    "populacao": "5.500",
+    "rodovia_principal": "GO-462",
+    "rodovias_secundarias": [],
+    "economia_dominante": "pesquisa agropecuária (Embrapa Arroz e Feijão), agricultura (milho, feijão, arroz, cana)",
+    "polos_industriais": [
+      "Embrapa Arroz e Feijão (GO-462, km 12)"
+    ],
+    "bairros_comerciais": [
+      "Centro"
+    ],
+    "setores_locais": [
+      "pesquisa agropecuária (Embrapa)",
+      "agricultura (milho, feijão, arroz, cana, tomate)",
+      "pecuária"
+    ],
+    "entity_bridges": {
+      "empilhadeira_combustao": "armazéns de grãos e cooperativas agropecuárias locais",
+      "plataforma_articulada": "manutenção de silos, galpões rurais e instalações agropecuárias",
+      "plataforma_tesoura": "construção civil local e manutenção de galpões",
+      "transpaleteira": "cooperativas agrícolas e laticínios, comércio local",
+      "curso_nr11": "operadores de cooperativas e armazéns agropecuários"
+    },
+    "pain_local": "20km de Goiânia. Sede da Embrapa Arroz e Feijão — centro de pesquisa agropecuária nacional. Agricultura responde por 56% da arrecadação.",
+    "wikipedia": "https://pt.wikipedia.org/wiki/Santo_Antônio_de_Goiás"
+  },
+  "terezopolis-de-goias-go": {
+    "display_name": "Terezópolis de Goiás",
+    "state": "GO",
+    "distancia_km": 30,
+    "populacao": "8.000",
+    "rodovia_principal": "GO-080",
+    "rodovias_secundarias": [],
+    "economia_dominante": "agropecuária (pecuária, grãos), comércio local",
+    "polos_industriais": [],
+    "bairros_comerciais": [
+      "Centro"
+    ],
+    "setores_locais": [
+      "pecuária (corte e leite)",
+      "agricultura (milho, soja)",
+      "comércio local"
+    ],
+    "entity_bridges": {
+      "empilhadeira_combustao": "armazéns de grãos e cooperativas agropecuárias locais",
+      "plataforma_articulada": "manutenção de silos, galpões rurais e instalações agropecuárias",
+      "plataforma_tesoura": "construção civil local e manutenção de galpões",
+      "transpaleteira": "cooperativas agrícolas e laticínios, comércio local",
+      "curso_nr11": "operadores de cooperativas e armazéns agropecuários"
+    },
+    "pain_local": "30km de Goiânia via GO-080. Economia agropecuária.",
+    "wikipedia": "https://pt.wikipedia.org/wiki/Terezópolis_de_Goiás"
+  },
+  "varjao-go": {
+    "display_name": "Varjão",
+    "state": "GO",
+    "distancia_km": 80,
+    "populacao": "3.500",
+    "rodovia_principal": "GO-139",
+    "rodovias_secundarias": [],
+    "economia_dominante": "agropecuária (pecuária, grãos), comércio local",
+    "polos_industriais": [],
+    "bairros_comerciais": [
+      "Centro"
+    ],
+    "setores_locais": [
+      "pecuária (corte e leite)",
+      "agricultura (milho, soja)",
+      "comércio local"
+    ],
+    "entity_bridges": {
+      "empilhadeira_combustao": "armazéns de grãos e cooperativas agropecuárias locais",
+      "plataforma_articulada": "manutenção de silos, galpões rurais e instalações agropecuárias",
+      "plataforma_tesoura": "construção civil local e manutenção de galpões",
+      "transpaleteira": "cooperativas agrícolas e laticínios, comércio local",
+      "curso_nr11": "operadores de cooperativas e armazéns agropecuários"
+    },
+    "pain_local": "80km de Goiânia via GO-139. Economia agropecuária.",
+    "wikipedia": "https://pt.wikipedia.org/wiki/Varjão"
+  },
+  "campestre-de-goias-go": {
+    "display_name": "Campestre de Goiás",
+    "state": "GO",
+    "distancia_km": 70,
+    "populacao": "4.000",
+    "rodovia_principal": "GO-060",
+    "rodovias_secundarias": [],
+    "economia_dominante": "agropecuária (pecuária, grãos), comércio local",
+    "polos_industriais": [],
+    "bairros_comerciais": [
+      "Centro"
+    ],
+    "setores_locais": [
+      "pecuária (corte e leite)",
+      "agricultura (milho, soja)",
+      "comércio local"
+    ],
+    "entity_bridges": {
+      "empilhadeira_combustao": "armazéns de grãos e cooperativas agropecuárias locais",
+      "plataforma_articulada": "manutenção de silos, galpões rurais e instalações agropecuárias",
+      "plataforma_tesoura": "construção civil local e manutenção de galpões",
+      "transpaleteira": "cooperativas agrícolas e laticínios, comércio local",
+      "curso_nr11": "operadores de cooperativas e armazéns agropecuários"
+    },
+    "pain_local": "70km de Goiânia via GO-060. Economia agropecuária.",
+    "wikipedia": "https://pt.wikipedia.org/wiki/Campestre_de_Goiás"
+  },
+  "gameleira-de-goias-go": {
+    "display_name": "Gameleira de Goiás",
+    "state": "GO",
+    "distancia_km": 40,
+    "populacao": "3.500",
+    "rodovia_principal": "GO-070",
+    "rodovias_secundarias": [],
+    "economia_dominante": "agropecuária (pecuária, grãos), comércio local",
+    "polos_industriais": [],
+    "bairros_comerciais": [
+      "Centro"
+    ],
+    "setores_locais": [
+      "pecuária (corte e leite)",
+      "agricultura (milho, soja)",
+      "comércio local"
+    ],
+    "entity_bridges": {
+      "empilhadeira_combustao": "armazéns de grãos e cooperativas agropecuárias locais",
+      "plataforma_articulada": "manutenção de silos, galpões rurais e instalações agropecuárias",
+      "plataforma_tesoura": "construção civil local e manutenção de galpões",
+      "transpaleteira": "cooperativas agrícolas e laticínios, comércio local",
+      "curso_nr11": "operadores de cooperativas e armazéns agropecuários"
+    },
+    "pain_local": "40km de Goiânia via GO-070. Economia agropecuária.",
+    "wikipedia": "https://pt.wikipedia.org/wiki/Gameleira_de_Goiás"
+  },
+  "itaucu-go": {
+    "display_name": "Itauçu",
+    "state": "GO",
+    "distancia_km": 55,
+    "populacao": "9.000",
+    "rodovia_principal": "GO-070",
+    "rodovias_secundarias": [],
+    "economia_dominante": "agropecuária (pecuária, grãos), comércio local",
+    "polos_industriais": [],
+    "bairros_comerciais": [
+      "Centro"
+    ],
+    "setores_locais": [
+      "pecuária (corte e leite)",
+      "agricultura (milho, soja)",
+      "comércio local"
+    ],
+    "entity_bridges": {
+      "empilhadeira_combustao": "armazéns de grãos e cooperativas agropecuárias locais",
+      "plataforma_articulada": "manutenção de silos, galpões rurais e instalações agropecuárias",
+      "plataforma_tesoura": "construção civil local e manutenção de galpões",
+      "transpaleteira": "cooperativas agrícolas e laticínios, comércio local",
+      "curso_nr11": "operadores de cooperativas e armazéns agropecuários"
+    },
+    "pain_local": "55km de Goiânia via GO-070. Economia agropecuária.",
+    "wikipedia": "https://pt.wikipedia.org/wiki/Itauçu"
+  },
+  "nazario-go": {
+    "display_name": "Nazário",
+    "state": "GO",
+    "distancia_km": 55,
+    "populacao": "9.000",
+    "rodovia_principal": "GO-060",
+    "rodovias_secundarias": [],
+    "economia_dominante": "agropecuária (pecuária, grãos), comércio local",
+    "polos_industriais": [],
+    "bairros_comerciais": [
+      "Centro"
+    ],
+    "setores_locais": [
+      "pecuária (corte e leite)",
+      "agricultura (milho, soja)",
+      "comércio local"
+    ],
+    "entity_bridges": {
+      "empilhadeira_combustao": "armazéns de grãos e cooperativas agropecuárias locais",
+      "plataforma_articulada": "manutenção de silos, galpões rurais e instalações agropecuárias",
+      "plataforma_tesoura": "construção civil local e manutenção de galpões",
+      "transpaleteira": "cooperativas agrícolas e laticínios, comércio local",
+      "curso_nr11": "operadores de cooperativas e armazéns agropecuários"
+    },
+    "pain_local": "55km de Goiânia via GO-060. Economia agropecuária.",
+    "wikipedia": "https://pt.wikipedia.org/wiki/Nazário"
+  },
+  "ouro-verde-de-goias-go": {
+    "display_name": "Ouro Verde de Goiás",
+    "state": "GO",
+    "distancia_km": 45,
+    "populacao": "4.500",
+    "rodovia_principal": "GO-080",
+    "rodovias_secundarias": [],
+    "economia_dominante": "agropecuária (pecuária, grãos), comércio local",
+    "polos_industriais": [],
+    "bairros_comerciais": [
+      "Centro"
+    ],
+    "setores_locais": [
+      "pecuária (corte e leite)",
+      "agricultura (milho, soja)",
+      "comércio local"
+    ],
+    "entity_bridges": {
+      "empilhadeira_combustao": "armazéns de grãos e cooperativas agropecuárias locais",
+      "plataforma_articulada": "manutenção de silos, galpões rurais e instalações agropecuárias",
+      "plataforma_tesoura": "construção civil local e manutenção de galpões",
+      "transpaleteira": "cooperativas agrícolas e laticínios, comércio local",
+      "curso_nr11": "operadores de cooperativas e armazéns agropecuários"
+    },
+    "pain_local": "45km de Goiânia via GO-080. Economia agropecuária.",
+    "wikipedia": "https://pt.wikipedia.org/wiki/Ouro_Verde_de_Goiás"
+  },
+  "professor-jamil-go": {
+    "display_name": "Professor Jamil",
+    "state": "GO",
+    "distancia_km": 110,
+    "populacao": "3.500",
+    "rodovia_principal": "GO-139",
+    "rodovias_secundarias": [],
+    "economia_dominante": "agropecuária (pecuária, grãos), comércio local",
+    "polos_industriais": [],
+    "bairros_comerciais": [
+      "Centro"
+    ],
+    "setores_locais": [
+      "pecuária (corte e leite)",
+      "agricultura (milho, soja)",
+      "comércio local"
+    ],
+    "entity_bridges": {
+      "empilhadeira_combustao": "armazéns de grãos e cooperativas agropecuárias locais",
+      "plataforma_articulada": "manutenção de silos, galpões rurais e instalações agropecuárias",
+      "plataforma_tesoura": "construção civil local e manutenção de galpões",
+      "transpaleteira": "cooperativas agrícolas e laticínios, comércio local",
+      "curso_nr11": "operadores de cooperativas e armazéns agropecuários"
+    },
+    "pain_local": "110km de Goiânia via GO-139. Economia agropecuária.",
+    "wikipedia": "https://pt.wikipedia.org/wiki/Professor_Jamil"
+  },
+  "santa-barbara-de-goias-go": {
+    "display_name": "Santa Bárbara de Goiás",
+    "state": "GO",
+    "distancia_km": 35,
+    "populacao": "7.000",
+    "rodovia_principal": "GO-070",
+    "rodovias_secundarias": [],
+    "economia_dominante": "agropecuária (pecuária, grãos), comércio local",
+    "polos_industriais": [],
+    "bairros_comerciais": [
+      "Centro"
+    ],
+    "setores_locais": [
+      "pecuária (corte e leite)",
+      "agricultura (milho, soja)",
+      "comércio local"
+    ],
+    "entity_bridges": {
+      "empilhadeira_combustao": "armazéns de grãos e cooperativas agropecuárias locais",
+      "plataforma_articulada": "manutenção de silos, galpões rurais e instalações agropecuárias",
+      "plataforma_tesoura": "construção civil local e manutenção de galpões",
+      "transpaleteira": "cooperativas agrícolas e laticínios, comércio local",
+      "curso_nr11": "operadores de cooperativas e armazéns agropecuários"
+    },
+    "pain_local": "35km de Goiânia via GO-070. Economia agropecuária.",
+    "wikipedia": "https://pt.wikipedia.org/wiki/Santa_Bárbara_de_Goiás"
+  },
+  "taquaral-de-goias-go": {
+    "display_name": "Taquaral de Goiás",
+    "state": "GO",
+    "distancia_km": 60,
+    "populacao": "4.000",
+    "rodovia_principal": "GO-070",
+    "rodovias_secundarias": [],
+    "economia_dominante": "agropecuária (pecuária, grãos), comércio local",
+    "polos_industriais": [],
+    "bairros_comerciais": [
+      "Centro"
+    ],
+    "setores_locais": [
+      "pecuária (corte e leite)",
+      "agricultura (milho, soja)",
+      "comércio local"
+    ],
+    "entity_bridges": {
+      "empilhadeira_combustao": "armazéns de grãos e cooperativas agropecuárias locais",
+      "plataforma_articulada": "manutenção de silos, galpões rurais e instalações agropecuárias",
+      "plataforma_tesoura": "construção civil local e manutenção de galpões",
+      "transpaleteira": "cooperativas agrícolas e laticínios, comércio local",
+      "curso_nr11": "operadores de cooperativas e armazéns agropecuários"
+    },
+    "pain_local": "60km de Goiânia via GO-070. Economia agropecuária.",
+    "wikipedia": "https://pt.wikipedia.org/wiki/Taquaral_de_Goiás"
+  },
+  "aracu-go": {
+    "display_name": "Araçu",
+    "state": "GO",
+    "distancia_km": 50,
+    "populacao": "4.000",
+    "rodovia_principal": "GO-156",
+    "rodovias_secundarias": [],
+    "economia_dominante": "agropecuária (pecuária, grãos), comércio local",
+    "polos_industriais": [],
+    "bairros_comerciais": [
+      "Centro"
+    ],
+    "setores_locais": [
+      "pecuária (corte e leite)",
+      "agricultura (milho, soja)",
+      "comércio local"
+    ],
+    "entity_bridges": {
+      "empilhadeira_combustao": "armazéns de grãos e cooperativas agropecuárias locais",
+      "plataforma_articulada": "manutenção de silos, galpões rurais e instalações agropecuárias",
+      "plataforma_tesoura": "construção civil local e manutenção de galpões",
+      "transpaleteira": "cooperativas agrícolas e laticínios, comércio local",
+      "curso_nr11": "operadores de cooperativas e armazéns agropecuários"
+    },
+    "pain_local": "50km de Goiânia via GO-156. Economia agropecuária.",
+    "wikipedia": "https://pt.wikipedia.org/wiki/Araçu"
+  },
+  "avelinopolis-go": {
+    "display_name": "Avelinópolis",
+    "state": "GO",
+    "distancia_km": 45,
+    "populacao": "3.000",
+    "rodovia_principal": "GO-070",
+    "rodovias_secundarias": [],
+    "economia_dominante": "agropecuária (pecuária, grãos), comércio local",
+    "polos_industriais": [],
+    "bairros_comerciais": [
+      "Centro"
+    ],
+    "setores_locais": [
+      "pecuária (corte e leite)",
+      "agricultura (milho, soja)",
+      "comércio local"
+    ],
+    "entity_bridges": {
+      "empilhadeira_combustao": "armazéns de grãos e cooperativas agropecuárias locais",
+      "plataforma_articulada": "manutenção de silos, galpões rurais e instalações agropecuárias",
+      "plataforma_tesoura": "construção civil local e manutenção de galpões",
+      "transpaleteira": "cooperativas agrícolas e laticínios, comércio local",
+      "curso_nr11": "operadores de cooperativas e armazéns agropecuários"
+    },
+    "pain_local": "45km de Goiânia via GO-070. Economia agropecuária.",
+    "wikipedia": "https://pt.wikipedia.org/wiki/Avelinópolis"
+  }
+}

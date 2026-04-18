@@ -1,0 +1,119 @@
+{
+  "pages": [
+    {
+      "page": "anapolis-go/articulada-A",
+      "testimonials": [
+        {
+          "name": "Ricardo M.",
+          "sector": "fachada ACM",
+          "city_ref": "DAIA",
+          "date": "mar/2025"
+        },
+        {
+          "name": "Carlos A.",
+          "sector": "industrial galpão",
+          "city_ref": "DAIA",
+          "date": "jan/2026"
+        },
+        {
+          "name": "Patricia L.",
+          "sector": "comunicação visual",
+          "city_ref": "Jundiaí",
+          "date": "fev/2026"
+        }
+      ]
+    },
+    {
+      "page": "anapolis-go/articulada-B",
+      "testimonials": [
+        {
+          "name": "Roberto S.",
+          "sector": "pharma exaustão",
+          "city_ref": "DAIA",
+          "date": "jan/2026"
+        },
+        {
+          "name": "Fernanda M.",
+          "sector": "logística Porto Seco",
+          "city_ref": "Porto Seco",
+          "date": "nov/2025"
+        },
+        {
+          "name": "Thiago C.",
+          "sector": "construção civil",
+          "city_ref": "Vila Jaiara",
+          "date": "mar/2026"
+        }
+      ]
+    },
+    {
+      "page": "anapolis-go/articulada-C",
+      "testimonials": [
+        {
+          "name": "Renato F.",
+          "sector": "industria DAIA",
+          "city_ref": "DAIA",
+          "date": "jan/2026"
+        },
+        {
+          "name": "Luciana M.",
+          "sector": "laboratório",
+          "city_ref": "DAIA",
+          "date": "nov/2025"
+        },
+        {
+          "name": "Wagner S.",
+          "sector": "construtora",
+          "city_ref": "Vila Jaiara",
+          "date": "mar/2026"
+        }
+      ]
+    },
+    {
+      "page": "anapolis-go/articulada-D",
+      "testimonials": [
+        {
+          "name": "Carlos R.",
+          "sector": "Teuto produção",
+          "city_ref": "DAIA",
+          "date": "dez/2025"
+        },
+        {
+          "name": "Patricia L.",
+          "sector": "logística multimodal",
+          "city_ref": "Plataforma Logística",
+          "date": "jan/2026"
+        },
+        {
+          "name": "Marcos A.",
+          "sector": "engenharia civil",
+          "city_ref": "Vila Jaiara",
+          "date": "fev/2026"
+        }
+      ]
+    },
+    {
+      "page": "anapolis-go/articulada-E",
+      "testimonials": [
+        {
+          "name": "Anderson R.",
+          "sector": "pintura industrial",
+          "city_ref": "Munir Calixto",
+          "date": "dez/2025"
+        },
+        {
+          "name": "Juliana S.",
+          "sector": "reforma fachada",
+          "city_ref": "Centro",
+          "date": "jan/2026"
+        },
+        {
+          "name": "Marcelo T.",
+          "sector": "logística",
+          "city_ref": "Porto Seco",
+          "date": "mar/2026"
+        }
+      ]
+    }
+  ]
+}

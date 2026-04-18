@@ -1,0 +1,1786 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A Lista Invisível da IA — Apresentação</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --bg-dark: #0a0a0f;
+  --bg-slide: #101018;
+  --accent: #4f8cff;
+  --accent2: #00e68a;
+  --accent-red: #ff4d6a;
+  --accent-yellow: #ffc247;
+  --text: #f0f0f5;
+  --text-muted: #8888a0;
+  --gradient-hero: linear-gradient(135deg, #0a0a1a 0%, #1a1a3e 50%, #0a0a1a 100%);
+}
+
+html, body {
+  width: 100%; height: 100%;
+  font-family: 'Inter', system-ui, sans-serif;
+  background: var(--bg-dark);
+  color: var(--text);
+  overflow: hidden;
+}
+
+/* ── SLIDE ENGINE ── */
+.deck { width: 100%; height: 100%; position: relative; }
+
+.slide {
+  position: absolute; inset: 0;
+  display: flex; flex-direction: column;
+  justify-content: center; align-items: center;
+  padding: 60px 80px;
+  opacity: 0; pointer-events: none;
+  transition: opacity .5s ease;
+  text-align: center;
+}
+.slide.active { opacity: 1; pointer-events: auto; }
+
+/* ── PROGRESS BAR ── */
+.progress {
+  position: fixed; top: 0; left: 0; height: 3px;
+  background: var(--accent);
+  transition: width .4s ease;
+  z-index: 100;
+}
+
+/* ── SLIDE COUNTER ── */
+.counter {
+  position: fixed; bottom: 24px; right: 32px;
+  font-size: 14px; color: var(--text-muted);
+  font-weight: 500; z-index: 100;
+  font-variant-numeric: tabular-nums;
+}
+
+/* ── ACT LABEL ── */
+.act-label {
+  position: fixed; top: 20px; left: 32px;
+  font-size: 11px; font-weight: 700;
+  letter-spacing: 3px; text-transform: uppercase;
+  color: var(--accent); z-index: 100;
+  opacity: .7;
+}
+
+/* ── TYPOGRAPHY ── */
+h1 {
+  font-size: clamp(36px, 5vw, 72px);
+  font-weight: 900; line-height: 1.1;
+  margin-bottom: 24px;
+  letter-spacing: -1px;
+}
+h2 {
+  font-size: clamp(28px, 3.5vw, 54px);
+  font-weight: 800; line-height: 1.15;
+  margin-bottom: 20px;
+  letter-spacing: -0.5px;
+}
+h3 {
+  font-size: clamp(20px, 2.5vw, 36px);
+  font-weight: 700; line-height: 1.2;
+  margin-bottom: 16px;
+}
+p, li {
+  font-size: clamp(16px, 1.6vw, 24px);
+  line-height: 1.6; color: var(--text-muted);
+  max-width: 900px;
+}
+.slide p + p { margin-top: 16px; }
+
+/* ── HIGHLIGHT / ACCENT ── */
+.hl { color: var(--accent); }
+.hl-green { color: var(--accent2); }
+.hl-red { color: var(--accent-red); }
+.hl-yellow { color: var(--accent-yellow); }
+.big-number {
+  font-size: clamp(64px, 10vw, 140px);
+  font-weight: 900; line-height: 1;
+  margin-bottom: 16px;
+}
+.medium-number {
+  font-size: clamp(48px, 7vw, 96px);
+  font-weight: 900; line-height: 1;
+  margin-bottom: 12px;
+}
+.subtitle {
+  font-size: clamp(14px, 1.4vw, 20px);
+  color: var(--text-muted); font-weight: 400;
+  text-transform: uppercase; letter-spacing: 2px;
+  margin-bottom: 8px;
+}
+.source {
+  font-size: 13px; color: var(--text-muted);
+  opacity: .5; margin-top: 24px;
+}
+
+/* ── LAYOUTS ── */
+.split {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 60px; width: 100%; max-width: 1200px;
+  align-items: center; text-align: left;
+}
+.split-3 {
+  display: grid; grid-template-columns: 1fr 1fr 1fr;
+  gap: 40px; width: 100%; max-width: 1200px;
+  text-align: center;
+}
+.stack {
+  display: flex; flex-direction: column;
+  align-items: center; gap: 12px;
+}
+
+/* ── CARDS ── */
+.card {
+  background: rgba(255,255,255,.04);
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: 16px; padding: 32px;
+  text-align: left;
+}
+.card h3 { font-size: 20px; color: var(--text); margin-bottom: 8px; }
+.card p { font-size: 16px; }
+
+.card-accent {
+  background: rgba(79,140,255,.08);
+  border-color: rgba(79,140,255,.2);
+}
+.card-green {
+  background: rgba(0,230,138,.06);
+  border-color: rgba(0,230,138,.15);
+}
+.card-red {
+  background: rgba(255,77,106,.06);
+  border-color: rgba(255,77,106,.15);
+}
+
+/* ── COMPARISON BAR ── */
+.bar-compare {
+  width: 100%; max-width: 700px;
+  margin: 12px auto;
+}
+.bar-compare .bar-row {
+  display: flex; align-items: center; gap: 16px;
+  margin-bottom: 12px;
+}
+.bar-compare .bar-label {
+  font-size: 15px; font-weight: 600;
+  width: 140px; text-align: right; flex-shrink: 0;
+}
+.bar-compare .bar-track {
+  flex: 1; height: 36px; background: rgba(255,255,255,.05);
+  border-radius: 8px; overflow: hidden; position: relative;
+}
+.bar-compare .bar-fill {
+  height: 100%; border-radius: 8px;
+  display: flex; align-items: center;
+  padding-left: 12px; font-size: 14px; font-weight: 700;
+  transition: width 1s ease;
+}
+.bar-fill.blue { background: var(--accent); width: 0; }
+.bar-fill.green { background: var(--accent2); color: #0a0a0f; width: 0; }
+.bar-fill.red { background: var(--accent-red); width: 0; }
+
+/* ── TRAFFIC LIGHT ── */
+.traffic-light {
+  display: flex; flex-direction: column; gap: 20px;
+  width: 100%; max-width: 700px;
+}
+.tl-row {
+  display: flex; align-items: center; gap: 20px;
+  padding: 20px 24px; border-radius: 12px;
+  background: rgba(255,255,255,.03);
+}
+.tl-dot {
+  width: 28px; height: 28px; border-radius: 50%;
+  flex-shrink: 0;
+  box-shadow: 0 0 20px currentColor;
+}
+.tl-dot.green { background: #00e68a; color: #00e68a; }
+.tl-dot.yellow { background: #ffc247; color: #ffc247; }
+.tl-dot.red { background: #ff4d6a; color: #ff4d6a; }
+.tl-text { text-align: left; }
+.tl-text strong { font-size: 17px; display: block; color: var(--text); }
+.tl-text span { font-size: 14px; color: var(--text-muted); }
+
+/* ── CHECKLIST ── */
+.checklist {
+  text-align: left; max-width: 700px;
+  display: flex; flex-direction: column; gap: 16px;
+}
+.check-item {
+  display: flex; align-items: flex-start; gap: 14px;
+  font-size: clamp(15px, 1.5vw, 19px); line-height: 1.5;
+  color: var(--text);
+}
+.check-icon {
+  width: 28px; height: 28px; border-radius: 50%;
+  background: rgba(0,230,138,.15); color: var(--accent2);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 14px; font-weight: 700; flex-shrink: 0;
+  margin-top: 2px;
+}
+
+/* ── QUOTE ── */
+.quote {
+  font-size: clamp(20px, 2.5vw, 36px);
+  font-style: italic; font-weight: 300;
+  line-height: 1.5; max-width: 800px;
+  color: var(--text); position: relative;
+  padding-left: 24px;
+  border-left: 3px solid var(--accent);
+}
+
+/* ── INTERACTION CUE ── */
+.cue {
+  position: fixed; bottom: 24px; left: 32px;
+  background: rgba(79,140,255,.12);
+  border: 1px solid rgba(79,140,255,.25);
+  border-radius: 8px; padding: 8px 16px;
+  font-size: 13px; color: var(--accent);
+  font-weight: 500; z-index: 100;
+  display: none;
+}
+.slide.active .cue-parent ~ .cue,
+.slide.active[data-cue] .cue { display: block; }
+
+/* ── VERSUS ── */
+.vs-container {
+  display: grid; grid-template-columns: 1fr auto 1fr;
+  gap: 24px; align-items: center;
+  width: 100%; max-width: 900px;
+}
+.vs-label {
+  font-size: 48px; font-weight: 900;
+  color: var(--text-muted); opacity: .3;
+}
+
+/* ── FUNNEL ── */
+.funnel { width: 100%; max-width: 600px; }
+.funnel-step {
+  padding: 14px 24px; margin: 0 auto;
+  text-align: center; font-size: 16px; font-weight: 600;
+  border-radius: 8px; margin-bottom: 8px;
+  color: var(--text);
+}
+
+/* ── NOTES (hidden, for presenter) ── */
+.notes { display: none; }
+
+/* ── ANIMATION HELPERS ── */
+.fade-in { animation: fadeIn .6s ease both; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: none; } }
+
+.slide.active [data-delay="1"] { animation-delay: .2s; }
+.slide.active [data-delay="2"] { animation-delay: .4s; }
+.slide.active [data-delay="3"] { animation-delay: .6s; }
+.slide.active [data-delay="4"] { animation-delay: .8s; }
+.slide.active [data-delay="5"] { animation-delay: 1s; }
+
+/* ── SLIDE IMAGES ── */
+.slide-img {
+  border-radius: 12px;
+  max-height: 320px;
+  max-width: 100%;
+  object-fit: contain;
+  box-shadow: 0 4px 30px rgba(0,0,0,.4);
+}
+.slide-img-sm {
+  border-radius: 10px;
+  max-height: 220px;
+  max-width: 100%;
+  object-fit: contain;
+  box-shadow: 0 4px 20px rgba(0,0,0,.3);
+}
+.slide-img-xs {
+  border-radius: 8px;
+  max-height: 160px;
+  max-width: 100%;
+  object-fit: contain;
+  box-shadow: 0 2px 12px rgba(0,0,0,.25);
+}
+.img-row {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin-top: 16px;
+}
+.img-caption {
+  font-size: 11px;
+  color: var(--text-muted);
+  opacity: .6;
+  margin-top: 6px;
+  text-align: center;
+}
+/* Placeholder when image is missing */
+.img-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 8px;
+  background: rgba(79,140,255,.06);
+  border: 2px dashed rgba(79,140,255,.2);
+  border-radius: 12px;
+  padding: 24px 20px;
+  color: var(--accent);
+  font-size: 13px;
+  font-weight: 500;
+  text-align: center;
+  min-height: 120px;
+}
+.img-placeholder .ph-icon {
+  font-size: 28px;
+  opacity: .5;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 768px) {
+  .slide { padding: 40px 24px; }
+  .split, .split-3 { grid-template-columns: 1fr; gap: 24px; }
+  .vs-container { grid-template-columns: 1fr; }
+  .vs-label { font-size: 32px; }
+  .bar-compare .bar-label { width: 80px; font-size: 12px; }
+}
+</style>
+</head>
+<body>
+
+<div class="progress" id="progress"></div>
+<div class="counter" id="counter"></div>
+<div class="act-label" id="actLabel"></div>
+
+<div class="deck" id="deck">
+
+<!-- ════════════════════════════════════════════ -->
+<!-- SLIDE 01 — CAPA                             -->
+<!-- ════════════════════════════════════════════ -->
+<section class="slide" data-act="">
+  <p class="subtitle fade-in">Maturare — Gestão & Marketing</p>
+  <h1 class="fade-in" data-delay="1">A Lista Invisível<br>da <span class="hl">IA</span></h1>
+  <p class="fade-in" data-delay="2" style="max-width:700px;">
+    Por que <strong style="color:var(--text)">95% dos contratos</strong> já são decididos<br>
+    antes do seu vendedor ligar
+  </p>
+  <p class="source fade-in" data-delay="3">Use ← → para navegar &nbsp;|&nbsp; ESC para visão geral</p>
+</section>
+
+<!-- ════════════════════════════════════════════ -->
+<!-- SLIDE 02 — HISTÓRIA DE ABERTURA             -->
+<!-- ════════════════════════════════════════════ -->
+<section class="slide" data-act="ATO 1 · O MUNDO MUDOU">
+  <div class="quote fade-in">
+    "Semana passada, um dono de indústria me ligou.<br>
+    Perdeu um contrato de <span class="hl-red">R$ 800 mil</span>.<br><br>
+    O comprador nem sabia que a empresa dele existia.<br><br>
+    O contrato foi para um concorrente menor, com site melhor."
+  </div>
+  <p class="fade-in" data-delay="2" style="margin-top:32px; color:var(--text); font-weight:600;">
+    Sabe o que aconteceu?
+  </p>
+</section>
+
+<!-- ════════════════════════════════════════════ -->
+<!-- SLIDE 03 — O COMPRADOR MUDOU                -->
+<!-- ════════════════════════════════════════════ -->
+<section class="slide" data-act="ATO 1 · O MUNDO MUDOU">
+  <h2 class="fade-in">O comprador mudou.<br>Sua empresa <span class="hl-red">não</span>.</h2>
+  <p class="fade-in" data-delay="1">
+    O jeito que as empresas compram mudou radicalmente nos últimos 2 anos.<br>
+    A maioria dos vendedores ainda não percebeu.
+  </p>
+</section>
+
+<!-- ════════════════════════════════════════════ -->
+<!-- SLIDE 04 — A DOR PRÁTICA                    -->
+<!-- ════════════════════════════════════════════ -->
+<section class="slide" data-act="ATO 1 · O MUNDO MUDOU">
+  <h2 class="fade-in">Isso aqui é o dia a dia <span class="hl-red">de vocês</span>?</h2>
+  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 20px; max-width: 800px; width: 100%;">
+    <div class="card card-red fade-in" data-delay="1">
+      <h3 style="color: var(--accent-red); font-size: 17px;">Lead caro no Facebook</h3>
+      <p style="font-size: 14px;">Gasta R$ 3-5 mil/mês em anúncios. Chega lead que nem sabe o que quer, pede orçamento e some. <strong style="color:var(--text)">CAC subindo todo mês.</strong></p>
+    </div>
+    <div class="card card-red fade-in" data-delay="2">
+      <h3 style="color: var(--accent-red); font-size: 17px;">Clique caro no Google Ads</h3>
+      <p style="font-size: 14px;">Paga R$ 8-15 por clique em palavras disputadas. Concorrente clica no seu anúncio. <strong style="color:var(--text)">70% do orçamento vira desperdício.</strong></p>
+    </div>
+    <div class="card card-red fade-in" data-delay="3">
+      <h3 style="color: var(--accent-red); font-size: 17px;">Leads desqualificados</h3>
+      <p style="font-size: 14px;">Vendedor passa o dia todo respondendo quem <strong style="color:var(--text)">nunca vai comprar</strong>. Pede orçamento, compara com 10 e escolhe o mais barato.</p>
+    </div>
+    <div class="card card-red fade-in" data-delay="4">
+      <h3 style="color: var(--accent-red); font-size: 17px;">Processo comercial longo</h3>
+      <p style="font-size: 14px;">Da primeira ligação ao fechamento: <strong style="color:var(--text)">semanas ou meses</strong>. Vendedor vira educador, não fechador. Margem vai pro chão.</p>
+    </div>
+  </div>
+  <p class="fade-in" data-delay="5" style="margin-top: 20px; color: var(--accent-yellow); font-weight: 600;">
+    E se eu te dissesse que o problema não é o canal — é o timing?
+  </p>
+</section>
+
+<!-- ════════════════════════════════════════════ -->
+<!-- SLIDE 04b — INTERAÇÃO: QUEM PASSOU POR ISSO -->
+<!-- ════════════════════════════════════════════ -->
+<section class="slide" data-act="ATO 1 · O MUNDO MUDOU">
+  <h2 class="fade-in" style="color: var(--accent-yellow);">Levanta a mão:</h2>
+  <div style="display: flex; flex-direction: column; gap: 20px; margin-top: 24px; max-width: 700px;">
+    <h3 class="fade-in" data-delay="1" style="color: var(--text); font-weight: 400;">
+      Quem já <strong>aumentou verba</strong> no Facebook/Google<br>e o resultado <strong style="color:var(--accent-red)">não acompanhou</strong>?
+    </h3>
+    <h3 class="fade-in" data-delay="2" style="color: var(--text); font-weight: 400;">
+      Quem tem vendedor que reclama que<br><strong style="color:var(--accent-red)">os leads não prestam</strong>?
+    </h3>
+    <h3 class="fade-in" data-delay="3" style="color: var(--text); font-weight: 400;">
+      Quem sente que o <strong style="color:var(--accent-red)">ciclo de venda</strong><br>está cada vez mais longo?
+    </h3>
+  </div>
+  <p class="fade-in" data-delay="4" style="margin-top: 32px; font-weight: 600; color: var(--accent2); font-size: 22px;">
+    Vou mostrar por que isso está acontecendo.
+  </p>
+  <p class="notes">INTERAÇÃO: Espere a plateia levantar a mão em cada pergunta. Vai gerar identificação. Depois conecte com o dado dos 70%.</p>
+</section>
+
+<!-- ════════════════════════════════════════════ -->
+<!-- SLIDE 05 — 70% DADO BOMBA                   -->
+<!-- ════════════════════════════════════════════ -->
+<section class="slide" data-act="ATO 1 · O MUNDO MUDOU">
+  <p class="subtitle fade-in">Dado #1 — A causa raiz</p>
+  <div class="big-number hl fade-in" data-delay="1">70%</div>
+  <h3 class="fade-in" data-delay="2">da decisão de compra já está tomada<br>
+  <span style="color:var(--text)">antes de falar com qualquer vendedor</span></h3>
+  <p class="source fade-in" data-delay="3">Fonte: Gartner, 2025</p>
+</section>
+
+<!-- ════════════════════════════════════════════ -->
+<!-- SLIDE 05 — INTERAÇÃO: CHUTE                 -->
+<!-- ════════════════════════════════════════════ -->
+<section class="slide" data-act="ATO 1 · O MUNDO MUDOU">
+  <h2 class="fade-in">Pergunta pra vocês:</h2>
+  <h3 class="fade-in" data-delay="1" style="color: var(--accent2);">
+    Quantos % dos compradores B2B já usam<br>
+    inteligência artificial para escolher fornecedores?
+  </h3>
+  <p class="fade-in" data-delay="2" style="font-size:20px; margin-top:24px;">
+    Levanta a mão quem acha que é mais de 50%.
+  </p>
+  <p class="notes">INTERAÇÃO: Peça para a plateia chutar um número. Espere 10 segundos. Depois revele no próximo slide.</p>
+</section>
+
+<!-- ════════════════════════════════════════════ -->
+<!-- SLIDE 06 — 89% REVELAÇÃO                    -->
+<!-- ════════════════════════════════════════════ -->
+<section class="slide" data-act="ATO 1 · O MUNDO MUDOU">
+  <p class="subtitle fade-in">Dado #2</p>
+  <div class="big-number hl-green fade-in" data-delay="1">89%</div>
+  <h3 class="fade-in" data-delay="2">dos compradores B2B já usam IA para<br>
+  <span style="color:var(--text)">montar a lista inicial de fornecedores</span></h3>
+  <p class="fade-in" data-delay="3" style="color:var(--text); font-size: 18px; margin-top:16px;">
+    A lista está sendo montada agora — sem o seu vendedor saber.
+  </p>
+  <p class="source fade-in" data-delay="4">Fonte: Forrester / Gartner, 2026</p>
+</section>
+
+<!-- ════════════════════════════════════════════ -->
+<!-- SLIDE 07 — 95% LISTA INICIAL                -->
+<!-- ════════════════════════════════════════════ -->
+<section class="slide" data-act="ATO 1 · O MUNDO MUDOU">
+  <p class="subtitle fade-in">Dado #3 — este é o mais importante</p>
+  <div class="big-number hl-red fade-in" data-delay="1">95%</div>
+  <h3 class="fade-in" data-delay="2">dos contratos fecham com quem estava<br>
+  <span style="color:var(--text)">na lista desde o primeiro dia</span></h3>
+  <p class="fade-in" data-delay="3" style="color: var(--accent-red); font-weight: 600; font-size: 20px; margin-top: 20px;">
+    Se você não entrou na lista, a oportunidade<br>morreu antes de existir.
+  </p>
+  <p class="source fade-in" data-delay="4">Fonte: 6Sense, 2025</p>
+</section>
+
+<!-- ════════════════════════════════════════════ -->
+<!-- SLIDE 08 — DEMO AO VIVO                     -->
+<!-- ════════════════════════════════════════════ -->
+<section class="slide" data-act="ATO 1 · O MUNDO MUDOU" style="background: var(--gradient-hero);">
+  <h2 class="fade-in" style="color: var(--accent2);">🔴 Demo ao vivo</h2>
+  <h3 class="fade-in" data-delay="1" style="color: var(--text);">
+    Vamos abrir o ChatGPT agora e digitar:
+  </h3>
+  <div class="card card-accent fade-in" data-delay="2" style="max-width:700px; text-align:center; margin-top:20px;">
+    <p style="font-size: 22px; color: var(--accent); font-weight: 600; font-style: italic;">
+      "Quais são os melhores fornecedores de<br>[produto de alguém da plateia] no Brasil?"
+    </p>
+  </div>
+  <p class="fade-in" data-delay="3" style="margin-top: 24px; color: var(--accent-yellow); font-weight: 600;">
+    Quem quer testar com o próprio segmento?
+  </p>
+  <p class="notes">DEMO: Abra ChatGPT no projetor. Peça o segmento de alguém da plateia. Digite. Mostre que a empresa NÃO aparece. Impacto emocional máximo.</p>
+</section>
+
+<!-- ════════════════════════════════════════════ -->
+<!-- SLIDE 09 — MAPS + GEMINI                    -->
+<!-- ════════════════════════════════════════════ -->
+<section class="slide" data-act="ATO 1 · O MUNDO MUDOU" style="background: var(--gradient-hero);">
+  <h2 class="fade-in">🔴 Demo: Google Maps + <span class="hl">Gemini</span></h2>
+  <p class="fade-in" data-delay="1" style="color:var(--text); font-size: 20px; max-width: 700px;">
+    O Google Maps não é mais só mapa.<br>
+    O Gemini está <strong>dentro dele</strong>, lendo avaliações, fotos, descrições.
+  </p>
+  <div style="display:flex; gap: 24px; margin-top: 24px; flex-wrap: wrap; justify-content: center;">
+    <div class="card fade-in" data-delay="2" style="flex:1; min-width: 250px; max-width: 350px;">
+      <h3 style="color: var(--accent);">Passo 1</h3>
+      <p>Abra o Google Maps no celular</p>
+    </div>
+    <div class="card fade-in" data-delay="3" style="flex:1; min-width: 250px; max-width: 350px;">
+      <h3 style="color: var(--accent);">Passo 2</h3>
+      <p>Digite: "melhor restaurante japonês perto"</p>
+    </div>
+    <div class="card fade-in" data-delay="4" style="flex:1; min-width: 250px; max-width: 350px;">
+      <h3 style="color: var(--accent2);">Resultado</h3>
+      <p>Gemini resume avaliações e <strong style="color:var(--text)">recomenda</strong></p>
+    </div>
+  </div>
+  <p class="fade-in" data-delay="5" style="margin-top: 24px; color: var(--accent-red); font-weight: 600;">
+    Ficha vazia no Google Meu Negócio = invisível para o Gemini
+  </p>
+</section>
+
+<!-- ════════════════════════════════════════════ -->
+<!-- SLIDE 10 — CUSTO EM R$                      -->
+<!-- ════════════════════════════════════════════ -->
+<section class="slide" data-act="ATO 1 · O MUNDO MUDOU">
+  <h2 class="fade-in">Quanto isso custa <span class="hl-red">em reais</span>?</h2>
+  <div style="display: flex; flex-direction: column; gap: 16px; margin-top: 20px; max-width: 750px; width: 100%;">
+    <div class="card card-red fade-in" data-delay="1">
+      <h3 style="color: var(--accent-red);">Vendedor gastando tempo com lead frio</h3>
+      <p>Se 70% da decisão já foi tomada, <strong style="color:var(--text)">28h/semana</strong> do seu vendedor são gastas educando quem já escolheu outro.</p>
+    </div>
+    <div class="card card-red fade-in" data-delay="2">
+      <h3 style="color: var(--accent-red);">Contratos perdidos sem saber</h3>
+      <p>Se seu ticket médio é R$ 50 mil e você perde 3 oportunidades invisíveis por mês = <strong style="color:var(--text)">R$ 150 mil/mês</strong> que nunca chegam ao pipeline.</p>
+    </div>
+    <div class="card card-red fade-in" data-delay="3">
+      <h3 style="color: var(--accent-red);">Ciclo de venda mais longo</h3>
+      <p>O vendedor faz o trabalho que o site deveria ter feito. Isso <strong style="color:var(--text)">alonga o ciclo</strong> e <strong style="color:var(--text)">reduz a margem</strong>.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════ -->
+<!-- SLIDE — VENDEDOR vs CONTEÚDO COMO ATIVO     -->
+<!-- ════════════════════════════════════════════ -->
+<section class="slide" data-act="ATO 1 · O MUNDO MUDOU">
+  <h2 class="fade-in">Vendedor custa <span class="hl-red">todo mês</span>.<br>Conteúdo trabalha <span class="hl-green">pra sempre</span>.</h2>
+  <div class="vs-container fade-in" data-delay="1" style="margin-top: 24px;">
+    <div class="card card-red">
+      <h3 style="color: var(--accent-red); font-size: 16px;">Custo do modelo tradicional</h3>
+      <p style="font-size: 14px; line-height: 2;">
+        Vendedor: R$ 8-15 mil/mês<br>
+        Feira: R$ 20-50 mil/evento<br>
+        Google Ads: R$ 3-10 mil/mês<br>
+        Facebook Ads: R$ 3-5 mil/mês<br>
+        <strong style="color:var(--text)">Parou de pagar = parou de aparecer</strong>
+      </p>
+    </div>
+    <div class="vs-label">vs</div>
+    <div class="card card-green">
+      <h3 style="color: var(--accent2); font-size: 16px;">Conteúdo como ativo comercial</h3>
+      <p style="font-size: 14px; line-height: 2;">
+        Cria uma vez, trabalha 24/7<br>
+        Atrai quem já quer comprar<br>
+        IA recomenda sem custo por clique<br>
+        Google indexa sem prazo de validade<br>
+        <strong style="color:var(--text)">O ativo mais barato por lead que existe</strong>
+      </p>
+    </div>
+  </div>
+  <p class="fade-in" data-delay="2" style="margin-top: 20px; font-size: 16px; color: var(--accent-yellow); font-weight: 600;">
+    Cada página técnica bem feita é um vendedor que nunca tira férias, nunca pede aumento e atende o Brasil inteiro.
+  </p>
+</section>
+
+<!-- ════════════════════════════════════════════ -->
+<!-- SLIDE 11 — TRANSIÇÃO ATO 2                  -->
+<!-- ════════════════════════════════════════════ -->
+<section class="slide" data-act="ATO 2 · A MAIORIA NÃO PERCEBEU" style="background: var(--gradient-hero);">
+  <p class="subtitle fade-in">Ato 2</p>
+  <h1 class="fade-in" data-delay="1">A maioria<br>não percebeu</h1>
+  <p class="fade-in" data-delay="2">
+    Por que aparecer no Google já não é suficiente
+  </p>
+</section>
+
+<!-- ════════════════════════════════════════════ -->
+<!-- SLIDE 12 — MOSAICO DE DESCOBERTA            -->
+<!-- ════════════════════════════════════════════ -->
+<section class="slide" data-act="ATO 2 · A MAIORIA NÃO PERCEBEU">
+  <h2 class="fade-in">Onde o comprador busca <span class="hl">fornecedor</span> hoje?</h2>
+  <div class="split-3" style="margin-top: 32px;">
+    <div class="card card-accent fade-in" data-delay="1">
+      <div class="medium-number hl" style="font-size: 56px;">33%</div>
+      <h3 style="font-size: 18px;">Busca na Web</h3>
+      <p style="font-size: 14px;">Google, Bing — o canal que você já conhece</p>
+    </div>
+    <div class="card card-green fade-in" data-delay="2">
+      <div class="medium-number hl-green" style="font-size: 56px;">32%</div>
+      <h3 style="font-size: 18px;">Inteligência Artificial</h3>
+      <p style="font-size: 14px;">ChatGPT, Gemini, Perplexity — o canal novo</p>
+    </div>
+    <div class="card fade-in" data-delay="3">
+      <div class="medium-number" style="font-size: 56px; color: var(--text-muted);">33%</div>
+      <h3 style="font-size: 18px;">Recomendações</h3>
+      <p style="font-size: 14px;">Colegas, indicações — o canal de sempre</p>
+    </div>
+  </div>
+  <p class="fade-in" data-delay="4" style="margin-top: 24px; color: var(--accent-yellow); font-weight: 600;">
+    Dois canais vocês já tentam dominar. O terceiro, a maioria ignora.
+  </p>
+  <p class="source fade-in" data-delay="5">Fonte: Omniscient Digital, 2025</p>
+</section>
+
+<!-- ════════════════════════════════════════════ -->
+<!-- SLIDE 13 — GOOGLE ≠ IA                      -->
+<!-- ════════════════════════════════════════════ -->
+<section class="slide" data-act="ATO 2 · A MAIORIA NÃO PERCEBEU">
+  <h2 class="fade-in">Aparecer no Google <span class="hl-red">≠</span> aparecer na IA</h2>
+  <p class="fade-in" data-delay="1" style="margin-bottom: 32px;">
+    A IA e o Google usam critérios completamente diferentes para recomendar.
+  </p>
+  <div class="vs-container fade-in" data-delay="2">
+    <div class="card">
+      <h3 style="color: var(--accent); font-size: 18px; margin-bottom: 12px;">Google decide por:</h3>
+      <p style="font-size: 15px;">Links apontando pro site<br>Palavras-chave na página<br>Autoridade do domínio<br>Velocidade do site</p>
+    </div>
+    <div class="vs-label">≠</div>
+    <div class="card card-green">
+      <h3 style="color: var(--accent2); font-size: 18px; margin-bottom: 12px;">A IA decide por:</h3>
+      <p style="font-size: 15px;">Dados técnicos verificáveis<br>Consenso entre fontes<br>Avaliações independentes<br>Clareza de identidade</p>
+    </div>
+  </div>
+  <p class="fade-in" data-delay="3" style="margin-top: 24px; font-weight: 600; color: var(--text);">
+    Apenas <span class="hl-red">12%</span> das fontes do ChatGPT coincidem com o top 10 do Google.
+  </p>
+</section>
+
+<!-- ════════════════════════════════════════════ -->
+<!-- SLIDE — DE ONDE A IA PUXA INFORMAÇÃO        -->
+<!-- ════════════════════════════════════════════ -->
+<section class="slide" data-act="ATO 2 · A MAIORIA NÃO PERCEBEU">
+  <h2 class="fade-in">De onde a IA puxa informação<br>para <span class="hl">recomendar</span> sua empresa?</h2>
+  <div class="split-3" style="margin-top: 28px;">
+    <div class="card card-accent fade-in" data-delay="1">
+      <h3 style="color: var(--accent); font-size: 40px; margin-bottom: 8px;">1</h3>
+      <h3 style="font-size: 17px; color: var(--text);">Sites de terceiros</h3>
+      <p style="font-size: 13px;">Avaliações no Google, menções em fóruns, artigos de blog, diretórios do setor, Reddit. <strong style="color:var(--text)">A IA confia mais no que outros dizem sobre você.</strong></p>
+    </div>
+    <div class="card card-green fade-in" data-delay="2">
+      <h3 style="color: var(--accent2); font-size: 40px; margin-bottom: 8px;">2</h3>
+      <h3 style="font-size: 17px; color: var(--text);">Seu próprio site</h3>
+      <p style="font-size: 13px;">Dados técnicos, certificações, specs em texto, casos de sucesso. <strong style="color:var(--text)">Mas a IA não lê PDFs escaneados nem imagens.</strong></p>
+    </div>
+    <div class="card fade-in" data-delay="3" style="border-color: rgba(255,194,71,.2); background: rgba(255,194,71,.05);">
+      <h3 style="color: var(--accent-yellow); font-size: 40px; margin-bottom: 8px;">3</h3>
+      <h3 style="font-size: 17px; color: var(--text);">Vídeos no YouTube</h3>
+      <p style="font-size: 13px;">A IA transcreve e analisa vídeos. Demonstrações de produto, depoimentos de clientes, tutoriais técnicos <strong style="color:var(--text)">viram fonte de citação</strong>.</p>
+    </div>
+  </div>
+  <p class="fade-in" data-delay="4" style="margin-top: 20px; font-size: 16px; color: var(--text);">
+    <strong><span class="hl-green">50%</span> dos links citados pelo ChatGPT</strong> apontam direto para sites de empresas e serviços.
+  </p>
+  <p class="source fade-in" data-delay="5">Fonte: Semrush, 2025; Discovered Labs, 2026</p>
+</section>
+
+<!-- ════════════════════════════════════════════ -->
+<!-- SLIDE — ENTIDADES / KNOWLEDGE GRAPH         -->
+<!-- ════════════════════════════════════════════ -->
+<section class="slide" data-act="ATO 2 · A MAIORIA NÃO PERCEBEU">
+  <h2 class="fade-in">A IA pensa em <span class="hl">conexões</span>, não em palavras</h2>
+  <div class="split" style="margin-top: 16px; gap: 28px;">
+    <div class="fade-in" data-delay="1" style="text-align: center;">
+      <div style="background:#fff; border-radius:12px; padding:20px; max-width:300px; margin:0 auto;">
+        <div style="position:relative; height:200px; font-size:11px; color:#333;">
+          <div style="position:absolute;top:0;left:50%;transform:translateX(-50%);background:#4f8cff;color:#fff;padding:6px 12px;border-radius:20px;font-weight:700;font-size:12px;">Move Máquinas</div>
+          <div style="position:absolute;top:70px;left:5px;background:#e8f0fe;padding:4px 10px;border-radius:12px;">Empilhadeira</div>
+          <div style="position:absolute;top:70px;right:5px;background:#e8f0fe;padding:4px 10px;border-radius:12px;">Plataforma</div>
+          <div style="position:absolute;top:130px;left:20px;background:#e6f4ea;padding:4px 10px;border-radius:12px;">Goiânia</div>
+          <div style="position:absolute;top:130px;right:20px;background:#e6f4ea;padding:4px 10px;border-radius:12px;">NR-11</div>
+          <div style="position:absolute;top:170px;left:50%;transform:translateX(-50%);background:#fef7e0;padding:4px 10px;border-radius:12px;">Clark</div>
+          <svg style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none;" viewBox="0 0 300 200"><line x1="150" y1="28" x2="60" y2="65" stroke="#4f8cff" stroke-width="1.5" opacity=".4"/><line x1="150" y1="28" x2="240" y2="65" stroke="#4f8cff" stroke-width="1.5" opacity=".4"/><line x1="60" y1="85" x2="60" y2="125" stroke="#00c77b" stroke-width="1.5" opacity=".4"/><line x1="240" y1="85" x2="240" y2="125" stroke="#00c77b" stroke-width="1.5" opacity=".4"/><line x1="150" y1="28" x2="150" y2="165" stroke="#ffc247" stroke-width="1.5" opacity=".3"/></svg>
+        </div>
+      </div>
+      <p class="img-caption">Knowledge Graph: entidades conectadas por relações</p>
+    </div>
+    <div class="fade-in" data-delay="2" style="text-align: left;">
+      <p style="font-size: 15px; color: var(--text); margin-bottom: 16px;">
+        A IA não entende "palavras-chave".<br>
+        Ela entende <strong>entidades</strong> e as <strong>relações</strong> entre elas.
+      </p>
+      <div class="card card-accent" style="padding: 14px; margin-bottom: 10px;">
+        <p style="font-size: 13px; color: var(--text);">
+          <strong>"Move Máquinas"</strong> <span style="color: var(--accent);">→ é →</span> empresa de locação<br>
+          <span style="color: var(--accent);">→ vende →</span> empilhadeiras Clark<br>
+          <span style="color: var(--accent);">→ atende →</span> Goiânia, Brasília, Anápolis<br>
+          <span style="color: var(--accent);">→ cumpre →</span> NR-11, NR-35
+        </p>
+      </div>
+      <p style="font-size: 13px; color: var(--text-muted);">
+        Quando o comprador pergunta à IA: <em>"quem aluga empilhadeira NR-11 em Goiânia?"</em> — ela conecta os pontos e recomenda quem tem essas relações claras.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════ -->
+<!-- SLIDE — CITAÇÃO vs RECOMENDAÇÃO             -->
+<!-- ════════════════════════════════════════════ -->
+<section class="slide" data-act="ATO 2 · A MAIORIA NÃO PERCEBEU">
+  <h2 class="fade-in"><span class="hl">Citação</span> vs <span class="hl-green">Recomendação</span></h2>
+  <p class="fade-in" data-delay="1" style="margin-bottom: 24px;">Duas coisas diferentes — e você precisa das duas.</p>
+  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px; max-width: 800px; width: 100%;">
+    <div class="card card-accent fade-in" data-delay="2">
+      <h3 style="color: var(--accent); font-size: 18px;">Citação</h3>
+      <p style="font-size: 14px; line-height: 1.7; margin-bottom: 12px;">
+        A IA <strong style="color:var(--text)">menciona</strong> sua empresa como uma das opções.<br>
+        Exemplo: <em>"Empresas como X, Y e Z oferecem esse serviço."</em>
+      </p>
+      <p style="font-size: 13px; color: var(--accent);">Você está na lista — mas competindo.</p>
+    </div>
+    <div class="card card-green fade-in" data-delay="3">
+      <h3 style="color: var(--accent2); font-size: 18px;">Recomendação</h3>
+      <p style="font-size: 14px; line-height: 1.7; margin-bottom: 12px;">
+        A IA <strong style="color:var(--text)">indica</strong> sua empresa como a melhor escolha.<br>
+        Exemplo: <em>"Para isso, a empresa X é a referência no mercado."</em>
+      </p>
+      <p style="font-size: 13px; color: var(--accent2);">Você é A resposta — não uma opção.</p>
+    </div>
+  </div>
+  <div class="card fade-in" data-delay="4" style="margin-top: 20px; max-width: 800px; text-align: center;">
+    <p style="font-size: 15px; color: var(--text);">
+      O que faz a IA <strong>recomendar</strong> em vez de apenas <strong>citar</strong>?<br>
+      <span style="color: var(--text-muted);">Dados técnicos verificáveis + avaliações consistentes acima de 4,3★ + presença em múltiplas fontes + informação que nenhum concorrente tem.</span>
+    </p>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════ -->
+<!-- SLIDE — COMO A IA LÊ SEU SITE (CHUNKING)   -->
+<!-- ════════════════════════════════════════════ -->
+<section class="slide" data-act="ATO 2 · A MAIORIA NÃO PERCEBEU">
+  <h2 class="fade-in">A IA não lê sua página inteira.<br>Ela lê <span class="hl">pedaços</span>.</h2>
+  <p class="fade-in" data-delay="1" style="margin-bottom: 20px; max-width: 700px;">
+    Os motores de IA dividem seu conteúdo em fragmentos pequenos. Se o seu texto é vago, ela não consegue extrair nada útil.
+  </p>
+  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; max-width: 800px; width: 100%;">
+    <div class="card card-red fade-in" data-delay="2">
+      <h3 style="color: var(--accent-red); font-size: 15px;">❌ Texto vago = invisível</h3>
+      <p style="font-size: 13px; font-style: italic; line-height: 1.7; color: var(--text);">
+        "A Move Máquinas oferece soluções completas em locação de equipamentos para sua obra com qualidade e agilidade."
+      </p>
+      <p style="font-size: 12px; margin-top: 8px; color: var(--accent-red);">A IA lê e não sabe: que equipamento? Qual capacidade? Onde atende? Qual certificação?</p>
+    </div>
+    <div class="card card-green fade-in" data-delay="3">
+      <h3 style="color: var(--accent2); font-size: 15px;">✓ Dado específico = citável</h3>
+      <p style="font-size: 13px; font-style: italic; line-height: 1.7; color: var(--text);">
+        "Empilhadeira Clark C25 — capacidade 2.500kg, elevação 4,8m, motor diesel, NR-11 inclusa. Entrega em 24h em Goiânia e raio de 200km."
+      </p>
+      <p style="font-size: 12px; margin-top: 8px; color: var(--accent2);">A IA extrai: modelo, capacidade, norma, prazo, área. Pode recomendar com confiança.</p>
+    </div>
+  </div>
+  <div style="display: flex; gap: 20px; align-items: center; justify-content: center; margin-top: 12px; flex-wrap: wrap;">
+    <div class="card card-accent fade-in" data-delay="4" style="flex: 1; min-width: 300px; max-width: 400px; text-align: center; padding: 14px;">
+      <p style="font-size: 13px; color: var(--text);">
+        Páginas com <strong>dados estruturados</strong> têm <span class="hl-green">+30% de chance</span> de citação pela IA.<br>
+        <span style="color: var(--text-muted);">Estatísticas próprias + falas de especialistas: até <span class="hl-green">+40%</span>.</span>
+      </p>
+    </div>
+    <div class="fade-in" data-delay="4" style="text-align: center;">
+      <div style="background:#1a1a2e;border:1px solid rgba(79,140,255,.3);border-radius:10px;padding:14px;font-family:monospace;font-size:11px;text-align:left;max-width:240px;color:var(--text-muted);line-height:1.6;">
+        <span style="color:#888;">{ "@type":</span> <span style="color:#4f8cff;">"LocalBusiness"</span><br>
+        <span style="color:#888;">&nbsp;"name":</span> <span style="color:#00e68a;">"Sua Empresa"</span><br>
+        <span style="color:#888;">&nbsp;"rating":</span> <span style="color:#ffc247;">4.8</span> ⭐<br>
+        <span style="color:#888;">&nbsp;"area":</span> <span style="color:#00e68a;">"Goiânia"</span> }
+      </div>
+      <p class="img-caption">Dados estruturados: a IA lê como ficha técnica</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════ -->
+<!-- SLIDE 14 — ZERO CLICK                       -->
+<!-- ════════════════════════════════════════════ -->
+<section class="slide" data-act="ATO 2 · A MAIORIA NÃO PERCEBEU">
+  <h2 class="fade-in">O Google está <span class="hl-red">encolhendo</span></h2>
+  <div class="split" style="margin-top: 16px; gap: 32px;">
+    <div style="display: flex; flex-direction: column; gap: 14px;">
+      <div class="card fade-in" data-delay="1" style="padding: 16px 20px;">
+        <div style="display:flex; align-items:center; gap: 12px;">
+          <span style="font-size: 36px; font-weight: 900; color: var(--accent-red);">65%</span>
+          <div>
+            <p style="color: var(--text); font-weight: 600; font-size: 14px;">das buscas não geram clique</p>
+            <p style="font-size: 12px;">Google responde direto na tela.</p>
+          </div>
+        </div>
+      </div>
+      <div class="card fade-in" data-delay="2" style="padding: 16px 20px;">
+        <div style="display:flex; align-items:center; gap: 12px;">
+          <span style="font-size: 36px; font-weight: 900; color: var(--accent-yellow);">-25%</span>
+          <div>
+            <p style="color: var(--text); font-weight: 600; font-size: 14px;">Queda no tráfego orgânico B2B até 2026</p>
+            <p style="font-size: 12px;">O canal que você depende está diminuindo.</p>
+          </div>
+        </div>
+      </div>
+      <div class="card card-green fade-in" data-delay="3" style="padding: 16px 20px;">
+        <div style="display:flex; align-items:center; gap: 12px;">
+          <span style="font-size: 36px; font-weight: 900; color: var(--accent2);">+527%</span>
+          <div>
+            <p style="color: var(--text); font-weight: 600; font-size: 14px;">Crescimento do tráfego vindo de IA</p>
+            <p style="font-size: 12px;">Enquanto o Google cai, a IA explode.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="fade-in" data-delay="2" style="text-align: center;">
+      <div style="display:flex;align-items:flex-end;gap:10px;height:240px;padding:0 10px;">
+        <div style="text-align:center;flex:1;">
+          <div style="background:#607d8b;width:100%;height:8px;border-radius:4px 4px 0 0;"></div>
+          <span style="font-size:9px;color:var(--text-muted);">Perplexity<br>30M</span>
+        </div>
+        <div style="text-align:center;flex:1;">
+          <div style="background:#9c27b0;width:100%;height:16px;border-radius:4px 4px 0 0;"></div>
+          <span style="font-size:9px;color:var(--text-muted);">DuckDuck<br>100M</span>
+        </div>
+        <div style="text-align:center;flex:1;">
+          <div style="background:#2196f3;width:100%;height:32px;border-radius:4px 4px 0 0;"></div>
+          <span style="font-size:9px;color:var(--text-muted);">Bing<br>900M</span>
+        </div>
+        <div style="text-align:center;flex:1.2;">
+          <div style="background:var(--accent2);width:100%;height:90px;border-radius:4px 4px 0 0;"></div>
+          <span style="font-size:10px;color:var(--accent2);font-weight:700;">ChatGPT<br>2.5B</span>
+        </div>
+        <div style="text-align:center;flex:1.2;">
+          <div style="background:var(--accent);width:100%;height:200px;border-radius:4px 4px 0 0;"></div>
+          <span style="font-size:10px;color:var(--accent);font-weight:700;">Google<br>8.5B</span>
+        </div>
+      </div>
+      <p class="img-caption">Buscas diárias — ChatGPT já é o 2º maior buscador do mundo</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════ -->
+<!-- SLIDE 15 — VISITANTE DA IA VALE 5X          -->
+<!-- ════════════════════════════════════════════ -->
+<section class="slide" data-act="ATO 2 · A MAIORIA NÃO PERCEBEU">
+  <h2 class="fade-in">O visitante da IA vale<br><span class="hl-green">5 vezes mais</span></h2>
+  <div class="bar-compare fade-in" data-delay="1" style="margin-top: 32px;">
+    <div class="bar-row">
+      <span class="bar-label" style="color: var(--accent2);">Via IA</span>
+      <div class="bar-track">
+        <div class="bar-fill green" data-width="100%">14,2% convertem</div>
+      </div>
+    </div>
+    <div class="bar-row">
+      <span class="bar-label" style="color: var(--accent);">Via Google</span>
+      <div class="bar-track">
+        <div class="bar-fill blue" data-width="20%">2,8%</div>
+      </div>
+    </div>
+    <div class="bar-row">
+      <span class="bar-label" style="color: var(--accent-red);">Tráfego Pago</span>
+      <div class="bar-track">
+        <div class="bar-fill red" data-width="8.5%">1,2%</div>
+      </div>
+    </div>
+  </div>
+  <div style="display: flex; gap: 20px; justify-content: center; margin-top: 20px; flex-wrap: wrap;" class="fade-in" data-delay="2">
+    <div class="card" style="flex: 1; min-width: 180px; max-width: 220px; text-align: center; padding: 16px;">
+      <h3 style="color: var(--accent2); font-size: 28px; margin-bottom: 4px;">+56%</h3>
+      <p style="font-size: 12px;">maior taxa de<br><strong style="color:var(--text)">fechamento</strong></p>
+    </div>
+    <div class="card" style="flex: 1; min-width: 180px; max-width: 220px; text-align: center; padding: 16px;">
+      <h3 style="color: var(--accent2); font-size: 28px; margin-bottom: 4px;">4,4x</h3>
+      <p style="font-size: 12px;">mais valioso que<br><strong style="color:var(--text)">visitante do Google</strong></p>
+    </div>
+    <div class="card" style="flex: 1; min-width: 180px; max-width: 220px; text-align: center; padding: 16px;">
+      <h3 style="color: var(--accent2); font-size: 28px; margin-bottom: 4px;">50%</h3>
+      <p style="font-size: 12px;">dos links do ChatGPT vão para<br><strong style="color:var(--text)">sites de empresas</strong></p>
+    </div>
+  </div>
+  <p class="fade-in" data-delay="3" style="margin-top: 16px; color: var(--text); font-weight: 600;">
+    O visitante da IA chega já decidido. CAC menor. Ciclo mais curto. Vendedor focado em fechar.
+  </p>
+  <p class="source fade-in" data-delay="4">Fonte: ABM Agency, 2026; Semrush, 2025</p>
+</section>
+
+<!-- ════════════════════════════════════════════ -->
+<!-- SLIDE — COMO O GOOGLE FUNCIONA HOJE         -->
+<!-- ════════════════════════════════════════════ -->
+<section class="slide" data-act="ATO 2 · A MAIORIA NÃO PERCEBEU">
+  <h2 class="fade-in">Isso é o Google <span class="hl">hoje</span></h2>
+  <div class="split" style="margin-top: 12px; gap: 28px;">
+    <div class="fade-in" data-delay="1" style="text-align: center;">
+      <div style="background:#fff;border-radius:12px;padding:16px;max-width:300px;font-size:11px;text-align:left;color:#333;">
+        <div style="display:flex;align-items:center;gap:6px;margin-bottom:12px;"><div style="width:20px;height:20px;border-radius:50%;background:#4285f4;"></div><span style="font-size:14px;font-weight:700;color:#333;">Google</span></div>
+        <div style="background:#fef3cd;border:1px solid #f0c14b;border-radius:6px;padding:8px;margin-bottom:8px;">
+          <span style="font-size:9px;color:#856404;font-weight:700;">ANÚNCIOS PAGOS</span><br>
+          <span style="color:#1a0dab;font-size:10px;">resultado-patrocinado.com</span>
+        </div>
+        <div style="background:#e8f0fe;border:1px solid #4285f4;border-radius:6px;padding:8px;margin-bottom:8px;">
+          <span style="font-size:9px;color:#1967d2;font-weight:700;">✨ VISÃO GERAL DA IA</span><br>
+          <span style="font-size:10px;">A IA responde direto aqui. Zero clique.</span>
+        </div>
+        <div style="background:#f0f0f0;border-radius:6px;padding:6px 8px;margin-bottom:8px;display:flex;gap:6px;">
+          <div style="width:40px;height:30px;background:#ff0000;border-radius:4px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:8px;font-weight:700;">▶</div>
+          <div><span style="font-size:9px;color:#666;font-weight:700;">VÍDEOS DO YOUTUBE</span><br><span style="font-size:9px;">IA transcreve e usa como fonte</span></div>
+        </div>
+        <div style="border-top:1px solid #ddd;padding-top:6px;">
+          <span style="font-size:9px;color:#999;">RESULTADOS ORGÂNICOS</span><br>
+          <span style="font-size:9px;color:#1a0dab;">seu-site.com.br</span> <span style="font-size:8px;color:#999;">← lá embaixo</span>
+        </div>
+      </div>
+    </div>
+    <div class="fade-in" data-delay="2" style="text-align: left;">
+      <div style="display: flex; flex-direction: column; gap: 12px;">
+        <div class="card card-red" style="padding: 12px 16px;">
+          <p style="font-size: 13px; color: var(--text);"><span style="color: var(--accent-red); font-weight: 700;">Anúncios pagos</span> — aparecem primeiro, custam R$ 8-15/clique</p>
+        </div>
+        <div class="card card-accent" style="padding: 12px 16px;">
+          <p style="font-size: 13px; color: var(--text);"><span style="color: var(--accent); font-weight: 700;">Visão Geral da IA</span> — o Google responde sem clique (zero-click)</p>
+        </div>
+        <div class="card" style="padding: 12px 16px;">
+          <p style="font-size: 13px; color: var(--text);"><span style="color: var(--accent-yellow); font-weight: 700;">Vídeos do YouTube</span> — a IA transcreve e usa como fonte</p>
+        </div>
+        <div class="card card-green" style="padding: 12px 16px;">
+          <p style="font-size: 13px; color: var(--text);"><span style="color: var(--accent2); font-weight: 700;">Resultados orgânicos</span> — ficaram lá embaixo. Poucos clicam.</p>
+        </div>
+      </div>
+      <p style="font-size: 13px; color: var(--accent-red); font-weight: 600; margin-top: 12px;">
+        Se sua empresa depende só de orgânico, está cada vez mais longe do comprador.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════ -->
+<!-- SLIDE 16 — O QUE É SEO DE VERDADE           -->
+<!-- ════════════════════════════════════════════ -->
+<section class="slide" data-act="ATO 2 · A MAIORIA NÃO PERCEBEU">
+  <h2 class="fade-in">SEO não é "colocar palavra no Google"</h2>
+  <p class="fade-in" data-delay="1" style="margin-bottom: 20px;">É entender <strong style="color:var(--text)">o que o comprador pesquisa</strong> e estar lá com a resposta certa.</p>
+  <div class="vs-container fade-in" data-delay="2" style="margin-top: 8px;">
+    <div class="card card-red">
+      <h3 style="color: var(--accent-red); font-size: 16px;">O que a maioria faz</h3>
+      <p style="font-size: 14px; line-height: 2;">
+        Cria site bonito e espera<br>
+        Escreve "soluções completas"<br>
+        Paga Google Ads pra compensar<br>
+        Mesmo conteúdo pro Brasil inteiro<br>
+        Ignora o que o cliente pesquisa
+      </p>
+    </div>
+    <div class="vs-label">→</div>
+    <div class="card card-green">
+      <h3 style="color: var(--accent2); font-size: 16px;">O que funciona (SEO semântico)</h3>
+      <p style="font-size: 14px; line-height: 2;">
+        Descobre as <strong style="color:var(--text)">perguntas reais</strong> do comprador<br>
+        Cria página que <strong style="color:var(--text)">responde cada pergunta</strong><br>
+        Conteúdo por cidade, serviço, intenção<br>
+        Dados técnicos que a IA consegue ler<br>
+        Atrai quem já quer comprar — não curioso
+      </p>
+    </div>
+  </div>
+  <p class="fade-in" data-delay="3" style="margin-top: 20px; font-size: 16px; color: var(--text);">
+    <strong>Intenção de busca:</strong> <span style="color: var(--text-muted);">quem digita "preço locação empilhadeira Goiânia" quer comprar.<br>Quem digita "o que é empilhadeira" está estudando. São páginas diferentes.</span>
+  </p>
+</section>
+
+<!-- ════════════════════════════════════════════ -->
+<!-- SLIDE 16b — GEO + SHARE OF VOICE            -->
+<!-- ════════════════════════════════════════════ -->
+<section class="slide" data-act="ATO 2 · A MAIORIA NÃO PERCEBEU">
+  <h2 class="fade-in">SEO → AEO → <span class="hl-green">GEO</span></h2>
+  <div class="fade-in" data-delay="1" style="margin-top: 12px;">
+    <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;">
+      <div style="background:#fff;border-radius:14px;padding:14px;width:180px;text-align:left;color:#333;box-shadow:0 2px 12px rgba(0,0,0,.15);">
+        <div style="background:#f1f3f4;border-radius:20px;padding:4px 10px;font-size:10px;color:#5f6368;margin-bottom:8px;display:inline-block;">🔍 Google</div>
+        <div style="border-left:3px solid #4285f4;padding-left:8px;margin-bottom:6px;"><span style="color:#1a0dab;font-size:10px;font-weight:600;">resultado1.com</span><br><span style="font-size:9px;color:#555;">Descrição do site...</span></div>
+        <div style="border-left:3px solid #4285f4;padding-left:8px;"><span style="color:#1a0dab;font-size:10px;font-weight:600;">resultado2.com</span><br><span style="font-size:9px;color:#555;">Descrição do site...</span></div>
+        <div style="margin-top:10px;text-align:center;"><span style="background:#4285f4;color:#fff;padding:3px 10px;border-radius:10px;font-size:10px;font-weight:700;">SEO</span><br><span style="font-size:9px;color:#666;">Lista de resultados</span></div>
+      </div>
+      <div style="background:#fff;border-radius:14px;padding:14px;width:180px;text-align:left;color:#333;box-shadow:0 2px 12px rgba(0,0,0,.15);">
+        <div style="background:#e8f0fe;border-radius:20px;padding:4px 10px;font-size:10px;color:#1967d2;margin-bottom:8px;display:inline-block;">✨ Google AI</div>
+        <div style="background:#e8f0fe;border-radius:8px;padding:8px;font-size:10px;color:#333;line-height:1.5;">Os melhores são: <strong>Marca A</strong> (melhor custo), <strong>Marca B</strong> (performance)...</div>
+        <div style="margin-top:10px;text-align:center;"><span style="background:#ffc247;color:#333;padding:3px 10px;border-radius:10px;font-size:10px;font-weight:700;">AEO</span><br><span style="font-size:9px;color:#666;">Resposta direta do Google</span></div>
+      </div>
+      <div style="background:#fff;border-radius:14px;padding:14px;width:180px;text-align:left;color:#333;box-shadow:0 2px 12px rgba(0,0,0,.15);">
+        <div style="background:#f3e8fd;border-radius:20px;padding:4px 10px;font-size:10px;color:#7c3aed;margin-bottom:8px;display:inline-block;">💬 ChatGPT</div>
+        <div style="background:#f3e8fd;border-radius:8px;padding:8px;font-size:10px;color:#333;line-height:1.5;">Para isso, recomendo a <strong>Empresa X</strong> — referência no mercado com...</div>
+        <div style="margin-top:10px;text-align:center;"><span style="background:#00e68a;color:#333;padding:3px 10px;border-radius:10px;font-size:10px;font-weight:700;">GEO</span><br><span style="font-size:9px;color:#666;">Recomendação da IA</span></div>
+      </div>
+    </div>
+    <p class="img-caption">Mesma busca, 3 experiências diferentes. SEO = lista. AEO = resposta do Google. GEO = recomendação da IA.</p>
+  </div>
+  <div class="card card-accent fade-in" data-delay="2" style="margin-top: 16px; max-width: 700px; text-align: center; padding: 14px 20px;">
+    <h3 style="color: var(--accent); font-size: 16px; margin-bottom: 4px;">Share of Voice — a nova métrica</h3>
+    <p style="font-size: 13px;">De cada 10 vezes que perguntam sobre o seu produto à IA, em quantas ela cita <strong style="color:var(--text)">a sua empresa</strong>? Se é zero, seu Share of Voice na IA é <span class="hl-red">zero</span>.</p>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════ -->
+<!-- SLIDE 16c — CONTEÚDO MULTICANAL             -->
+<!-- ════════════════════════════════════════════ -->
+<section class="slide" data-act="ATO 2 · A MAIORIA NÃO PERCEBEU">
+  <h2 class="fade-in">Não é produzir <em>mais</em> conteúdo.<br>É produzir o conteúdo <span class="hl-green">certo</span>.</h2>
+  <div style="display: flex; flex-direction: column; gap: 14px; margin-top: 20px; max-width: 750px; width: 100%;">
+    <div class="card fade-in" data-delay="1">
+      <div style="display: flex; align-items: flex-start; gap: 14px;">
+        <span style="font-size: 24px; font-weight: 900; color: var(--accent); flex-shrink: 0; width: 32px;">1</span>
+        <div>
+          <p style="color: var(--text); font-weight: 600; font-size: 15px;">Conteúdo com intenção de busca</p>
+          <p style="font-size: 13px;">Cada página responde UMA pergunta real do comprador. "Quanto custa alugar empilhadeira em Goiânia" é uma página. "O que é empilhadeira" é outra. Misturar = não ranquear em nenhuma.</p>
+        </div>
+      </div>
+    </div>
+    <div class="card fade-in" data-delay="2">
+      <div style="display: flex; align-items: flex-start; gap: 14px;">
+        <span style="font-size: 24px; font-weight: 900; color: var(--accent); flex-shrink: 0; width: 32px;">2</span>
+        <div>
+          <p style="color: var(--text); font-weight: 600; font-size: 15px;">Presença multicanal reforça tudo</p>
+          <p style="font-size: 13px;">A IA cruza informações do seu <strong style="color:var(--text)">site + Google Meu Negócio + LinkedIn + avaliações + fóruns</strong>. Se a mensagem é consistente em todos, ela confia. Se só existe no site, desconfia.</p>
+        </div>
+      </div>
+    </div>
+    <div class="card fade-in" data-delay="3">
+      <div style="display: flex; align-items: flex-start; gap: 14px;">
+        <span style="font-size: 24px; font-weight: 900; color: var(--accent); flex-shrink: 0; width: 32px;">3</span>
+        <div>
+          <p style="color: var(--text); font-weight: 600; font-size: 15px;">Conteúdo local vence conteúdo genérico</p>
+          <p style="font-size: 13px;">"Locação de empilhadeira no Brasil" compete com gigantes. "Locação de empilhadeira no DAIA em Anápolis" — <strong style="color:var(--text)">você é o dono</strong> dessa busca. E o comprador local é quem compra.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <p class="fade-in" data-delay="4" style="margin-top: 16px; font-size: 15px; color: var(--accent-yellow); font-weight: 600;">
+    Resumo: conteúdo certo + intenção certa + canal certo = a IA recomenda e o Google ranqueia.
+  </p>
+</section>
+
+<!-- ════════════════════════════════════════════ -->
+<!-- SLIDE — O SITE É A CASA PRINCIPAL           -->
+<!-- ════════════════════════════════════════════ -->
+<section class="slide" data-act="ATO 2 · A MAIORIA NÃO PERCEBEU">
+  <div class="quote fade-in" style="max-width: 850px; font-size: clamp(18px, 2.2vw, 32px);">
+    "As buscas no Google são o conjunto de dados mais importante já coletado sobre a <span class="hl">psique humana</span>."
+  </div>
+  <p class="fade-in" data-delay="1" style="margin-top: 12px; font-size: 15px; color: var(--text-muted);">
+    — Seth Stephens-Davidowitz, ex-cientista de dados do Google, autor de "Everybody Lies"
+  </p>
+  <div class="card card-accent fade-in" data-delay="2" style="margin-top: 28px; max-width: 700px; text-align: center;">
+    <p style="font-size: 16px; color: var(--text); line-height: 1.7;">
+      Cada busca é uma <strong>confissão</strong> do que o comprador precisa, teme e deseja.<br>
+      O SEO <strong>lê a mente</strong> do seu cliente — e transforma isso em páginas que aparecem<br>
+      no momento exato em que ele está pronto para comprar.
+    </p>
+  </div>
+  <p class="fade-in" data-delay="3" style="margin-top: 20px; color: var(--text); font-weight: 600; font-size: 18px;">
+    O site é a <span class="hl-green">casa principal</span>. Todo conteúdo nasce do SEO.
+  </p>
+</section>
+
+<!-- ════════════════════════════════════════════ -->
+<!-- SLIDE — QUERY FUNNEL                        -->
+<!-- ════════════════════════════════════════════ -->
+<section class="slide" data-act="ATO 2 · A MAIORIA NÃO PERCEBEU">
+  <h2 class="fade-in">O funil de perguntas do seu comprador<br><span class="hl" style="font-size: 0.6em;">(Query Funnel)</span></h2>
+  <p class="fade-in" data-delay="1" style="margin-bottom: 16px; font-size: 16px;">Cada etapa da decisão tem uma busca diferente. Cada busca precisa de uma página diferente.</p>
+  <div style="display: flex; flex-direction: column; gap: 8px; max-width: 750px; width: 100%;">
+    <div class="card fade-in" data-delay="1" style="padding: 14px 20px; border-left: 4px solid var(--accent);">
+      <div style="display: flex; align-items: center; gap: 12px;">
+        <span style="font-size: 12px; font-weight: 700; color: var(--accent); text-transform: uppercase; width: 70px; flex-shrink:0;">Topo</span>
+        <div>
+          <p style="color: var(--text); font-size: 14px; font-weight: 600;">"Por que meu andaime está atrasando a obra?"</p>
+          <p style="font-size: 12px;">Ele nem sabe que precisa de plataforma. Está sentindo a dor.</p>
+        </div>
+      </div>
+    </div>
+    <div style="text-align: center; color: var(--text-muted); font-size: 16px;">↓</div>
+    <div class="card fade-in" data-delay="2" style="padding: 14px 20px; border-left: 4px solid var(--accent-yellow);">
+      <div style="display: flex; align-items: center; gap: 12px;">
+        <span style="font-size: 12px; font-weight: 700; color: var(--accent-yellow); text-transform: uppercase; width: 70px; flex-shrink:0;">Meio</span>
+        <div>
+          <p style="color: var(--text); font-size: 14px; font-weight: 600;">"Quanto custa alugar plataforma elevatória?"</p>
+          <p style="font-size: 12px;">Já sabe o que quer. Está comparando opções e preços.</p>
+        </div>
+      </div>
+    </div>
+    <div style="text-align: center; color: var(--text-muted); font-size: 16px;">↓</div>
+    <div class="card fade-in" data-delay="3" style="padding: 14px 20px; border-left: 4px solid var(--accent2);">
+      <div style="display: flex; align-items: center; gap: 12px;">
+        <span style="font-size: 12px; font-weight: 700; color: var(--accent2); text-transform: uppercase; width: 70px; flex-shrink:0;">Fundo</span>
+        <div>
+          <p style="color: var(--text); font-size: 14px; font-weight: 600;">"Aluguel de plataforma articulada em Goiânia"</p>
+          <p style="font-size: 12px;">Está pronto para comprar. Se sua página não aparece aqui, perdeu.</p>
+        </div>
+      </div>
+    </div>
+    <div style="text-align: center; color: var(--text-muted); font-size: 16px;">↓</div>
+    <div class="card card-green fade-in" data-delay="4" style="padding: 14px 20px; border-left: 4px solid var(--accent2);">
+      <div style="display: flex; align-items: center; gap: 12px;">
+        <span style="font-size: 12px; font-weight: 700; color: var(--accent2); text-transform: uppercase; width: 70px; flex-shrink:0;">Decisão</span>
+        <div>
+          <p style="color: var(--text); font-size: 14px; font-weight: 600;">"Como justificar o aluguel para meu diretor financeiro"</p>
+          <p style="font-size: 12px;">Ele já escolheu você. Precisa de munição para aprovar internamente.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <p class="fade-in" data-delay="5" style="margin-top: 14px; font-size: 14px; color: var(--accent-yellow); font-weight: 600;">
+    Quem tem uma página para CADA etapa domina o funil inteiro.
+  </p>
+</section>
+
+<!-- ════════════════════════════════════════════ -->
+<!-- SLIDE — TOPIC CLUSTER + AUTORIDADE          -->
+<!-- ════════════════════════════════════════════ -->
+<section class="slide" data-act="ATO 2 · A MAIORIA NÃO PERCEBEU">
+  <h2 class="fade-in">Topic Cluster:<br>como o Google entende que você é <span class="hl">autoridade</span></h2>
+  <div class="split" style="margin-top: 12px; gap: 24px;">
+    <div class="fade-in" data-delay="1" style="text-align: center;">
+      <div style="text-align:center;">
+        <div style="background:rgba(79,140,255,.15);border:2px solid var(--accent);border-radius:12px;padding:10px 16px;display:inline-block;font-size:13px;font-weight:700;color:var(--accent);">PÁGINA PILAR</div>
+        <div style="display:flex;gap:8px;margin-top:10px;justify-content:center;">
+          <div style="background:rgba(0,230,138,.1);border:1px solid rgba(0,230,138,.3);border-radius:8px;padding:6px 10px;font-size:10px;color:var(--accent2);">Cluster 1</div>
+          <div style="background:rgba(0,230,138,.1);border:1px solid rgba(0,230,138,.3);border-radius:8px;padding:6px 10px;font-size:10px;color:var(--accent2);">Cluster 2</div>
+          <div style="background:rgba(0,230,138,.1);border:1px solid rgba(0,230,138,.3);border-radius:8px;padding:6px 10px;font-size:10px;color:var(--accent2);">Cluster 3</div>
+        </div>
+        <div style="display:flex;gap:6px;margin-top:6px;justify-content:center;">
+          <div style="background:rgba(255,194,71,.1);border:1px solid rgba(255,194,71,.3);border-radius:6px;padding:4px 8px;font-size:9px;color:var(--accent-yellow);">Sub</div>
+          <div style="background:rgba(255,194,71,.1);border:1px solid rgba(255,194,71,.3);border-radius:6px;padding:4px 8px;font-size:9px;color:var(--accent-yellow);">Sub</div>
+          <div style="background:rgba(255,194,71,.1);border:1px solid rgba(255,194,71,.3);border-radius:6px;padding:4px 8px;font-size:9px;color:var(--accent-yellow);">Sub</div>
+          <div style="background:rgba(255,194,71,.1);border:1px solid rgba(255,194,71,.3);border-radius:6px;padding:4px 8px;font-size:9px;color:var(--accent-yellow);">Sub</div>
+        </div>
+        <p style="font-size:10px;color:var(--text-muted);margin-top:8px;">Links internos conectam tudo = autoridade</p>
+      </div>
+    </div>
+    <div style="text-align: left;">
+      <p class="fade-in" data-delay="1" style="margin-bottom: 12px; font-size: 14px;">Não basta ter 1 página. Você precisa de um <strong style="color:var(--text)">ecossistema de conteúdo</strong> que cobre o tema inteiro.</p>
+  <div style="max-width: 780px; width: 100%;">
+    <div class="card card-accent fade-in" data-delay="2" style="text-align: center; padding: 16px; margin-bottom: 12px;">
+      <h3 style="color: var(--accent); font-size: 16px; margin-bottom: 0;">HUB PRINCIPAL</h3>
+      <p style="font-size: 15px; color: var(--text); font-weight: 600;">Aluguel de Plataforma Elevatória</p>
+    </div>
+    <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px;">
+      <div class="card fade-in" data-delay="3" style="padding: 12px; text-align: center;">
+        <h3 style="font-size: 13px; color: var(--accent); margin-bottom: 4px;">Por Produto</h3>
+        <p style="font-size: 11px;">Tesoura · Articulada<br>Elétrica · Diesel</p>
+      </div>
+      <div class="card fade-in" data-delay="3" style="padding: 12px; text-align: center;">
+        <h3 style="font-size: 13px; color: var(--accent-yellow); margin-bottom: 4px;">Por Segmento</h3>
+        <p style="font-size: 11px;">Construção · Indústria<br>Logística · Telecom</p>
+      </div>
+      <div class="card fade-in" data-delay="3" style="padding: 12px; text-align: center;">
+        <h3 style="font-size: 13px; color: var(--accent2); margin-bottom: 4px;">Por Decisão</h3>
+        <p style="font-size: 11px;">Quanto custa · Alugar vs Comprar<br>Andaime vs Plataforma</p>
+      </div>
+    </div>
+    <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; margin-top: 10px;">
+      <div class="card fade-in" data-delay="4" style="padding: 12px; text-align: center;">
+        <h3 style="font-size: 13px; color: var(--text-muted); margin-bottom: 4px;">Suporte</h3>
+        <p style="font-size: 11px;">NR-18 · NR-35 · Checklist<br>Como Escolher</p>
+      </div>
+      <div class="card fade-in" data-delay="4" style="padding: 12px; text-align: center;">
+        <h3 style="font-size: 13px; color: var(--text-muted); margin-bottom: 4px;">Narrativo (Funil)</h3>
+        <p style="font-size: 11px;">Cases reais · Calculadoras<br>CAPEX vs OPEX</p>
+      </div>
+      <div class="card fade-in" data-delay="4" style="padding: 12px; text-align: center;">
+        <h3 style="font-size: 13px; color: var(--text-muted); margin-bottom: 4px;">Decisão Interna</h3>
+        <p style="font-size: 11px;">Como convencer o diretor<br>O que o CFO pergunta</p>
+      </div>
+    </div>
+  </div>
+  </div><!-- close text column -->
+  </div><!-- close split -->
+  <p class="fade-in" data-delay="5" style="margin-top: 10px; font-size: 15px; color: var(--text); font-weight: 600;">
+    <span class="hl">42 conteúdos</span> interligados. O Google e a IA entendem: <em>"essa empresa é a referência nesse assunto."</em>
+  </p>
+</section>
+
+<!-- ════════════════════════════════════════════ -->
+<!-- SLIDE — PERSONAS, MICRO-PERSONAS & JTBD     -->
+<!-- ════════════════════════════════════════════ -->
+<section class="slide" data-act="ATO 2 · A MAIORIA NÃO PERCEBEU">
+  <h2 class="fade-in">Quem compra de você?<br><span class="hl" style="font-size: 0.7em;">Personas, micro-momentos e o "job" do comprador</span></h2>
+  <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 14px; margin-top: 20px; max-width: 800px; width: 100%;">
+    <div class="card fade-in" data-delay="1" style="padding: 16px;">
+      <h3 style="color: var(--accent); font-size: 15px; margin-bottom: 8px;">Engenheiro de obra</h3>
+      <p style="font-size: 12px; line-height: 1.6;">
+        <strong style="color:var(--text);">Job:</strong> "Preciso resolver acesso em altura sem atrasar o cronograma"<br><br>
+        <strong style="color:var(--text);">Busca:</strong> specs, capacidade, prazo de entrega, NR-35<br><br>
+        <strong style="color:var(--accent-yellow);">Conteúdo:</strong> comparativos, tabelas técnicas, checklist
+      </p>
+    </div>
+    <div class="card fade-in" data-delay="2" style="padding: 16px;">
+      <h3 style="color: var(--accent2); font-size: 15px; margin-bottom: 8px;">Gestor de compras</h3>
+      <p style="font-size: 12px; line-height: 1.6;">
+        <strong style="color:var(--text);">Job:</strong> "Preciso de 3 orçamentos válidos para aprovar no sistema"<br><br>
+        <strong style="color:var(--text);">Busca:</strong> preço, prazo, o que está incluso, condições<br><br>
+        <strong style="color:var(--accent-yellow);">Conteúdo:</strong> página de preço, incluso, FAQ comercial
+      </p>
+    </div>
+    <div class="card fade-in" data-delay="3" style="padding: 16px;">
+      <h3 style="color: var(--accent-yellow); font-size: 15px; margin-bottom: 8px;">Diretor financeiro</h3>
+      <p style="font-size: 12px; line-height: 1.6;">
+        <strong style="color:var(--text);">Job:</strong> "Preciso saber se alugar é melhor que comprar pro balanço"<br><br>
+        <strong style="color:var(--text);">Busca:</strong> CAPEX vs OPEX, TCO, ROI<br><br>
+        <strong style="color:var(--accent-yellow);">Conteúdo:</strong> calculadora, cases, argumento financeiro
+      </p>
+    </div>
+  </div>
+  <div class="card card-accent fade-in" data-delay="4" style="margin-top: 16px; max-width: 800px; text-align: center; padding: 14px;">
+    <p style="font-size: 14px; color: var(--text);">
+      <strong>Mesma empresa, 3 pessoas decidindo, 3 buscas diferentes.</strong><br>
+      <span style="color: var(--text-muted);">Se você tem página para cada "job", atende os 3. Se tem 1 página genérica, não atende nenhum.</span>
+    </p>
+  </div>
+  <p class="notes">FALA: "Vocês não vendem pra UMA pessoa. Vendem pra um comitê. O engenheiro quer specs, o compras quer preço, o diretor quer ROI. Cada um pesquisa diferente. Cada um precisa de uma página diferente."</p>
+</section>
+
+<!-- ════════════════════════════════════════════ -->
+<!-- SLIDE 17 — INTERAÇÃO 2                      -->
+<!-- ════════════════════════════════════════════ -->
+<section class="slide" data-act="ATO 2 · A MAIORIA NÃO PERCEBEU" style="background: var(--gradient-hero);">
+  <h2 class="fade-in" style="color: var(--accent2);">🔴 Vamos testar de novo</h2>
+  <h3 class="fade-in" data-delay="1" style="color: var(--text);">
+    Quem quer ver se a própria empresa<br>aparece quando a IA recomenda?
+  </h3>
+  <p class="fade-in" data-delay="2" style="margin-top: 24px; font-size: 20px;">
+    Me diz seu segmento e sua cidade.<br>
+    Vamos pesquisar ao vivo.
+  </p>
+  <p class="notes">INTERAÇÃO: Pesquisar 2-3 empresas da plateia no ChatGPT. Mostrar quem aparece e quem não. Momento de maior impacto emocional da apresentação.</p>
+</section>
+
+<!-- ════════════════════════════════════════════ -->
+<!-- SLIDE 18 — QUEBRA DE OBJEÇÕES               -->
+<!-- ════════════════════════════════════════════ -->
+<section class="slide" data-act="ATO 2 · A MAIORIA NÃO PERCEBEU">
+  <h2 class="fade-in">O que você pode estar pensando:</h2>
+  <div style="display: flex; flex-direction: column; gap: 16px; margin-top: 24px; max-width: 750px; width: 100%;">
+    <div class="card fade-in" data-delay="1">
+      <h3 style="color: var(--accent-red); font-size: 17px;">"Mas minha empresa é pequena..."</h3>
+      <p style="font-size: 15px;">Empresas pequenas com dados organizados aparecem <strong style="color:var(--text)">antes</strong> de multinacionais na IA. Tamanho não é vantagem — <span class="hl-green">clareza</span> é.</p>
+    </div>
+    <div class="card fade-in" data-delay="2">
+      <h3 style="color: var(--accent-red); font-size: 17px;">"Isso deve ser caro..."</h3>
+      <p style="font-size: 15px;">O custo de não aparecer é <strong style="color:var(--text)">maior</strong>. Se perde 3 contratos/mês que nunca chegam ao pipeline, já está pagando — só não está recebendo nada em troca.</p>
+    </div>
+    <div class="card fade-in" data-delay="3">
+      <h3 style="color: var(--accent-red); font-size: 17px;">"Funciona pro meu segmento?"</h3>
+      <p style="font-size: 15px;">Se alguém pesquisa seu produto ou serviço, funciona. A IA recomenda de restaurante a fornecedor de rolamento industrial. O critério é <span class="hl-green">informação verificável</span>, não o setor.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════ -->
+<!-- SLIDE 19 — TRANSIÇÃO ATO 3                  -->
+<!-- ════════════════════════════════════════════ -->
+<section class="slide" data-act="ATO 3 · QUEM AGIR AGORA DOMINA" style="background: var(--gradient-hero);">
+  <p class="subtitle fade-in">Ato 3</p>
+  <h1 class="fade-in" data-delay="1">Quem agir agora<br><span class="hl-green">domina</span></h1>
+  <p class="fade-in" data-delay="2">
+    O que fazer para entrar na lista da IA
+  </p>
+</section>
+
+<!-- ════════════════════════════════════════════ -->
+<!-- SLIDE 20 — COMO FUNCIONA (ANALOGIA)         -->
+<!-- ════════════════════════════════════════════ -->
+<section class="slide" data-act="ATO 3 · QUEM AGIR AGORA DOMINA">
+  <h2 class="fade-in">O que fazemos é simples:</h2>
+  <div class="quote fade-in" data-delay="1" style="margin-top: 24px;">
+    Ensinamos a IA quem é a sua empresa.<br><br>
+    Hoje, ela não sabe.<br>
+    Nosso trabalho é apresentar você para a IA —<br>
+    com <span class="hl">nome</span>, <span class="hl">sobrenome</span>, o que <span class="hl">faz</span>, onde <span class="hl">faz</span>,<br>
+    e a <span class="hl-green">prova</span> de que faz bem.
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════ -->
+<!-- SLIDE 21 — ANTES E DEPOIS                   -->
+<!-- ════════════════════════════════════════════ -->
+<section class="slide" data-act="ATO 3 · QUEM AGIR AGORA DOMINA">
+  <h2 class="fade-in">Antes e depois</h2>
+  <div class="vs-container fade-in" data-delay="1" style="margin-top: 24px;">
+    <div class="card card-red">
+      <h3 style="color: var(--accent-red); font-size: 16px;">❌ ANTES</h3>
+      <p style="font-size: 14px; line-height: 1.8;">
+        Site com PDF escaneado<br>
+        Certificações como logo no rodapé<br>
+        Texto genérico "soluções completas"<br>
+        Zero avaliação no Google<br>
+        Ficha do Google Meu Negócio vazia
+      </p>
+      <p style="font-size: 13px; color: var(--accent-red); margin-top: 12px; font-weight: 600;">Resultado: IA ignora completamente</p>
+    </div>
+    <div class="vs-label">→</div>
+    <div class="card card-green">
+      <h3 style="color: var(--accent2); font-size: 16px;">✓ DEPOIS</h3>
+      <p style="font-size: 14px; line-height: 1.8;">
+        Specs técnicas em tabela HTML<br>
+        Certificações em página dedicada<br>
+        Casos com números reais<br>
+        Reviews de clientes com data<br>
+        Ficha completa: fotos, descrição, horário
+      </p>
+      <p style="font-size: 13px; color: var(--accent2); margin-top: 12px; font-weight: 600;">Resultado: IA recomenda com confiança</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════ -->
+<!-- SLIDE 22 — CASO REAL (sem jargão)           -->
+<!-- ════════════════════════════════════════════ -->
+<section class="slide" data-act="ATO 3 · QUEM AGIR AGORA DOMINA">
+  <h2 class="fade-in">Caso real: <span class="hl">Move Máquinas</span></h2>
+  <p class="fade-in" data-delay="1" style="margin-bottom: 20px;">
+    Empresa de locação de empilhadeiras e plataformas — Goiânia, GO
+  </p>
+  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; max-width: 800px; width: 100%;">
+    <div class="card fade-in" data-delay="2">
+      <h3 style="color: var(--accent); font-size: 42px; margin-bottom: 4px;">13</h3>
+      <p style="font-size: 14px;">cidades mapeadas</p>
+    </div>
+    <div class="card fade-in" data-delay="2">
+      <h3 style="color: var(--accent); font-size: 42px; margin-bottom: 4px;">5</h3>
+      <p style="font-size: 14px;">serviços com página dedicada</p>
+    </div>
+    <div class="card fade-in" data-delay="3">
+      <h3 style="color: var(--accent2); font-size: 42px; margin-bottom: 4px;">79</h3>
+      <p style="font-size: 14px;">páginas únicas criadas</p>
+    </div>
+    <div class="card fade-in" data-delay="3">
+      <h3 style="color: var(--accent2); font-size: 42px; margin-bottom: 4px;">40%+</h3>
+      <p style="font-size: 14px;">de conteúdo local em cada página</p>
+    </div>
+  </div>
+  <p class="fade-in" data-delay="4" style="margin-top: 20px; font-size: 16px;">
+    Cada página com dados técnicos, contexto local real, depoimentos únicos,<br>
+    FAQ da cidade, e Maps integrado. A IA consegue ler e recomendar.
+  </p>
+</section>
+
+<!-- ════════════════════════════════════════════ -->
+<!-- SLIDE 23 — CICLO MAPS → GEMINI              -->
+<!-- ════════════════════════════════════════════ -->
+<section class="slide" data-act="ATO 3 · QUEM AGIR AGORA DOMINA">
+  <h2 class="fade-in">O ciclo virtuoso do <span class="hl">Google Maps</span></h2>
+  <div class="funnel fade-in" data-delay="1" style="margin-top: 24px;">
+    <div class="funnel-step" style="background: rgba(79,140,255,.15); width: 100%;">
+      Google Meu Negócio bem preenchido
+    </div>
+    <div style="text-align: center; color: var(--text-muted); font-size: 20px;">↓</div>
+    <div class="funnel-step" style="background: rgba(79,140,255,.2); width: 88%;">
+      Maps mostra sua empresa com destaque
+    </div>
+    <div style="text-align: center; color: var(--text-muted); font-size: 20px;">↓</div>
+    <div class="funnel-step" style="background: rgba(0,230,138,.15); width: 76%;">
+      Gemini usa dados do Maps para recomendar
+    </div>
+    <div style="text-align: center; color: var(--text-muted); font-size: 20px;">↓</div>
+    <div class="funnel-step" style="background: rgba(0,230,138,.2); width: 64%;">
+      Comprador chega ao site já qualificado
+    </div>
+    <div style="text-align: center; color: var(--text-muted); font-size: 20px;">↓</div>
+    <div class="funnel-step" style="background: rgba(0,230,138,.3); width: 52%;">
+      <span class="hl-green" style="font-size: 20px;">Taxa de conversão 14,2%</span>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════ -->
+<!-- SLIDE — GOOGLE MEU NEGÓCIO                  -->
+<!-- ════════════════════════════════════════════ -->
+<section class="slide" data-act="ATO 3 · QUEM AGIR AGORA DOMINA">
+  <h2 class="fade-in">Google Meu Negócio:<br>a ação mais rápida e <span class="hl-green">gratuita</span></h2>
+  <div class="split" style="margin-top: 16px; gap: 28px;">
+    <div style="text-align: left;">
+      <div style="display:flex;flex-direction:column;gap:10px;">
+        <div class="card fade-in" data-delay="1" style="padding:12px 16px;">
+          <div style="display:flex;align-items:center;gap:10px;">
+            <span style="font-size:28px;font-weight:900;color:var(--accent2);">93%</span>
+            <p style="font-size:13px;color:var(--text);">procuram empresas locais no Google <strong>antes de comprar</strong></p>
+          </div>
+        </div>
+        <div class="card fade-in" data-delay="2" style="padding:12px 16px;">
+          <div style="display:flex;align-items:center;gap:10px;">
+            <span style="font-size:28px;font-weight:900;color:var(--accent);">70%</span>
+            <p style="font-size:13px;color:var(--text);">dos cliques vão para os <strong>3 primeiros resultados</strong> locais</p>
+          </div>
+        </div>
+        <div class="card fade-in" data-delay="3" style="padding:12px 16px;">
+          <div style="display:flex;align-items:center;gap:10px;">
+            <span style="font-size:28px;font-weight:900;color:var(--accent-yellow);">5x</span>
+            <p style="font-size:13px;color:var(--text);">mais chamadas no WhatsApp com ficha <strong>otimizada</strong></p>
+          </div>
+        </div>
+      </div>
+      <p class="fade-in" data-delay="4" style="margin-top:14px;font-size:14px;color:var(--accent-yellow);font-weight:600;">
+        Estar no topo não é sorte — é estratégia.
+      </p>
+    </div>
+    <div class="fade-in" data-delay="2">
+      <div style="background:#fff;border-radius:14px;padding:16px;max-width:280px;color:#333;box-shadow:0 4px 20px rgba(0,0,0,.15);">
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:10px;">
+          <div style="width:36px;height:36px;border-radius:50%;background:#4285f4;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:14px;">G</div>
+          <div><span style="font-size:13px;font-weight:700;color:#333;">Sua Empresa</span><br><span style="font-size:10px;color:#ffc247;">⭐⭐⭐⭐⭐ 4.8 (127)</span></div>
+        </div>
+        <div style="font-size:10px;color:#555;line-height:1.6;margin-bottom:8px;">
+          📍 Goiânia, GO<br>
+          📞 (62) 9xxxx-xxxx<br>
+          🕐 Seg-Sex: 08h–18h<br>
+          💬 Enviar mensagem
+        </div>
+        <div style="display:flex;gap:4px;margin-bottom:8px;">
+          <div style="width:60px;height:40px;background:#e8f0fe;border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:8px;color:#666;">📷 Foto 1</div>
+          <div style="width:60px;height:40px;background:#e8f0fe;border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:8px;color:#666;">📷 Foto 2</div>
+          <div style="width:60px;height:40px;background:#e8f0fe;border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:8px;color:#666;">📷 Foto 3</div>
+        </div>
+        <div style="background:#00a67e;color:#fff;text-align:center;padding:6px;border-radius:20px;font-size:11px;font-weight:600;">💬 WhatsApp</div>
+      </div>
+      <p class="img-caption" style="margin-top:8px;">Ficha otimizada = mais visitas, mais ligações, mais vendas</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════ -->
+<!-- SLIDE — FRAMEWORK TRACE                     -->
+<!-- ════════════════════════════════════════════ -->
+<section class="slide" data-act="ATO 3 · QUEM AGIR AGORA DOMINA">
+  <h2 class="fade-in">O que a IA avalia para recomendar:<br><span class="hl">TRACE</span></h2>
+  <div style="display: flex; flex-direction: column; gap: 10px; margin-top: 20px; max-width: 750px; width: 100%;">
+    <div class="card fade-in" data-delay="1" style="padding: 16px 24px;">
+      <div style="display: flex; align-items: center; gap: 14px;">
+        <span style="font-size: 28px; font-weight: 900; color: var(--accent); width: 36px; flex-shrink:0;">T</span>
+        <div>
+          <p style="color: var(--text); font-weight: 600; font-size: 15px;">Trust — Confiabilidade</p>
+          <p style="font-size: 13px;">Sua empresa é citada por fontes confiáveis? Avaliações acima de 4,3★? Menções independentes?</p>
+        </div>
+      </div>
+    </div>
+    <div class="card fade-in" data-delay="2" style="padding: 16px 24px;">
+      <div style="display: flex; align-items: center; gap: 14px;">
+        <span style="font-size: 28px; font-weight: 900; color: var(--accent); width: 36px; flex-shrink:0;">R</span>
+        <div>
+          <p style="color: var(--text); font-weight: 600; font-size: 15px;">Relevance — Relevância</p>
+          <p style="font-size: 13px;">O conteúdo responde ao contexto <strong style="color:var(--text)">específico</strong> do comprador? Ou é texto genérico "soluções completas"?</p>
+        </div>
+      </div>
+    </div>
+    <div class="card fade-in" data-delay="3" style="padding: 16px 24px;">
+      <div style="display: flex; align-items: center; gap: 14px;">
+        <span style="font-size: 28px; font-weight: 900; color: var(--accent); width: 36px; flex-shrink:0;">A</span>
+        <div>
+          <p style="color: var(--text); font-weight: 600; font-size: 15px;">Accuracy — Precisão</p>
+          <p style="font-size: 13px;">Dados técnicos, endereços, capacidades estão corretos e atualizados? Dado errado = desconfiança.</p>
+        </div>
+      </div>
+    </div>
+    <div class="card fade-in" data-delay="4" style="padding: 16px 24px;">
+      <div style="display: flex; align-items: center; gap: 14px;">
+        <span style="font-size: 28px; font-weight: 900; color: var(--accent); width: 36px; flex-shrink:0;">C</span>
+        <div>
+          <p style="color: var(--text); font-weight: 600; font-size: 15px;">Completeness — Completude</p>
+          <p style="font-size: 13px;">O conteúdo cobre <strong style="color:var(--text)">todos</strong> os atributos da busca? Lacunas = a IA preenche com concorrente.</p>
+        </div>
+      </div>
+    </div>
+    <div class="card fade-in" data-delay="5" style="padding: 16px 24px;">
+      <div style="display: flex; align-items: center; gap: 14px;">
+        <span style="font-size: 28px; font-weight: 900; color: var(--accent); width: 36px; flex-shrink:0;">E</span>
+        <div>
+          <p style="color: var(--text); font-weight: 600; font-size: 15px;">Explainability — Verificabilidade</p>
+          <p style="font-size: 13px;">Suas afirmações podem ser comprovadas? 90% dos compradores clicam para verificar as fontes citadas pela IA.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════ -->
+<!-- SLIDE 24 — 5 AÇÕES                          -->
+<!-- ════════════════════════════════════════════ -->
+<section class="slide" data-act="ATO 3 · QUEM AGIR AGORA DOMINA">
+  <h2 class="fade-in">5 ações que você pode começar <span class="hl-green">amanhã</span></h2>
+  <div class="checklist fade-in" data-delay="1" style="margin-top: 24px;">
+    <div class="check-item">
+      <span class="check-icon">1</span>
+      <div>
+        <strong style="color: var(--text);">Preencha 100% do Google Meu Negócio</strong><br>
+        <span style="font-size: 14px; color: var(--text-muted);">Fotos, descrição, horários, categorias, posts. Isso alimenta Maps → Gemini → recomendação. É gratuito e leva 1 hora.</span>
+      </div>
+    </div>
+    <div class="check-item">
+      <span class="check-icon">2</span>
+      <div>
+        <strong style="color: var(--text);">Faça uma análise 360° do seu site</strong><br>
+        <span style="font-size: 14px; color: var(--text-muted);">Seu site está comunicando o que a IA precisa ler? Dados técnicos em texto, certificações visíveis, identidade clara? Se a IA não entende quem você é, ela não recomenda.</span>
+      </div>
+    </div>
+    <div class="check-item">
+      <span class="check-icon">3</span>
+      <div>
+        <strong style="color: var(--text);">Crie conteúdos que realmente ajudam o comprador</strong><br>
+        <span style="font-size: 14px; color: var(--text-muted);">Não é produzir por produzir. É responder as perguntas reais que o seu cliente faz antes de comprar. Comparativos, guias técnicos, tabelas de preço.</span>
+      </div>
+    </div>
+    <div class="check-item">
+      <span class="check-icon">4</span>
+      <div>
+        <strong style="color: var(--text);">Transforme as dúvidas do comercial em conteúdo</strong><br>
+        <span style="font-size: 14px; color: var(--text-muted);">Cada pergunta que seu vendedor responde todo dia é um artigo que deveria existir no site. "Quanto custa?", "Qual a diferença?", "Vocês atendem minha cidade?" — tudo isso vira página.</span>
+      </div>
+    </div>
+    <div class="check-item">
+      <span class="check-icon">5</span>
+      <div>
+        <strong style="color: var(--text);">Ajude seu potencial cliente na jornada de compra</strong><br>
+        <span style="font-size: 14px; color: var(--text-muted);">Ele está pesquisando sozinho. Se encontra suas respostas, confia em você. Se não encontra, confia no concorrente que publicou primeiro.</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════ -->
+<!-- SLIDE 25 — 2028 FUTURO                      -->
+<!-- ════════════════════════════════════════════ -->
+<section class="slide" data-act="ATO 3 · QUEM AGIR AGORA DOMINA">
+  <h2 class="fade-in">Em 2028, o comprador<br><span class="hl-red">não será mais uma pessoa</span></h2>
+  <div style="display: flex; flex-direction: column; gap: 16px; margin-top: 24px; max-width: 650px; width: 100%;">
+    <div class="card fade-in" data-delay="1">
+      <div style="display: flex; align-items: center; gap: 16px;">
+        <span style="font-size: 36px; font-weight: 900; color: var(--accent-red);">90%</span>
+        <p style="font-size: 16px; color: var(--text);">das compras B2B via agentes de IA autônomos</p>
+      </div>
+    </div>
+    <div class="card fade-in" data-delay="2">
+      <div style="display: flex; align-items: center; gap: 16px;">
+        <span style="font-size: 36px; font-weight: 900; color: var(--accent-yellow);">US$ 15 tri</span>
+        <p style="font-size: 16px; color: var(--text);">em compras intermediadas por algoritmos</p>
+      </div>
+    </div>
+    <div class="card card-accent fade-in" data-delay="3">
+      <div style="display: flex; align-items: center; gap: 16px;">
+        <span style="font-size: 36px; font-weight: 900; color: var(--accent);">1 em 5</span>
+        <p style="font-size: 16px; color: var(--text);">vendedores <strong>já negociam</strong> com agentes de IA — hoje, em 2026</p>
+      </div>
+    </div>
+  </div>
+  <p class="fade-in" data-delay="4" style="margin-top:24px; color: var(--text-muted); font-size: 16px; max-width: 600px;">
+    Agentes de IA não têm paciência para apresentação de vendas.<br>
+    Eles avaliam uma coisa: <span style="color: var(--text); font-weight: 600;">sua empresa tem os dados que eu preciso para qualificá-la?</span>
+  </p>
+  <p class="source fade-in" data-delay="5">Fonte: Gartner, 2025; Salesforce, SAP</p>
+</section>
+
+<!-- ════════════════════════════════════════════ -->
+<!-- SLIDE — PROVA SOCIAL: EXAME + PROFOUND      -->
+<!-- ════════════════════════════════════════════ -->
+<section class="slide" data-act="ATO 3 · QUEM AGIR AGORA DOMINA">
+  <h2 class="fade-in">Isso não é teoria.<br><span class="hl">Já está acontecendo.</span></h2>
+  <div class="img-row fade-in" data-delay="1">
+    <div style="text-align: center;">
+      <div class="card" style="max-width:280px;padding:16px;border-color:rgba(255,77,106,.2);">
+        <p style="font-size:10px;color:var(--accent-red);font-weight:700;margin-bottom:6px;">EXAME · BÚSSOLA · MAR/2026</p>
+        <p style="font-size:14px;color:var(--text);font-weight:700;line-height:1.3;">Até 2028, 90% das compras B2B serão feitas por agentes de IA; entenda</p>
+        <p style="font-size:11px;color:var(--text-muted);margin-top:8px;">Estudo do Gartner aponta que automação movimentará US$ 15 trilhões.</p>
+      </div>
+    </div>
+    <div style="text-align: center;">
+      <div class="card" style="max-width:280px;padding:16px;border-color:rgba(0,230,138,.2);">
+        <p style="font-size:10px;color:var(--accent2);font-weight:700;margin-bottom:6px;">EXAME · FEV/2026</p>
+        <p style="font-size:14px;color:var(--text);font-weight:700;line-height:1.3;">Startup que ajuda marcas a aparecerem no ChatGPT capta US$ 96 milhões e vira unicórnio</p>
+        <p style="font-size:11px;color:var(--text-muted);margin-top:8px;">Profound chega a US$ 1 bilhão de valuation em 18 meses.</p>
+      </div>
+    </div>
+  </div>
+  <p class="fade-in" data-delay="2" style="margin-top: 20px; color: var(--text); font-weight: 600; font-size: 18px; max-width: 700px;">
+    Uma startup virou unicórnio em 18 meses fazendo <strong>uma coisa</strong>:<br>
+    ajudar empresas a serem encontradas pelo ChatGPT e Gemini.
+  </p>
+  <p class="fade-in" data-delay="3" style="font-size: 15px; color: var(--accent-yellow);">
+    Se grandes empresas estão investindo bilhões nisso, o que isso diz sobre o futuro?
+  </p>
+</section>
+
+<!-- ════════════════════════════════════════════ -->
+<!-- SLIDE 26 — SEMÁFORO / JANELA                -->
+<!-- ════════════════════════════════════════════ -->
+<section class="slide" data-act="ATO 3 · QUEM AGIR AGORA DOMINA">
+  <h2 class="fade-in">A janela de oportunidade</h2>
+  <div class="traffic-light fade-in" data-delay="1" style="margin-top: 32px;">
+    <div class="tl-row">
+      <div class="tl-dot green"></div>
+      <div class="tl-text">
+        <strong>Agora (2026)</strong>
+        <span>Apenas 1,2% visíveis na IA. Concorrência baixíssima. Custo de entrada: acessível.</span>
+      </div>
+    </div>
+    <div class="tl-row">
+      <div class="tl-dot yellow"></div>
+      <div class="tl-text">
+        <strong>2027</strong>
+        <span>Concorrentes começam a acordar. Custo de entrada sobe. Posições mais disputadas.</span>
+      </div>
+    </div>
+    <div class="tl-row">
+      <div class="tl-dot red"></div>
+      <div class="tl-text">
+        <strong>2028+</strong>
+        <span>90% das compras via agentes. Posições consolidadas. Quem não entrou, disputa migalhas.</span>
+      </div>
+    </div>
+  </div>
+  <p class="fade-in" data-delay="2" style="margin-top: 24px; color: var(--text); font-weight: 700; font-size: 20px;">
+    Seus concorrentes ainda estão jogando o jogo antigo.
+  </p>
+</section>
+
+<!-- ════════════════════════════════════════════ -->
+<!-- SLIDE 27 — FRASE FINAL                      -->
+<!-- ════════════════════════════════════════════ -->
+<section class="slide" data-act="ENCERRAMENTO" style="background: var(--gradient-hero);">
+  <div class="quote fade-in" style="border: none; padding: 0; text-align: center; font-size: clamp(24px, 3vw, 42px);">
+    O comprador mudou de endereço.<br><br>
+    A pergunta não é <em>se</em> sua empresa deve se adaptar.<br><br>
+    É se vai fazer isso <span class="hl-green">antes</span> ou <span class="hl-red">depois</span><br>dos seus concorrentes.
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════ -->
+<!-- SLIDE 28 — CTA                              -->
+<!-- ════════════════════════════════════════════ -->
+<section class="slide" data-act="ENCERRAMENTO" style="background: var(--gradient-hero);">
+  <div class="split" style="gap: 32px;">
+    <div style="text-align: left;">
+      <h2 class="fade-in" style="text-align: left;">Diagnóstico gratuito de<br><span class="hl-green">Visibilidade na IA</span></h2>
+      <p class="fade-in" data-delay="1" style="margin-top: 12px; color: var(--text); font-size: 18px;">
+        Vou pesquisar seu segmento em 4 IAs diferentes e mostrar se você aparece — ou se o concorrente aparece.
+      </p>
+      <div class="card card-green fade-in" data-delay="2" style="margin-top: 16px; text-align: center; padding: 16px;">
+        <h3 style="color: var(--accent2); font-size: 18px;">Limitado às 5 primeiras empresas</h3>
+        <p style="font-size: 14px; color: var(--text);">Me procure no intervalo ou escaneie o QR Code</p>
+      </div>
+      <div style="margin-top: 16px; padding: 16px; background: rgba(255,255,255,.05); border-radius: 12px; display: inline-block;" class="fade-in" data-delay="3">
+        <p style="font-size: 14px; color: var(--text-muted);">[ QR CODE AQUI ]</p>
+        <p style="font-size: 12px; color: var(--text-muted); margin-top: 4px;">maturare.com.br</p>
+      </div>
+    </div>
+    <div class="fade-in" data-delay="2" style="text-align: center;">
+      <div style="background: linear-gradient(135deg, rgba(79,140,255,.15), rgba(0,230,138,.1)); border: 1px solid rgba(79,140,255,.2); border-radius: 16px; padding: 40px 32px; text-align: center; max-width: 300px;">
+        <div style="font-size: 48px; margin-bottom: 12px;">🎤</div>
+        <h3 style="color: var(--text); font-size: 20px; margin-bottom: 4px;">Daniel Batista</h3>
+        <p style="font-size: 14px; color: var(--accent); margin-bottom: 12px;">Maturare — Gestão & Marketing</p>
+        <p style="font-size: 12px; color: var(--text-muted);">SEO Semântico · GEO · Arquitetura de Conteúdo</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════ -->
+<!-- SLIDE 29 — OBRIGADO                         -->
+<!-- ════════════════════════════════════════════ -->
+<section class="slide" data-act="">
+  <h1 class="fade-in">Obrigado.</h1>
+  <p class="fade-in" data-delay="1" style="color: var(--text-muted); font-size: 18px; margin-top: 8px;">
+    Perguntas?
+  </p>
+  <p class="fade-in" data-delay="2" style="margin-top: 40px; font-size: 14px; color: var(--text-muted);">
+    Maturare — Gestão & Marketing<br>
+    maturare.com.br
+  </p>
+</section>
+
+</div><!-- /deck -->
+
+<script>
+(function() {
+  const slides = document.querySelectorAll('.slide');
+  const progress = document.getElementById('progress');
+  const counter = document.getElementById('counter');
+  const actLabel = document.getElementById('actLabel');
+  let current = 0;
+  const total = slides.length;
+
+  function go(n) {
+    if (n < 0 || n >= total) return;
+    slides[current].classList.remove('active');
+    current = n;
+    slides[current].classList.add('active');
+    progress.style.width = ((current / (total - 1)) * 100) + '%';
+    counter.textContent = (current + 1) + ' / ' + total;
+    actLabel.textContent = slides[current].dataset.act || '';
+
+    // Animate bars on any slide that has them
+    if (slides[current].querySelector('.bar-fill')) {
+      setTimeout(function() {
+        slides[current].querySelectorAll('.bar-fill').forEach(function(bar) {
+          bar.style.width = bar.dataset.width;
+        });
+      }, 300);
+    }
+  }
+
+  function resetAllBars() {
+    document.querySelectorAll('.bar-fill').forEach(function(bar) {
+      bar.style.width = '0';
+    });
+  }
+
+  go(0);
+
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'ArrowRight' || e.key === 'ArrowDown' || e.key === ' ') {
+      e.preventDefault();
+      resetAllBars();
+      go(current + 1);
+    }
+    if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
+      e.preventDefault();
+      resetAllBars();
+      go(current - 1);
+    }
+    if (e.key === 'Home') { go(0); }
+    if (e.key === 'End') { go(total - 1); }
+  });
+
+  // Touch support
+  let touchStartX = 0;
+  document.addEventListener('touchstart', function(e) {
+    touchStartX = e.changedTouches[0].screenX;
+  });
+  document.addEventListener('touchend', function(e) {
+    const diff = touchStartX - e.changedTouches[0].screenX;
+    if (Math.abs(diff) > 50) {
+      if (diff > 0) go(current + 1);
+      else go(current - 1);
+    }
+  });
+
+  // Click to advance (right half) or go back (left half)
+  document.addEventListener('click', function(e) {
+    if (e.target.closest('a, button, input, select')) return;
+    const x = e.clientX / window.innerWidth;
+    if (x > 0.5) go(current + 1);
+    else go(current - 1);
+  });
+})();
+</script>
+
+</body>
+</html>

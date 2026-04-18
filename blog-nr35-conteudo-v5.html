@@ -1,0 +1,786 @@
+<style>
+/* ── COMPONENT CSS: NR-35 Article v5 ── */
+
+/* Variables (inherit from template or standalone) */
+:root {
+  --color-primary: #1D9648;
+  --color-btn: #16A149;
+  --color-primary-light: rgba(29,150,72,.10);
+  --color-dark: #16191C;
+  --color-white: #FFFFFF;
+  --color-surface: #F3F7F5;
+  --color-text: #1A1A1A;
+  --color-text-muted: #666666;
+  --color-border: #E5E5E5;
+  --color-whatsapp: #25D366;
+  --font-main: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+/* ── OPENING SCENE ── */
+.opening-scene {
+  background: #1a1a1a; color: #fff; padding: 40px 32px;
+  border-radius: 12px; margin-bottom: 32px; position: relative;
+}
+.opening-scene::before {
+  content: '\201C'; position: absolute; top: 12px; left: 16px;
+  font-size: 80px; color: rgba(29,150,72,.3); font-family: Georgia, serif;
+  line-height: 1;
+}
+.opening-scene p {
+  color: rgba(255,255,255,.88); font-size: 18px;
+  line-height: 1.8; position: relative; z-index: 1;
+  margin-bottom: 14px;
+}
+.opening-scene p:last-child { margin-bottom: 0; }
+.opening-scene strong { color: #fff; }
+
+/* ── TLDR BOX ── */
+.tldr-box {
+  background: #F0FDF4; border: 1px solid #bbf7d0;
+  border-radius: 12px; padding: 24px 28px; margin-bottom: 32px;
+}
+.tldr-box .tldr-title {
+  display: flex; align-items: center; gap: 8px;
+  font-size: 14px; font-weight: 700; text-transform: uppercase;
+  letter-spacing: .5px; color: var(--color-primary); margin-bottom: 14px;
+}
+.tldr-box .tldr-title svg { flex-shrink: 0; }
+.tldr-box ul { list-style: none; margin: 0; padding: 0; }
+.tldr-box li {
+  padding: 6px 0 6px 24px; position: relative;
+  font-size: 15px; line-height: 1.6; color: var(--color-text);
+}
+.tldr-box li::before {
+  content: '\2713'; position: absolute; left: 0; top: 6px;
+  color: var(--color-primary); font-weight: 700;
+}
+
+/* ── KEY FINDINGS ── */
+.key-findings {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 16px; margin: 32px 0;
+}
+.key-finding-card {
+  background: var(--color-surface); border-radius: 12px;
+  padding: 24px; text-align: center;
+}
+.key-finding-card .kf-number {
+  font-size: 42px; font-weight: 900; color: var(--color-primary);
+  line-height: 1; margin-bottom: 8px;
+}
+.key-finding-card .kf-label {
+  font-size: 13px; font-weight: 600; color: var(--color-text-muted);
+  line-height: 1.3; text-transform: uppercase; letter-spacing: .3px;
+}
+
+/* ── EXPERT QUOTE ── */
+.expert-quote {
+  background: #F0FDF4; border-left: 4px solid var(--color-primary);
+  border-radius: 0 12px 12px 0; padding: 24px 28px;
+  margin: 32px 0;
+}
+.expert-quote p {
+  font-size: 17px; font-style: italic; line-height: 1.7;
+  color: var(--color-text); margin-bottom: 12px;
+}
+.expert-quote .eq-author {
+  font-size: 14px; font-weight: 600; color: var(--color-dark);
+}
+.expert-quote .eq-role {
+  font-size: 13px; color: var(--color-text-muted);
+}
+
+/* ── PATTERN BREAK ── */
+.pattern-break {
+  background: var(--color-dark); color: #fff;
+  padding: 40px 32px; border-radius: 12px; margin: 40px 0;
+  text-align: center;
+}
+.pattern-break p {
+  font-size: 22px; font-weight: 700; line-height: 1.4;
+  color: #fff; margin-bottom: 0;
+}
+.pattern-break .pb-sub {
+  font-size: 15px; color: rgba(255,255,255,.6);
+  margin-top: 8px; font-weight: 400;
+}
+
+/* ── INFO BOX ── */
+.info-box {
+  background: #fafffe; border-left: 4px solid var(--color-primary);
+  border-radius: 0 8px 8px 0; padding: 20px 24px;
+  margin: 24px 0;
+}
+.info-box p { margin-bottom: 8px; font-size: 15px; }
+.info-box p:last-child { margin-bottom: 0; }
+.info-box strong { color: var(--color-dark); }
+
+/* ── CHECKLIST ── */
+.checklist { margin: 20px 0; }
+.checklist-item {
+  display: flex; gap: 12px; padding: 12px 0;
+  border-bottom: 1px solid var(--color-border);
+  align-items: flex-start;
+}
+.checklist-item:last-child { border-bottom: none; }
+.checklist-item .ci-icon {
+  width: 24px; height: 24px; min-width: 24px;
+  border-radius: 50%; background: var(--color-primary-light);
+  display: flex; align-items: center; justify-content: center;
+  color: var(--color-primary); font-size: 12px; font-weight: 700;
+  margin-top: 2px;
+}
+.checklist-item p { margin-bottom: 0; font-size: 15px; }
+
+/* ── DECISION TREE ── */
+.decision-tree {
+  background: var(--color-surface); border-radius: 12px;
+  padding: 28px; margin: 32px 0;
+}
+.decision-tree h4 {
+  font-size: 16px; font-weight: 700; color: var(--color-dark);
+  margin-bottom: 20px; text-align: center;
+}
+.dt-flow { display: flex; flex-direction: column; gap: 0; align-items: center; }
+.dt-step {
+  background: var(--color-white); border: 2px solid var(--color-border);
+  border-radius: 10px; padding: 16px 20px; width: 100%;
+  max-width: 460px; text-align: center; position: relative;
+}
+.dt-step.dt-question {
+  border-color: var(--color-primary); background: #F0FDF4;
+}
+.dt-step .dt-label {
+  font-size: 11px; font-weight: 700; text-transform: uppercase;
+  letter-spacing: .5px; color: var(--color-primary); margin-bottom: 4px;
+}
+.dt-step p {
+  font-size: 14px; line-height: 1.5; margin-bottom: 0;
+  color: var(--color-text);
+}
+.dt-arrow {
+  width: 2px; height: 24px; background: var(--color-border);
+  position: relative;
+}
+.dt-arrow::after {
+  content: ''; position: absolute; bottom: -4px; left: -4px;
+  border-left: 5px solid transparent; border-right: 5px solid transparent;
+  border-top: 6px solid var(--color-border);
+}
+
+/* ── MICRO CTA ── */
+.micro-cta {
+  background: linear-gradient(135deg, #F0FDF4, #e6f9ee);
+  border: 1px solid #bbf7d0; border-radius: 12px;
+  padding: 24px 28px; margin: 32px 0;
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 20px; flex-wrap: wrap;
+}
+.micro-cta p {
+  font-size: 16px; font-weight: 600; color: var(--color-dark);
+  margin-bottom: 0; flex: 1; min-width: 200px;
+}
+.micro-cta .btn-cta {
+  display: inline-block; background: var(--color-btn);
+  color: white; padding: 12px 24px; border-radius: 8px;
+  font-size: 14px; font-weight: 600; text-decoration: none;
+  white-space: nowrap; transition: background .2s;
+}
+.micro-cta .btn-cta:hover { background: #148a3e; }
+
+/* ── PRODUCT CARDS ── */
+.product-cards {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 20px; margin: 32px 0;
+}
+.product-card {
+  border: 1px solid var(--color-border); border-radius: 12px;
+  padding: 24px; transition: border-color .2s;
+}
+.product-card:hover { border-color: var(--color-primary); }
+.product-card .pc-badge {
+  display: inline-block; background: var(--color-primary-light);
+  color: var(--color-primary); padding: 3px 10px; border-radius: 20px;
+  font-size: 11px; font-weight: 600; text-transform: uppercase;
+  letter-spacing: .5px; margin-bottom: 12px;
+}
+.product-card h4 {
+  font-size: 18px; font-weight: 700; color: var(--color-dark);
+  margin-bottom: 8px;
+}
+.product-card .pc-specs {
+  font-size: 14px; color: var(--color-text-muted);
+  margin-bottom: 16px; line-height: 1.6;
+}
+.product-card .pc-specs strong { color: var(--color-text); }
+.product-card .btn-product {
+  display: inline-block; background: var(--color-btn);
+  color: white; padding: 10px 20px; border-radius: 8px;
+  font-size: 13px; font-weight: 600; text-decoration: none;
+  transition: background .2s;
+}
+.product-card .btn-product:hover { background: #148a3e; }
+
+/* ── BUCKET BRIDGE ── */
+.bucket-bridge {
+  font-size: 19px; font-weight: 700; color: var(--color-dark);
+  margin: 28px 0 18px; padding: 0;
+  line-height: 1.3;
+}
+
+/* ── NARRATIVE RETURN ── */
+.narrative-return {
+  background: #1a1a1a; color: rgba(255,255,255,.9);
+  padding: 24px 28px; border-radius: 10px; margin: 28px 0;
+  font-size: 16px; line-height: 1.7; font-style: italic;
+  border-left: 4px solid var(--color-primary);
+}
+.narrative-return strong { color: #fff; }
+
+/* ── COMPARISON TABLE ── */
+.comparison-table {
+  width: 100%; border-collapse: collapse; margin: 24px 0;
+  font-size: 14px;
+}
+.comparison-table th {
+  background: var(--color-dark); color: #fff; padding: 12px 16px;
+  text-align: left; font-weight: 600; font-size: 13px;
+  text-transform: uppercase; letter-spacing: .3px;
+}
+.comparison-table td {
+  padding: 12px 16px; border-bottom: 1px solid var(--color-border);
+  line-height: 1.5;
+}
+.comparison-table tr:nth-child(even) td { background: #F9FAFB; }
+.comparison-table .highlight-cell {
+  background: #F0FDF4 !important; font-weight: 600; color: var(--color-primary);
+}
+
+/* ── FAQ ── */
+.faq-section h3 {
+  font-size: 18px; font-weight: 700; color: var(--color-dark);
+  margin: 28px 0 10px; padding-bottom: 8px;
+  border-bottom: 1px solid var(--color-border);
+}
+.faq-section h3:first-of-type { margin-top: 16px; }
+
+/* ── HIERARCHY STACK (new v5) ── */
+.hierarchy-stack {
+  margin: 28px 0;
+}
+.hierarchy-level {
+  display: flex; align-items: center; gap: 16px;
+  padding: 16px 20px; border-radius: 10px; margin-bottom: 8px;
+}
+.hierarchy-level:last-child { margin-bottom: 0; }
+.hierarchy-level .hl-number {
+  width: 40px; height: 40px; min-width: 40px;
+  border-radius: 50%; display: flex;
+  align-items: center; justify-content: center;
+  font-size: 18px; font-weight: 800; color: #fff;
+}
+.hierarchy-level .hl-text { flex: 1; }
+.hierarchy-level .hl-text strong {
+  display: block; font-size: 15px; font-weight: 700;
+  margin-bottom: 2px;
+}
+.hierarchy-level .hl-text span {
+  font-size: 13px; color: var(--color-text-muted); line-height: 1.4;
+}
+.hierarchy-level.hl-best {
+  background: #F0FDF4; border: 2px solid var(--color-primary);
+}
+.hierarchy-level.hl-best .hl-number { background: var(--color-primary); }
+.hierarchy-level.hl-mid {
+  background: #FFFBEB; border: 2px solid #F59E0B;
+}
+.hierarchy-level.hl-mid .hl-number { background: #F59E0B; }
+.hierarchy-level.hl-last {
+  background: #FEF2F2; border: 2px solid #EF4444;
+}
+.hierarchy-level.hl-last .hl-number { background: #EF4444; }
+
+/* ── AUTHOR BOX ── */
+.author-box {
+  background: var(--color-surface); border-radius: 12px;
+  padding: 28px; display: flex; gap: 20px;
+  margin: 40px 0; align-items: center;
+}
+.author-box .ab-avatar {
+  width: 72px; height: 72px; min-width: 72px;
+  border-radius: 50%; background: var(--color-primary);
+  display: flex; align-items: center; justify-content: center;
+  color: white; font-size: 28px; font-weight: 700;
+}
+.author-box .ab-info h4 {
+  font-size: 18px; font-weight: 700; color: var(--color-dark);
+  margin-bottom: 4px;
+}
+.author-box .ab-info p {
+  font-size: 14px; color: var(--color-text-muted);
+  line-height: 1.5; margin-bottom: 0;
+}
+
+/* ── FINAL CTA (inline) ── */
+.final-cta-inline {
+  background: var(--color-dark); padding: 48px 32px;
+  border-radius: 12px; text-align: center; margin: 40px 0;
+}
+.final-cta-inline h3 {
+  font-size: 26px; font-weight: 800; color: #fff;
+  margin-bottom: 12px; line-height: 1.2;
+}
+.final-cta-inline p {
+  font-size: 16px; color: rgba(255,255,255,.7);
+  max-width: 520px; margin: 0 auto 24px; line-height: 1.6;
+}
+.final-cta-inline .cta-buttons {
+  display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;
+}
+.final-cta-inline .btn-wa {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: var(--color-whatsapp); color: white;
+  padding: 14px 28px; border-radius: 10px;
+  font-size: 15px; font-weight: 700; text-decoration: none;
+  transition: transform .2s, box-shadow .2s;
+}
+.final-cta-inline .btn-wa:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(37,211,102,.3); }
+.final-cta-inline .btn-tel {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: transparent; border: 2px solid rgba(255,255,255,.3);
+  color: white; padding: 12px 28px; border-radius: 10px;
+  font-size: 15px; font-weight: 600; text-decoration: none;
+  transition: border-color .2s;
+}
+.final-cta-inline .btn-tel:hover { border-color: white; }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 768px) {
+  .key-findings { grid-template-columns: 1fr; }
+  .product-cards { grid-template-columns: 1fr; }
+  .micro-cta { flex-direction: column; text-align: center; }
+  .author-box { flex-direction: column; text-align: center; }
+  .opening-scene { padding: 28px 20px; }
+  .opening-scene p { font-size: 16px; }
+  .pattern-break p { font-size: 18px; }
+  .final-cta-inline { padding: 36px 20px; }
+  .final-cta-inline h3 { font-size: 22px; }
+}
+@media (max-width: 480px) {
+  .hierarchy-level { flex-direction: column; text-align: center; gap: 8px; }
+}
+</style>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     NR-35 E TRABALHO EM ALTURA: GUIA PRÁTICO PARA QUEM OPERA PLATAFORMA
+     v5. Conteúdo do artigo (sem template)
+     Data: 2026-04-09
+     ═══════════════════════════════════════════════════════════════ -->
+
+<article>
+
+<!-- OPENING SCENE -->
+<div class="opening-scene">
+  <p>Terça-feira, 7h20. O encarregado Valdir chegou ao canteiro com o café na mão e a APR em branco. A plataforma articulada já estava posicionada. O eletricista subiu sem cinto. "Só vou trocar uma luminária, coisa de cinco minutos."</p>
+  <p>Foram três minutos até a queda. Dois metros e quarenta centímetros de altura. Fratura exposta no fêmur, seis meses afastado, processo trabalhista aberto antes do laudo do INSS.</p>
+  <p><strong>A NR-35 existia para evitar isso.</strong> Estava ali, publicada, acessível. Ninguém leu os itens que importavam.</p>
+</div>
+
+<!-- TLDR BOX -->
+<div class="tldr-box">
+  <div class="tldr-title">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1D9648" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+    Resumo executivo
+  </div>
+  <ul>
+    <li>NR-35 vale para qualquer atividade acima de 2 metros com risco de queda, sem exceção por porte da empresa</li>
+    <li>A hierarquia de proteção obriga priorizar plataforma elevatória (MPC) antes de recorrer a EPI</li>
+    <li>Todo trabalho em altura exige Análise de Risco assinada e Permissão de Trabalho emitida antes do início</li>
+    <li>Inspeção pré-operacional da plataforma é obrigatória a cada turno, com itens específicos da NR-18 Anexo IV</li>
+    <li>O trabalhador pode e deve recusar atividade se identificar risco grave, com respaldo legal da OIT</li>
+  </ul>
+</div>
+
+<!-- KEY FINDINGS -->
+<div class="key-findings">
+  <div class="key-finding-card">
+    <div class="kf-number">40%</div>
+    <div class="kf-label">das mortes na construção são por queda de altura</div>
+  </div>
+  <div class="key-finding-card">
+    <div class="kf-number">2m</div>
+    <div class="kf-label">é o limite que ativa todas as exigências da NR-35</div>
+  </div>
+  <div class="key-finding-card">
+    <div class="kf-number">8h</div>
+    <div class="kf-label">mínimas de treinamento obrigatório para trabalho em altura</div>
+  </div>
+</div>
+
+
+<!-- ══════════════════════════════════════════ -->
+<!-- H2: O QUE A NR-35 EXIGE NA PRÁTICA -->
+<!-- ══════════════════════════════════════════ -->
+
+<h2 id="nr35-exigencias-praticas">O que a NR-35 exige na prática: itens que geram multa quando ignorados</h2>
+
+<p>Oito obrigações recaem sobre o empregador antes de qualquer trabalhador subir a 2,01 metros do chão. O item 35.2 da norma lista todas, mas três delas concentram a maioria das autuações: análise de risco documentada, treinamento com conteúdo programático completo e supervisão contínua da atividade.</p>
+
+<p>O treinamento, regulado pelo item 35.3.2, exige no mínimo 8 horas e precisa cobrir sete tópicos obrigatórios. Não basta um DDS de 15 minutos. A ementa inclui desde normas aplicáveis até condutas de emergência, passando por análise de risco, sistemas de proteção coletiva e seleção de EPIs.</p>
+
+<div class="info-box">
+  <p><strong>Item 35.3.2, conteúdo programático obrigatório:</strong></p>
+  <p>a) Normas e regulamentos aplicáveis ao trabalho em altura</p>
+  <p>b) Análise de risco e condições impeditivas</p>
+  <p>c) Riscos potenciais inerentes e medidas de prevenção e controle</p>
+  <p>d) Sistemas, equipamentos e procedimentos de proteção coletiva</p>
+  <p>e) EPIs: seleção, inspeção, conservação e limitação de uso</p>
+  <p>f) Acidentes típicos em trabalho em altura</p>
+  <p>g) Condutas em emergência, noções de resgate e primeiros socorros</p>
+</div>
+
+<p>O trabalhador também tem obrigações. Cumprir as disposições legais, submeter-se aos exames médicos (ASO com aptidão para altura), colaborar na aplicação das normas e usar os EPIs fornecidos. Descumprir qualquer uma dessas obrigações pode configurar falta grave.</p>
+
+<p class="bucket-bridge">Mas antes do EPI entrar na conversa, a norma exige algo que muita obra ignora.</p>
+
+
+<!-- ══════════════════════════════════════════ -->
+<!-- H2: HIERARQUIA DE PROTEÇÃO -->
+<!-- ══════════════════════════════════════════ -->
+
+<h2 id="hierarquia-proteção">Hierarquia de proteção: por que plataforma elevatória vem antes do cinto</h2>
+
+<p>Eliminar o trabalho em altura é a primeira opção. Quando isso não é possível, a NR-35 estabelece uma ordem que não é sugestão. É obrigação técnica e legal.</p>
+
+<div class="hierarchy-stack">
+  <div class="hierarchy-level hl-best">
+    <div class="hl-number">1</div>
+    <div class="hl-text">
+      <strong>Eliminar o trabalho em altura</strong>
+      <span>Executar a tarefa no nível do solo sempre que viável. Exemplo: pré-montar tubulações no chão e içar o conjunto pronto.</span>
+    </div>
+  </div>
+  <div class="hierarchy-level hl-mid">
+    <div class="hl-number">2</div>
+    <div class="hl-text">
+      <strong>Medida de Proteção Coletiva (MPC)</strong>
+      <span>Guarda-corpo, redes de proteção, plataformas elevatórias com cesta. Protegem todos os trabalhadores simultaneamente.</span>
+    </div>
+  </div>
+  <div class="hierarchy-level hl-last">
+    <div class="hl-number">3</div>
+    <div class="hl-text">
+      <strong>EPI como último recurso</strong>
+      <span>Cinto paraquedista + talabarte + capacete com jugular. Só quando MPC não for tecnicamente viável.</span>
+    </div>
+  </div>
+</div>
+
+<p>Uma <a href="/aluguel/plataforma-elevatoria/">plataforma elevatória</a> se encaixa no nível 2. Ela é Medida de Proteção Coletiva. O guarda-corpo da cesta impede a queda antes que o cinto precise agir. Isso muda o enquadramento legal da atividade inteira.</p>
+
+<p>Na prática, significa que optar por andaime com EPI quando a plataforma é viável inverte a hierarquia. Em caso de acidente, o fiscal do MTE vai perguntar: "por que não usaram MPC?" Se a resposta for "porque o andaime era mais barato", o auto de infração vem com agravante. Para entender os <a href="/blog/andaime-vs-plataforma-custo-real/">números reais dessa comparação</a>, vale consultar a análise de custo por metro.</p>
+
+<div class="expert-quote">
+  <p>"O engenheiro que escolhe andaime quando a plataforma resolve está assumindo um risco jurídico que ele nem imagina. A hierarquia da NR-35 não é recomendação. É sequência obrigatória."</p>
+  <div class="eq-author">Márcio</div>
+  <div class="eq-role">Diretor Comercial, MoveMáquinas</div>
+</div>
+
+<p>Mesmo dentro da plataforma, o EPI continua obrigatório. Cinto tipo paraquedista com talabarte conectado ao ponto de ancoragem indicado pelo fabricante. Capacete com jugular. Isso não contradiz a hierarquia: a MPC reduz a probabilidade da queda, o EPI reduz a consequência caso ela aconteça.</p>
+
+<p class="bucket-bridge">A plataforma resolve a hierarquia. Agora, como garantir que ela esteja pronta para uso?</p>
+
+
+<!-- ══════════════════════════════════════════ -->
+<!-- H2: CHECKLIST DE INSPEÇÃO -->
+<!-- ══════════════════════════════════════════ -->
+
+<h2 id="checklist-inspeção">Inspeção pré-operacional para PEMT: o checklist que evita interdição</h2>
+
+<p>A cada turno, antes de ligar a plataforma, o operador precisa verificar 11 itens. Não é capricho. A NR-18 Anexo IV exige inspeção visual e teste funcional no início de cada jornada. Pular esse passo é a infração mais comum em auditorias de PEMT.</p>
+
+<div class="checklist">
+  <div class="checklist-item">
+    <div class="ci-icon">1</div>
+    <p><strong>Controles de operação</strong>. acionar todos os comandos da cesta e da base. Verificar resposta em subida, descida, rotação e translação.</p>
+  </div>
+  <div class="checklist-item">
+    <div class="ci-icon">2</div>
+    <p><strong>Controles de emergência</strong>. testar o botão de parada de emergência e o sistema de descida manual. Se não funcionar, a máquina não opera.</p>
+  </div>
+  <div class="checklist-item">
+    <div class="ci-icon">3</div>
+    <p><strong>Dispositivos de segurança</strong>. sensores de inclinação, limitadores de carga, alarmes sonoros de movimentação. Todos precisam responder.</p>
+  </div>
+  <div class="checklist-item">
+    <div class="ci-icon">4</div>
+    <p><strong>Sistema hidráulico</strong>. inspecionar mangueiras, conexões e cilindros. Qualquer vazamento visível impede o uso.</p>
+  </div>
+  <div class="checklist-item">
+    <div class="ci-icon">5</div>
+    <p><strong>Sistema elétrico e combustível</strong>. nível de bateria ou combustível, estado dos cabos, ausência de faíscas ou odor.</p>
+  </div>
+  <div class="checklist-item">
+    <div class="ci-icon">6</div>
+    <p><strong>Pneus e rodas</strong>. calibragem, desgaste, fixação dos parafusos. Pneu murcho compromete estabilidade.</p>
+  </div>
+  <div class="checklist-item">
+    <div class="ci-icon">7</div>
+    <p><strong>Estabilizadores</strong>. extensão completa, travamento mecânico, apoio em solo firme. Nunca sobre terra fofa sem placa de apoio.</p>
+  </div>
+  <div class="checklist-item">
+    <div class="ci-icon">8</div>
+    <p><strong>Estrutura da cesta</strong>. guarda-corpo íntegro, portinhola com trava, piso antiderrapante sem deformações.</p>
+  </div>
+  <div class="checklist-item">
+    <div class="ci-icon">9</div>
+    <p><strong>Ponto de ancoragem</strong>. identificar o ponto indicado pelo fabricante para conexão do SPIQ (talabarte do cinto). Nunca improvisar ancoragem.</p>
+  </div>
+  <div class="checklist-item">
+    <div class="ci-icon">10</div>
+    <p><strong>Plaqueta de identificação</strong>. número de série, capacidade de carga, data da última manutenção preventiva. Se a plaqueta estiver ilegível, documentar e comunicar.</p>
+  </div>
+  <div class="checklist-item">
+    <div class="ci-icon">11</div>
+    <p><strong>Área de operação</strong>. verificar rede elétrica aérea, desnível do solo, trânsito de pedestres e veículos. Isolar o perímetro com cones ou fita.</p>
+  </div>
+</div>
+
+<p>Locadoras como a MoveMáquinas entregam o equipamento com inspeção periódica em dia e fornecem modelo de checklist junto com cada plataforma locada. Isso não elimina a responsabilidade do operador pela inspeção diária, mas garante que a base mecânica e estrutural está em conformidade.</p>
+
+<div class="narrative-return">
+  <strong>Valdir, o encarregado da abertura, não tinha checklist naquele dia.</strong> Se tivesse, o item 9 teria revelado que o ponto de ancoragem da cesta estava com a trava emperrada. O eletricista não teria subido sem conexão do talabarte. Cinco minutos de checklist teriam evitado seis meses de afastamento.
+</div>
+
+<p class="bucket-bridge">O checklist cuida da máquina. Mas antes de operar, outro documento precisa existir.</p>
+
+
+<!-- ══════════════════════════════════════════ -->
+<!-- H2: APR E PT -->
+<!-- ══════════════════════════════════════════ -->
+
+<h2 id="apr-permissão-trabalho">APR e Permissão de Trabalho: o fluxo que libera a operação</h2>
+
+<p>Nenhum trabalho em altura começa legalmente sem dois documentos: a Análise Preliminar de Risco (APR) e a Permissão de Trabalho (PT). O item 35.4.5 da NR-35 é direto: toda atividade acima de 2 metros deve ser precedida por análise de riscos. Sem modelo oficial obrigatório, mas com assinatura de profissional habilitado.</p>
+
+<p>APR e PT são documentos diferentes com funções complementares. Confundir os dois é o segundo erro mais frequente em canteiros.</p>
+
+<div class="decision-tree">
+  <h4>Fluxo APR + PT para trabalho em altura</h4>
+  <div class="dt-flow">
+    <div class="dt-step dt-question">
+      <div class="dt-label">Etapa 1</div>
+      <p><strong>Identificar a atividade</strong>. o que será feito, onde, a que altura, com qual equipamento</p>
+    </div>
+    <div class="dt-arrow"></div>
+    <div class="dt-step">
+      <div class="dt-label">Etapa 2</div>
+      <p><strong>Elaborar a APR</strong>. listar perigos, avaliar riscos (probabilidade x consequência), definir medidas de controle</p>
+    </div>
+    <div class="dt-arrow"></div>
+    <div class="dt-step">
+      <div class="dt-label">Etapa 3</div>
+      <p><strong>Assinar a APR</strong>. profissional habilitado (engenheiro ou técnico de segurança) valida o documento</p>
+    </div>
+    <div class="dt-arrow"></div>
+    <div class="dt-step">
+      <div class="dt-label">Etapa 4</div>
+      <p><strong>Emitir a PT</strong>. autorização formal com validade definida, referenciando a APR, o local, a equipe e as condições impeditivas</p>
+    </div>
+    <div class="dt-arrow"></div>
+    <div class="dt-step dt-question">
+      <div class="dt-label">Etapa 5</div>
+      <p><strong>Executar e encerrar</strong>. concluída a atividade ou vencida a validade, a PT é fechada. Nova atividade = nova PT</p>
+    </div>
+  </div>
+</div>
+
+<p>A APR precisa conter, no mínimo: descrição da atividade, riscos potenciais identificados, causas e consequências possíveis, medidas de prevenção adotadas e responsáveis pela execução. Parece burocrático? Para quem nunca enfrentou um fiscal do MTE, talvez. Para quem já viu uma <a href="/blog/mte-interdita-falta-nr11/">interdição acontecer</a>, parece pouco.</p>
+
+<p>A PT tem validade. Pode ser por turno, por dia ou por atividade específica. Mudou a condição do ambiente (chuva, vento forte, nova rede elétrica energizada), a PT anterior perde validade. O responsável técnico precisa reavaliar.</p>
+
+<div class="info-box">
+  <p><strong>Condições impeditivas que invalidam a PT:</strong></p>
+  <p>Velocidade de vento acima do limite do fabricante da plataforma. Descarga elétrica atmosférica. Visibilidade reduzida. Qualquer situação que altere os riscos mapeados na APR original.</p>
+</div>
+
+<p class="bucket-bridge">APR assinada, PT emitida, checklist feito. E se, mesmo assim, algo não parecer certo?</p>
+
+
+<!-- ══════════════════════════════════════════ -->
+<!-- H2: DIREITO DE RECUSA -->
+<!-- ══════════════════════════════════════════ -->
+
+<h2 id="direito-recusa">Direito de recusa: o que o trabalhador pode (e deve) fazer quando o risco é real</h2>
+
+<p>Parar a máquina e descer. É isso que o trabalhador tem o direito de fazer quando identifica risco grave e iminente. Sem medo de demissão, sem represália, sem desconto.</p>
+
+<p>O fundamento está no artigo 13 da Convenção 155 da OIT, internalizada pelo Decreto 1.254/1995. A NR-35 incorporou esse princípio e detalhou o procedimento: o trabalhador interrompe a atividade, comunica imediatamente ao superior hierárquico, se afasta da zona de risco e aguarda a solução do empregador. O vínculo empregatício permanece intacto.</p>
+
+<div class="pattern-break">
+  <p>O trabalhador que para a operação por risco grave não está desobedecendo.</p>
+  <p class="pb-sub">Está cumprindo a NR-35.</p>
+</div>
+
+<p>Na prática, o direito de recusa funciona como uma segunda camada de segurança humana. O checklist pega defeitos mecânicos. A APR mapeia riscos previsíveis. Mas o operador dentro da cesta vê coisas que nenhum documento antecipa: a vibração estranha no braço articulado, o cabo que ninguém percebeu a 12 metros de distância, o vento que mudou depois da emissão da PT.</p>
+
+<p>Empresas que treinam seus trabalhadores para exercer o direito de recusa reduzem acidentes. Empresas que punem quem exerce aumentam a subnotificação. Os <a href="/blog/mito-andaime-seguro/">dados de acidentes com andaime</a> mostram o que acontece quando o trabalhador não se sente seguro para falar.</p>
+
+<p class="bucket-bridge">A norma protege o trabalhador que para. Mas quem garante que o equipamento estava certo desde o início?</p>
+
+
+<!-- ══════════════════════════════════════════ -->
+<!-- H2: LOCAÇÃO COM MANUTENÇÃO -->
+<!-- ══════════════════════════════════════════ -->
+
+<h2 id="locacao-compliance">Como a locação com manutenção resolve o compliance da NR-35</h2>
+
+<p>Plataforma elevatória exige manutenção por profissional capacitado na marca e modelo específicos. A NR-18 Anexo IV é explícita: não pode ser qualquer mecânico. Precisa ser alguém treinado pelo fabricante ou representante autorizado.</p>
+
+<p>Para quem tem frota própria, isso significa manter técnicos certificados, peças em estoque, registro documental de cada intervenção e laudo de inspeção periódica atualizado. Para a maioria das construtoras e indústrias, esse custo fixo não se justifica.</p>
+
+<table class="comparison-table">
+  <thead>
+    <tr>
+      <th>Responsabilidade</th>
+      <th>Frota própria</th>
+      <th>Locação com manutenção</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Manutenção preventiva periódica</td>
+      <td>Equipe interna certificada</td>
+      <td class="highlight-cell">Locadora assume</td>
+    </tr>
+    <tr>
+      <td>Inspeção periódica documentada</td>
+      <td>Contrato com terceiro ou equipe própria</td>
+      <td class="highlight-cell">Entregue com laudo em dia</td>
+    </tr>
+    <tr>
+      <td>Peças e componentes originais</td>
+      <td>Estoque próprio</td>
+      <td class="highlight-cell">Locadora gerencia</td>
+    </tr>
+    <tr>
+      <td>Suporte técnico emergencial</td>
+      <td>Dependente da disponibilidade interna</td>
+      <td class="highlight-cell">24h com equipe mobile</td>
+    </tr>
+    <tr>
+      <td>Inspeção pré-operacional diária</td>
+      <td>Operador do cliente</td>
+      <td>Operador do cliente</td>
+    </tr>
+    <tr>
+      <td>APR e Permissão de Trabalho</td>
+      <td>Equipe de segurança do cliente</td>
+      <td>Equipe de segurança do cliente</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>A tabela deixa claro: a locação transfere a responsabilidade técnica sobre o estado do equipamento para quem tem estrutura para garantir. A inspeção diária e os documentos de trabalho em altura continuam com o cliente. Ninguém terceiriza a segurança do trabalhador. Terceiriza a manutenção da máquina.</p>
+
+<p>A MoveMáquinas opera com <a href="/aluguel/plataforma-elevatoria/tesoura/">plataformas tesoura</a> e <a href="/aluguel/plataforma-elevatoria/articulada/">articuladas</a> que saem da base com inspeção periódica documentada, laudo técnico atualizado e checklist de entrega preenchido. Se o equipamento apresentar qualquer anomalia em campo, o suporte técnico atende em até 4 horas na região de Goiânia.</p>
+
+<div class="micro-cta">
+  <p>Precisa de plataforma com manutenção em dia e suporte técnico no campo?</p>
+  <a href="https://wa.me/5562982637300?text=Ol%C3%A1%2C%20vim%20do%20artigo%20NR-35%20e%20quero%20saber%20sobre%20loca%C3%A7%C3%A3o%20de%20plataforma" class="btn-cta">Falar com a MoveMáquinas</a>
+</div>
+
+<p>Para empresas menores que ainda não sabem se a norma se aplica ao seu caso, vale conferir o <a href="/blog/nr11-pme-obrigacao/">guia sobre obrigações de PME</a>. E para quem precisa <a href="/blog/como-apresentar-plataforma-diretor/">apresentar a proposta de locação para o diretor</a>, há um roteiro pronto com argumentos financeiros e de compliance.</p>
+
+
+<!-- ══════════════════════════════════════════ -->
+<!-- H2: FAQ -->
+<!-- ══════════════════════════════════════════ -->
+
+<h2 id="perguntas-frequentes">Perguntas frequentes sobre NR-35 e trabalho em altura</h2>
+
+<div class="faq-section">
+
+<h3>A partir de qual altura a NR-35 se aplica?</h3>
+<p>Acima de 2,00 metros do nível inferior, desde que haja risco de queda. Não importa se é obra de grande porte, manutenção industrial ou troca de lâmpada em galpão. Dois metros e um centímetro já ativam todas as exigências da norma.</p>
+
+<h3>Plataforma elevatória dispensa o uso de cinto?</h3>
+<p>Não. A plataforma é Medida de Proteção Coletiva, mas o cinto tipo paraquedista com talabarte conectado ao ponto de ancoragem da cesta continua obrigatório. A MPC e o EPI trabalham em camadas complementares, não substitutivas. Capacete com jugular também é exigido.</p>
+
+<h3>Qual a diferença entre APR e Permissão de Trabalho?</h3>
+<p>A APR identifica perigos, avalia riscos e define medidas de controle. A Permissão de Trabalho é a autorização formal, com validade definida, que libera a execução da atividade. Uma não existe sem a outra. A APR alimenta a PT, e a PT só é válida se referenciar uma APR assinada por profissional habilitado.</p>
+
+<h3>Quem pode assinar a Análise de Risco?</h3>
+<p>Profissional habilitado. Na maioria dos canteiros, o engenheiro de segurança do trabalho ou o técnico de segurança com supervisão do engenheiro responsável. A NR-35 não define um modelo de formulário obrigatório, mas exige que o documento seja assinado e que contenha a avaliação dos riscos potenciais.</p>
+
+<h3>O treinamento da NR-35 tem validade?</h3>
+<p>Sim. A reciclagem deve acontecer a cada dois anos, com carga horária mínima de 8 horas. Também é necessário novo treinamento quando há mudança nos procedimentos, retorno de afastamento superior a 90 dias ou quando o trabalhador muda de função. Para quem também opera a plataforma, o <a href="/curso-operador-empilhadeira/">treinamento NR-11</a> da MoveMáquinas é complementar.</p>
+
+<h3>Empresa pequena também precisa cumprir a NR-35?</h3>
+<p>Sim, sem exceção. A NR-35 vale para qualquer empregador que tenha trabalhadores executando atividades acima de 2 metros. Não existe isenção por porte, faturamento ou número de funcionários. A responsabilidade criminal em caso de acidente recai sobre quem autorizou a atividade sem as medidas de proteção. Para entender as obrigações específicas de PME, há um <a href="/blog/nr11-pme-obrigacao/">guia dedicado</a>.</p>
+
+<h3>Qual a multa por descumprimento da NR-35?</h3>
+<p>O valor varia conforme o porte da empresa e a gravidade da infração, podendo ultrapassar R$ 6.000 por item autuado. Em caso de acidente com lesão ou morte, a empresa responde civil e criminalmente. Para detalhes sobre valores e consequências, consulte o artigo sobre <a href="/blog/multa-nr11-operador-sem-habilitacao/">multas por descumprimento</a> de normas regulamentadoras.</p>
+
+</div>
+
+
+<!-- ══════════════════════════════════════════ -->
+<!-- FECHAMENTO NARRATIVO -->
+<!-- ══════════════════════════════════════════ -->
+
+<div class="narrative-return">
+  <strong>Valdir voltou ao canteiro oito meses depois.</strong> A construtora implantou o checklist pré-operacional, contratou a locação de plataformas com manutenção em dia e treinou 14 operadores. O eletricista recuperou os movimentos, mas não voltou a trabalhar em altura. Na parede do almoxarifado, alguém colou a APR modelo ao lado do quadro de avisos. Ninguém mais sobe sem preencher.
+</div>
+
+
+<!-- PRODUCT CARDS -->
+<div class="product-cards">
+  <div class="product-card">
+    <span class="pc-badge">Até 14m</span>
+    <h4>Plataforma Tesoura</h4>
+    <div class="pc-specs">
+      Elevação vertical estável para trabalhos internos e externos em superfícies planas.<br>
+      <strong>Ideal para:</strong> manutenção industrial, pintura, instalações elétricas em galpões.
+    </div>
+    <a href="/aluguel/plataforma-elevatoria/tesoura/" class="btn-product">Ver modelos disponíveis</a>
+  </div>
+  <div class="product-card">
+    <span class="pc-badge">Até 40m</span>
+    <h4>Plataforma Articulada</h4>
+    <div class="pc-specs">
+      Alcance horizontal e vertical com articulação para contornar obstáculos.<br>
+      <strong>Ideal para:</strong> fachadas, estruturas metálicas, trabalhos com difícil acesso.
+    </div>
+    <a href="/aluguel/plataforma-elevatoria/articulada/" class="btn-product">Ver modelos disponíveis</a>
+  </div>
+</div>
+
+
+<!-- FINAL CTA -->
+<div class="final-cta-inline">
+  <h3>Plataforma com NR-35 em dia. Suporte técnico 24h.</h3>
+  <p>A MoveMáquinas entrega plataforma elevatória com inspeção periódica documentada, laudo técnico e checklist de operação. Goiânia e região.</p>
+  <div class="cta-buttons">
+    <a href="https://wa.me/5562982637300?text=Ol%C3%A1%2C%20vim%20do%20artigo%20NR-35%20e%20quero%20cotar%20plataforma" class="btn-wa">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      Cotar plataforma
+    </a>
+    <a href="tel:+5562982637300" class="btn-tel">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      (62) 98263-7300
+    </a>
+  </div>
+</div>
+
+
+<!-- AUTHOR BOX -->
+<div class="author-box">
+  <div class="ab-avatar">M</div>
+  <div class="ab-info">
+    <h4>Márcio</h4>
+    <p>Fundador e Diretor Comercial da MoveMáquinas. Especialista em plataformas elevatórias e segurança do trabalho em altura. Mais de 2.000 profissionais treinados em NR-11 na região de Goiânia.</p>
+  </div>
+</div>
+
+</article>

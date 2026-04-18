@@ -1,0 +1,543 @@
+{
+  "_meta": {
+    "fonte": "knowledge_base_claude (treinado com dados IBGE, Wikipedia, fontes públicas até 2025)",
+    "nota": "WebSearch e WebFetch foram bloqueados. Dados compilados do conhecimento treinado. Recomenda-se validação cruzada com IBGE Cidades e Google Maps para distâncias.",
+    "gerado_em": "2026-03-24",
+    "total_cidades": 15
+  },
+  "goiania-go": {
+    "display_name": "Goiânia",
+    "state": "GO",
+    "distancia_km": 0,
+    "populacao": "1.540.000",
+    "rodovia_principal": "BR-153, BR-060",
+    "rodovias_secundarias": ["BR-040", "GO-060", "GO-020", "Anel Viário Metropolitano"],
+    "economia_dominante": "serviços, comércio atacadista, logística, indústria alimentícia, construção civil",
+    "polos_industriais": [
+      "DAIAG — Distrito Agroindustrial de Goiânia",
+      "Polo Empresarial Goiás (Setor Jardim Guanabara)",
+      "Polo da Moda (Setor Norte Ferroviário / Rua 44)",
+      "Ceasa Goiás"
+    ],
+    "bairros_comerciais": [
+      "Setor Norte Ferroviário",
+      "Setor Campinas",
+      "Setor Bueno",
+      "Jardim Guanabara",
+      "Setor dos Funcionários",
+      "Setor Marista",
+      "Vila Canaã"
+    ],
+    "setores_locais": [
+      "atacadistas e distribuidores (Rua 44, Polo da Moda)",
+      "centros de distribuição logísticos (BR-153)",
+      "construção civil e incorporadoras",
+      "indústria alimentícia",
+      "comércio varejista de grande porte",
+      "Ceasa — hortifruti e distribuição"
+    ],
+    "entity_bridges": {
+      "empilhadeira_combustao": "galpões logísticos e CDs ao longo da BR-153 e Anel Viário",
+      "plataforma_articulada": "fachadas ACM e manutenção predial no Setor Bueno e Setor Marista",
+      "plataforma_tesoura": "manutenção de galpões no DAIAG e Polo Empresarial Goiás",
+      "transpaleteira": "atacadistas do Polo da Moda (Rua 44) e Ceasa Goiás",
+      "curso_nr11": "operadores de empilhadeira em CDs, atacadistas e indústrias alimentícias"
+    },
+    "wikipedia": "https://pt.wikipedia.org/wiki/Goiânia"
+  },
+  "aparecida-de-goiania-go": {
+    "display_name": "Aparecida de Goiânia",
+    "state": "GO",
+    "distancia_km": 18,
+    "populacao": "600.000",
+    "rodovia_principal": "BR-153, GO-040",
+    "rodovias_secundarias": ["BR-060", "Av. Rio Verde"],
+    "economia_dominante": "indústria, logística, comércio atacadista, polo farmacêutico",
+    "polos_industriais": [
+      "Distrito Agroindustrial de Aparecida de Goiânia (DAIAG)",
+      "Polo Empresarial Aparecida",
+      "Cidade Empresarial",
+      "Polo Farmacêutico (Teuto/Neoquímica, Cimed)"
+    ],
+    "bairros_comerciais": [
+      "Jardim Tiradentes",
+      "Vila Brasília",
+      "Cidade Empresarial",
+      "Setor dos Afonsos",
+      "Polo Empresarial (GO-040)"
+    ],
+    "setores_locais": [
+      "indústria farmacêutica (Teuto/Neoquímica, Cimed)",
+      "centros de distribuição logísticos (BR-153 Sul)",
+      "atacadistas e distribuidores",
+      "indústria de alimentos e bebidas",
+      "construção civil (crescimento imobiliário acelerado)",
+      "indústria de embalagens e plásticos"
+    ],
+    "entity_bridges": {
+      "empilhadeira_combustao": "CDs logísticos da BR-153 Sul e galpões da Cidade Empresarial",
+      "plataforma_articulada": "manutenção industrial no Polo Farmacêutico e construções verticais",
+      "plataforma_tesoura": "galpões e armazéns do DAIAG e Polo Empresarial",
+      "transpaleteira": "linhas de produção farmacêutica (Teuto, Cimed) e CDs atacadistas",
+      "curso_nr11": "operadores nas indústrias farmacêuticas e centros logísticos"
+    },
+    "wikipedia": "https://pt.wikipedia.org/wiki/Aparecida_de_Goiânia"
+  },
+  "anapolis-go": {
+    "display_name": "Anápolis",
+    "state": "GO",
+    "distancia_km": 55,
+    "populacao": "400.000",
+    "rodovia_principal": "BR-153, BR-060",
+    "rodovias_secundarias": ["BR-414", "GO-330", "GO-222"],
+    "economia_dominante": "indústria farmacêutica, logística, agroindústria, base aérea, plataforma multimodal",
+    "polos_industriais": [
+      "DAIA — Distrito Agroindustrial de Anápolis",
+      "Polo Farmoquímico (maior polo farmacêutico do Centro-Oeste)",
+      "Porto Seco / Estação Aduaneira Interior (EADI)",
+      "Plataforma Logística Multimodal de Goiás",
+      "Base Aérea de Anápolis (BAAN)"
+    ],
+    "bairros_comerciais": [
+      "Jundiaí",
+      "Centro",
+      "Setor Industrial Munir Calixto",
+      "Vila Jaiara",
+      "Jardim das Américas"
+    ],
+    "setores_locais": [
+      "indústria farmacêutica (Laboratório Teuto, Neoquímica, Brainfarma, Greenpharma, Cimed)",
+      "indústria automotiva (Hyundai/Caoa — montadora de veículos)",
+      "agroindústria e processamento de grãos",
+      "logística multimodal e armazenagem",
+      "indústria de alimentos e bebidas",
+      "comércio atacadista regional"
+    ],
+    "entity_bridges": {
+      "empilhadeira_combustao": "galpões do DAIA, Porto Seco e Plataforma Multimodal de Goiás",
+      "plataforma_articulada": "manutenção de fachadas industriais no DAIA e linha de montagem Caoa/Hyundai",
+      "plataforma_tesoura": "manutenção de galpões do Polo Farmoquímico e armazéns do Porto Seco",
+      "transpaleteira": "linhas de produção e picking farmacêutico no DAIA (Brainfarma, Teuto)",
+      "curso_nr11": "operadores das indústrias farmacêuticas, automotiva e logística do DAIA"
+    },
+    "wikipedia": "https://pt.wikipedia.org/wiki/Anápolis"
+  },
+  "senador-canedo-go": {
+    "display_name": "Senador Canedo",
+    "state": "GO",
+    "distancia_km": 20,
+    "populacao": "130.000",
+    "rodovia_principal": "BR-153, GO-020",
+    "rodovias_secundarias": ["GO-403"],
+    "economia_dominante": "petroquímica, logística, distribuição de combustíveis, indústria",
+    "polos_industriais": [
+      "Base de Distribuição de Combustíveis da Petrobras",
+      "Polo Petroquímico (distribuidoras de combustíveis)",
+      "Distrito Industrial de Senador Canedo"
+    ],
+    "bairros_comerciais": [
+      "Jardim das Oliveiras",
+      "Centro",
+      "Setor Industrial",
+      "Vila Galvão"
+    ],
+    "setores_locais": [
+      "distribuição de combustíveis (Petrobras, Raízen, Ipiranga, BR)",
+      "armazenagem e logística (tanques e galpões da BR-153)",
+      "indústria de transformação",
+      "comércio local em expansão",
+      "construção civil (cidade dormitório em crescimento)"
+    ],
+    "entity_bridges": {
+      "empilhadeira_combustao": "bases de distribuição de combustíveis e galpões logísticos da BR-153",
+      "plataforma_articulada": "manutenção de tanques e estruturas do polo petroquímico",
+      "plataforma_tesoura": "manutenção de galpões industriais no Distrito Industrial",
+      "transpaleteira": "armazéns de distribuição e comércio atacadista local",
+      "curso_nr11": "operadores nas distribuidoras de combustíveis e galpões logísticos"
+    },
+    "wikipedia": "https://pt.wikipedia.org/wiki/Senador_Canedo"
+  },
+  "brasilia-df": {
+    "display_name": "Brasília",
+    "state": "DF",
+    "distancia_km": 209,
+    "populacao": "3.100.000",
+    "rodovia_principal": "BR-060, BR-040",
+    "rodovias_secundarias": ["BR-251", "BR-020", "DF-003 (EPIA)", "DF-001 (Estrada Parque Contorno)"],
+    "economia_dominante": "serviço público federal, serviços, tecnologia, construção civil, comércio",
+    "polos_industriais": [
+      "SIA — Setor de Indústria e Abastecimento",
+      "Setor de Indústrias Gráficas (SIG)",
+      "Polo JK / Santa Maria",
+      "Cidade do Automóvel",
+      "Taguatinga Centro Empresarial",
+      "Ceilândia — Setor Industrial"
+    ],
+    "bairros_comerciais": [
+      "SIA (Setor de Indústria e Abastecimento)",
+      "SIG (Setor de Indústrias Gráficas)",
+      "Setor Comercial Sul",
+      "Setor Comercial Norte",
+      "Taguatinga Centro",
+      "Ceilândia Centro",
+      "Sobradinho",
+      "Águas Claras (comercial)"
+    ],
+    "setores_locais": [
+      "construção civil (obras públicas e prédios governamentais)",
+      "setor de tecnologia e data centers",
+      "comércio atacadista (SIA e Ceilândia)",
+      "logística e distribuição para órgãos federais",
+      "gráficas e editoras (SIG)",
+      "manutenção de edifícios públicos e comerciais"
+    ],
+    "entity_bridges": {
+      "empilhadeira_combustao": "galpões e armazéns do SIA e centros de distribuição do Entorno",
+      "plataforma_articulada": "manutenção de fachadas de edifícios governamentais e comerciais na Esplanada e Asa Sul",
+      "plataforma_tesoura": "obras de construção civil e manutenção no SIG e SIA",
+      "transpaleteira": "almoxarifados do governo federal e galpões atacadistas do SIA",
+      "curso_nr11": "operadores em galpões logísticos do SIA e empresas de facilities do setor público"
+    },
+    "wikipedia": "https://pt.wikipedia.org/wiki/Brasília"
+  },
+  "luziania-go": {
+    "display_name": "Luziânia",
+    "state": "GO",
+    "distancia_km": 198,
+    "populacao": "210.000",
+    "rodovia_principal": "BR-040",
+    "rodovias_secundarias": ["BR-060", "GO-010", "GO-521"],
+    "economia_dominante": "agroindústria, comércio, logística (Entorno de Brasília), pecuária",
+    "polos_industriais": [
+      "Distrito Industrial de Luziânia",
+      "Polo Agroindustrial (processamento de grãos e ração)"
+    ],
+    "bairros_comerciais": [
+      "Centro",
+      "Jardim Ingá",
+      "Setor Industrial",
+      "Park Estrela Dalva"
+    ],
+    "setores_locais": [
+      "agroindústria (beneficiamento de soja, milho, ração animal)",
+      "comércio regional (Entorno de Brasília)",
+      "logística e transportadoras (BR-040)",
+      "pecuária e laticínios",
+      "construção civil (cidade dormitório do DF)"
+    ],
+    "entity_bridges": {
+      "empilhadeira_combustao": "armazéns de grãos e galpões agroindustriais no Distrito Industrial",
+      "plataforma_articulada": "construção civil e manutenção de silos e estruturas agroindustriais",
+      "plataforma_tesoura": "galpões de armazenagem na BR-040 e Distrito Industrial",
+      "transpaleteira": "distribuição de insumos e comércio atacadista regional",
+      "curso_nr11": "operadores em agroindústrias e transportadoras da BR-040"
+    },
+    "wikipedia": "https://pt.wikipedia.org/wiki/Luziânia"
+  },
+  "trindade-go": {
+    "display_name": "Trindade",
+    "state": "GO",
+    "distancia_km": 18,
+    "populacao": "130.000",
+    "rodovia_principal": "GO-060",
+    "rodovias_secundarias": ["BR-060", "Anel Viário Metropolitano"],
+    "economia_dominante": "turismo religioso, comércio, indústria de transformação, logística",
+    "polos_industriais": [
+      "Distrito Industrial de Trindade",
+      "Polo Empresarial (GO-060)"
+    ],
+    "bairros_comerciais": [
+      "Centro",
+      "Setor Sol Nascente",
+      "Setor Maysa",
+      "Setor Industrial"
+    ],
+    "setores_locais": [
+      "turismo religioso (Romaria do Divino Pai Eterno — milhões de visitantes/ano)",
+      "comércio varejista e atacadista",
+      "indústria de alimentos e bebidas",
+      "logística (acesso oeste da RMG pela GO-060)",
+      "construção civil"
+    ],
+    "entity_bridges": {
+      "empilhadeira_combustao": "galpões logísticos da GO-060 e Distrito Industrial",
+      "plataforma_articulada": "manutenção do Santuário Basílica e construção civil",
+      "plataforma_tesoura": "galpões industriais e eventos religiosos (montagem de estruturas)",
+      "transpaleteira": "comércio atacadista e distribuição de mercadorias para romarias",
+      "curso_nr11": "operadores em indústrias locais e comércio logístico"
+    },
+    "wikipedia": "https://pt.wikipedia.org/wiki/Trindade_(Goiás)"
+  },
+  "itumbiara-go": {
+    "display_name": "Itumbiara",
+    "state": "GO",
+    "distancia_km": 200,
+    "populacao": "106.000",
+    "rodovia_principal": "BR-153",
+    "rodovias_secundarias": ["BR-452", "GO-139", "GO-206"],
+    "economia_dominante": "agroindústria, sucroenergético (cana-de-açúcar), pecuária, comércio",
+    "polos_industriais": [
+      "Distrito Agroindustrial de Itumbiara (DAII)",
+      "Usinas sucroenergéticas (BP Bunge Bioenergia)",
+      "Polo de Fertilizantes (Eletrobras Furnas / Fosfértil histórica)"
+    ],
+    "bairros_comerciais": [
+      "Centro",
+      "Setor Industrial",
+      "Bairro Novo Horizonte",
+      "Bairro Bela Vista"
+    ],
+    "setores_locais": [
+      "sucroenergético — usinas de etanol e açúcar (BP Bunge)",
+      "agroindústria de grãos (soja, milho)",
+      "pecuária e frigoríficos",
+      "energia hidrelétrica (UHE Itumbiara — Eletrobras Furnas)",
+      "comércio regional (polo do sul goiano)",
+      "transportadoras e logística da BR-153"
+    ],
+    "entity_bridges": {
+      "empilhadeira_combustao": "armazéns de grãos, pátios de usinas e galpões logísticos da BR-153",
+      "plataforma_articulada": "manutenção de caldeiras e estruturas de usinas sucroenergéticas",
+      "plataforma_tesoura": "manutenção de galpões agroindustriais e silos",
+      "transpaleteira": "linhas de ensacamento de açúcar e fertilizantes",
+      "curso_nr11": "operadores em usinas de etanol, armazéns de grãos e frigoríficos"
+    },
+    "wikipedia": "https://pt.wikipedia.org/wiki/Itumbiara"
+  },
+  "caldas-novas-go": {
+    "display_name": "Caldas Novas",
+    "state": "GO",
+    "distancia_km": 170,
+    "populacao": "95.000",
+    "rodovia_principal": "GO-139",
+    "rodovias_secundarias": ["BR-153 (acesso)", "GO-213"],
+    "economia_dominante": "turismo (águas termais), hotelaria, comércio, construção civil",
+    "polos_industriais": [
+      "Polo Turístico das Águas Quentes (maior estância termal do mundo)",
+      "Setor Hoteleiro e de Lazer"
+    ],
+    "bairros_comerciais": [
+      "Centro",
+      "Setor Turístico",
+      "Jardim Bandeirante",
+      "Bairro Itanhangá"
+    ],
+    "setores_locais": [
+      "hotelaria e resorts (diRoma, Prive, Hot Park / Rio Quente Resorts)",
+      "construção civil (novos empreendimentos turísticos constantes)",
+      "comércio varejista voltado a turistas",
+      "alimentação e bebidas (restaurantes, bares)",
+      "serviços de manutenção predial e facilities"
+    ],
+    "entity_bridges": {
+      "empilhadeira_combustao": "almoxarifados de hotéis e resorts, obras de construção civil",
+      "plataforma_articulada": "manutenção de fachadas de hotéis e resorts (diRoma, Prive)",
+      "plataforma_tesoura": "construção e reforma de complexos turísticos e parques aquáticos",
+      "transpaleteira": "abastecimento de estoques em hotéis e comércio varejista",
+      "curso_nr11": "equipes de manutenção e facilities dos grandes resorts"
+    },
+    "wikipedia": "https://pt.wikipedia.org/wiki/Caldas_Novas"
+  },
+  "formosa-go": {
+    "display_name": "Formosa",
+    "state": "GO",
+    "distancia_km": 280,
+    "populacao": "125.000",
+    "rodovia_principal": "BR-020",
+    "rodovias_secundarias": ["BR-040 (acesso)", "GO-118", "DF-130 (acesso)"],
+    "economia_dominante": "agropecuária, comércio (Entorno de Brasília), serviços, mineração",
+    "polos_industriais": [
+      "Distrito Industrial de Formosa",
+      "Polo Agropecuário (grãos e pecuária)"
+    ],
+    "bairros_comerciais": [
+      "Centro",
+      "Setor Formosinha",
+      "Setor Industrial",
+      "Vila Brasília"
+    ],
+    "setores_locais": [
+      "agropecuária (soja, milho, pecuária de corte)",
+      "mineração (calcário, areia)",
+      "comércio regional (Entorno Norte de Brasília)",
+      "logística e transportadoras (BR-020)",
+      "construção civil",
+      "turismo ecológico (Salto do Itiquira, Buraco das Araras)"
+    ],
+    "entity_bridges": {
+      "empilhadeira_combustao": "armazéns de grãos e galpões de mineradoras no Distrito Industrial",
+      "plataforma_articulada": "manutenção de silos e estruturas em fazendas agroindustriais",
+      "plataforma_tesoura": "galpões de armazenagem e obras de construção civil",
+      "transpaleteira": "comércio atacadista e distribuição regional (Entorno de Brasília)",
+      "curso_nr11": "operadores em armazéns agrícolas e mineradoras"
+    },
+    "wikipedia": "https://pt.wikipedia.org/wiki/Formosa_(Goiás)"
+  },
+  "hidrolandia-go": {
+    "display_name": "Hidrolândia",
+    "state": "GO",
+    "distancia_km": 32,
+    "populacao": "22.000",
+    "rodovia_principal": "BR-153",
+    "rodovias_secundarias": ["GO-020"],
+    "economia_dominante": "agropecuária, horticultura, avicultura, comércio local",
+    "polos_industriais": [
+      "Polo Hortifrutigranjeiro (cinturão verde de Goiânia)",
+      "Granjas e aviários"
+    ],
+    "bairros_comerciais": [
+      "Centro",
+      "Setor Industrial (incipiente)",
+      "Bairro São José"
+    ],
+    "setores_locais": [
+      "horticultura e olericultura (abastece Ceasa Goiânia)",
+      "avicultura e suinocultura",
+      "laticínios e pecuária leiteira",
+      "comércio local e de beira de estrada (BR-153)",
+      "logística agrícola"
+    ],
+    "entity_bridges": {
+      "empilhadeira_combustao": "galpões de armazenagem de hortifruti e granjas na BR-153",
+      "plataforma_articulada": "manutenção de silos e galpões avícolas",
+      "plataforma_tesoura": "construção e manutenção de barracões rurais e aviários",
+      "transpaleteira": "movimentação de caixas em packing houses de hortifruti",
+      "curso_nr11": "operadores em granjas, aviários e armazéns de hortifruti"
+    },
+    "wikipedia": "https://pt.wikipedia.org/wiki/Hidrolândia_(Goiás)"
+  },
+  "goianira-go": {
+    "display_name": "Goianira",
+    "state": "GO",
+    "distancia_km": 25,
+    "populacao": "50.000",
+    "rodovia_principal": "GO-070",
+    "rodovias_secundarias": ["GO-222"],
+    "economia_dominante": "agroindústria, indústria de alimentos, comércio local",
+    "polos_industriais": [
+      "Distrito Industrial de Goianira (em expansão)",
+      "Polo Avícola e Suinícola"
+    ],
+    "bairros_comerciais": [
+      "Centro",
+      "Setor Industrial",
+      "Jardim Esperança"
+    ],
+    "setores_locais": [
+      "agroindústria (frigorifico e abatedouros)",
+      "avicultura e suinocultura",
+      "indústria de alimentos",
+      "comércio local (cidade dormitório da RMG)",
+      "construção civil (expansão urbana)"
+    ],
+    "entity_bridges": {
+      "empilhadeira_combustao": "frigoríficos e galpões da agroindústria local",
+      "plataforma_articulada": "manutenção de galpões agroindustriais e aviários",
+      "plataforma_tesoura": "construção civil e manutenção de galpões no Distrito Industrial",
+      "transpaleteira": "câmaras frias e linhas de produção em frigoríficos",
+      "curso_nr11": "operadores em frigoríficos e agroindústrias"
+    },
+    "wikipedia": "https://pt.wikipedia.org/wiki/Goianira"
+  },
+  "inhumas-go": {
+    "display_name": "Inhumas",
+    "state": "GO",
+    "distancia_km": 39,
+    "populacao": "54.000",
+    "rodovia_principal": "GO-222",
+    "rodovias_secundarias": ["GO-070", "BR-153 (acesso)"],
+    "economia_dominante": "confecção têxtil, agropecuária, comércio",
+    "polos_industriais": [
+      "Polo de Confecções de Inhumas (um dos maiores de Goiás)",
+      "Distrito Industrial de Inhumas"
+    ],
+    "bairros_comerciais": [
+      "Centro",
+      "Setor Industrial",
+      "Setor das Confecções",
+      "Vila Maria"
+    ],
+    "setores_locais": [
+      "confecção têxtil e moda (polo regional de confecções)",
+      "agropecuária (laticínios, grãos)",
+      "comércio atacadista de confecções",
+      "pequenas indústrias de transformação",
+      "logística de distribuição têxtil"
+    ],
+    "entity_bridges": {
+      "empilhadeira_combustao": "galpões de estoque e distribuição do Polo de Confecções",
+      "plataforma_articulada": "manutenção de fábricas têxteis e galpões industriais",
+      "plataforma_tesoura": "construção e reforma de galpões no Distrito Industrial",
+      "transpaleteira": "movimentação de fardos têxteis e estoques em confecções",
+      "curso_nr11": "operadores em galpões de confecções e indústrias locais"
+    },
+    "wikipedia": "https://pt.wikipedia.org/wiki/Inhumas"
+  },
+  "neropolis-go": {
+    "display_name": "Nerópolis",
+    "state": "GO",
+    "distancia_km": 32,
+    "populacao": "34.000",
+    "rodovia_principal": "BR-153",
+    "rodovias_secundarias": ["GO-080", "GO-222"],
+    "economia_dominante": "agroindústria, indústria alimentícia, sucroenergético, comércio",
+    "polos_industriais": [
+      "Distrito Agroindustrial de Nerópolis",
+      "Usina Jalles Machado (em Goianésia, mas com influência regional)",
+      "Polo Sucroalcooleiro regional"
+    ],
+    "bairros_comerciais": [
+      "Centro",
+      "Setor Industrial",
+      "Bairro Araguaia"
+    ],
+    "setores_locais": [
+      "agroindústria (processamento de cana, grãos)",
+      "indústria alimentícia",
+      "pecuária e laticínios",
+      "comércio local",
+      "logística e transportadoras (BR-153 Norte)"
+    ],
+    "entity_bridges": {
+      "empilhadeira_combustao": "armazéns agroindustriais e galpões do Distrito Industrial",
+      "plataforma_articulada": "manutenção de silos e estruturas agroindustriais",
+      "plataforma_tesoura": "galpões de processamento e armazenagem de grãos",
+      "transpaleteira": "linhas de ensacamento e paletização em agroindústrias",
+      "curso_nr11": "operadores em agroindústrias e armazéns de grãos"
+    },
+    "wikipedia": "https://pt.wikipedia.org/wiki/Nerópolis"
+  },
+  "ceres-go": {
+    "display_name": "Ceres",
+    "state": "GO",
+    "distancia_km": 175,
+    "populacao": "22.000",
+    "rodovia_principal": "BR-153",
+    "rodovias_secundarias": ["GO-154", "GO-434"],
+    "economia_dominante": "sucroenergético, agropecuária, saúde, comércio regional",
+    "polos_industriais": [
+      "Usinas sucroenergéticas do Vale do São Patrício (CRV Industrial / Jalles Machado região)",
+      "Polo de Saúde de Ceres (Hospital de Referência)"
+    ],
+    "bairros_comerciais": [
+      "Centro",
+      "Setor Industrial",
+      "Setor Oeste"
+    ],
+    "setores_locais": [
+      "sucroenergético — usinas de etanol e açúcar (Vale do São Patrício)",
+      "agropecuária (pecuária de corte e leite, soja, milho)",
+      "saúde — polo hospitalar regional (referência para microrregião)",
+      "comércio regional (polo para cidades menores do Vale)",
+      "educação (UEG — Universidade Estadual de Goiás)"
+    ],
+    "entity_bridges": {
+      "empilhadeira_combustao": "pátios de usinas sucroenergéticas e armazéns de grãos na BR-153",
+      "plataforma_articulada": "manutenção de caldeiras e torres de destilação em usinas",
+      "plataforma_tesoura": "manutenção de galpões industriais das usinas e silos",
+      "transpaleteira": "ensacamento de açúcar e movimentação de insumos em usinas",
+      "curso_nr11": "operadores nas usinas do Vale do São Patrício e armazéns agrícolas"
+    },
+    "wikipedia": "https://pt.wikipedia.org/wiki/Ceres_(Goiás)"
+  }
+}

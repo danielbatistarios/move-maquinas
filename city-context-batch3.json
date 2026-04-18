@@ -1,0 +1,755 @@
+{
+  "batch": 3,
+  "cidades": [
+    {
+      "id": 36,
+      "slug": "guapo-go",
+      "nome": "Guapó",
+      "estado": "GO",
+      "populacao": 14065,
+      "distancia_goiania_km": 40,
+      "rodovia_principal": "GO-060",
+      "economia_dominante": "Agropecuária com destaque para bovinocultura de leite e corte, avicultura e produção de grãos (soja, milho). Há também atividade sucroalcooleira na região.",
+      "setores_locais": [
+        "Armazéns e silos de grãos",
+        "Laticínios e frigoríficos",
+        "Granjas avícolas",
+        "Usinas sucroalcooleiras (região)",
+        "Comércio local e construção civil"
+      ],
+      "polos_industriais": "Não possui polo industrial formal. Atividade concentrada em agroindústria de pequeno porte e armazéns rurais.",
+      "bairros_comerciais": "Centro, com comércio ao longo da avenida principal (Av. Goiás).",
+      "entity_bridges": {
+        "empilhadeira": "Movimentação de sacas e insumos em armazéns agrícolas e cooperativas da região.",
+        "plataforma_articulada": "Manutenção de silos, galpões avícolas e estruturas rurais de grande porte.",
+        "plataforma_tesoura": "Obras de construção civil e manutenção de instalações comerciais no centro.",
+        "transpaleteira": "Logística interna de laticínios, frigoríficos e depósitos de insumos agrícolas.",
+        "curso_nr11": "Capacitação obrigatória para operadores em armazéns de grãos, cooperativas e agroindústrias locais."
+      }
+    },
+    {
+      "id": 37,
+      "slug": "aragoiania-go",
+      "nome": "Aragoiânia",
+      "estado": "GO",
+      "populacao": 10020,
+      "distancia_goiania_km": 34,
+      "rodovia_principal": "GO-020",
+      "economia_dominante": "Agropecuária (bovinocultura leiteira, hortifruticultura) e economia residencial ligada à Região Metropolitana de Goiânia. Parte da população trabalha em Goiânia.",
+      "setores_locais": [
+        "Laticínios e derivados",
+        "Hortifruticultura e feiras",
+        "Pequenas indústrias alimentícias",
+        "Comércio local",
+        "Construção civil"
+      ],
+      "polos_industriais": "Sem polo industrial formal. Pequenas agroindústrias familiares.",
+      "bairros_comerciais": "Centro, ao longo da GO-020.",
+      "entity_bridges": {
+        "empilhadeira": "Cooperativas agrícolas e pequenos armazéns de hortifruti e insumos na região.",
+        "plataforma_articulada": "Manutenção de galpões rurais e construções na área metropolitana.",
+        "plataforma_tesoura": "Obras residenciais e comerciais em expansão pela proximidade com Goiânia.",
+        "transpaleteira": "Laticínios, depósitos de alimentos e pequenos centros de distribuição.",
+        "curso_nr11": "Treinamento para operadores em armazéns e cooperativas da região metropolitana sul."
+      }
+    },
+    {
+      "id": 38,
+      "slug": "abadia-de-goias-go",
+      "nome": "Abadia de Goiás",
+      "estado": "GO",
+      "populacao": 8840,
+      "distancia_goiania_km": 20,
+      "rodovia_principal": "GO-060",
+      "economia_dominante": "Agropecuária (bovinocultura, avicultura) e economia residencial da Região Metropolitana de Goiânia. Cidade conhecida pelo depósito de rejeitos radioativos do acidente com Césio-137.",
+      "setores_locais": [
+        "Granjas e avicultura",
+        "Bovinocultura leiteira",
+        "Comércio local",
+        "Construção civil",
+        "Pequenas indústrias"
+      ],
+      "polos_industriais": "Sem polo industrial significativo. Pequenas unidades de beneficiamento agrícola.",
+      "bairros_comerciais": "Centro da cidade.",
+      "entity_bridges": {
+        "empilhadeira": "Depósitos e armazéns de insumos agrícolas, granjas industriais da região.",
+        "plataforma_articulada": "Manutenção de galpões avícolas e estruturas rurais.",
+        "plataforma_tesoura": "Construção civil e manutenção de instalações comerciais.",
+        "transpaleteira": "Movimentação em depósitos de ração, insumos e pequenos comércios.",
+        "curso_nr11": "Capacitação para operadores de equipamentos em granjas e armazéns locais."
+      }
+    },
+    {
+      "id": 39,
+      "slug": "bonfinopolis-go",
+      "nome": "Bonfinópolis",
+      "estado": "GO",
+      "populacao": 9555,
+      "distancia_goiania_km": 40,
+      "rodovia_principal": "GO-010 / BR-153",
+      "economia_dominante": "Agropecuária (pecuária de corte e leite, produção de grãos) e mineração de areia. Parte da população trabalha em Goiânia e Aparecida.",
+      "setores_locais": [
+        "Pecuária bovina",
+        "Extração mineral (areia, cascalho)",
+        "Produção de grãos",
+        "Comércio local",
+        "Construção civil"
+      ],
+      "polos_industriais": "Sem polo industrial formal. Atividade de extração mineral e agroindústria de pequeno porte.",
+      "bairros_comerciais": "Centro.",
+      "entity_bridges": {
+        "empilhadeira": "Armazéns de grãos e depósitos de materiais de construção (areia, cascalho).",
+        "plataforma_articulada": "Manutenção de estruturas rurais e obras da região metropolitana leste.",
+        "plataforma_tesoura": "Construção civil e manutenção de galpões comerciais.",
+        "transpaleteira": "Depósitos de insumos agrícolas e pequenos centros de distribuição.",
+        "curso_nr11": "Treinamento obrigatório para operadores em armazéns e áreas de extração mineral."
+      }
+    },
+    {
+      "id": 40,
+      "slug": "brazabrantes-go",
+      "nome": "Brazabrantes",
+      "estado": "GO",
+      "populacao": 3600,
+      "distancia_goiania_km": 45,
+      "rodovia_principal": "GO-080",
+      "economia_dominante": "Agropecuária de subsistência e pequeno porte: bovinocultura leiteira, produção de grãos (milho, soja) e horticultura.",
+      "setores_locais": [
+        "Bovinocultura leiteira",
+        "Produção de grãos",
+        "Cooperativas agrícolas",
+        "Comércio local"
+      ],
+      "polos_industriais": "Sem polo industrial. Economia essencialmente agropecuária.",
+      "bairros_comerciais": "Centro.",
+      "entity_bridges": {
+        "empilhadeira": "Cooperativas e armazéns agrícolas para movimentação de sacas e insumos.",
+        "plataforma_articulada": "Manutenção de silos e galpões rurais.",
+        "plataforma_tesoura": "Construção civil e manutenção rural.",
+        "transpaleteira": "Laticínios e pequenos depósitos de insumos.",
+        "curso_nr11": "Capacitação de operadores em cooperativas e armazéns agrícolas da região."
+      }
+    },
+    {
+      "id": 41,
+      "slug": "caldazinha-go",
+      "nome": "Caldazinha",
+      "estado": "GO",
+      "populacao": 3550,
+      "distancia_goiania_km": 38,
+      "rodovia_principal": "GO-010",
+      "economia_dominante": "Agropecuária (bovinocultura leiteira, produção de grãos) com economia residencial ligada à Região Metropolitana de Goiânia.",
+      "setores_locais": [
+        "Pecuária leiteira",
+        "Produção de milho e soja",
+        "Cooperativas agrícolas",
+        "Comércio local"
+      ],
+      "polos_industriais": "Sem polo industrial. Pequenas propriedades rurais predominam.",
+      "bairros_comerciais": "Centro.",
+      "entity_bridges": {
+        "empilhadeira": "Cooperativas e armazéns agrícolas para grãos e insumos.",
+        "plataforma_articulada": "Manutenção de silos, galpões e estruturas rurais.",
+        "plataforma_tesoura": "Construção civil e manutenção rural.",
+        "transpaleteira": "Laticínios e frigoríficos de pequeno porte.",
+        "curso_nr11": "Capacitação obrigatória para operadores em armazéns e cooperativas da região."
+      }
+    },
+    {
+      "id": 42,
+      "slug": "campo-limpo-de-goias-go",
+      "nome": "Campo Limpo de Goiás",
+      "estado": "GO",
+      "populacao": 6740,
+      "distancia_goiania_km": 55,
+      "rodovia_principal": "GO-080",
+      "economia_dominante": "Agropecuária (bovinocultura, suinocultura, produção de grãos). Pequenas agroindústrias de beneficiamento.",
+      "setores_locais": [
+        "Pecuária bovina de leite e corte",
+        "Suinocultura",
+        "Produção de grãos",
+        "Cooperativas agrícolas",
+        "Comércio local"
+      ],
+      "polos_industriais": "Sem polo industrial formal. Agroindústria de pequeno porte.",
+      "bairros_comerciais": "Centro.",
+      "entity_bridges": {
+        "empilhadeira": "Armazéns de grãos e cooperativas agrícolas da microrregião de Anápolis.",
+        "plataforma_articulada": "Manutenção de galpões de suinocultura e estruturas rurais.",
+        "plataforma_tesoura": "Construção civil e manutenção de instalações agropecuárias.",
+        "transpaleteira": "Frigoríficos de suínos, laticínios e depósitos de ração.",
+        "curso_nr11": "Treinamento para operadores em agroindústrias e armazéns rurais."
+      }
+    },
+    {
+      "id": 43,
+      "slug": "caturai-go",
+      "nome": "Caturaí",
+      "estado": "GO",
+      "populacao": 5070,
+      "distancia_goiania_km": 48,
+      "rodovia_principal": "GO-080",
+      "economia_dominante": "Agropecuária (bovinocultura leiteira, avicultura, produção de milho e soja).",
+      "setores_locais": [
+        "Pecuária leiteira",
+        "Avicultura",
+        "Produção de grãos",
+        "Cooperativas agrícolas",
+        "Comércio local"
+      ],
+      "polos_industriais": "Sem polo industrial. Economia rural predominante.",
+      "bairros_comerciais": "Centro.",
+      "entity_bridges": {
+        "empilhadeira": "Cooperativas e armazéns agrícolas para movimentação de sacas de grãos e ração.",
+        "plataforma_articulada": "Manutenção de galpões avícolas e silos.",
+        "plataforma_tesoura": "Construção civil e manutenção rural.",
+        "transpaleteira": "Laticínios e depósitos de insumos agropecuários.",
+        "curso_nr11": "Capacitação de operadores em cooperativas e granjas avícolas."
+      }
+    },
+    {
+      "id": 44,
+      "slug": "cezarina-go",
+      "nome": "Cezarina",
+      "estado": "GO",
+      "populacao": 8220,
+      "distancia_goiania_km": 68,
+      "rodovia_principal": "BR-060",
+      "economia_dominante": "Agropecuária (bovinocultura de corte e leite, produção de grãos). Localização estratégica na BR-060 entre Goiânia e Jataí.",
+      "setores_locais": [
+        "Pecuária bovina",
+        "Produção de soja e milho",
+        "Armazéns de grãos às margens da BR-060",
+        "Postos de combustível e serviços rodoviários",
+        "Comércio local"
+      ],
+      "polos_industriais": "Sem polo industrial formal. Armazéns e silos ao longo da BR-060.",
+      "bairros_comerciais": "Centro e faixa comercial ao longo da BR-060.",
+      "entity_bridges": {
+        "empilhadeira": "Armazéns de grãos e silos na BR-060, cooperativas da região sudoeste de Goiás.",
+        "plataforma_articulada": "Manutenção de silos e estruturas de armazenagem ao longo da rodovia.",
+        "plataforma_tesoura": "Construção civil e manutenção de galpões comerciais rodoviários.",
+        "transpaleteira": "Depósitos, postos e centros de distribuição na BR-060.",
+        "curso_nr11": "Treinamento obrigatório para operadores em armazéns de grãos e logística rodoviária."
+      }
+    },
+    {
+      "id": 45,
+      "slug": "cristianopolis-go",
+      "nome": "Cristianópolis",
+      "estado": "GO",
+      "populacao": 2950,
+      "distancia_goiania_km": 105,
+      "rodovia_principal": "GO-020",
+      "economia_dominante": "Agropecuária (bovinocultura leiteira, produção de grãos em pequena escala).",
+      "setores_locais": [
+        "Pecuária leiteira",
+        "Produção de grãos",
+        "Cooperativas agrícolas",
+        "Comércio local"
+      ],
+      "polos_industriais": "Sem polo industrial. Economia essencialmente rural.",
+      "bairros_comerciais": "Centro.",
+      "entity_bridges": {
+        "empilhadeira": "Cooperativas e armazéns agrícolas para movimentação de insumos e sacas.",
+        "plataforma_articulada": "Manutenção de silos e estruturas rurais.",
+        "plataforma_tesoura": "Construção civil e manutenção rural.",
+        "transpaleteira": "Laticínios e frigoríficos de pequeno porte.",
+        "curso_nr11": "Capacitação de operadores em cooperativas e armazéns da região."
+      }
+    },
+    {
+      "id": 46,
+      "slug": "crominia-go",
+      "nome": "Cromínia",
+      "estado": "GO",
+      "populacao": 3670,
+      "distancia_goiania_km": 82,
+      "rodovia_principal": "GO-020",
+      "economia_dominante": "Agropecuária (bovinocultura, produção de grãos, suinocultura).",
+      "setores_locais": [
+        "Pecuária bovina",
+        "Suinocultura",
+        "Produção de milho e soja",
+        "Cooperativas agrícolas",
+        "Comércio local"
+      ],
+      "polos_industriais": "Sem polo industrial. Pequenas propriedades rurais.",
+      "bairros_comerciais": "Centro.",
+      "entity_bridges": {
+        "empilhadeira": "Cooperativas e armazéns agrícolas para grãos e ração.",
+        "plataforma_articulada": "Manutenção de galpões rurais e silos.",
+        "plataforma_tesoura": "Construção civil e manutenção rural.",
+        "transpaleteira": "Frigoríficos de suínos e laticínios.",
+        "curso_nr11": "Capacitação obrigatória para operadores em agroindústrias e armazéns."
+      }
+    },
+    {
+      "id": 47,
+      "slug": "damolandia-go",
+      "nome": "Damolândia",
+      "estado": "GO",
+      "populacao": 2750,
+      "distancia_goiania_km": 55,
+      "rodovia_principal": "GO-080",
+      "economia_dominante": "Agropecuária (bovinocultura leiteira, produção de grãos em pequena escala). Uma das menores cidades de Goiás.",
+      "setores_locais": [
+        "Pecuária leiteira",
+        "Pequena produção de grãos",
+        "Cooperativas agrícolas",
+        "Comércio local de subsistência"
+      ],
+      "polos_industriais": "Sem polo industrial. Economia de subsistência e agropecuária familiar.",
+      "bairros_comerciais": "Centro.",
+      "entity_bridges": {
+        "empilhadeira": "Cooperativas e armazéns agrícolas para sacas de grãos e insumos.",
+        "plataforma_articulada": "Manutenção rural e de galpões agrícolas.",
+        "plataforma_tesoura": "Construção civil e manutenção rural.",
+        "transpaleteira": "Laticínios e pequenos depósitos de insumos.",
+        "curso_nr11": "Capacitação de operadores em cooperativas e armazéns da microrregião."
+      }
+    },
+    {
+      "id": 48,
+      "slug": "leopoldo-de-bulhoes-go",
+      "nome": "Leopoldo de Bulhões",
+      "estado": "GO",
+      "populacao": 8500,
+      "distancia_goiania_km": 52,
+      "rodovia_principal": "BR-153",
+      "economia_dominante": "Agropecuária (bovinocultura, produção de grãos — soja, milho, sorgo) e logística por estar na BR-153 (Belém-Brasília).",
+      "setores_locais": [
+        "Produção de grãos em larga escala",
+        "Armazéns e silos na BR-153",
+        "Pecuária bovina",
+        "Transporte e logística rodoviária",
+        "Comércio local"
+      ],
+      "polos_industriais": "Sem polo industrial formal, mas possui armazéns graneleiros de porte médio ao longo da BR-153.",
+      "bairros_comerciais": "Centro e faixa comercial da BR-153.",
+      "entity_bridges": {
+        "empilhadeira": "Armazéns de grãos e silos ao longo da BR-153, cooperativas agrícolas.",
+        "plataforma_articulada": "Manutenção de silos e grandes estruturas de armazenagem.",
+        "plataforma_tesoura": "Construção civil e manutenção de galpões logísticos.",
+        "transpaleteira": "Centros de distribuição e depósitos de insumos na BR-153.",
+        "curso_nr11": "Treinamento obrigatório para operadores em armazéns graneleiros e logística rodoviária."
+      }
+    },
+    {
+      "id": 49,
+      "slug": "mairipotaba-go",
+      "nome": "Mairipotaba",
+      "estado": "GO",
+      "populacao": 2400,
+      "distancia_goiania_km": 100,
+      "rodovia_principal": "GO-020",
+      "economia_dominante": "Agropecuária (bovinocultura leiteira, produção de grãos em pequena escala).",
+      "setores_locais": [
+        "Pecuária leiteira",
+        "Produção de grãos",
+        "Cooperativas agrícolas",
+        "Comércio local"
+      ],
+      "polos_industriais": "Sem polo industrial. Economia essencialmente rural e familiar.",
+      "bairros_comerciais": "Centro.",
+      "entity_bridges": {
+        "empilhadeira": "Cooperativas e armazéns agrícolas para sacas e insumos.",
+        "plataforma_articulada": "Manutenção de silos e estruturas rurais.",
+        "plataforma_tesoura": "Construção civil e manutenção rural.",
+        "transpaleteira": "Laticínios e frigoríficos de pequeno porte.",
+        "curso_nr11": "Capacitação de operadores em cooperativas agrícolas da região."
+      }
+    },
+    {
+      "id": 50,
+      "slug": "nova-veneza-go",
+      "nome": "Nova Veneza",
+      "estado": "GO",
+      "populacao": 9600,
+      "distancia_goiania_km": 32,
+      "rodovia_principal": "GO-080",
+      "economia_dominante": "Agropecuária (bovinocultura, avicultura, produção de grãos) com forte influência da Região Metropolitana de Goiânia e proximidade de Anápolis.",
+      "setores_locais": [
+        "Avicultura e granjas",
+        "Pecuária bovina",
+        "Produção de grãos",
+        "Cooperativas agrícolas",
+        "Comércio local e construção civil"
+      ],
+      "polos_industriais": "Sem polo industrial formal. Granjas de porte médio e pequenas agroindústrias.",
+      "bairros_comerciais": "Centro.",
+      "entity_bridges": {
+        "empilhadeira": "Granjas avícolas, cooperativas e armazéns de grãos e ração.",
+        "plataforma_articulada": "Manutenção de galpões avícolas e estruturas rurais.",
+        "plataforma_tesoura": "Construção civil em expansão pela proximidade com Goiânia.",
+        "transpaleteira": "Depósitos de ração, laticínios e centros de distribuição avícola.",
+        "curso_nr11": "Treinamento para operadores em granjas, cooperativas e agroindústrias."
+      }
+    },
+    {
+      "id": 51,
+      "slug": "petrolina-de-goias-go",
+      "nome": "Petrolina de Goiás",
+      "estado": "GO",
+      "populacao": 10750,
+      "distancia_goiania_km": 60,
+      "rodovia_principal": "GO-080",
+      "economia_dominante": "Agropecuária (bovinocultura, produção de grãos — soja, milho, sorgo) com algumas agroindústrias de beneficiamento.",
+      "setores_locais": [
+        "Produção de grãos",
+        "Pecuária bovina",
+        "Agroindústrias de beneficiamento",
+        "Armazéns e silos",
+        "Comércio local"
+      ],
+      "polos_industriais": "Sem polo industrial de grande porte. Pequenas agroindústrias e armazéns de grãos.",
+      "bairros_comerciais": "Centro.",
+      "entity_bridges": {
+        "empilhadeira": "Armazéns de grãos, silos e cooperativas agrícolas da região de Anápolis.",
+        "plataforma_articulada": "Manutenção de silos e estruturas de armazenagem agrícola.",
+        "plataforma_tesoura": "Construção civil e manutenção de instalações comerciais.",
+        "transpaleteira": "Depósitos de insumos e agroindústrias de beneficiamento.",
+        "curso_nr11": "Capacitação obrigatória para operadores em armazéns graneleiros e cooperativas."
+      }
+    },
+    {
+      "id": 52,
+      "slug": "santo-antonio-de-goias-go",
+      "nome": "Santo Antônio de Goiás",
+      "estado": "GO",
+      "populacao": 5190,
+      "distancia_goiania_km": 28,
+      "rodovia_principal": "GO-462",
+      "economia_dominante": "Agropecuária e pesquisa agrícola. Abriga a sede da Embrapa Arroz e Feijão, importante centro de pesquisa agropecuária nacional.",
+      "setores_locais": [
+        "Pesquisa agropecuária (Embrapa)",
+        "Produção de arroz e feijão",
+        "Bovinocultura leiteira",
+        "Cooperativas agrícolas",
+        "Comércio local"
+      ],
+      "polos_industriais": "Embrapa Arroz e Feijão como polo de pesquisa e desenvolvimento agropecuário.",
+      "bairros_comerciais": "Centro.",
+      "entity_bridges": {
+        "empilhadeira": "Embrapa, cooperativas agrícolas e armazéns de sementes e grãos.",
+        "plataforma_articulada": "Manutenção de laboratórios, silos e estruturas de pesquisa da Embrapa.",
+        "plataforma_tesoura": "Construção civil e manutenção de instalações técnicas.",
+        "transpaleteira": "Depósitos de insumos, sementes e centros de pesquisa.",
+        "curso_nr11": "Treinamento de operadores em armazéns, cooperativas e instalações da Embrapa."
+      }
+    },
+    {
+      "id": 53,
+      "slug": "terezopolis-de-goias-go",
+      "nome": "Terezópolis de Goiás",
+      "estado": "GO",
+      "populacao": 7660,
+      "distancia_goiania_km": 32,
+      "rodovia_principal": "GO-080",
+      "economia_dominante": "Agropecuária (bovinocultura leiteira, avicultura, hortifruticultura) com economia residencial ligada à Região Metropolitana de Goiânia.",
+      "setores_locais": [
+        "Pecuária leiteira",
+        "Avicultura e granjas",
+        "Hortifruticultura",
+        "Cooperativas agrícolas",
+        "Comércio local"
+      ],
+      "polos_industriais": "Sem polo industrial formal. Granjas e pequenas agroindústrias.",
+      "bairros_comerciais": "Centro.",
+      "entity_bridges": {
+        "empilhadeira": "Granjas avícolas, cooperativas e armazéns de hortifruti e insumos.",
+        "plataforma_articulada": "Manutenção de galpões avícolas e estruturas rurais.",
+        "plataforma_tesoura": "Construção civil e manutenção de instalações comerciais.",
+        "transpaleteira": "Laticínios, depósitos de ração e centros de distribuição de hortifruti.",
+        "curso_nr11": "Capacitação de operadores em granjas, cooperativas e agroindústrias."
+      }
+    },
+    {
+      "id": 54,
+      "slug": "varjao-go",
+      "nome": "Varjão",
+      "estado": "GO",
+      "populacao": 3700,
+      "distancia_goiania_km": 95,
+      "rodovia_principal": "GO-020",
+      "economia_dominante": "Agropecuária (bovinocultura leiteira e de corte, produção de grãos em pequena escala).",
+      "setores_locais": [
+        "Pecuária leiteira",
+        "Produção de grãos",
+        "Cooperativas agrícolas",
+        "Comércio local"
+      ],
+      "polos_industriais": "Sem polo industrial. Economia rural de pequeno porte.",
+      "bairros_comerciais": "Centro.",
+      "entity_bridges": {
+        "empilhadeira": "Cooperativas e armazéns agrícolas para grãos e insumos.",
+        "plataforma_articulada": "Manutenção de silos e estruturas rurais.",
+        "plataforma_tesoura": "Construção civil e manutenção rural.",
+        "transpaleteira": "Laticínios e frigoríficos de pequeno porte.",
+        "curso_nr11": "Capacitação de operadores em cooperativas e armazéns agrícolas."
+      }
+    },
+    {
+      "id": 55,
+      "slug": "campestre-de-goias-go",
+      "nome": "Campestre de Goiás",
+      "estado": "GO",
+      "populacao": 3800,
+      "distancia_goiania_km": 73,
+      "rodovia_principal": "GO-060",
+      "economia_dominante": "Agropecuária (bovinocultura leiteira, produção de grãos). Turismo rural incipiente.",
+      "setores_locais": [
+        "Pecuária leiteira",
+        "Produção de milho e soja",
+        "Cooperativas agrícolas",
+        "Turismo rural",
+        "Comércio local"
+      ],
+      "polos_industriais": "Sem polo industrial. Economia agropecuária familiar.",
+      "bairros_comerciais": "Centro.",
+      "entity_bridges": {
+        "empilhadeira": "Cooperativas e armazéns agrícolas para movimentação de sacas e insumos.",
+        "plataforma_articulada": "Manutenção de silos e estruturas rurais.",
+        "plataforma_tesoura": "Construção civil e manutenção rural.",
+        "transpaleteira": "Laticínios e depósitos de insumos agrícolas.",
+        "curso_nr11": "Capacitação de operadores em cooperativas e armazéns da região oeste."
+      }
+    },
+    {
+      "id": 56,
+      "slug": "gameleira-de-goias-go",
+      "nome": "Gameleira de Goiás",
+      "estado": "GO",
+      "populacao": 3470,
+      "distancia_goiania_km": 58,
+      "rodovia_principal": "GO-010",
+      "economia_dominante": "Agropecuária (bovinocultura de leite e corte, produção de grãos em pequena escala).",
+      "setores_locais": [
+        "Pecuária bovina",
+        "Produção de grãos",
+        "Cooperativas agrícolas",
+        "Comércio local"
+      ],
+      "polos_industriais": "Sem polo industrial. Economia essencialmente rural.",
+      "bairros_comerciais": "Centro.",
+      "entity_bridges": {
+        "empilhadeira": "Cooperativas e armazéns agrícolas para grãos e insumos.",
+        "plataforma_articulada": "Manutenção de galpões e estruturas rurais.",
+        "plataforma_tesoura": "Construção civil e manutenção rural.",
+        "transpaleteira": "Laticínios e frigoríficos de pequeno porte.",
+        "curso_nr11": "Capacitação de operadores em cooperativas agrícolas da região."
+      }
+    },
+    {
+      "id": 57,
+      "slug": "itaucu-go",
+      "nome": "Itauçu",
+      "estado": "GO",
+      "populacao": 8890,
+      "distancia_goiania_km": 60,
+      "rodovia_principal": "GO-070",
+      "economia_dominante": "Agropecuária (bovinocultura, produção de grãos — soja, milho), com pequenas indústrias de beneficiamento. Conhecida como 'Capital da Rapadura' pelo histórico de produção de cana.",
+      "setores_locais": [
+        "Produção de cana e rapadura (tradição)",
+        "Pecuária bovina",
+        "Produção de grãos",
+        "Pequenas agroindústrias",
+        "Comércio local"
+      ],
+      "polos_industriais": "Sem polo industrial de grande porte. Tradição em produção de rapadura e derivados de cana.",
+      "bairros_comerciais": "Centro e proximidades da GO-070.",
+      "entity_bridges": {
+        "empilhadeira": "Armazéns de grãos, cooperativas e pequenas agroindústrias de rapadura e derivados.",
+        "plataforma_articulada": "Manutenção de silos, engenhos e galpões industriais.",
+        "plataforma_tesoura": "Construção civil e manutenção de instalações comerciais.",
+        "transpaleteira": "Agroindústrias de rapadura, depósitos de insumos e cooperativas.",
+        "curso_nr11": "Treinamento de operadores em agroindústrias, armazéns e cooperativas locais."
+      }
+    },
+    {
+      "id": 58,
+      "slug": "nazario-go",
+      "nome": "Nazário",
+      "estado": "GO",
+      "populacao": 8800,
+      "distancia_goiania_km": 55,
+      "rodovia_principal": "BR-060",
+      "economia_dominante": "Agropecuária (bovinocultura, produção de grãos — soja, milho) e logística rodoviária pela BR-060.",
+      "setores_locais": [
+        "Pecuária bovina",
+        "Produção de grãos em larga escala",
+        "Armazéns e silos na BR-060",
+        "Postos e serviços rodoviários",
+        "Comércio local"
+      ],
+      "polos_industriais": "Sem polo industrial formal. Armazéns graneleiros ao longo da BR-060.",
+      "bairros_comerciais": "Centro e faixa comercial da BR-060.",
+      "entity_bridges": {
+        "empilhadeira": "Armazéns de grãos e silos na BR-060, cooperativas agrícolas da região.",
+        "plataforma_articulada": "Manutenção de silos e estruturas de armazenagem ao longo da rodovia.",
+        "plataforma_tesoura": "Construção civil e manutenção de galpões logísticos.",
+        "transpaleteira": "Depósitos e centros de distribuição na BR-060.",
+        "curso_nr11": "Treinamento obrigatório para operadores em armazéns graneleiros e logística rodoviária."
+      }
+    },
+    {
+      "id": 59,
+      "slug": "ouro-verde-de-goias-go",
+      "nome": "Ouro Verde de Goiás",
+      "estado": "GO",
+      "populacao": 4120,
+      "distancia_goiania_km": 60,
+      "rodovia_principal": "GO-080",
+      "economia_dominante": "Agropecuária (bovinocultura leiteira, produção de grãos, avicultura).",
+      "setores_locais": [
+        "Pecuária leiteira",
+        "Avicultura",
+        "Produção de grãos",
+        "Cooperativas agrícolas",
+        "Comércio local"
+      ],
+      "polos_industriais": "Sem polo industrial. Pequenas propriedades rurais predominam.",
+      "bairros_comerciais": "Centro.",
+      "entity_bridges": {
+        "empilhadeira": "Cooperativas e armazéns agrícolas para grãos e insumos.",
+        "plataforma_articulada": "Manutenção de galpões avícolas e silos.",
+        "plataforma_tesoura": "Construção civil e manutenção rural.",
+        "transpaleteira": "Laticínios, depósitos de ração e pequenos frigoríficos.",
+        "curso_nr11": "Capacitação de operadores em granjas, cooperativas e armazéns."
+      }
+    },
+    {
+      "id": 60,
+      "slug": "professor-jamil-go",
+      "nome": "Professor Jamil",
+      "estado": "GO",
+      "populacao": 3380,
+      "distancia_goiania_km": 92,
+      "rodovia_principal": "GO-020",
+      "economia_dominante": "Agropecuária (bovinocultura leiteira e de corte, produção de grãos em pequena escala).",
+      "setores_locais": [
+        "Pecuária bovina",
+        "Produção de grãos",
+        "Cooperativas agrícolas",
+        "Comércio local"
+      ],
+      "polos_industriais": "Sem polo industrial. Economia agropecuária de pequeno porte.",
+      "bairros_comerciais": "Centro.",
+      "entity_bridges": {
+        "empilhadeira": "Cooperativas e armazéns agrícolas para sacas e insumos.",
+        "plataforma_articulada": "Manutenção de silos e estruturas rurais.",
+        "plataforma_tesoura": "Construção civil e manutenção rural.",
+        "transpaleteira": "Laticínios e frigoríficos de pequeno porte.",
+        "curso_nr11": "Capacitação de operadores em cooperativas e armazéns agrícolas."
+      }
+    },
+    {
+      "id": 61,
+      "slug": "santa-barbara-de-goias-go",
+      "nome": "Santa Bárbara de Goiás",
+      "estado": "GO",
+      "populacao": 6270,
+      "distancia_goiania_km": 48,
+      "rodovia_principal": "GO-060",
+      "economia_dominante": "Agropecuária (bovinocultura de leite e corte, produção de grãos, avicultura). Turismo de cachoeiras incipiente.",
+      "setores_locais": [
+        "Pecuária bovina",
+        "Avicultura",
+        "Produção de grãos",
+        "Cooperativas agrícolas",
+        "Comércio local"
+      ],
+      "polos_industriais": "Sem polo industrial formal. Granjas de porte médio e agroindústrias familiares.",
+      "bairros_comerciais": "Centro.",
+      "entity_bridges": {
+        "empilhadeira": "Cooperativas e armazéns agrícolas, granjas avícolas de porte médio.",
+        "plataforma_articulada": "Manutenção de galpões avícolas e estruturas rurais.",
+        "plataforma_tesoura": "Construção civil e manutenção de instalações agrícolas.",
+        "transpaleteira": "Laticínios, depósitos de ração e insumos agropecuários.",
+        "curso_nr11": "Treinamento de operadores em granjas, cooperativas e agroindústrias."
+      }
+    },
+    {
+      "id": 62,
+      "slug": "taquaral-de-goias-go",
+      "nome": "Taquaral de Goiás",
+      "estado": "GO",
+      "populacao": 3640,
+      "distancia_goiania_km": 65,
+      "rodovia_principal": "GO-070",
+      "economia_dominante": "Agropecuária (bovinocultura leiteira, produção de cana-de-açúcar e grãos). Tradição em produção de rapadura.",
+      "setores_locais": [
+        "Produção de cana e rapadura",
+        "Pecuária leiteira",
+        "Produção de grãos",
+        "Cooperativas agrícolas",
+        "Comércio local"
+      ],
+      "polos_industriais": "Sem polo industrial. Engenhos artesanais de rapadura.",
+      "bairros_comerciais": "Centro.",
+      "entity_bridges": {
+        "empilhadeira": "Cooperativas e armazéns agrícolas, engenhos de cana.",
+        "plataforma_articulada": "Manutenção de silos e estruturas rurais.",
+        "plataforma_tesoura": "Construção civil e manutenção rural.",
+        "transpaleteira": "Engenhos de rapadura, laticínios e depósitos de insumos.",
+        "curso_nr11": "Capacitação de operadores em cooperativas, engenhos e armazéns."
+      }
+    },
+    {
+      "id": 63,
+      "slug": "uruacu-go",
+      "nome": "Uruaçu",
+      "estado": "GO",
+      "populacao": 39230,
+      "distancia_goiania_km": 280,
+      "rodovia_principal": "BR-153 (Belém-Brasília)",
+      "economia_dominante": "Polo regional do Norte Goiano. Economia diversificada: comércio regional, agropecuária (bovinocultura, produção de grãos), indústria de alimentos e mineração. Centro de serviços para municípios vizinhos.",
+      "setores_locais": [
+        "Comércio varejista regional",
+        "Pecuária bovina de corte e leite",
+        "Produção de grãos (soja, milho)",
+        "Indústria de alimentos e laticínios",
+        "Mineração (calcário, fosfato)",
+        "Logística e transporte rodoviário (BR-153)",
+        "Construção civil"
+      ],
+      "polos_industriais": "Distrito Industrial de Uruaçu com empresas de beneficiamento de alimentos, laticínios e minerais. Polo regional de serviços do Norte Goiano.",
+      "bairros_comerciais": "Centro, Setor Oeste e faixa comercial ao longo da BR-153.",
+      "entity_bridges": {
+        "empilhadeira": "Indústrias de alimentos, laticínios, armazéns de grãos, mineradoras e centros de distribuição regional na BR-153.",
+        "plataforma_articulada": "Manutenção industrial em fábricas, silos, estruturas de mineração e construção civil de médio porte.",
+        "plataforma_tesoura": "Obras de construção civil, manutenção de galpões industriais e estabelecimentos comerciais do centro regional.",
+        "transpaleteira": "Laticínios, frigoríficos, supermercados regionais e centros de distribuição de alimentos.",
+        "curso_nr11": "Treinamento obrigatório para operadores em indústrias de alimentos, mineradoras, armazéns graneleiros e logística da BR-153."
+      }
+    },
+    {
+      "id": 64,
+      "slug": "pires-do-rio-go",
+      "nome": "Pires do Rio",
+      "estado": "GO",
+      "populacao": 30990,
+      "distancia_goiania_km": 150,
+      "rodovia_principal": "BR-153 / GO-330",
+      "economia_dominante": "Polo regional do Sudeste Goiano. Economia baseada em agropecuária (bovinocultura, produção de grãos, avicultura), indústria de alimentos, comércio regional e ferrovia (antiga Estrada de Ferro Goiás).",
+      "setores_locais": [
+        "Comércio varejista regional",
+        "Pecuária bovina de corte e leite",
+        "Avicultura e granjas industriais",
+        "Produção de grãos (soja, milho, sorgo)",
+        "Indústria de alimentos e laticínios",
+        "Logística ferroviária e rodoviária",
+        "Construção civil"
+      ],
+      "polos_industriais": "Distrito agroindustrial com frigoríficos, laticínios e beneficiadoras de grãos. Polo comercial do Sudeste Goiano atendendo municípios vizinhos.",
+      "bairros_comerciais": "Centro, Setor Central e entorno da BR-153.",
+      "entity_bridges": {
+        "empilhadeira": "Frigoríficos, laticínios, armazéns de grãos, granjas industriais e centros de distribuição regional.",
+        "plataforma_articulada": "Manutenção de frigoríficos, silos, galpões industriais e construção civil de médio porte.",
+        "plataforma_tesoura": "Obras de construção civil, manutenção de galpões comerciais e instalações industriais.",
+        "transpaleteira": "Frigoríficos, laticínios, supermercados regionais, depósitos de grãos e centros de distribuição.",
+        "curso_nr11": "Treinamento obrigatório para operadores em frigoríficos, laticínios, armazéns graneleiros e indústrias de alimentos do polo regional."
+      }
+    }
+  ]
+}

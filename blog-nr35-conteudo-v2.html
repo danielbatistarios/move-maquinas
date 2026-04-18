@@ -1,0 +1,936 @@
+<!-- Meta description: NR-35 e plataforma elevatória: checklist de inspeção, APR, PT, EPIs e responsabilidades. Guia prático da Move Máquinas com +20 anos e +2.000 operadores formados. -->
+
+<style>
+/* ========== TLDR Box ========== */
+.tldr-box {
+  display: flex;
+  gap: 1rem;
+  background: #F0FDF4;
+  border: 1px solid #BBF7D0;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin: 2rem 0;
+}
+.tldr-icon {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  background: #16A34A;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+.tldr-content h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.05rem;
+  color: #15803D;
+}
+.tldr-content ul {
+  margin: 0;
+  padding-left: 1.25rem;
+  line-height: 1.7;
+}
+.tldr-content li {
+  margin-bottom: 0.3rem;
+}
+
+/* ========== Opening Scene ========== */
+.opening-scene {
+  background: #FAFAFA;
+  border-left: 4px solid #9CA3AF;
+  border-radius: 0 12px 12px 0;
+  padding: 1.5rem 1.75rem;
+  margin: 2rem 0;
+  position: relative;
+}
+.scene-icon {
+  font-size: 3rem;
+  color: #D1D5DB;
+  line-height: 1;
+  margin-bottom: 0.25rem;
+  font-family: Georgia, serif;
+}
+.opening-scene p {
+  margin: 0;
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: #374151;
+  font-style: italic;
+}
+
+/* ========== Key Findings ========== */
+.key-findings {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  margin: 2rem 0;
+}
+.finding-card {
+  background: #fff;
+  border: 1px solid #E5E7EB;
+  border-left: 4px solid #DC2626;
+  border-radius: 8px;
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+.finding-card:nth-child(2) { border-left-color: #F59E0B; }
+.finding-card:nth-child(3) { border-left-color: #2563EB; }
+.finding-number {
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: #111827;
+  line-height: 1.1;
+}
+.finding-label {
+  font-size: 0.9rem;
+  color: #6B7280;
+  line-height: 1.4;
+}
+
+/* ========== Data Callouts ========== */
+.data-callouts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 2rem 0;
+}
+.callout-card {
+  flex: 1 1 200px;
+  background: linear-gradient(135deg, #1E3A5F 0%, #2563EB 100%);
+  color: #fff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  text-align: center;
+}
+.callout-number {
+  display: block;
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 0.25rem;
+}
+.callout-label {
+  display: block;
+  font-size: 0.85rem;
+  opacity: 0.9;
+  line-height: 1.4;
+}
+
+/* ========== Expert Quote ========== */
+.expert-quote {
+  margin: 2.5rem 0;
+  padding: 0;
+}
+.expert-quote blockquote {
+  background: #F8FAFC;
+  border: 1px solid #E2E8F0;
+  border-radius: 12px;
+  padding: 1.75rem;
+  margin: 0;
+  position: relative;
+}
+.expert-quote blockquote::before {
+  content: "\201C";
+  font-size: 4rem;
+  color: #CBD5E1;
+  position: absolute;
+  top: -0.25rem;
+  left: 1rem;
+  font-family: Georgia, serif;
+  line-height: 1;
+}
+.expert-quote blockquote p {
+  margin: 0 0 1rem;
+  padding-left: 2.5rem;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #1E293B;
+  font-style: italic;
+}
+.expert-quote footer {
+  padding-left: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+.expert-quote footer strong {
+  font-size: 0.95rem;
+  color: #1E3A5F;
+}
+.expert-quote footer span {
+  font-size: 0.8rem;
+  color: #64748B;
+  line-height: 1.4;
+}
+
+/* ========== Pattern Break ========== */
+.pattern-break {
+  background: #111827;
+  color: #F9FAFB;
+  border-radius: 12px;
+  padding: 2.5rem 2rem;
+  margin: 2.5rem 0;
+  text-align: center;
+}
+.pattern-break p {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+  line-height: 1.6;
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+/* ========== Product Cards ========== */
+.product-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.25rem;
+  margin: 2rem 0;
+}
+.product-card {
+  background: #fff;
+  border: 1px solid #E5E7EB;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: box-shadow 0.2s;
+}
+.product-card:hover {
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+.product-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+.product-info {
+  padding: 1.25rem;
+}
+.product-badge {
+  display: inline-block;
+  background: #DBEAFE;
+  color: #1E40AF;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  margin-bottom: 0.5rem;
+}
+.product-info h4 {
+  margin: 0.4rem 0;
+  font-size: 1.1rem;
+  color: #111827;
+}
+.product-info p {
+  font-size: 0.9rem;
+  color: #6B7280;
+  line-height: 1.5;
+  margin: 0.5rem 0 0.75rem;
+}
+.product-info a {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #2563EB;
+  text-decoration: none;
+}
+.product-info a:hover {
+  text-decoration: underline;
+}
+
+/* ========== Decision Tree ========== */
+.decision-tree {
+  background: #FFFBEB;
+  border: 1px solid #FDE68A;
+  border-radius: 12px;
+  padding: 1.75rem;
+  margin: 2rem 0;
+}
+.decision-tree h4 {
+  margin: 0 0 1.25rem;
+  font-size: 1.05rem;
+  color: #92400E;
+}
+.decision-step {
+  margin-bottom: 1.25rem;
+  padding-left: 1.5rem;
+  border-left: 3px solid #F59E0B;
+}
+.decision-step:last-child {
+  margin-bottom: 0;
+}
+.decision-question {
+  font-weight: 600;
+  color: #111827;
+  margin: 0 0 0.5rem;
+}
+.decision-options {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+.decision-yes, .decision-no {
+  background: none;
+  border: 1px solid #D1D5DB;
+  border-radius: 6px;
+  padding: 0.4rem 0.85rem;
+  font-size: 0.85rem;
+  cursor: default;
+  color: #374151;
+}
+.decision-yes {
+  border-color: #16A34A;
+  color: #15803D;
+  background: #F0FDF4;
+}
+.decision-no {
+  border-color: #DC2626;
+  color: #DC2626;
+  background: #FEF2F2;
+}
+
+/* ========== Stat Highlight ========== */
+.stat-highlight {
+  background: #FEF3C7;
+  padding: 0.15rem 0.5rem;
+  border-radius: 4px;
+  font-size: inherit;
+}
+
+/* ========== Micro CTA ========== */
+.micro-cta {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: linear-gradient(135deg, #1E3A5F 0%, #1E40AF 100%);
+  color: #fff;
+  border-radius: 12px;
+  padding: 1.25rem 1.5rem;
+  margin: 2rem 0;
+  flex-wrap: wrap;
+}
+.micro-cta-icon {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+.micro-cta-text {
+  flex: 1;
+  min-width: 200px;
+}
+.micro-cta-text p {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+.micro-cta-btn {
+  display: inline-block;
+  background: #fff;
+  color: #1E3A5F;
+  font-weight: 600;
+  font-size: 0.9rem;
+  padding: 0.6rem 1.25rem;
+  border-radius: 8px;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background 0.2s;
+}
+.micro-cta-btn:hover {
+  background: #F1F5F9;
+}
+
+/* ========== Info Box (mantido) ========== */
+.info-box {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  border-radius: 8px;
+  padding: 1.25rem;
+  margin: 1.5rem 0;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* ========== Tabelas ========== */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  font-size: 0.92rem;
+}
+th, td {
+  padding: 0.75rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid #E5E7EB;
+}
+th {
+  background: #F9FAFB;
+  font-weight: 600;
+  color: #374151;
+}
+
+/* ========== Details/Summary ========== */
+details {
+  border: 1px solid #E5E7EB;
+  border-radius: 8px;
+  margin-bottom: 0.75rem;
+  overflow: hidden;
+}
+details summary {
+  padding: 1rem 1.25rem;
+  font-weight: 600;
+  cursor: pointer;
+  color: #111827;
+  background: #FAFAFA;
+  list-style: none;
+}
+details summary::before {
+  content: "+";
+  display: inline-block;
+  width: 1.25rem;
+  font-weight: 700;
+  color: #2563EB;
+}
+details[open] summary::before {
+  content: "−";
+}
+details summary::-webkit-details-marker { display: none; }
+details p {
+  padding: 0 1.25rem 1rem;
+  margin: 0;
+  line-height: 1.7;
+  color: #4B5563;
+}
+
+/* ========== Responsive ========== */
+@media (max-width: 640px) {
+  .key-findings { grid-template-columns: 1fr; }
+  .product-cards { grid-template-columns: 1fr; }
+  .data-callouts { flex-direction: column; }
+  .micro-cta { flex-direction: column; text-align: center; }
+  .decision-options { flex-direction: column; }
+  .tldr-box { flex-direction: column; }
+  .expert-quote blockquote p { padding-left: 0; padding-top: 2rem; }
+  .expert-quote footer { padding-left: 0; }
+}
+</style>
+
+<article>
+
+<!-- ============================== OPENING SCENE ============================== -->
+
+<div class="opening-scene">
+  <div class="scene-icon">"</div>
+  <p>Terça-feira, 6h40 da manha. O engenheiro de seguranca chega na obra e encontra a plataforma tesoura ja ligada, com dois eletricistas dentro da cesta. Sem cinto. Sem APR. Sem PT assinada. A inspeção pré-operacional do dia não existe. Ele sabe que, se algo acontecer nos próximos 30 segundos, o nome no inquérito não será o do eletricista. Será o dele.</p>
+</div>
+
+<p>Quarenta por cento dos acidentes de trabalho fatais no Brasil são quedas de altura. E na maioria dos casos, o acidente não começa na queda. Começa na inspeção que ninguém fez, na APR genérica copiada de outra obra, no EPI que estava no caminhão em vez de no corpo. Este guia foi escrito para quem assina a liberação e carrega a responsabilidade. Cada seção segue a mesma lógica: o que pode matar, o que a NR-35 exige e como resolver na prática.</p>
+
+<p>Na experiência da Move Máquinas com mais de 500 operações ativas em Goiânia e região, os acidentes que a equipe técnica presenciou ao longo de 20 anos tinham uma coisa em comum: não faltava norma. Faltava execução.</p>
+
+<!-- ============================== TLDR BOX ============================== -->
+
+<div class="tldr-box">
+  <div class="tldr-icon">✓</div>
+  <div class="tldr-content">
+    <h3>Resumo rápido</h3>
+    <ul>
+      <li>NR-35 se aplica a todo trabalho acima de 2 metros com risco de queda, sem exceção</li>
+      <li>O engenheiro responsável pode responder criminalmente (homicídio culposo, 1 a 3 anos)</li>
+      <li>Plataforma elevatória é Medida de Proteção Coletiva, hierarquicamente superior ao EPI</li>
+      <li>Inspeção pré-operacional diária é obrigatória e serve como prova documental</li>
+      <li>Locação com manutenção inclusa (modelo Move Máquinas) transfere a responsabilidade técnica do equipamento para a locadora</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ============================== H2: O QUE A NR-35 EXIGE ============================== -->
+
+<h2>O que a NR-35 exige para trabalho em altura</h2>
+
+<p>Toda atividade acima de 2,00 metros do nível inferior, com risco de queda, é trabalho em altura segundo a NR-35. Não importa se dura cinco minutos ou oito horas. Não importa se é manutenção de fachada, troca de luminária ou instalação de câmera. O critério é objetivo: 2 metros e risco de queda. Qualquer operação nessas condições ativa todas as exigências da norma, sem gradação e sem exceção.</p>
+
+<div class="key-findings">
+  <div class="finding-card" style="border-left-color: #DC2626">
+    <span class="finding-number">40%</span>
+    <span class="finding-label">dos acidentes fatais no Brasil são por queda em altura (FUNDACENTRO)</span>
+  </div>
+  <div class="finding-card" style="border-left-color: #F59E0B">
+    <span class="finding-number">724 mil</span>
+    <span class="finding-label">acidentes de trabalho registrados em 2024, crescimento de 8,98%</span>
+  </div>
+  <div class="finding-card" style="border-left-color: #2563EB">
+    <span class="finding-number">80%</span>
+    <span class="finding-label">das quedas fatais acontecem por ausência de EPIs adequados</span>
+  </div>
+</div>
+
+<h3>Treinamento obrigatório</h3>
+
+<p>O trabalhador precisa de treinamento específico de, no mínimo, 8 horas, com conteúdo teórico e prático. O treinamento tem validade de 2 anos. Sem esse registro, qualquer atividade em altura já configura descumprimento da norma e expõe o responsável técnico a sanções imediatas.</p>
+
+<p>A Move Máquinas já formou mais de 2.000 operadores no <a href="/curso-operador-empilhadeira/">curso NR-11</a>, e essa experiência com treinamento presencial e in company deu à equipe uma visão prática do que funciona em campo: operador que entende o "por que" por trás de cada checklist age diferente do que decorou uma apostila. Quando o engenheiro trabalha com uma locadora que também forma operadores, a linguagem de segurança fica alinhada desde o primeiro dia.</p>
+
+<h3>ASO para trabalho em altura</h3>
+
+<p>O Atestado de Saúde Ocupacional precisa conter aptidão específica para trabalho em altura. Um ASO genérico não serve. O médico do trabalho avalia condições como vertigem, problemas cardiovasculares, uso de medicamentos que comprometam equilíbrio ou atenção, e histórico de convulsões. ASO sem menção a "apto para trabalho em altura" é o mesmo que não ter ASO.</p>
+
+<h3>Inspeções periódicas e de rotina</h3>
+
+<p>Dois tipos de inspeção coexistem na NR-35. A inspeção periódica dos equipamentos acontece, no mínimo, a cada 12 meses, conduzida por profissional habilitado com registro CREA/CONFEA. A inspeção de rotina (pré-operacional) acontece antes do início de cada trabalho, todos os dias, sem exceção.</p>
+
+<p>Quando a plataforma é locada com a Move Máquinas, a inspeção periódica e a manutenção preventiva ficam por conta da empresa. O equipamento já chega na obra com laudo em dia. A inspeção de rotina continua sendo responsabilidade do operador, mas com uma máquina que passou por revisão completa antes da entrega, o checklist diário parte de uma base sólida.</p>
+
+<div class="info-box">
+  <strong>Ponto técnico:</strong> pontos de ancoragem devem ser selecionados por profissional habilitado com registro no CREA/CONFEA. Improvisar ancoragem em estrutura não dimensionada é a segunda maior causa de falha em sistemas de proteção contra quedas. Nas plataformas da frota da Move Máquinas, os pontos de ancoragem da cesta estão identificados conforme especificação do fabricante.
+</div>
+
+<p>Saber o que a norma exige é o primeiro passo. A pergunta que tira o sono do engenheiro é outra.</p>
+
+<!-- ============================== H2: RESPONSABILIDADE ============================== -->
+
+<h2>Quem é responsável quando algo dá errado</h2>
+
+<p>O empregador responde em quatro esferas simultâneas: administrativa, trabalhista, tributária e criminal. Isso não é teoria. Em caso de acidente fatal por descumprimento de NR-35, o responsável técnico pode responder por homicídio culposo. Pena: 1 a 3 anos de detenção. E a investigação começa pelo papel: existia APR? A PT estava válida? O EPI foi conferido? A inspeção do equipamento foi registrada?</p>
+
+<div class="expert-quote">
+  <blockquote>
+    <p>"Em 20 anos, vi engenheiro perder a carreira por causa de uma inspeção que levaria 10 minutos. O equipamento tinha vazamento hidráulico visível, o operador subiu mesmo assim, e quando o Ministério do Trabalho chegou, o primeiro documento que pediram foi o registro de inspeção pré-operacional. Não existia. A partir desse momento, tudo que o engenheiro dissesse era irrelevante."</p>
+    <footer>
+      <strong>Márcio</strong>
+      <span>Fundador da Move Máquinas · +20 anos em equipamentos industriais · +2.000 operadores formados</span>
+    </footer>
+  </blockquote>
+</div>
+
+<h3>A cadeia de responsabilidade</h3>
+
+<p>A NR-35 distribui obrigações entre empregador, trabalhador e gestor. Mas na prática, quem assina a liberação da atividade carrega o peso maior. Se a APR foi feita de forma genérica, se a PT estava vencida, se o EPI não foi fiscalizado, o inquérito aponta para quem deveria ter verificado.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Esfera</th>
+      <th>Consequência</th>
+      <th>Quem responde</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Administrativa</td>
+      <td>Multas, embargo, interdição da obra</td>
+      <td>Empresa (CNPJ)</td>
+    </tr>
+    <tr>
+      <td>Trabalhista</td>
+      <td>Indenização por danos morais e materiais</td>
+      <td>Empresa + responsável técnico</td>
+    </tr>
+    <tr>
+      <td>Tributária</td>
+      <td>Aumento do FAP e RAT, ação regressiva do INSS</td>
+      <td>Empresa</td>
+    </tr>
+    <tr>
+      <td>Criminal</td>
+      <td>Homicídio culposo, lesão corporal culposa</td>
+      <td>Pessoa física (engenheiro, gestor)</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="pattern-break">
+  <p>Em 80% dos acidentes fatais por queda, alguém deveria ter verificado o EPI e não verificou. Imagine explicar isso para um juiz. Agora imagine explicar que a inspeção do equipamento também não foi feita.</p>
+</div>
+
+<p>A boa notícia: existe uma hierarquia de proteção que reduz drasticamente o risco. E a plataforma elevatória ocupa o topo dessa hierarquia.</p>
+
+<!-- ============================== H2: PLATAFORMA COMO MPC ============================== -->
+
+<h2>Plataforma elevatória como medida de proteção coletiva</h2>
+
+<p>A plataforma elevatória é classificada como Medida de Proteção Coletiva (MPC), posição hierarquicamente superior ao EPI individual na pirâmide de controle de riscos. Isso significa que, antes de exigir cinto e trava-quedas do operário, a norma exige que o empregador avalie se é possível eliminar ou reduzir o risco com equipamento coletivo. A plataforma faz exatamente isso.</p>
+
+<p>Nenhum dos 10 primeiros resultados do Google para "NR-35 plataforma elevatória" menciona que a PEMP é uma MPC. Esse enquadramento muda a análise de risco: ao optar por andaime + EPI quando a plataforma elevatória estava disponível, o engenheiro pode ser questionado judicialmente por não ter adotado a proteção coletiva primeiro.</p>
+
+<h3>Por que a plataforma é superior ao andaime</h3>
+
+<p>O andaime é estrutura fixa, montada por equipe que já trabalha em altura para montá-lo. O risco começa antes da operação principal. A Plataforma Elevatória Móvel de Trabalho (PEMP) elimina essa etapa. O operador sobe e desce com guarda-corpo perimetral, sem exposição durante montagem.</p>
+
+<p>Uma plataforma tesoura de 12 metros, como as disponíveis na frota da Move Máquinas, posiciona o trabalhador em altura estável em menos de 3 minutos. O andaime equivalente levaria horas de montagem, com risco em cada nível.</p>
+
+<!-- ============================== PRODUCT CARDS ============================== -->
+
+<div class="product-cards">
+  <div class="product-card">
+    <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=400" alt="Plataforma Tesoura Scissor Lift para locação Move Máquinas Goiânia" loading="lazy">
+    <div class="product-info">
+      <span class="product-badge">Locação com manutenção inclusa</span>
+      <h4>Plataforma Tesoura (Scissor Lift)</h4>
+      <p>Altura de trabalho: 8 a 15 metros. Diesel e elétrica. Elevação vertical estável, ideal para áreas planas, fachadas e galpões. Guarda-corpo fixo integrado. Inspeção periódica garantida pela Move.</p>
+      <a href="/aluguel/plataforma-elevatoria/tesoura/">Ver especificações e disponibilidade →</a>
+    </div>
+  </div>
+  <div class="product-card">
+    <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=400" alt="Plataforma Articulada Boom Lift para locação Move Máquinas Goiânia" loading="lazy">
+    <div class="product-info">
+      <span class="product-badge">Locação com manutenção inclusa</span>
+      <h4>Plataforma Articulada (Boom Lift)</h4>
+      <p>Alcance: até 15 metros. Diesel e elétrica. Acesso horizontal e vertical, ideal para pontos sobre obstáculos. Passa por cima de máquinas, estruturas e desnível de terreno. Suporte 24h Move.</p>
+      <a href="/aluguel/plataforma-elevatoria/articulada/">Ver especificações e disponibilidade →</a>
+    </div>
+  </div>
+</div>
+
+<p>Cada plataforma da frota da Move Máquinas passa por inspeção completa antes de sair da base em Goiânia. Mangueiras hidráulicas, comandos, estabilizadores, alarmes, placa de capacidade. O equipamento chega no canteiro pronto para a inspeção de rotina do operador, não para surpresas.</p>
+
+<p>O custo de um acidente fatal (indenizações, multas, embargo, perda de contratos, processo criminal) ultrapassa facilmente R$ 1 milhão. O custo mensal de locação de uma plataforma com manutenção inclusa representa uma fração desse valor. A conta é simples, mas muita gente só faz depois do acidente.</p>
+
+<p>Escolher a plataforma resolve a hierarquia de proteção. Mas o equipamento precisa ser inspecionado todos os dias antes do uso.</p>
+
+<!-- ============================== H2: INSPEÇÃO PRÉ-OPERACIONAL ============================== -->
+
+<h2>Inspeção pré-operacional diária: o checklist obrigatório</h2>
+
+<p>A inspeção pré-operacional é o registro que prova, no papel, que o equipamento estava em condições seguras antes do uso. Se acontecer um acidente e não existir registro de inspeção daquele dia, a presunção jurídica é de negligência. Esse documento é a primeira linha de defesa do engenheiro.</p>
+
+<h3>Checklist prático de inspeção para plataforma elevatória</h3>
+
+<p>Este checklist cobre os itens que a NR-35 e o manual do fabricante exigem. Cada item deve ser verificado pelo operador treinado antes de ligar o equipamento, sem exceção, mesmo que a plataforma tenha sido inspecionada pela locadora no dia anterior.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Item</th>
+      <th>O que verificar</th>
+      <th>Critério de reprovação</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>Estrutura da cesta</td>
+      <td>Trincas, soldas rompidas, deformações</td>
+      <td>Qualquer dano visível na estrutura</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Guarda-corpo</td>
+      <td>Fixação, altura regulamentar, rodapé</td>
+      <td>Peça solta, ausente ou danificada</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Comandos de operação</td>
+      <td>Funcionamento dos controles (cesta e solo)</td>
+      <td>Comando travado, sem resposta ou intermitente</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>Botão de emergência</td>
+      <td>Acionamento e retorno ao estado normal</td>
+      <td>Não desliga o equipamento ou não destrava</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>Sistema hidráulico</td>
+      <td>Vazamentos em mangueiras, cilindros, conexões</td>
+      <td>Qualquer vazamento visível ou mancha no piso</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>Pneus / esteiras</td>
+      <td>Pressão, cortes, desgaste irregular</td>
+      <td>Pneu murcho, cortado ou com corda exposta</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>Combustível / bateria</td>
+      <td>Nível suficiente para a jornada planejada</td>
+      <td>Insuficiente para completar a tarefa</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>Estabilizadores</td>
+      <td>Extensão, trava, apoio no solo (se aplicável)</td>
+      <td>Não trava na posição ou apoio instável</td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td>Alarmes e sinalizadores</td>
+      <td>Alarme de movimento, luz estroboscópica, buzina</td>
+      <td>Alarme mudo ou luz queimada</td>
+    </tr>
+    <tr>
+      <td>10</td>
+      <td>Placa de capacidade</td>
+      <td>Legibilidade da placa com carga máxima</td>
+      <td>Ilegível, ausente ou adulterada</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="info-box">
+  <strong>Dica prática:</strong> imprima esse checklist, preencha com data, nome do operador e assinatura. Arquive por, no mínimo, 5 anos. Esse papel é evidência documental em qualquer fiscalização, perícia ou processo trabalhista. A Move Máquinas fornece o modelo de checklist junto com o equipamento locado.
+</div>
+
+<p>Se algum item reprova, o equipamento não sobe. Sem exceção. Quando a plataforma é locada com manutenção inclusa pela Move Máquinas, o problema é resolvido pela equipe técnica mobile da empresa, que vai até o canteiro de obra. Não precisa devolver o equipamento, não precisa esperar semanas por peça. O técnico chega, resolve ou substitui o equipamento, e a obra não para.</p>
+
+<p>Quando a plataforma é própria e sem contrato de manutenção, o engenheiro precisa encontrar técnico, peça e oficina antes de liberar a atividade. E enquanto isso, a obra fica parada ou, pior, alguém decide subir de andaime "só por hoje".</p>
+
+<div class="micro-cta">
+  <div class="micro-cta-icon">&#128203;</div>
+  <div class="micro-cta-text">
+    <p>Precisa de plataforma com inspeção periódica garantida e suporte técnico no local?</p>
+  </div>
+  <a href="/aluguel/plataforma-elevatoria/" class="micro-cta-btn">Ver plataformas disponíveis</a>
+</div>
+
+<p>Com o equipamento inspecionado e registrado, o próximo passo é documentar o risco da atividade. Aqui entram a APR e a Permissão de Trabalho.</p>
+
+<!-- ============================== H2: APR E PT ============================== -->
+
+<h2>APR e Permissão de Trabalho: quando são necessários</h2>
+
+<p>A APR (Análise Preliminar de Risco) é obrigatória antes de qualquer trabalho em altura. Sempre. A Permissão de Trabalho (PT) é exigida quando a atividade acontece em área de risco definida pela empresa. Em muitas plantas industriais, a PT é obrigatória para toda atividade acima de 2 metros, tornando os dois documentos inseparáveis na prática.</p>
+
+<!-- ============================== DECISION TREE ============================== -->
+
+<div class="decision-tree">
+  <h4>Sua operação precisa de APR, PT ou ambos?</h4>
+  <div class="decision-step">
+    <p class="decision-question">1. O trabalho é acima de 2 metros com risco de queda?</p>
+    <div class="decision-options">
+      <button class="decision-yes">Sim → APR obrigatória. Continue.</button>
+      <button class="decision-no">Não → NR-35 não se aplica</button>
+    </div>
+  </div>
+  <div class="decision-step">
+    <p class="decision-question">2. A atividade acontece em área classificada como risco pela empresa?</p>
+    <div class="decision-options">
+      <button class="decision-yes">Sim → PT também é obrigatória</button>
+      <button class="decision-no">Não → Verificar com SESMT da planta</button>
+    </div>
+  </div>
+  <div class="decision-step">
+    <p class="decision-question">3. A planta industrial exige PT para qualquer trabalho acima de 2m?</p>
+    <div class="decision-options">
+      <button class="decision-yes">Sim → APR + PT obrigatórios</button>
+      <button class="decision-no">Não → Apenas APR, mas documente a decisão</button>
+    </div>
+  </div>
+  <div class="decision-step">
+    <p class="decision-question">4. A atividade mudou de local desde ontem (mesma obra, fachada diferente)?</p>
+    <div class="decision-options">
+      <button class="decision-yes">Sim → Nova APR obrigatória</button>
+      <button class="decision-no">Não → APR do dia anterior pode ser válida (verificar validade)</button>
+    </div>
+  </div>
+</div>
+
+<h3>APR: o documento que antecipa o que pode matar</h3>
+
+<p>A APR identifica cada risco da atividade específica, define medidas de controle e registra quem é responsável por cada uma. Não é formulário genérico. Cada nova atividade exige uma nova APR. Se ontem a plataforma operou na fachada leste e hoje opera na fachada norte, a APR é outra. Condições de vento, proximidade de rede elétrica, tipo de solo, tudo muda.</p>
+
+<ul>
+  <li>Descrição da atividade e local exato</li>
+  <li>Riscos identificados (queda, choque elétrico, queda de objetos, condições climáticas)</li>
+  <li>Medidas de controle para cada risco</li>
+  <li>EPIs necessários e verificação de disponibilidade</li>
+  <li>Tipo de plataforma e capacidade de carga (especificar: tesoura 12m, articulada 15m, etc.)</li>
+  <li>Nome e assinatura de quem elaborou e de quem aprovou</li>
+  <li>Data e horário de validade</li>
+</ul>
+
+<h3>PT: a autorização formal</h3>
+
+<p>A Permissão de Trabalho funciona como autorização assinada pelo responsável da área. Sem ela, a atividade não começa. A PT tem validade definida (geralmente o turno ou a jornada) e precisa ser renovada se o trabalho continuar no dia seguinte.</p>
+
+<p>A APR é pré-requisito para a PT. Primeiro você analisa o risco (APR), depois autoriza a atividade (PT). Inverter essa ordem é irregularidade documental que aparece em qualquer auditoria.</p>
+
+<div class="info-box">
+  <strong>Erro comum:</strong> usar APR "modelo" copiada de outra obra. A APR precisa ser específica da atividade, do local e do dia. APR genérica é tão inútil quanto não ter APR, e não protege o engenheiro em caso de investigação. Nos atendimentos da Move Máquinas, a equipe técnica orienta o cliente sobre o modelo de equipamento mais adequado para cada tipo de operação, o que facilita o preenchimento correto da APR com dados reais da máquina.
+</div>
+
+<p>Documentação feita. Equipamento inspecionado. Falta um ponto que muita gente acha que a plataforma dispensa.</p>
+
+<!-- ============================== H2: EPI OBRIGATÓRIO ============================== -->
+
+<h2>EPI obrigatório mesmo com plataforma</h2>
+
+<p>A plataforma elevatória não elimina a obrigatoriedade do EPI. O guarda-corpo é proteção coletiva. O cinto de segurança tipo paraquedista com talabarte conectado ao ponto de ancoragem da cesta é proteção individual. Os dois coexistem. Um não substitui o outro.</p>
+
+<div class="data-callouts">
+  <div class="callout-card">
+    <span class="callout-number">80%</span>
+    <span class="callout-label">das quedas fatais acontecem por ausência de EPIs adequados</span>
+  </div>
+  <div class="callout-card">
+    <span class="callout-number">8 horas</span>
+    <span class="callout-label">carga mínima de treinamento obrigatório para operação em altura</span>
+  </div>
+  <div class="callout-card">
+    <span class="callout-number">12 meses</span>
+    <span class="callout-label">intervalo máximo entre inspeções periódicas do equipamento</span>
+  </div>
+</div>
+
+<h3>EPIs obrigatórios para operação em PEMP</h3>
+
+<ul>
+  <li><strong>Cinto de segurança tipo paraquedista:</strong> com ponto de conexão dorsal, ajuste em 5 pontos, inspecionado antes de cada uso</li>
+  <li><strong>Talabarte de posicionamento com absorvedor de energia:</strong> conectado ao ponto de ancoragem da cesta (nunca no guarda-corpo)</li>
+  <li><strong>Capacete com jugular:</strong> classe B para risco elétrico ou classe A para impacto. A jugular impede que o capacete caia durante o trabalho</li>
+  <li><strong>Calçado de segurança:</strong> com biqueira e solado antiderrapante</li>
+  <li><strong>Luvas:</strong> adequadas ao tipo de atividade (mecânica, elétrica, química)</li>
+  <li><strong>Óculos de proteção:</strong> quando há risco de projeção de partículas</li>
+</ul>
+
+<div class="expert-quote">
+  <blockquote>
+    <p>"O talabarte conectado no guarda-corpo é um dos erros mais perigosos que a gente encontra em obra. O guarda-corpo não foi projetado para absorver carga de impacto. O ponto correto está no piso da cesta, identificado pelo fabricante. Toda plataforma que sai da Move tem esse ponto sinalizado. Quando o operador faz nosso treinamento, a primeira coisa que a gente ensina é onde conectar o talabarte. Parece óbvio, mas já evitou acidente."</p>
+    <footer>
+      <strong>Márcio</strong>
+      <span>Fundador da Move Máquinas · +20 anos em equipamentos industriais · +2.000 operadores formados</span>
+    </footer>
+  </blockquote>
+</div>
+
+<p>Com todos esses elementos cobertos, a pergunta final é operacional: como garantir que equipamento, manutenção e documentação estejam sempre em dia sem travar a obra?</p>
+
+<!-- ============================== H2: LOCAÇÃO E NR-35 ============================== -->
+
+<h2>Como a locação de plataforma ajuda a cumprir NR-35</h2>
+
+<p>A locação com manutenção inclusa transfere para a locadora a responsabilidade pela inspeção periódica do equipamento, pela manutenção preventiva e corretiva e pela documentação técnica da máquina. O engenheiro continua responsável pela operação segura, pela APR, pela PT e pela fiscalização de EPIs. Mas a parte mais técnica, que exige mecânico especializado e peças originais, fica com quem entende da máquina.</p>
+
+<p>No modelo da Move Máquinas, essa divisão funciona assim:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Responsabilidade</th>
+      <th>Plataforma própria</th>
+      <th>Locada com a Move Máquinas</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Inspeção periódica (12 meses)</td>
+      <td>Contratar técnico habilitado</td>
+      <td>Inclusa e documentada</td>
+    </tr>
+    <tr>
+      <td>Manutenção preventiva</td>
+      <td>Por conta do proprietário</td>
+      <td>Inclusa no contrato</td>
+    </tr>
+    <tr>
+      <td>Manutenção corretiva</td>
+      <td>Buscar peças e técnico</td>
+      <td>Suporte 24h, 7 dias. Equipe mobile vai até a obra</td>
+    </tr>
+    <tr>
+      <td>Documentação do equipamento</td>
+      <td>Responsabilidade do proprietário</td>
+      <td>Fornecida pela Move com laudo</td>
+    </tr>
+    <tr>
+      <td>Substituição em caso de pane</td>
+      <td>Obra parada até resolver</td>
+      <td>Equipamento substituto da frota Move</td>
+    </tr>
+    <tr>
+      <td>Inspeção pré-operacional diária</td>
+      <td>Operador treinado</td>
+      <td>Operador treinado (não muda)</td>
+    </tr>
+    <tr>
+      <td>APR, PT, EPIs</td>
+      <td>Engenheiro responsável</td>
+      <td>Engenheiro responsável (não muda)</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>O diferencial que mais impacta o compliance NR-35 na prática é a equipe técnica mobile da Move Máquinas. Se a inspeção de rotina identifica um problema (vazamento hidráulico, comando intermitente, alarme mudo), o engenheiro não precisa devolver o equipamento ou esperar dias por um técnico terceirizado. A Move envia um técnico até o local, dentro do raio de atendimento de 200 km de Goiânia. Se o reparo não é possível em campo, entra equipamento substituto.</p>
+
+<p>Para o engenheiro, isso significa uma coisa: o registro de inspeção nunca fica parado no item "equipamento reprovado, aguardando manutenção". A obra continua em conformidade.</p>
+
+<div class="expert-quote">
+  <blockquote>
+    <p>"O engenheiro que loca a plataforma com manutenção inclusa elimina a variável mais imprevisível da equação: a condição mecânica do equipamento. Ele continua responsável pela operação, mas não precisa se preocupar se a válvula hidráulica vai aguentar mais um turno. Essa preocupação é nossa. É para isso que a gente existe há 20 anos."</p>
+    <footer>
+      <strong>Márcio</strong>
+      <span>Fundador da Move Máquinas · +20 anos em equipamentos industriais · +500 clientes ativos</span>
+    </footer>
+  </blockquote>
+</div>
+
+<div class="micro-cta">
+  <div class="micro-cta-icon">&#9888;&#65039;</div>
+  <div class="micro-cta-text">
+    <p>Plataformas tesoura e articulada com manutenção inclusa, suporte 24h e laudo de inspeção. Atendimento em Goiânia e até 200 km.</p>
+  </div>
+  <a href="https://wa.me/5562982637300" class="micro-cta-btn">Fale pelo WhatsApp</a>
+</div>
+
+<!-- ============================== H2: FAQ ============================== -->
+
+<h2>Perguntas frequentes sobre NR-35 e plataforma elevatória</h2>
+
+<details>
+  <summary>A NR-35 se aplica a qualquer trabalho acima de 2 metros?</summary>
+  <p>Sim. Todo trabalho executado acima de 2,00 metros do nível inferior, onde exista risco de queda, é considerado trabalho em altura pela NR-35. Isso inclui atividades em plataformas elevatórias, andaimes, telhados, escadas e qualquer superfície elevada. A duração da atividade não altera a exigência: cinco minutos ou oito horas, a norma se aplica igualmente.</p>
+</details>
+
+<details>
+  <summary>Preciso de APR mesmo usando plataforma elevatória?</summary>
+  <p>Sim. A plataforma é medida de proteção coletiva, mas não dispensa a Análise Preliminar de Risco. A APR identifica riscos específicos do local e da atividade (proximidade de rede elétrica, condições do piso, vento) que existem independentemente do equipamento. Uma APR nova deve ser feita a cada atividade e a cada mudança de local.</p>
+</details>
+
+<details>
+  <summary>Quem pode operar plataforma elevatória?</summary>
+  <p>Somente trabalhador com treinamento específico para operação de PEMP, com carga horária mínima de 8 horas (teórico e prático), ASO com aptidão para trabalho em altura e autorização formal do empregador. O treinamento tem validade de 2 anos. A Move Máquinas já formou mais de 2.000 operadores e oferece <a href="/curso-operador-empilhadeira/">curso NR-11</a> presencial e in company para empresas em Goiânia e região.</p>
+</details>
+
+<details>
+  <summary>Se o trabalhador usar cinto, posso dispensar o guarda-corpo?</summary>
+  <p>Não. A hierarquia de proteção da NR-35 exige proteção coletiva (guarda-corpo, plataforma) antes da proteção individual (cinto, talabarte). As duas coexistem obrigatoriamente. O cinto é obrigatório mesmo com guarda-corpo. Dispensar qualquer um dos dois é descumprimento da norma.</p>
+</details>
+
+<details>
+  <summary>Qual a diferença entre inspeção periódica e inspeção de rotina?</summary>
+  <p>A inspeção periódica acontece no mínimo a cada 12 meses, conduzida por profissional habilitado, com laudo técnico. A inspeção de rotina (pré-operacional) acontece todos os dias, antes do início de cada trabalho, pelo operador treinado. As duas são obrigatórias. Quando a plataforma é locada com a Move Máquinas, a inspeção periódica e a manutenção preventiva ficam por conta da empresa, enquanto a inspeção de rotina continua sendo responsabilidade do operador.</p>
+</details>
+
+<details>
+  <summary>Qual o risco legal para o engenheiro em caso de acidente?</summary>
+  <p>O engenheiro responsável pode responder nas esferas administrativa, trabalhista e criminal simultaneamente. Em caso de acidente fatal por negligência comprovada (ausência de APR, EPI não fiscalizado, equipamento sem inspeção), a responsabilidade penal pode configurar homicídio culposo, com pena de 1 a 3 anos de detenção. A responsabilidade é pessoal e atinge a pessoa física, não apenas a empresa.</p>
+</details>
+
+<details>
+  <summary>Plataforma elevatória é mais segura que andaime?</summary>
+  <p>Sim. A plataforma é uma Medida de Proteção Coletiva com guarda-corpo integrado, sem necessidade de montagem em altura. O andaime exige montagem manual (que já é trabalho em altura), inspeção estrutural mais complexa e oferece maior exposição ao risco durante instalação e desmontagem. A Move Máquinas disponibiliza plataformas tesoura (8-15m) e articulada (até 15m) que eliminam a fase de montagem em altura.</p>
+</details>
+
+<details>
+  <summary>Posso locar plataforma com manutenção inclusa em Goiânia?</summary>
+  <p>Sim. A Move Máquinas oferece locação de plataformas tesoura e articulada em Goiânia e num raio de até 200 km, com manutenção preventiva e corretiva inclusa, suporte 24 horas, equipe técnica mobile e equipamento substituto em caso de pane. A empresa opera há mais de 20 anos e atende mais de 500 clientes ativos. <a href="/aluguel/plataforma-elevatoria/">Conheça as plataformas disponíveis</a> ou entre em contato pelo WhatsApp <a href="https://wa.me/5562982637300">(62) 98263-7300</a>.</p>
+</details>
+
+<!-- ============================== CTA FINAL ============================== -->
+
+<div class="cta-box">
+  <h2>Plataforma com compliance NR-35 garantido</h2>
+  <p>Plataformas tesoura e articulada com manutenção inclusa, inspeção periódica documentada, suporte 24h e equipe técnica mobile. Mais de 500 clientes e 2.000 operadores formados em 20 anos de operação em Goiânia e região.</p>
+  <p><a href="/aluguel/plataforma-elevatoria/" class="cta-button">Solicite plataforma com suporte técnico</a></p>
+  <p>WhatsApp: <a href="https://wa.me/5562982637300">(62) 98263-7300</a> · Telefone: <a href="tel:+556232111515">(62) 3211-1515</a></p>
+</div>
+
+</article>

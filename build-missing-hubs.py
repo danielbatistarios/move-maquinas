@@ -1,0 +1,650 @@
+"""
+build-missing-hubs.py
+Cria hubs completos para aparecida-de-goiania-go e anapolis-go
+usando brasilia-df como template e substituindo dados de cidade.
+"""
+
+import os
+
+ROOT = '/Users/jrios/move-maquinas-seo'
+
+CITIES = {
+    'aparecida-de-goiania-go': {
+        'slug': 'aparecida-de-goiania-go',
+        'nome': 'Aparecida de Goiânia',
+        'nome_simples': 'Aparecida de Goiania',
+        'estado': 'GO',
+        'label_breadcrumb': 'Aparecida de Goiânia — GO',
+        'dist': '8 km',
+        'wiki_url': 'https://pt.wikipedia.org/wiki/Aparecida_de_Goi%C3%A2nia',
+        'wa_text': 'Ol%C3%A1%2C+quero+or%C3%A7amento+de+equipamentos+em+Aparecida+de+Goi%C3%A2nia',
+        'hero_lead': (
+            '<a href="https://pt.wikipedia.org/wiki/Aparecida_de_Goi%C3%A2nia" target="_blank" '
+            'rel="noopener noreferrer" style="color:var(--color-primary);font-weight:700;text-decoration:underline;">'
+            'Aparecida de Goiania</a> e a segunda maior cidade de Goias, com mais de 600 mil habitantes, '
+            'e faz fronteira direta com a capital. O maior polo industrial do estado fica aqui — o Polo '
+            'Industrial de Aparecida de Goiania — concentrando frigorificos, texteis, metalurgicas e '
+            'distribuidoras. A Movemáquinas atende Aparecida a partir da sede em Goiania, a apenas 8 km, '
+            'com locacao de empilhadeiras, plataformas elevatorias e transpaleteiras. Entrega no mesmo dia '
+            'com manutencao inclusa e suporte tecnico dedicado.'
+        ),
+        'hero_text': (
+            'Do Polo Industrial ao Distrito Agroindustrial de Aparecida (DAIA), do Setor Vila Brasilia '
+            'ao Corredor da BR-153 — a demanda por equipamentos de movimentacao e alta e crescente. '
+            'Contratos mensais a partir de Consultar com frota Clark e entrega no mesmo dia.'
+        ),
+        'contexto_titulo': 'Atendimento em toda Aparecida de Goiania',
+        'contexto_desc': (
+            'Com sede a 8 km de distancia, a Movemáquinas entrega equipamentos no mesmo dia para '
+            'qualquer bairro, polo industrial ou zona comercial de Aparecida de Goiania.'
+        ),
+        'contexto_cards': [
+            ('Bairros e zonas industriais', [
+                'Polo Industrial de Aparecida',
+                'Setor Vila Brasilia',
+                'Setor Garavelo',
+                'Setor Conde dos Arcos',
+                'Jardim Tiradentes e entorno',
+            ]),
+            ('Rodovias e acessos', [
+                'BR-153 (Belem-Brasilia)',
+                'GO-010 (Aparecida–Goiania)',
+                'BR-060 acesso sul',
+                'Anel Viario de Goiania',
+                'Av. Rio Verde',
+            ]),
+            ('Polos economicos', [
+                'Polo de Moda de Aparecida',
+                'Centro Comercial de Aparecida',
+                'Frigorifico JBS e fornecedores',
+                'Atacadistas da GO-010',
+                'Ceasa Aparecida',
+            ]),
+            ('Distritos industriais', [
+                'DAIA – Distrito Agroindustrial',
+                'Polo Industrial Setor Industrial',
+                'Corredor logistico BR-153 sul',
+                'Zona industrial Vila Joao Vaz',
+                'Condominio Industrial Coimbra',
+            ]),
+        ],
+        'conversacional': (
+            '<strong>Aparecida de Goiania e nossa vizinha mais proxima.</strong> Com sede a apenas 8 km '
+            'em Goiania, a Movemáquinas entrega equipamentos no mesmo dia para qualquer ponto de Aparecida '
+            '— do Polo Industrial ao DAIA, do Setor Garavelo ao corredor da BR-153. Por ser a segunda '
+            'maior cidade de Goias e concentrar o maior polo industrial do estado, atendemos um volume '
+            'significativo de clientes aqui — frigorificos, distribuidoras texteis, metalurgicas e '
+            'atacadistas. Fale pelo WhatsApp ou ligue: '
+            '<a href="tel:+556232111515" style="color:var(--color-primary);font-weight:700;">(62) 3211-1515</a>.'
+        ),
+        'cidades_proximas': [
+            ('/goiania-go/', 'Goiânia (8 km)', '0'),
+            ('/senador-canedo-go/', 'Senador Canedo (15 km)', '1'),
+            ('/trindade-go/', 'Trindade (28 km)', '2'),
+            ('/anapolis-go/', 'Anápolis (60 km)', '3'),
+            ('/inhumas-go/', 'Inhumas (45 km)', '4'),
+            ('/brasilia-df/', 'Brasília (210 km)', '5'),
+        ],
+        'cta_cidade': 'Aparecida de Goiânia',
+        'cta_cidade_url': 'Aparecida+de+Goi%C3%A2nia',
+        'stats_sede': 'Sede a 8 km',
+        'faq': [
+            ('A Movemáquinas atende Aparecida de Goiania?',
+             'Sim. Com sede propria em Goiania, a apenas 8 km, a Movemáquinas entrega equipamentos em '
+             'Aparecida de Goiania no mesmo dia — sujeito a disponibilidade. Atendemos todos os setores '
+             'industriais e comerciais da cidade, incluindo o Polo Industrial e o DAIA.'),
+            ('Qual o prazo de entrega em Aparecida de Goiania?',
+             'Por estarmos a apenas 8 km, a entrega pode ser feita no mesmo dia para qualquer bairro de '
+             'Aparecida. Para urgencias, entre em contato pelo WhatsApp informando tipo de equipamento e '
+             'endereco — confirmamos em minutos.'),
+            ('Voces atendem o Polo Industrial de Aparecida e o DAIA?',
+             'Sim. O Polo Industrial de Aparecida e o Distrito Agroindustrial de Aparecida (DAIA) estao '
+             'dentro da nossa area de cobertura prioritaria. Temos clientes ativos nessas zonas com '
+             'empilhadeiras, plataformas e transpaleteiras em contratos de media e longa duracao.'),
+            ('Qual o valor do aluguel em Aparecida de Goiania?',
+             'O valor depende do tipo de equipamento, duracao do contrato e necessidades especificas. '
+             'Por estarmos proximos, nao ha custo adicional de deslocamento. Solicite orcamento pelo '
+             'WhatsApp informando o equipamento e duracao estimada.'),
+            ('A manutencao esta inclusa no contrato?',
+             'Sim. Toda manutencao preventiva e corretiva esta inclusa. Por estarmos a 8 km, o tempo '
+             'de resposta tecnica e rapido — geralmente em poucas horas.'),
+        ],
+    },
+    'anapolis-go': {
+        'slug': 'anapolis-go',
+        'nome': 'Anápolis',
+        'nome_simples': 'Anapolis',
+        'estado': 'GO',
+        'label_breadcrumb': 'Anápolis — GO',
+        'dist': '55 km',
+        'wiki_url': 'https://pt.wikipedia.org/wiki/An%C3%A1polis',
+        'wa_text': 'Ol%C3%A1%2C+quero+or%C3%A7amento+de+equipamentos+em+An%C3%A1polis',
+        'hero_lead': (
+            '<a href="https://pt.wikipedia.org/wiki/An%C3%A1polis" target="_blank" '
+            'rel="noopener noreferrer" style="color:var(--color-primary);font-weight:700;text-decoration:underline;">'
+            'Anapolis</a> e a terceira maior cidade de Goias e sede do maior distrito industrial do '
+            'Centro-Oeste — o DAIA, com mais de 200 empresas. A cidade e um hub logistico estrategico '
+            'entre Goiania e Brasilia pela BR-060. A Movemáquinas atende Anapolis a partir da sede em '
+            'Goiania, a 55 km, com locacao de empilhadeiras, plataformas elevatorias e transpaleteiras. '
+            'Entrega em ate 24 horas com manutencao inclusa e suporte tecnico dedicado.'
+        ),
+        'hero_text': (
+            'Do DAIA ao Polo JK, do Corredor da BR-060 ao Setor Norte Industrial — a demanda por '
+            'equipamentos de movimentacao acompanha o ritmo da cidade mais industrial de Goias. '
+            'Contratos mensais a partir de Consultar com frota Clark e entrega em ate 24 horas.'
+        ),
+        'contexto_titulo': 'Atendimento em toda Anapolis',
+        'contexto_desc': (
+            'A Movemáquinas atende Anapolis com entrega de equipamentos em ate 24 horas — '
+            'cobrindo todos os setores industriais, comerciais e logisticos da cidade.'
+        ),
+        'contexto_cards': [
+            ('Bairros e zonas industriais', [
+                'DAIA – Distrito Agroindustrial',
+                'Polo JK e entorno',
+                'Setor Norte Industrial',
+                'Setor Industrial Leste',
+                'Setor Universitario',
+            ]),
+            ('Rodovias e acessos', [
+                'BR-060 (Goiania–Brasilia)',
+                'BR-153 (Belem–Brasilia)',
+                'GO-330 acesso sul',
+                'Anel Rodoviario de Anapolis',
+                'Av. Brasil (central)',
+            ]),
+            ('Polos economicos', [
+                'DAIA – mais de 200 empresas',
+                'Polo Farmaceutico de Anapolis',
+                'Centro Logistico BR-060',
+                'Atacado e distribuicao BR-153',
+                'Polo Academico UniEVANGELICA',
+            ]),
+            ('Setores industriais', [
+                'Farmacos – maior polo do pais',
+                'Logistica e distribuicao',
+                'Metalurgicas e autopeças',
+                'Alimentos e frigorificos',
+                'Construcao civil e insumos',
+            ]),
+        ],
+        'conversacional': (
+            '<strong>Anapolis e a capital industrial de Goias.</strong> Com o maior distrito '
+            'agroindustrial do Centro-Oeste (DAIA) e um polo farmaceutico de nivel nacional, a cidade '
+            'demanda equipamentos de movimentacao o ano todo. A Movemáquinas atende a partir da sede '
+            'em Goiania — 55 km pela BR-060 — com entrega em ate 24 horas e suporte tecnico mobile. '
+            'Atendemos empresas do DAIA, do Polo JK e do corredor logistico da BR-060/BR-153. '
+            'Fale pelo WhatsApp ou ligue: '
+            '<a href="tel:+556232111515" style="color:var(--color-primary);font-weight:700;">(62) 3211-1515</a>.'
+        ),
+        'cidades_proximas': [
+            ('/goiania-go/', 'Goiânia (55 km)', '0'),
+            ('/aparecida-de-goiania-go/', 'Aparecida de Goiânia (60 km)', '1'),
+            ('/inhumas-go/', 'Inhumas (70 km)', '2'),
+            ('/brasilia-df/', 'Brasília (145 km)', '3'),
+            ('/luziania-go/', 'Luziânia (140 km)', '4'),
+            ('/formosa-go/', 'Formosa (180 km)', '5'),
+        ],
+        'cta_cidade': 'Anápolis',
+        'cta_cidade_url': 'An%C3%A1polis',
+        'stats_sede': '55 km de Goiânia',
+        'faq': [
+            ('A Movemáquinas atende Anapolis?',
+             'Sim. A Movemáquinas atende Anapolis com entrega de equipamentos em ate 24 horas a partir '
+             'da sede em Goiania (55 km pela BR-060). Atendemos o DAIA, o Polo JK, o Polo Farmaceutico '
+             'e todos os setores industriais e comerciais da cidade.'),
+            ('Qual o prazo de entrega em Anapolis?',
+             'O prazo padrao e de ate 24 horas a partir da confirmacao do pedido. Para contratos '
+             'recorrentes, programamos entregas e retiradas conforme necessidade do cliente. '
+             'Entre em contato pelo WhatsApp para confirmar disponibilidade e prazo.'),
+            ('Voces atendem empresas no DAIA de Anapolis?',
+             'Sim. O Distrito Agroindustrial de Anapolis (DAIA) e uma das nossas areas de atendimento '
+             'prioritarias. Temos clientes no DAIA com empilhadeiras, plataformas articuladas e '
+             'transpaleteiras em contratos de media e longa duracao — industrias farmaceuticas, '
+             'alimenticias, metalurgicas e de logistica.'),
+            ('Qual o valor do aluguel em Anapolis?',
+             'O valor depende do tipo de equipamento, duracao e necessidades especificas. Para Anapolis, '
+             'consulte pelo WhatsApp informando o equipamento desejado e a duracao estimada. '
+             'Apresentamos proposta personalizada.'),
+            ('A manutencao esta inclusa no contrato?',
+             'Sim. Toda manutencao preventiva e corretiva esta inclusa em todos os contratos, incluindo '
+             'Anapolis. Nosso suporte tecnico mobile cobre a cidade com tempo de resposta de ate 24 horas '
+             'em casos urgentes.'),
+        ],
+    },
+}
+
+
+SVG_ICONS = {
+    'casa': '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>',
+    'seta': '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="8 12 12 16 16 12"/><line x1="12" y1="8" x2="12" y2="16"/></svg>',
+    'caixa': '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/></svg>',
+    'predio': '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><polyline points="16 21 16 3 8 3 8 21"/></svg>',
+}
+
+ICON_COLORS = ['green', 'blue', 'amber', 'purple']
+ICON_KEYS = ['casa', 'seta', 'caixa', 'predio']
+
+WA_SVG = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>'
+
+PHONE_SVG = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-7.86-7.86 19.79 19.79 0 01-3.07-8.67A2 2 0 012.33 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.92a16 16 0 006.07 6.07l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>'
+
+LOC_SVG = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>'
+
+CHECK_SVG = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>'
+
+
+def build_hub(c):
+    slug = c['slug']
+    nome = c['nome']
+    ns = c['nome_simples']
+    estado = c['estado']
+    wa = c['wa_text']
+    cta = c['cta_cidade']
+
+    # Contexto cards
+    ctx_cards = ''
+    for i, (titulo, items) in enumerate(c['contexto_cards']):
+        li_items = ''.join(f'<li>{it}</li>' for it in items)
+        ctx_cards += f'''
+      <div class="contexto-card reveal reveal-stagger" style="--stagger:{i}">
+        <div class="contexto-card__icon contexto-card__icon--{ICON_COLORS[i]}">{SVG_ICONS[ICON_KEYS[i]]}</div>
+        <div class="contexto-card__title">{titulo}</div>
+        <ul class="contexto-card__list">{li_items}</ul>
+      </div>'''
+
+    # Cidades proximas
+    regioes = ''
+    for href, label, stagger in c['cidades_proximas']:
+        regioes += f'''
+      <a href="{href}" class="regiao-link reveal reveal-stagger" style="--stagger:{stagger}"><span class="regiao-link__icon">{LOC_SVG}</span>{label}</a>'''
+
+    # FAQ
+    faq_items = ''
+    for i, (q, a) in enumerate(c['faq']):
+        faq_items += f'''
+      <details class="faq__item reveal reveal-stagger" style="--stagger:{i}" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <summary class="faq__trigger"><h3 itemprop="name">{q}</h3><svg class="faq__icon" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></summary>
+        <div class="faq__answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><div itemprop="text">{a}</div></div>
+      </details>'''
+
+    return f'''<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aluguel de Equipamentos em {nome} | Movemáquinas</title>
+<meta name="description" content="Locação de empilhadeiras, plataformas elevatórias e transpaleteiras em {nome} — {estado}. Frota Clark, manutenção inclusa, entrega rápida. Movemáquinas.">
+<link rel="canonical" href="https://movemaquinas.com.br/{slug}/">
+<link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+<link rel="preload" href="/assets/fonts/inter-latin-w400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="styles-cbb654b2.css">
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){{w[l]=w[l]||[];w[l].push({{'gtm.start':
+new Date().getTime(),event:'gtm.js'}});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+}})(window,document,'script','dataLayer','GTM-WNLZBQ7Q');</script>
+<!-- End Google Tag Manager -->
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WNLZBQ7Q"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<header class="hdr">
+  <div class="hdr__in">
+    <a href="/"><picture><source srcset="/assets/logo-move-maquinas.webp" type="image/webp"><img src="/assets/logo-move-maquinas.png" alt="Movemáquinas" class="hdr__logo" width="130" height="32"></picture></a>
+    <button class="hdr__mob" aria-label="Menu" onclick="this.nextElementSibling.classList.toggle('open')">
+      <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+    </button>
+    <nav class="hdr__nav">
+      <a href="/">Início</a>
+      <a href="/servicos">Locação</a>
+      <a href="/venda-de-maquinas-clark">Venda de Máquinas Clark</a>
+      <a href="/goiania-go/curso-de-operador-de-empilhadeira">Curso Operador de Empilhadeira</a>
+      <a href="/cidades-atendidas">Cidades Atendidas</a>
+      <a href="/blog">Blog</a>
+      <a href="https://wa.me/5562982637300" class="hdr__cta" target="_blank" rel="noopener">Fale Conosco</a>
+    </nav>
+  </div>
+</header>
+
+<!-- BREADCRUMB -->
+<header role="banner">
+<nav class="breadcrumb" aria-label="Navegacao estrutural">
+  <div class="container">
+    <ol class="breadcrumb__list">
+      <li><a href="https://movemaquinas.com.br"><picture><source srcset="/assets/logo-move-maquinas.webp" type="image/webp"><img src="/assets/logo-move-maquinas.png" alt="Movemáquinas" class="breadcrumb__logo" width="110" height="22" loading="eager"></picture></a></li>
+      <li><span aria-current="page">{c['label_breadcrumb']}</span></li>
+    </ol>
+  </div>
+</nav>
+</header>
+
+<!-- HERO -->
+<section class="hero" aria-labelledby="hero-h1">
+  <div class="hero__bg" style="background:linear-gradient(135deg,#1A1A1A 0%,#1D9648 100%);"></div>
+  <div class="container">
+    <div class="hero__layout">
+      <div>
+        <div class="hero__badge"><span class="section-tag section-tag--white">{LOC_SVG} {c['label_breadcrumb']}</span></div>
+        <h1 id="hero-h1">Aluguel de Equipamentos em <em>{ns}</em></h1>
+        <p class="hero__lead">{c['hero_lead']}</p>
+        <p class="hero__text">{c['hero_text']}</p>
+        <div class="hero__actions">
+          <div class="hero__actions-col">
+            <a href="https://wa.me/5562982637300?text={wa}" class="btn btn--wa" target="_blank" rel="noopener noreferrer">{WA_SVG} Pedir orcamento agora</a>
+            <span class="hero__microcopy">{CHECK_SVG} Resposta em menos de 5 min</span>
+          </div>
+          <a href="tel:+556232111515" class="btn btn--outline-white">{PHONE_SVG} (62) 3211-1515</a>
+        </div>
+      </div>
+      <div class="hero__info">
+        <div class="hero__info-row">
+          <div class="hero__stat"><strong>{c['stats_sede']}</strong><span>da sede</span></div>
+          <div class="hero__stat"><strong>Mesmo dia</strong><span>entrega</span></div>
+          <div class="hero__stat"><strong>Seg-Sex</strong><span>08h-18h</span></div>
+          <div class="hero__stat"><strong>+500</strong><span>clientes</span></div>
+        </div>
+        <div class="hero__info-badges">
+          <div class="hero__info-badge">{CHECK_SVG} Manutencao inclusa</div>
+          <div class="hero__info-badge">{CHECK_SVG} +20 anos no mercado</div>
+        </div>
+        <div class="hero__info-clark">
+          <img src="https://clarkempilhadeiras.com.br/wp-content/uploads/2023/12/green-logo-200x74.png" alt="Clark" width="100" height="37" loading="eager">
+          <span>Distribuidor exclusivo GO</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST BAR -->
+<div class="trust-bar">
+  <div class="container">
+    <div class="trust-bar__inner">
+      <div class="trust-badge">{CHECK_SVG}<span>Distribuidor Clark</span></div>
+      <div class="trust-badge">{CHECK_SVG}<span>+20 Anos de Experiência</span></div>
+      <div class="trust-badge">{CHECK_SVG}<span>Manutenção Inclusa</span></div>
+      <div class="trust-badge">{CHECK_SVG}<span>Suporte em horário comercial</span></div>
+    </div>
+  </div>
+</div>
+
+<main id="conteudo">
+
+<!-- SERVICOS -->
+<section id="servicos" class="page-section" aria-labelledby="servicos-h2">
+  <div class="container">
+    <span class="section-tag">Serviços disponíveis</span>
+    <h2 id="servicos-h2">Servicos de locacao em <span>{ns}</span></h2>
+    <p style="max-width:720px;color:var(--color-text-light);margin-bottom:0">Todos os servicos incluem manutencao preventiva e corretiva, suporte em horário comercial e entrega rapida.</p>
+    <div class="servicos-grid">
+      <a href="/{slug}/aluguel-de-plataforma-elevatoria-articulada/" class="servico-card reveal reveal-stagger" style="--stagger:0">
+        <div class="servico-card__icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 17 10 11 4 5"/><line x1="12" y1="19" x2="20" y2="19"/></svg></div>
+        <div class="servico-card__name">Plataforma Articulada</div>
+        <p class="servico-card__desc">Acesso em areas com obstaculos e alcance lateral. Ideal para fachadas, obras verticais e manutencao industrial.</p>
+        <span class="servico-card__cta">Aluguel de Plataforma Articulada em {ns} <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg></span>
+      </a>
+      <a href="/{slug}/aluguel-de-plataforma-elevatoria-tesoura/" class="servico-card reveal reveal-stagger" style="--stagger:1">
+        <div class="servico-card__icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg></div>
+        <div class="servico-card__name">Plataforma Tesoura</div>
+        <p class="servico-card__desc">Elevacao vertical estavel para trabalhos em galpoes, construcao civil e manutencao predial. Modelos eletricos e diesel.</p>
+        <span class="servico-card__cta">Aluguel de Plataforma Tesoura em {ns} <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg></span>
+      </a>
+      <a href="/{slug}/aluguel-de-empilhadeira-combustao/" class="servico-card reveal reveal-stagger" style="--stagger:2">
+        <div class="servico-card__icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div>
+        <div class="servico-card__name">Empilhadeira</div>
+        <p class="servico-card__desc">Frota Clark com capacidade de 2.000 a 8.000 kg. GLP, eletrica e diesel para galpoes, industrias e centros de distribuicao.</p>
+        <span class="servico-card__cta">Aluguel de Empilhadeira em {ns} <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg></span>
+      </a>
+      <a href="/{slug}/aluguel-de-transpaleteira/" class="servico-card reveal reveal-stagger" style="--stagger:3">
+        <div class="servico-card__icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg></div>
+        <div class="servico-card__name">Transpaleteira</div>
+        <p class="servico-card__desc">Transpaleteiras eletricas Clark com bateria de litio. Movimentacao de paletes em camaras frias, docas e centros de distribuicao.</p>
+        <span class="servico-card__cta">Aluguel de Transpaleteira em {ns} <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg></span>
+      </a>
+      <a href="/{slug}/curso-de-operador-de-empilhadeira/" class="servico-card reveal reveal-stagger" style="--stagger:4">
+        <div class="servico-card__icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 1.657 2.686 3 6 3s6-1.343 6-3v-5"/></svg></div>
+        <div class="servico-card__name">Curso de Operador de Empilhadeira</div>
+        <p class="servico-card__desc">Capacitacao NR-11 para operadores. Formacao teorica e pratica com certificado valido — atende operadores de {ns}.</p>
+        <span class="servico-card__cta">Curso de Operador de Empilhadeira — {ns} <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg></span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- STATS BAR -->
+<div class="stats-bar" aria-hidden="true">
+  <div class="stats-bar__track">
+    <span>{CHECK_SVG} <strong>+20</strong> Anos de Experiência</span>
+    <span>{CHECK_SVG} <strong>+500</strong> Clientes Atendidos</span>
+    <span>{CHECK_SVG} <strong>Sede</strong> Própria em Goiânia</span>
+    <span>{CHECK_SVG} Suporte em <strong>horário comercial</strong></span>
+    <span>{CHECK_SVG} Entrega <strong>Rápida</strong></span>
+    <span>{CHECK_SVG} Distribuidor Exclusivo <strong>Clark</strong></span>
+    <span>{CHECK_SVG} <strong>+20</strong> Anos de Experiência</span>
+    <span>{CHECK_SVG} <strong>+500</strong> Clientes Atendidos</span>
+    <span>{CHECK_SVG} <strong>Sede</strong> Própria em Goiânia</span>
+    <span>{CHECK_SVG} Suporte em <strong>horário comercial</strong></span>
+    <span>{CHECK_SVG} Entrega <strong>Rápida</strong></span>
+    <span>{CHECK_SVG} Distribuidor Exclusivo <strong>Clark</strong></span>
+  </div>
+</div>
+
+<!-- CONTEXTO LOCAL -->
+<section id="contexto" class="page-section page-section--surface" aria-labelledby="contexto-h2">
+  <div class="container">
+    <span class="section-tag">{LOC_SVG} Cobertura local</span>
+    <h2 id="contexto-h2">{c['contexto_titulo']}</h2>
+    <p style="max-width:720px;color:var(--color-text-light);margin-bottom:0">{c['contexto_desc']}</p>
+    <div class="contexto-grid">{ctx_cards}
+    </div>
+  </div>
+</section>
+
+<!-- EQUIPAMENTOS -->
+<section id="equipamentos" class="page-section" aria-labelledby="equip-h2">
+  <div class="container">
+    <span class="section-tag">Frota disponivel</span>
+    <h2 id="equip-h2">Equipamentos para locacao em <span>{ns}</span></h2>
+    <p style="max-width:720px;color:var(--color-text-light);margin-bottom:0">Todos os equipamentos incluem manutencao preventiva e corretiva. Entrega rapida a partir de Goiania.</p>
+    <div class="equip-grid">
+      <div class="equip-card reveal reveal-stagger" style="--stagger:0">
+        <div class="equip-card__bar"></div>
+        <div class="equip-card__header"><div class="equip-card__name">Empilhadeiras</div><span class="equip-card__model">Clark L25 · Serie L</span></div>
+        <div class="equip-card__specs">
+          <div class="equip-card__spec"><span class="equip-card__spec-label">Motor</span><span class="equip-card__spec-value">GLP, eletrica e diesel</span></div>
+          <div class="equip-card__spec"><span class="equip-card__spec-label">Capacidade</span><span class="equip-card__spec-value">2.000 a 8.000 kg</span></div>
+          <div class="equip-card__spec"><span class="equip-card__spec-label">Aplicacao</span><span class="equip-card__spec-value">Galpoes, industrias, CDs</span></div>
+        </div>
+        <div class="equip-card__price">Consultar <small>/mes</small></div>
+      </div>
+      <div class="equip-card reveal reveal-stagger" style="--stagger:1">
+        <div class="equip-card__bar"></div>
+        <div class="equip-card__header"><div class="equip-card__name">Plataformas Tesoura</div><span class="equip-card__model">Scissor Lift · 8-15m</span></div>
+        <div class="equip-card__specs">
+          <div class="equip-card__spec"><span class="equip-card__spec-label">Motor</span><span class="equip-card__spec-value">Eletrica e diesel</span></div>
+          <div class="equip-card__spec"><span class="equip-card__spec-label">Altura</span><span class="equip-card__spec-value">8 a 15 metros</span></div>
+          <div class="equip-card__spec"><span class="equip-card__spec-label">Aplicacao</span><span class="equip-card__spec-value">Galpoes, construcao, manutencao</span></div>
+        </div>
+        <div class="equip-card__price">Consultar<small> — varia por altura</small></div>
+      </div>
+      <div class="equip-card reveal reveal-stagger" style="--stagger:2">
+        <div class="equip-card__bar"></div>
+        <div class="equip-card__header"><div class="equip-card__name">Plataformas Articuladas</div><span class="equip-card__model">Boom Lift · ate 15m</span></div>
+        <div class="equip-card__specs">
+          <div class="equip-card__spec"><span class="equip-card__spec-label">Alcance</span><span class="equip-card__spec-value">Ate 15 metros</span></div>
+          <div class="equip-card__spec"><span class="equip-card__spec-label">Vantagem</span><span class="equip-card__spec-value">Acesso em areas com obstaculos</span></div>
+          <div class="equip-card__spec"><span class="equip-card__spec-label">Aplicacao</span><span class="equip-card__spec-value">Obras, reformas, fachadas</span></div>
+        </div>
+        <div class="equip-card__price">Consultar<small> — varia por modelo</small></div>
+      </div>
+      <div class="equip-card reveal reveal-stagger" style="--stagger:3">
+        <div class="equip-card__bar"></div>
+        <div class="equip-card__header"><div class="equip-card__name">Transpaleteiras Eletricas</div><span class="equip-card__model">Clark WPio15 · Li+</span></div>
+        <div class="equip-card__specs">
+          <div class="equip-card__spec"><span class="equip-card__spec-label">Bateria</span><span class="equip-card__spec-value">Litio 24V — carregamento rapido</span></div>
+          <div class="equip-card__spec"><span class="equip-card__spec-label">Capacidade</span><span class="equip-card__spec-value">1.500 a 3.500 kg</span></div>
+          <div class="equip-card__spec"><span class="equip-card__spec-label">Aplicacao</span><span class="equip-card__spec-value">Camaras frias, docas, CDs</span></div>
+        </div>
+        <div class="equip-card__price">Consultar<small> — varia por modelo</small></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONVERSACIONAL -->
+<section id="cobertura-ia" class="page-section page-section--surface conversacional" aria-labelledby="conversacional-h2">
+  <div class="container">
+    <span class="section-tag">Atendimento local</span>
+    <h2 id="conversacional-h2">A Movemáquinas atende <span>{ns}</span>?</h2>
+    <div class="conversacional__box reveal">
+      <p>{c['conversacional']}</p>
+    </div>
+  </div>
+</section>
+
+<!-- CIDADES PROXIMAS -->
+<nav aria-label="Cidades proximas atendidas">
+<section id="outras-regioes" class="page-section" aria-labelledby="regioes-h2">
+  <div class="container">
+    <span class="section-tag">{LOC_SVG} Cidades próximas</span>
+    <h2 id="regioes-h2">Atendemos também <span>outras cidades</span></h2>
+    <p style="max-width:680px;color:var(--color-text-light);margin-bottom:var(--space-lg)">Além de {ns}, a Movemáquinas atende toda a região com frota Clark e entrega rápida.</p>
+    <div class="regioes-grid">{regioes}
+    </div>
+    <p style="margin-top:var(--space-md);font-size:var(--font-small);color:var(--color-muted);"><a href="/cidades-atendidas/" style="color:var(--color-primary);font-weight:700;">Ver todas as cidades atendidas →</a></p>
+  </div>
+</section>
+</nav>
+
+<!-- FAQ -->
+<section id="faq" class="faq page-section" aria-labelledby="faq-h2" itemscope itemtype="https://schema.org/FAQPage">
+  <div class="container">
+    <span class="section-tag">FAQ</span>
+    <h2 id="faq-h2">Perguntas frequentes sobre locacao em <span>{ns}</span></h2>
+    <div class="faq__list">{faq_items}
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- CTA FINAL -->
+<footer role="contentinfo">
+<section id="orcamento" class="cta-final" aria-labelledby="cta-h2">
+  <div class="container">
+    <span class="section-tag section-tag--white">Orcamento rapido</span>
+    <h2 id="cta-h2">Locacao de equipamentos em {cta}</h2>
+    <p class="cta-final__sub">Fale agora com nosso time. Confirmamos disponibilidade e prazo de entrega em minutos.</p>
+    <div class="cta-final__actions">
+      <a href="https://wa.me/5562982637300?text={wa}" class="btn btn--wa" target="_blank" rel="noopener noreferrer">{WA_SVG} WhatsApp — resposta imediata</a>
+      <a href="tel:+556232111515" class="btn btn--outline-white">{PHONE_SVG} (62) 3211-1515</a>
+    </div>
+    <p class="cta-final__note">Movemáquinas · Av. Eurico Viana, 4913 — Parque das Flores, Goiania - GO · CNPJ 32.428.258/0001-80</p>
+  </div>
+</section>
+</footer>
+
+<!-- STICKY MOBILE CTA -->
+<div class="sticky-cta" aria-hidden="true">
+  <div class="sticky-cta__inner">
+    <a href="https://wa.me/5562982637300?text={wa}" class="btn btn--wa" target="_blank" rel="noopener noreferrer">{WA_SVG} Pedir orcamento</a>
+    <a href="tel:+556232111515" class="btn btn--outline">{PHONE_SVG} Ligar</a>
+  </div>
+</div>
+
+<!-- FLOATING WA -->
+<a href="https://wa.me/5562982637300?text={wa}" class="float-wa" target="_blank" rel="noopener noreferrer" aria-label="Falar pelo WhatsApp">{WA_SVG}</a>
+
+<script>
+(function(){{
+  function initReveal(){{
+    var els=document.querySelectorAll('.reveal');
+    if(!els.length) return;
+    if('IntersectionObserver' in window){{
+      var io=new IntersectionObserver(function(entries){{
+        entries.forEach(function(e){{
+          if(e.isIntersecting){{
+            requestAnimationFrame(function(){{ e.target.classList.add('is-visible'); }});
+            io.unobserve(e.target);
+          }}
+        }});
+      }},{{threshold:0.08, rootMargin:'0px 0px -30px 0px'}});
+      els.forEach(function(el){{ io.observe(el); }});
+    }} else {{
+      els.forEach(function(el){{ el.classList.add('is-visible'); }});
+    }}
+  }}
+  if(document.readyState==='loading'){{
+    document.addEventListener('DOMContentLoaded', initReveal);
+  }} else {{
+    setTimeout(initReveal, 100);
+  }}
+  var sc=document.querySelector('.sticky-cta'),h=document.querySelector('.hero');
+  if(sc&&h&&window.matchMedia('(max-width:767px)').matches){{
+    var sio=new IntersectionObserver(function(e){{
+      if(!e[0].isIntersecting) sc.classList.add('is-visible');
+      else sc.classList.remove('is-visible');
+    }},{{threshold:0}});
+    sio.observe(h);
+  }}
+}})();
+</script>
+
+<footer class="ft">
+<div class="ft__grid">
+  <div class="ft__brand">
+    <picture><source srcset="/assets/logo-move-maquinas.webp" type="image/webp"><img src="/assets/logo-move-maquinas.png" alt="Movemáquinas" class="ft__logo" width="130" height="32" loading="lazy"></picture>
+    <p>Mais de 20 anos oferecendo soluções completas em empilhadeiras e equipamentos industriais em Goiás, DF, Tocantins e Mato Grosso.</p>
+    <div class="ft__social">
+      <a href="https://www.instagram.com/move.maquinas/" target="_blank" rel="noopener" aria-label="Instagram"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg></a>
+      <a href="https://www.facebook.com/movemaquinas" target="_blank" rel="noopener" aria-label="Facebook"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
+      <a href="https://www.youtube.com/@movemaquinas" target="_blank" rel="noopener" aria-label="YouTube"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="3"/><polygon points="10,9 16,12 10,15" fill="currentColor" stroke="none"/></svg></a>
+    </div>
+  </div>
+  <div class="ft__col"><h4>Serviços</h4><ul>
+    <li><a href="/goiania-go/aluguel-de-plataforma-elevatoria-articulada">Plataforma Articulada</a></li>
+    <li><a href="/goiania-go/aluguel-de-plataforma-elevatoria-tesoura">Plataforma Tesoura</a></li>
+    <li><a href="/goiania-go/aluguel-de-empilhadeira-combustao">Empilhadeira</a></li>
+    <li><a href="/goiania-go/aluguel-de-transpaleteira">Transpaleteira Elétrica</a></li>
+    <li><a href="/venda-de-maquinas-clark">Venda de Máquinas Clark</a></li>
+    <li><a href="/goiania-go/curso-de-operador-de-empilhadeira">Curso de Operador</a></li>
+  </ul></div>
+  <div class="ft__col"><h4>Links Rápidos</h4><ul>
+    <li><a href="/">Início</a></li>
+    <li><a href="/cidades-atendidas">Cidades Atendidas</a></li>
+    <li><a href="/blog">Blog</a></li>
+    <li><a href="/contato">Contato</a></li>
+  </ul></div>
+  <div class="ft__col"><h4>Contato</h4>
+    <div class="ft__ci"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.11 13.8 19.79 19.79 0 01.04 5.14 2 2 0 012 3h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 10.92a16 16 0 006.07 6.07l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg><p><a href="https://wa.me/5562982637300">(62) 98263-7300</a> — Gabriel<br><a href="https://wa.me/5562981753350">(62) 98175-3350</a> — Kaio</p></div>
+    <div class="ft__ci"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><p><a href="mailto:contato@movemaquinas.com.br">contato@movemaquinas.com.br</a></p></div>
+    <div class="ft__ci"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg><p>Av. Eurico Viana, 4913<br>Goiânia - GO, 74593-590</p></div>
+  </div>
+</div>
+<div class="ft__bot">
+  <p>&copy; 2026 Movemáquinas. CNPJ: 32.428.258/0001-80</p>
+  <div style="display:flex;gap:16px"><a href="/politica-de-privacidade">Privacidade</a><a href="/termos-de-uso">Termos</a></div>
+</div>
+</footer>
+</body>
+</html>
+'''
+
+
+print('=== Criando hubs faltantes ===')
+for slug, data in CITIES.items():
+    filepath = os.path.join(ROOT, slug, 'index.html')
+    html = build_hub(data)
+    with open(filepath, 'w', encoding='utf-8') as f:
+        f.write(html)
+    size = len(html)
+    print(f'  CREATED: {slug} ({size:,} bytes)')
+
+print('\nDone.')
