@@ -232,6 +232,40 @@ p { color: var(--color-text-light); line-height: 1.8; }
 }
 </script>
 
+<script>(function(){
+  var p=new URLSearchParams(window.location.search),k=['utm_source','utm_medium','utm_campaign','utm_content','utm_term'],s=JSON.parse(sessionStorage.getItem('utm_data')||'{}'),n=false;
+  k.forEach(function(x){if(p.get(x)){s[x]=p.get(x);n=true;}});
+  if(n){sessionStorage.setItem('utm_data',JSON.stringify(s));}
+  else if(!s.utm_source){
+    var ref=document.referrer,h=ref?new URL(ref).hostname:'';
+    if(/google\./i.test(h)){s.utm_source='google';s.utm_medium='organic';}
+    else if(/bing\.|yahoo\.|duckduckgo\./i.test(h)){s.utm_source='microsoft';s.utm_medium='organic';}
+    else if(/facebook\.|fb\./i.test(h)){s.utm_source='facebook';s.utm_medium='social';}
+    else if(/instagram\./i.test(h)){s.utm_source='instagram';s.utm_medium='social';}
+    else if(/tiktok\./i.test(h)){s.utm_source='tiktok';s.utm_medium='social';}
+    else if(/linkedin\./i.test(h)){s.utm_source='linkedin';s.utm_medium='social';}
+    else if(ref){s.utm_source='referral';s.utm_medium='referral';}
+    else{s.utm_source='direct';s.utm_medium='organic';}
+    sessionStorage.setItem('utm_data',JSON.stringify(s));
+  }
+})();</script>
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1486077345864143');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1486077345864143&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
 </head>
 <body>
 
@@ -1213,7 +1247,37 @@ p { color: var(--color-text-light); line-height: 1.8; }
     msg += 'Quando iniciar: ' + inicio + '\n';
     msg += 'Já tem empilhadeira: ' + empilhadeira + '\n';
     msg += 'Cidade: ' + cidade;
-    window.open('https://wa.me/5562982637300?text=' + encodeURIComponent(msg), '_blank', 'noopener,noreferrer');
+    var _utms = (function(){ try { return JSON.parse(sessionStorage.getItem('utm_data')||'{}'); } catch(e){ return {}; } })();
+    var _crmMediumMap = { cpc:'paid',ppc:'paid',paid:'paid',paid_social:'paid',banner:'paid',display:'paid',organic:'organic',referral:'organic',email:'organic',social:'organic' };
+    var _crmMedium = _crmMediumMap[_utms.medium] || 'organic';
+    var _crmSourceMap = { google:'google','google-ads':'google',googleads:'google',meta:'meta',facebook:'meta',instagram:'meta',tiktok:'tiktok',linkedin:'linkedin',microsoft:'microsoft',bing:'microsoft',email:'email',referral:'referral',partner:'partner',offline:'offline',outbound:'outbound',organic:'organic',direct:'direct' };
+    var _crmSource = _crmSourceMap[_utms.source] || (_utms.source && _utms.source !== 'direct' ? 'referral' : 'direct');
+    var _crmChannelMap = { google:'google','google-ads':'google',googleads:'google',microsoft:'google',meta:'facebook',facebook:'facebook',instagram:'instagram',tiktok:'tiktok',linkedin:'linkedin',email:'email',phone:'phone',referral:'other',organic:'other',direct:'other' };
+    var _crmChannel = _crmChannelMap[_utms.source] || 'other';
+    var _isPaid = _crmMedium === 'paid';
+    var _segMap = { google: _isPaid ? 'curso-empilhadeira-google-ads' : 'curso-empilhadeira-google-organico', microsoft: _isPaid ? 'curso-empilhadeira-google-ads' : 'curso-empilhadeira-google-organico', facebook: _isPaid ? 'curso-empilhadeira-facebook-ads' : 'curso-empilhadeira-facebook-organico', meta: _isPaid ? 'curso-empilhadeira-facebook-ads' : 'curso-empilhadeira-facebook-organico', instagram: _isPaid ? 'curso-empilhadeira-instagram-ads' : 'curso-empilhadeira-instagram-organico', tiktok: 'curso-empilhadeira-tiktok', linkedin: 'curso-empilhadeira-linkedin', email: 'curso-empilhadeira-email', referral: 'curso-empilhadeira-referral' };
+    var _crmSegment = _segMap[_utms.source] || (_utms.source && _utms.source !== 'direct' ? 'curso-empilhadeira-outro' : 'curso-empilhadeira-direto');
+    var _leadName = (typeof nome !== 'undefined' ? nome : '') || '';
+    var _leadTel = (typeof tel !== 'undefined' ? tel : '') || '';
+    var _leadDesc = 'Curso Operador de Empilhadeira NR-11 | ' + (_utms.source && _utms.source !== 'direct' ? 'Source: ' + _utms.source : 'Direto') + (_utms.medium && _utms.medium !== 'organic' ? ' | Medium: ' + _utms.medium : '') + (_utms.campaign ? ' | Campanha: ' + _utms.campaign : '');
+    var _waUrl = 'https://wa.me/5562982637300?text=' + encodeURIComponent(msg);
+    var _btn = btn;
+    var _btnOriginal = _btn ? _btn.innerHTML : null;
+    if (_btn) { _btn.disabled = true; _btn.textContent = 'Enviando...'; }
+    function _abrir() {
+      if (typeof fbq === 'function') {
+        fbq('track', 'Lead', { content_name: 'Curso Operador de Empilhadeira NR-11', content_category: 'curso', value: 0, currency: 'BRL' });
+      }
+      window.open(_waUrl, '_blank', 'noopener,noreferrer');
+      if (_btn) { _btn.disabled = false; _btn.innerHTML = _btnOriginal; }
+    }
+    fetch('https://backend.umdhub.com.br/api/leads/public/69b2f6d262e629a2c7a8d35a', {
+      method: 'POST', keepalive: true,
+      headers: { 'Content-Type': 'application/json', 'X-API-Key': 'sk_live_719213e5f48228a63a4be9aa357a65dc5568f3b740008a98d14b58229d1f7150' },
+      body: JSON.stringify({ segment: _crmSegment, description: _leadDesc, source: _crmSource, medium: _crmMedium, channel: _crmChannel, priority: 'medium', temperature: 'cold', qualifyStatus: 'pending', budget: 0, name: _leadName, company: '', position: '', emails: [], phones: [_leadTel] })
+    })
+    .then(_abrir).catch(_abrir);
+    return;
   }
   var forms = document.querySelectorAll('#quoteForm, #quoteFormMobile');
   forms.forEach(function(f) { f.addEventListener('submit', handleQuoteForm); });

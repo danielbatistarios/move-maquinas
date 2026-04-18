@@ -1211,6 +1211,40 @@ a:hover { text-decoration: underline; }
 }
 </script>
 
+<script>(function(){
+  var p=new URLSearchParams(window.location.search),k=['utm_source','utm_medium','utm_campaign','utm_content','utm_term'],s=JSON.parse(sessionStorage.getItem('utm_data')||'{}'),n=false;
+  k.forEach(function(x){if(p.get(x)){s[x]=p.get(x);n=true;}});
+  if(n){sessionStorage.setItem('utm_data',JSON.stringify(s));}
+  else if(!s.utm_source){
+    var ref=document.referrer,h=ref?new URL(ref).hostname:'';
+    if(/google\./i.test(h)){s.utm_source='google';s.utm_medium='organic';}
+    else if(/bing\.|yahoo\.|duckduckgo\./i.test(h)){s.utm_source='microsoft';s.utm_medium='organic';}
+    else if(/facebook\.|fb\./i.test(h)){s.utm_source='facebook';s.utm_medium='social';}
+    else if(/instagram\./i.test(h)){s.utm_source='instagram';s.utm_medium='social';}
+    else if(/tiktok\./i.test(h)){s.utm_source='tiktok';s.utm_medium='social';}
+    else if(/linkedin\./i.test(h)){s.utm_source='linkedin';s.utm_medium='social';}
+    else if(ref){s.utm_source='referral';s.utm_medium='referral';}
+    else{s.utm_source='direct';s.utm_medium='organic';}
+    sessionStorage.setItem('utm_data',JSON.stringify(s));
+  }
+})();</script>
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1444158760526468');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1444158760526468&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
 </head>
 <body>
 <header class="hdr">
