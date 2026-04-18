@@ -1,0 +1,16 @@
+{
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "f=$(jq -r '.tool_input.file_path'); echo \"$f\" | grep -q 'move-maquinas-seo/.*\\.html$' && python3 /Users/jrios/move-maquinas-seo/generate-sitemap.py 2>/dev/null || true",
+            "statusMessage": "Atualizando sitemap.xml..."
+          }
+        ]
+      }
+    ]
+  }
+}
