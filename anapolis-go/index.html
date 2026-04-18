@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Aluguel de Equipamentos em Anápolis | Movemáquinas</title>
-<meta name="description" content="Locação de empilhadeiras, plataformas elevatórias e transpaleteiras em Anápolis — GO. Frota Clark, manutenção inclusa, entrega rápida. Movemáquinas.">
+<meta name="description" content="Locação de empilhadeiras, plataformas elevatórias e transpaleteiras em Anápolis, GO. Frota Clark, manutenção inclusa, entrega rápida. Movemáquinas.">
 <link rel="canonical" href="https://movemaquinas.com.br/anapolis-go/">
 <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
 <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
@@ -53,7 +53,22 @@ p{color:var(--color-text-light);line-height:1.8}
 .hero h1{color:var(--color-white);margin-bottom:var(--space-md)}
 .hero h1 em{color:var(--color-primary);font-style:normal}
 .hero__lead{font-size:1.05rem;color:rgba(255,255,255,.85);margin-bottom:var(--space-sm);line-height:1.8}
+.hero__text{color:rgba(255,255,255,.75);line-height:1.8;margin-bottom:var(--space-lg)}
 .hero__actions{display:flex;gap:var(--space-sm);flex-wrap:wrap;align-items:start;margin-bottom:var(--space-lg)}
+.hero__actions-col{display:flex;flex-direction:column;gap:4px}
+.hero__microcopy{font-size:11px;color:rgba(255,255,255,.5);font-weight:600;padding-left:4px;display:flex;align-items:center;gap:4px}
+.hero__microcopy svg{color:var(--color-primary)}
+.hero__info{background:rgba(255,255,255,.07);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border:1px solid rgba(255,255,255,.12);border-radius:var(--radius-lg);padding:var(--space-lg);display:flex;flex-direction:column;gap:var(--space-md)}
+.hero__info-row{display:flex;gap:var(--space-lg)}
+.hero__stat{text-align:center;flex:1}
+.hero__stat strong{display:block;font-size:1.6rem;font-weight:900;color:#fff;line-height:1}
+.hero__stat span{font-size:11px;color:rgba(255,255,255,.55);font-weight:600;text-transform:uppercase;letter-spacing:.04em}
+.hero__info-badges{display:flex;gap:10px;flex-wrap:wrap}
+.hero__info-badge{display:flex;align-items:center;gap:8px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.1);border-radius:var(--radius);padding:8px 12px;font-size:12px;font-weight:700;color:rgba(255,255,255,.85);flex:1;min-width:140px}
+.hero__info-badge svg{color:var(--color-primary);flex-shrink:0}
+.hero__info-clark{display:flex;align-items:center;justify-content:center;gap:10px;padding-top:8px;border-top:1px solid rgba(255,255,255,.08)}
+.hero__info-clark img{opacity:.6}
+.hero__info-clark span{font-size:11px;color:rgba(255,255,255,.4);font-weight:500}
 .hero__card{background:var(--color-white);border-radius:var(--radius-lg);padding:var(--space-lg);box-shadow:var(--shadow-lg);color:var(--color-text)}
 .hero__card-title{color:var(--color-text);margin-bottom:var(--space-md);font-size:1.1rem;font-weight:700}
 .hero__card-field{margin-bottom:var(--space-md)}
@@ -62,7 +77,7 @@ p{color:var(--color-text-light);line-height:1.8}
 .hero__card-field select:focus,.hero__card-field input:focus{border-color:var(--color-primary);outline:none}
 .hero__card .btn{width:100%;justify-content:center}
 .hero__card-note{font-size:var(--font-caption);color:var(--color-muted);text-align:center;margin-top:var(--space-sm)}
-@media(max-width:768px){.hero__layout{grid-template-columns:1fr}.hero__card{display:none}}
+@media(max-width:768px){.hero__layout{grid-template-columns:1fr}.hero__info{display:none}.hero__card{display:none}}
 </style>
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -96,17 +111,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </header>
 
-<!-- BREADCRUMB -->
-<header role="banner">
-<nav class="breadcrumb" aria-label="Navegacao estrutural">
-  <div class="container">
-    <ol class="breadcrumb__list">
-      <li><a href="https://movemaquinas.com.br"><picture><source srcset="/assets/logo-move-maquinas.webp" type="image/webp"><img src="/assets/logo-move-maquinas.png" alt="Movemáquinas" class="breadcrumb__logo" width="110" height="22" loading="eager"></picture></a></li>
-      <li><span aria-current="page">Anápolis — GO</span></li>
-    </ol>
-  </div>
-</nav>
-</header>
 
 <!-- HERO -->
 <section class="hero" aria-labelledby="hero-h1">
@@ -114,10 +118,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="container">
     <div class="hero__layout">
       <div>
-        <div class="hero__badge"><span class="section-tag section-tag--white"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Anápolis — GO</span></div>
+        <div class="hero__badge"><span class="section-tag section-tag--white"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Anápolis, GO</span></div>
         <h1 id="hero-h1">Aluguel de Equipamentos em <em>Anapolis</em></h1>
-        <p class="hero__lead"><a href="https://pt.wikipedia.org/wiki/An%C3%A1polis" target="_blank" rel="noopener noreferrer" style="color:var(--color-primary);font-weight:700;text-decoration:underline;">Anapolis</a> e a terceira maior cidade de Goias e sede do maior distrito industrial do Centro-Oeste — o DAIA, com mais de 200 empresas. A cidade e um hub logistico estrategico entre Goiania e Brasilia pela BR-060. A Movemáquinas atende Anapolis a partir da sede em Goiania, a 55 km, com locacao de empilhadeiras, plataformas elevatorias e transpaleteiras. Entrega em ate 24 horas com manutencao inclusa e suporte tecnico dedicado.</p>
-        <p class="hero__text">Do DAIA ao Polo JK, do Corredor da BR-060 ao Setor Norte Industrial — a demanda por equipamentos de movimentacao acompanha o ritmo da cidade mais industrial de Goias. Contratos mensais a partir de Consultar com frota Clark e entrega em ate 24 horas.</p>
+        <p class="hero__lead"><a href="https://pt.wikipedia.org/wiki/An%C3%A1polis" target="_blank" rel="noopener noreferrer" style="color:var(--color-primary);font-weight:700;text-decoration:underline;">Anapolis</a> e a terceira maior cidade de Goias e sede do maior distrito industrial do Centro-Oeste, o DAIA, com mais de 200 empresas. A cidade e um hub logistico estrategico entre Goiania e Brasilia pela BR-060. A Movemáquinas atende Anapolis a partir da sede em Goiania, a 55 km, com locacao de empilhadeiras, plataformas elevatorias e transpaleteiras. Entrega em ate 24 horas com manutencao inclusa e suporte tecnico dedicado.</p>
+        <p class="hero__text">Do DAIA ao Polo JK, do Corredor da BR-060 ao Setor Norte Industrial, a demanda por equipamentos de movimentacao acompanha o ritmo da cidade mais industrial de Goias. Contratos mensais a partir de Consultar com frota Clark e entrega em ate 24 horas.</p>
         <div class="hero__actions">
           <div class="hero__actions-col">
             <a href="https://wa.me/5562982637300?text=Ol%C3%A1%2C+quero+or%C3%A7amento+de+equipamentos+em+An%C3%A1polis" class="btn btn--wa" target="_blank" rel="noopener noreferrer"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg> Pedir orcamento agora</a>
@@ -194,8 +198,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <a href="/anapolis-go/curso-de-operador-de-empilhadeira/" class="servico-card reveal reveal-stagger" style="--stagger:4">
         <div class="servico-card__icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 1.657 2.686 3 6 3s6-1.343 6-3v-5"/></svg></div>
         <div class="servico-card__name">Curso de Operador de Empilhadeira</div>
-        <p class="servico-card__desc">Capacitacao NR-11 para operadores. Formacao teorica e pratica com certificado valido — atende operadores de Anapolis.</p>
-        <span class="servico-card__cta">Curso de Operador de Empilhadeira — Anapolis <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg></span>
+        <p class="servico-card__desc">Capacitacao NR-11 para operadores. Formacao teorica e pratica com certificado valido, atende operadores de Anapolis.</p>
+        <span class="servico-card__cta">Curso de Operador de Empilhadeira, Anapolis <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg></span>
       </a>
     </div>
   </div>
@@ -224,7 +228,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="container">
     <span class="section-tag"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Cobertura local</span>
     <h2 id="contexto-h2">Atendimento em toda Anapolis</h2>
-    <p style="max-width:720px;color:var(--color-text-light);margin-bottom:0">A Movemáquinas atende Anapolis com entrega de equipamentos em ate 24 horas — cobrindo todos os setores industriais, comerciais e logisticos da cidade.</p>
+    <p style="max-width:720px;color:var(--color-text-light);margin-bottom:0">A Movemáquinas atende Anapolis com entrega de equipamentos em ate 24 horas, cobrindo todos os setores industriais, comerciais e logisticos da cidade.</p>
     <div class="contexto-grid">
       <div class="contexto-card reveal reveal-stagger" style="--stagger:0">
         <div class="contexto-card__icon contexto-card__icon--green"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
@@ -275,7 +279,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <div class="equip-card__spec"><span class="equip-card__spec-label">Altura</span><span class="equip-card__spec-value">8 a 15 metros</span></div>
           <div class="equip-card__spec"><span class="equip-card__spec-label">Aplicacao</span><span class="equip-card__spec-value">Galpoes, construcao, manutencao</span></div>
         </div>
-        <div class="equip-card__price">Consultar<small> — varia por altura</small></div>
+        <div class="equip-card__price">Consultar<small>, varia por altura</small></div>
       </div>
       <div class="equip-card reveal reveal-stagger" style="--stagger:2">
         <div class="equip-card__bar"></div>
@@ -285,17 +289,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <div class="equip-card__spec"><span class="equip-card__spec-label">Vantagem</span><span class="equip-card__spec-value">Acesso em areas com obstaculos</span></div>
           <div class="equip-card__spec"><span class="equip-card__spec-label">Aplicacao</span><span class="equip-card__spec-value">Obras, reformas, fachadas</span></div>
         </div>
-        <div class="equip-card__price">Consultar<small> — varia por modelo</small></div>
+        <div class="equip-card__price">Consultar<small>, varia por modelo</small></div>
       </div>
       <div class="equip-card reveal reveal-stagger" style="--stagger:3">
         <div class="equip-card__bar"></div>
         <div class="equip-card__header"><div class="equip-card__name">Transpaleteiras Eletricas</div><span class="equip-card__model">Clark WPio15 · Li+</span></div>
         <div class="equip-card__specs">
-          <div class="equip-card__spec"><span class="equip-card__spec-label">Bateria</span><span class="equip-card__spec-value">Litio 24V — carregamento rapido</span></div>
+          <div class="equip-card__spec"><span class="equip-card__spec-label">Bateria</span><span class="equip-card__spec-value">Litio 24V, carregamento rapido</span></div>
           <div class="equip-card__spec"><span class="equip-card__spec-label">Capacidade</span><span class="equip-card__spec-value">1.500 a 3.500 kg</span></div>
           <div class="equip-card__spec"><span class="equip-card__spec-label">Aplicacao</span><span class="equip-card__spec-value">Camaras frias, docas, CDs</span></div>
         </div>
-        <div class="equip-card__price">Consultar<small> — varia por modelo</small></div>
+        <div class="equip-card__price">Consultar<small>, varia por modelo</small></div>
       </div>
     </div>
   </div>
@@ -307,7 +311,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <span class="section-tag">Atendimento local</span>
     <h2 id="conversacional-h2">A Movemáquinas atende <span>Anapolis</span>?</h2>
     <div class="conversacional__box reveal">
-      <p><strong>Anapolis e a capital industrial de Goias.</strong> Com o maior distrito agroindustrial do Centro-Oeste (DAIA) e um polo farmaceutico de nivel nacional, a cidade demanda equipamentos de movimentacao o ano todo. A Movemáquinas atende a partir da sede em Goiania — 55 km pela BR-060 — com entrega em ate 24 horas e suporte tecnico mobile. Atendemos empresas do DAIA, do Polo JK e do corredor logistico da BR-060/BR-153. Fale pelo WhatsApp ou ligue: <a href="tel:+556232111515" style="color:var(--color-primary);font-weight:700;">(62) 3211-1515</a>.</p>
+      <p><strong>Anapolis e a capital industrial de Goias.</strong> Com o maior distrito agroindustrial do Centro-Oeste (DAIA) e um polo farmaceutico de nivel nacional, a cidade demanda equipamentos de movimentacao o ano todo. A Movemáquinas atende a partir da sede em Goiania, 55 km pela BR-060, com entrega em ate 24 horas e suporte tecnico mobile. Atendemos empresas do DAIA, do Polo JK e do corredor logistico da BR-060/BR-153. Fale pelo WhatsApp ou ligue: <a href="tel:+556232111515" style="color:var(--color-primary);font-weight:700;">(62) 3211-1515</a>.</p>
     </div>
   </div>
 </section>
@@ -348,7 +352,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </details>
       <details class="faq__item reveal reveal-stagger" style="--stagger:2" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
         <summary class="faq__trigger"><h3 itemprop="name">Voces atendem empresas no DAIA de Anapolis?</h3><svg class="faq__icon" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></summary>
-        <div class="faq__answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><div itemprop="text">Sim. O Distrito Agroindustrial de Anapolis (DAIA) e uma das nossas areas de atendimento prioritarias. Temos clientes no DAIA com empilhadeiras, plataformas articuladas e transpaleteiras em contratos de media e longa duracao — industrias farmaceuticas, alimenticias, metalurgicas e de logistica.</div></div>
+        <div class="faq__answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><div itemprop="text">Sim. O Distrito Agroindustrial de Anapolis (DAIA) e uma das nossas areas de atendimento prioritarias. Temos clientes no DAIA com empilhadeiras, plataformas articuladas e transpaleteiras em contratos de media e longa duracao, industrias farmaceuticas, alimenticias, metalurgicas e de logistica.</div></div>
       </details>
       <details class="faq__item reveal reveal-stagger" style="--stagger:3" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
         <summary class="faq__trigger"><h3 itemprop="name">Qual o valor do aluguel em Anapolis?</h3><svg class="faq__icon" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></summary>
@@ -372,10 +376,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <h2 id="cta-h2">Locacao de equipamentos em Anápolis</h2>
     <p class="cta-final__sub">Fale agora com nosso time. Confirmamos disponibilidade e prazo de entrega em minutos.</p>
     <div class="cta-final__actions">
-      <a href="https://wa.me/5562982637300?text=Ol%C3%A1%2C+quero+or%C3%A7amento+de+equipamentos+em+An%C3%A1polis" class="btn btn--wa" target="_blank" rel="noopener noreferrer"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg> WhatsApp — resposta imediata</a>
+      <a href="https://wa.me/5562982637300?text=Ol%C3%A1%2C+quero+or%C3%A7amento+de+equipamentos+em+An%C3%A1polis" class="btn btn--wa" target="_blank" rel="noopener noreferrer"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg> WhatsApp, resposta imediata</a>
       <a href="tel:+556232111515" class="btn btn--outline-white"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-7.86-7.86 19.79 19.79 0 01-3.07-8.67A2 2 0 012.33 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.92a16 16 0 006.07 6.07l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg> (62) 3211-1515</a>
     </div>
-    <p class="cta-final__note">Movemáquinas · Av. Eurico Viana, 4913 — Parque das Flores, Goiania - GO · CNPJ 32.428.258/0001-80</p>
+    <p class="cta-final__note">Movemáquinas · Av. Eurico Viana, 4913, Parque das Flores, Goiania - GO · CNPJ 32.428.258/0001-80</p>
   </div>
 </section>
 </footer>
@@ -452,7 +456,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <li><a href="/contato">Contato</a></li>
   </ul></div>
   <div class="ft__col"><h4>Contato</h4>
-    <div class="ft__ci"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.11 13.8 19.79 19.79 0 01.04 5.14 2 2 0 012 3h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 10.92a16 16 0 006.07 6.07l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg><p><a href="https://wa.me/5562982637300">(62) 98263-7300</a> — Gabriel<br><a href="https://wa.me/5562981753350">(62) 98175-3350</a> — Kaio</p></div>
+    <div class="ft__ci"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.11 13.8 19.79 19.79 0 01.04 5.14 2 2 0 012 3h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 10.92a16 16 0 006.07 6.07l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg><p><a href="https://wa.me/5562982637300">(62) 98263-7300</a>, Gabriel<br><a href="https://wa.me/5562981753350">(62) 98175-3350</a>, Kaio</p></div>
     <div class="ft__ci"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><p><a href="mailto:contato@movemaquinas.com.br">contato@movemaquinas.com.br</a></p></div>
     <div class="ft__ci"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg><p>Av. Eurico Viana, 4913<br>Goiânia - GO, 74593-590</p></div>
   </div>

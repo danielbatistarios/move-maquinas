@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Aluguel de Equipamentos em Uruaçu | Movemáquinas</title>
-<meta name="description" content="Locação de empilhadeiras, plataformas elevatórias e transpaleteiras em Uruaçu — GO. Frota Clark, manutenção inclusa, entrega rápida. Movemáquinas.">
+<meta name="description" content="Locação de empilhadeiras, plataformas elevatórias e transpaleteiras em Uruaçu, GO. Frota Clark, manutenção inclusa, entrega rápida. Movemáquinas.">
 <link rel="canonical" href="https://movemaquinas.com.br/uruacu-go/">
 <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
 <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
@@ -53,7 +53,22 @@ p{color:var(--color-text-light);line-height:1.8}
 .hero h1{color:var(--color-white);margin-bottom:var(--space-md)}
 .hero h1 em{color:var(--color-primary);font-style:normal}
 .hero__lead{font-size:1.05rem;color:rgba(255,255,255,.85);margin-bottom:var(--space-sm);line-height:1.8}
+.hero__text{color:rgba(255,255,255,.75);line-height:1.8;margin-bottom:var(--space-lg)}
 .hero__actions{display:flex;gap:var(--space-sm);flex-wrap:wrap;align-items:start;margin-bottom:var(--space-lg)}
+.hero__actions-col{display:flex;flex-direction:column;gap:4px}
+.hero__microcopy{font-size:11px;color:rgba(255,255,255,.5);font-weight:600;padding-left:4px;display:flex;align-items:center;gap:4px}
+.hero__microcopy svg{color:var(--color-primary)}
+.hero__info{background:rgba(255,255,255,.07);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border:1px solid rgba(255,255,255,.12);border-radius:var(--radius-lg);padding:var(--space-lg);display:flex;flex-direction:column;gap:var(--space-md)}
+.hero__info-row{display:flex;gap:var(--space-lg)}
+.hero__stat{text-align:center;flex:1}
+.hero__stat strong{display:block;font-size:1.6rem;font-weight:900;color:#fff;line-height:1}
+.hero__stat span{font-size:11px;color:rgba(255,255,255,.55);font-weight:600;text-transform:uppercase;letter-spacing:.04em}
+.hero__info-badges{display:flex;gap:10px;flex-wrap:wrap}
+.hero__info-badge{display:flex;align-items:center;gap:8px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.1);border-radius:var(--radius);padding:8px 12px;font-size:12px;font-weight:700;color:rgba(255,255,255,.85);flex:1;min-width:140px}
+.hero__info-badge svg{color:var(--color-primary);flex-shrink:0}
+.hero__info-clark{display:flex;align-items:center;justify-content:center;gap:10px;padding-top:8px;border-top:1px solid rgba(255,255,255,.08)}
+.hero__info-clark img{opacity:.6}
+.hero__info-clark span{font-size:11px;color:rgba(255,255,255,.4);font-weight:500}
 .hero__card{background:var(--color-white);border-radius:var(--radius-lg);padding:var(--space-lg);box-shadow:var(--shadow-lg);color:var(--color-text)}
 .hero__card-title{color:var(--color-text);margin-bottom:var(--space-md);font-size:1.1rem;font-weight:700}
 .hero__card-field{margin-bottom:var(--space-md)}
@@ -62,7 +77,7 @@ p{color:var(--color-text-light);line-height:1.8}
 .hero__card-field select:focus,.hero__card-field input:focus{border-color:var(--color-primary);outline:none}
 .hero__card .btn{width:100%;justify-content:center}
 .hero__card-note{font-size:var(--font-caption);color:var(--color-muted);text-align:center;margin-top:var(--space-sm)}
-@media(max-width:768px){.hero__layout{grid-template-columns:1fr}.hero__card{display:none}}
+@media(max-width:768px){.hero__layout{grid-template-columns:1fr}.hero__info{display:none}.hero__card{display:none}}
 </style>
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -95,17 +110,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </header>
 
-<!-- BREADCRUMB -->
-<header role="banner">
-<nav class="breadcrumb" aria-label="Navegacao estrutural">
-  <div class="container">
-    <ol class="breadcrumb__list">
-      <li><a href="https://movemaquinas.com.br"><picture><source srcset="/assets/logo-move-maquinas.webp" type="image/webp"><picture><source srcset="/assets/logo-move-maquinas.webp" type="image/webp"><img src="/assets/logo-move-maquinas.png" alt="Movemáquinas" class="breadcrumb__logo" width="110" height="22" loading="eager"></picture></picture></a></li>
-      <li><span aria-current="page">Uruacu — GO</span></li>
-    </ol>
-  </div>
-</nav>
-</header>
 
 <!-- HERO -->
 <section class="hero" aria-labelledby="hero-h1">
@@ -113,10 +117,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="container">
     <div class="hero__layout">
       <div>
-        <div class="hero__badge"><span class="section-tag section-tag--white"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Uruacu — GO</span></div>
+        <div class="hero__badge"><span class="section-tag section-tag--white"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Uruacu, GO</span></div>
         <h1 id="hero-h1">Locacao de Equipamentos Industriais em <em>Uruacu</em></h1>
-        <p class="hero__lead"><a href="https://pt.wikipedia.org/wiki/Urua%C3%A7u" target="_blank" rel="noopener noreferrer" style="color:var(--color-primary);font-weight:700;text-decoration:underline;">Uruacu</a> e polo agroindustrial do norte goiano com 40 mil habitantes e 31 empresas instaladas no Distrito Agroindustrial. A cidade se destaca na producao de aves, suinos, leite, cana e soja. A Movemáquinas atende Uruacu a partir da sede em Goiania — 280 km pela BR-153 — com locacao de empilhadeiras, plataformas elevatorias, transpaleteiras e curso NR-11, manutencao inclusa e suporte tecnico.</p>
-        <p class="hero__text">Do Distrito Agroindustrial aos armazens de graos ao longo da BR-153, dos frigorifico de aves e suinos as cooperativas e laticinios — a operacao logistica de Uruacu exige equipamentos de movimentacao de cargas confiaveis. Contratos mensais a partir de Consultar com frota Clark e entrega programada.</p>
+        <p class="hero__lead"><a href="https://pt.wikipedia.org/wiki/Urua%C3%A7u" target="_blank" rel="noopener noreferrer" style="color:var(--color-primary);font-weight:700;text-decoration:underline;">Uruacu</a> e polo agroindustrial do norte goiano com 40 mil habitantes e 31 empresas instaladas no Distrito Agroindustrial. A cidade se destaca na producao de aves, suinos, leite, cana e soja. A Movemáquinas atende Uruacu a partir da sede em Goiania, 280 km pela BR-153, com locacao de empilhadeiras, plataformas elevatorias, transpaleteiras e curso NR-11, manutencao inclusa e suporte tecnico.</p>
+        <p class="hero__text">Do Distrito Agroindustrial aos armazens de graos ao longo da BR-153, dos frigorifico de aves e suinos as cooperativas e laticinios, a operacao logistica de Uruacu exige equipamentos de movimentacao de cargas confiaveis. Contratos mensais a partir de Consultar com frota Clark e entrega programada.</p>
         <div class="hero__actions">
           <div class="hero__actions-col">
             <a href="https://wa.me/5562982637300?text=Ol%C3%A1%2C+quero+or%C3%A7amento+de+equipamentos+em+Urua%C3%A7u" class="btn btn--wa" target="_blank" rel="noopener noreferrer"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg> Pedir orcamento agora</a>
@@ -241,7 +245,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="container">
     <span class="section-tag"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Cobertura local</span>
     <h2 id="contexto-h2">Onde atuamos em <span>Uruacu</span> e regiao</h2>
-    <p style="max-width:720px;color:var(--color-text-light);margin-bottom:0">Uruacu concentra atividade agroindustrial intensa ao longo da BR-153. A Movemáquinas atende todas as areas produtivas da cidade — do Distrito Agroindustrial ao Centro e Setor Industrial.</p>
+    <p style="max-width:720px;color:var(--color-text-light);margin-bottom:0">Uruacu concentra atividade agroindustrial intensa ao longo da BR-153. A Movemáquinas atende todas as areas produtivas da cidade, do Distrito Agroindustrial ao Centro e Setor Industrial.</p>
     <div class="contexto-grid">
 
       <div class="contexto-card reveal reveal-stagger" style="--stagger:0">
@@ -260,7 +264,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="contexto-card__icon contexto-card__icon--blue"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="8 12 12 16 16 12"/><line x1="12" y1="8" x2="12" y2="16"/></svg></div>
         <div class="contexto-card__title">Acesso rodoviario</div>
         <ul class="contexto-card__list">
-          <li>BR-153 (Belem-Brasilia) — acesso principal</li>
+          <li>BR-153 (Belem-Brasilia), acesso principal</li>
           <li>280 km de Goiania (sede Movemáquinas)</li>
           <li>Acesso direto ao Distrito Agroindustrial</li>
           <li>Corredor logistico Norte-Sul de Goias</li>
@@ -296,7 +300,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </section>
 
-<!-- CONHECA A MOVE — VIDEO -->
+<!-- CONHECA A MOVE, VIDEO -->
 <section class="page-section" aria-labelledby="conheca-h2">
   <div class="container">
     <div class="split reveal">
@@ -309,15 +313,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div>
         <span class="section-tag">Quem somos</span>
         <h2 id="conheca-h2">Quem e a <span>Movemáquinas</span></h2>
-        <p style="margin-bottom:var(--space-sm)">Ha mais de 20 anos a Movemáquinas fornece empilhadeiras, plataformas elevatorias e transpaleteiras para empresas em todo o estado de Goias. Como distribuidor exclusivo Clark, mantemos frota propria com manutencao inclusa em todos os contratos — e levamos esse padrao ate Uruacu pela BR-153.</p>
-        <p style="margin-bottom:var(--space-md)">A sede fica em Goiania, no Parque das Flores — a 280 km de Uruacu. Ja atendemos mais de 500 clientes em Goias, DF, Minas Gerais e Tocantins, incluindo frigorifico, cooperativas e industrias do interior do estado.</p>
+        <p style="margin-bottom:var(--space-sm)">Ha mais de 20 anos a Movemáquinas fornece empilhadeiras, plataformas elevatorias e transpaleteiras para empresas em todo o estado de Goias. Como distribuidor exclusivo Clark, mantemos frota propria com manutencao inclusa em todos os contratos, e levamos esse padrao ate Uruacu pela BR-153.</p>
+        <p style="margin-bottom:var(--space-md)">A sede fica em Goiania, no Parque das Flores, a 280 km de Uruacu. Ja atendemos mais de 500 clientes em Goias, DF, Minas Gerais e Tocantins, incluindo frigorifico, cooperativas e industrias do interior do estado.</p>
         <div style="display:flex;gap:12px;align-items:center;flex-wrap:wrap"><img src="https://movemaquinas.com.br/assets/logo-move-maquinas-B2l9eWy_.png" alt="Movemáquinas" width="130" height="26" loading="lazy"><img src="https://clarkempilhadeiras.com.br/wp-content/uploads/2023/12/green-logo-200x74.png" alt="Clark" width="90" height="33" loading="lazy" style="opacity:.55"></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- EQUIPAMENTOS — CATALOGO TECNICO -->
+<!-- EQUIPAMENTOS, CATALOGO TECNICO -->
 <section id="equipamentos" class="page-section page-section--surface" aria-labelledby="equip-h2">
   <div class="container">
     <span class="section-tag"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg> Frota disponivel</span>
@@ -344,7 +348,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <div class="equip-card__spec"><span class="equip-card__spec-label">Altura</span><span class="equip-card__spec-value">8 a 15 metros de trabalho</span></div>
           <div class="equip-card__spec"><span class="equip-card__spec-label">Aplicacao</span><span class="equip-card__spec-value">Galpoes, construcao, manutencao</span></div>
         </div>
-        <div class="equip-card__price">Consultar<small> — varia por altura</small></div>
+        <div class="equip-card__price">Consultar<small>, varia por altura</small></div>
       </div>
 
       <div class="equip-card reveal reveal-stagger" style="--stagger:2">
@@ -355,18 +359,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <div class="equip-card__spec"><span class="equip-card__spec-label">Vantagem</span><span class="equip-card__spec-value">Acesso em areas com obstaculos</span></div>
           <div class="equip-card__spec"><span class="equip-card__spec-label">Aplicacao</span><span class="equip-card__spec-value">Obras, reformas, fachadas</span></div>
         </div>
-        <div class="equip-card__price">Consultar<small> — varia por modelo</small></div>
+        <div class="equip-card__price">Consultar<small>, varia por modelo</small></div>
       </div>
 
       <div class="equip-card reveal reveal-stagger" style="--stagger:3">
         <div class="equip-card__bar"></div>
         <div class="equip-card__header"><div class="equip-card__name">Transpaleteiras Eletricas</div><span class="equip-card__model">Clark WPio15 · Li+</span></div>
         <div class="equip-card__specs">
-          <div class="equip-card__spec"><span class="equip-card__spec-label">Bateria</span><span class="equip-card__spec-value">Litio 24V — carregamento rapido</span></div>
+          <div class="equip-card__spec"><span class="equip-card__spec-label">Bateria</span><span class="equip-card__spec-value">Litio 24V, carregamento rapido</span></div>
           <div class="equip-card__spec"><span class="equip-card__spec-label">Capacidade</span><span class="equip-card__spec-value">1.500 a 3.500 kg</span></div>
           <div class="equip-card__spec"><span class="equip-card__spec-label">Aplicacao</span><span class="equip-card__spec-value">Camaras frias, docas, CDs</span></div>
         </div>
-        <div class="equip-card__price">Consultar<small> — varia por modelo</small></div>
+        <div class="equip-card__price">Consultar<small>, varia por modelo</small></div>
       </div>
 
     </div>
@@ -397,15 +401,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="split split--reverse reveal">
       <div class="video-wrap">
         <div class="video-wrap__poster" onclick="this.parentElement.innerHTML='<iframe src=\'https://www.youtube.com/embed/Nare91cVYo4?autoplay=1&rel=0\' allow=\'autoplay;encrypted-media\' allowfullscreen title=\'Quanto custa alugar empilhadeira em Goiania\'></iframe>'" role="button" aria-label="Reproduzir video sobre precos">
-          <img src="https://img.youtube.com/vi/Nare91cVYo4/sddefault.jpg" alt="Quanto custa alugar empilhadeira — video Movemáquinas" width="640" height="360" loading="lazy">
+          <img src="https://img.youtube.com/vi/Nare91cVYo4/sddefault.jpg" alt="Quanto custa alugar empilhadeira, video Movemáquinas" width="640" height="360" loading="lazy">
           <div class="video-wrap__play"><svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg></div>
         </div>
       </div>
       <div>
         <span class="section-tag">Transparencia</span>
         <h2 id="quanto-h2">Quanto custa locar equipamento em <span>Uruacu</span>?</h2>
-        <p style="margin-bottom:var(--space-sm)">O investimento depende do tipo de equipamento, duracao do contrato e especificacao tecnica. Empilhadeiras valor sob consulta. com manutencao inclusa e suporte tecnico — sem custos ocultos.</p>
-        <p style="margin-bottom:var(--space-md)">A entrega ate Uruacu e feita pela BR-153 com frete incluso no contrato para periodos superiores a 3 meses. Assista ao video ao lado para entender a precificacao — ou fale direto com nosso time para orcamento personalizado.</p>
+        <p style="margin-bottom:var(--space-sm)">O investimento depende do tipo de equipamento, duracao do contrato e especificacao tecnica. Empilhadeiras valor sob consulta. com manutencao inclusa e suporte tecnico, sem custos ocultos.</p>
+        <p style="margin-bottom:var(--space-md)">A entrega ate Uruacu e feita pela BR-153 com frete incluso no contrato para periodos superiores a 3 meses. Assista ao video ao lado para entender a precificacao, ou fale direto com nosso time para orcamento personalizado.</p>
         <a href="https://wa.me/5562982637300?text=Ol%C3%A1%2C+quero+saber+o+valor+de+loca%C3%A7%C3%A3o+de+equipamentos+em+Urua%C3%A7u" class="btn btn--wa btn--sm" target="_blank" rel="noopener noreferrer"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479c0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg> Pedir orcamento personalizado</a>
       </div>
     </div>
@@ -418,7 +422,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <span class="section-tag">Atendimento local</span>
     <h2 id="conversacional-h2">A Movemáquinas atende <span>Uruacu</span>?</h2>
     <div class="conversacional__box reveal">
-      <p><strong>Sim, atendemos Uruacu.</strong> A Movemáquinas cobre o norte goiano a partir da sede em Goiania — 280 km pela BR-153, rodovia que conecta diretamente as duas cidades. Entregamos empilhadeiras, plataformas elevatorias e transpaleteiras no Distrito Agroindustrial, nos frigorifico, armazens de graos, cooperativas e em qualquer area de Uruacu. <strong>Entrega programada, manutencao inclusa e suporte tecnico</strong> em todos os contratos. A frota Clark esta disponivel para demandas do polo avicola, suinocola, sucroalcooleiro e das 31 empresas do distrito industrial. Fale pelo WhatsApp ou ligue: <a href="tel:+556232111515" style="color:var(--color-primary);font-weight:700;">(62) 3211-1515</a>.</p>
+      <p><strong>Sim, atendemos Uruacu.</strong> A Movemáquinas cobre o norte goiano a partir da sede em Goiania, 280 km pela BR-153, rodovia que conecta diretamente as duas cidades. Entregamos empilhadeiras, plataformas elevatorias e transpaleteiras no Distrito Agroindustrial, nos frigorifico, armazens de graos, cooperativas e em qualquer area de Uruacu. <strong>Entrega programada, manutencao inclusa e suporte tecnico</strong> em todos os contratos. A frota Clark esta disponivel para demandas do polo avicola, suinocola, sucroalcooleiro e das 31 empresas do distrito industrial. Fale pelo WhatsApp ou ligue: <a href="tel:+556232111515" style="color:var(--color-primary);font-weight:700;">(62) 3211-1515</a>.</p>
     </div>
   </div>
 </section>
@@ -431,12 +435,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="testimonial-grid">
       <article class="testimonial-card reveal reveal-stagger" style="--stagger:0"><p class="testimonial-card__quote">Contratamos empilhadeira a combustao para movimentar sacas de 50 kg no armazem de graos. A Clark que a Move mandou aguenta o turno inteiro sem reclamar, e quando precisamos de ajuste na torre, o tecnico veio no dia seguinte pela BR-153. Segundo contrato renovado.</p><div class="testimonial-card__author"><div class="testimonial-card__avatar">M</div><div class="testimonial-card__info"><strong>Gilson R.</strong><span>Supervisor de Armazem · Cooperativa · Uruacu-GO</span></div></div></article>
       <article class="testimonial-card reveal reveal-stagger" style="--stagger:1"><p class="testimonial-card__quote">Usamos a plataforma tesoura para manutencao das calhas e coberturas do frigorifico. O equipamento chegou na data combinada e ficou 45 dias conosco sem nenhum problema mecanico. A manutencao inclusa faz diferenca quando a operacao nao pode parar.</p><div class="testimonial-card__author"><div class="testimonial-card__avatar">C</div><div class="testimonial-card__info"><strong>Fabio M.</strong><span>Gerente de Manutencao · Frigorifico · Uruacu-GO</span></div></div></article>
-      <article class="testimonial-card reveal reveal-stagger" style="--stagger:2"><p class="testimonial-card__quote">A transpaleteira eletrica Clark resolveu a movimentacao de paletes na camara fria do laticinio. A bateria de litio dura o turno completo e o equipamento nao emite gas — requisito obrigatorio para area de alimentos. Ja indicamos a Move para outras empresas do distrito.</p><div class="testimonial-card__author"><div class="testimonial-card__avatar">A</div><div class="testimonial-card__info"><strong>Luciana P.</strong><span>Coordenadora de Producao · Laticinio · Uruacu-GO</span></div></div></article>
+      <article class="testimonial-card reveal reveal-stagger" style="--stagger:2"><p class="testimonial-card__quote">A transpaleteira eletrica Clark resolveu a movimentacao de paletes na camara fria do laticinio. A bateria de litio dura o turno completo e o equipamento nao emite gas, requisito obrigatorio para area de alimentos. Ja indicamos a Move para outras empresas do distrito.</p><div class="testimonial-card__author"><div class="testimonial-card__avatar">A</div><div class="testimonial-card__info"><strong>Luciana P.</strong><span>Coordenadora de Producao · Laticinio · Uruacu-GO</span></div></div></article>
     </div>
   </div>
 </section>
 
-<!-- LINKAGEM ESTRUTURAL — REGIOES PROXIMAS -->
+<!-- LINKAGEM ESTRUTURAL, REGIOES PROXIMAS -->
 <nav aria-label="Regioes proximas atendidas">
 <section id="outras-regioes" class="page-section page-section--surface" aria-labelledby="regioes-h2">
   <div class="container">
@@ -465,7 +469,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="reveal">
         <span class="section-tag"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Cobertura</span>
         <h2 id="mapa-h2">Cobertura de atendimento em <span>Uruacu</span></h2>
-        <p style="margin-bottom:var(--space-md);">A Movemáquinas atende Uruacu pela BR-153 — 280 km da sede em Goiania. Entregas programadas com antecedencia para garantir disponibilidade. Manutencao e suporte tecnico inclusos em todos os contratos.</p>
+        <p style="margin-bottom:var(--space-md);">A Movemáquinas atende Uruacu pela BR-153, 280 km da sede em Goiania. Entregas programadas com antecedencia para garantir disponibilidade. Manutencao e suporte tecnico inclusos em todos os contratos.</p>
         <ul style="list-style:none;display:flex;flex-direction:column;gap:10px;margin-bottom:var(--space-md);">
           <li style="display:flex;align-items:center;gap:8px;font-size:var(--font-small);color:var(--color-text-light);"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1D9648" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Entrega programada em Uruacu</li>
           <li style="display:flex;align-items:center;gap:8px;font-size:var(--font-small);color:var(--color-text-light);"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1D9648" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> 280 km pela BR-153 ate Uruacu</li>
@@ -488,21 +492,21 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <h2 id="faq-h2">Duvidas sobre locacao de equipamentos em <span>Uruacu</span></h2>
     <div class="faq__list">
 
-      <details class="faq__item reveal reveal-stagger" style="--stagger:0" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><summary class="faq__trigger"><h3 itemprop="name">A Movemáquinas atende Uruacu?</h3><svg class="faq__icon" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></summary><div class="faq__answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><div itemprop="text">Sim. A Movemáquinas atende Uruacu a partir da sede em Goiania, na Av. Eurico Viana, 4913 — Parque das Flores. A entrega e feita pela BR-153 (280 km) com frota Clark disponivel para empilhadeiras, plataformas, transpaleteiras e curso NR-11.</div></div></details>
+      <details class="faq__item reveal reveal-stagger" style="--stagger:0" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><summary class="faq__trigger"><h3 itemprop="name">A Movemáquinas atende Uruacu?</h3><svg class="faq__icon" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></summary><div class="faq__answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><div itemprop="text">Sim. A Movemáquinas atende Uruacu a partir da sede em Goiania, na Av. Eurico Viana, 4913, Parque das Flores. A entrega e feita pela BR-153 (280 km) com frota Clark disponivel para empilhadeiras, plataformas, transpaleteiras e curso NR-11.</div></div></details>
 
-      <details class="faq__item reveal reveal-stagger" style="--stagger:1" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><summary class="faq__trigger"><h3 itemprop="name">Qual o prazo de entrega de equipamentos em Uruacu?</h3><svg class="faq__icon" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></summary><div class="faq__answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><div itemprop="text">A entrega em Uruacu e programada — normalmente entre 24 e 48 horas apos a confirmacao do contrato. O transporte e feito pela BR-153, percurso direto de 280 km. Para contratos de media e longa duracao, o frete esta incluso. Entre em contato pelo WhatsApp para agendar.</div></div></details>
+      <details class="faq__item reveal reveal-stagger" style="--stagger:1" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><summary class="faq__trigger"><h3 itemprop="name">Qual o prazo de entrega de equipamentos em Uruacu?</h3><svg class="faq__icon" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></summary><div class="faq__answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><div itemprop="text">A entrega em Uruacu e programada, normalmente entre 24 e 48 horas apos a confirmacao do contrato. O transporte e feito pela BR-153, percurso direto de 280 km. Para contratos de media e longa duracao, o frete esta incluso. Entre em contato pelo WhatsApp para agendar.</div></div></details>
 
-      <details class="faq__item reveal reveal-stagger" style="--stagger:2" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><summary class="faq__trigger"><h3 itemprop="name">Quais areas de Uruacu a Movemáquinas cobre?</h3><svg class="faq__icon" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></summary><div class="faq__answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><div itemprop="text">Atendemos toda a area urbana e rural de Uruacu — Centro, Setor Industrial, Distrito Agroindustrial (258 mil m2 com 31 empresas), armazens de graos ao longo da BR-153 e propriedades rurais com demanda de movimentacao de cargas. Basta informar o endereco da operacao.</div></div></details>
+      <details class="faq__item reveal reveal-stagger" style="--stagger:2" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><summary class="faq__trigger"><h3 itemprop="name">Quais areas de Uruacu a Movemáquinas cobre?</h3><svg class="faq__icon" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></summary><div class="faq__answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><div itemprop="text">Atendemos toda a area urbana e rural de Uruacu, Centro, Setor Industrial, Distrito Agroindustrial (258 mil m2 com 31 empresas), armazens de graos ao longo da BR-153 e propriedades rurais com demanda de movimentacao de cargas. Basta informar o endereco da operacao.</div></div></details>
 
       <details class="faq__item reveal reveal-stagger" style="--stagger:3" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><summary class="faq__trigger"><h3 itemprop="name">Voces atendem o Distrito Agroindustrial de Uruacu?</h3><svg class="faq__icon" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></summary><div class="faq__answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><div itemprop="text">Sim. O Distrito Agroindustrial de Uruacu, com 258 mil m2 e 31 empresas instaladas, e uma area de demanda recorrente. Metalurgicas, frigorifico, armazens de graos, cooperativas e laticinios do distrito utilizam empilhadeiras e transpaleteiras Clark em contratos de media e longa duracao.</div></div></details>
 
-      <details class="faq__item reveal reveal-stagger" style="--stagger:4" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><summary class="faq__trigger"><h3 itemprop="name">Operadores em Uruacu precisam de certificacao NR-11?</h3><svg class="faq__icon" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></summary><div class="faq__answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><div itemprop="text">Sim. A NR-11 exige capacitacao especifica para operadores de empilhadeira. A Movemáquinas oferece o Curso de Operador com formacao teorica e pratica e certificado valido — especialmente relevante para as 31 empresas do Distrito Agroindustrial de Uruacu. O treinamento pode ser agendado junto com a entrega do equipamento.</div></div></details>
+      <details class="faq__item reveal reveal-stagger" style="--stagger:4" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><summary class="faq__trigger"><h3 itemprop="name">Operadores em Uruacu precisam de certificacao NR-11?</h3><svg class="faq__icon" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></summary><div class="faq__answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><div itemprop="text">Sim. A NR-11 exige capacitacao especifica para operadores de empilhadeira. A Movemáquinas oferece o Curso de Operador com formacao teorica e pratica e certificado valido, especialmente relevante para as 31 empresas do Distrito Agroindustrial de Uruacu. O treinamento pode ser agendado junto com a entrega do equipamento.</div></div></details>
 
       <details class="faq__item reveal reveal-stagger" style="--stagger:5" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><summary class="faq__trigger"><h3 itemprop="name">Quanto custa alugar empilhadeira em Uruacu?</h3><svg class="faq__icon" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></summary><div class="faq__answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><div itemprop="text">O investimento para locacao de empilhadeira em Uruacu comeca valor sob consulta., com manutencao preventiva e corretiva inclusa. O valor depende do modelo (GLP, eletrica ou diesel), capacidade de carga e duracao do contrato. Para periodos acima de 3 meses, o frete pela BR-153 esta incluso. Solicite orcamento pelo WhatsApp.</div></div></details>
 
       <details class="faq__item reveal reveal-stagger" style="--stagger:6" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><summary class="faq__trigger"><h3 itemprop="name">A manutencao esta inclusa nos contratos para Uruacu?</h3><svg class="faq__icon" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></summary><div class="faq__answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><div itemprop="text">Sim. Manutencao preventiva e corretiva esta incluida em todos os contratos. Para Uruacu, mantemos estoque de pecas de reposicao e equipe tecnica que se desloca pela BR-153. O suporte tecnico funciona 7 dias por semana para garantir continuidade da sua operacao.</div></div></details>
 
-      <details class="faq__item reveal reveal-stagger" style="--stagger:7" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><summary class="faq__trigger"><h3 itemprop="name">Qual o prazo minimo de contrato para Uruacu?</h3><svg class="faq__icon" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></summary><div class="faq__answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><div itemprop="text">O prazo minimo e de 1 mes, com renovacao automatica. Para operacoes no Distrito Agroindustrial, frigorifico ou armazens com demanda continua, oferecemos condicoes diferenciadas em contratos de 3, 6 e 12 meses — com frete incluso. Consulte pelo WhatsApp informando a duracao estimada da sua operacao.</div></div></details>
+      <details class="faq__item reveal reveal-stagger" style="--stagger:7" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><summary class="faq__trigger"><h3 itemprop="name">Qual o prazo minimo de contrato para Uruacu?</h3><svg class="faq__icon" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></summary><div class="faq__answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><div itemprop="text">O prazo minimo e de 1 mes, com renovacao automatica. Para operacoes no Distrito Agroindustrial, frigorifico ou armazens com demanda continua, oferecemos condicoes diferenciadas em contratos de 3, 6 e 12 meses, com frete incluso. Consulte pelo WhatsApp informando a duracao estimada da sua operacao.</div></div></details>
 
     </div>
   </div>
@@ -515,13 +519,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <section id="orcamento" class="cta-final" aria-labelledby="cta-h2">
   <div class="container">
     <span class="section-tag section-tag--white">Orcamento rapido</span>
-    <h2 id="cta-h2">Equipamentos Clark para Uruacu — fale agora</h2>
+    <h2 id="cta-h2">Equipamentos Clark para Uruacu, fale agora</h2>
     <p class="cta-final__sub">Solicite orcamento para empilhadeiras, plataformas, transpaleteiras ou curso NR-11 em Uruacu. Entrega programada pela BR-153.</p>
     <div class="cta-final__actions">
-      <a href="https://wa.me/5562982637300?text=Ol%C3%A1%2C+quero+or%C3%A7amento+de+equipamentos+em+Urua%C3%A7u" class="btn btn--wa" target="_blank" rel="noopener noreferrer"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg> WhatsApp — resposta imediata</a>
+      <a href="https://wa.me/5562982637300?text=Ol%C3%A1%2C+quero+or%C3%A7amento+de+equipamentos+em+Urua%C3%A7u" class="btn btn--wa" target="_blank" rel="noopener noreferrer"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg> WhatsApp, resposta imediata</a>
       <a href="tel:+556232111515" class="btn btn--outline-white"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-7.86-7.86 19.79 19.79 0 01-3.07-8.67A2 2 0 012.33 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.92a16 16 0 006.07 6.07l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg> (62) 3211-1515</a>
     </div>
-    <p class="cta-final__note">Movemáquinas · Av. Eurico Viana, 4913 — Parque das Flores, Goiania-GO · Atendimento em Uruacu via BR-153 · CNPJ 32.428.258/0001-80</p>
+    <p class="cta-final__note">Movemáquinas · Av. Eurico Viana, 4913, Parque das Flores, Goiania-GO · Atendimento em Uruacu via BR-153 · CNPJ 32.428.258/0001-80</p>
   </div>
 </section>
 </footer>
@@ -539,7 +543,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <script>
 (function(){
-  /* Scroll Reveal — robusto para CMS */
+  /* Scroll Reveal, robusto para CMS */
   function initReveal(){
     var els=document.querySelectorAll('.reveal');
     if(!els.length) return;
@@ -558,7 +562,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       els.forEach(function(el){ el.classList.add('is-visible'); });
     }
   }
-  /* Roda apos DOM pronto — compativel com CMS que injeta depois */
+  /* Roda apos DOM pronto, compativel com CMS que injeta depois */
   if(document.readyState==='loading'){
     document.addEventListener('DOMContentLoaded', initReveal);
   } else {
@@ -605,7 +609,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <li><a href="/contato">Contato</a></li>
   </ul></div>
   <div class="ft__col"><h4>Contato</h4>
-    <div class="ft__ci"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.11 13.8 19.79 19.79 0 01.04 5.14 2 2 0 012 3h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 10.92a16 16 0 006.07 6.07l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg><p><a href="https://wa.me/5562982637300">(62) 98263-7300</a> — Gabriel<br><a href="https://wa.me/5562981753350">(62) 98175-3350</a> — Kaio</p></div>
+    <div class="ft__ci"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.11 13.8 19.79 19.79 0 01.04 5.14 2 2 0 012 3h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 10.92a16 16 0 006.07 6.07l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg><p><a href="https://wa.me/5562982637300">(62) 98263-7300</a>, Gabriel<br><a href="https://wa.me/5562981753350">(62) 98175-3350</a>, Kaio</p></div>
     <div class="ft__ci"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><p><a href="mailto:contato@movemaquinas.com.br">contato@movemaquinas.com.br</a></p></div>
     <div class="ft__ci"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg><p>Av. Eurico Viana, 4913<br>Goiânia - GO, 74593-590</p></div>
   </div>

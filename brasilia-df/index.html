@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Aluguel de Equipamentos em Brasília | Movemáquinas</title>
-<meta name="description" content="Locação de empilhadeiras, plataformas elevatórias e transpaleteiras em Brasília — DF. Frota Clark, manutenção inclusa, entrega rápida. Movemáquinas.">
+<meta name="description" content="Locação de empilhadeiras, plataformas elevatórias e transpaleteiras em Brasília, DF. Frota Clark, manutenção inclusa, entrega rápida. Movemáquinas.">
 <link rel="canonical" href="https://movemaquinas.com.br/brasilia-df/">
 <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
 <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
@@ -53,7 +53,22 @@ p{color:var(--color-text-light);line-height:1.8}
 .hero h1{color:var(--color-white);margin-bottom:var(--space-md)}
 .hero h1 em{color:var(--color-primary);font-style:normal}
 .hero__lead{font-size:1.05rem;color:rgba(255,255,255,.85);margin-bottom:var(--space-sm);line-height:1.8}
+.hero__text{color:rgba(255,255,255,.75);line-height:1.8;margin-bottom:var(--space-lg)}
 .hero__actions{display:flex;gap:var(--space-sm);flex-wrap:wrap;align-items:start;margin-bottom:var(--space-lg)}
+.hero__actions-col{display:flex;flex-direction:column;gap:4px}
+.hero__microcopy{font-size:11px;color:rgba(255,255,255,.5);font-weight:600;padding-left:4px;display:flex;align-items:center;gap:4px}
+.hero__microcopy svg{color:var(--color-primary)}
+.hero__info{background:rgba(255,255,255,.07);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border:1px solid rgba(255,255,255,.12);border-radius:var(--radius-lg);padding:var(--space-lg);display:flex;flex-direction:column;gap:var(--space-md)}
+.hero__info-row{display:flex;gap:var(--space-lg)}
+.hero__stat{text-align:center;flex:1}
+.hero__stat strong{display:block;font-size:1.6rem;font-weight:900;color:#fff;line-height:1}
+.hero__stat span{font-size:11px;color:rgba(255,255,255,.55);font-weight:600;text-transform:uppercase;letter-spacing:.04em}
+.hero__info-badges{display:flex;gap:10px;flex-wrap:wrap}
+.hero__info-badge{display:flex;align-items:center;gap:8px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.1);border-radius:var(--radius);padding:8px 12px;font-size:12px;font-weight:700;color:rgba(255,255,255,.85);flex:1;min-width:140px}
+.hero__info-badge svg{color:var(--color-primary);flex-shrink:0}
+.hero__info-clark{display:flex;align-items:center;justify-content:center;gap:10px;padding-top:8px;border-top:1px solid rgba(255,255,255,.08)}
+.hero__info-clark img{opacity:.6}
+.hero__info-clark span{font-size:11px;color:rgba(255,255,255,.4);font-weight:500}
 .hero__card{background:var(--color-white);border-radius:var(--radius-lg);padding:var(--space-lg);box-shadow:var(--shadow-lg);color:var(--color-text)}
 .hero__card-title{color:var(--color-text);margin-bottom:var(--space-md);font-size:1.1rem;font-weight:700}
 .hero__card-field{margin-bottom:var(--space-md)}
@@ -62,7 +77,7 @@ p{color:var(--color-text-light);line-height:1.8}
 .hero__card-field select:focus,.hero__card-field input:focus{border-color:var(--color-primary);outline:none}
 .hero__card .btn{width:100%;justify-content:center}
 .hero__card-note{font-size:var(--font-caption);color:var(--color-muted);text-align:center;margin-top:var(--space-sm)}
-@media(max-width:768px){.hero__layout{grid-template-columns:1fr}.hero__card{display:none}}
+@media(max-width:768px){.hero__layout{grid-template-columns:1fr}.hero__info{display:none}.hero__card{display:none}}
 </style>
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -95,17 +110,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </header>
 
-<!-- BREADCRUMB -->
-<header role="banner">
-<nav class="breadcrumb" aria-label="Navegacao estrutural">
-  <div class="container">
-    <ol class="breadcrumb__list">
-      <li><a href="https://movemaquinas.com.br"><picture><source srcset="/assets/logo-move-maquinas.webp" type="image/webp"><picture><source srcset="/assets/logo-move-maquinas.webp" type="image/webp"><img src="/assets/logo-move-maquinas.png" alt="Movemáquinas" class="breadcrumb__logo" width="110" height="22" loading="eager"></picture></picture></a></li>
-      <li><span aria-current="page">Brasilia — DF</span></li>
-    </ol>
-  </div>
-</nav>
-</header>
 
 <!-- HERO -->
 <section class="hero" aria-labelledby="hero-h1">
@@ -113,10 +117,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="container">
     <div class="hero__layout">
       <div>
-        <div class="hero__badge"><span class="section-tag section-tag--white"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Brasilia — DF</span></div>
+        <div class="hero__badge"><span class="section-tag section-tag--white"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Brasilia, DF</span></div>
         <h1 id="hero-h1">Locacao de Equipamentos em <em>Brasilia</em></h1>
-        <p class="hero__lead"><a href="https://pt.wikipedia.org/wiki/Bras%C3%ADlia" target="_blank" rel="noopener noreferrer" style="color:var(--color-primary);font-weight:700;text-decoration:underline;">Brasilia</a> e a capital federal do Brasil e a cidade com maior gasto per capita em infraestrutura publica do pais, com mais de 3 milhoes de habitantes no Distrito Federal. A Movemáquinas atende Brasilia a partir da sede em Goiania — 209 km pela BR-060/BR-040 — com locacao de empilhadeiras, plataformas elevatorias e transpaleteiras. Entrega em ate 48 horas, manutencao inclusa e suporte tecnico dedicado para a capital federal.</p>
-        <p class="hero__text">Do SIA ao Polo JK em Santa Maria, de Taguatinga a Ceilandia, de Aguas Claras a Asa Norte — a demanda por equipamentos de movimentacao cresce junto com as obras da administracao publica, construcao civil e logistica da capital federal. Contratos mensais a partir de Consultar com frota Clark e entrega em ate 48h.</p>
+        <p class="hero__lead"><a href="https://pt.wikipedia.org/wiki/Bras%C3%ADlia" target="_blank" rel="noopener noreferrer" style="color:var(--color-primary);font-weight:700;text-decoration:underline;">Brasilia</a> e a capital federal do Brasil e a cidade com maior gasto per capita em infraestrutura publica do pais, com mais de 3 milhoes de habitantes no Distrito Federal. A Movemáquinas atende Brasilia a partir da sede em Goiania, 209 km pela BR-060/BR-040, com locacao de empilhadeiras, plataformas elevatorias e transpaleteiras. Entrega em ate 48 horas, manutencao inclusa e suporte tecnico dedicado para a capital federal.</p>
+        <p class="hero__text">Do SIA ao Polo JK em Santa Maria, de Taguatinga a Ceilandia, de Aguas Claras a Asa Norte, a demanda por equipamentos de movimentacao cresce junto com as obras da administracao publica, construcao civil e logistica da capital federal. Contratos mensais a partir de Consultar com frota Clark e entrega em ate 48h.</p>
         <div class="hero__actions">
           <div class="hero__actions-col">
             <a href="https://wa.me/5562982637300?text=Ol%C3%A1%2C+quero+or%C3%A7amento+de+equipamentos+em+Bras%C3%ADlia" class="btn btn--wa" target="_blank" rel="noopener noreferrer"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg> Pedir orcamento agora</a>
@@ -250,7 +254,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <ul class="contexto-card__list">
           <li>Setor de Industria e Abastecimento (SIA)</li>
           <li>Setor de Armazenagem e Abastecimento Norte (SAAN)</li>
-          <li>Polo JK — Santa Maria</li>
+          <li>Polo JK, Santa Maria</li>
           <li>Ceilandia Industrial</li>
           <li>Zona Industrial de Taguatinga</li>
         </ul>
@@ -274,9 +278,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <ul class="contexto-card__list">
           <li>Esplanada dos Ministerios e Setor de Autarquias</li>
           <li>Setor Hoteleiro Norte e Sul</li>
-          <li>Aguas Claras — vertice de obras residenciais</li>
-          <li>Samambaia — expansao habitacional</li>
-          <li>Plano Piloto — restauracoes patrimoniais</li>
+          <li>Aguas Claras, vertice de obras residenciais</li>
+          <li>Samambaia, expansao habitacional</li>
+          <li>Plano Piloto, restauracoes patrimoniais</li>
         </ul>
       </div>
 
@@ -284,10 +288,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="contexto-card__icon contexto-card__icon--purple"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><polyline points="16 21 16 3 8 3 8 21"/></svg></div>
         <div class="contexto-card__title">Comercio e servicos regionais</div>
         <ul class="contexto-card__list">
-          <li>Taguatinga Centro — maior polo comercial do DF</li>
-          <li>Ceilandia — feiras e atacados</li>
-          <li>Asa Norte — setor de tecnologia e servicos</li>
-          <li>Asa Sul — comercio e empresas</li>
+          <li>Taguatinga Centro, maior polo comercial do DF</li>
+          <li>Ceilandia, feiras e atacados</li>
+          <li>Asa Norte, setor de tecnologia e servicos</li>
+          <li>Asa Sul, comercio e empresas</li>
           <li>Nucleo Bandeirante e Park Way</li>
         </ul>
       </div>
@@ -296,7 +300,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </section>
 
-<!-- CONHECA A MOVE — VIDEO -->
+<!-- CONHECA A MOVE, VIDEO -->
 <section class="page-section" aria-labelledby="conheca-h2">
   <div class="container">
     <div class="split reveal">
@@ -310,14 +314,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <span class="section-tag">Sobre a empresa</span>
         <h2 id="conheca-h2">Sobre a <span>Movemáquinas</span></h2>
         <p style="margin-bottom:var(--space-sm)">A Movemáquinas acumula mais de duas decadas de operacao em Goias e no Distrito Federal. Distribuidor exclusivo Clark na regiao Centro-Oeste, operamos com frota propria, equipe tecnica especializada e manutencao inclusa em cada contrato de locacao.</p>
-        <p style="margin-bottom:var(--space-md)">A sede fica em Goiania, a 209 km de Brasilia pela BR-060. Ja atendemos mais de 500 clientes em Goiás, DF, Tocantins e Mato Grosso — orgaos publicos, construtoras, atacadistas, redes hoteleiras e industrias de Brasilia, Goias, Minas e Tocantins.</p>
+        <p style="margin-bottom:var(--space-md)">A sede fica em Goiania, a 209 km de Brasilia pela BR-060. Ja atendemos mais de 500 clientes em Goiás, DF, Tocantins e Mato Grosso, orgaos publicos, construtoras, atacadistas, redes hoteleiras e industrias de Brasilia, Goias, Minas e Tocantins.</p>
         <div style="display:flex;gap:12px;align-items:center;flex-wrap:wrap"><img src="https://movemaquinas.com.br/assets/logo-move-maquinas-B2l9eWy_.png" alt="Movemáquinas" width="130" height="26" loading="lazy"><img src="https://clarkempilhadeiras.com.br/wp-content/uploads/2023/12/green-logo-200x74.png" alt="Clark" width="90" height="33" loading="lazy" style="opacity:.55"></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- EQUIPAMENTOS — CATALOGO TECNICO -->
+<!-- EQUIPAMENTOS, CATALOGO TECNICO -->
 <section id="equipamentos" class="page-section page-section--surface" aria-labelledby="equip-h2">
   <div class="container">
     <span class="section-tag"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg> Frota disponivel</span>
@@ -344,7 +348,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <div class="equip-card__spec"><span class="equip-card__spec-label">Altura</span><span class="equip-card__spec-value">Piso ate 15 m de patamar</span></div>
           <div class="equip-card__spec"><span class="equip-card__spec-label">Aplicacao</span><span class="equip-card__spec-value">Esplanada, setores hoteleiros, Aguas Claras</span></div>
         </div>
-        <div class="equip-card__price">Consultar<small> — varia por altura</small></div>
+        <div class="equip-card__price">Consultar<small>, varia por altura</small></div>
       </div>
 
       <div class="equip-card reveal reveal-stagger" style="--stagger:2">
@@ -355,18 +359,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <div class="equip-card__spec"><span class="equip-card__spec-label">Vantagem</span><span class="equip-card__spec-value">Supera marquises e recuos do Plano Piloto</span></div>
           <div class="equip-card__spec"><span class="equip-card__spec-label">Aplicacao</span><span class="equip-card__spec-value">Torres, fachadas de superquadras, pontes</span></div>
         </div>
-        <div class="equip-card__price">Consultar<small> — varia por modelo</small></div>
+        <div class="equip-card__price">Consultar<small>, varia por modelo</small></div>
       </div>
 
       <div class="equip-card reveal reveal-stagger" style="--stagger:3">
         <div class="equip-card__bar"></div>
         <div class="equip-card__header"><div class="equip-card__name">Transpaleteiras Eletricas</div><span class="equip-card__model">Clark WPio20 · bateria litio</span></div>
         <div class="equip-card__specs">
-          <div class="equip-card__spec"><span class="equip-card__spec-label">Bateria</span><span class="equip-card__spec-value">24 V litio — recarrega em 2 h</span></div>
+          <div class="equip-card__spec"><span class="equip-card__spec-label">Bateria</span><span class="equip-card__spec-value">24 V litio, recarrega em 2 h</span></div>
           <div class="equip-card__spec"><span class="equip-card__spec-label">Capacidade</span><span class="equip-card__spec-value">Movimenta de 1,5 t a 3,5 t</span></div>
           <div class="equip-card__spec"><span class="equip-card__spec-label">Aplicacao</span><span class="equip-card__spec-value">CEASA-DF, farmacias, redes de Ceilandia</span></div>
         </div>
-        <div class="equip-card__price">Consultar<small> — varia por modelo</small></div>
+        <div class="equip-card__price">Consultar<small>, varia por modelo</small></div>
       </div>
 
     </div>
@@ -397,7 +401,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="split split--reverse reveal">
       <div class="video-wrap">
         <div class="video-wrap__poster" onclick="this.parentElement.innerHTML='<iframe src=\'https://www.youtube.com/embed/Nare91cVYo4?autoplay=1&rel=0\' allow=\'autoplay;encrypted-media\' allowfullscreen title=\'Quanto custa locar equipamento em Brasilia\'></iframe>'" role="button" aria-label="Reproduzir video sobre precos">
-          <img src="https://img.youtube.com/vi/Nare91cVYo4/sddefault.jpg" alt="Quanto custa alugar empilhadeira — video Movemáquinas" width="640" height="360" loading="lazy">
+          <img src="https://img.youtube.com/vi/Nare91cVYo4/sddefault.jpg" alt="Quanto custa alugar empilhadeira, video Movemáquinas" width="640" height="360" loading="lazy">
           <div class="video-wrap__play"><svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg></div>
         </div>
       </div>
@@ -405,7 +409,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <span class="section-tag">Valores</span>
         <h2 id="quanto-h2">Quanto custa locar maquinario no <span>DF</span> em 2026?</h2>
         <p style="margin-bottom:var(--space-sm)">A mensalidade varia conforme modelo, vigencia contratual e Regiao Administrativa de destino. Referencia: empilhadeira Clark valor sob consulta, ja com suporte tecnico coberto. O frete Goiania-Brasilia segue tabela proporcional a quilometragem pela BR-060.</p>
-        <p style="margin-bottom:var(--space-md)">Nosso polo logistico despacha semanalmente para o Plano Piloto, Taguatinga, Ceilandia e Samambaia. No video ao lado, explicamos cada componente do preco — ou solicite uma proposta detalhada pelo WhatsApp agora.</p>
+        <p style="margin-bottom:var(--space-md)">Nosso polo logistico despacha semanalmente para o Plano Piloto, Taguatinga, Ceilandia e Samambaia. No video ao lado, explicamos cada componente do preco, ou solicite uma proposta detalhada pelo WhatsApp agora.</p>
         <a href="https://wa.me/5562982637300?text=Ol%C3%A1%2C+quero+saber+o+valor+de+loca%C3%A7%C3%A3o+de+equipamentos+em+Bras%C3%ADlia" class="btn btn--wa btn--sm" target="_blank" rel="noopener noreferrer"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479c0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg> Pedir orcamento personalizado</a>
       </div>
     </div>
@@ -418,7 +422,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <span class="section-tag">Cobertura no DF</span>
     <h2 id="conversacional-h2">A Movemáquinas atende <span>Brasilia</span>?</h2>
     <div class="conversacional__box reveal">
-      <p><strong>Brasilia e o maior mercado de construcao civil e infraestrutura publica de Goiás, DF, Tocantins e Mato Grosso.</strong> A Movemáquinas atende o Distrito Federal a partir da sede em Goiania, a 209 km pela BR-060/BR-040. Realizamos <strong>entregas em ate 48 horas</strong> para qualquer regiao administrativa — do SIA a Ceilandia, de Aguas Claras a Samambaia, da Asa Norte ao Polo JK em Santa Maria. Suporte tecnico com deslocamento dedicado e frota Clark pronta para contratos de curta e longa duracao. Se sua operacao esta no DF ou no entorno, a resposta e sim: <strong>atendemos com a mesma qualidade da capital goiana</strong>. Fale pelo WhatsApp ou ligue: <a href="tel:+556232111515" style="color:var(--color-primary);font-weight:700;">(62) 3211-1515</a>.</p>
+      <p><strong>Brasilia e o maior mercado de construcao civil e infraestrutura publica de Goiás, DF, Tocantins e Mato Grosso.</strong> A Movemáquinas atende o Distrito Federal a partir da sede em Goiania, a 209 km pela BR-060/BR-040. Realizamos <strong>entregas em ate 48 horas</strong> para qualquer regiao administrativa, do SIA a Ceilandia, de Aguas Claras a Samambaia, da Asa Norte ao Polo JK em Santa Maria. Suporte tecnico com deslocamento dedicado e frota Clark pronta para contratos de curta e longa duracao. Se sua operacao esta no DF ou no entorno, a resposta e sim: <strong>atendemos com a mesma qualidade da capital goiana</strong>. Fale pelo WhatsApp ou ligue: <a href="tel:+556232111515" style="color:var(--color-primary);font-weight:700;">(62) 3211-1515</a>.</p>
     </div>
   </div>
 </section>
@@ -429,14 +433,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <span class="section-tag section-tag--white">Depoimentos</span>
     <h2 id="depoimentos-h2">Empresas de Brasilia que contratam a <span>Movemáquinas</span></h2>
     <div class="testimonial-grid">
-      <article class="testimonial-card reveal reveal-stagger" style="--stagger:0"><p class="testimonial-card__quote">Contratamos empilhadeiras para movimentacao de material em obra publica na Esplanada. A Move entregou em 36 horas e o suporte tecnico chegou no dia seguinte via BR-060 para a inspecao inicial. Renovamos o contrato por mais 6 meses — a qualidade Clark e a manutencao inclusa compensam a distancia.</p><div class="testimonial-card__author"><div class="testimonial-card__avatar">R</div><div class="testimonial-card__info"><strong>Ricardo P.</strong><span>Coordenador de Obras · Construtora · Brasilia-DF</span></div></div></article>
+      <article class="testimonial-card reveal reveal-stagger" style="--stagger:0"><p class="testimonial-card__quote">Contratamos empilhadeiras para movimentacao de material em obra publica na Esplanada. A Move entregou em 36 horas e o suporte tecnico chegou no dia seguinte via BR-060 para a inspecao inicial. Renovamos o contrato por mais 6 meses, a qualidade Clark e a manutencao inclusa compensam a distancia.</p><div class="testimonial-card__author"><div class="testimonial-card__avatar">R</div><div class="testimonial-card__info"><strong>Ricardo P.</strong><span>Coordenador de Obras · Construtora · Brasilia-DF</span></div></div></article>
       <article class="testimonial-card reveal reveal-stagger" style="--stagger:1"><p class="testimonial-card__quote">Precisavamos de plataforma tesoura para manutencao de galpao no SIA. A logistica Goiania-Brasilia foi transparente desde o orcamento. Equipamento chegou no prazo combinado, a equipe tecnica fez o check-in por video e quando tivemos um ajuste hidraulico, resolveram em 24 horas. Profissionalismo de ponta a ponta.</p><div class="testimonial-card__author"><div class="testimonial-card__avatar">F</div><div class="testimonial-card__info"><strong>Fernanda S.</strong><span>Gerente de Facilities · Empresa Publica · Brasilia-DF</span></div></div></article>
       <article class="testimonial-card reveal reveal-stagger" style="--stagger:2"><p class="testimonial-card__quote">Operamos transpaleteiras Clark no centro de distribuicao em Ceilandia. A bateria de litio aguenta turnos de 10 horas sem recarga, e no unico chamado tecnico que fizemos, a equipe da Move despachou peca de reposicao no mesmo dia. Atendimento que nao parece vir de outra cidade.</p><div class="testimonial-card__author"><div class="testimonial-card__avatar">T</div><div class="testimonial-card__info"><strong>Thiago M.</strong><span>Supervisor de Logistica · CD Atacadista · Ceilandia-DF</span></div></div></article>
     </div>
   </div>
 </section>
 
-<!-- LINKAGEM ESTRUTURAL — REGIOES PROXIMAS -->
+<!-- LINKAGEM ESTRUTURAL, REGIOES PROXIMAS -->
 <nav aria-label="Regioes proximas atendidas">
 <section id="outras-regioes" class="page-section page-section--surface" aria-labelledby="regioes-h2">
   <div class="container">
@@ -447,7 +451,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <a href="/luziania-go/" class="regiao-link reveal reveal-stagger" style="--stagger:0"><span class="regiao-link__icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span>Luziania (60 km)</a>
       <a href="/valparaiso-de-goias-go/" class="regiao-link reveal reveal-stagger" style="--stagger:1"><span class="regiao-link__icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span>Valparaiso de Goias (35 km)</a>
       <a href="/formosa-go/" class="regiao-link reveal reveal-stagger" style="--stagger:2"><span class="regiao-link__icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span>Formosa (80 km)</a>
-      <a href="/goiania-go/" class="regiao-link reveal reveal-stagger" style="--stagger:3"><span class="regiao-link__icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span>Goiania (209 km — sede)</a>
+      <a href="/goiania-go/" class="regiao-link reveal reveal-stagger" style="--stagger:3"><span class="regiao-link__icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span>Goiania (209 km, sede)</a>
     </div>
     <p style="margin-top:var(--space-md);font-size:var(--font-small);color:var(--color-muted);"><a href="/cidades-atendidas/" style="color:var(--color-primary);font-weight:700;">Confira todas as cidades atendidas →</a></p>
   </div>
@@ -461,7 +465,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="reveal">
         <span class="section-tag"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Cobertura</span>
         <h2 id="mapa-h2">Cobertura em <span>Brasilia</span> e entorno do DF</h2>
-        <p style="margin-bottom:var(--space-md);">A Movemáquinas entrega equipamentos em Brasilia em ate 48 horas a partir da sede em Goiania. Para o entorno do DF — Luziania, Valparaiso, Formosa — o prazo e o mesmo. Cobrimos todo o eixo Goiania-Brasilia.</p>
+        <p style="margin-bottom:var(--space-md);">A Movemáquinas entrega equipamentos em Brasilia em ate 48 horas a partir da sede em Goiania. Para o entorno do DF, Luziania, Valparaiso, Formosa, o prazo e o mesmo. Cobrimos todo o eixo Goiania-Brasilia.</p>
         <ul style="list-style:none;display:flex;flex-direction:column;gap:10px;margin-bottom:var(--space-md);">
           <li style="display:flex;align-items:center;gap:8px;font-size:var(--font-small);color:var(--color-text-light);"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1D9648" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Entrega em ate 48h em Brasilia</li>
           <li style="display:flex;align-items:center;gap:8px;font-size:var(--font-small);color:var(--color-text-light);"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1D9648" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Entorno do DF no mesmo prazo</li>
@@ -486,19 +490,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
       <details class="faq__item reveal reveal-stagger" style="--stagger:0" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><summary class="faq__trigger"><h3 itemprop="name">Como a Movemáquinas atende Brasilia a partir da sede em Goias?</h3><svg class="faq__icon" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></summary><div class="faq__answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><div itemprop="text">Sim. A sede da Movemáquinas fica em Goiania, a 209 km de Brasilia pela BR-060/BR-040. Mantemos rota logistica regular para o DF com entregas em ate 48 horas. Orgaos publicos, construtoras e empresas de Brasilia ja operam com nossos equipamentos Clark em contratos de media e longa duracao.</div></div></details>
 
-      <details class="faq__item reveal reveal-stagger" style="--stagger:1" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><summary class="faq__trigger"><h3 itemprop="name">Qual o prazo de entrega de equipamentos em Brasilia?</h3><svg class="faq__icon" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></summary><div class="faq__answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><div itemprop="text">O prazo padrao e de ate 48 horas apos confirmacao do contrato. A rota Goiania-Brasilia pela BR-060 leva aproximadamente 2h30 de transporte rodoviario. Para contratos programados, agendamos a data de entrega com antecedencia. Para urgencias, entre em contato pelo WhatsApp — avaliamos possibilidade de despacho prioritario.</div></div></details>
+      <details class="faq__item reveal reveal-stagger" style="--stagger:1" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><summary class="faq__trigger"><h3 itemprop="name">Qual o prazo de entrega de equipamentos em Brasilia?</h3><svg class="faq__icon" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></summary><div class="faq__answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><div itemprop="text">O prazo padrao e de ate 48 horas apos confirmacao do contrato. A rota Goiania-Brasilia pela BR-060 leva aproximadamente 2h30 de transporte rodoviario. Para contratos programados, agendamos a data de entrega com antecedencia. Para urgencias, entre em contato pelo WhatsApp, avaliamos possibilidade de despacho prioritario.</div></div></details>
 
-      <details class="faq__item reveal reveal-stagger" style="--stagger:2" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><summary class="faq__trigger"><h3 itemprop="name">Quais regioes de Brasilia a Movemáquinas cobre?</h3><svg class="faq__icon" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></summary><div class="faq__answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><div itemprop="text">Atendemos todas as regioes administrativas do Distrito Federal — Plano Piloto, Asa Norte, Asa Sul, Taguatinga, Ceilandia, Samambaia, Aguas Claras, SIA, SAAN, Santa Maria, Gama e Sobradinho. Tambem cobrimos o entorno: Luziania, Valparaiso de Goias e Formosa. Basta informar o endereco da obra ou operacao.</div></div></details>
+      <details class="faq__item reveal reveal-stagger" style="--stagger:2" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><summary class="faq__trigger"><h3 itemprop="name">Quais regioes de Brasilia a Movemáquinas cobre?</h3><svg class="faq__icon" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></summary><div class="faq__answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><div itemprop="text">Atendemos todas as regioes administrativas do Distrito Federal, Plano Piloto, Asa Norte, Asa Sul, Taguatinga, Ceilandia, Samambaia, Aguas Claras, SIA, SAAN, Santa Maria, Gama e Sobradinho. Tambem cobrimos o entorno: Luziania, Valparaiso de Goias e Formosa. Basta informar o endereco da obra ou operacao.</div></div></details>
 
-      <details class="faq__item reveal reveal-stagger" style="--stagger:3" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><summary class="faq__trigger"><h3 itemprop="name">A Movemáquinas entrega no SIA e nos polos industriais do DF?</h3><svg class="faq__icon" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></summary><div class="faq__answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><div itemprop="text">Sim. O Setor de Industria e Abastecimento (SIA), o SAAN, o Polo JK em Santa Maria e a zona industrial de Ceilandia estao na nossa rota prioritaria para Brasilia. Varios clientes do DF operam com empilhadeiras, plataformas e transpaleteiras Clark em contratos continuos — o transporte regular pela BR-060 garante reposicao e suporte sem interrupcao.</div></div></details>
+      <details class="faq__item reveal reveal-stagger" style="--stagger:3" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><summary class="faq__trigger"><h3 itemprop="name">A Movemáquinas entrega no SIA e nos polos industriais do DF?</h3><svg class="faq__icon" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></summary><div class="faq__answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><div itemprop="text">Sim. O Setor de Industria e Abastecimento (SIA), o SAAN, o Polo JK em Santa Maria e a zona industrial de Ceilandia estao na nossa rota prioritaria para Brasilia. Varios clientes do DF operam com empilhadeiras, plataformas e transpaleteiras Clark em contratos continuos, o transporte regular pela BR-060 garante reposicao e suporte sem interrupcao.</div></div></details>
 
       <details class="faq__item reveal reveal-stagger" style="--stagger:4" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><summary class="faq__trigger"><h3 itemprop="name">Preciso de habilitacao NR-11 para operar equipamentos em Brasilia?</h3><svg class="faq__icon" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></summary><div class="faq__answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><div itemprop="text">Sim. A NR-11 exige capacitacao formal para operadores de empilhadeira em todo o territorio nacional. A Movemáquinas oferece treinamento NR-11 com certificado valido, disponivel para equipes de Brasilia. Podemos agendar a formacao coincidindo com a entrega do equipamento no DF para otimizar a logistica.</div></div></details>
 
-      <details class="faq__item reveal reveal-stagger" style="--stagger:5" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><summary class="faq__trigger"><h3 itemprop="name">Quanto custa alugar empilhadeira em Brasilia?</h3><svg class="faq__icon" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></summary><div class="faq__answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><div itemprop="text">Empilhadeiras Clark valor sob consulta. com manutencao inclusa. Para Brasilia, o valor final considera o tipo de equipamento (GLP, eletrica ou diesel), capacidade de carga, duracao do contrato e custo logistico de deslocamento Goiania-Brasilia (209 km). Solicite um orcamento pelo WhatsApp informando sua demanda — enviamos proposta detalhada em ate 2 horas.</div></div></details>
+      <details class="faq__item reveal reveal-stagger" style="--stagger:5" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><summary class="faq__trigger"><h3 itemprop="name">Quanto custa alugar empilhadeira em Brasilia?</h3><svg class="faq__icon" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></summary><div class="faq__answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><div itemprop="text">Empilhadeiras Clark valor sob consulta. com manutencao inclusa. Para Brasilia, o valor final considera o tipo de equipamento (GLP, eletrica ou diesel), capacidade de carga, duracao do contrato e custo logistico de deslocamento Goiania-Brasilia (209 km). Solicite um orcamento pelo WhatsApp informando sua demanda, enviamos proposta detalhada em ate 2 horas.</div></div></details>
 
       <details class="faq__item reveal reveal-stagger" style="--stagger:6" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><summary class="faq__trigger"><h3 itemprop="name">Como funciona a manutencao dos equipamentos em Brasilia?</h3><svg class="faq__icon" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></summary><div class="faq__answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><div itemprop="text">Toda manutencao preventiva e corretiva esta inclusa no contrato. Para Brasilia, mantemos estoque de pecas de reposicao mais demandadas e equipe tecnica que se desloca pela BR-060 quando necessario. O tempo de resposta para chamados tecnicos no DF e de ate 24 horas. O suporte remoto funciona em horário comercial.</div></div></details>
 
-      <details class="faq__item reveal reveal-stagger" style="--stagger:7" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><summary class="faq__trigger"><h3 itemprop="name">Qual o contrato minimo para locacao em Brasilia?</h3><svg class="faq__icon" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></summary><div class="faq__answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><div itemprop="text">O prazo padrao e de 1 mes com renovacao automatica. Para obras de infraestrutura publica, construcao civil em Aguas Claras ou projetos industriais no SIA com prazo definido, avaliamos contratos sob medida. Consulte pelo WhatsApp informando a duracao estimada — quanto maior o prazo, melhores as condicoes comerciais.</div></div></details>
+      <details class="faq__item reveal reveal-stagger" style="--stagger:7" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><summary class="faq__trigger"><h3 itemprop="name">Qual o contrato minimo para locacao em Brasilia?</h3><svg class="faq__icon" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></summary><div class="faq__answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><div itemprop="text">O prazo padrao e de 1 mes com renovacao automatica. Para obras de infraestrutura publica, construcao civil em Aguas Claras ou projetos industriais no SIA com prazo definido, avaliamos contratos sob medida. Consulte pelo WhatsApp informando a duracao estimada, quanto maior o prazo, melhores as condicoes comerciais.</div></div></details>
 
     </div>
   </div>
@@ -511,13 +515,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <section id="orcamento" class="cta-final" aria-labelledby="cta-h2">
   <div class="container">
     <span class="section-tag section-tag--white">Orcamento DF</span>
-    <h2 id="cta-h2">Maquinas Clark no Distrito Federal — proposta em minutos</h2>
-    <p class="cta-final__sub">Envie sua demanda agora. Retornamos com equipamento disponivel, custo mensal e data de entrega na sua RA — tudo por WhatsApp, sem formulario.</p>
+    <h2 id="cta-h2">Maquinas Clark no Distrito Federal, proposta em minutos</h2>
+    <p class="cta-final__sub">Envie sua demanda agora. Retornamos com equipamento disponivel, custo mensal e data de entrega na sua RA, tudo por WhatsApp, sem formulario.</p>
     <div class="cta-final__actions">
-      <a href="https://wa.me/5562982637300?text=Ol%C3%A1%2C+quero+or%C3%A7amento+de+equipamentos+em+Bras%C3%ADlia" class="btn btn--wa" target="_blank" rel="noopener noreferrer"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg> WhatsApp — resposta imediata</a>
+      <a href="https://wa.me/5562982637300?text=Ol%C3%A1%2C+quero+or%C3%A7amento+de+equipamentos+em+Bras%C3%ADlia" class="btn btn--wa" target="_blank" rel="noopener noreferrer"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg> WhatsApp, resposta imediata</a>
       <a href="tel:+556232111515" class="btn btn--outline-white"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-7.86-7.86 19.79 19.79 0 01-3.07-8.67A2 2 0 012.33 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.92a16 16 0 006.07 6.07l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg> (62) 3211-1515</a>
     </div>
-    <p class="cta-final__note">Movemáquinas · Matriz: Av. Eurico Viana, 4913, Parque das Flores — Goiania-GO · Operacao Brasilia via BR-060 · CNPJ 32.428.258/0001-80</p>
+    <p class="cta-final__note">Movemáquinas · Matriz: Av. Eurico Viana, 4913, Parque das Flores, Goiania-GO · Operacao Brasilia via BR-060 · CNPJ 32.428.258/0001-80</p>
   </div>
 </section>
 </footer>
@@ -535,7 +539,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <script>
 (function(){
-  /* Scroll Reveal — robusto para CMS */
+  /* Scroll Reveal, robusto para CMS */
   function initReveal(){
     var els=document.querySelectorAll('.reveal');
     if(!els.length) return;
@@ -554,7 +558,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       els.forEach(function(el){ el.classList.add('is-visible'); });
     }
   }
-  /* Roda apos DOM pronto — compativel com CMS que injeta depois */
+  /* Roda apos DOM pronto, compativel com CMS que injeta depois */
   if(document.readyState==='loading'){
     document.addEventListener('DOMContentLoaded', initReveal);
   } else {
@@ -601,7 +605,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <li><a href="/contato">Contato</a></li>
   </ul></div>
   <div class="ft__col"><h4>Contato</h4>
-    <div class="ft__ci"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.11 13.8 19.79 19.79 0 01.04 5.14 2 2 0 012 3h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 10.92a16 16 0 006.07 6.07l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg><p><a href="https://wa.me/5562982637300">(62) 98263-7300</a> — Gabriel<br><a href="https://wa.me/5562981753350">(62) 98175-3350</a> — Kaio</p></div>
+    <div class="ft__ci"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.11 13.8 19.79 19.79 0 01.04 5.14 2 2 0 012 3h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 10.92a16 16 0 006.07 6.07l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg><p><a href="https://wa.me/5562982637300">(62) 98263-7300</a>, Gabriel<br><a href="https://wa.me/5562981753350">(62) 98175-3350</a>, Kaio</p></div>
     <div class="ft__ci"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><p><a href="mailto:contato@movemaquinas.com.br">contato@movemaquinas.com.br</a></p></div>
     <div class="ft__ci"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg><p>Av. Eurico Viana, 4913<br>Goiânia - GO, 74593-590</p></div>
   </div>

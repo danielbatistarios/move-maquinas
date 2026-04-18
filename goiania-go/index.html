@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Aluguel de Equipamentos em Goiânia | Movemáquinas</title>
-<meta name="description" content="Locação de empilhadeiras, plataformas elevatórias e transpaleteiras em Goiânia — GO. Frota Clark, manutenção inclusa, entrega rápida. Movemáquinas.">
+<meta name="description" content="Locação de empilhadeiras, plataformas elevatórias e transpaleteiras em Goiânia, GO. Frota Clark, manutenção inclusa, entrega rápida. Movemáquinas.">
 <link rel="canonical" href="https://movemaquinas.com.br/goiania-go/">
 <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
 <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
@@ -53,7 +53,22 @@ p{color:var(--color-text-light);line-height:1.8}
 .hero h1{color:var(--color-white);margin-bottom:var(--space-md)}
 .hero h1 em{color:var(--color-primary);font-style:normal}
 .hero__lead{font-size:1.05rem;color:rgba(255,255,255,.85);margin-bottom:var(--space-sm);line-height:1.8}
+.hero__text{color:rgba(255,255,255,.75);line-height:1.8;margin-bottom:var(--space-lg)}
 .hero__actions{display:flex;gap:var(--space-sm);flex-wrap:wrap;align-items:start;margin-bottom:var(--space-lg)}
+.hero__actions-col{display:flex;flex-direction:column;gap:4px}
+.hero__microcopy{font-size:11px;color:rgba(255,255,255,.5);font-weight:600;padding-left:4px;display:flex;align-items:center;gap:4px}
+.hero__microcopy svg{color:var(--color-primary)}
+.hero__info{background:rgba(255,255,255,.07);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border:1px solid rgba(255,255,255,.12);border-radius:var(--radius-lg);padding:var(--space-lg);display:flex;flex-direction:column;gap:var(--space-md)}
+.hero__info-row{display:flex;gap:var(--space-lg)}
+.hero__stat{text-align:center;flex:1}
+.hero__stat strong{display:block;font-size:1.6rem;font-weight:900;color:#fff;line-height:1}
+.hero__stat span{font-size:11px;color:rgba(255,255,255,.55);font-weight:600;text-transform:uppercase;letter-spacing:.04em}
+.hero__info-badges{display:flex;gap:10px;flex-wrap:wrap}
+.hero__info-badge{display:flex;align-items:center;gap:8px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.1);border-radius:var(--radius);padding:8px 12px;font-size:12px;font-weight:700;color:rgba(255,255,255,.85);flex:1;min-width:140px}
+.hero__info-badge svg{color:var(--color-primary);flex-shrink:0}
+.hero__info-clark{display:flex;align-items:center;justify-content:center;gap:10px;padding-top:8px;border-top:1px solid rgba(255,255,255,.08)}
+.hero__info-clark img{opacity:.6}
+.hero__info-clark span{font-size:11px;color:rgba(255,255,255,.4);font-weight:500}
 .hero__card{background:var(--color-white);border-radius:var(--radius-lg);padding:var(--space-lg);box-shadow:var(--shadow-lg);color:var(--color-text)}
 .hero__card-title{color:var(--color-text);margin-bottom:var(--space-md);font-size:1.1rem;font-weight:700}
 .hero__card-field{margin-bottom:var(--space-md)}
@@ -62,7 +77,7 @@ p{color:var(--color-text-light);line-height:1.8}
 .hero__card-field select:focus,.hero__card-field input:focus{border-color:var(--color-primary);outline:none}
 .hero__card .btn{width:100%;justify-content:center}
 .hero__card-note{font-size:var(--font-caption);color:var(--color-muted);text-align:center;margin-top:var(--space-sm)}
-@media(max-width:768px){.hero__layout{grid-template-columns:1fr}.hero__card{display:none}}
+@media(max-width:768px){.hero__layout{grid-template-columns:1fr}.hero__info{display:none}.hero__card{display:none}}
 </style>
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -95,17 +110,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </header>
 
-<!-- BREADCRUMB -->
-<header role="banner">
-<nav class="breadcrumb" aria-label="Navegacao estrutural">
-  <div class="container">
-    <ol class="breadcrumb__list">
-      <li><a href="https://movemaquinas.com.br"><picture><source srcset="/assets/logo-move-maquinas.webp" type="image/webp"><picture><source srcset="/assets/logo-move-maquinas.webp" type="image/webp"><img src="/assets/logo-move-maquinas.png" alt="Movemáquinas" class="breadcrumb__logo" width="110" height="22" loading="eager"></picture></picture></a></li>
-      <li><span aria-current="page">Goiania — GO</span></li>
-    </ol>
-  </div>
-</nav>
-</header>
 
 <!-- HERO -->
 <section class="hero" aria-labelledby="hero-h1">
@@ -113,10 +117,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="container">
     <div class="hero__layout">
       <div>
-        <div class="hero__badge"><span class="section-tag section-tag--white"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Goiania — GO</span></div>
+        <div class="hero__badge"><span class="section-tag section-tag--white"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Goiania, GO</span></div>
         <h1 id="hero-h1">Aluguel de Equipamentos em <em>Goiania</em></h1>
-        <p class="hero__lead"><a href="https://pt.wikipedia.org/wiki/Goi%C3%A2nia" target="_blank" rel="noopener noreferrer" style="color:var(--color-primary);font-weight:700;text-decoration:underline;">Goiania</a> e a capital de Goias e a maior cidade de Goiás, DF, Tocantins e Mato Grosso brasileiro, com mais de 1,5 milhao de habitantes e uma regiao metropolitana que ultrapassa 2,8 milhoes de pessoas. A Movemáquinas tem sede propria na cidade — na Av. Eurico Viana, 4913, Parque das Flores — e oferece locacao de empilhadeiras, plataformas elevatorias e transpaleteiras com entrega imediata, manutencao inclusa e suporte tecnico em horario comercial.</p>
-        <p class="hero__text">Do Distrito Industrial ao Polo da Moda, do corredor da BR-153 aos setores Bueno, Marista e Jardim Goias — a demanda por equipamentos de movimentacao de cargas acompanha o ritmo da capital. Contratos mensais a partir de Consultar com frota Clark disponivel para pronta entrega no mesmo dia.</p>
+        <p class="hero__lead"><a href="https://pt.wikipedia.org/wiki/Goi%C3%A2nia" target="_blank" rel="noopener noreferrer" style="color:var(--color-primary);font-weight:700;text-decoration:underline;">Goiania</a> e a capital de Goias e a maior cidade de Goiás, DF, Tocantins e Mato Grosso brasileiro, com mais de 1,5 milhao de habitantes e uma regiao metropolitana que ultrapassa 2,8 milhoes de pessoas. A Movemáquinas tem sede propria na cidade, na Av. Eurico Viana, 4913, Parque das Flores, e oferece locacao de empilhadeiras, plataformas elevatorias e transpaleteiras com entrega imediata, manutencao inclusa e suporte tecnico em horario comercial.</p>
+        <p class="hero__text">Do Distrito Industrial ao Polo da Moda, do corredor da BR-153 aos setores Bueno, Marista e Jardim Goias, a demanda por equipamentos de movimentacao de cargas acompanha o ritmo da capital. Contratos mensais a partir de Consultar com frota Clark disponivel para pronta entrega no mesmo dia.</p>
         <div class="hero__actions">
           <div class="hero__actions-col">
             <a href="https://wa.me/5562982637300?text=Ol%C3%A1%2C+quero+or%C3%A7amento+de+equipamentos+em+Goi%C3%A2nia" class="btn btn--wa" target="_blank" rel="noopener noreferrer"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg> Pedir orcamento agora</a>
@@ -296,7 +300,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </section>
 
-<!-- CONHECA A MOVE — VIDEO -->
+<!-- CONHECA A MOVE, VIDEO -->
 <section class="page-section" aria-labelledby="conheca-h2">
   <div class="container">
     <div class="split reveal">
@@ -309,15 +313,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div>
         <span class="section-tag">Quem somos</span>
         <h2 id="conheca-h2">Conheca a <span>Movemáquinas</span></h2>
-        <p style="margin-bottom:var(--space-sm)">Com mais de 20 anos no mercado goiano, a Movemáquinas e referencia em locacao de empilhadeiras, plataformas elevatorias e transpaleteiras. Somos distribuidor exclusivo Clark em Goias — com frota propria, equipe tecnica mobile e manutencao inclusa em todos os contratos.</p>
-        <p style="margin-bottom:var(--space-md)">Nossa sede fica em Goiania, no bairro Parque das Flores. Ja atendemos mais de 500 clientes em Goias, DF, Minas Gerais e Tocantins — de industrias a hoteis, de atacadistas a obras de construcao civil.</p>
+        <p style="margin-bottom:var(--space-sm)">Com mais de 20 anos no mercado goiano, a Movemáquinas e referencia em locacao de empilhadeiras, plataformas elevatorias e transpaleteiras. Somos distribuidor exclusivo Clark em Goias, com frota propria, equipe tecnica mobile e manutencao inclusa em todos os contratos.</p>
+        <p style="margin-bottom:var(--space-md)">Nossa sede fica em Goiania, no bairro Parque das Flores. Ja atendemos mais de 500 clientes em Goias, DF, Minas Gerais e Tocantins, de industrias a hoteis, de atacadistas a obras de construcao civil.</p>
         <div style="display:flex;gap:12px;align-items:center;flex-wrap:wrap"><img src="https://movemaquinas.com.br/assets/logo-move-maquinas-B2l9eWy_.png" alt="Movemáquinas" width="130" height="26" loading="lazy"><img src="https://clarkempilhadeiras.com.br/wp-content/uploads/2023/12/green-logo-200x74.png" alt="Clark" width="90" height="33" loading="lazy" style="opacity:.55"></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- EQUIPAMENTOS — CATALOGO TECNICO -->
+<!-- EQUIPAMENTOS, CATALOGO TECNICO -->
 <section id="equipamentos" class="page-section page-section--surface" aria-labelledby="equip-h2">
   <div class="container">
     <span class="section-tag"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg> Frota disponivel</span>
@@ -344,7 +348,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <div class="equip-card__spec"><span class="equip-card__spec-label">Altura</span><span class="equip-card__spec-value">8 a 15 metros de trabalho</span></div>
           <div class="equip-card__spec"><span class="equip-card__spec-label">Aplicacao</span><span class="equip-card__spec-value">Galpoes, construcao, manutencao</span></div>
         </div>
-        <div class="equip-card__price">Consultar<small> — varia por altura</small></div>
+        <div class="equip-card__price">Consultar<small>, varia por altura</small></div>
       </div>
 
       <div class="equip-card reveal reveal-stagger" style="--stagger:2">
@@ -355,18 +359,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <div class="equip-card__spec"><span class="equip-card__spec-label">Vantagem</span><span class="equip-card__spec-value">Acesso em areas com obstaculos</span></div>
           <div class="equip-card__spec"><span class="equip-card__spec-label">Aplicacao</span><span class="equip-card__spec-value">Obras, reformas, fachadas</span></div>
         </div>
-        <div class="equip-card__price">Consultar<small> — varia por modelo</small></div>
+        <div class="equip-card__price">Consultar<small>, varia por modelo</small></div>
       </div>
 
       <div class="equip-card reveal reveal-stagger" style="--stagger:3">
         <div class="equip-card__bar"></div>
         <div class="equip-card__header"><div class="equip-card__name">Transpaleteiras Eletricas</div><span class="equip-card__model">Clark WPio15 · Li+</span></div>
         <div class="equip-card__specs">
-          <div class="equip-card__spec"><span class="equip-card__spec-label">Bateria</span><span class="equip-card__spec-value">Litio 24V — carregamento rapido</span></div>
+          <div class="equip-card__spec"><span class="equip-card__spec-label">Bateria</span><span class="equip-card__spec-value">Litio 24V, carregamento rapido</span></div>
           <div class="equip-card__spec"><span class="equip-card__spec-label">Capacidade</span><span class="equip-card__spec-value">1.500 a 3.500 kg</span></div>
           <div class="equip-card__spec"><span class="equip-card__spec-label">Aplicacao</span><span class="equip-card__spec-value">Camaras frias, docas, CDs</span></div>
         </div>
-        <div class="equip-card__price">Consultar<small> — varia por modelo</small></div>
+        <div class="equip-card__price">Consultar<small>, varia por modelo</small></div>
       </div>
 
     </div>
@@ -397,15 +401,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="split split--reverse reveal">
       <div class="video-wrap">
         <div class="video-wrap__poster" onclick="this.parentElement.innerHTML='<iframe src=\'https://www.youtube.com/embed/Nare91cVYo4?autoplay=1&rel=0\' allow=\'autoplay;encrypted-media\' allowfullscreen title=\'Quanto custa alugar empilhadeira em Goiania\'></iframe>'" role="button" aria-label="Reproduzir video sobre precos">
-          <img src="https://img.youtube.com/vi/Nare91cVYo4/sddefault.jpg" alt="Quanto custa alugar empilhadeira — video Movemáquinas" width="640" height="360" loading="lazy">
+          <img src="https://img.youtube.com/vi/Nare91cVYo4/sddefault.jpg" alt="Quanto custa alugar empilhadeira, video Movemáquinas" width="640" height="360" loading="lazy">
           <div class="video-wrap__play"><svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg></div>
         </div>
       </div>
       <div>
         <span class="section-tag">Transparencia</span>
         <h2 id="quanto-h2">Quanto custa alugar equipamento em <span>Goiania</span>?</h2>
-        <p style="margin-bottom:var(--space-sm)">O valor depende do tipo de equipamento, duracao do contrato e local de operacao. Empilhadeiras valor sob consulta. com manutencao inclusa — sem custos ocultos.</p>
-        <p style="margin-bottom:var(--space-md)">Como estamos sediados em Goiania, nao ha custo adicional de deslocamento. Assista ao video ao lado para entender como funciona a precificacao — ou fale direto com nosso time para um orcamento personalizado.</p>
+        <p style="margin-bottom:var(--space-sm)">O valor depende do tipo de equipamento, duracao do contrato e local de operacao. Empilhadeiras valor sob consulta. com manutencao inclusa, sem custos ocultos.</p>
+        <p style="margin-bottom:var(--space-md)">Como estamos sediados em Goiania, nao ha custo adicional de deslocamento. Assista ao video ao lado para entender como funciona a precificacao, ou fale direto com nosso time para um orcamento personalizado.</p>
         <a href="https://wa.me/5562982637300?text=Ol%C3%A1%2C+quero+saber+o+valor+de+loca%C3%A7%C3%A3o+de+equipamentos+em+Goi%C3%A2nia" class="btn btn--wa btn--sm" target="_blank" rel="noopener noreferrer"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479c0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg> Pedir orcamento personalizado</a>
       </div>
     </div>
@@ -418,7 +422,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <span class="section-tag">Atendimento local</span>
     <h2 id="conversacional-h2">A Movemáquinas atende <span>Goiania</span>?</h2>
     <div class="conversacional__box reveal">
-      <p><strong>Goiania e a nossa cidade-sede.</strong> A Movemáquinas tem escritorio e base operacional proprios na Av. Eurico Viana, 4913, Parque das Flores — no coracao da capital goiana. Isso significa <strong>entrega no mesmo dia</strong>, suporte tecnico presencial em horas (nao dias) e frota Clark sempre disponivel para pronta entrega. Atendemos todos os bairros de Goiania — do Distrito Industrial ao Setor Bueno, do Polo da Moda ao Jardim Goias, das margens da BR-153 ao corredor da GO-060. Se sua operacao esta na capital ou na regiao metropolitana, a resposta e sim: <strong>atendemos com a maior agilidade do estado</strong>. Fale pelo WhatsApp ou ligue: <a href="tel:+556232111515" style="color:var(--color-primary);font-weight:700;">(62) 3211-1515</a>.</p>
+      <p><strong>Goiania e a nossa cidade-sede.</strong> A Movemáquinas tem escritorio e base operacional proprios na Av. Eurico Viana, 4913, Parque das Flores, no coracao da capital goiana. Isso significa <strong>entrega no mesmo dia</strong>, suporte tecnico presencial em horas (nao dias) e frota Clark sempre disponivel para pronta entrega. Atendemos todos os bairros de Goiania, do Distrito Industrial ao Setor Bueno, do Polo da Moda ao Jardim Goias, das margens da BR-153 ao corredor da GO-060. Se sua operacao esta na capital ou na regiao metropolitana, a resposta e sim: <strong>atendemos com a maior agilidade do estado</strong>. Fale pelo WhatsApp ou ligue: <a href="tel:+556232111515" style="color:var(--color-primary);font-weight:700;">(62) 3211-1515</a>.</p>
     </div>
   </div>
 </section>
@@ -436,7 +440,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </section>
 
-<!-- LINKAGEM ESTRUTURAL — REGIOES PROXIMAS -->
+<!-- LINKAGEM ESTRUTURAL, REGIOES PROXIMAS -->
 <nav aria-label="Regioes proximas atendidas">
 <section id="outras-regioes" class="page-section page-section--surface" aria-labelledby="regioes-h2">
   <div class="container">
@@ -488,19 +492,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
       <details class="faq__item reveal reveal-stagger" style="--stagger:0" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><summary class="faq__trigger"><h3 itemprop="name">A Movemáquinas tem sede em Goiania?</h3><svg class="faq__icon" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></summary><div class="faq__answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><div itemprop="text">Sim. A sede da Movemáquinas fica na Av. Eurico Viana, 4913 - Qd 5 B Lt 04 - Parque das Flores, Goiania - GO, CEP 74593-590. E aqui que mantemos escritorio, base operacional e parte da frota disponivel para pronta entrega na capital.</div></div></details>
 
-      <details class="faq__item reveal reveal-stagger" style="--stagger:1" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><summary class="faq__trigger"><h3 itemprop="name">A entrega de equipamentos em Goiania e no mesmo dia?</h3><svg class="faq__icon" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></summary><div class="faq__answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><div itemprop="text">Sim. Por termos sede propria em Goiania, a entrega para qualquer bairro da capital pode ser feita no mesmo dia, sujeita a disponibilidade de estoque. Para urgencias, entre em contato pelo WhatsApp informando o tipo de equipamento e o endereco — confirmamos disponibilidade e prazo em minutos.</div></div></details>
+      <details class="faq__item reveal reveal-stagger" style="--stagger:1" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><summary class="faq__trigger"><h3 itemprop="name">A entrega de equipamentos em Goiania e no mesmo dia?</h3><svg class="faq__icon" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></summary><div class="faq__answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><div itemprop="text">Sim. Por termos sede propria em Goiania, a entrega para qualquer bairro da capital pode ser feita no mesmo dia, sujeita a disponibilidade de estoque. Para urgencias, entre em contato pelo WhatsApp informando o tipo de equipamento e o endereco, confirmamos disponibilidade e prazo em minutos.</div></div></details>
 
-      <details class="faq__item reveal reveal-stagger" style="--stagger:2" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><summary class="faq__trigger"><h3 itemprop="name">Quais bairros de Goiania a Movemáquinas atende?</h3><svg class="faq__icon" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></summary><div class="faq__answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><div itemprop="text">Atendemos todos os bairros e setores de Goiania — incluindo Setor Bueno, Setor Marista, Jardim Goias, Jardim America, Setor Campinas, Setor Central, Parque das Flores, Setor Perimetral Norte, entre outros. Tambem cobrimos as zonas industriais como o Distrito Industrial Leste e o corredor da GO-060. Basta informar o endereco da obra ou operacao.</div></div></details>
+      <details class="faq__item reveal reveal-stagger" style="--stagger:2" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><summary class="faq__trigger"><h3 itemprop="name">Quais bairros de Goiania a Movemáquinas atende?</h3><svg class="faq__icon" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></summary><div class="faq__answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><div itemprop="text">Atendemos todos os bairros e setores de Goiania, incluindo Setor Bueno, Setor Marista, Jardim Goias, Jardim America, Setor Campinas, Setor Central, Parque das Flores, Setor Perimetral Norte, entre outros. Tambem cobrimos as zonas industriais como o Distrito Industrial Leste e o corredor da GO-060. Basta informar o endereco da obra ou operacao.</div></div></details>
 
-      <details class="faq__item reveal reveal-stagger" style="--stagger:3" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><summary class="faq__trigger"><h3 itemprop="name">Voces atendem o DAIA e o Distrito Industrial de Goiania?</h3><svg class="faq__icon" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></summary><div class="faq__answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><div itemprop="text">Sim. O Distrito Agroindustrial de Goiania (DAIA), o Distrito Industrial Leste e os polos industriais ao longo da GO-060 e da BR-153 estao dentro da nossa area de cobertura prioritaria. Muitos dos nossos clientes em Goiania operam nessas zonas industriais — com empilhadeiras, plataformas e transpaleteiras em contratos de media e longa duracao.</div></div></details>
+      <details class="faq__item reveal reveal-stagger" style="--stagger:3" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><summary class="faq__trigger"><h3 itemprop="name">Voces atendem o DAIA e o Distrito Industrial de Goiania?</h3><svg class="faq__icon" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></summary><div class="faq__answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><div itemprop="text">Sim. O Distrito Agroindustrial de Goiania (DAIA), o Distrito Industrial Leste e os polos industriais ao longo da GO-060 e da BR-153 estao dentro da nossa area de cobertura prioritaria. Muitos dos nossos clientes em Goiania operam nessas zonas industriais, com empilhadeiras, plataformas e transpaleteiras em contratos de media e longa duracao.</div></div></details>
 
       <details class="faq__item reveal reveal-stagger" style="--stagger:4" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><summary class="faq__trigger"><h3 itemprop="name">Os operadores precisam de certificacao NR-11 para usar os equipamentos?</h3><svg class="faq__icon" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></summary><div class="faq__answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><div itemprop="text">Sim. A NR-11 exige que operadores de empilhadeira sejam capacitados e habilitados. A Movemáquinas oferece o Curso de Operador de Empilhadeira em Goiania, com formacao teorica e pratica e certificado valido. Se sua equipe precisa de capacitacao, podemos agendar o treinamento junto com a entrega do equipamento.</div></div></details>
 
-      <details class="faq__item reveal reveal-stagger" style="--stagger:5" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><summary class="faq__trigger"><h3 itemprop="name">Qual o valor do aluguel de empilhadeira em Goiania?</h3><svg class="faq__icon" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></summary><div class="faq__answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><div itemprop="text">O aluguel de empilhadeiras em Goiania comeca valor sob consulta., com manutencao preventiva e corretiva inclusa — sem custos ocultos. O valor final depende do tipo de equipamento (GLP, eletrica ou diesel), capacidade de carga, duracao do contrato e volume locado. Por sermos sediados na capital, nao ha custo adicional de deslocamento. Solicite um orcamento pelo WhatsApp informando sua necessidade.</div></div></details>
+      <details class="faq__item reveal reveal-stagger" style="--stagger:5" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><summary class="faq__trigger"><h3 itemprop="name">Qual o valor do aluguel de empilhadeira em Goiania?</h3><svg class="faq__icon" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></summary><div class="faq__answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><div itemprop="text">O aluguel de empilhadeiras em Goiania comeca valor sob consulta., com manutencao preventiva e corretiva inclusa, sem custos ocultos. O valor final depende do tipo de equipamento (GLP, eletrica ou diesel), capacidade de carga, duracao do contrato e volume locado. Por sermos sediados na capital, nao ha custo adicional de deslocamento. Solicite um orcamento pelo WhatsApp informando sua necessidade.</div></div></details>
 
-      <details class="faq__item reveal reveal-stagger" style="--stagger:6" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><summary class="faq__trigger"><h3 itemprop="name">A manutencao esta inclusa no contrato de locacao em Goiania?</h3><svg class="faq__icon" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></summary><div class="faq__answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><div itemprop="text">Sim. Toda manutencao preventiva e corretiva esta incluida no contrato de locacao. Em Goiania, por estarmos na mesma cidade, o tempo de resposta tecnica e ainda mais rapido — geralmente em poucas horas. Nosso suporte tecnico em horario comercial, de segunda a sexta.</div></div></details>
+      <details class="faq__item reveal reveal-stagger" style="--stagger:6" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><summary class="faq__trigger"><h3 itemprop="name">A manutencao esta inclusa no contrato de locacao em Goiania?</h3><svg class="faq__icon" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></summary><div class="faq__answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><div itemprop="text">Sim. Toda manutencao preventiva e corretiva esta incluida no contrato de locacao. Em Goiania, por estarmos na mesma cidade, o tempo de resposta tecnica e ainda mais rapido, geralmente em poucas horas. Nosso suporte tecnico em horario comercial, de segunda a sexta.</div></div></details>
 
-      <details class="faq__item reveal reveal-stagger" style="--stagger:7" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><summary class="faq__trigger"><h3 itemprop="name">Qual o prazo minimo de locacao em Goiania?</h3><svg class="faq__icon" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></summary><div class="faq__answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><div itemprop="text">O prazo padrao e de 1 mes, com possibilidade de renovacao automatica. Para obras com prazo definido — como reformas de fachada no Setor Marista ou instalacoes no Distrito Industrial — tambem avaliamos contratos por demanda especifica. Consulte pelo WhatsApp informando a duracao estimada da sua operacao para recebermos a melhor condicao.</div></div></details>
+      <details class="faq__item reveal reveal-stagger" style="--stagger:7" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><summary class="faq__trigger"><h3 itemprop="name">Qual o prazo minimo de locacao em Goiania?</h3><svg class="faq__icon" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></summary><div class="faq__answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><div itemprop="text">O prazo padrao e de 1 mes, com possibilidade de renovacao automatica. Para obras com prazo definido, como reformas de fachada no Setor Marista ou instalacoes no Distrito Industrial, tambem avaliamos contratos por demanda especifica. Consulte pelo WhatsApp informando a duracao estimada da sua operacao para recebermos a melhor condicao.</div></div></details>
 
     </div>
   </div>
@@ -513,13 +517,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <section id="orcamento" class="cta-final" aria-labelledby="cta-h2">
   <div class="container">
     <span class="section-tag section-tag--white">Orcamento rapido</span>
-    <h2 id="cta-h2">Sede em Goiania — entrega no mesmo dia</h2>
-    <p class="cta-final__sub">Fale agora com nosso time. Confirmamos disponibilidade e prazo de entrega em minutos — sem enrolar.</p>
+    <h2 id="cta-h2">Sede em Goiania, entrega no mesmo dia</h2>
+    <p class="cta-final__sub">Fale agora com nosso time. Confirmamos disponibilidade e prazo de entrega em minutos, sem enrolar.</p>
     <div class="cta-final__actions">
-      <a href="https://wa.me/5562982637300?text=Ol%C3%A1%2C+quero+or%C3%A7amento+de+equipamentos+em+Goi%C3%A2nia" class="btn btn--wa" target="_blank" rel="noopener noreferrer"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg> WhatsApp — resposta imediata</a>
+      <a href="https://wa.me/5562982637300?text=Ol%C3%A1%2C+quero+or%C3%A7amento+de+equipamentos+em+Goi%C3%A2nia" class="btn btn--wa" target="_blank" rel="noopener noreferrer"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg> WhatsApp, resposta imediata</a>
       <a href="tel:+556232111515" class="btn btn--outline-white"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-7.86-7.86 19.79 19.79 0 01-3.07-8.67A2 2 0 012.33 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.92a16 16 0 006.07 6.07l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg> (62) 3211-1515</a>
     </div>
-    <p class="cta-final__note">Movemáquinas · Av. Eurico Viana, 4913 — Parque das Flores, Goiania - GO · CNPJ 32.428.258/0001-80</p>
+    <p class="cta-final__note">Movemáquinas · Av. Eurico Viana, 4913, Parque das Flores, Goiania - GO · CNPJ 32.428.258/0001-80</p>
   </div>
 </section>
 </footer>
@@ -537,7 +541,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <script>
 (function(){
-  /* Scroll Reveal — robusto para CMS */
+  /* Scroll Reveal, robusto para CMS */
   function initReveal(){
     var els=document.querySelectorAll('.reveal');
     if(!els.length) return;
@@ -556,7 +560,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       els.forEach(function(el){ el.classList.add('is-visible'); });
     }
   }
-  /* Roda apos DOM pronto — compativel com CMS que injeta depois */
+  /* Roda apos DOM pronto, compativel com CMS que injeta depois */
   if(document.readyState==='loading'){
     document.addEventListener('DOMContentLoaded', initReveal);
   } else {
@@ -603,7 +607,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <li><a href="/contato">Contato</a></li>
   </ul></div>
   <div class="ft__col"><h4>Contato</h4>
-    <div class="ft__ci"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.11 13.8 19.79 19.79 0 01.04 5.14 2 2 0 012 3h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 10.92a16 16 0 006.07 6.07l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg><p><a href="https://wa.me/5562982637300">(62) 98263-7300</a> — Gabriel<br><a href="https://wa.me/5562981753350">(62) 98175-3350</a> — Kaio</p></div>
+    <div class="ft__ci"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.11 13.8 19.79 19.79 0 01.04 5.14 2 2 0 012 3h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 10.92a16 16 0 006.07 6.07l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg><p><a href="https://wa.me/5562982637300">(62) 98263-7300</a>, Gabriel<br><a href="https://wa.me/5562981753350">(62) 98175-3350</a>, Kaio</p></div>
     <div class="ft__ci"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><p><a href="mailto:contato@movemaquinas.com.br">contato@movemaquinas.com.br</a></p></div>
     <div class="ft__ci"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg><p>Av. Eurico Viana, 4913<br>Goiânia - GO, 74593-590</p></div>
   </div>
