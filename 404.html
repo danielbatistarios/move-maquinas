@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Página não encontrada | Movemáquinas</title>
+<style>
+@font-face{font-family:'Inter';font-style:normal;font-weight:400 900;font-display:swap;src:url('/assets/fonts/inter-latin-w400.woff2') format('woff2')}
+:root{--c-primary:#1D9648;--c-dark:#1A1A1A;--c-text:#1a1a1a;--c-muted:#718096;--c-border:#e2e8f0;--ff:'Inter',system-ui,-apple-system,sans-serif}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:var(--ff);color:var(--c-text);background:#f8fafb;display:flex;flex-direction:column;min-height:100vh}
+a{color:inherit;text-decoration:none}
+ul{list-style:none}
+
+/* Header */
+.hdr{background:#fff;box-shadow:0 1px 4px rgba(0,0,0,.1)}
+.hdr__in{display:flex;align-items:center;justify-content:space-between;padding:0 24px;height:60px;max-width:1200px;margin:0 auto}
+.hdr__logo{height:32px;width:auto}
+.hdr__nav{display:flex;align-items:center;gap:24px}
+.hdr__nav a{font-size:13px;font-weight:600;color:#1a1a1a;transition:color .2s}
+.hdr__nav a:hover{color:var(--c-primary)}
+.hdr__cta{background:var(--c-primary)!important;color:#fff!important;padding:8px 16px;border-radius:6px;font-weight:700!important;white-space:nowrap}
+.hdr__mob{display:none;background:none;border:none;cursor:pointer;padding:8px;color:#1a1a1a;line-height:0}
+@media(max-width:900px){.hdr__nav{display:none}.hdr__mob{display:block}.hdr__nav.open{display:flex;flex-direction:column;align-items:flex-start;position:absolute;top:60px;left:0;right:0;background:#fff;padding:16px 24px;border-top:1px solid #e5e5e5;box-shadow:0 8px 24px rgba(0,0,0,.1);gap:12px;z-index:200}}
+
+/* 404 Content */
+.page-404{flex:1;display:flex;align-items:center;justify-content:center;padding:60px 24px;text-align:center}
+.page-404__inner{max-width:520px}
+.page-404__icon{margin:0 auto 32px;width:80px;height:80px;background:#e8f5ee;border-radius:50%;display:flex;align-items:center;justify-content:center}
+.page-404__icon svg{color:var(--c-primary)}
+.page-404__code{font-size:clamp(80px,15vw,140px);font-weight:900;line-height:1;color:var(--c-primary);letter-spacing:-.04em;margin-bottom:8px}
+.page-404__title{font-size:clamp(1.3rem,4vw,1.8rem);font-weight:800;color:var(--c-dark);margin-bottom:12px}
+.page-404__desc{font-size:1rem;color:var(--c-muted);line-height:1.6;margin-bottom:36px}
+.page-404__actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.btn-primary{display:inline-flex;align-items:center;gap:8px;background:var(--c-primary);color:#fff;padding:14px 28px;border-radius:8px;font-weight:700;font-size:15px;transition:background .2s}
+.btn-primary:hover{background:#157a38}
+.btn-ghost{display:inline-flex;align-items:center;gap:8px;border:2px solid var(--c-border);color:var(--c-text);padding:12px 24px;border-radius:8px;font-weight:600;font-size:15px;transition:border-color .2s,color .2s}
+.btn-ghost:hover{border-color:var(--c-primary);color:var(--c-primary)}
+.page-404__links{margin-top:48px;padding-top:32px;border-top:1px solid var(--c-border)}
+.page-404__links p{font-size:13px;color:var(--c-muted);margin-bottom:16px;font-weight:600;text-transform:uppercase;letter-spacing:.05em}
+.page-404__shortcuts{display:flex;flex-wrap:wrap;gap:8px;justify-content:center}
+.page-404__shortcuts a{font-size:13px;color:var(--c-primary);font-weight:600;padding:6px 14px;border:1px solid #c8e6d4;border-radius:20px;transition:background .2s}
+.page-404__shortcuts a:hover{background:#e8f5ee}
+
+/* Footer */
+.ft{background:#16191C;color:#9ca3af;padding:24px;text-align:center;font-size:13px}
+.ft a{color:#9ca3af;transition:color .2s}
+.ft a:hover{color:#fff}
+</style>
+</head>
+<body>
+
+<header class="hdr">
+  <div class="hdr__in">
+    <a href="/"><picture><source srcset="/assets/logo-move-maquinas.webp" type="image/webp"><img src="/assets/logo-move-maquinas.png" alt="Movemáquinas" class="hdr__logo" width="130" height="39"></picture></a>
+    <button class="hdr__mob" aria-label="Menu" onclick="this.nextElementSibling.classList.toggle('open')">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+    <nav class="hdr__nav">
+      <a href="/servicos">Serviços</a>
+      <a href="/venda-de-maquinas-clark">Catálogo Clark</a>
+      <a href="/cidades-atendidas">Cidades</a>
+      <a href="/sobre">Sobre</a>
+      <a href="/blog">Blog</a>
+      <a href="https://wa.me/5562982637300" class="hdr__cta" target="_blank" rel="noopener">Fale Conosco</a>
+    </nav>
+  </div>
+</header>
+
+<main class="page-404">
+  <div class="page-404__inner">
+    <div class="page-404__icon">
+      <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+    </div>
+    <div class="page-404__code">404</div>
+    <h1 class="page-404__title">Página não encontrada</h1>
+    <p class="page-404__desc">O endereço que você acessou não existe ou foi removido. Mas temos tudo sobre locação de empilhadeiras e plataformas elevatórias aqui:</p>
+    <div class="page-404__actions">
+      <a href="/" class="btn-primary">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        Ir para a Home
+      </a>
+      <a href="https://wa.me/5562982637300" class="btn-ghost" target="_blank" rel="noopener">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.107.547 4.088 1.504 5.813L.057 23.643a.5.5 0 00.615.632l5.953-1.56A11.955 11.955 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.927a9.923 9.923 0 01-5.056-1.378l-.362-.215-3.744.981.999-3.648-.236-.375A9.912 9.912 0 012.073 12C2.073 6.51 6.51 2.073 12 2.073S21.927 6.51 21.927 12 17.49 21.927 12 21.927z"/></svg>
+        Falar no WhatsApp
+      </a>
+    </div>
+    <div class="page-404__links">
+      <p>Páginas mais acessadas</p>
+      <div class="page-404__shortcuts">
+        <a href="/goiania-go/aluguel-de-empilhadeira-combustao">Empilhadeira Goiânia</a>
+        <a href="/goiania-go/aluguel-de-plataforma-elevatoria-articulada">Plataforma Articulada</a>
+        <a href="/goiania-go/aluguel-de-plataforma-elevatoria-tesoura">Plataforma Tesoura</a>
+        <a href="/goiania-go/aluguel-de-transpaleteira">Transpaleteira</a>
+        <a href="/goiania-go/curso-de-operador-de-empilhadeira">Curso NR-11</a>
+        <a href="/venda-de-maquinas-clark">Venda Clark</a>
+        <a href="/sobre">Sobre a empresa</a>
+        <a href="/contato">Contato</a>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="ft">
+  <p>Movemáquinas &copy; 2026 — <a href="/">movemaquinas.com.br</a> — <a href="tel:+556298263-7300">(62) 98263-7300</a></p>
+</footer>
+
+</body>
+</html>
