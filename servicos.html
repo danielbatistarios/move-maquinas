@@ -85,6 +85,18 @@
 }
 </script>
 <style>
+/* === HEADER UNIVERSAL === */
+.hdr{position:sticky;top:0;z-index:100;background:#fff;box-shadow:0 1px 4px rgba(0,0,0,.1)}
+.hdr__in{display:flex;align-items:center;justify-content:space-between;padding:0 24px;height:60px;max-width:1200px;margin:0 auto}
+.hdr__logo{height:32px;width:auto}
+.hdr__nav{display:flex;align-items:center;gap:24px}
+.hdr__nav a{font-size:13px;font-weight:600;color:#1a1a1a;text-decoration:none;transition:color .2s}
+.hdr__nav a:hover{color:#1D9648}
+.hdr__cta{background:#1D9648!important;color:#fff!important;padding:8px 16px;border-radius:6px;font-weight:700!important;white-space:nowrap}
+.hdr__cta:hover{background:#157a38!important}
+.hdr__mob{display:none;background:none;border:none;cursor:pointer;padding:8px;color:#1a1a1a;line-height:0}
+@media(max-width:900px){.hdr__nav{display:none}.hdr__mob{display:block}.hdr__nav.open{display:flex;flex-direction:column;align-items:flex-start;position:absolute;top:60px;left:0;right:0;background:#fff;padding:16px 24px;border-top:1px solid #e5e5e5;box-shadow:0 8px 24px rgba(0,0,0,.1);gap:12px;z-index:200}.hdr__nav.open a{color:#1a1a1a!important}}
+
 /* === SERVICOS PAGE — v1 === */
 :root {
   --color-primary: #1D9648;
@@ -197,7 +209,7 @@ p { color: var(--color-text-light); line-height: 1.8; }
 
 /* --- TRUST BAR --- */
 .trust-bar { background: #fff; border-bottom: 1px solid var(--color-border); padding: var(--space-sm) 0; }
-.trust-bar__inner { display: flex; align-items: center; justify-content: center; gap: var(--space-xl); flex-wrap: wrap; }
+.trust-bar__inner { display: flex; align-items: center; justify-content: center; gap: var(--space-xl); flex-wrap: nowrap; overflow-x: auto; }
 .trust-badge { display: flex; align-items: center; gap: 10px; }
 .trust-badge__icon { width: 36px; height: 36px; border-radius: var(--radius); display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 10px; font-weight: 900; }
 .trust-badge__icon--clark { background: #FFD700; color: var(--color-dark); letter-spacing: .02em; }
@@ -327,16 +339,22 @@ p { color: var(--color-text-light); line-height: 1.8; }
 </head>
 <body>
 
-<!-- BREADCRUMB -->
-<header role="banner">
-<nav class="breadcrumb" aria-label="Navegação estrutural">
-  <div class="container">
-    <ol class="breadcrumb__list">
-      <li><a href="/"><img src="https://movemaquinas.com.br/assets/logo-move-maquinas-B2l9eWy_.png" alt="Movemáquinas" class="breadcrumb__logo" width="110" height="22" loading="eager"></a></li>
-      <li><span aria-current="page">Serviços</span></li>
-    </ol>
+<header class="hdr" id="hdr">
+  <div class="hdr__in">
+    <a href="/"><picture><source srcset="/assets/logo-move-maquinas.webp" type="image/webp"><img src="/assets/logo-move-maquinas.png" alt="Movemáquinas" class="hdr__logo" width="130" height="32" loading="eager"></picture></a>
+    <button class="hdr__mob" aria-label="Menu" onclick="this.nextElementSibling.classList.toggle('open')">
+      <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+    </button>
+    <nav class="hdr__nav">
+      <a href="/">Início</a>
+      <a href="/servicos" aria-current="page">Locação</a>
+      <a href="/venda-de-maquinas-clark">Venda de Máquinas Clark</a>
+      <a href="/goiania-go/curso-de-operador-de-empilhadeira">Curso Operador de Empilhadeira</a>
+      <a href="/cidades-atendidas">Cidades Atendidas</a>
+      <a href="/blog">Blog</a>
+      <a href="https://wa.me/5562982637300" class="hdr__cta" target="_blank" rel="noopener">Fale Conosco</a>
+    </nav>
   </div>
-</nav>
 </header>
 
 <!-- HERO (compacto) -->
