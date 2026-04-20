@@ -149,7 +149,136 @@ p { color: var(--color-text-light); line-height: 1.8; }
 
     .hero__card-field input { width:100%; padding:10px 12px; border:1px solid #d1d5db; border-radius:8px; font-size:var(--font-small); font-family:inherit; background:#fff; color:var(--color-dark); outline:none; box-sizing:border-box; }
     .hero__card-field input:focus { border-color:var(--color-primary); box-shadow:0 0 0 3px rgba(29,150,72,.15); }
-  </style>
+  <style id="nav-footer-css">
+/* ── NAV MEGAMENU ── */
+.mm-nav { background: #fff; border-bottom: 3px solid #1D9648; box-shadow: 0 2px 16px rgba(0,0,0,.08); position: sticky; top: 0; z-index: 200; }
+.mm-nav__in { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; padding: 0 28px; height: 68px; gap: 8px; }
+.mm-nav__logo img { display: block; height: 34px; width: auto; }
+
+/* Links desktop */
+.mm-nav__links { display: flex; align-items: center; gap: 0; list-style: none; flex: 1; justify-content: center; }
+.mm-nav__item { position: relative; }
+.mm-nav__item::after { content: ''; position: absolute; top: 100%; left: -20px; right: -20px; height: 20px; background: transparent; }
+
+/* Início — link simples */
+.mm-nav__home { display: inline-flex; align-items: center; font-family: 'Inter', system-ui, sans-serif; font-weight: 700; font-size: 0.82rem; letter-spacing: 0.4px; text-transform: uppercase; color: #1a1a1a; padding: 10px 14px; transition: color .18s; text-decoration: none; white-space: nowrap; }
+.mm-nav__home:hover { color: #1D9648; }
+
+/* Triggers com dropdown */
+.mm-nav__trigger { display: inline-flex; align-items: center; gap: 5px; font-family: 'Inter', system-ui, sans-serif; font-weight: 700; font-size: 0.82rem; letter-spacing: 0.4px; text-transform: uppercase; color: #1a1a1a; background: none; border: none; cursor: pointer; padding: 10px 14px; transition: color .18s; white-space: nowrap; }
+.mm-nav__trigger:hover, .mm-nav__item.is-open .mm-nav__trigger { color: #1D9648; }
+.mm-nav__caret { width: 13px; height: 13px; transition: transform 0.2s; display: inline-flex; flex-shrink: 0; }
+.mm-nav__caret svg { width: 13px; height: 13px; display: block; }
+.mm-nav__item.is-open .mm-nav__caret { transform: rotate(180deg); }
+
+/* Painel dropdown */
+.mm-nav__panel { position: fixed; top: 71px; left: 0; right: 0; background: rgba(8,8,8,0.98); backdrop-filter: blur(28px) saturate(1.4); -webkit-backdrop-filter: blur(28px) saturate(1.4); border-top: 2px solid #1D9648; box-shadow: 0 40px 100px rgba(0,0,0,.5); z-index: 190; opacity: 0; visibility: hidden; pointer-events: none; transform: translateY(-8px); transition: opacity 0.22s ease, visibility 0.22s, transform 0.22s ease; }
+.mm-nav__panel.is-open { opacity: 1; visibility: visible; pointer-events: auto; transform: translateY(0); }
+
+/* Grid interno: foto | links */
+.mm-mega { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 300px 1fr; min-height: 300px; }
+
+/* Coluna foto */
+.mm-mega__img { position: relative; overflow: hidden; border-right: 1px solid rgba(255,255,255,.06); }
+.mm-mega__img-bg { width: 100%; height: 100%; display: flex; flex-direction: column; justify-content: flex-end; padding: 32px 28px; position: relative; }
+.mm-mega__img-photo { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.45; transition: opacity 0.3s; }
+.mm-mega__img:hover .mm-mega__img-photo { opacity: 0.55; }
+.mm-mega__img-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,.85) 0%, rgba(0,0,0,.3) 60%, rgba(0,0,0,.1) 100%); }
+.mm-mega__img-content { position: relative; z-index: 2; }
+.mm-mega__label { font-family: 'Inter', sans-serif; font-weight: 900; font-size: 1.5rem; font-style: italic; color: #fff; line-height: 1.2; text-shadow: 0 2px 16px rgba(0,0,0,.6); display: block; }
+.mm-mega__sub { display: block; font-size: 0.76rem; font-weight: 400; font-style: normal; color: rgba(255,255,255,.5); margin-top: 6px; line-height: 1.5; }
+.mm-mega__img-cta { display: inline-block; margin-top: 18px; padding: 9px 18px; background: #1D9648; color: #fff; font-family: 'Inter', sans-serif; font-weight: 700; font-size: 0.74rem; letter-spacing: 0.5px; border-radius: 6px; text-transform: uppercase; transition: background 0.2s, transform 0.2s; text-decoration: none; }
+.mm-mega__img-cta:hover { background: #158b3e; transform: translateY(-1px); }
+
+/* Grid de links */
+.mm-mega__links { padding: 32px 40px; display: grid; grid-template-columns: 1fr 1fr; gap: 0 48px; align-content: start; }
+.mm-mega__links--single { grid-template-columns: 1fr; max-width: 380px; }
+.mm-mega__links--triple { grid-template-columns: 1fr 1fr 1fr; gap: 0 32px; }
+.mm-mega__col-label { font-family: 'Inter', sans-serif; font-size: 0.65rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(255,255,255,.28); margin: 0 0 10px; grid-column: 1/-1; }
+.mm-mega__col-label + .mm-mega__col-label { margin-top: 24px; }
+
+.mm-mega__link { display: flex; align-items: flex-start; gap: 10px; padding: 10px 0; font-family: 'Inter', sans-serif; font-size: 0.96rem; font-weight: 600; color: rgba(255,255,255,.7); border-bottom: 1px solid rgba(255,255,255,.05); transition: color 0.15s, padding-left 0.15s; text-decoration: none; }
+.mm-mega__link:last-of-type { border-bottom: none; }
+.mm-mega__link:hover { color: #fff; padding-left: 6px; }
+.mm-mega__link-text { line-height: 1.35; }
+.mm-mega__link-sub { display: block; font-size: 0.76rem; font-weight: 400; color: rgba(255,255,255,.35); margin-top: 2px; transition: color 0.15s; }
+.mm-mega__link:hover .mm-mega__link-sub { color: rgba(255,255,255,.55); }
+
+.mm-mega__arrow-row { grid-column: 1/-1; padding-top: 16px; margin-top: 6px; border-top: 1px solid rgba(255,255,255,.06); }
+.mm-mega__arrow { display: inline-flex; align-items: center; gap: 8px; font-family: 'Inter', sans-serif; font-size: 0.82rem; font-weight: 700; color: #1D9648; transition: gap 0.15s, color 0.15s; letter-spacing: 0.3px; text-decoration: none; }
+.mm-mega__arrow::after { content: '→'; }
+.mm-mega__arrow:hover { gap: 12px; color: #5edf8a; }
+
+/* Ações direita */
+.mm-nav__actions { display: flex; align-items: center; gap: 10px; flex-shrink: 0; }
+.mm-nav__wa { font-family: 'Inter', sans-serif; font-weight: 700; font-size: 0.8rem; letter-spacing: 0.4px; text-transform: uppercase; background: #1D9648; color: #fff; padding: 10px 20px; border-radius: 6px; display: inline-flex; align-items: center; gap: 6px; transition: transform 0.2s, box-shadow 0.2s; white-space: nowrap; text-decoration: none; }
+.mm-nav__wa:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(29,150,72,.45); }
+
+/* Hamburger */
+.mm-nav__hamburger { display: none; flex-direction: column; justify-content: center; align-items: center; gap: 5px; background: none; border: none; cursor: pointer; padding: 8px; width: 42px; height: 42px; flex-shrink: 0; }
+.mm-nav__hamburger span { width: 24px; height: 2px; background: #1a1a1a; border-radius: 2px; transition: transform 0.25s, opacity 0.25s; transform-origin: center; }
+
+/* Mobile overlay */
+.mm-mob { position: fixed; inset: 0; background: rgba(10,10,10,.98); z-index: 210; display: flex; flex-direction: column; opacity: 0; visibility: hidden; transition: opacity 0.3s ease, visibility 0.3s; overflow-y: auto; }
+.mm-mob.open { opacity: 1; visibility: visible; }
+.mm-mob__head { display: flex; align-items: center; justify-content: space-between; padding: 20px 22px; border-bottom: 1px solid rgba(255,255,255,.08); flex-shrink: 0; }
+.mm-mob__logo img { height: 30px; width: auto; filter: brightness(0) invert(1); }
+.mm-mob__close { background: none; border: none; padding: 8px; width: 42px; height: 42px; display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 0; position: relative; cursor: pointer; }
+.mm-mob__close span { position: absolute; width: 22px; height: 2px; background: rgba(255,255,255,.8); border-radius: 2px; }
+.mm-mob__close span:first-child { transform: rotate(45deg); }
+.mm-mob__close span:last-child { transform: rotate(-45deg); }
+.mm-mob__list { list-style: none; padding: 10px 0; flex: 1; }
+.mm-mob__list li { border-bottom: 1px solid rgba(255,255,255,.06); }
+.mm-mob__list-link { display: block; padding: 16px 22px; font-family: 'Inter', sans-serif; font-weight: 700; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.4px; color: rgba(255,255,255,.8); background: none; width: 100%; text-align: left; border: none; cursor: pointer; transition: background 0.15s, color 0.15s; text-decoration: none; }
+.mm-mob__list-link:active, .mm-mob__list-link:hover { background: rgba(255,255,255,.05); color: #fff; }
+.mm-mob__trigger { display: flex; justify-content: space-between; align-items: center; }
+.mm-mob__caret { width: 18px; height: 18px; transition: transform 0.2s; flex-shrink: 0; }
+.mm-mob__trigger[aria-expanded="true"] .mm-mob__caret { transform: rotate(180deg); }
+.mm-mob__sub { max-height: 0; overflow: hidden; list-style: none; background: rgba(255,255,255,.03); transition: max-height 0.3s ease; }
+.mm-mob__sub.open { max-height: 900px; }
+.mm-mob__sub-link { display: block; padding: 13px 22px 13px 36px; font-family: 'Inter', sans-serif; font-size: 0.88rem; color: rgba(255,255,255,.55); transition: color 0.15s; text-decoration: none; }
+.mm-mob__sub-link:hover { color: #1D9648; }
+
+/* ── FOOTER ── */
+.mm-ft { background: #111; color: rgba(255,255,255,.6); padding: 64px 28px 0; overflow: hidden; position: relative; }
+.mm-ft__in { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1.6fr 1fr 1fr 1fr 1fr; gap: 44px; padding-bottom: 52px; }
+.mm-ft__logo { display: block; margin-bottom: 16px; text-decoration: none; }
+.mm-ft__logo img { height: 32px; width: auto; filter: brightness(0) invert(1); }
+.mm-ft__tagline { font-family: 'Inter', sans-serif; font-style: italic; font-size: 0.88rem; line-height: 1.65; color: rgba(255,255,255,.42); margin-bottom: 18px; }
+.mm-ft__nap p { font-family: 'Inter', sans-serif; font-size: 0.82rem; color: rgba(255,255,255,.38); line-height: 2; }
+.mm-ft__nap a { color: rgba(255,255,255,.52); transition: color 0.2s; text-decoration: none; }
+.mm-ft__nap a:hover { color: #1D9648; }
+.mm-ft__social { display: flex; gap: 10px; margin-top: 20px; }
+.mm-ft__social a { width: 36px; height: 36px; border-radius: 50%; background: rgba(255,255,255,.07); display: flex; align-items: center; justify-content: center; color: rgba(255,255,255,.55); transition: background 0.2s, color 0.2s; text-decoration: none; }
+.mm-ft__social a:hover { background: #1D9648; color: #fff; }
+.mm-ft__social svg { width: 16px; height: 16px; display: block; }
+.mm-ft__col h4 { font-family: 'Inter', sans-serif; font-weight: 800; font-size: 0.66rem; letter-spacing: 0.15em; text-transform: uppercase; color: #fff; margin-bottom: 18px; }
+.mm-ft__ci { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 14px; }
+.mm-ft__ci svg { flex-shrink: 0; margin-top: 3px; color: #1D9648; }
+.mm-ft__ci p { font-family: 'Inter', sans-serif; font-size: 0.83rem; color: rgba(255,255,255,.52); line-height: 1.7; margin: 0; }
+.mm-ft__ci p a { color: rgba(255,255,255,.7); transition: color 0.2s; text-decoration: none; }
+.mm-ft__ci p a:hover { color: #1D9648; }
+.mm-ft__col ul { list-style: none; display: flex; flex-direction: column; gap: 9px; }
+.mm-ft__col ul li a { font-family: 'Inter', sans-serif; font-size: 0.85rem; color: rgba(255,255,255,.52); transition: color 0.2s, padding-left 0.2s; display: block; text-decoration: none; }
+.mm-ft__col ul li a:hover { color: #1D9648; padding-left: 4px; }
+.mm-ft__wordmark { font-family: 'Inter', sans-serif; font-weight: 900; font-size: clamp(3.5rem, 11vw, 9rem); color: transparent; -webkit-text-stroke: 1px rgba(29,150,72,.22); letter-spacing: -4px; line-height: 1; text-align: center; display: block; pointer-events: none; }
+.mm-ft__bot { max-width: 1200px; margin: 0 auto; padding: 22px 0; border-top: 1px solid rgba(255,255,255,.07); display: flex; justify-content: space-between; align-items: center; font-family: 'Inter', sans-serif; font-size: 0.77rem; color: rgba(255,255,255,.27); flex-wrap: wrap; gap: 8px; }
+.mm-ft__bot a { color: rgba(255,255,255,.38); transition: color 0.2s; text-decoration: none; }
+.mm-ft__bot a:hover { color: #1D9648; }
+.mm-ft__bot-links { display: flex; gap: 18px; }
+
+/* Responsivo */
+@media (max-width: 960px) {
+  .mm-nav__links { display: none; }
+  .mm-nav__hamburger { display: flex; }
+  .mm-ft__in { grid-template-columns: 1fr 1fr; gap: 36px; }
+  .mm-ft__in > .mm-ft__brand { grid-column: 1 / -1; }
+}
+@media (max-width: 520px) {
+  .mm-ft__in { grid-template-columns: 1fr; }
+}
+</style>
+</style>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -264,25 +393,400 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 
 <!-- ========== HEADER ========== -->
-<header class="hdr">
-  <div class="hdr__in">
-    <a href="/"><picture><source srcset="/assets/logo-move-maquinas.webp" type="image/webp"><picture><source srcset="/assets/logo-move-maquinas.webp" type="image/webp"><img src="/assets/logo-move-maquinas.png" alt="Movemáquinas" class="hdr__logo" width="130" height="32" ></picture></picture></a>
-    <button class="hdr__mob" aria-label="Menu" onclick="this.nextElementSibling.classList.toggle('open')">
-      <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
-    </button>
-    <nav class="hdr__nav">
-      <a href="/">Início</a>
-      <a href="/servicos">Locação</a>
-      <a href="/venda-de-maquinas-clark">Venda de Máquinas Clark</a>
-      <a href="/goiania-go/curso-de-operador-de-empilhadeira">Curso Operador de Empilhadeira</a>
-      <a href="/cidades-atendidas">Cidades Atendidas</a>
-      <a href="/blog">Blog</a>
-      <a href="https://wa.me/5562982637300" class="hdr__cta" target="_blank" rel="noopener">Fale Conosco</a>
+<header class="mm-nav" role="banner">
+  <div class="mm-nav__in">
+
+    <!-- Logo -->
+    <a href="/" class="mm-nav__logo" aria-label="Movemáquinas - página inicial">
+      <picture>
+        <source srcset="/assets/logo-move-maquinas.webp" type="image/webp">
+        <img src="/assets/logo-move-maquinas.png" alt="Movemáquinas" width="140" height="34">
+      </picture>
+    </a>
+
+    <!-- Links desktop -->
+    <nav aria-label="Navegação principal">
+      <ul class="mm-nav__links">
+
+        <!-- INÍCIO -->
+        <li class="mm-nav__item">
+          <a href="/" class="mm-nav__home">Início</a>
+        </li>
+
+        <!-- LOCAÇÃO -->
+        <li class="mm-nav__item mm-nav__item--dd" id="dd-locacao">
+          <button class="mm-nav__trigger" aria-haspopup="true" aria-expanded="false">
+            Locação
+            <span class="mm-nav__caret"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="4 6 8 10 12 6"/></svg></span>
+          </button>
+          <div class="mm-nav__panel" id="dd-locacao-panel" role="region">
+            <div class="mm-mega">
+              <div class="mm-mega__img">
+                <img class="mm-mega__img-photo" src="/assets/clark/empilhadeira-combustao/gts-25-30-33/gts20-33-application-1039443432.jpg" alt="Empilhadeira Clark em operação" loading="lazy">
+                <div class="mm-mega__img-overlay"></div>
+                <div class="mm-mega__img-bg">
+                  <div class="mm-mega__img-content">
+                    <span class="mm-mega__label">Frota Clark<br>Sempre Pronta</span>
+                    <span class="mm-mega__sub">Entrega em até 24h em GO, DF, TO e MT</span>
+                    <a href="/servicos" class="mm-mega__img-cta">Ver todos os equipamentos</a>
+                  </div>
+                </div>
+              </div>
+              <div class="mm-mega__links mm-mega__links--single">
+                <p class="mm-mega__col-label">Equipamentos para Locação</p>
+                <a href="/goiania-go/aluguel-de-empilhadeira-combustao" class="mm-mega__link">
+                  <span class="mm-mega__link-text">Empilhadeira a Combustão<span class="mm-mega__link-sub">GLP e diesel, de 2.000 a 7.000 kg, frota Clark</span></span>
+                </a>
+                <a href="/goiania-go/aluguel-de-plataforma-elevatoria-articulada" class="mm-mega__link">
+                  <span class="mm-mega__link-text">Plataforma Articulada<span class="mm-mega__link-sub">Alcance de 12 a 20 metros, trabalho em altura</span></span>
+                </a>
+                <a href="/goiania-go/aluguel-de-plataforma-elevatoria-tesoura" class="mm-mega__link">
+                  <span class="mm-mega__link-text">Plataforma Tesoura<span class="mm-mega__link-sub">Elevação vertical até 14 m, obras e instalações</span></span>
+                </a>
+                <a href="/goiania-go/aluguel-de-transpaleteira" class="mm-mega__link">
+                  <span class="mm-mega__link-text">Transpaleteira Elétrica<span class="mm-mega__link-sub">Movimentação horizontal para armazéns e galpões</span></span>
+                </a>
+                <div class="mm-mega__arrow-row">
+                  <a href="/servicos" class="mm-mega__arrow">Ver todos os equipamentos e cidades atendidas</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <!-- MANUTENÇÃO -->
+        <li class="mm-nav__item mm-nav__item--dd" id="dd-manutencao">
+          <button class="mm-nav__trigger" aria-haspopup="true" aria-expanded="false">
+            Manutenção
+            <span class="mm-nav__caret"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="4 6 8 10 12 6"/></svg></span>
+          </button>
+          <div class="mm-nav__panel" id="dd-manutencao-panel" role="region">
+            <div class="mm-mega">
+              <div class="mm-mega__img">
+                <img class="mm-mega__img-photo" src="/assets/clark/empilhadeira-combustao/c60-70-75-80/clark_c60-80_detail_operator_compartment-for-web.jpg" alt="Manutenção de empilhadeira Clark" loading="lazy">
+                <div class="mm-mega__img-overlay"></div>
+                <div class="mm-mega__img-bg">
+                  <div class="mm-mega__img-content">
+                    <span class="mm-mega__label">Sua Máquina<br>Sempre<br>Operando</span>
+                    <span class="mm-mega__sub">Técnico especializado em GO, DF e TO</span>
+                    <a href="/goiania-go/manutencao-empilhadeira" class="mm-mega__img-cta">Solicitar atendimento</a>
+                  </div>
+                </div>
+              </div>
+              <div class="mm-mega__links mm-mega__links--single">
+                <p class="mm-mega__col-label">Serviços Técnicos Clark</p>
+                <a href="/goiania-go/pecas-e-assistencia-empilhadeira" class="mm-mega__link">
+                  <span class="mm-mega__link-text">Peças e Assistência Técnica<span class="mm-mega__link-sub">Peças originais Clark, entrega rápida, laudos e NFs</span></span>
+                </a>
+                <a href="/goiania-go/manutencao-empilhadeira" class="mm-mega__link">
+                  <span class="mm-mega__link-text">Manutenção de Empilhadeira<span class="mm-mega__link-sub">Preventiva, corretiva e planos mensais</span></span>
+                </a>
+                <div class="mm-mega__arrow-row">
+                  <a href="/goiania-go/manutencao-empilhadeira" class="mm-mega__arrow">Solicitar visita técnica</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <!-- VENDA CLARK -->
+        <li class="mm-nav__item mm-nav__item--dd" id="dd-clark">
+          <button class="mm-nav__trigger" aria-haspopup="true" aria-expanded="false">
+            Venda Clark
+            <span class="mm-nav__caret"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="4 6 8 10 12 6"/></svg></span>
+          </button>
+          <div class="mm-nav__panel" id="dd-clark-panel" role="region">
+            <div class="mm-mega">
+              <div class="mm-mega__img">
+                <img class="mm-mega__img-photo" src="/assets/clark/empilhadeira-combustao/l25-30-35/l20-launch-header.jpg" alt="Empilhadeira Clark nova para venda" loading="lazy">
+                <div class="mm-mega__img-overlay"></div>
+                <div class="mm-mega__img-bg">
+                  <div class="mm-mega__img-content">
+                    <span class="mm-mega__label">Distribuidor<br>Exclusivo<br>Clark no GO</span>
+                    <span class="mm-mega__sub">22 modelos, financiamento FCO disponível</span>
+                    <a href="/venda-de-maquinas-clark" class="mm-mega__img-cta">Ver catálogo completo</a>
+                  </div>
+                </div>
+              </div>
+              <div class="mm-mega__links mm-mega__links--triple">
+                <p class="mm-mega__col-label">Empilhadeiras a Combustão</p>
+                <a href="/venda-de-maquinas-clark#s25-30-35" class="mm-mega__link">
+                  <span class="mm-mega__link-text">Clark S25/30/35<span class="mm-mega__link-sub">2.500 a 3.500 kg, GLP ou Diesel</span></span>
+                </a>
+                <a href="/venda-de-maquinas-clark#s40-60" class="mm-mega__link">
+                  <span class="mm-mega__link-text">Clark S40/45/50/60<span class="mm-mega__link-sub">4.000 a 6.000 kg, cargas pesadas</span></span>
+                </a>
+                <a href="/venda-de-maquinas-clark#gts25-30-33" class="mm-mega__link">
+                  <span class="mm-mega__link-text">Clark GTS25/30/33<span class="mm-mega__link-sub">2.500 a 3.300 kg, ergonômica</span></span>
+                </a>
+                <a href="/venda-de-maquinas-clark#c60-70-75-80" class="mm-mega__link">
+                  <span class="mm-mega__link-text">Clark C60/70/75/80<span class="mm-mega__link-sub">6.000 a 8.000 kg, extra pesada</span></span>
+                </a>
+                <a href="/venda-de-maquinas-clark#l25-30-35" class="mm-mega__link">
+                  <span class="mm-mega__link-text">Clark L25/30/35<span class="mm-mega__link-sub">2.500 a 3.500 kg, compacta</span></span>
+                </a>
+                <a href="/venda-de-maquinas-clark#c20s" class="mm-mega__link">
+                  <span class="mm-mega__link-text">Clark C20s<span class="mm-mega__link-sub">2.000 kg, corredor estreito</span></span>
+                </a>
+
+                <p class="mm-mega__col-label">Elétricas e Transpaleteiras</p>
+                <a href="/venda-de-maquinas-clark#gex40-45-50" class="mm-mega__link">
+                  <span class="mm-mega__link-text">Clark GEX40/45/50<span class="mm-mega__link-sub">4.000 a 5.000 kg, 80V Lítio</span></span>
+                </a>
+                <a href="/venda-de-maquinas-clark#wpio15" class="mm-mega__link">
+                  <span class="mm-mega__link-text">Clark WPio15<span class="mm-mega__link-sub">1.500 kg, transpaleteira 24V</span></span>
+                </a>
+                <a href="/venda-de-maquinas-clark#wpio20" class="mm-mega__link">
+                  <span class="mm-mega__link-text">Clark WPio20<span class="mm-mega__link-sub">2.000 kg, média intensidade</span></span>
+                </a>
+                <a href="/venda-de-maquinas-clark#wpx35" class="mm-mega__link">
+                  <span class="mm-mega__link-text">Clark WPX35<span class="mm-mega__link-sub">3.500 kg, heavy duty</span></span>
+                </a>
+                <a href="/venda-de-maquinas-clark#ppxs20" class="mm-mega__link">
+                  <span class="mm-mega__link-text">Clark PPXs20<span class="mm-mega__link-sub">2.000 kg, plataforma dobrada</span></span>
+                </a>
+                <a href="/venda-de-maquinas-clark#ppfxs20" class="mm-mega__link">
+                  <span class="mm-mega__link-text">Clark PPFXs20<span class="mm-mega__link-sub">2.000 kg, plataforma completa</span></span>
+                </a>
+
+                <div class="mm-mega__arrow-row">
+                  <a href="/venda-de-maquinas-clark" class="mm-mega__arrow">Ver catálogo completo com todos os 22 modelos</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <!-- SERVIÇOS -->
+        <li class="mm-nav__item mm-nav__item--dd" id="dd-servicos">
+          <button class="mm-nav__trigger" aria-haspopup="true" aria-expanded="false">
+            Serviços
+            <span class="mm-nav__caret"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="4 6 8 10 12 6"/></svg></span>
+          </button>
+          <div class="mm-nav__panel" id="dd-servicos-panel" role="region">
+            <div class="mm-mega">
+              <div class="mm-mega__img">
+                <img class="mm-mega__img-photo" src="/assets/clark/transpaleteira/wpio15/wpio15_einsatz_img_4275.jpg" alt="Curso operador de empilhadeira NR-11" loading="lazy">
+                <div class="mm-mega__img-overlay"></div>
+                <div class="mm-mega__img-bg">
+                  <div class="mm-mega__img-content">
+                    <span class="mm-mega__label">Treine<br>sua<br>Equipe</span>
+                    <span class="mm-mega__sub">Certificação NR-11 com aprovação garantida</span>
+                    <a href="/goiania-go/curso-de-operador-de-empilhadeira" class="mm-mega__img-cta">Ver o curso</a>
+                  </div>
+                </div>
+              </div>
+              <div class="mm-mega__links mm-mega__links--single">
+                <p class="mm-mega__col-label">Formação e Cobertura</p>
+                <a href="/goiania-go/curso-de-operador-de-empilhadeira" class="mm-mega__link">
+                  <span class="mm-mega__link-text">Curso Operador de Empilhadeira NR-11<span class="mm-mega__link-sub">Habilitação legal, certificado reconhecido</span></span>
+                </a>
+                <a href="/cidades-atendidas" class="mm-mega__link">
+                  <span class="mm-mega__link-text">Cidades Atendidas<span class="mm-mega__link-sub">GO, DF, TO e MT, cobertura regional completa</span></span>
+                </a>
+                <div class="mm-mega__arrow-row">
+                  <a href="/cidades-atendidas" class="mm-mega__arrow">Ver todas as cidades com disponibilidade</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <!-- SOBRE NÓS -->
+        <li class="mm-nav__item mm-nav__item--dd" id="dd-sobre">
+          <button class="mm-nav__trigger" aria-haspopup="true" aria-expanded="false">
+            Sobre Nós
+            <span class="mm-nav__caret"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="4 6 8 10 12 6"/></svg></span>
+          </button>
+          <div class="mm-nav__panel" id="dd-sobre-panel" role="region">
+            <div class="mm-mega">
+              <div class="mm-mega__img">
+                <img class="mm-mega__img-photo" src="/assets/clark/empilhadeira-combustao/gts-25-30-33/gts25_100years.jpg" alt="Movemáquinas 20 anos" loading="lazy">
+                <div class="mm-mega__img-overlay"></div>
+                <div class="mm-mega__img-bg">
+                  <div class="mm-mega__img-content">
+                    <span class="mm-mega__label">+20 Anos<br>Movendo<br>o Brasil</span>
+                    <span class="mm-mega__sub">Distribuidor exclusivo Clark em GO, DF, TO e MT</span>
+                    <a href="/sobre" class="mm-mega__img-cta">Conhecer a empresa</a>
+                  </div>
+                </div>
+              </div>
+              <div class="mm-mega__links mm-mega__links--single">
+                <p class="mm-mega__col-label">A Empresa</p>
+                <a href="/sobre" class="mm-mega__link">
+                  <span class="mm-mega__link-text">Quem Somos<span class="mm-mega__link-sub">História, missão e diferenciais da Movemáquinas</span></span>
+                </a>
+                <a href="/contato" class="mm-mega__link">
+                  <span class="mm-mega__link-text">Contato<span class="mm-mega__link-sub">Fale com nossos consultores em GO, DF e TO</span></span>
+                </a>
+                <a href="/trabalhe-conosco" class="mm-mega__link">
+                  <span class="mm-mega__link-text">Trabalhe Conosco<span class="mm-mega__link-sub">Vagas abertas para técnicos e representantes</span></span>
+                </a>
+                <div class="mm-mega__arrow-row">
+                  <a href="/contato" class="mm-mega__arrow">Falar com um consultor agora</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <!-- BLOG -->
+        <li class="mm-nav__item mm-nav__item--dd" id="dd-blog">
+          <button class="mm-nav__trigger" aria-haspopup="true" aria-expanded="false">
+            Blog
+            <span class="mm-nav__caret"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="4 6 8 10 12 6"/></svg></span>
+          </button>
+          <div class="mm-nav__panel" id="dd-blog-panel" role="region">
+            <div class="mm-mega">
+              <div class="mm-mega__img">
+                <img class="mm-mega__img-photo" src="/assets/clark/empilhadeira-combustao/c60-70-75-80/clark_c60-80_application-for-web_01.jpg" alt="Guias e dicas técnicas de empilhadeiras" loading="lazy">
+                <div class="mm-mega__img-overlay"></div>
+                <div class="mm-mega__img-bg">
+                  <div class="mm-mega__img-content">
+                    <span class="mm-mega__label">Guias<br>e Dicas<br>Técnicas</span>
+                    <span class="mm-mega__sub">Conteúdo para gestores de logística e obras</span>
+                    <a href="/blog" class="mm-mega__img-cta">Ver todos os artigos</a>
+                  </div>
+                </div>
+              </div>
+              <div class="mm-mega__links mm-mega__links--single">
+                <p class="mm-mega__col-label">Artigos em Destaque</p>
+                <a href="/blog/alugar-ou-comprar" class="mm-mega__link">
+                  <span class="mm-mega__link-text">Alugar ou Comprar Empilhadeira?<span class="mm-mega__link-sub">Cálculo de TCO e break-even para sua frota</span></span>
+                </a>
+                <a href="/blog/andaime-vs-plataforma-custo-real" class="mm-mega__link">
+                  <span class="mm-mega__link-text">Andaime vs Plataforma: o Custo Real<span class="mm-mega__link-sub">Por que a plataforma paga a diferença em 3 dias</span></span>
+                </a>
+                <a href="/blog/plataforma-nr35-responsabilidade" class="mm-mega__link">
+                  <span class="mm-mega__link-text">Plataforma e NR-35: Responsabilidade<span class="mm-mega__link-sub">Quem responde pelo acidente em altura?</span></span>
+                </a>
+                <div class="mm-mega__arrow-row">
+                  <a href="/blog" class="mm-mega__arrow">Ver todos os artigos do blog</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+
+      </ul>
     </nav>
+
+    <!-- Ações direita -->
+    <div class="mm-nav__actions">
+      <a href="https://wa.me/5562982637300" class="mm-nav__wa" target="_blank" rel="noopener">
+        Fale Conosco →
+      </a>
+      <button class="mm-nav__hamburger" id="mmHamburger" aria-label="Abrir menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
   </div>
 </header>
-<!-- Scroll progress indicator -->
-<div class="scroll-progress" aria-hidden="true"></div>
+
+<div class="mm-mob" id="mmMobileOverlay" role="dialog" aria-label="Menu de navegação" aria-modal="true">
+  <div class="mm-mob__head">
+    <a href="/" class="mm-mob__logo" aria-label="Movemáquinas - página inicial">
+      <picture>
+        <source srcset="/assets/logo-move-maquinas.webp" type="image/webp">
+        <img src="/assets/logo-move-maquinas.png" alt="Movemáquinas" width="120" height="30">
+      </picture>
+    </a>
+    <button class="mm-mob__close" id="mmMobileClose" aria-label="Fechar menu">
+      <span></span><span></span>
+    </button>
+  </div>
+  <ul class="mm-mob__list">
+
+    <li>
+      <a href="/" class="mm-mob__list-link">Início</a>
+    </li>
+
+    <!-- Locação -->
+    <li>
+      <button class="mm-mob__list-link mm-mob__trigger" data-target="mob-locacao" aria-expanded="false">
+        Locação
+        <span class="mm-mob__caret"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="4 6 8 10 12 6"/></svg></span>
+      </button>
+      <ul class="mm-mob__sub" id="mob-locacao">
+        <li><a href="/servicos" class="mm-mob__sub-link">Ver todos os equipamentos</a></li>
+        <li><a href="/goiania-go/aluguel-de-empilhadeira-combustao" class="mm-mob__sub-link">Empilhadeira a Combustão</a></li>
+        <li><a href="/goiania-go/aluguel-de-plataforma-elevatoria-articulada" class="mm-mob__sub-link">Plataforma Articulada</a></li>
+        <li><a href="/goiania-go/aluguel-de-plataforma-elevatoria-tesoura" class="mm-mob__sub-link">Plataforma Tesoura</a></li>
+        <li><a href="/goiania-go/aluguel-de-transpaleteira" class="mm-mob__sub-link">Transpaleteira Elétrica</a></li>
+      </ul>
+    </li>
+
+    <!-- Manutenção -->
+    <li>
+      <button class="mm-mob__list-link mm-mob__trigger" data-target="mob-manutencao" aria-expanded="false">
+        Manutenção
+        <span class="mm-mob__caret"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="4 6 8 10 12 6"/></svg></span>
+      </button>
+      <ul class="mm-mob__sub" id="mob-manutencao">
+        <li><a href="/goiania-go/pecas-e-assistencia-empilhadeira" class="mm-mob__sub-link">Peças e Assistência Técnica</a></li>
+        <li><a href="/goiania-go/manutencao-empilhadeira" class="mm-mob__sub-link">Manutenção de Empilhadeira</a></li>
+      </ul>
+    </li>
+
+    <!-- Venda Clark -->
+    <li>
+      <button class="mm-mob__list-link mm-mob__trigger" data-target="mob-clark" aria-expanded="false">
+        Venda Clark
+        <span class="mm-mob__caret"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="4 6 8 10 12 6"/></svg></span>
+      </button>
+      <ul class="mm-mob__sub" id="mob-clark">
+        <li><a href="/venda-de-maquinas-clark" class="mm-mob__sub-link">Ver catálogo completo (22 modelos)</a></li>
+        <li><a href="/venda-de-maquinas-clark#s25-30-35" class="mm-mob__sub-link">Clark S25/30/35</a></li>
+        <li><a href="/venda-de-maquinas-clark#s40-60" class="mm-mob__sub-link">Clark S40/45/50/60</a></li>
+        <li><a href="/venda-de-maquinas-clark#gts25-30-33" class="mm-mob__sub-link">Clark GTS25/30/33</a></li>
+        <li><a href="/venda-de-maquinas-clark#c60-70-75-80" class="mm-mob__sub-link">Clark C60/70/75/80</a></li>
+        <li><a href="/venda-de-maquinas-clark#gex40-45-50" class="mm-mob__sub-link">Clark GEX40/45/50 (Elétrica)</a></li>
+        <li><a href="/venda-de-maquinas-clark#wpio15" class="mm-mob__sub-link">Clark WPio15 (Transpaleteira)</a></li>
+      </ul>
+    </li>
+
+    <!-- Serviços -->
+    <li>
+      <button class="mm-mob__list-link mm-mob__trigger" data-target="mob-servicos" aria-expanded="false">
+        Serviços
+        <span class="mm-mob__caret"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="4 6 8 10 12 6"/></svg></span>
+      </button>
+      <ul class="mm-mob__sub" id="mob-servicos">
+        <li><a href="/goiania-go/curso-de-operador-de-empilhadeira" class="mm-mob__sub-link">Curso Operador NR-11</a></li>
+        <li><a href="/cidades-atendidas" class="mm-mob__sub-link">Cidades Atendidas</a></li>
+      </ul>
+    </li>
+
+    <!-- Sobre Nós -->
+    <li>
+      <button class="mm-mob__list-link mm-mob__trigger" data-target="mob-sobre" aria-expanded="false">
+        Sobre Nós
+        <span class="mm-mob__caret"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="4 6 8 10 12 6"/></svg></span>
+      </button>
+      <ul class="mm-mob__sub" id="mob-sobre">
+        <li><a href="/sobre" class="mm-mob__sub-link">Quem Somos</a></li>
+        <li><a href="/contato" class="mm-mob__sub-link">Contato</a></li>
+        <li><a href="/trabalhe-conosco" class="mm-mob__sub-link">Trabalhe Conosco</a></li>
+      </ul>
+    </li>
+
+    <!-- Blog -->
+    <li>
+      <button class="mm-mob__list-link mm-mob__trigger" data-target="mob-blog" aria-expanded="false">
+        Blog
+        <span class="mm-mob__caret"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="4 6 8 10 12 6"/></svg></span>
+      </button>
+      <ul class="mm-mob__sub" id="mob-blog">
+        <li><a href="/blog" class="mm-mob__sub-link">Ver todos os artigos</a></li>
+        <li><a href="/blog/alugar-ou-comprar" class="mm-mob__sub-link">Alugar ou Comprar Empilhadeira?</a></li>
+        <li><a href="/blog/andaime-vs-plataforma-custo-real" class="mm-mob__sub-link">Andaime vs Plataforma: o Custo Real</a></li>
+        <li><a href="/blog/plataforma-nr35-responsabilidade" class="mm-mob__sub-link">Plataforma e NR-35: Responsabilidade</a></li>
+      </ul>
+    </li>
+
+  </ul>
+</div>
 
 <!-- ========== BREADCRUMB ========== -->
 <header role="banner" class="breadcrumb" aria-label="Navegação estrutural">
@@ -1416,56 +1920,106 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </footer>
 
 <!-- ========== FOOTER ========== -->
-<footer class="ft">
-<div class="container">
-  <div class="ft__grid">
-    <div class="ft__brand"><picture><source srcset="/assets/logo-move-maquinas.webp" type="image/webp"><picture><source srcset="/assets/logo-move-maquinas.webp" type="image/webp"><img src="/assets/logo-move-maquinas.png" alt="Movemáquinas" class="ft__logo" width="140" height="36" loading="lazy"></picture></picture><p>Mais de 20 anos oferecendo soluções completas em empilhadeiras e equipamentos industriais em Goiás, DF, Tocantins e Mato Grosso.</p><div class="ft__social"><a href="https://www.instagram.com/move.maquinas/" target="_blank" rel="noopener" aria-label="Instagram"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="12" height="12" rx="3"/><circle cx="8" cy="8" r="3"/></svg></a><a href="https://www.facebook.com/p/MoveM%C3%A1quinas-61554634312846/" target="_blank" rel="noopener" aria-label="Facebook"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 2H2v12h5v-4H5V8h2V6.5C7 4.6 8.1 3.5 9.9 3.5H12v2.3h-1.3c-.7 0-1.2.4-1.2 1V8h2.5l-.4 2H9.5v4H14V2z"/></svg></a><a href="https://www.youtube.com/@movemaquinas" target="_blank" rel="noopener" aria-label="YouTube"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="4" width="12" height="9" rx="2"/><path d="M10 8.5L7 10V7l3 1.5z" fill="currentColor" stroke="none"/></svg></a></div></div>
-    <header class="hdr">
-  <div class="hdr__in">
-    <a href="/"><picture><source srcset="/assets/logo-move-maquinas.webp" type="image/webp"><picture><source srcset="/assets/logo-move-maquinas.webp" type="image/webp"><img src="/assets/logo-move-maquinas.png" alt="Movemáquinas" class="hdr__logo" width="130" height="32" ></picture></picture></a>
-    <button class="hdr__mob" aria-label="Menu" onclick="this.nextElementSibling.classList.toggle('open')">
-      <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
-    </button>
-    <nav class="hdr__nav">
-      <a href="/">Início</a>
-      <a href="/servicos">Locação</a>
-      <a href="/venda-de-maquinas-clark">Venda de Máquinas Clark</a>
-      <a href="/goiania-go/curso-de-operador-de-empilhadeira">Curso Operador de Empilhadeira</a>
-      <a href="/cidades-atendidas">Cidades Atendidas</a>
-      <a href="/blog">Blog</a>
-      <a href="https://wa.me/5562982637300" class="hdr__cta" target="_blank" rel="noopener">Fale Conosco</a>
-    </nav>
+<footer class="mm-ft" role="contentinfo">
+  <div class="mm-ft__in">
+
+    <!-- Brand -->
+    <div class="mm-ft__brand">
+      <a href="/" class="mm-ft__logo" aria-label="Movemáquinas - página inicial">
+        <picture>
+          <source srcset="/assets/logo-move-maquinas.webp" type="image/webp">
+          <img src="/assets/logo-move-maquinas.png" alt="Movemáquinas" width="130" height="32">
+        </picture>
+      </a>
+      <p class="mm-ft__tagline">Mais de 20 anos em locação, manutenção e venda de equipamentos industriais em GO, DF, TO e MT.</p>
+      <div class="mm-ft__nap">
+        <p><a href="https://wa.me/5562982637300">(62) 98263-7300</a>, Gabriel</p>
+        <p><a href="https://wa.me/5562981753350">(62) 98175-3350</a>, Kaio</p>
+        <p><a href="mailto:contato@movemaquinas.com.br">contato@movemaquinas.com.br</a></p>
+        <p>Av. Eurico Viana, 4913, Goiânia GO</p>
+      </div>
+      <div class="mm-ft__social">
+        <a href="https://www.instagram.com/move.maquinas/" target="_blank" rel="noopener" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg>
+        </a>
+        <a href="https://www.facebook.com/movemaquinas" target="_blank" rel="noopener" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+        </a>
+        <a href="https://www.youtube.com/@movemaquinas" target="_blank" rel="noopener" aria-label="YouTube">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="5" width="20" height="14" rx="3"/><polygon points="10,9 16,12 10,15" fill="currentColor" stroke="none"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <!-- Locação -->
+    <div class="mm-ft__col">
+      <h4>Locação</h4>
+      <ul>
+        <li><a href="/servicos">Todos os Equipamentos</a></li>
+        <li><a href="/goiania-go/aluguel-de-empilhadeira-combustao">Empilhadeira Combustão</a></li>
+        <li><a href="/goiania-go/aluguel-de-plataforma-elevatoria-articulada">Plataforma Articulada</a></li>
+        <li><a href="/goiania-go/aluguel-de-plataforma-elevatoria-tesoura">Plataforma Tesoura</a></li>
+        <li><a href="/goiania-go/aluguel-de-transpaleteira">Transpaleteira Elétrica</a></li>
+      </ul>
+    </div>
+
+    <!-- Manutenção e Venda -->
+    <div class="mm-ft__col">
+      <h4>Manutenção e Venda</h4>
+      <ul>
+        <li><a href="/goiania-go/pecas-e-assistencia-empilhadeira">Peças e Assistência</a></li>
+        <li><a href="/goiania-go/manutencao-empilhadeira">Manutenção</a></li>
+        <li><a href="/venda-de-maquinas-clark">Venda Clark (22 modelos)</a></li>
+        <li><a href="/goiania-go/curso-de-operador-de-empilhadeira">Curso NR-11</a></li>
+      </ul>
+    </div>
+
+    <!-- Cidades -->
+    <div class="mm-ft__col">
+      <h4>Cidades Atendidas</h4>
+      <ul>
+        <li><a href="/goiania-go">Goiânia</a></li>
+        <li><a href="/aparecida-de-goiania-go">Aparecida de Goiânia</a></li>
+        <li><a href="/anapolis-go">Anápolis</a></li>
+        <li><a href="/senador-canedo-go">Senador Canedo</a></li>
+        <li><a href="/brasilia-df">Brasília DF</a></li>
+        <li><a href="/luziania-go">Luziânia</a></li>
+        <li><a href="/trindade-go">Trindade</a></li>
+        <li><a href="/cidades-atendidas">Ver todas as cidades</a></li>
+      </ul>
+    </div>
+
+    <!-- Contato -->
+    <div class="mm-ft__col">
+      <h4>Contato</h4>
+      <div class="mm-ft__ci">
+        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.11 13.8 19.79 19.79 0 01.04 5.14 2 2 0 012 3h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 10.92a16 16 0 006.07 6.07l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+        <p><a href="https://wa.me/5562982637300">(62) 98263-7300</a>, Gabriel<br><a href="https://wa.me/5562981753350">(62) 98175-3350</a>, Kaio</p>
+      </div>
+      <div class="mm-ft__ci">
+        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        <p><a href="mailto:contato@movemaquinas.com.br">contato@movemaquinas.com.br</a></p>
+      </div>
+      <div class="mm-ft__ci">
+        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        <p>Av. Eurico Viana, 4913<br>Goiânia, GO</p>
+      </div>
+    </div>
+
   </div>
-</header>
-    <header role="banner" class="breadcrumb" aria-label="Navegação estrutural">
-  <div class="container">
-    <ol class="breadcrumb__list">
-      <li><a href="/"><picture><source srcset="/assets/logo-move-maquinas.webp" type="image/webp"><picture><source srcset="/assets/logo-move-maquinas.webp" type="image/webp"><img src="/assets/logo-move-maquinas.png" alt="Movemáquinas" class="breadcrumb__logo" width="110" height="22" loading="eager"></picture></picture></a></li>
-      <li><a href="/inhumas-go/">Equipamentos em Inhumas</a></li>
-      <li><span aria-current="page">Plataforma Tesoura em Inhumas</span></li>
-    </ol>
+
+  <!-- Wordmark decorativo -->
+  <p class="mm-ft__wordmark" aria-hidden="true">Movemáquinas</p>
+
+  <!-- Bottom bar -->
+  <div class="mm-ft__bot">
+    <p>&copy; 2026 Movemáquinas. CNPJ: 32.428.258/0001-80</p>
+    <div class="mm-ft__bot-links">
+      <a href="/politica-de-privacidade">Privacidade</a>
+      <a href="/termos-de-uso">Termos</a>
+      <a href="/cookies">Cookies</a>
+    </div>
   </div>
-</header>
-    <header class="hdr">
-  <div class="hdr__in">
-    <a href="/"><picture><source srcset="/assets/logo-move-maquinas.webp" type="image/webp"><picture><source srcset="/assets/logo-move-maquinas.webp" type="image/webp"><img src="/assets/logo-move-maquinas.png" alt="Movemáquinas" class="hdr__logo" width="130" height="32" ></picture></picture></a>
-    <button class="hdr__mob" aria-label="Menu" onclick="this.nextElementSibling.classList.toggle('open')">
-      <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
-    </button>
-    <nav class="hdr__nav">
-      <a href="/">Início</a>
-      <a href="/servicos">Locação</a>
-      <a href="/venda-de-maquinas-clark">Venda de Máquinas Clark</a>
-      <a href="/goiania-go/curso-de-operador-de-empilhadeira">Curso Operador de Empilhadeira</a>
-      <a href="/cidades-atendidas">Cidades Atendidas</a>
-      <a href="/blog">Blog</a>
-      <a href="https://wa.me/5562982637300" class="hdr__cta" target="_blank" rel="noopener">Fale Conosco</a>
-    </nav>
-  </div>
-</header><div class="ft__ci"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12" transform="scale(.6) translate(3,3)"/></svg><p><a href="mailto:contato@movemaquinas.com.br">contato@movemaquinas.com.br</a></p></div><div class="ft__ci"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" transform="scale(.6) translate(3,3)"/></svg><p>Av. Eurico Viana, 4913<br>Goiânia - GO | 74593-590</p></div></div>
-  </div>
-  <div class="ft__bot"><p>&copy; 2026 Movemáquinas. CNPJ: 32.428.258/0001-80</p><div style="display:flex;gap:16px"><a href="/politica-de-privacidade">Privacidade</a><a href="/termos-de-uso">Termos</a><a href="/cookies">Cookies</a></div></div>
-</div>
 </footer>
 
 <!-- ========== STICKY CTA ========== -->
@@ -1661,6 +2215,95 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       var firstInput = form.querySelector('input, select');
       if (firstInput) setTimeout(function(){ firstInput.focus(); }, 600);
     });
+  });
+})();
+</script>
+<script id="nav-footer-js">
+(function() {
+  /* ── Mobile overlay ── */
+  var hamburger = document.getElementById('mmHamburger');
+  var overlay   = document.getElementById('mmMobileOverlay');
+  var closeBtn  = document.getElementById('mmMobileClose');
+
+  function openMobile() {
+    overlay.classList.add('open');
+    if (hamburger) hamburger.setAttribute('aria-expanded', 'true');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeMobile() {
+    overlay.classList.remove('open');
+    if (hamburger) hamburger.setAttribute('aria-expanded', 'false');
+    document.body.style.overflow = '';
+  }
+  if (hamburger) hamburger.addEventListener('click', openMobile);
+  if (closeBtn)  closeBtn.addEventListener('click', closeMobile);
+
+  /* Mobile accordion */
+  document.querySelectorAll('.mm-mob__trigger').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      var targetId = btn.getAttribute('data-target');
+      var sub = document.getElementById(targetId);
+      var isOpen = btn.getAttribute('aria-expanded') === 'true';
+      document.querySelectorAll('.mm-mob__trigger').forEach(function(b) { b.setAttribute('aria-expanded', 'false'); });
+      document.querySelectorAll('.mm-mob__sub').forEach(function(s) { s.classList.remove('open'); });
+      if (!isOpen && sub) {
+        btn.setAttribute('aria-expanded', 'true');
+        sub.classList.add('open');
+      }
+    });
+  });
+
+  /* ── Desktop dropdown ── */
+  var dropItems = document.querySelectorAll('.mm-nav__item--dd');
+
+  function closeAll() {
+    dropItems.forEach(function(li) {
+      li.classList.remove('is-open');
+      var btn   = li.querySelector('.mm-nav__trigger');
+      var panel = li.querySelector('.mm-nav__panel');
+      if (btn)   btn.setAttribute('aria-expanded', 'false');
+      if (panel) panel.classList.remove('is-open');
+    });
+  }
+
+  function openDropdown(li) {
+    closeAll();
+    li.classList.add('is-open');
+    var btn   = li.querySelector('.mm-nav__trigger');
+    var panel = li.querySelector('.mm-nav__panel');
+    if (btn)   btn.setAttribute('aria-expanded', 'true');
+    if (panel) panel.classList.add('is-open');
+  }
+
+  var closeTimer = null;
+
+  function scheduleClose() {
+    closeTimer = setTimeout(closeAll, 220);
+  }
+  function cancelClose() {
+    if (closeTimer) { clearTimeout(closeTimer); closeTimer = null; }
+  }
+
+  dropItems.forEach(function(li) {
+    var trigger = li.querySelector('.mm-nav__trigger');
+    if (!trigger) return;
+    trigger.addEventListener('click', function(e) {
+      e.stopPropagation();
+      cancelClose();
+      if (li.classList.contains('is-open')) { closeAll(); } else { openDropdown(li); }
+    });
+    li.addEventListener('mouseenter', function() { cancelClose(); openDropdown(li); });
+    li.addEventListener('mouseleave', function() { scheduleClose(); });
+    var panel = li.querySelector('.mm-nav__panel');
+    if (panel) {
+      panel.addEventListener('mouseenter', function() { cancelClose(); });
+      panel.addEventListener('mouseleave', function() { scheduleClose(); });
+    }
+  });
+
+  document.addEventListener('click', function() { cancelClose(); closeAll(); });
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') { closeAll(); closeMobile(); }
   });
 })();
 </script>

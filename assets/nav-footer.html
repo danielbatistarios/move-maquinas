@@ -1,156 +1,12 @@
-<!DOCTYPE html>
+<!--
+  COMPONENTE: Header Megamenu + Footer — Movemáquinas v2
+  Ordem: Início | Locação | Manutenção | Venda Clark | Serviços | Sobre Nós | Blog
+-->
 
-<html lang="pt-BR">
-<head>
-<link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
-<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
-<link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-WNLZBQ7Q');</script>
-<!-- End Google Tag Manager -->
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport"/>
-<meta content="#1D9648" name="theme-color"/>
-<title>Aluguel de Transpaleteira Elétrica em Aparecida de Goiânia | Move Máquinas</title>
-<meta content="Transpaleteira elétrica Clark em Aparecida de Goiânia: lítio 24V para DAIAG, patolada para logística. 5 modelos, entrega no mesmo dia. Manutenção inclusa." name="description"/>
-<link rel="preload" href="../../assets/fonts/inter-latin-w400.woff2" as="font" type="font/woff2" crossorigin>
-<link href="/aparecida-de-goiania-go/aluguel-de-transpaleteira" rel="canonical"/>
-<meta content="Aluguel de Transpaleteira Elétrica em Aparecida de Goiânia | Move Máquinas" property="og:title"/>
-<meta content="Transpaleteira Clark lítio em Aparecida de Goiânia. DAIAG. Manutenção 24h inclusa." property="og:description"/>
-<meta content="website" property="og:type"/>
-<meta content="pt_BR" property="og:locale"/>
-<meta content="/assets/clark/transpaleteira/swx16/clark_swx16_application3.jpg" property="og:image"/>
-<meta content="BR-GO" name="geo.region"/>
-<meta content="Aparecida de Goiânia, Goiás, Brasil" name="geo.placename"/>
-<meta content="-16.682;-49.264" name="geo.position"/>
-<meta content="-16.682, -49.264" name="ICBM"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<noscript></noscript>
-
-<style>
-@font-face{font-family:'Inter';font-style:normal;font-weight:400 900;font-display:swap;src:url('../../assets/fonts/inter-latin-w400.woff2') format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
-/* ===== DESIGN TOKENS ===== */
-:root {
-  --color-primary: #1D9648;
-  --color-primary-btn: #16A149;
-  --color-primary-dark: #158b3e;
-  --color-dark: #1A1A1A;
-  --color-text: #1a1a1a;
-  --color-text-light: #4a5568;
-  --color-muted: #718096;
-  --color-surface: #f8fafb;
-  --color-white: #ffffff;
-  --color-border: #e2e8f0;
-  --color-whatsapp: #25D366;
-  --color-whatsapp-hover: #1fb855;
-  --color-alert: #DC2626;
-  --font-family: 'Inter', system-ui, -apple-system, sans-serif;
-  --font-h1: clamp(1.75rem, 4vw, 2.5rem);
-  --font-h2: clamp(1.35rem, 3vw, 1.875rem);
-  --font-h3: clamp(1.05rem, 2.5vw, 1.2rem);
-  --font-body: 1rem;
-  --font-small: 0.9rem;
-  --font-caption: 0.8rem;
-  --space-xs: 8px;
-  --space-sm: 16px;
-  --space-md: 24px;
-  --space-lg: 32px;
-  --space-xl: 80px;
-  --space-2xl: 96px;
-  --radius: 8px;
-  --radius-lg: 12px;
-  --shadow-sm: 0 1px 3px rgba(0,0,0,.08);
-  --shadow-md: 0 4px 12px rgba(0,0,0,.10);
-  --shadow-lg: 0 8px 24px rgba(0,0,0,.14);
-  --container: 1140px;
-}
-
-/* ===== RESET ===== */
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; }
-body { font-family: var(--font-family); color: var(--color-text); line-height: 1.7; background: var(--color-white); overflow-x: hidden; }
-img { max-width: 100%; height: auto; display: block; }
-a { color: inherit; }
-ul { list-style: none; }
-address { font-style: normal; }
-abbr { text-decoration: underline dotted; cursor: help; }
-
-/* ===== ACESSIBILIDADE ===== */
-.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
-:focus-visible { outline: 3px solid var(--color-primary); outline-offset: 3px; border-radius: 4px; }
-
-/* ===== LAYOUT ===== */
-.container { max-width: var(--container); margin: 0 auto; padding: 0 var(--space-md); }
-
-/* ===== SCROLL PROGRESS ===== */
-.scroll-progress { position: fixed; top: 0; left: 0; height: 3px; background: var(--color-primary); z-index: 9999; width: 0%; transition: width .1s linear; pointer-events: none; }
-
-/* ===== REVEAL ===== */
-.reveal { opacity: 0; transform: translateY(24px); transition: opacity .6s cubic-bezier(.22,1,.36,1), transform .6s cubic-bezier(.22,1,.36,1); }
-.reveal.is-visible { opacity: 1; transform: translateY(0); }
-.reveal-stagger { transition-delay: calc(var(--stagger, 0) * 80ms); }
-
-/* ===== BREADCRUMB ===== */
-.breadcrumb { background: var(--color-surface); border-bottom: 1px solid var(--color-border); padding: 12px 0; }
-.breadcrumb__list { display: flex; align-items: center; gap: 8px; list-style: none; flex-wrap: wrap; font-size: var(--font-caption); color: var(--color-muted); }
-.breadcrumb__list li:not(:last-child)::after { content: "/"; margin-left: 8px; color: var(--color-border); }
-.breadcrumb__list a { color: var(--color-primary); text-decoration: none; }
-.breadcrumb__list a:hover { text-decoration: underline; }
-.breadcrumb__logo { height: 22px; width: auto; display: inline-block; vertical-align: middle; margin-right: 2px; }
-
-/* ===== SECTIONS ===== */
-.page-section { padding: var(--space-xl) 0; }
-.page-section--surface { background: var(--color-surface); }
-.page-section--dark { background: var(--color-dark); color: var(--color-white); }
-.page-section--compare { background: linear-gradient(180deg, #f0fdf4 0%, var(--color-surface) 100%); }
-
-/* ===== SECTION TAG ===== */
-.section-tag { display: inline-flex; align-items: center; gap: 6px; background: #f0fdf4; color: var(--color-primary); font-size: var(--font-caption); font-weight: 700; padding: 4px 12px; border-radius: 100px; margin-bottom: var(--space-sm); text-transform: uppercase; letter-spacing: .06em; border: 1px solid #bbf7d0; }
-.section-tag--white { background: rgba(255,255,255,.15); color: var(--color-white); border-color: rgba(255,255,255,.3); }
-
-/* ===== TIPOGRAFIA ===== */
-h1 { font-size: var(--font-h1); font-weight: 900; line-height: 1.15; color: var(--color-dark); }
-h2 { font-size: var(--font-h2); font-weight: 800; line-height: 1.25; color: var(--color-dark); margin-bottom: var(--space-md); }
-h2 span { color: var(--color-primary); }
-h3 { font-size: var(--font-h3); font-weight: 700; line-height: 1.3; color: var(--color-dark); }
-p { color: var(--color-text-light); line-height: 1.8; }
-
-/* ===== HERO ===== */
-.hero { background: var(--color-dark); color: var(--color-white); overflow: hidden; position: relative; }
-.hero__bg { position: absolute; inset: 0; z-index: 0; }
-.hero__bg img { width: 100%; height: 100%; object-fit: cover; opacity: 0.25; }
-.hero__layout { display: grid; grid-template-columns: 1fr 400px; gap: var(--space-2xl); align-items: center; min-height: 560px; padding: var(--space-xl) 0; position: relative; z-index: 1; }
-.hero__badge { margin-bottom: var(--space-sm); }
-.hero h1 { color: var(--color-white); margin-bottom: var(--space-md); }
-.hero h1 em { color: var(--color-primary); font-style: normal; }
-.hero__lead { font-size: 1.05rem; color: rgba(255,255,255,.85); margin-bottom: var(--space-sm); line-height: 1.8; }
-.hero__actions { display: flex; gap: var(--space-sm); flex-wrap: wrap; align-items: start; margin-bottom: var(--space-lg); }
-.hero__actions-col { display: flex; flex-direction: column; gap: 4px; }
-.hero__microcopy { font-size: 11px; color: rgba(255,255,255,.7); font-weight: 600; padding-left: 4px; display: flex; align-items: center; gap: 4px; }
-.hero__microcopy svg { color: var(--color-primary); }
-
-/* ===== HERO CARD (FORM) ===== */
-.hero__card { background: var(--color-white); border-radius: var(--radius-lg); padding: var(--space-lg); box-shadow: var(--shadow-lg); color: var(--color-text); }
-.hero__card-title { color: var(--color-text); margin-bottom: var(--space-md); font-size: 1.1rem; font-weight: 700; }
-.hero__card-field { margin-bottom: var(--space-md); }
-.hero__card-field label { display: block; font-size: var(--font-small); font-weight: 700; color: var(--color-muted); margin-bottom: 4px; text-transform: uppercase; letter-spacing: .04em; }
-.hero__card-field select, .hero__card-field input { width: 100%; padding: 10px var(--space-md); border: 1.5px solid var(--color-border); border-radius: var(--radius); font-family: var(--font-family); font-size: var(--font-body); color: var(--color-text); background: var(--color-white); transition: border-color .2s; appearance: auto; }
-.hero__card-field select:focus, .hero__card-field input:focus { border-color: var(--color-primary); outline: none; }
-.hero__card .btn { width: 100%; justify-content: center; }
-.hero__card-note { font-size: var(--font-caption); color: var(--color-muted); text-align: center; margin-top: var(--space-sm); }
-.hero__card-note a { color: var(--color-primary); font-weight: 700; text-decoration: none; }
-
-/* ===== BUTTONS ===== */
-.btn { display: inline-flex; align-items: center; gap: 8px; padding: 14px 24px; border-radius: var(--radius); font-size: 1rem; font-weight: 700; text-decoration: none; cursor: pointer; border: none; transition: transform .15s, box-shadow .15s, background .15s; min-height: 48px; line-height: 1; font-family: var(--font-family); }
-.btn:hover { transform: translateY(-1px); box-shadow: var(--shadow-md); }
-
-    .hero__card-field input { width:100%; padding:10px 12px; border:1px solid #d1d5db; border-radius:8px; font-size:var(--font-small); font-family:inherit; background:#fff; color:var(--color-dark); outline:none; box-sizing:border-box; }
-    .hero__card-field input:focus { border-color:var(--color-primary); box-shadow:0 0 0 3px rgba(29,150,72,.15); }
-  <style id="nav-footer-css">
+<!-- ═══════════════════════════════════════════════════════════
+     CSS
+     ═══════════════════════════════════════════════════════════ -->
+<style id="nav-footer-css">
 /* ── NAV MEGAMENU ── */
 .mm-nav { background: #fff; border-bottom: 3px solid #1D9648; box-shadow: 0 2px 16px rgba(0,0,0,.08); position: sticky; top: 0; z-index: 200; }
 .mm-nav__in { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; padding: 0 28px; height: 68px; gap: 8px; }
@@ -279,225 +135,11 @@ p { color: var(--color-text-light); line-height: 1.8; }
   .mm-ft__in { grid-template-columns: 1fr; }
 }
 </style>
-</style>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": [
-        "LocalBusiness",
-        "AutomotiveBusiness"
-      ],
-      "@id": "https://movemaquinas.com.br/#organization",
-      "name": "Move Máquinas",
-      "url": "https://movemaquinas.com.br",
-      "telephone": "+55-62-3211-1515",
-      "taxID": "32.428.258/0001-80",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Av. Eurico Viana, 4913 - Qd 5 B Lt 04",
-        "addressLocality": "Goiânia",
-        "addressRegion": "GO",
-        "postalCode": "74593-590",
-        "addressCountry": "BR"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": -16.682,
-        "longitude": -49.264
-      },
-      "hasMap": "https://share.google/08G0ATrziYm9nDlKf",
-      "serviceArea": {
-        "@type": "GeoCircle",
-        "geoMidpoint": {
-          "@type": "GeoCoordinates",
-          "latitude": -16.682,
-          "longitude": -49.264
-        },
-        "geoRadius": "200000"
-      },
-      "areaServed": [
-        {
-          "@type": "State",
-          "name": "Goiás"
-        },
-        {
-          "@type": "State",
-          "name": "Distrito Federal"
-        },
-        {
-          "@type": "State",
-          "name": "Tocantins"
-        },
-        {
-          "@type": "State",
-          "name": "Mato Grosso"
-        }
-      ],
-      "sameAs": [
-        "https://www.instagram.com/move.maquinas/",
-        "https://www.linkedin.com/company/move-maquinas-oficial/",
-        "https://www.youtube.com/@movemaquinas/featured"
-      ]
-    },
-    {
-      "@type": "Service",
-      "name": "Aluguel de Transpaleteira Elétrica em Aparecida de Goiânia",
-      "serviceType": "Locação de Transpaleteira Elétrica",
-      "provider": {
-        "@id": "https://movemaquinas.com.br/#organization"
-      },
-      "areaServed": {
-        "@type": "City",
-        "name": "Aparecida de Goiânia",
-        "addressRegion": "GO"
-      },
-      "offers": {
-        "@type": "Offer",
-        "priceRange": "R$1.200 - R$2.200",
-        "priceCurrency": "BRL",
-        "availability": "https://schema.org/InStock"
-      }
-    },
-    {
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Move Máquinas",
-          "item": "https://movemaquinas.com.br"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Equipamentos em Aparecida de Goiânia",
-          "item": "https://movemaquinas.com.br/aparecida-de-goiania-go/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Transpaleteira em Aparecida de Goiânia",
-          "item": "https://movemaquinas.com.br/aparecida-de-goiania-go/aluguel-de-transpaleteira"
-        }
-      ]
-    },
-    {
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "Qual transpaleteira para o DAIAG?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "WPio15 para corredores estreitos (750mm). PWio20 patolada para trajetos longos. Lítio 24V para câmaras frias."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Em quanto tempo entregam em Aparecida de Goiânia?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Entrega no mesmo dia — 18km via GO-040. Bateria carregada e treinamento incluído."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Quanto custa alugar em Aparecida de Goiânia?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "R$ 1.200 a R$ 2.200/mês. Lítio 15% mais cara mas economiza 35% na operação."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "A lítio funciona em câmaras frias?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Sim. Mantém 95% da autonomia entre -25°C e +60°C. Obrigatória para câmaras de logística e distribuição."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Preciso de NR-11?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Sim. Qualquer equipamento motorizado exige NR-11. A Move oferece <a href=\"/aparecida-de-goiania-go/curso-de-operador-de-empilhadeira\" style=\"color:var(--color-primary)\">curso em Aparecida de Goiânia</a>."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Patolada ou walkie para o DAIAG?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Trajetos acima de 30m: patolada. Corredores curtos e manobras: walkie."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Stacker substitui empilhadeira?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Para 2 níveis de rack com corredor < 3m, sim. Para 3+ níveis ou cargas acima de 2 ton: empilhadeira."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Vocês atendem todo o DAIAG?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Sim. DAIAG, GAIAG, Vila Brasília, Jardim Tiradentes e toda Aparecida de Goiânia."
-          }
-        }
-      ]
-    }
-  ]
-}
-</script>
 
-<script>(function(){
-  var p=new URLSearchParams(window.location.search),k=['utm_source','utm_medium','utm_campaign','utm_content','utm_term'],s=JSON.parse(sessionStorage.getItem('utm_data')||'{}'),n=false;
-  k.forEach(function(x){if(p.get(x)){s[x]=p.get(x);n=true;}});
-  if(n){sessionStorage.setItem('utm_data',JSON.stringify(s));}
-  else if(!s.utm_source){
-    var ref=document.referrer,h=ref?new URL(ref).hostname:'';
-    if(/google\./i.test(h)){s.utm_source='google';s.utm_medium='organic';}
-    else if(/bing\.|yahoo\.|duckduckgo\./i.test(h)){s.utm_source='microsoft';s.utm_medium='organic';}
-    else if(/facebook\.|fb\./i.test(h)){s.utm_source='facebook';s.utm_medium='social';}
-    else if(/instagram\./i.test(h)){s.utm_source='instagram';s.utm_medium='social';}
-    else if(/tiktok\./i.test(h)){s.utm_source='tiktok';s.utm_medium='social';}
-    else if(/linkedin\./i.test(h)){s.utm_source='linkedin';s.utm_medium='social';}
-    else if(ref){s.utm_source='referral';s.utm_medium='referral';}
-    else{s.utm_source='direct';s.utm_medium='organic';}
-    sessionStorage.setItem('utm_data',JSON.stringify(s));
-  }
-})();</script>
-<!-- Meta Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '1089167330085055');
-fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1089167330085055&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code -->
-</head>
-<body>
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WNLZBQ7Q"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
+<!-- ═══════════════════════════════════════════════════════════
+     HEADER
+     ═══════════════════════════════════════════════════════════ -->
 
-<!-- ========== HEADER ========== -->
 <header class="mm-nav" role="banner">
   <div class="mm-nav__in">
 
@@ -789,6 +431,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </header>
 
+<!-- ═══════════════════════════════════════════════════════════
+     MOBILE OVERLAY
+     ═══════════════════════════════════════════════════════════ -->
+
 <div class="mm-mob" id="mmMobileOverlay" role="dialog" aria-label="Menu de navegação" aria-modal="true">
   <div class="mm-mob__head">
     <a href="/" class="mm-mob__logo" aria-label="Movemáquinas - página inicial">
@@ -893,26 +539,61 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </ul>
 </div>
 
-    <!-- Locacao -->
+<!-- ═══════════════════════════════════════════════════════════
+     FOOTER
+     ═══════════════════════════════════════════════════════════ -->
+
+<footer class="mm-ft" role="contentinfo">
+  <div class="mm-ft__in">
+
+    <!-- Brand -->
+    <div class="mm-ft__brand">
+      <a href="/" class="mm-ft__logo" aria-label="Movemáquinas - página inicial">
+        <picture>
+          <source srcset="/assets/logo-move-maquinas.webp" type="image/webp">
+          <img src="/assets/logo-move-maquinas.png" alt="Movemáquinas" width="130" height="32">
+        </picture>
+      </a>
+      <p class="mm-ft__tagline">Mais de 20 anos em locação, manutenção e venda de equipamentos industriais em GO, DF, TO e MT.</p>
+      <div class="mm-ft__nap">
+        <p><a href="https://wa.me/5562982637300">(62) 98263-7300</a>, Gabriel</p>
+        <p><a href="https://wa.me/5562981753350">(62) 98175-3350</a>, Kaio</p>
+        <p><a href="mailto:contato@movemaquinas.com.br">contato@movemaquinas.com.br</a></p>
+        <p>Av. Eurico Viana, 4913, Goiânia GO</p>
+      </div>
+      <div class="mm-ft__social">
+        <a href="https://www.instagram.com/move.maquinas/" target="_blank" rel="noopener" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg>
+        </a>
+        <a href="https://www.facebook.com/movemaquinas" target="_blank" rel="noopener" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+        </a>
+        <a href="https://www.youtube.com/@movemaquinas" target="_blank" rel="noopener" aria-label="YouTube">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="5" width="20" height="14" rx="3"/><polygon points="10,9 16,12 10,15" fill="currentColor" stroke="none"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <!-- Locação -->
     <div class="mm-ft__col">
-      <h4>Locacao</h4>
+      <h4>Locação</h4>
       <ul>
-        <li><a href="/servicos">Ver todos os equipamentos</a></li>
-        <li><a href="/goiania-go/aluguel-de-empilhadeira-combustao">Empilhadeira a Combustao</a></li>
+        <li><a href="/servicos">Todos os Equipamentos</a></li>
+        <li><a href="/goiania-go/aluguel-de-empilhadeira-combustao">Empilhadeira Combustão</a></li>
         <li><a href="/goiania-go/aluguel-de-plataforma-elevatoria-articulada">Plataforma Articulada</a></li>
         <li><a href="/goiania-go/aluguel-de-plataforma-elevatoria-tesoura">Plataforma Tesoura</a></li>
-        <li><a href="/goiania-go/aluguel-de-transpaleteira">Transpaleteira Eletrica</a></li>
+        <li><a href="/goiania-go/aluguel-de-transpaleteira">Transpaleteira Elétrica</a></li>
       </ul>
     </div>
 
-    <!-- Manutencao e Venda -->
+    <!-- Manutenção e Venda -->
     <div class="mm-ft__col">
-      <h4>Manutencao</h4>
+      <h4>Manutenção e Venda</h4>
       <ul>
-        <li><a href="/goiania-go/pecas-e-assistencia-empilhadeira">Pecas e Assistencia</a></li>
-        <li><a href="/goiania-go/manutencao-empilhadeira">Manutencao de Empilhadeira</a></li>
+        <li><a href="/goiania-go/pecas-e-assistencia-empilhadeira">Peças e Assistência</a></li>
+        <li><a href="/goiania-go/manutencao-empilhadeira">Manutenção</a></li>
         <li><a href="/venda-de-maquinas-clark">Venda Clark (22 modelos)</a></li>
-        <li><a href="/goiania-go/curso-de-operador-de-empilhadeira">Curso Operador NR-11</a></li>
+        <li><a href="/goiania-go/curso-de-operador-de-empilhadeira">Curso NR-11</a></li>
       </ul>
     </div>
 
@@ -920,37 +601,42 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="mm-ft__col">
       <h4>Cidades Atendidas</h4>
       <ul>
-        <li><a href="/goiania-go">Goiania</a></li>
-        <li><a href="/aparecida-de-goiania-go">Aparecida de Goiania</a></li>
-        <li><a href="/anapolis-go">Anapolis</a></li>
+        <li><a href="/goiania-go">Goiânia</a></li>
+        <li><a href="/aparecida-de-goiania-go">Aparecida de Goiânia</a></li>
+        <li><a href="/anapolis-go">Anápolis</a></li>
         <li><a href="/senador-canedo-go">Senador Canedo</a></li>
-        <li><a href="/brasilia-df">Brasilia DF</a></li>
-        <li><a href="/luziania-go">Luziania</a></li>
+        <li><a href="/brasilia-df">Brasília DF</a></li>
+        <li><a href="/luziania-go">Luziânia</a></li>
         <li><a href="/trindade-go">Trindade</a></li>
         <li><a href="/cidades-atendidas">Ver todas as cidades</a></li>
       </ul>
     </div>
 
-    <!-- Empresa -->
+    <!-- Contato -->
     <div class="mm-ft__col">
-      <h4>Empresa</h4>
-      <ul>
-        <li><a href="/">Inicio</a></li>
-        <li><a href="/sobre">Sobre Nos</a></li>
-        <li><a href="/blog">Blog</a></li>
-        <li><a href="/trabalhe-conosco">Trabalhe Conosco</a></li>
-        <li><a href="/contato">Contato</a></li>
-      </ul>
+      <h4>Contato</h4>
+      <div class="mm-ft__ci">
+        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.11 13.8 19.79 19.79 0 01.04 5.14 2 2 0 012 3h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 10.92a16 16 0 006.07 6.07l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+        <p><a href="https://wa.me/5562982637300">(62) 98263-7300</a>, Gabriel<br><a href="https://wa.me/5562981753350">(62) 98175-3350</a>, Kaio</p>
+      </div>
+      <div class="mm-ft__ci">
+        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        <p><a href="mailto:contato@movemaquinas.com.br">contato@movemaquinas.com.br</a></p>
+      </div>
+      <div class="mm-ft__ci">
+        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        <p>Av. Eurico Viana, 4913<br>Goiânia, GO</p>
+      </div>
     </div>
 
   </div>
 
   <!-- Wordmark decorativo -->
-  <p class="mm-ft__wordmark" aria-hidden="true">Movemaquinas</p>
+  <p class="mm-ft__wordmark" aria-hidden="true">Movemáquinas</p>
 
   <!-- Bottom bar -->
   <div class="mm-ft__bot">
-    <p>&copy; 2026 Movemaquinas. CNPJ: 32.428.258/0001-80</p>
+    <p>&copy; 2026 Movemáquinas. CNPJ: 32.428.258/0001-80</p>
     <div class="mm-ft__bot-links">
       <a href="/politica-de-privacidade">Privacidade</a>
       <a href="/termos-de-uso">Termos</a>
@@ -959,200 +645,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </footer>
 
-<!-- ========== STICKY CTA ========== -->
-<div aria-label="Orçamento rápido" class="sticky-cta">
-<div class="sticky-cta__inner">
-<div class="sticky-cta__info">
-<span class="sticky-cta__product">Transpaleteira Elétrica</span>
-<span class="sticky-cta__price">a partir de R$1.200/mês</span>
-</div>
-<a class="sticky-cta__btn" href="https://wa.me/5562982637300?text=Ol%C3%A1%2C%20quero%20or%C3%A7amento%20de%20transpaleteira%20el%C3%A9trica%20em%20Aparecida%20de%20Aparecida%20de%20Goi%C3%A2nia" rel="nofollow noopener noreferrer" target="_blank">
-<svg aria-hidden="true" fill="currentColor" height="18" viewbox="0 0 24 24" width="18"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479c0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"></path></svg>
-      Cotar Agora
-    </a>
-</div>
-</div>
-<!-- ========== FLOAT WA (DESKTOP) ========== -->
-<a aria-label="Falar com a Move Máquinas pelo WhatsApp" class="float-wa" href="https://wa.me/5562982637300?text=Ol%C3%A1%2C%20quero%20or%C3%A7amento%20de%20transpaleteira%20el%C3%A9trica%20em%20Aparecida%20de%20Aparecida%20de%20Goi%C3%A2nia" rel="nofollow noopener noreferrer" target="_blank">
-<svg aria-hidden="true" fill="currentColor" focusable="false" height="28" viewbox="0 0 24 24" width="28"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"></path></svg>
-</a>
-<!-- ========== SCRIPT ========== -->
-<script>
-(function(){
-  /* IntersectionObserver — scroll reveal */
-  var reveals = document.querySelectorAll('.reveal');
-  if ('IntersectionObserver' in window) {
-    var io = new IntersectionObserver(function(entries) {
-      entries.forEach(function(entry) {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('is-visible');
-          io.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
-    reveals.forEach(function(el) { io.observe(el); });
-  } else {
-    reveals.forEach(function(el) { el.classList.add('is-visible'); });
-  }
-
-  /* Sticky CTA — show after scrolling past hero */
-  var stickyCta = document.querySelector('.sticky-cta');
-  var hero = document.querySelector('.hero');
-  if (stickyCta && hero) {
-    function checkSticky() {
-      var heroBottom = hero.getBoundingClientRect().bottom;
-      if (heroBottom < 0) {
-        stickyCta.classList.add('is-visible');
-      } else {
-        stickyCta.classList.remove('is-visible');
-      }
-    }
-    window.addEventListener('scroll', checkSticky, { passive: true });
-    checkSticky();
-  }
-
-  /* Form submit handler — handle both desktop and mobile forms */
-  function handleQuoteForm(e) {
-    e.preventDefault();
-    var form = e.target;
-    var modelo = form.querySelector('[name="modelo"]').value;
-    var aplicacao = form.querySelector('[name="aplicacao"]').value;
-    var prazo = form.querySelector('[name="prazo"]').value;
-    var qtd = form.querySelector('[name="qtd"]').value;
-    var urgencia = form.querySelector('[name="urgencia"]').value;
-    var cidade = form.querySelector('[name="cidade"]').value;
-    var msg = 'Olá, quero orçamento de transpaleteira elétrica em Aparecida de Goiânia.\n\n';
-    msg += 'Modelo: ' + modelo + '\n';
-    msg += 'Aplicação: ' + aplicacao + '\n';
-    msg += 'Prazo: ' + prazo + '\n';
-    msg += 'Unidades: ' + qtd + '\n';
-    msg += 'Urgência: ' + urgencia + '\n';
-    msg += 'Cidade: ' + cidade;
-    var nome = (form.querySelector('[name="nome"]') ? form.querySelector('[name="nome"]').value.trim() : '') || '';
-    var tel = (form.querySelector('[name="tel"]') ? form.querySelector('[name="tel"]').value.trim() : '') || '';
-    msg += '\nNome: ' + nome;
-    msg += '\nTelefone: ' + tel;
-    var _utms = (function(){ try { return JSON.parse(sessionStorage.getItem('utm_data')||'{}'); } catch(e){ return {}; } })();
-    var _crmMediumMap = { cpc:'paid',ppc:'paid',paid:'paid',paid_social:'paid',banner:'paid',display:'paid',organic:'organic',referral:'organic',email:'organic',social:'organic' };
-    var _crmMedium = _crmMediumMap[_utms.medium] || 'organic';
-    var _crmSourceMap = { google:'google','google-ads':'google',googleads:'google',meta:'meta',facebook:'meta',instagram:'meta',tiktok:'tiktok',linkedin:'linkedin',microsoft:'microsoft',bing:'microsoft',email:'email',referral:'referral',partner:'partner',offline:'offline',outbound:'outbound',organic:'organic',direct:'direct' };
-    var _crmSource = _crmSourceMap[_utms.source] || (_utms.source && _utms.source !== 'direct' ? 'referral' : 'direct');
-    var _crmChannelMap = { google:'google','google-ads':'google',googleads:'google',microsoft:'google',meta:'facebook',facebook:'facebook',instagram:'instagram',tiktok:'tiktok',linkedin:'linkedin',email:'email',phone:'phone',referral:'other',organic:'other',direct:'other' };
-    var _crmChannel = _crmChannelMap[_utms.source] || 'other';
-    var _isPaid = _crmMedium === 'paid';
-    var _segMap = { google: _isPaid ? 'locacao-google-ads' : 'locacao-google-organico', microsoft: _isPaid ? 'locacao-google-ads' : 'locacao-google-organico', facebook: _isPaid ? 'locacao-facebook-ads' : 'locacao-facebook-organico', meta: _isPaid ? 'locacao-facebook-ads' : 'locacao-facebook-organico', instagram: _isPaid ? 'locacao-instagram-ads' : 'locacao-instagram-organico', tiktok: 'locacao-tiktok', linkedin: 'locacao-linkedin', email: 'locacao-email', referral: 'locacao-referral' };
-    var _crmSegment = _segMap[_utms.source] || (_utms.source && _utms.source !== 'direct' ? 'locacao-outro' : 'locacao-direto');
-    var btn = form.querySelector('[type="submit"]');
-    var _leadDesc = msg.replace(/\n/g, ' | ').replace(/^[^|]+\| /, '') + (_utms.source && _utms.source !== 'direct' ? ' | Source: ' + _utms.source : '') + (_utms.medium && _utms.medium !== 'organic' ? ' | Medium: ' + _utms.medium : '') + (_utms.campaign ? ' | Campanha: ' + _utms.campaign : '');
-    var _waUrl = 'https://wa.me/5562982637300?text=' + encodeURIComponent(msg);
-    var _btn = btn;
-    var _btnOriginal = _btn ? _btn.innerHTML : null;
-    if (_btn) { _btn.disabled = true; _btn.textContent = 'Enviando...'; }
-    function _abrir() {
-      if (typeof fbq === 'function') {
-        fbq('track', 'Lead', { content_name: 'Locação de Empilhadeira', content_category: 'locacao', value: 0, currency: 'BRL' });
-      }
-      window.open(_waUrl, '_blank', 'noopener,noreferrer');
-      if (_btn) { _btn.disabled = false; _btn.innerHTML = _btnOriginal; }
-    }
-    fetch('https://backend.umdhub.com.br/api/leads/public/69e6552effd38d3be6386d5d', {
-      method: 'POST', keepalive: true,
-      headers: { 'Content-Type': 'application/json', 'X-API-Key': 'sk_live_719213e5f48228a63a4be9aa357a65dc5568f3b740008a98d14b58229d1f7150' },
-      body: JSON.stringify({ segment: _crmSegment, description: _leadDesc, source: _crmSource, medium: _crmMedium, channel: _crmChannel, priority: 'medium', temperature: 'cold', qualifyStatus: 'pending', budget: 0, name: nome, company: '', position: '', emails: [], phones: tel ? [tel] : [] })
-    })
-    .then(_abrir).catch(_abrir);
-    return;
-  }
-  var forms = document.querySelectorAll('#quoteForm, #quoteFormMobile');
-  forms.forEach(function(f) { f.addEventListener('submit', handleQuoteForm); });
-
-  /* Expandable "Ver mais" */
-  document.querySelectorAll('.expand-btn').forEach(function(btn) {
-    btn.addEventListener('click', function() {
-      var target = document.getElementById(this.dataset.target);
-      var isOpen = target.classList.contains('expandable--open');
-      target.classList.toggle('expandable--open');
-      this.classList.toggle('expand-btn--open');
-      this.setAttribute('aria-expanded', !isOpen);
-      if (isOpen) {
-        this.innerHTML = 'Ver mais sobre transpaleteira elétrica <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>';
-      } else {
-        this.innerHTML = 'Ver menos <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>';
-      }
-    });
-  });
-
-  /* Fleet Carousel */
-  var carousel = document.getElementById('fleetCarousel');
-  if (carousel) {
-    var slides = carousel.querySelectorAll('.fleet-carousel__slide');
-    var tabs = carousel.querySelectorAll('.fleet-carousel__tab');
-    var dots = carousel.querySelectorAll('.fleet-carousel__dot');
-    var current = 0;
-
-    function goTo(index) {
-      if (index < 0) index = slides.length - 1;
-      if (index >= slides.length) index = 0;
-      slides[current].classList.remove('fleet-carousel__slide--active');
-      slides[current].hidden = true;
-      tabs[current].classList.remove('fleet-carousel__tab--active');
-      tabs[current].setAttribute('aria-selected', 'false');
-      dots[current].classList.remove('fleet-carousel__dot--active');
-      current = index;
-      slides[current].classList.add('fleet-carousel__slide--active');
-      slides[current].hidden = false;
-      tabs[current].classList.add('fleet-carousel__tab--active');
-      tabs[current].setAttribute('aria-selected', 'true');
-      dots[current].classList.add('fleet-carousel__dot--active');
-    }
-
-    tabs.forEach(function(tab) {
-      tab.addEventListener('click', function() { goTo(parseInt(this.dataset.index)); });
-    });
-    dots.forEach(function(dot) {
-      dot.addEventListener('click', function() { goTo(parseInt(this.dataset.index)); });
-    });
-    carousel.querySelector('.fleet-carousel__arrow--prev').addEventListener('click', function() { goTo(current - 1); });
-    carousel.querySelector('.fleet-carousel__arrow--next').addEventListener('click', function() { goTo(current + 1); });
-
-    /* Swipe support for mobile */
-    var startX = 0;
-    var body = carousel.querySelector('.fleet-carousel__body');
-    body.addEventListener('touchstart', function(e) { startX = e.touches[0].clientX; }, { passive: true });
-    body.addEventListener('touchend', function(e) {
-      var diff = startX - e.changedTouches[0].clientX;
-      if (Math.abs(diff) > 50) { goTo(diff > 0 ? current + 1 : current - 1); }
-    }, { passive: true });
-  }
-
-  /* Scroll progress bar */
-  var progressBar = document.querySelector('.scroll-progress');
-  if (progressBar) {
-    window.addEventListener('scroll', function() {
-      var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-      var scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-      var progress = (scrollTop / scrollHeight) * 100;
-      progressBar.style.width = progress + '%';
-    }, { passive: true });
-  }
-})();
-</script>
-<link rel="stylesheet" href="styles-2052a9ce.css">
-<script>
-(function(){
-  document.querySelectorAll('.btn--wa, .sticky-cta__btn, .float-wa').forEach(function(el){
-    if (el.type === 'submit') return;
-    el.addEventListener('click', function(e){
-      e.preventDefault();
-      var form = document.getElementById('quoteForm');
-      if (!form) return;
-      form.scrollIntoView({ behavior: 'smooth', block: 'center' });
-      var firstInput = form.querySelector('input, select');
-      if (firstInput) setTimeout(function(){ firstInput.focus(); }, 600);
-    });
-  });
-})();
-</script>
+<!-- ═══════════════════════════════════════════════════════════
+     JAVASCRIPT
+     ═══════════════════════════════════════════════════════════ -->
 <script id="nav-footer-js">
 (function() {
   /* ── Mobile overlay ── */
@@ -1242,5 +737,3 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   });
 })();
 </script>
-</body>
-</html>
