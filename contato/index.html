@@ -65,29 +65,12 @@ img { max-width: 100%; display: block; }
 }
 
 /* ===== BREADCRUMB ===== */
-.breadcrumb {
-  background: var(--color-white);
-  border-bottom: 1px solid var(--color-border);
-  padding: 14px 0;
-}
-.breadcrumb .container {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-.breadcrumb-logo {
-  height: 36px;
-  width: auto;
-}
-.breadcrumb-sep {
-  color: var(--color-muted);
-  font-size: 14px;
-}
-.breadcrumb-current {
-  font-size: 14px;
-  color: var(--color-text-light);
-  font-weight: 500;
-}
+.breadcrumb { padding: 20px 0 0; }
+.breadcrumb__list { display: flex; align-items: center; gap: 4px; list-style: none; flex-wrap: wrap; font-family: 'Inter', sans-serif; font-size: 0.76rem; color: rgba(255,255,255,.45); }
+.breadcrumb__list li:not(:last-child)::after { content: "›"; margin-left: 4px; color: rgba(255,255,255,.25); }
+.breadcrumb__list a { color: rgba(255,255,255,.65); text-decoration: none; transition: color .15s; }
+.breadcrumb__list a:hover { color: #fff; }
+.breadcrumb__list li:last-child { color: rgba(255,255,255,.85); }
 
 /* ===== HERO ===== */
 .hero {
@@ -1116,20 +1099,15 @@ img { max-width: 100%; display: block; }
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WNLZBQ7Q"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
-<!-- BREADCRUMB -->
-<nav class="breadcrumb" aria-label="Breadcrumb">
-  <div class="container">
-    <a href="https://movemaquinas.com.br">
-      <img src="https://movemaquinas.com.br/assets/logo-move-maquinas-B2l9eWy_.png" alt="Move Maquinas" class="breadcrumb-logo">
-    </a>
-    <span class="breadcrumb-sep">/</span>
-    <span class="breadcrumb-current">Contato</span>
-  </div>
-</nav>
-
 <!-- HERO -->
 <section class="hero">
   <div class="container">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <ol class="breadcrumb__list">
+        <li><a href="/">Home</a></li>
+        <li><span aria-current="page">Contato</span></li>
+      </ol>
+    </nav>
     <h1>Entre em contato com a Move Maquinas</h1>
     <p>Estamos prontos para atender. Resposta em menos de 5 minutos pelo WhatsApp.</p>
     <div class="hero-ctas">
