@@ -44,12 +44,11 @@ address{font-style:normal}
 .scroll-progress{position:fixed;top:0;left:0;height:3px;background:var(--color-primary);z-index:9999;width:0%;transition:width .1s linear;pointer-events:none}
 .reveal{opacity:0;transform:translateY(24px);transition:opacity .6s cubic-bezier(.22,1,.36,1),transform .6s cubic-bezier(.22,1,.36,1)}
 .reveal.is-visible{opacity:1;transform:translateY(0)}
-.breadcrumb{background:var(--color-surface);border-bottom:1px solid var(--color-border);padding:12px 0}
-.breadcrumb__list{display:flex;align-items:center;gap:8px;list-style:none;flex-wrap:wrap;font-size:var(--font-caption);color:var(--color-muted)}
+
 .breadcrumb__list li:not(:last-child)::after{content:"/";margin-left:8px;color:var(--color-border)}
 .breadcrumb__list a{color:var(--color-primary);text-decoration:none}
 .breadcrumb__list a:hover{text-decoration:underline}
-.breadcrumb__logo{height:22px;width:auto;display:inline-block;vertical-align:middle;margin-right:2px}
+
 .page-section{padding:var(--space-xl) 0}
 .page-section--surface{background:var(--color-surface)}
 .page-section--dark{background:var(--color-dark);color:var(--color-white)}
@@ -300,6 +299,13 @@ footer{background:var(--color-dark);color:rgba(255,255,255,.7);padding:var(--spa
 @media (max-width: 520px) {
   .mm-ft__in { grid-template-columns: 1fr; }
 }
+
+.breadcrumb{background:var(--color-surface);border-bottom:1px solid var(--color-border);padding:10px 0}
+.breadcrumb__list{display:flex;align-items:center;gap:6px;list-style:none;flex-wrap:wrap;font-size:.78rem;color:var(--color-muted)}
+.breadcrumb__list li:not(:last-child)::after{content:"›";margin-left:6px;color:var(--color-border)}
+.breadcrumb__list a{color:var(--color-primary);font-weight:600;text-decoration:none;transition:opacity .15s}
+.breadcrumb__list a:hover{opacity:.75}
+.breadcrumb__list li:last-child{color:var(--color-text-light)}
 </style>
 </style>
 
@@ -836,15 +842,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </div>
 
 <!-- ========== BREADCRUMB ========== -->
-<nav role="navigation" class="breadcrumb" aria-label="Navegação estrutural">
-  <div class="container">
-    <ol class="breadcrumb__list">
-      <li><a href="/"><picture><source srcset="/assets/logo-move-maquinas.webp" type="image/webp"><img src="/assets/logo-move-maquinas.png" alt="Movemáquinas" class="breadcrumb__logo" width="110" height="22" loading="eager"></picture></a></li>
-      <li><a href="/inhumas-go/">Equipamentos em Inhumas</a></li>
-      <li><span aria-current="page">Peças e Assistência Empilhadeira em Inhumas</span></li>
-    </ol>
-  </div>
-</nav>
+
 
 <!-- ========== HERO ========== -->
 <section class="hero" aria-labelledby="hero-h1">
@@ -930,6 +928,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
   </div>
 </section>
+
+<nav class="breadcrumb" aria-label="Breadcrumb">
+  <div class="container">
+    <ol class="breadcrumb__list">
+      <li><a href="/">Home</a></li>
+            <li><a href="/inhumas-go/">Equipamentos em Inhumas</a></li>
+            <li><span aria-current="page">Peças e Assistência em Inhumas</span></li>
+    </ol>
+  </div>
+</nav>
+
 
 <!-- ========== TRUST BAR ========== -->
 <div class="trust-bar">

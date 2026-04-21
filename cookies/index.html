@@ -69,22 +69,6 @@ a:hover {
 }
 
 /* ── Breadcrumb ── */
-.breadcrumb-bar {
-  background: var(--color-surface);
-  border-bottom: 1px solid var(--color-border);
-  padding: 14px 0;
-}
-
-.breadcrumb-inner {
-  max-width: var(--container);
-  margin: 0 auto;
-  padding: 0 20px;
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  font-size: 14px;
-  color: var(--color-muted);
-}
 
 .breadcrumb-inner img {
   height: 32px;
@@ -481,7 +465,7 @@ a:hover {
 .hdr__cta { background: var(--color-primary) !important; color: #fff !important; padding: 8px 16px; border-radius: var(--radius); font-weight: 700 !important; white-space: nowrap; }
 .hdr__cta:hover { background: var(--color-primary-dark) !important; }
 .hdr__mob { display: none; background: none; border: none; cursor: pointer; padding: 8px; color: #1a1a1a; line-height: 0; }
-.breadcrumb { display: none; }
+
 @media (max-width: 860px) {
   .hdr__nav { display: none; }
   .hdr__mob { display: block; }
@@ -616,6 +600,13 @@ a:hover {
 @media (max-width: 520px) {
   .mm-ft__in { grid-template-columns: 1fr; }
 }
+
+.breadcrumb{background:var(--color-surface);border-bottom:1px solid var(--color-border);padding:10px 0}
+.breadcrumb__list{display:flex;align-items:center;gap:6px;list-style:none;flex-wrap:wrap;font-size:.78rem;color:var(--color-muted)}
+.breadcrumb__list li:not(:last-child)::after{content:"›";margin-left:6px;color:var(--color-border)}
+.breadcrumb__list a{color:var(--color-primary);font-weight:600;text-decoration:none;transition:opacity .15s}
+.breadcrumb__list a:hover{opacity:.75}
+.breadcrumb__list li:last-child{color:var(--color-text-light)}
 </style>
 </style>
 <script type="application/ld+json">
@@ -657,17 +648,7 @@ a:hover {
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 <!-- Breadcrumb -->
-<nav class="breadcrumb-bar" aria-label="Breadcrumb">
-  <div class="breadcrumb-inner">
-    <a href="https://movemaquinas.com.br">
-      <img src="https://movemaquinas.com.br/assets/logo-move-maquinas-B2l9eWy_.png" alt="Move Maquinas" width="120" height="32">
-    </a>
-    <span class="sep">/</span>
-    <a href="https://movemaquinas.com.br">Home</a>
-    <span class="sep">/</span>
-    <span class="current">Politica de Cookies</span>
-  </div>
-</nav>
+
 
 <!-- Header -->
 <header class="mm-nav" role="banner">
@@ -960,6 +941,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   </div>
 </header>
+
+<nav class="breadcrumb" aria-label="Breadcrumb">
+  <div class="container">
+    <ol class="breadcrumb__list">
+      <li><a href="/">Home</a></li>
+            <li><span aria-current="page">Política de Cookies</span></li>
+    </ol>
+  </div>
+</nav>
+
 
 <div class="mm-mob" id="mmMobileOverlay" role="dialog" aria-label="Menu de navegação" aria-modal="true">
   <div class="mm-mob__head">

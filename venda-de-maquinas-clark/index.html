@@ -112,22 +112,11 @@ a { color: var(--color-primary); text-decoration: none; }
 a:hover { text-decoration: underline; }
 
 /* BREADCRUMB */
-.breadcrumb {
-  background: var(--color-white);
-  border-bottom: 1px solid var(--color-border);
-  padding: 12px 0;
-}
-.breadcrumb-inner {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 14px;
-  color: var(--color-text-light);
-}
-.breadcrumb-inner a { color: var(--color-text-light); }
-.breadcrumb-inner a:hover { color: var(--color-primary); }
-.breadcrumb-logo { height: 28px; width: auto; }
-.breadcrumb-sep { color: var(--color-border); }
+
+.breadcrumb__list li:not(:last-child)::after { content: "›"; margin-left: 6px; color: var(--color-border); }
+.breadcrumb__list a { color: var(--color-primary); font-weight: 600; text-decoration: none; transition: opacity .15s; }
+.breadcrumb__list a:hover { opacity: .75; }
+.breadcrumb__list li:last-child { color: var(--color-text-light); }
 
 /* HERO */
 .hero {
@@ -1127,7 +1116,7 @@ a:hover { text-decoration: underline; }
 .hdr__cta { background: var(--color-primary) !important; color: #fff !important; padding: 8px 16px; border-radius: var(--radius); font-weight: 700 !important; white-space: nowrap; }
 .hdr__cta:hover { background: var(--color-primary-dark) !important; }
 .hdr__mob { display: none; background: none; border: none; cursor: pointer; padding: 8px; color: #1a1a1a; line-height: 0; }
-.breadcrumb { display: none; }
+
 @media (max-width: 860px) {
   .hdr__nav { display: none; }
   .hdr__mob { display: block; }
@@ -1301,6 +1290,13 @@ a:hover { text-decoration: underline; }
 @media (max-width: 520px) {
   .mm-ft__in { grid-template-columns: 1fr; }
 }
+
+.breadcrumb{background:var(--color-surface);border-bottom:1px solid var(--color-border);padding:10px 0}
+.breadcrumb__list{display:flex;align-items:center;gap:6px;list-style:none;flex-wrap:wrap;font-size:.78rem;color:var(--color-muted)}
+.breadcrumb__list li:not(:last-child)::after{content:"›";margin-left:6px;color:var(--color-border)}
+.breadcrumb__list a{color:var(--color-primary);font-weight:600;text-decoration:none;transition:opacity .15s}
+.breadcrumb__list a:hover{opacity:.75}
+.breadcrumb__list li:last-child{color:var(--color-text-light)}
 </style>
 </style>
 <script type="application/ld+json">
@@ -1788,19 +1784,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <a href="#grid-produtos" class="skip-link">Ir para catálogo de produtos</a>
 <noscript><p style="background:#FEF3C7;padding:12px;text-align:center;font-size:14px">Ative o JavaScript para usar filtros, busca e ordenacao. O catálogo completo permanece visivel abaixo.</p></noscript>
 
-<!-- BREADCRUMB -->
-<nav class="breadcrumb" aria-label="Breadcrumb">
-  <div class="container">
-    <div class="breadcrumb-inner">
-      <a href="https://movemaquinas.com.br" aria-label="Movemáquinas - Página inicial">
-        <svg class="breadcrumb-logo" width="120" height="28" viewBox="0 0 120 28" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="120" height="28" rx="4" fill="#1D9648"/><text x="10" y="19" fill="#fff" font-family="Inter,sans-serif" font-size="12" font-weight="700">MOVE MAQUINAS</text></svg>
-      </a>
-      <span class="breadcrumb-sep">/</span>
-      <span aria-current="page">Equipamentos Clark</span>
-    </div>
-  </div>
-</nav>
-
 <!-- HERO -->
 <header class="hero">
   <div class="container">
@@ -1816,6 +1799,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
   </div>
 </header>
+
+<!-- BREADCRUMB -->
+
 
 <!-- TRUST BAR -->
 <section class="trust-bar" aria-label="Indicadores de confianca">
@@ -1840,6 +1826,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
   </div>
 </section>
+
+<nav class="breadcrumb" aria-label="Breadcrumb">
+  <div class="container">
+    <ol class="breadcrumb__list">
+      <li><a href="/">Home</a></li>
+            <li><span aria-current="page">Equipamentos Clark em Goiânia</span></li>
+    </ol>
+  </div>
+</nav>
+
 
 <!-- EXECUTIVE SUMMARY -->
 <section class="exec-summary reveal" aria-label="Resumo executivo">

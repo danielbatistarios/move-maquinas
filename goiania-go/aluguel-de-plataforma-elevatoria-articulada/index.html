@@ -94,12 +94,10 @@ abbr { text-decoration: underline dotted; cursor: help; }
 .reveal-stagger { transition-delay: calc(var(--stagger, 0) * 80ms); }
 
 /* ===== BREADCRUMB ===== */
-.breadcrumb { background: var(--color-surface); border-bottom: 1px solid var(--color-border); padding: 12px 0; }
-.breadcrumb__list { display: flex; align-items: center; gap: 8px; list-style: none; flex-wrap: wrap; font-size: var(--font-caption); color: var(--color-muted); }
+
 .breadcrumb__list li:not(:last-child)::after { content: "/"; margin-left: 8px; color: var(--color-border); }
 .breadcrumb__list a { color: var(--color-primary); text-decoration: none; }
 .breadcrumb__list a:hover { text-decoration: underline; }
-.breadcrumb__logo { height: 22px; width: auto; display: inline-block; vertical-align: middle; margin-right: 2px; }
 
 /* ===== SECTIONS ===== */
 .page-section { padding: var(--space-xl) 0; }
@@ -277,6 +275,13 @@ p { color: var(--color-text-light); line-height: 1.8; }
 @media (max-width: 520px) {
   .mm-ft__in { grid-template-columns: 1fr; }
 }
+
+.breadcrumb{background:var(--color-surface);border-bottom:1px solid var(--color-border);padding:10px 0}
+.breadcrumb__list{display:flex;align-items:center;gap:6px;list-style:none;flex-wrap:wrap;font-size:.78rem;color:var(--color-muted)}
+.breadcrumb__list li:not(:last-child)::after{content:"›";margin-left:6px;color:var(--color-border)}
+.breadcrumb__list a{color:var(--color-primary);font-weight:600;text-decoration:none;transition:opacity .15s}
+.breadcrumb__list a:hover{opacity:.75}
+.breadcrumb__list li:last-child{color:var(--color-text-light)}
 </style>
 </style>
 <script type="application/ld+json">
@@ -790,15 +795,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </div>
 
 <!-- ========== BREADCRUMB ========== -->
-<header role="banner" class="breadcrumb" aria-label="Navegação estrutural">
-  <div class="container">
-    <ol class="breadcrumb__list">
-      <li><a href="/"><picture><source srcset="/assets/logo-move-maquinas.webp" type="image/webp"><picture><source srcset="/assets/logo-move-maquinas.webp" type="image/webp"><img src="/assets/logo-move-maquinas.png" alt="Movemáquinas" class="breadcrumb__logo" width="110" height="22" loading="eager"></picture></picture></a></li>
-      <li><a href="/goiania-go/">Equipamentos em Goiânia</a></li>
-      <li><span aria-current="page">Plataforma Articulada em Goiânia</span></li>
-    </ol>
-  </div>
-</header>
+
 
 <!-- ========== HERO ========== -->
 <section class="hero" aria-labelledby="hero-h1">
@@ -843,6 +840,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
   </div>
 </section>
+
+<nav class="breadcrumb" aria-label="Breadcrumb">
+  <div class="container">
+    <ol class="breadcrumb__list">
+      <li><a href="/">Home</a></li>
+            <li><a href="/goiania-go/">Equipamentos em Goiânia</a></li>
+            <li><span aria-current="page">Plataforma Articulada em Goiânia</span></li>
+    </ol>
+  </div>
+</nav>
+
 
 <!-- ========== TRUST BAR ========== -->
 <div class="trust-bar">

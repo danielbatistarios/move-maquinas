@@ -195,6 +195,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 @media (max-width: 520px) {
   .mm-ft__in { grid-template-columns: 1fr; }
 }
+
+.breadcrumb{background:var(--color-surface);border-bottom:1px solid var(--color-border);padding:10px 0}
+.breadcrumb__list{display:flex;align-items:center;gap:6px;list-style:none;flex-wrap:wrap;font-size:.78rem;color:var(--color-muted)}
+.breadcrumb__list li:not(:last-child)::after{content:"›";margin-left:6px;color:var(--color-border)}
+.breadcrumb__list a{color:var(--color-primary);font-weight:600;text-decoration:none;transition:opacity .15s}
+.breadcrumb__list a:hover{opacity:.75}
+.breadcrumb__list li:last-child{color:var(--color-text-light)}
 </style>
 </style>
 <script type="application/ld+json">
@@ -263,11 +270,6 @@ a{color:inherit}
 .skip-link:focus{top:16px}
 
 /* ── BREADCRUMB ── */
-.breadcrumb{padding:16px 0;border-bottom:1px solid var(--color-border)}
-.breadcrumb-inner{display:flex;align-items:center;gap:12px}
-.breadcrumb-logo{height:32px;width:auto}
-.breadcrumb-sep{color:#94a3b8;font-size:.875rem}
-.breadcrumb-text{font-size:.875rem;font-weight:600;color:var(--color-text-light)}
 
 /* ── HERO ── */
 .hero{background:var(--color-dark);position:relative;overflow:hidden;padding:100px 0 80px;text-align:center}
@@ -475,7 +477,7 @@ footer{background:#111;padding:48px 0 120px;color:#cbd5e1}
 .hdr__cta { background: var(--color-primary) !important; color: #fff !important; padding: 8px 16px; border-radius: var(--radius); font-weight: 700 !important; white-space: nowrap; }
 .hdr__cta:hover { background: var(--color-primary-dark) !important; }
 .hdr__mob { display: none; background: none; border: none; cursor: pointer; padding: 8px; color: #1a1a1a; line-height: 0; }
-.breadcrumb { display: none; }
+
 @media (max-width: 860px) {
   .hdr__nav { display: none; }
   .hdr__mob { display: block; }
@@ -891,13 +893,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <a class="skip-link" href="#main-content">Pular para o conteudo</a>
 
 <!-- BREADCRUMB -->
-<nav class="breadcrumb" aria-label="Breadcrumb">
-  <div class="container breadcrumb-inner">
-    <a href="https://movemaquinas.com.br"><img class="breadcrumb-logo" src="https://movemaquinas.com.br/assets/logo-move-maquinas-B2l9eWy_.png" alt="Move Maquinas" width="140" height="32"></a>
-    <span class="breadcrumb-sep">/</span>
-    <span class="breadcrumb-text">Blog</span>
-  </div>
-</nav>
+
 
 <main id="main-content">
 
@@ -913,6 +909,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
   <div aria-live="polite" id="searchStatus" class="sr-only" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)"></div>
 </section>
+
+<nav class="breadcrumb" aria-label="Breadcrumb">
+  <div class="container">
+    <ol class="breadcrumb__list">
+      <li><a href="/">Home</a></li>
+            <li><span aria-current="page">Blog</span></li>
+    </ol>
+  </div>
+</nav>
+
 
 <!-- FEATURED -->
 <section class="featured">

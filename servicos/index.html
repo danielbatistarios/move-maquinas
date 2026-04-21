@@ -72,7 +72,6 @@ img { max-width: 100%; height: auto; display: block; }
 .reveal-stagger { transition-delay: calc(var(--stagger, 0) * 70ms); }
 
 /* --- BREADCRUMB --- */
-.breadcrumb { display: none; }
 
 /* --- SECTIONS --- */
 .page-section { padding: var(--space-xl) 0; }
@@ -246,6 +245,13 @@ p { color: var(--color-text-light); line-height: 1.8; }
 @media (max-width: 520px) {
   .mm-ft__in { grid-template-columns: 1fr; }
 }
+
+.breadcrumb{background:var(--color-surface);border-bottom:1px solid var(--color-border);padding:10px 0}
+.breadcrumb__list{display:flex;align-items:center;gap:6px;list-style:none;flex-wrap:wrap;font-size:.78rem;color:var(--color-muted)}
+.breadcrumb__list li:not(:last-child)::after{content:"›";margin-left:6px;color:var(--color-border)}
+.breadcrumb__list a{color:var(--color-primary);font-weight:600;text-decoration:none;transition:opacity .15s}
+.breadcrumb__list a:hover{opacity:.75}
+.breadcrumb__list li:last-child{color:var(--color-text-light)}
 </style>
 </style>
 <script type="application/ld+json">
@@ -735,6 +741,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
   </div>
 </section>
+
+<nav class="breadcrumb" aria-label="Breadcrumb">
+  <div class="container">
+    <ol class="breadcrumb__list">
+      <li><a href="/">Home</a></li>
+            <li><span aria-current="page">Serviços</span></li>
+    </ol>
+  </div>
+</nav>
+
 
 <!-- TRUST BAR -->
 <div class="trust-bar">
