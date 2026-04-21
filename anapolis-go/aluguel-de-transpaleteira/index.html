@@ -284,76 +284,7 @@ p { color: var(--color-text-light); line-height: 1.8; }
 .breadcrumb__list li:last-child{color:var(--color-text-light)}
 </style>
 </style>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": ["LocalBusiness", "AutomotiveBusiness"],
-      "@id": "https://movemaquinas.com.br/#organization",
-      "name": "Movemáquinas",
-      "url": "https://movemaquinas.com.br",
-      "telephone": "+55-62-3211-1515",
-      "taxID": "32.428.258/0001-80",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Av. Eurico Viana, 4913 - Qd 5 B Lt 04",
-        "addressLocality": "Anápolis",
-        "addressRegion": "GO",
-        "postalCode": "74593-590",
-        "addressCountry": "BR"
-      },
-      "geo": { "@type": "GeoCoordinates", "latitude": -16.3281, "longitude": -48.9535 },
-      "hasMap": "https://share.google/08G0ATrziYm9nDlKf",
-      "serviceArea": { "@type": "GeoCircle", "geoMidpoint": { "@type": "GeoCoordinates", "latitude": -16.3281, "longitude": -48.9535 }, "geoRadius": "200000" },
-      "areaServed": [
-        { "@type": "State", "name": "Goiás" },
-        { "@type": "State", "name": "Distrito Federal" },
-        { "@type": "State", "name": "Tocantins" },
-        { "@type": "State", "name": "Mato Grosso" }
-      ],
-      "sameAs": [
-        "https://www.instagram.com/move.maquinas/",
-        "https://www.linkedin.com/company/move-maquinas-oficial/",
-        "https://www.youtube.com/@movemaquinas/featured"
-      ]
-    },
-    {
-      "@type": "Service",
-      "name": "Alugue transpaleteira elétrica em Anápolis",
-      "serviceType": "Locação de Transpaleteira Elétrica",
-      "provider": { "@id": "https://movemaquinas.com.br/#organization" },
-      "areaServed": { "@type": "City", "name": "Anápolis", "addressRegion": "GO" },
-      "offers": {
-        "@type": "Offer",
-        "priceCurrency": "BRL",
-        "availability": "https://schema.org/InStock"
-      }
-    },
-    {
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Movemáquinas", "item": "https://movemaquinas.com.br" },
-        { "@type": "ListItem", "position": 2, "name": "Equipamentos em Anápolis", "item": "https://movemaquinas.com.br/anapolis-go/" },
-        { "@type": "ListItem", "position": 3, "name": "Transpaleteira Elétrica em Anápolis", "item": "https://movemaquinas.com.br/anapolis-go/aluguel-de-transpaleteira" }
-      ]
-    },
-    {
-      "@type": "FAQPage",
-      "mainEntity": [
-        { "@type": "Question", "name": "A transpaleteira lítio opera em câmaras frias a -20°C?", "acceptedAnswer": { "@type": "Answer", "text": "Sim. A bateria de lítio 24V mantém 95% da autonomia em temperaturas de -25°C a +60°C. A chumbo-ácido perde até 40% da capacidade abaixo de 5°C. Para câmaras farmacêuticas do DAIA, a lítio é obrigatória." } },
-        { "@type": "Question", "name": "Qual modelo usar nas docas do Porto Seco?", "acceptedAnswer": { "@type": "Answer", "text": "A patolada PWio20 com plataforma para o operador e velocidade de 12 km/h. Para trajetos de 50 a 100 metros entre armazém e doca, a plataforma elimina a fadiga do operador e triplica a produtividade vs paleteira manual." } },
-        { "@type": "Question", "name": "Quanto custa alugar transpaleteira em Anápolis?", "acceptedAnswer": { "@type": "Answer", "text": "De R$ 1.200 a R$ 2.200 por mês dependendo do modelo (walkie, patolada ou stacker), prazo e quantidade. A lítio custa 15% mais que chumbo-ácido no aluguel, mas economiza 35% na operação (sem troca de bateria, menos manutenção)." } },
-        { "@type": "Question", "name": "Em quanto tempo entregam no DAIA?", "acceptedAnswer": { "@type": "Answer", "text": "24 horas via BR-153 (55 km). Para urgências, mesmo dia. O equipamento chega com bateria carregada e pronto para operar. Treinamento básico do operador incluído na entrega." } },
-        { "@type": "Question", "name": "Preciso de <a href="/anapolis-go/curso-de-operador-de-empilhadeira" style="color:var(--color-primary)">habilitação NR-11 para operadores no DAIA Anápolis</a> para operar transpaleteira elétrica?", "acceptedAnswer": { "@type": "Answer", "text": "Sim. A NR-11 exige certificação para qualquer equipamento motorizado de movimentação. No DAIA, a fiscalização é rigorosa. A Move oferece curso NR-11 em Anápolis com certificação nacional." } },
-        { "@type": "Question", "name": "A lítio recarrega em quanto tempo?", "acceptedAnswer": { "@type": "Answer", "text": "Recarga completa em 2 a 3 horas. Recarga parcial de 30 minutos devolve 40% da carga — suficiente para completar o turno. Não precisa de sala de baterias ventilada como a chumbo-ácido. Carrega em qualquer tomada industrial 220V." } },
-        { "@type": "Question", "name": "Stacker ou empilhadeira: qual usar para 2 níveis de rack?", "acceptedAnswer": { "@type": "Answer", "text": "Se o rack tem 2 níveis e o corredor é estreito (< 3m), o stacker é mais eficiente e barato. Eleva até 1.600 mm com capacidade de 1.200 kg. Para 3+ níveis ou cargas acima de 2.000 kg, a empilhadeira contrabalançada é necessária." } },
-        { "@type": "Question", "name": "Vocês atendem o DaiaPlam e a Plataforma Logística?", "acceptedAnswer": { "@type": "Answer", "text": "Sim. Atendemos DAIA, DaiaPlam, Porto Seco, Plataforma Logística Multimodal, Munir Calixto, Jundiaí, Centro e Vila Jaiara. Cidades próximas: Nerópolis, Pirenópolis, Abadiânia, Silvânia." } }
-      ]
-    }
-  ]
-}
-</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":["LocalBusiness","ProfessionalService"],"@id":"https://movemaquinas.com.br/#organization","name":"Movemáquinas","url":"https://movemaquinas.com.br","taxID":"32428258000180","address":{"@type":"PostalAddress","streetAddress":"Av. Eurico Viana, 4913 - Qd 5 B Lt 04","addressLocality":"Anápolis","addressRegion":"GO","postalCode":"74593-590","addressCountry":"BR"},"geo":{"@type":"GeoCoordinates","latitude":-16.3281,"longitude":-48.9535},"hasMap":"https://share.google/08G0ATrziYm9nDlKf","serviceArea":{"@type":"GeoCircle","geoMidpoint":{"@type":"GeoCoordinates","latitude":-16.3281,"longitude":-48.9535},"geoRadius":"200000"},"areaServed":[{"@type":"State","name":"Goiás"},{"@type":"State","name":"Distrito Federal"},{"@type":"State","name":"Tocantins"},{"@type":"State","name":"Mato Grosso"}],"sameAs":["https://www.instagram.com/move.maquinas/","https://www.linkedin.com/company/move-maquinas-oficial/","https://www.youtube.com/@movemaquinas/featured"],"parentOrganization":{"@id":"https://movemaquinas.com.br/#organization"}},{"@type":"WebPage","@id":"https://movemaquinas.com.br/anapolis-go/aluguel-de-transpaleteira/#webpage","url":"https://movemaquinas.com.br/anapolis-go/aluguel-de-transpaleteira/","name":"Aluguel de Transpaleteira Elétrica em Anápolis | Movemáquinas","breadcrumb":{"@id":"https://movemaquinas.com.br/anapolis-go/aluguel-de-transpaleteira/#breadcrumb"},"publisher":{"@id":"https://movemaquinas.com.br/#organization"},"description":"Aluguel de transpaleteiras Clark elétricas para movimentação de cargas em Anápolis","inLanguage":"pt-BR","dateModified":"2026-04-21T01:26:27.461731","speakableSpecification":{"@type":"SpeakableSpecification","cssSelector":["h1","h2"]}},{"@type":"Service","name":"Alugue transpaleteira elétrica em Anápolis","serviceType":"Locação de Transpaleteira Elétrica","provider":{"@id":"https://movemaquinas.com.br/#organization"},"areaServed":{"@type":"City","name":"Anápolis","addressRegion":"GO","sameAs":"https://www.wikidata.org/wiki/Q582601"},"offers":{"@type":"Offer","priceCurrency":"BRL","availability":"https://schema.org/InStock"},"@id":"https://movemaquinas.com.br/anapolis-go/aluguel-de-transpaleteira/#service","subject":{"@type":"DefinedTerm","@id":"https://www.wikidata.org/wiki/Q1860965","name":"Transpaleteira"},"businessFunction":"https://purl.org/goodrelations/v1#LeaseOut","potentialAction":{"@type":"RentAction","target":"https://movemaquinas.com.br/anapolis-go/aluguel-de-transpaleteira/","object":{"@type":"Service","name":"Aluguel de Transpaleteira Elétrica"}},"image":{"@type":"ImageObject","url":"https://movemaquinas.com.br/assets/clark/transpaleteira/wpio20/wpio20_application-2.webp","width":600,"height":400}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Movemáquinas","item":"https://movemaquinas.com.br/"},{"@type":"ListItem","position":2,"name":"Equipamentos em Anápolis","item":"https://movemaquinas.com.br/anapolis-go/"},{"@type":"ListItem","position":3,"name":"Transpaleteira Elétrica em Anápolis","item":"https://movemaquinas.com.br/anapolis-go/aluguel-de-transpaleteira/"}],"@id":"https://movemaquinas.com.br/anapolis-go/aluguel-de-transpaleteira/#breadcrumb","isPartOf":{"@id":"https://movemaquinas.com.br/anapolis-go/aluguel-de-transpaleteira/#webpage"}},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"A transpaleteira lítio opera em câmaras frias a -20°C?","acceptedAnswer":{"@type":"Answer","text":"Sim. A bateria de lítio 24V mantém 95% da autonomia em temperaturas de -25°C a +60°C. A chumbo-ácido perde até 40% da capacidade abaixo de 5°C. Para câmaras farmacêuticas do DAIA, a lítio é obrigatória."}},{"@type":"Question","name":"Qual modelo usar nas docas do Porto Seco?","acceptedAnswer":{"@type":"Answer","text":"A patolada PWio20 com plataforma para o operador e velocidade de 12 km/h. Para trajetos de 50 a 100 metros entre armazém e doca, a plataforma elimina a fadiga do operador e triplica a produtividade vs paleteira manual."}},{"@type":"Question","name":"Quanto custa alugar transpaleteira em Anápolis?","acceptedAnswer":{"@type":"Answer","text":"De R$ 1.200 a R$ 2.200 por mês dependendo do modelo (walkie, patolada ou stacker), prazo e quantidade. A lítio custa 15% mais que chumbo-ácido no aluguel, mas economiza 35% na operação (sem troca de bateria, menos manutenção)."}},{"@type":"Question","name":"Em quanto tempo entregam no DAIA?","acceptedAnswer":{"@type":"Answer","text":"24 horas via BR-153 (55 km). Para urgências, mesmo dia. O equipamento chega com bateria carregada e pronto para operar. Treinamento básico do operador incluído na entrega."}},{"@type":"Question","name":"Preciso de habilitação NR-11 para operadores no DAIA Anápolis para operar transpaleteira elétrica?","acceptedAnswer":{"@type":"Answer","text":"Sim. A NR-11 exige certificação para qualquer equipamento motorizado de movimentação. No DAIA, a fiscalização é rigorosa. A Move oferece curso NR-11 em Anápolis com certificação nacional."}},{"@type":"Question","name":"A lítio recarrega em quanto tempo?","acceptedAnswer":{"@type":"Answer","text":"Recarga completa em 2 a 3 horas. Recarga parcial de 30 minutos devolve 40% da carga — suficiente para completar o turno. Não precisa de sala de baterias ventilada como a chumbo-ácido. Carrega em qualquer tomada industrial 220V."}},{"@type":"Question","name":"Stacker ou empilhadeira: qual usar para 2 níveis de rack?","acceptedAnswer":{"@type":"Answer","text":"Se o rack tem 2 níveis e o corredor é estreito (< 3m), o stacker é mais eficiente e barato. Eleva até 1.600 mm com capacidade de 1.200 kg. Para 3+ níveis ou cargas acima de 2.000 kg, a empilhadeira contrabalançada é necessária."}},{"@type":"Question","name":"Vocês atendem o DaiaPlam e a Plataforma Logística?","acceptedAnswer":{"@type":"Answer","text":"Sim. Atendemos DAIA, DaiaPlam, Porto Seco, Plataforma Logística Multimodal, Munir Calixto, Jundiaí, Centro e Vila Jaiara. Cidades próximas: Nerópolis, Pirenópolis, Abadiânia, Silvânia."}}],"about":{"@id":"https://movemaquinas.com.br/#organization"},"isPartOf":{"@id":"https://movemaquinas.com.br/anapolis-go/aluguel-de-transpaleteira/#webpage"},"@id":"https://movemaquinas.com.br/anapolis-go/aluguel-de-transpaleteira/#faqpage"}]}</script>
 
 <script>(function(){
   var p=new URLSearchParams(window.location.search),k=['utm_source','utm_medium','utm_campaign','utm_content','utm_term'],s=JSON.parse(sessionStorage.getItem('utm_data')||'{}'),n=false;
@@ -1095,81 +1026,81 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </section>
 
 <!-- ========== FAQ ========== -->
-<section id="faq" class="page-section page-section--surface" aria-labelledby="faq-h2" itemscope itemtype="https://schema.org/FAQPage" style="text-align:center;">
+<section id="faq" class="page-section page-section--surface" aria-labelledby="faq-h2" style="text-align:center;">
   <div class="container">
     <span class="section-tag" style="margin-left:auto;margin-right:auto;">FAQ</span>
     <h2 id="faq-h2" style="margin-left:auto;margin-right:auto;">Tire suas dúvidas sobre <span>patolinha elétrica</span> em Anápolis</h2>
     <div class="faq__list" style="text-align:left;">
-      <details class="faq__item reveal reveal-stagger" style="--stagger:0" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+      <details class="faq__item reveal reveal-stagger" style="--stagger:0">
         <summary class="faq__trigger">
-          <h3 itemprop="name" style="font-size:inherit;font-weight:inherit;margin:0;color:inherit;line-height:inherit;">Qual a transpaleteira elétrica mais alugada em Anápolis?</h3>
+          <h3 style="font-size:inherit;font-weight:inherit;margin:0;color:inherit;line-height:inherit;">Qual a transpaleteira elétrica mais alugada em Anápolis?</h3>
           <svg class="faq__icon" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
         </summary>
-        <div class="faq__answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-          <div itemprop="text">Recarga completa em 2 a 3 horas. Parcial de 30 minutos devolve 40% da carga. Não precisa de sala ventilada. Carrega em tomada industrial 220V.</div>
+        <div class="faq__answer">
+          <div>Recarga completa em 2 a 3 horas. Parcial de 30 minutos devolve 40% da carga. Não precisa de sala ventilada. Carrega em tomada industrial 220V.</div>
         </div>
       </details>
-      <details class="faq__item reveal reveal-stagger" style="--stagger:1" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+      <details class="faq__item reveal reveal-stagger" style="--stagger:1">
         <summary class="faq__trigger">
-          <h3 itemprop="name" style="font-size:inherit;font-weight:inherit;margin:0;color:inherit;line-height:inherit;">Stacker ou empilhadeira para 2 níveis de rack?</h3>
+          <h3 style="font-size:inherit;font-weight:inherit;margin:0;color:inherit;line-height:inherit;">Stacker ou empilhadeira para 2 níveis de rack?</h3>
           <svg class="faq__icon" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
         </summary>
-        <div class="faq__answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-          <div itemprop="text">Se rack tem 2 níveis e corredor é estreito (< 3m), stacker é mais eficiente e barato — eleva até 1.600 mm com 1.200 kg. Para 3+ níveis ou cargas acima de 2 ton, precisa empilhadeira contrabalançada.</div>
+        <div class="faq__answer">
+          <div>Se rack tem 2 níveis e corredor é estreito (< 3m), stacker é mais eficiente e barato — eleva até 1.600 mm com 1.200 kg. Para 3+ níveis ou cargas acima de 2 ton, precisa empilhadeira contrabalançada.</div>
         </div>
       </details>
-      <details class="faq__item reveal reveal-stagger" style="--stagger:2" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+      <details class="faq__item reveal reveal-stagger" style="--stagger:2">
         <summary class="faq__trigger">
-          <h3 itemprop="name" style="font-size:inherit;font-weight:inherit;margin:0;color:inherit;line-height:inherit;">A lítio opera em câmaras frias do DAIA a -20°C?</h3>
+          <h3 style="font-size:inherit;font-weight:inherit;margin:0;color:inherit;line-height:inherit;">A lítio opera em câmaras frias do DAIA a -20°C?</h3>
           <svg class="faq__icon" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
         </summary>
-        <div class="faq__answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-          <div itemprop="text">Sim. Lítio 24V mantém 95% da autonomia entre -25°C e +60°C. Chumbo-ácido perde até 40% abaixo de 5°C. Para câmaras farmacêuticas do DAIA, lítio é obrigatória.</div>
+        <div class="faq__answer">
+          <div>Sim. Lítio 24V mantém 95% da autonomia entre -25°C e +60°C. Chumbo-ácido perde até 40% abaixo de 5°C. Para câmaras farmacêuticas do DAIA, lítio é obrigatória.</div>
         </div>
       </details>
-      <details class="faq__item reveal reveal-stagger" style="--stagger:3" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+      <details class="faq__item reveal reveal-stagger" style="--stagger:3">
         <summary class="faq__trigger">
-          <h3 itemprop="name" style="font-size:inherit;font-weight:inherit;margin:0;color:inherit;line-height:inherit;">Quanto dura a bateria lítio por turno no DAIA?</h3>
+          <h3 style="font-size:inherit;font-weight:inherit;margin:0;color:inherit;line-height:inherit;">Quanto dura a bateria lítio por turno no DAIA?</h3>
           <svg class="faq__icon" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
         </summary>
-        <div class="faq__answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-          <div itemprop="text">Turno completo de 8 horas em operação contínua. Recarga completa em 2-3 horas. Parcial de 30 min devolve 40%. Carrega em tomada industrial 220V, sem sala especial.</div>
+        <div class="faq__answer">
+          <div>Turno completo de 8 horas em operação contínua. Recarga completa em 2-3 horas. Parcial de 30 min devolve 40%. Carrega em tomada industrial 220V, sem sala especial.</div>
         </div>
       </details>
-      <details class="faq__item reveal reveal-stagger" style="--stagger:4" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+      <details class="faq__item reveal reveal-stagger" style="--stagger:4">
         <summary class="faq__trigger">
-          <h3 itemprop="name" style="font-size:inherit;font-weight:inherit;margin:0;color:inherit;line-height:inherit;">Preciso de NR-11 para transpaleteira no DAIA?</h3>
+          <h3 style="font-size:inherit;font-weight:inherit;margin:0;color:inherit;line-height:inherit;">Preciso de NR-11 para transpaleteira no DAIA?</h3>
           <svg class="faq__icon" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
         </summary>
-        <div class="faq__answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-          <div itemprop="text">Sim. NR-11 exige certificação para qualquer equipamento motorizado. No DAIA, fiscalização rigorosa. A Move oferece <a href="/anapolis-go/curso-de-operador-de-empilhadeira" style="color:var(--color-primary)">habilitação NR-11 para empilhadeira no Porto Seco Anápolis</a>.</div>
+        <div class="faq__answer">
+          <div>Sim. NR-11 exige certificação para qualquer equipamento motorizado. No DAIA, fiscalização rigorosa. A Move oferece <a href="/anapolis-go/curso-de-operador-de-empilhadeira" style="color:var(--color-primary)">habilitação NR-11 para empilhadeira no Porto Seco Anápolis</a>.</div>
         </div>
       </details>
-      <details class="faq__item reveal reveal-stagger" style="--stagger:5" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+      <details class="faq__item reveal reveal-stagger" style="--stagger:5">
         <summary class="faq__trigger">
-          <h3 itemprop="name" style="font-size:inherit;font-weight:inherit;margin:0;color:inherit;line-height:inherit;">A lítio recarrega em quanto tempo?</h3>
+          <h3 style="font-size:inherit;font-weight:inherit;margin:0;color:inherit;line-height:inherit;">A lítio recarrega em quanto tempo?</h3>
           <svg class="faq__icon" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
         </summary>
-        <div class="faq__answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-          <div itemprop="text">Sim. Atendemos em um raio de até 200 km de Anápolis, cobrindo Aparecida de Anápolis, Senador Canedo, Trindade, Anápolis, Inhumas e toda a região de Anápolis. Para a capital, a entrega ocorre no mesmo dia, sem custo adicional de frete.</div>
+        <div class="faq__answer">
+          <div>Sim. Atendemos em um raio de até 200 km de Anápolis, cobrindo Aparecida de Anápolis, Senador Canedo, Trindade, Anápolis, Inhumas e toda a região de Anápolis. Para a capital, a entrega ocorre no mesmo dia, sem custo adicional de frete.</div>
         </div>
       </details>
-      <details class="faq__item reveal reveal-stagger" style="--stagger:6" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+      <details class="faq__item reveal reveal-stagger" style="--stagger:6">
         <summary class="faq__trigger">
-          <h3 itemprop="name" style="font-size:inherit;font-weight:inherit;margin:0;color:inherit;line-height:inherit;">A manutenção lítio é diferente da chumbo-ácido?</h3>
+          <h3 style="font-size:inherit;font-weight:inherit;margin:0;color:inherit;line-height:inherit;">A manutenção lítio é diferente da chumbo-ácido?</h3>
           <svg class="faq__icon" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
         </summary>
-        <div class="faq__answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-          <div itemprop="text">Sim. Lítio exige menos manutenção: sem reposição de água destilada, sem equalização de carga, sem sala ventilada. A Move faz revisão preventiva a cada 500 horas — inclusa no contrato.</div>
+        <div class="faq__answer">
+          <div>Sim. Lítio exige menos manutenção: sem reposição de água destilada, sem equalização de carga, sem sala ventilada. A Move faz revisão preventiva a cada 500 horas — inclusa no contrato.</div>
         </div>
       </details>
-      <details class="faq__item reveal reveal-stagger" style="--stagger:7" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+      <details class="faq__item reveal reveal-stagger" style="--stagger:7">
         <summary class="faq__trigger">
-          <h3 itemprop="name" style="font-size:inherit;font-weight:inherit;margin:0;color:inherit;line-height:inherit;">Qual modelo para docas do Porto Seco?</h3>
+          <h3 style="font-size:inherit;font-weight:inherit;margin:0;color:inherit;line-height:inherit;">Qual modelo para docas do Porto Seco?</h3>
           <svg class="faq__icon" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
         </summary>
-        <div class="faq__answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-          <div itemprop="text">PWio20 patolada (2.000 kg, 12 km/h) para trajetos longos armazém-doca. WPX35 para cargas pesadas até 3.500 kg. PPXs20 com plataforma dobrável para espaços apertados entre docas.</div>
+        <div class="faq__answer">
+          <div>PWio20 patolada (2.000 kg, 12 km/h) para trajetos longos armazém-doca. WPX35 para cargas pesadas até 3.500 kg. PPXs20 com plataforma dobrável para espaços apertados entre docas.</div>
         </div>
       </details>
     </div>

@@ -284,77 +284,7 @@ p { color: var(--color-text-light); line-height: 1.8; }
 .breadcrumb__list li:last-child{color:var(--color-text-light)}
 </style>
 </style>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": ["LocalBusiness", "AutomotiveBusiness"],
-      "@id": "https://movemaquinas.com.br/#organization",
-      "name": "Movemáquinas",
-      "url": "https://movemaquinas.com.br",
-      "telephone": "+55-62-3211-1515",
-      "taxID": "32.428.258/0001-80",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Av. Eurico Viana, 4913 - Qd 5 B Lt 04",
-        "addressLocality": "Anápolis",
-        "addressRegion": "GO",
-        "postalCode": "74593-590",
-        "addressCountry": "BR"
-      },
-      "geo": { "@type": "GeoCoordinates", "latitude": -16.3281, "longitude": -48.9535 },
-      "hasMap": "https://share.google/08G0ATrziYm9nDlKf",
-      "serviceArea": { "@type": "GeoCircle", "geoMidpoint": { "@type": "GeoCoordinates", "latitude": -16.3281, "longitude": -48.9535 }, "geoRadius": "200000" },
-      "areaServed": [
-        { "@type": "State", "name": "Goiás" },
-        { "@type": "State", "name": "Distrito Federal" },
-        { "@type": "State", "name": "Tocantins" },
-        { "@type": "State", "name": "Mato Grosso" }
-      ],
-      "sameAs": [
-        "https://www.instagram.com/move.maquinas/",
-        "https://www.linkedin.com/company/move-maquinas-oficial/",
-        "https://www.youtube.com/@movemaquinas/featured"
-      ]
-    },
-    {
-      "@type": "Service",
-      "name": "Alugue empilhadeira a combustão em Anápolis",
-      "serviceType": "Locação de Empilhadeira a Combustão",
-      "provider": { "@id": "https://movemaquinas.com.br/#organization" },
-      "areaServed": { "@type": "City", "name": "Anápolis", "addressRegion": "GO" },
-      "offers": {
-        "@type": "Offer",
-        "priceRange": "$$",
-        "priceCurrency": "BRL",
-        "availability": "https://schema.org/InStock"
-      }
-    },
-    {
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Movemáquinas", "item": "https://movemaquinas.com.br" },
-        { "@type": "ListItem", "position": 2, "name": "Equipamentos em Anápolis", "item": "https://movemaquinas.com.br/anapolis-go/" },
-        { "@type": "ListItem", "position": 3, "name": "Empilhadeira a Combustão em Anápolis", "item": "https://movemaquinas.com.br/anapolis-go/aluguel-de-empilhadeira-combustao" }
-      ]
-    },
-    {
-      "@type": "FAQPage",
-      "mainEntity": [
-        { "@type": "Question", "name": "Qual empilhadeira usar nos armazéns farmacêuticos do DAIA?", "acceptedAnswer": { "@type": "Answer", "text": "GLP Clark S25/30/35 com capacidade de 2.500 a 3.500 kg. O GLP é preferido porque permite operação em áreas semi-fechadas com ventilação natural, sem emissão de fuligem que comprometa os medicamentos. Corredores de 3,5 metros comportam o raio de giro da série S." } },
-        { "@type": "Question", "name": "Qual modelo suporta contêineres no Porto Seco?", "acceptedAnswer": { "@type": "Answer", "text": "A diesel Clark C60/70/80 com capacidade de 6.000 a 8.000 kg e mastro triplex. É a única linha que sustenta contêiner de 20 pés carregado (até 8 toneladas) com estabilidade para empilhar a 2 níveis de rack." } },
-        { "@type": "Question", "name": "Quanto custa alugar empilhadeira combustão em Anápolis?", "acceptedAnswer": { "@type": "Answer", "text": "De Consultar a R$ 5.000 por mês dependendo do modelo, capacidade (2 a 8 ton) e prazo de contrato. Inclui manutenção, GLP/diesel por conta do cliente. Contratos acima de 6 meses para DAIA têm desconto progressivo." } },
-        { "@type": "Question", "name": "GLP ou diesel: qual escolher para minha operação?", "acceptedAnswer": { "@type": "Answer", "text": "GLP para armazéns e galpões com ventilação (DAIA, distribuição). Diesel para pátios externos, carga pesada e operação 24h (Porto Seco, terminais rodoviários). No DAIA, 70% dos contratos são GLP e 30% diesel." } },
-        { "@type": "Question", "name": "Em quanto tempo a empilhadeira chega em Anápolis?", "acceptedAnswer": { "@type": "Answer", "text": "Entrega em até 24h via BR-153 (55 km). Para o DAIA e Porto Seco, conseguimos no mesmo dia para modelos em estoque. O equipamento chega revisado com tanque cheio ou cilindro GLP instalado, pronto para operar." } },
-        { "@type": "Question", "name": "A manutenção é feita no DAIA mesmo?", "acceptedAnswer": { "@type": "Answer", "text": "Sim. Técnico mobile vai até o DAIA, Porto Seco ou qualquer ponto de Anápolis. Manutenção preventiva programada (a cada 250 horas) e corretiva emergencial (tempo de resposta: 4 horas). Peças originais Clark em estoque." } },
-        { "@type": "Question", "name": "Preciso de operador certificado <a href="/anapolis-go/curso-de-operador-de-empilhadeira" style="color:var(--color-primary)">habilitação NR-11 para operadores no DAIA Anápolis</a>?", "acceptedAnswer": { "@type": "Answer", "text": "Sim. A NR-11 exige certificação para operação de empilhadeira. No DAIA, a fiscalização é rigorosa. A Move oferece curso de operador em Anápolis com aulas práticas e certificação nacional, inclusive turmas in-company nas instalações do cliente." } },
-        { "@type": "Question", "name": "Vocês atendem operação 24h no Porto Seco?", "acceptedAnswer": { "@type": "Answer", "text": "Sim. Temos contratos com operação 24h em 3 turnos. A manutenção preventiva é programada no intervalo entre turnos (madrugada). Suporte emergencial em horario comercial com tempo de resposta de 4 horas para o Porto Seco." } }
-      ]
-    }
-  ]
-}
-</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":["LocalBusiness","ProfessionalService"],"@id":"https://movemaquinas.com.br/#organization","name":"Movemáquinas","url":"https://movemaquinas.com.br","taxID":"32428258000180","address":{"@type":"PostalAddress","streetAddress":"Av. Eurico Viana, 4913 - Qd 5 B Lt 04","addressLocality":"Anápolis","addressRegion":"GO","postalCode":"74593-590","addressCountry":"BR"},"geo":{"@type":"GeoCoordinates","latitude":-16.3281,"longitude":-48.9535},"hasMap":"https://share.google/08G0ATrziYm9nDlKf","serviceArea":{"@type":"GeoCircle","geoMidpoint":{"@type":"GeoCoordinates","latitude":-16.3281,"longitude":-48.9535},"geoRadius":"200000"},"areaServed":[{"@type":"State","name":"Goiás"},{"@type":"State","name":"Distrito Federal"},{"@type":"State","name":"Tocantins"},{"@type":"State","name":"Mato Grosso"}],"sameAs":["https://www.instagram.com/move.maquinas/","https://www.linkedin.com/company/move-maquinas-oficial/","https://www.youtube.com/@movemaquinas/featured"],"parentOrganization":{"@id":"https://movemaquinas.com.br/#organization"}},{"@type":"WebPage","@id":"https://movemaquinas.com.br/anapolis-go/aluguel-de-empilhadeira-combustao/#webpage","url":"https://movemaquinas.com.br/anapolis-go/aluguel-de-empilhadeira-combustao/","name":"Aluguel de Empilhadeira a Combustão em Anápolis | Movemáquinas","breadcrumb":{"@id":"https://movemaquinas.com.br/anapolis-go/aluguel-de-empilhadeira-combustao/#breadcrumb"},"publisher":{"@id":"https://movemaquinas.com.br/#organization"},"description":"Aluguel de empilhadeiras Clark a combustão com entrega rápida em Anápolis","inLanguage":"pt-BR","dateModified":"2026-04-21T01:26:27.458390","speakableSpecification":{"@type":"SpeakableSpecification","cssSelector":["h1","h2"]}},{"@type":"Service","name":"Alugue empilhadeira a combustão em Anápolis","serviceType":"Locação de Empilhadeira a Combustão","provider":{"@id":"https://movemaquinas.com.br/#organization"},"areaServed":{"@type":"City","name":"Anápolis","addressRegion":"GO","sameAs":"https://www.wikidata.org/wiki/Q582601"},"offers":{"@type":"Offer","priceRange":"$$","priceCurrency":"BRL","availability":"https://schema.org/InStock"},"@id":"https://movemaquinas.com.br/anapolis-go/aluguel-de-empilhadeira-combustao/#service","subject":{"@type":"DefinedTerm","@id":"https://www.wikidata.org/wiki/Q187959","name":"Empilhadeira"},"businessFunction":"https://purl.org/goodrelations/v1#LeaseOut","potentialAction":{"@type":"RentAction","target":"https://movemaquinas.com.br/anapolis-go/aluguel-de-empilhadeira-combustao/","object":{"@type":"Service","name":"Aluguel de Empilhadeira a Combustão"}},"image":{"@type":"ImageObject","url":"https://movemaquinas.com.br/assets/clark/empilhadeira-combustao/c60-70-75-80/studio_lep_frontangle.webp","width":600,"height":400}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Movemáquinas","item":"https://movemaquinas.com.br/"},{"@type":"ListItem","position":2,"name":"Equipamentos em Anápolis","item":"https://movemaquinas.com.br/anapolis-go/"},{"@type":"ListItem","position":3,"name":"Empilhadeira a Combustão em Anápolis","item":"https://movemaquinas.com.br/anapolis-go/aluguel-de-empilhadeira-combustao/"}],"@id":"https://movemaquinas.com.br/anapolis-go/aluguel-de-empilhadeira-combustao/#breadcrumb","isPartOf":{"@id":"https://movemaquinas.com.br/anapolis-go/aluguel-de-empilhadeira-combustao/#webpage"}},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Qual empilhadeira usar nos armazéns farmacêuticos do DAIA?","acceptedAnswer":{"@type":"Answer","text":"GLP Clark S25/30/35 com capacidade de 2.500 a 3.500 kg. O GLP é preferido porque permite operação em áreas semi-fechadas com ventilação natural, sem emissão de fuligem que comprometa os medicamentos. Corredores de 3,5 metros comportam o raio de giro da série S."}},{"@type":"Question","name":"Qual modelo suporta contêineres no Porto Seco?","acceptedAnswer":{"@type":"Answer","text":"A diesel Clark C60/70/80 com capacidade de 6.000 a 8.000 kg e mastro triplex. É a única linha que sustenta contêiner de 20 pés carregado (até 8 toneladas) com estabilidade para empilhar a 2 níveis de rack."}},{"@type":"Question","name":"Quanto custa alugar empilhadeira combustão em Anápolis?","acceptedAnswer":{"@type":"Answer","text":"De Consultar a R$ 5.000 por mês dependendo do modelo, capacidade (2 a 8 ton) e prazo de contrato. Inclui manutenção, GLP/diesel por conta do cliente. Contratos acima de 6 meses para DAIA têm desconto progressivo."}},{"@type":"Question","name":"GLP ou diesel: qual escolher para minha operação?","acceptedAnswer":{"@type":"Answer","text":"GLP para armazéns e galpões com ventilação (DAIA, distribuição). Diesel para pátios externos, carga pesada e operação 24h (Porto Seco, terminais rodoviários). No DAIA, 70% dos contratos são GLP e 30% diesel."}},{"@type":"Question","name":"Em quanto tempo a empilhadeira chega em Anápolis?","acceptedAnswer":{"@type":"Answer","text":"Entrega em até 24h via BR-153 (55 km). Para o DAIA e Porto Seco, conseguimos no mesmo dia para modelos em estoque. O equipamento chega revisado com tanque cheio ou cilindro GLP instalado, pronto para operar."}},{"@type":"Question","name":"A manutenção é feita no DAIA mesmo?","acceptedAnswer":{"@type":"Answer","text":"Sim. Técnico mobile vai até o DAIA, Porto Seco ou qualquer ponto de Anápolis. Manutenção preventiva programada (a cada 250 horas) e corretiva emergencial (tempo de resposta: 4 horas). Peças originais Clark em estoque."}},{"@type":"Question","name":"Preciso de operador certificado habilitação NR-11 para operadores no DAIA Anápolis?","acceptedAnswer":{"@type":"Answer","text":"Sim. A NR-11 exige certificação para operação de empilhadeira. No DAIA, a fiscalização é rigorosa. A Move oferece curso de operador em Anápolis com aulas práticas e certificação nacional, inclusive turmas in-company nas instalações do cliente."}},{"@type":"Question","name":"Vocês atendem operação 24h no Porto Seco?","acceptedAnswer":{"@type":"Answer","text":"Sim. Temos contratos com operação 24h em 3 turnos. A manutenção preventiva é programada no intervalo entre turnos (madrugada). Suporte emergencial em horario comercial com tempo de resposta de 4 horas para o Porto Seco."}}],"about":{"@id":"https://movemaquinas.com.br/#organization"},"isPartOf":{"@id":"https://movemaquinas.com.br/anapolis-go/aluguel-de-empilhadeira-combustao/#webpage"},"@id":"https://movemaquinas.com.br/anapolis-go/aluguel-de-empilhadeira-combustao/#faqpage"}]}</script>
 
 <script>(function(){
   var p=new URLSearchParams(window.location.search),k=['utm_source','utm_medium','utm_campaign','utm_content','utm_term'],s=JSON.parse(sessionStorage.getItem('utm_data')||'{}'),n=false;
@@ -1075,81 +1005,81 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </section>
 
 <!-- ========== FAQ ========== -->
-<section id="faq" class="page-section page-section--surface" aria-labelledby="faq-h2" itemscope itemtype="https://schema.org/FAQPage" style="text-align:center;">
+<section id="faq" class="page-section page-section--surface" aria-labelledby="faq-h2" style="text-align:center;">
   <div class="container">
     <span class="section-tag" style="margin-left:auto;margin-right:auto;">FAQ</span>
     <h2 id="faq-h2" style="margin-left:auto;margin-right:auto;">Tire suas dúvidas sobre <span>empilhadeira GLP/diesel</span> em Anápolis</h2>
     <div class="faq__list" style="text-align:left;">
-      <details class="faq__item reveal reveal-stagger" style="--stagger:0" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+      <details class="faq__item reveal reveal-stagger" style="--stagger:0">
         <summary class="faq__trigger">
-          <h3 itemprop="name" style="font-size:inherit;font-weight:inherit;margin:0;color:inherit;line-height:inherit;">Qual a empilhadeira a combustão mais alugada em Anápolis?</h3>
+          <h3 style="font-size:inherit;font-weight:inherit;margin:0;color:inherit;line-height:inherit;">Qual a empilhadeira a combustão mais alugada em Anápolis?</h3>
           <svg class="faq__icon" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
         </summary>
-        <div class="faq__answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-          <div itemprop="text">GLP Clark S25/30/35 com capacidade de 2.500 a 3.500 kg. GLP permite operação em áreas semi-fechadas do DAIA sem fuligem nos medicamentos. Corredores de 3,5m comportam o raio de giro.</div>
+        <div class="faq__answer">
+          <div>GLP Clark S25/30/35 com capacidade de 2.500 a 3.500 kg. GLP permite operação em áreas semi-fechadas do DAIA sem fuligem nos medicamentos. Corredores de 3,5m comportam o raio de giro.</div>
         </div>
       </details>
-      <details class="faq__item reveal reveal-stagger" style="--stagger:1" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+      <details class="faq__item reveal reveal-stagger" style="--stagger:1">
         <summary class="faq__trigger">
-          <h3 itemprop="name" style="font-size:inherit;font-weight:inherit;margin:0;color:inherit;line-height:inherit;">Qual empilhadeira usar nos armazéns farmacêuticos do DAIA?</h3>
+          <h3 style="font-size:inherit;font-weight:inherit;margin:0;color:inherit;line-height:inherit;">Qual empilhadeira usar nos armazéns farmacêuticos do DAIA?</h3>
           <svg class="faq__icon" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
         </summary>
-        <div class="faq__answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-          <div itemprop="text">A empilhadeira a combustão (GLP ou diesel) oferece maior torque, opera em pátios externos sem restrição de emissão e não depende de recarga de bateria. A elétrica é silenciosa e indicada para ambientes fechados com ventilação limitada. Para operações mistas em Anápolis (doca + pátio + galpão), a combustão é a escolha mais versátil.</div>
+        <div class="faq__answer">
+          <div>A empilhadeira a combustão (GLP ou diesel) oferece maior torque, opera em pátios externos sem restrição de emissão e não depende de recarga de bateria. A elétrica é silenciosa e indicada para ambientes fechados com ventilação limitada. Para operações mistas em Anápolis (doca + pátio + galpão), a combustão é a escolha mais versátil.</div>
         </div>
       </details>
-      <details class="faq__item reveal reveal-stagger" style="--stagger:2" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+      <details class="faq__item reveal reveal-stagger" style="--stagger:2">
         <summary class="faq__trigger">
-          <h3 itemprop="name" style="font-size:inherit;font-weight:inherit;margin:0;color:inherit;line-height:inherit;">Quanto custa alugar empilhadeira a combustão em Anápolis?</h3>
+          <h3 style="font-size:inherit;font-weight:inherit;margin:0;color:inherit;line-height:inherit;">Quanto custa alugar empilhadeira a combustão em Anápolis?</h3>
           <svg class="faq__icon" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
         </summary>
-        <div class="faq__answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-          <div itemprop="text">O valor varia sob consulta por mês, dependendo do modelo (L25, GTS, S-Series ou C-Series), prazo de contrato e capacidade de carga. O aluguel inclui manutenção preventiva e corretiva, suporte técnico em horário comercial e entrega sem custo de deslocamento em Anápolis.</div>
+        <div class="faq__answer">
+          <div>O valor varia sob consulta por mês, dependendo do modelo (L25, GTS, S-Series ou C-Series), prazo de contrato e capacidade de carga. O aluguel inclui manutenção preventiva e corretiva, suporte técnico em horário comercial e entrega sem custo de deslocamento em Anápolis.</div>
         </div>
       </details>
-      <details class="faq__item reveal reveal-stagger" style="--stagger:3" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+      <details class="faq__item reveal reveal-stagger" style="--stagger:3">
         <summary class="faq__trigger">
-          <h3 itemprop="name" style="font-size:inherit;font-weight:inherit;margin:0;color:inherit;line-height:inherit;">A manutenção é feita no DAIA ou preciso levar a Anápolis?</h3>
+          <h3 style="font-size:inherit;font-weight:inherit;margin:0;color:inherit;line-height:inherit;">A manutenção é feita no DAIA ou preciso levar a Anápolis?</h3>
           <svg class="faq__icon" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
         </summary>
-        <div class="faq__answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-          <div itemprop="text">No DAIA mesmo. Técnico mobile vai até sua fábrica. Preventiva programada a cada 250 horas e corretiva emergencial com resposta de 4 horas. Peças originais Clark em estoque.</div>
+        <div class="faq__answer">
+          <div>No DAIA mesmo. Técnico mobile vai até sua fábrica. Preventiva programada a cada 250 horas e corretiva emergencial com resposta de 4 horas. Peças originais Clark em estoque.</div>
         </div>
       </details>
-      <details class="faq__item reveal reveal-stagger" style="--stagger:4" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+      <details class="faq__item reveal reveal-stagger" style="--stagger:4">
         <summary class="faq__trigger">
-          <h3 itemprop="name" style="font-size:inherit;font-weight:inherit;margin:0;color:inherit;line-height:inherit;">GLP ou diesel para operações no DAIA?</h3>
+          <h3 style="font-size:inherit;font-weight:inherit;margin:0;color:inherit;line-height:inherit;">GLP ou diesel para operações no DAIA?</h3>
           <svg class="faq__icon" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
         </summary>
-        <div class="faq__answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-          <div itemprop="text">GLP para armazéns com ventilação (70% dos contratos no DAIA). Diesel para pátios externos, carga pesada e operação 24h no Porto Seco. A escolha depende do ambiente e do peso da carga.</div>
+        <div class="faq__answer">
+          <div>GLP para armazéns com ventilação (70% dos contratos no DAIA). Diesel para pátios externos, carga pesada e operação 24h no Porto Seco. A escolha depende do ambiente e do peso da carga.</div>
         </div>
       </details>
-      <details class="faq__item reveal reveal-stagger" style="--stagger:5" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+      <details class="faq__item reveal reveal-stagger" style="--stagger:5">
         <summary class="faq__trigger">
-          <h3 itemprop="name" style="font-size:inherit;font-weight:inherit;margin:0;color:inherit;line-height:inherit;">Vocês entregam empilhadeira fora de Anápolis?</h3>
+          <h3 style="font-size:inherit;font-weight:inherit;margin:0;color:inherit;line-height:inherit;">Vocês entregam empilhadeira fora de Anápolis?</h3>
           <svg class="faq__icon" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
         </summary>
-        <div class="faq__answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-          <div itemprop="text">Sim. Atendemos em um raio de até 200 km de Anápolis, cobrindo Aparecida de Anápolis, Senador Canedo, Trindade, Anápolis, Inhumas e toda a região de Anápolis. Para a capital, a entrega é feita no mesmo dia, sem custo adicional de deslocamento.</div>
+        <div class="faq__answer">
+          <div>Sim. Atendemos em um raio de até 200 km de Anápolis, cobrindo Aparecida de Anápolis, Senador Canedo, Trindade, Anápolis, Inhumas e toda a região de Anápolis. Para a capital, a entrega é feita no mesmo dia, sem custo adicional de deslocamento.</div>
         </div>
       </details>
-      <details class="faq__item reveal reveal-stagger" style="--stagger:6" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+      <details class="faq__item reveal reveal-stagger" style="--stagger:6">
         <summary class="faq__trigger">
-          <h3 itemprop="name" style="font-size:inherit;font-weight:inherit;margin:0;color:inherit;line-height:inherit;">Preciso de operador certificado NR-11 no DAIA?</h3>
+          <h3 style="font-size:inherit;font-weight:inherit;margin:0;color:inherit;line-height:inherit;">Preciso de operador certificado NR-11 no DAIA?</h3>
           <svg class="faq__icon" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
         </summary>
-        <div class="faq__answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-          <div itemprop="text">Sim. A NR-11 exige certificação para operação de empilhadeira. No DAIA, a fiscalização é rigorosa. A Move oferece <a href="/anapolis-go/curso-de-operador-de-empilhadeira" style="color:var(--color-primary)">habilitação NR-11 para empilhadeira no DAIA Anápolis</a> com aulas práticas.</div>
+        <div class="faq__answer">
+          <div>Sim. A NR-11 exige certificação para operação de empilhadeira. No DAIA, a fiscalização é rigorosa. A Move oferece <a href="/anapolis-go/curso-de-operador-de-empilhadeira" style="color:var(--color-primary)">habilitação NR-11 para empilhadeira no DAIA Anápolis</a> com aulas práticas.</div>
         </div>
       </details>
-      <details class="faq__item reveal reveal-stagger" style="--stagger:7" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+      <details class="faq__item reveal reveal-stagger" style="--stagger:7">
         <summary class="faq__trigger">
-          <h3 itemprop="name" style="font-size:inherit;font-weight:inherit;margin:0;color:inherit;line-height:inherit;">Qual empilhadeira usar nos armazéns farmacêuticos do DAIA?</h3>
+          <h3 style="font-size:inherit;font-weight:inherit;margin:0;color:inherit;line-height:inherit;">Qual empilhadeira usar nos armazéns farmacêuticos do DAIA?</h3>
           <svg class="faq__icon" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
         </summary>
-        <div class="faq__answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-          <div itemprop="text">A frota Clark para locação em Anápolis cobre de 2.000 kg (C20s compacta) até 8.000 kg (C80 heavy duty). Para operações no DAIA Leste com chapas de aço, bobinas e containers, a série C60/70/80 é a mais indicada. Para CDs logísticos e galpões, a L25/30/35 atende a grande maioria das demandas.</div>
+        <div class="faq__answer">
+          <div>A frota Clark para locação em Anápolis cobre de 2.000 kg (C20s compacta) até 8.000 kg (C80 heavy duty). Para operações no DAIA Leste com chapas de aço, bobinas e containers, a série C60/70/80 é a mais indicada. Para CDs logísticos e galpões, a L25/30/35 atende a grande maioria das demandas.</div>
         </div>
       </details>
     </div>
