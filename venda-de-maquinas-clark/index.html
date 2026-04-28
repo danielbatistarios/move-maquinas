@@ -3445,19 +3445,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       + (_utms.campaign ? ' | Campanha: ' + _utms.campaign : '');
 
     var _waUrl = 'https://wa.me/5562982637300?text=' + encodeURIComponent(msg);
-
-        if (typeof fbq === 'function') {
-        fbq('track', 'Lead', { content_name: 'Venda Clark', content_category: 'venda', value: 0, currency: 'BRL' });
+    if (typeof fbq === 'function') { fbq('track', 'Lead', { content_name: 'Venda Clark', content_category: 'venda', value: 0, currency: 'BRL' }); }
     window.open(_waUrl, '_blank', 'noopener,noreferrer');
     var btn = form.querySelector('[type="submit"]');
     var _origHtml = btn ? btn.innerHTML : null;
     if (btn) { btn.disabled = true; btn.textContent = 'Enviando...'; }
-    );
-      }
-      window.open(_waUrl, '_blank', 'noopener,noreferrer');
-      if (btn) { btn.disabled = false; btn.innerHTML = _origHtml; }
-    }
-
     fetch('https://backend.umdhub.com.br/api/leads/public/69e6552effd38d3be6386d5d', {
       method: 'POST', keepalive: true,
       headers: { 'Content-Type': 'application/json', 'X-API-Key': 'sk_live_719213e5f48228a63a4be9aa357a65dc5568f3b740008a98d14b58229d1f7150' },
@@ -3467,8 +3459,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         priority: 'medium', temperature: 'cold', qualifyStatus: 'pending', budget: 0,
         name: nome, company: '', position: '', emails: [], phones: tel ? [tel] : []
       })
-    }).then(function(){ if (_btn) { _btn.disabled = false; _btn.innerHTML = _btnOriginal; } })
-    .catch(function(){ if (_btn) { _btn.disabled = false; _btn.innerHTML = _btnOriginal; } });
+    }).then(function(){ if (btn) { btn.disabled = false; btn.innerHTML = _origHtml; } })
+    .catch(function(){ if (btn) { btn.disabled = false; btn.innerHTML = _origHtml; } });
   });
 })();
 </script>

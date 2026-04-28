@@ -1382,21 +1382,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     var _crmSegment = _segMap[_utms.source] || (_utms.source && _utms.source !== 'direct' ? 'manutencao-outro' : 'manutencao-direto');
     var _leadDesc = 'Servico: ' + tipoServico + ' | Frequencia: ' + frequencia + ' | Modelo: ' + modelo + (_utms.source && _utms.source !== 'direct' ? ' | Source: ' + _utms.source : '') + (_utms.medium && _utms.medium !== 'organic' ? ' | Medium: ' + _utms.medium : '') + (_utms.campaign ? ' | Campanha: ' + _utms.campaign : '');
     var _waUrl = 'https://wa.me/5562982637300?text=' + encodeURIComponent(msg);
-        if(typeof fbq === 'function'){ fbq('track', 'Lead', { content_name: 'Manutenção Empilhadeira', content_category: 'manutencao', value: 0, currency: 'BRL' });
+        if(typeof fbq === 'function'){ fbq('track', 'Lead', { content_name: 'Manutenção Empilhadeira', content_category: 'manutencao', value: 0, currency: 'BRL' }); }
     window.open(_waUrl, '_blank', 'noopener,noreferrer');
     var btn = form.querySelector('[type="submit"]');
     var _btnOriginal = btn ? btn.innerHTML : null;
     if(btn){ btn.disabled = true; btn.textContent = 'Enviando...'; }
-    ); }
-      window.open(_waUrl, '_blank', 'noopener,noreferrer');
-      if(btn){ btn.disabled = false; btn.innerHTML = _btnOriginal; }
-    }
     fetch('https://backend.umdhub.com.br/api/leads/public/69c19bc96278ca3a22396ee5', {
       method: 'POST', keepalive: true,
       headers: { 'Content-Type': 'application/json', 'X-API-Key': 'sk_live_719213e5f48228a63a4be9aa357a65dc5568f3b740008a98d14b58229d1f7150' },
       body: JSON.stringify({ segment: _crmSegment, description: _leadDesc, source: _crmSource, medium: _crmMedium, channel: _crmChannel, priority: 'medium', temperature: 'cold', qualifyStatus: 'pending', budget: 0, name: nome, company: '', position: '', emails: [], phones: tel ? [tel] : [] })
-    }).then(function(){ if (_btn) { _btn.disabled = false; _btn.innerHTML = _btnOriginal; } })
-    .catch(function(){ if (_btn) { _btn.disabled = false; _btn.innerHTML = _btnOriginal; } });
+    }).then(function(){ if (btn) { btn.disabled = false; btn.innerHTML = _btnOriginal; } })
+    .catch(function(){ if (btn) { btn.disabled = false; btn.innerHTML = _btnOriginal; } });
   }
 
   document.querySelectorAll('#quoteFormHero, #quoteFormMid').forEach(function(f){ f.addEventListener('submit', handleForm); });
