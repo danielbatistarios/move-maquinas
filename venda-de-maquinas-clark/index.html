@@ -3446,13 +3446,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     var _waUrl = 'https://wa.me/5562982637300?text=' + encodeURIComponent(msg);
 
+        if (typeof fbq === 'function') {
+        fbq('track', 'Lead', { content_name: 'Venda Clark', content_category: 'venda', value: 0, currency: 'BRL' });
+    window.open(_waUrl, '_blank', 'noopener,noreferrer');
     var btn = form.querySelector('[type="submit"]');
     var _origHtml = btn ? btn.innerHTML : null;
     if (btn) { btn.disabled = true; btn.textContent = 'Enviando...'; }
-
-    function _abrir(){
-      if (typeof fbq === 'function') {
-        fbq('track', 'Lead', { content_name: 'Venda Clark', content_category: 'venda', value: 0, currency: 'BRL' });
+    );
       }
       window.open(_waUrl, '_blank', 'noopener,noreferrer');
       if (btn) { btn.disabled = false; btn.innerHTML = _origHtml; }
@@ -3467,7 +3467,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         priority: 'medium', temperature: 'cold', qualifyStatus: 'pending', budget: 0,
         name: nome, company: '', position: '', emails: [], phones: tel ? [tel] : []
       })
-    }).then(_abrir).catch(_abrir);
+    }).then(function(){ if (_btn) { _btn.disabled = false; _btn.innerHTML = _btnOriginal; } })
+    .catch(function(){ if (_btn) { _btn.disabled = false; _btn.innerHTML = _btnOriginal; } });
   });
 })();
 </script>

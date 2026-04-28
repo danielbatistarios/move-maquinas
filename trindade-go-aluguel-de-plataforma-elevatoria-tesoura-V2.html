@@ -1778,22 +1778,22 @@ src="https://www.facebook.com/tr?id=1089167330085055&ev=PageView&noscript=1"
     var _leadTel = (typeof tel !== 'undefined' ? tel : '') || '';
     var _leadDesc = 'Locacao | ' + (_utms.source && _utms.source !== 'direct' ? 'Source: ' + _utms.source : 'Direto') + (_utms.medium && _utms.medium !== 'organic' ? ' | Medium: ' + _utms.medium : '') + (_utms.campaign ? ' | Campanha: ' + _utms.campaign : '');
     var _waUrl = 'https://wa.me/5562982637300?text=' + encodeURIComponent(msg);
+    if (typeof fbq === 'function') {
+      fbq('track', 'Lead', { content_name: 'Lead', content_category: 'lead', value: 0, currency: 'BRL' });
+    }
+    window.open(_waUrl, '_blank', 'noopener,noreferrer');
     var _btn = btn;
     var _btnOriginal = _btn ? _btn.innerHTML : null;
     if (_btn) { _btn.disabled = true; _btn.textContent = 'Enviando...'; }
-    function _abrir() {
-      if (typeof fbq === 'function') {
-        fbq('track', 'Lead', { content_name: 'Locação de Empilhadeira', content_category: 'locacao', value: 0, currency: 'BRL' });
-      }
-      window.open(_waUrl, '_blank', 'noopener,noreferrer');
-      if (_btn) { _btn.disabled = false; _btn.innerHTML = _btnOriginal; }
-    }
     fetch('https://backend.umdhub.com.br/api/leads/public/69e6552effd38d3be6386d5d', {
       method: 'POST', keepalive: true,
       headers: { 'Content-Type': 'application/json', 'X-API-Key': 'sk_live_719213e5f48228a63a4be9aa357a65dc5568f3b740008a98d14b58229d1f7150' },
       body: JSON.stringify({ segment: _crmSegment, description: _leadDesc, source: _crmSource, medium: _crmMedium, channel: _crmChannel, priority: 'medium', temperature: 'cold', qualifyStatus: 'pending', budget: 0, name: _leadName, company: '', position: '', emails: [], phones: [_leadTel] })
     })
-    .then(_abrir).catch(_abrir);
+    .then(function(){ if (_btn) { _btn.disabled = false; _btn.innerHTML = _btnOriginal; } })
+    .catch(function(){ if (_btn) { _btn.disabled = false; _btn.innerHTML = _btnOriginal; } });
+    .then(function(){ if (_btn) { _btn.disabled = false; _btn.innerHTML = _btnOriginal; } })
+    .catch(function(){ if (_btn) { _btn.disabled = false; _btn.innerHTML = _btnOriginal; } });
     return;
   }
   var forms = document.querySelectorAll('#quoteForm, #quoteFormMobile');
