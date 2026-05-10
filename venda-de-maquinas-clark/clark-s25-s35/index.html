@@ -284,7 +284,12 @@ ul,ol{list-style:none}
       "name": "Move Maquinas",
       "url": "https://movemaquinas.com.br",
       "inLanguage": "pt-BR",
-      "publisher": {"@id": "https://movemaquinas.com.br/#organization"}
+      "publisher": {"@id": "https://movemaquinas.com.br/#organization"},
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://movemaquinas.com.br/?s={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
     },
 
     {
@@ -323,6 +328,12 @@ ul,ol{list-style:none}
         "height": 30
       },
       "telephone": "+55-62-3211-1515",
+      "email": "contato@movemaquinas.com.br",
+      "identifier": {
+        "@type": "PropertyValue",
+        "propertyID": "CNPJ",
+        "value": "32.428.258/0001-80"
+      },
       "contactPoint": {
         "@type": "ContactPoint",
         "telephone": "+55-62-9-8263-7300",
@@ -337,32 +348,26 @@ ul,ol{list-style:none}
         "postalCode": "74593-590",
         "addressCountry": "BR"
       },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": -16.6869,
-        "longitude": -49.2648
-      },
-      "areaServed": [
-        {"@type": "State", "name": "Goias"},
-        {"@type": "State", "name": "Distrito Federal"},
-        {"@type": "State", "name": "Tocantins"},
-        {"@type": "State", "name": "Mato Grosso"}
-      ],
       "foundingDate": "2003",
       "numberOfEmployees": {"@type": "QuantitativeValue", "minValue": 20},
       "description": "Distribuidor exclusivo Clark Equipment em Goias ha mais de 20 anos. Venda, locacao e manutencao de empilhadeiras Clark. Suporte tecnico 24h, pecas originais em estoque.",
       "knowsAbout": [
-        "Empilhadeiras a combustao GLP e Diesel",
-        "Clark Equipment — empilhadeiras Serie S, Serie L, Serie C",
-        "Manutencao e revisao de empilhadeiras industriais",
-        "Locacao de empilhadeiras em Goias, Brasilia e Centro-Oeste",
-        "Normas NR-12 e ANSI/ITSDF B56.1 para empilhadeiras",
-        "Financiamento FCO e FINAME para maquinas industriais",
-        "Operacao de empilhadeiras em frigorifico, camara fria e armazem logistico"
+        "https://pt.wikipedia.org/wiki/Empilhadeira",
+        "https://pt.wikipedia.org/wiki/Transpaleteira",
+        "https://pt.wikipedia.org/wiki/Plataforma_elevatoria",
+        "https://pt.wikipedia.org/wiki/Log%C3%ADstica",
+        "https://pt.wikipedia.org/wiki/NR-11",
+        "https://pt.wikipedia.org/wiki/NR-12",
+        "https://pt.wikipedia.org/wiki/G%C3%A1s_liquefeito_de_petr%C3%B3leo",
+        "https://pt.wikipedia.org/wiki/Bateria_de_%C3%ADon-l%C3%ADtio",
+        "https://pt.wikipedia.org/wiki/Freio_a_disco",
+        "https://pt.wikipedia.org/wiki/Motor_diesel",
+        "https://pt.wikipedia.org/wiki/Transmiss%C3%A3o_(autom%C3%B3vel)"
       ],
       "sameAs": [
-        "https://www.instagram.com/movemaquinas",
-        "https://www.linkedin.com/company/movemaquinas"
+        "https://www.instagram.com/move.maquinas/",
+        "https://www.linkedin.com/company/move-maquinas-oficial/",
+        "https://www.youtube.com/@movemaquinas/featured"
       ]
     },
 
@@ -401,20 +406,39 @@ ul,ol{list-style:none}
           "closes": "12:00"
         }
       ],
+      "email": "contato@movemaquinas.com.br",
+      "identifier": {
+        "@type": "PropertyValue",
+        "propertyID": "CNPJ",
+        "value": "32.428.258/0001-80"
+      },
+      "hasMap": "https://share.google/08G0ATrziYm9nDlKf",
+      "currenciesAccepted": "BRL",
+      "paymentAccepted": "Dinheiro, Transferencia bancaria, Boleto, Financiamento FCO, Financiamento FINAME, Leasing",
       "knowsAbout": [
-        "Empilhadeiras a combustao GLP e Diesel",
-        "Clark Equipment — empilhadeiras Serie S, Serie L, Serie C",
-        "Manutencao e revisao de empilhadeiras industriais",
-        "Locacao de empilhadeiras em Goias, Brasilia e Centro-Oeste",
-        "Normas NR-12 e ANSI/ITSDF B56.1 para empilhadeiras",
-        "Financiamento FCO e FINAME para maquinas industriais",
-        "Operacao de empilhadeiras em frigorifico, camara fria e armazem logistico"
+        "https://pt.wikipedia.org/wiki/Empilhadeira",
+        "https://pt.wikipedia.org/wiki/Transpaleteira",
+        "https://pt.wikipedia.org/wiki/Plataforma_elevatoria",
+        "https://pt.wikipedia.org/wiki/Log%C3%ADstica",
+        "https://pt.wikipedia.org/wiki/NR-11",
+        "https://pt.wikipedia.org/wiki/NR-12",
+        "https://pt.wikipedia.org/wiki/G%C3%A1s_liquefeito_de_petr%C3%B3leo",
+        "https://pt.wikipedia.org/wiki/Bateria_de_%C3%ADon-l%C3%ADtio",
+        "https://pt.wikipedia.org/wiki/Freio_a_disco",
+        "https://pt.wikipedia.org/wiki/Motor_diesel",
+        "https://pt.wikipedia.org/wiki/Transmiss%C3%A3o_(autom%C3%B3vel)"
+      ],
+      "sameAs": [
+        "https://www.instagram.com/move.maquinas/",
+        "https://www.linkedin.com/company/move-maquinas-oficial/",
+        "https://www.youtube.com/@movemaquinas/featured"
       ],
       "hasOfferCatalog": {
         "@type": "OfferCatalog",
         "name": "Catalogo Clark Equipment",
         "url": "https://movemaquinas.com.br/venda-de-maquinas-clark"
-      }
+      },
+      "makesOffer": {"@id": "https://movemaquinas.com.br/#service-distribuicao-clark"}
     },
 
     {
@@ -429,6 +453,14 @@ ul,ol{list-style:none}
         {"@type": "State", "name": "Distrito Federal"},
         {"@type": "State", "name": "Tocantins"},
         {"@type": "State", "name": "Mato Grosso"}
+      ],
+      "audience": {
+        "@type": "Audience",
+        "audienceType": "Empresas industriais, logisticas, frigorifico, armazem, construcao civil em Goias, DF, TO e MT"
+      },
+      "sameAs": [
+        "https://pt.wikipedia.org/wiki/Empilhadeira",
+        "https://en.wikipedia.org/wiki/Clark_Equipment"
       ],
       "hasOfferCatalog": {
         "@type": "OfferCatalog",
@@ -516,11 +548,11 @@ ul,ol{list-style:none}
         {"@type":"PropertyValue","propertyID":"operacao","name":"Velocidade Maxima de Translacao","value":"21.2","unitCode":"KMH","unitText":"km/h"},
         {"@type":"PropertyValue","propertyID":"operacao","name":"Velocidade de Elevacao (livre)","value":"0.52","unitCode":"MTS","unitText":"m/s"},
         {"@type":"PropertyValue","propertyID":"operacao","name":"Inclinacao Maxima em Rampa","value":"37.4","unitCode":"P1","unitText":"%"},
-        {"@type":"PropertyValue","propertyID":"operacao","name":"Painel","value":"LCD SMART 5.6 polegadas — rastreio por operador"},
-        {"@type":"PropertyValue","propertyID":"operacao","name":"Sistema de Estabilidade","value":"Clark CSS (sensor ativo) — serie"},
+        {"@type":"PropertyValue","propertyID":"tecnologia","name":"Painel","value":"LCD SMART 5.6 polegadas — rastreio por operador"},
+        {"@type":"PropertyValue","propertyID":"tecnologia","name":"Sistema de Estabilidade","value":"Clark CSS (sensor ativo) — serie"},
         {"@type":"PropertyValue","propertyID":"operacao","name":"Consumo GLP","value":"2.5 a 3.5 kg/h"},
         {"@type":"PropertyValue","propertyID":"operacao","name":"Consumo Diesel","value":"3.5 a 5.0 l/h"},
-        {"@type":"PropertyValue","propertyID":"operacao","name":"Tipo de Pneu","value":"Cushion (macico) ou Pneumatico"},
+        {"@type":"PropertyValue","propertyID":"tecnologia","name":"Tipo de Pneu","value":"Cushion (macico) ou Pneumatico"},
         {"@type":"PropertyValue","propertyID":"normas-garantia","name":"Normas","value":"ANSI/ITSDF B56.1, OSHA, NR-12"},
         {"@type":"PropertyValue","propertyID":"normas-garantia","name":"Garantia","value":"12 meses"}
       ],
@@ -602,6 +634,7 @@ ul,ol{list-style:none}
         {
           "@type": "Review",
           "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"},
+          "itemReviewed": {"@id": "https://movemaquinas.com.br/venda-de-maquinas-clark/clark-s25-s35/#product"},
           "name": "Zero paradas por defeito mecanico em tres anos",
           "reviewBody": "Compramos a Clark S30 ha tres anos. Zero paradas por defeito mecanico. A equipe da Move Maquinas acompanhou a entrega, treinou nossos operadores e ainda faz a manutencao preventiva. Nao troco por outra marca.",
           "author": {"@type": "Person", "name": "Ricardo Almeida"},
@@ -611,6 +644,7 @@ ul,ol{list-style:none}
         {
           "@type": "Review",
           "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"},
+          "itemReviewed": {"@id": "https://movemaquinas.com.br/venda-de-maquinas-clark/clark-s25-s35/#product"},
           "name": "Sistema CSS — seguranca que vale o investimento",
           "reviewBody": "O que mais me impressionou foi o CSS — sistema que trava a maquina antes de tombar. Ja tivemos incidente com marca anterior. Com a Clark, em dois anos de operacao, nenhuma ocorrencia. Seguranca que vale o investimento.",
           "author": {"@type": "Person", "name": "Fernando Costa"},
@@ -620,6 +654,7 @@ ul,ol{list-style:none}
         {
           "@type": "Review",
           "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"},
+          "itemReviewed": {"@id": "https://movemaquinas.com.br/venda-de-maquinas-clark/clark-s25-s35/#product"},
           "name": "Motor Hyundai nunca decepcionou no turno duplo",
           "reviewBody": "Atendimento pos-venda diferenciado. Quando precisamos de peca, a Move Maquinas resolve rapido. O motor Hyundai da S25 nunca nos decepcionou no turno duplo. Ja indicamos para tres parceiros aqui de Goiania.",
           "author": {"@type": "Person", "name": "Patricia Souza"},
