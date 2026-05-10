@@ -18,62 +18,16 @@
 <meta property="og:site_name" content="Move Maquinas">
 <meta name="twitter:card" content="summary_large_image">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="preload" href="assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="https://pub-bd2efcc812524f54a8c492f90052f3bd.r2.dev/goiania-go/venda-de-empilhadeira-clark/clark-s25-s35/clark-s25-s35-visao-geral.jpg" as="image" fetchpriority="high">
 <link rel="stylesheet" href="mobile-patch.css">
 
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Product",
-  "name": "Clark S-Series — Empilhadeira a GLP/Diesel 2.500 a 3.500 kg",
-  "description": "Empilhadeira a combustao GLP ou Diesel da Clark, serie S. Capacidade de 2.500 a 3.500 kg, velocidade maxima 21,2 km/h, elevacao ate 7.000 mm, freios a disco em banho de oleo.",
-  "brand": {"@type":"Brand","name":"Clark","url":"https://www.clarkmhc.com.br"},
-  "model": "S25/S30/S35",
-  "category": "Empilhadeira a Combustao",
-  "url": "https://movemaquinas.com.br/venda-de-maquinas-clark/clark-s25-s35",
-  "additionalProperty": [
-    {"@type":"PropertyValue","name":"Capacidade","value":"2500-3500","unitCode":"KGM"},
-    {"@type":"PropertyValue","name":"Velocidade Maxima","value":"21.2","unitCode":"KMH"},
-    {"@type":"PropertyValue","name":"Elevacao Maxima","value":"7000","unitCode":"MMT"},
-    {"@type":"PropertyValue","name":"Combustivel","value":"GLP ou Diesel"},
-    {"@type":"PropertyValue","name":"Freios","value":"Disco em banho de oleo"},
-    {"@type":"PropertyValue","name":"Norma","value":"NR-12"}
-  ],
-  "offers": {
-    "@type": "Offer",
-    "priceCurrency": "BRL",
-    "availability": "https://schema.org/InStock",
-    "seller": {
-      "@type": "LocalBusiness",
-      "name": "Move Maquinas",
-      "telephone": "+55-62-3211-1515",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Av. Eurico Viana, 4913",
-        "addressLocality": "Goiania",
-        "addressRegion": "GO",
-        "addressCountry": "BR"
-      }
-    }
-  },
-  "manufacturer": {"@type":"Organization","name":"Clark Material Handling Company"}
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {"@type":"ListItem","position":1,"name":"Inicio","item":"https://movemaquinas.com.br"},
-    {"@type":"ListItem","position":2,"name":"Venda Clark","item":"https://movemaquinas.com.br/venda-de-maquinas-clark"},
-    {"@type":"ListItem","position":3,"name":"Clark S25/S30/S35","item":"https://movemaquinas.com.br/venda-de-maquinas-clark/clark-s25-s35"}
-  ]
-}
-</script>
-
 <style>
+/* ── SELF-HOSTED INTER (latin) ── */
+@font-face{font-family:'Inter';font-style:normal;font-weight:100 900;font-display:swap;src:url('assets/fonts/inter-latin.woff2') format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+/* ── INTER FALLBACK (anti-CLS) ── */
+@font-face{font-family:'Inter Fallback';src:local('Arial');ascent-override:90.2%;descent-override:22.48%;line-gap-override:0%;size-adjust:107.4%}
+
 /* ═══════════════════════════════════════
    TOKENS
    ═══════════════════════════════════════ */
@@ -96,8 +50,8 @@
   --r-sm: 6px;
   --r-md: 16px;
   --r-pill: 50px;
-  --font: 'Inter', system-ui, sans-serif;
-  --serif: 'Inter', system-ui, sans-serif;
+  --font: 'Inter', 'Inter Fallback', system-ui, sans-serif;
+  --serif: 'Inter', 'Inter Fallback', system-ui, sans-serif;
   --ease: cubic-bezier(0.16, 1, 0.3, 1);
   --shadow: 0 4px 20px rgba(0,0,0,0.07);
   --shadow-lg: 0 12px 48px rgba(0,0,0,0.12);
@@ -315,592 +269,406 @@ ul,ol{list-style:none}
   .seal-item+.seal-item{border-left:1px solid var(--border)}
   .seal-item-value{font-size:12px;text-align:center}
 }
-
-/* ═══════════════════════════════════════
-   PRODUCT TABS NAV — sticky
-   ═══════════════════════════════════════ */
-.prod-tabs-nav{position:sticky;top:68px;z-index:50;background:#2d2d2d;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch}
-.prod-tabs-nav::-webkit-scrollbar{display:none}
-.prod-tabs-nav ul{display:flex;justify-content:center;padding:0;list-style:none;margin:0;min-width:max-content}
-.prod-tabs-nav li a{display:block;padding:16px 28px;font-size:13px;font-weight:700;color:rgba(255,255,255,.65);white-space:nowrap;letter-spacing:.04em;transition:color .2s;text-decoration:none;text-transform:uppercase}
-.prod-tabs-nav li a:hover{color:#fff}
-.prod-tabs-nav li a.active{color:var(--green);border-bottom:2px solid var(--green)}
-@media(max-width:768px){
-  .prod-tabs-nav ul{justify-content:flex-start}
-  .prod-tabs-nav li a{padding:13px 16px;font-size:11px}
-}
-
-/* ═══════════════════════════════════════
-   MARQUEE
-   ═══════════════════════════════════════ */
-.marquee-wrap{padding:14px 0;overflow:hidden;background:var(--dark);border-top:1px solid rgba(255,255,255,.05)}
-.marquee{display:flex;overflow:hidden}
-.marquee-track{display:flex;animation:mq 40s linear infinite;white-space:nowrap}
-.marquee-item{display:inline-flex;align-items:center;gap:10px;padding:0 32px;font-size:12px;font-weight:700;color:rgba(255,255,255,.7);letter-spacing:.06em;text-transform:uppercase}
-.marquee-dot{width:4px;height:4px;border-radius:50%;background:var(--green);opacity:.7;flex-shrink:0}
-@keyframes mq{from{transform:translateX(0)}to{transform:translateX(-50%)}}
-
-/* ═══════════════════════════════════════
-   SECTION UTILITIES
-   ═══════════════════════════════════════ */
-.section{padding:clamp(64px,7vw,96px) 0}
-.section-sm{padding:clamp(48px,5vw,72px) 0}
-.section-dark{background:var(--dark)}
-.section-surface{background:var(--surface)}
-.section-tag{display:inline-flex;align-items:center;gap:7px;font-size:12px;font-weight:700;color:var(--green);text-transform:uppercase;letter-spacing:.08em;margin-bottom:12px}
-.section-tag::before{content:'';width:16px;height:2px;background:var(--green);border-radius:2px}
-.section-title{font-size:clamp(26px,3.5vw,44px);font-weight:800;line-height:1.15;color:var(--text);letter-spacing:-.02em}
-.section-title em{font-style:italic;color:var(--green)}
-.section-sub{font-size:16px;color:var(--muted);margin-top:12px;max-width:640px;line-height:1.75}
-.dark-title{color:var(--white)}
-.dark-sub{color:rgba(255,255,255,.6)}
-
-.reveal{opacity:0;transform:translateY(24px);transition:opacity .6s var(--ease),transform .6s var(--ease)}
-.reveal.visible{opacity:1;transform:none}
-.reveal-d1{transition-delay:.1s}
-.reveal-d2{transition-delay:.2s}
-.reveal-d3{transition-delay:.3s}
-
-/* ═══════════════════════════════════════
-   VISAO GERAL — texto + continuar lendo + foto
-   ═══════════════════════════════════════ */
-.overview-section{padding:clamp(64px,7vw,96px) 0;background:var(--white)}
-.overview-layout{display:grid;grid-template-columns:1fr 420px;gap:64px;align-items:start}
-.overview-content .intro-text{font-size:18px;color:var(--muted);line-height:1.85;margin-bottom:20px}
-.overview-content .intro-text strong{color:var(--text)}
-.read-more-block{overflow:hidden;max-height:0;transition:max-height .6s var(--ease)}
-.read-more-block.open{max-height:800px}
-.read-more-block p{font-size:16px;color:var(--muted);line-height:1.85;margin-bottom:16px}
-.read-more-btn{display:inline-flex;align-items:center;gap:8px;font-size:14px;font-weight:700;color:var(--green);border:none;background:none;cursor:pointer;padding:0;margin-top:8px;transition:gap .2s}
-.read-more-btn:hover{gap:12px}
-.read-more-btn svg{width:16px;height:16px;transition:transform .3s}
-.read-more-btn.open svg{transform:rotate(180deg)}
-.overview-aside{position:sticky;top:96px;display:flex;flex-direction:column;gap:16px}
-.overview-photo{border-radius:var(--r-md);overflow:hidden;aspect-ratio:3/4}
-.overview-photo img{width:100%;height:100%;object-fit:cover}
-.overview-cta-box{background:var(--green);border-radius:var(--r);padding:24px}
-.overview-cta-box p{font-size:13px;color:rgba(255,255,255,.85);line-height:1.6;margin-bottom:16px}
-.overview-cta-box a{display:flex;align-items:center;justify-content:center;gap:8px;background:#fff;color:var(--green-dark);font-size:14px;font-weight:700;padding:13px 20px;border-radius:var(--r-pill);transition:transform .2s,box-shadow .2s}
-.overview-cta-box a:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(0,0,0,.15)}
-
-@media(max-width:1100px){.overview-layout{grid-template-columns:1fr;gap:40px}.overview-aside{position:static}.overview-photo{aspect-ratio:16/9}}
-@media(max-width:768px){
-  .overview-read-more{overflow:hidden;max-height:0;transition:max-height .5s var(--ease)}
-  .overview-read-more.open{max-height:1200px}
-  .overview-ver-mais{display:inline-flex;align-items:center;gap:6px;font-size:14px;font-weight:700;color:var(--green);border:none;background:none;cursor:pointer;padding:4px 0;margin-top:4px}
-  .overview-ver-mais svg{transition:transform .3s}
-  .overview-ver-mais[aria-expanded="true"] svg{transform:rotate(180deg)}
-  .overview-ver-mais[aria-expanded="true"]{display:none}
-}
-@media(min-width:769px){
-  .overview-read-more{max-height:none!important;overflow:visible}
-  .overview-ver-mais{display:none}
-}
-
-/* ═══════════════════════════════════════
-   QUICK SPECS — 6 boxes
-   ═══════════════════════════════════════ */
-.qspecs-section{padding:clamp(48px,5vw,72px) 0;background:var(--surface)}
-.qspecs-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:2px;background:var(--border);border-radius:var(--r);overflow:hidden}
-.qspec-box{background:var(--white);padding:24px 18px;text-align:center}
-.qspec-icon{width:40px;height:40px;margin:0 auto 12px;color:var(--green)}
-.qspec-value{font-size:clamp(20px,2vw,28px);font-weight:800;color:var(--text);line-height:1}
-.qspec-label{font-size:11px;color:var(--muted);margin-top:6px;font-weight:600;text-transform:uppercase;letter-spacing:.05em}
-@media(max-width:900px){.qspecs-grid{grid-template-columns:repeat(3,1fr)}}
-@media(max-width:480px){.qspecs-grid{grid-template-columns:repeat(2,1fr)}}
-
-/* ═══════════════════════════════════════
-   FEATURE BOXES (caracteristicas)
-   ═══════════════════════════════════════ */
-/* ── carousel-section: padrão reutilizável (features, canal, related) ── */
-.cs-head{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:40px;gap:16px}
-.cs-head-text{flex:1}
-.cs-nav{display:none;gap:10px;flex-shrink:0}
-.cs-wrap{overflow:hidden}
-@media(max-width:768px){
-  .cs-nav{display:flex}
-  .cs-wrap{overflow:visible}
-  /* apps__grid como carousel */
-  .apps__grid.cs-track{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;padding-bottom:6px;scrollbar-width:none;grid-template-columns:none}
-  .apps__grid.cs-track::-webkit-scrollbar{display:none}
-  .apps__grid.cs-track .apps__card{min-width:78vw;max-width:78vw;scroll-snap-align:start;flex-shrink:0}
-  /* canal-grid como carousel */
-  .canal-grid.cs-track{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;padding-bottom:6px;scrollbar-width:none;margin-top:0;grid-template-columns:none}
-  .canal-grid.cs-track::-webkit-scrollbar{display:none}
-  .canal-grid.cs-track .vid-card{min-width:82vw;max-width:82vw;scroll-snap-align:start;flex-shrink:0}
-  /* related-grid como carousel */
-  .related-grid.cs-track{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;padding-bottom:6px;scrollbar-width:none;margin-top:0;grid-template-columns:none}
-  .related-grid.cs-track::-webkit-scrollbar{display:none}
-  .related-grid.cs-track .related-card{min-width:82vw;max-width:82vw;scroll-snap-align:start;flex-shrink:0}
-}
-.features-section{padding:clamp(64px,7vw,96px) 0;background:var(--white)}
-.feature-wrapper{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
-@media(max-width:768px){.feature-wrapper{grid-template-columns:1fr}}
-.feature-box{display:flex;align-items:stretch;background:var(--surface);border:1px solid var(--border);border-radius:var(--r);overflow:hidden;transition:box-shadow .25s,transform .25s;min-height:260px}
-.feature-box:hover{box-shadow:var(--shadow-lg);transform:translateY(-3px)}
-.feature-box .text-box{flex:1;min-width:0;padding:32px 28px}
-.feature-box .text-box h3{font-size:20px;font-weight:700;color:var(--text);line-height:1.25;margin:0 0 14px}
-.feature-box .text-box p{font-size:14px;color:var(--muted);line-height:1.85;margin:0 0 10px}
-.feature-box .text-box p:last-child{margin-bottom:0}
-.feature-box figure{width:200px;flex-shrink:0;overflow:hidden;background:var(--border);display:flex;align-items:center;justify-content:center;padding:16px}
-.feature-box figure img{width:100%;height:auto;max-height:180px;object-fit:contain;transition:transform .5s var(--ease)}
-.feature-box:hover figure img{transform:scale(1.04)}
-@media(max-width:900px){.feature-box figure{width:160px;padding:12px}}
-@media(max-width:600px){.feature-box{flex-direction:column;min-height:auto}.feature-box figure{width:100%;height:180px;padding:16px}}
-
-/* ═══════════════════════════════════════
-   SPECS TABLE
-   ═══════════════════════════════════════ */
-.specs-section{padding:clamp(56px,6vw,80px) 0;background:var(--surface)}
-.specs-table-wrap{overflow-x:auto;border-radius:var(--r);border:1px solid var(--border);-webkit-overflow-scrolling:touch}
-.specs-table{width:100%;border-collapse:collapse;font-size:14px}
-.specs-table th{background:var(--dark);color:var(--white);font-weight:700;padding:15px 18px;text-align:center;white-space:nowrap}
-.specs-table th:first-child{background:var(--dark-2);min-width:220px;text-align:left}
-.specs-table th.hl{background:var(--green);color:#fff}
-.specs-table td{padding:15px 18px;border-bottom:1px solid var(--border);color:var(--text);vertical-align:middle;text-align:center}
-.specs-table td.label-col{font-weight:600;color:var(--text);background:var(--white);text-align:left}
-.specs-table td.hl{background:rgba(29,150,72,.06);font-weight:600;color:var(--green-dark)}
-.specs-table tr:last-child td{border-bottom:none}
-.specs-table tr:hover td{background:rgba(29,150,72,.04)}
-.specs-table tr:hover td.label-col{background:rgba(29,150,72,.08)}
-.specs-note{font-size:12px;color:var(--muted);margin-top:12px}
-
-/* ═══════════════════════════════════════
-   COMBUSTIVEL — feature rows
-   ═══════════════════════════════════════ */
-.fuel-section{padding:clamp(64px,7vw,96px) 0;background:var(--white)}
-.fuel-row{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
-.fuel-row+.fuel-row{margin-top:72px}
-.fuel-text-block .section-tag{margin-bottom:12px}
-.fuel-text-block h3{font-size:clamp(20px,2.2vw,28px);font-weight:700;line-height:1.25;margin:0 0 16px}
-.fuel-text-block p{font-size:15px;color:var(--muted);line-height:1.85;margin-bottom:16px}
-.fuel-text-block ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:10px}
-.fuel-text-block li{display:flex;gap:10px;font-size:14px;color:var(--text)}
-.fuel-text-block li .chk{color:var(--green);font-weight:700;flex-shrink:0}
-.fuel-photo{border-radius:var(--r-md);overflow:hidden;aspect-ratio:4/3}
-.fuel-photo img{width:100%;height:100%;object-fit:cover;transition:transform .6s var(--ease)}
-.fuel-photo:hover img{transform:scale(1.03)}
-@media(max-width:900px){.fuel-row{grid-template-columns:1fr;gap:32px}.fuel-row.reverse .fuel-photo{order:-1}}
-
-/* ═══════════════════════════════════════
-   VIDEO SECTION
-   ═══════════════════════════════════════ */
-.video-section{padding:clamp(64px,7vw,96px) 0;background:var(--dark)}
-/* canal youtube */
-.canal-section{padding:clamp(56px,6vw,88px) 0;background:#f9fafb}
-.canal-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:40px}
-.canal-grid.cs-track{margin-top:0}
-@media(max-width:768px){.canal-grid:not(.cs-track){grid-template-columns:1fr;gap:16px}}
-.vid-card{border-radius:var(--r-lg);overflow:hidden;background:#fff;box-shadow:0 2px 12px rgba(0,0,0,.07);cursor:pointer;transition:transform .2s,box-shadow .2s}
-.vid-card:hover{transform:translateY(-4px);box-shadow:0 8px 28px rgba(0,0,0,.12)}
-.vid-card__thumb{position:relative;aspect-ratio:16/9;overflow:hidden}
-.vid-card__thumb img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .3s}
-.vid-card:hover .vid-card__thumb img{transform:scale(1.04)}
-.vid-card__play{position:absolute;inset:0;display:flex;align-items:center;justify-content:center}
-.vid-card__play-btn{width:52px;height:52px;background:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(0,0,0,.25);transition:transform .2s}
-.vid-card:hover .vid-card__play-btn{transform:scale(1.1)}
-.vid-card__title{padding:14px 16px 16px;font-size:.875rem;font-weight:600;color:var(--dark);line-height:1.4}
-.canal-yt-link{display:inline-flex;align-items:center;gap:8px;margin-top:28px;font-size:.875rem;font-weight:600;color:var(--green);border:1.5px solid var(--green);border-radius:100px;padding:8px 20px;transition:background .2s,color .2s}
-.canal-yt-link:hover{background:var(--green);color:#fff}
-.video-inner{max-width:900px;margin:0 auto;text-align:center}
-.video-wrap{position:relative;border-radius:var(--r-md);overflow:hidden;aspect-ratio:16/9;background:#000;cursor:pointer;margin-top:36px}
-.video-thumb{width:100%;height:100%;object-fit:cover;transition:opacity .3s}
-.video-wrap:hover .video-thumb{opacity:.85}
-.play-btn{position:absolute;inset:0;display:flex;align-items:center;justify-content:center}
-.play-inner{width:76px;height:76px;background:var(--green);border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 32px rgba(0,0,0,.5);transition:transform .25s}
-.video-wrap:hover .play-inner{transform:scale(1.1)}
-.play-inner svg{margin-left:4px}
-.video-cta{display:flex;align-items:center;justify-content:center;gap:12px;margin-top:28px;flex-wrap:wrap}
-.btn-wa-sm{display:inline-flex;align-items:center;gap:8px;background:var(--wa);color:#fff;font-size:14px;font-weight:600;padding:12px 24px;border-radius:var(--r-pill);transition:transform .25s,box-shadow .25s}
-.btn-wa-sm:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(37,211,102,.3)}
-.btn-outline-wh{display:inline-flex;align-items:center;gap:8px;border:2px solid rgba(255,255,255,.3);color:rgba(255,255,255,.85);font-size:14px;font-weight:600;padding:11px 22px;border-radius:var(--r-pill);transition:border-color .25s,color .25s}
-.btn-outline-wh:hover{border-color:rgba(255,255,255,.7);color:#fff}
-
-/* ═══════════════════════════════════════
-   PHOTO GALLERY (abaixo do video)
-   ═══════════════════════════════════════ */
-.pgallery-section{padding:clamp(40px,5vw,64px) 0;background:var(--dark)}
-.pgallery-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:32px}
-.pgallery-item{position:relative;overflow:hidden;border-radius:var(--r-md);aspect-ratio:4/3;cursor:pointer;background:#111}
-.pgallery-item img{width:100%;height:100%;object-fit:cover;transition:transform .5s var(--ease),opacity .3s}
-.pgallery-item:hover img{transform:scale(1.06);opacity:.85}
-.pgallery-item.featured{grid-column:span 2;aspect-ratio:16/9}
-.pgallery-caption{position:absolute;inset:0;display:flex;align-items:flex-end;padding:16px;background:linear-gradient(to top,rgba(0,0,0,.65) 0%,transparent 60%);opacity:0;transition:opacity .3s}
-.pgallery-item:hover .pgallery-caption{opacity:1}
-.pgallery-caption span{font-size:12px;font-weight:600;color:#fff;line-height:1.4}
-/* lightbox */
-.pgallery-lb{display:none;position:fixed;inset:0;z-index:999;background:rgba(0,0,0,.93);align-items:center;justify-content:center;padding:24px;flex-direction:column;gap:16px}
-.pgallery-lb.open{display:flex}
-.pgallery-lb-img-wrap{position:relative;display:flex;align-items:center;justify-content:center;width:100%;max-width:960px}
-.pgallery-lb img{max-width:90vw;max-height:78vh;border-radius:var(--r-md);object-fit:contain;box-shadow:0 24px 80px rgba(0,0,0,.8)}
-.pgallery-lb-close{position:absolute;top:20px;right:20px;background:rgba(255,255,255,.1);border:none;border-radius:50%;width:40px;height:40px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .2s;z-index:10}
-.pgallery-lb-close:hover{background:rgba(255,255,255,.2)}
-.pgallery-lb-arrow{position:absolute;top:50%;transform:translateY(-50%);background:rgba(255,255,255,.12);border:none;border-radius:50%;width:44px;height:44px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .2s;color:#fff}
-.pgallery-lb-arrow:hover{background:rgba(255,255,255,.25)}
-.pgallery-lb-arrow.prev{left:-22px}
-.pgallery-lb-arrow.next{right:-22px}
-@media(max-width:640px){.pgallery-lb-arrow.prev{left:4px}.pgallery-lb-arrow.next{right:4px}}
-.pgallery-lb-caption{text-align:center;color:rgba(255,255,255,.85);font-size:14px;line-height:1.5;max-width:600px;padding:0 16px}
-.pgallery-lb-counter{font-size:12px;color:rgba(255,255,255,.4);margin-top:4px}
-@media(max-width:768px){.pgallery-grid{grid-template-columns:repeat(2,1fr)}.pgallery-item.featured{grid-column:span 2}}
-@media(max-width:480px){
-  .pgallery-grid{grid-template-columns:repeat(2,1fr);gap:6px}
-  .pgallery-item.featured{grid-column:span 2;aspect-ratio:16/9}
-}
-.specs-hidden{display:none}
-.specs-hidden.specs-open{display:table-row}
-.pgallery-item.gallery-hidden{display:none}
-.pgallery-item.gallery-hidden.gallery-open{display:block}
-.gallery-more-wrap{text-align:center;margin-top:24px}
-.gallery-more-btn{display:inline-flex;align-items:center;gap:8px;padding:12px 28px;border-radius:99px;border:2px solid rgba(255,255,255,.2);background:rgba(255,255,255,.06);color:#fff;font-size:14px;font-weight:600;cursor:pointer;transition:background .2s,border-color .2s}
-.gallery-more-btn:hover{background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.35)}
-.gallery-more-btn svg{transition:transform .3s}
-.gallery-more-btn.open svg{transform:rotate(180deg)}
-
-/* ═══════════════════════════════════════
-   LOGOS CLIENTES
-   ═══════════════════════════════════════ */
-.logos-section{padding:clamp(48px,5vw,64px) 0;background:var(--surface)}
-.logos-grid{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:20px;margin-top:32px}
-.logo-pill{display:flex;align-items:center;justify-content:center;background:var(--white);border:1px solid var(--border);border-radius:var(--r-pill);padding:12px 24px;font-size:13px;font-weight:700;color:var(--muted);transition:border-color .2s,color .2s}
-.logo-pill:hover{border-color:var(--green);color:var(--green)}
-
-/* ═══════════════════════════════════════
-   CUSTO — factor cards (pricing)
-   ═══════════════════════════════════════ */
-.custo-section{padding:clamp(64px,7vw,96px) 0;background:var(--white)}
-.factor-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:40px}
-.factor-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:28px 22px;position:relative;overflow:hidden;transition:box-shadow .25s,transform .25s}
-.factor-card:hover{box-shadow:var(--shadow-lg);transform:translateY(-3px)}
-.factor-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--green)}
-.factor-num{font-size:11px;font-weight:700;color:var(--green);text-transform:uppercase;letter-spacing:.08em;margin-bottom:12px}
-.factor-card h3{font-size:16px;font-weight:700;color:var(--text);margin-bottom:10px;line-height:1.3}
-.factor-card p{font-size:13px;color:var(--muted);line-height:1.75}
-.factor-highlight{font-size:22px;font-weight:800;color:var(--green);display:block;margin-top:14px}
-@media(max-width:900px){.factor-grid{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:480px){.factor-grid{grid-template-columns:1fr}}
-
-/* ═══════════════════════════════════════
-   COMPARATIVO
-   ═══════════════════════════════════════ */
-.compare-section{padding:clamp(56px,6vw,80px) 0;background:var(--surface)}
-.compare-wrap{overflow-x:auto;border-radius:var(--r);border:1px solid var(--border);-webkit-overflow-scrolling:touch}
-.compare-table{width:100%;border-collapse:collapse;font-size:14px;min-width:560px}
-.compare-table th{background:var(--dark);color:var(--white);font-weight:700;padding:14px 20px;text-align:left;white-space:nowrap}
-.compare-table th.hl{background:var(--green);color:#fff}
-.compare-table td{padding:13px 20px;border-bottom:1px solid var(--border);color:var(--text);vertical-align:middle}
-.compare-table td:first-child{font-weight:600;color:var(--muted);background:var(--white);font-size:13px}
-.compare-table td.hl{background:rgba(29,150,72,.07);font-weight:600;color:var(--green-dark)}
-.compare-table tr:last-child td{border-bottom:none}
-.badge-here{display:inline-block;background:var(--green);color:#fff;font-size:10px;font-weight:700;padding:2px 8px;border-radius:var(--r-pill);margin-left:6px;letter-spacing:.04em}
-
-/* ═══════════════════════════════════════
-   FAQ
-   ═══════════════════════════════════════ */
-.faq-section{padding:clamp(64px,7vw,96px) 0;background:var(--white)}
-.faq-head{text-align:center;margin-bottom:48px}
-.faq-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
-.faq-photo{position:sticky;top:100px;border-radius:var(--r-md);overflow:hidden;aspect-ratio:4/3}
-.faq-photo img{width:100%;height:100%;object-fit:cover}
-.faq-list{display:flex;flex-direction:column}
-.faq-item{border-bottom:1px solid var(--border)}
-.faq-trigger{display:flex;align-items:center;justify-content:space-between;gap:16px;width:100%;padding:20px 0;text-align:left;font-size:15px;font-weight:700;color:var(--text);cursor:pointer;transition:color .2s;margin:0;line-height:1.4}
-.faq-trigger:hover{color:var(--green)}
-.faq-icon{width:28px;height:28px;border-radius:50%;border:1.5px solid var(--border);display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:border-color .25s,background .25s,transform .3s}
-.faq-item.open .faq-icon{transform:rotate(45deg);border-color:var(--green);background:var(--green-light)}
-.faq-icon svg{width:12px;height:12px;color:var(--muted);transition:color .25s}
-.faq-item.open .faq-icon svg{color:var(--green)}
-.faq-body{max-height:0;overflow:hidden;transition:max-height .35s var(--ease)}
-.faq-body-inner{padding:0 4px 20px;font-size:14px;color:var(--muted);line-height:1.9}
-@media(max-width:768px){.faq-grid{grid-template-columns:1fr}.faq-photo{position:static;aspect-ratio:16/9}}
-@media(max-width:768px){
-  .faq-hidden-mobile{display:none}
-  .faq-hidden-mobile.faq-mobile-open{display:block}
-  .faq-ver-mais{display:flex;align-items:center;gap:6px;margin:4px 0 0;padding:12px 0;font-size:13px;font-weight:700;color:var(--green);background:none;border:none;cursor:pointer;width:100%;border-top:1px solid var(--border)}
-  .faq-ver-mais svg{transition:transform .3s}
-  .faq-ver-mais[aria-expanded="true"] svg{transform:rotate(180deg)}
-  .faq-ver-mais[aria-expanded="true"]{display:none}
-}
-@media(min-width:769px){.faq-ver-mais{display:none}}
-
-/* ═══════════════════════════════════════
-   PROCESSO
-   ═══════════════════════════════════════ */
-.process-section{padding:clamp(64px,7vw,96px) 0;background:var(--dark)}
-.process-head{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:40px;gap:20px;flex-wrap:wrap}
-.process-nav{display:flex;gap:10px}
-.process-nav button{width:44px;height:44px;border-radius:50%;border:1.5px solid rgba(255,255,255,.2);color:rgba(255,255,255,.7);display:flex;align-items:center;justify-content:center;transition:border-color .25s,color .25s,background .25s}
-.process-nav button:hover{border-color:var(--green);color:var(--green)}
-.process-nav button svg{width:18px;height:18px}
-.process-track-wrap{overflow:hidden}
-.process-track{display:flex;gap:20px;transition:transform .45s var(--ease)}
-.process-card{flex-shrink:0;width:280px;border-radius:var(--r);overflow:hidden;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08)}
-.process-card-body{padding:28px 24px 24px}
-.process-step{font-size:11px;font-weight:700;color:var(--green);text-transform:uppercase;letter-spacing:.1em;margin-bottom:8px}
-.process-card-body h3{font-size:17px;font-weight:700;color:var(--white);margin-bottom:8px}
-.process-card-body p{font-size:13px;color:rgba(255,255,255,.55);line-height:1.7}
-@media(max-width:768px){.process-card{width:82vw}}
-@media(min-width:769px){.process-track-wrap{overflow:visible}.process-track{transform:none!important;gap:16px}.process-card{width:calc((100% - 64px)/5)}.process-nav{display:none}}
-
-/* ═══════════════════════════════════════
-   SOBRE NOS
-   ═══════════════════════════════════════ */
-.sobre-section{padding:clamp(72px,8vw,104px) 0;background:var(--dark-2)}
-.sobre-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(40px,5vw,72px);align-items:center}
-@media(max-width:900px){.sobre-grid{grid-template-columns:1fr;gap:40px}}
-.sobre-video-wrap{position:relative;width:100%;aspect-ratio:16/9;border-radius:var(--r-lg);overflow:hidden;background:#000;box-shadow:0 24px 64px rgba(0,0,0,.5)}
-.sobre-video-wrap iframe{position:absolute;inset:0;width:100%;height:100%;border:none}
-.sobre-video-thumb{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;cursor:pointer}
-.sobre-play{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;cursor:pointer}
-.sobre-play-inner{width:64px;height:64px;background:var(--green);border-radius:50%;display:flex;align-items:center;justify-content:center;transition:transform .2s,background .2s;box-shadow:0 8px 32px rgba(29,150,72,.5)}
-.sobre-play:hover .sobre-play-inner{transform:scale(1.1);background:#16a34a}
-.sobre-text h2{font-size:clamp(1.5rem,2.5vw,2rem);font-weight:800;color:#fff;line-height:1.2;margin:12px 0 16px}
-.sobre-text h2 span{color:var(--green)}
-.sobre-text p{font-size:.95rem;color:rgba(255,255,255,.7);line-height:1.75;margin-bottom:12px}
-.sobre-text p strong{color:#fff}
-.sobre-metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:28px}
-@media(max-width:640px){.sobre-metrics{grid-template-columns:repeat(2,1fr)}}
-.sobre-m{text-align:center;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);border-radius:10px;padding:16px 8px}
-.sobre-m-n{font-size:1.75rem;font-weight:800;color:var(--green);line-height:1;font-variant-numeric:tabular-nums}
-.sobre-m-l{font-size:12px;color:rgba(255,255,255,.5);margin-top:5px;line-height:1.3}
-
-/* ═══════════════════════════════════════
-   DEPOIMENTO (removido — substituido por dep-section carousel)
-   ═══════════════════════════════════════ */
-
-/* ═══════════════════════════════════════
-   INCLUSOS — checklist
-   ═══════════════════════════════════════ */
-.inclusions-section{padding:clamp(64px,7vw,96px) 0;background:var(--white)}
-.inclusions-layout{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
-.inclusions-list{display:flex;flex-direction:column;gap:14px;margin-top:32px}
-.inc-item{display:flex;align-items:flex-start;gap:14px}
-.inc-check{width:26px;height:26px;border-radius:50%;background:var(--green);color:#fff;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px}
-.inc-check svg{width:13px;height:13px}
-.inc-text{font-size:15px;color:var(--text);line-height:1.5}
-.inc-text span{display:block;font-size:13px;color:var(--muted);margin-top:2px}
-.inclusions-cta-box{background:var(--dark);border-radius:var(--r-md);padding:36px;text-align:center}
-.inclusions-cta-box h3{font-size:22px;font-weight:700;color:#fff;margin-bottom:12px;line-height:1.3}
-.inclusions-cta-box p{font-size:14px;color:rgba(255,255,255,.6);line-height:1.7;margin-bottom:24px}
-.inclusions-cta-box a{display:flex;align-items:center;justify-content:center;gap:8px;background:var(--green);color:#fff;font-size:14px;font-weight:700;padding:15px 24px;border-radius:var(--r-pill);transition:background .2s,transform .2s}
-.inclusions-cta-box a:hover{background:var(--green-dark);transform:translateY(-2px)}
-@media(max-width:900px){.inclusions-layout{grid-template-columns:1fr}}
-
-/* ═══ ORCAMENTO FORM ═══ */
-.orc-form-box{background:var(--dark);border-radius:var(--r-md);padding:32px 28px}
-.orc-form-box h3{font-size:18px;font-weight:700;color:#fff;margin:0 0 6px;line-height:1.3}
-.orc-form-box>.orc-sub{font-size:13px;color:rgba(255,255,255,.55);margin:0 0 20px}
-.orc-dots{display:flex;gap:8px;margin-bottom:24px}
-.orc-dot{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.2);transition:background .3s,width .3s}
-.orc-dot.active{background:var(--green);width:24px;border-radius:4px}
-.orc-step{display:none}
-.orc-step.active{display:block}
-.orc-step-title{font-size:14px;font-weight:700;color:rgba(255,255,255,.85);margin-bottom:14px}
-.orc-opts{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-.orc-opt{display:flex;flex-direction:column;align-items:center;gap:6px;padding:14px 10px;border-radius:var(--r-sm);border:1.5px solid rgba(255,255,255,.12);background:rgba(255,255,255,.04);color:rgba(255,255,255,.8);font-size:12px;font-weight:600;cursor:pointer;transition:border-color .2s,background .2s;text-align:center;line-height:1.3}
-.orc-opt:hover{border-color:rgba(29,150,72,.5);background:rgba(29,150,72,.08)}
-.orc-opt.selected{border-color:var(--green);background:rgba(29,150,72,.15);color:#fff}
-.orc-opt-icon{font-size:22px;line-height:1}
-.orc-group{margin-bottom:14px}
-.orc-group label{display:block;font-size:12px;font-weight:600;color:rgba(255,255,255,.6);margin-bottom:6px;letter-spacing:.03em}
-.orc-group input{width:100%;padding:11px 14px;border-radius:var(--r-sm);border:1.5px solid rgba(255,255,255,.12);background:rgba(255,255,255,.06);color:#fff;font-size:14px;outline:none;transition:border-color .2s;box-sizing:border-box}
-.orc-group input::placeholder{color:rgba(255,255,255,.3)}
-.orc-group input:focus{border-color:var(--green)}
-.orc-nav{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-top:20px}
-.orc-btn-back{background:none;border:none;color:rgba(255,255,255,.45);font-size:13px;font-weight:600;cursor:pointer;padding:0;transition:color .2s}
-.orc-btn-back:hover{color:#fff}
-.orc-btn-next{flex:1;padding:13px 20px;border-radius:var(--r-pill);background:var(--green);color:#fff;font-size:14px;font-weight:700;border:none;cursor:pointer;transition:background .2s,transform .2s}
-.orc-btn-next:hover{background:var(--green-dark);transform:translateY(-1px)}
-.orc-privacy{font-size:11px;color:rgba(255,255,255,.3);text-align:center;margin:12px 0 0}
-.orc-success{display:none;text-align:center;padding:16px 0}
-.orc-success-icon{font-size:48px;margin-bottom:12px}
-.orc-success h4{font-size:16px;font-weight:700;color:#fff;margin:0 0 8px}
-.orc-success p{font-size:13px;color:rgba(255,255,255,.55);margin:0}
-
-/* ═══════════════════════════════════════
-   SETORES — target cards
-   ═══════════════════════════════════════ */
-.sectors-section{padding:clamp(64px,7vw,96px) 0;background:var(--surface)}
-.sectors-head{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:40px;gap:16px}
-.sectors-nav{display:none;gap:10px;flex-shrink:0}
-.sectors-track-wrap{overflow:hidden}
-.sectors-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
-.sector-card{background:var(--white);border:1px solid var(--border);border-radius:var(--r);padding:24px;transition:box-shadow .25s,transform .25s,border-color .25s}
-.sector-card:hover{box-shadow:var(--shadow-lg);transform:translateY(-3px);border-color:rgba(29,150,72,.25)}
-.sector-icon{width:44px;height:44px;border-radius:var(--r-sm);background:var(--green-light);display:flex;align-items:center;justify-content:center;margin-bottom:14px;color:var(--green)}
-.sector-card h3{font-size:15px;font-weight:700;color:var(--text);margin-bottom:6px}
-.sector-card p{font-size:13px;color:var(--muted);line-height:1.65}
-.sector-tag{display:inline-block;font-size:10px;font-weight:700;color:var(--green);text-transform:uppercase;letter-spacing:.06em;margin-top:10px}
-@media(max-width:900px){.sectors-grid{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:600px){
-  .sectors-nav{display:flex}
-  .sectors-track-wrap{overflow:visible}
-  .sectors-grid{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;padding-bottom:6px;scrollbar-width:none}
-  .sectors-grid::-webkit-scrollbar{display:none}
-  .sector-card{min-width:240px;max-width:240px;scroll-snap-align:start}
-}
-
-/* ═══════════════════════════════════════
-   VOZ DO ESPECIALISTA
-   ═══════════════════════════════════════ */
-.specialist-section{padding:clamp(64px,7vw,96px) 0;background:var(--white)}
-.eq-card{max-width:780px;margin:0 auto;background:var(--surface);border-radius:var(--r-lg);padding:clamp(32px,5vw,52px) clamp(28px,5vw,52px);position:relative}
-.eq-icon{width:48px;height:48px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;box-shadow:0 2px 12px rgba(0,0,0,.08);margin-bottom:16px}
-.eq-label{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--green);margin-bottom:20px}
-.eq-text{font-size:clamp(16px,2vw,19px);line-height:1.75;color:var(--text);font-style:italic;margin:0 0 28px;position:relative;padding-left:4px}
-.eq-text::before{content:'\201C';font-size:72px;color:rgba(29,150,72,.13);position:absolute;top:-20px;left:-8px;line-height:1;font-style:normal;pointer-events:none}
-.eq-author{display:flex;align-items:center;gap:16px;border-top:1px solid rgba(0,0,0,.07);padding-top:24px}
-.eq-avatar{width:56px;height:56px;border-radius:50%;background:var(--green);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:22px;flex-shrink:0;overflow:hidden}
-.eq-avatar img{width:100%;height:100%;object-fit:cover}
-.eq-author-name{font-weight:700;font-size:15px;color:var(--dark);display:block;margin-bottom:3px}
-.eq-author-role{font-size:12px;color:var(--muted);line-height:1.4}
-
-/* ═══════════════════════════════════════
-   FAQ COMPLETO (segunda secao)
-   ═══════════════════════════════════════ */
-.faq2-section{padding:clamp(64px,7vw,96px) 0;background:var(--surface)}
-.faq2-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:48px}
-.faq2-item{background:var(--white);border:1px solid var(--border);border-radius:var(--r-md);overflow:hidden}
-.faq2-trigger{display:flex;align-items:center;gap:14px;width:100%;padding:18px 20px;text-align:left;font-size:14px;font-weight:600;color:var(--text);cursor:pointer;transition:color .2s;margin:0;line-height:1.4}
-.faq2-trigger:hover{color:var(--green)}
-.faq2-qmark{width:28px;height:28px;border-radius:50%;background:var(--green-light);color:var(--green);font-size:14px;font-weight:800;display:flex;align-items:center;justify-content:center;flex-shrink:0}
-.faq2-trigger-text{flex:1;font-style:italic;color:var(--muted)}
-.faq2-chevron{flex-shrink:0;transition:transform .3s;color:var(--muted)}
-.faq2-item.open .faq2-chevron{transform:rotate(180deg)}
-.faq2-body{max-height:0;overflow:hidden;transition:max-height .35s var(--ease)}
-.faq2-body-inner{padding:0 20px 20px 62px;font-size:14px;color:var(--muted);line-height:1.85}
-@media(max-width:768px){.faq2-grid{grid-template-columns:1fr}}
-@media(max-width:768px){
-  .faq2-hidden-mobile{display:none}
-  .faq2-hidden-mobile.faq2-mobile-open{display:block}
-  .faq2-ver-mais{display:flex;align-items:center;justify-content:center;gap:8px;margin:16px auto 0;padding:12px 28px;border-radius:99px;border:1.5px solid var(--green);background:none;color:var(--green);font-size:13px;font-weight:700;cursor:pointer;width:100%;transition:background .2s,color .2s}
-  .faq2-ver-mais:active{background:var(--green-light)}
-  .faq2-ver-mais svg{transition:transform .3s}
-  .faq2-ver-mais[aria-expanded="true"]{display:none}
-}
-@media(min-width:769px){.faq2-ver-mais{display:none}}
-
-/* ═══════════════════════════════════════
-   CTA FINAL
-   ═══════════════════════════════════════ */
-.cta-final{padding:clamp(64px,7vw,96px) 0;background:var(--green);text-align:center;position:relative;overflow:hidden}
-.cta-final::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% -20%,rgba(255,255,255,.12) 0%,transparent 70%)}
-.cta-final-inner{position:relative;z-index:1;max-width:660px;margin:0 auto}
-.cta-final h2{font-size:clamp(26px,3.5vw,44px);font-weight:800;color:#fff;line-height:1.2}
-.cta-final p{font-size:16px;color:rgba(255,255,255,.9);margin-top:14px;line-height:1.7}
-.cta-final-btns{display:flex;align-items:center;justify-content:center;gap:14px;margin-top:32px;flex-wrap:wrap}
-.cta-btn-wh{display:flex;align-items:center;gap:9px;background:#fff;color:var(--green-dark);font-size:15px;font-weight:700;padding:16px 32px;border-radius:var(--r-pill);transition:transform .25s,box-shadow .25s}
-.cta-btn-wh:hover{transform:translateY(-2px);box-shadow:0 10px 32px rgba(0,0,0,.15)}
-.cta-btn-outline{display:flex;align-items:center;gap:9px;border:2px solid rgba(255,255,255,.8);color:#fff;font-size:14px;font-weight:600;padding:14px 28px;border-radius:var(--r-pill);transition:border-color .25s,background .25s}
-.cta-btn-outline:hover{border-color:#fff;background:rgba(255,255,255,.15)}
-.cta-trust{font-size:13px;color:rgba(255,255,255,.6);margin-top:20px}
-
-/* ═══════════════════════════════════════
-   RELATED
-   ═══════════════════════════════════════ */
-.related-section{padding:clamp(56px,6vw,80px) 0;background:var(--white)}
-.related-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:40px}
-.related-grid.cs-track{margin-top:0}
-.related-card{background:var(--surface);border-radius:var(--r);overflow:hidden;border:1px solid var(--border);transition:transform .25s,box-shadow .25s}
-.related-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg)}
-.related-img{aspect-ratio:4/3;overflow:hidden;background:var(--border)}
-.related-img img{width:100%;height:100%;object-fit:cover;transition:transform .5s var(--ease)}
-.related-card:hover .related-img img{transform:scale(1.04)}
-.related-body{padding:20px}
-.related-body h3{font-size:17px;font-weight:700;color:var(--text);margin-bottom:6px}
-.related-specs{font-size:13px;color:var(--muted);margin-bottom:14px}
-.related-link{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--green)}
-.related-link svg{width:14px;height:14px;transition:transform .2s}
-.related-card:hover .related-link svg{transform:translateX(3px)}
-@media(max-width:768px){.related-grid:not(.cs-track){grid-template-columns:1fr 1fr}}
-@media(max-width:480px){.related-grid:not(.cs-track){grid-template-columns:1fr}}
-
-/* ═══════════════════════════════════════
-   FOOTER
-   ═══════════════════════════════════════ */
-
-/* ═══════════════════════════════════════
-   STICKY BAR MOBILE
-   ═══════════════════════════════════════ */
-.sticky-bar{display:none;position:fixed;bottom:0;left:0;right:0;background:var(--green);z-index:200;padding:10px 16px calc(10px + env(safe-area-inset-bottom));flex-direction:row;gap:10px}
-@media(max-width:768px){.sticky-bar{display:flex}body{padding-bottom:72px}}
-.sticky-bar a{flex:1;display:flex;align-items:center;justify-content:center;gap:8px;font-size:14px;font-weight:700;border-radius:var(--r-sm);padding:12px;transition:background .2s}
-.sticky-wa{background:rgba(255,255,255,.15);color:#fff}
-.sticky-wa:hover{background:rgba(255,255,255,.25)}
-.sticky-tel{border:1.5px solid rgba(255,255,255,.35);color:rgba(255,255,255,.9)}
-.sticky-bar svg{width:18px;height:18px}
-
-/* ═══════════════════════════════════════
-   APPS CARDS (CARACTERISTICAS)
-   ═══════════════════════════════════════ */
-.apps__grid{display:grid;gap:16px}
-@media(min-width:640px){.apps__grid{grid-template-columns:repeat(2,1fr)}}
-@media(min-width:1024px){.apps__grid{grid-template-columns:repeat(3,1fr)}}
-.apps__card{border-radius:var(--r-md);overflow:hidden;border:1px solid rgba(0,0,0,.08);background:#fff;box-shadow:0 2px 8px rgba(0,0,0,.05)}
-.apps__card-img{overflow:hidden;height:180px;background:#f3f7f5;display:flex;align-items:center;justify-content:center}
-.apps__card-img img{max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain;display:block;transition:transform .4s;padding:16px;box-sizing:border-box}
-.apps__card:hover .apps__card-img img{transform:scale(1.03)}
-.apps__card-body{padding:18px 20px 22px}
-.apps__card-body h3{font-size:.95rem;font-weight:700;color:var(--dark);margin:0 0 8px}
-.apps__card-body p{font-size:.85rem;color:#4b5563;line-height:1.6;margin:0}
-
-/* ═══════════════════════════════════════
-   COMBUSTIVEL COMPARE (GLP vs Eletrica)
-   ═══════════════════════════════════════ */
-.fuel-compare-section{background:#f9fafb;padding:80px 0}
-.fuel-compare-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:40px}
-@media(max-width:768px){.fuel-compare-stats{grid-template-columns:repeat(2,1fr)}}
-.fcs-card{background:#f0fdf4;border:1.5px solid #bbf7d0;border-radius:12px;padding:16px;text-align:center}
-.fcs-card svg{width:28px;height:28px;color:var(--green);margin:0 auto 8px;display:block}
-.fcs-label{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:#6b7280;margin-bottom:4px}
-.fcs-value{font-size:1.15rem;font-weight:800;color:var(--dark)}
-.fcs-note{font-size:11px;color:#9ca3af;margin-top:2px}
-.fuel-compare-grid{display:grid;gap:20px}
-@media(min-width:768px){.fuel-compare-grid{grid-template-columns:1fr 1fr}}
-.fcc{border-radius:14px;padding:28px;border:2px solid rgba(0,0,0,.08)}
-.fcc--highlight{border-color:var(--green);background:#f0fdf4}
-.fcc-tag{display:inline-flex;background:var(--green);color:#fff;font-size:11px;font-weight:700;padding:4px 12px;border-radius:100px;text-transform:uppercase;margin-bottom:14px}
-.fcc-tag--muted{background:#9ca3af}
-.fcc h3{font-size:1.05rem;font-weight:700;color:var(--dark);margin:0 0 10px}
-.fcc p{font-size:.9rem;color:#4b5563;line-height:1.6;margin:0 0 16px}
-.fcc ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:8px}
-.fcc ul li{display:flex;gap:8px;align-items:flex-start;font-size:.875rem;color:#374151;line-height:1.5}
-.fcc-icon-check{width:16px;height:16px;flex-shrink:0;margin-top:2px;color:var(--green)}
-.fcc-icon-x{width:16px;height:16px;flex-shrink:0;margin-top:2px;color:#ef4444}
-.fuel-compare-verdict{background:#fff;border-left:4px solid var(--green);border-radius:10px;padding:20px 24px;margin-top:24px;font-size:.925rem;color:#374151;line-height:1.65}
-.fuel-compare-verdict strong{color:var(--dark)}
-
-/* ═══════════════════════════════════════
-   CHECKLIST 5 DECISOES
-   ═══════════════════════════════════════ */
-.decisoes-section{padding:80px 0}
-.decisoes__steps{display:flex;flex-direction:column;gap:28px;margin-top:0}
-.decisoes__step{display:flex;gap:20px;align-items:flex-start;background:#fff;border:1px solid rgba(0,0,0,.08);border-radius:14px;padding:24px 28px;box-shadow:0 1px 8px rgba(0,0,0,.05)}
-.decisoes__step-num{width:40px;height:40px;border-radius:50%;background:var(--green);color:#fff;font-weight:800;font-size:1rem;display:flex;align-items:center;justify-content:center;flex-shrink:0}
-.decisoes__step-body strong{display:block;font-size:1rem;font-weight:700;color:var(--dark);margin-bottom:6px}
-.decisoes__step-body p{font-size:.9rem;color:#4b5563;line-height:1.6;margin:0}
-
-/* ═══ DEPOIMENTOS CAROUSEL ═══ */
-.dep-section{padding:clamp(64px,7vw,96px) 0;background:var(--surface)}
-.sh{display:flex;align-items:center;justify-content:space-between;gap:24px;margin-bottom:40px;flex-wrap:wrap}
-.sh__left .tag{display:inline-flex;align-items:center;gap:8px;background:rgba(29,150,72,.1);color:var(--green);font-weight:700;font-size:12px;letter-spacing:.08em;text-transform:uppercase;padding:4px 14px;border-radius:99px;margin-bottom:12px}
-.sh__left h2{font-size:clamp(22px,3vw,32px);font-weight:800;color:var(--dark);margin:0}
-.sh__right{display:flex;gap:10px;flex-shrink:0}
-.carousel__arrow{width:44px;height:44px;border-radius:50%;border:2px solid rgba(29,150,72,.25);background:#fff;cursor:pointer;font-size:18px;display:flex;align-items:center;justify-content:center;transition:background .2s,border-color .2s}
-.carousel__arrow:hover{background:var(--green);border-color:var(--green);color:#fff}
-.carousel{overflow:hidden}
-.carousel__track{display:flex;gap:24px;scroll-snap-type:x mandatory;overflow-x:auto;scrollbar-width:none;scroll-behavior:smooth;-webkit-overflow-scrolling:touch}
-.carousel__track::-webkit-scrollbar{display:none}
-.tst{flex:0 0 calc(33.333% - 16px);min-width:280px;background:#fff;border-radius:var(--r-lg);padding:32px 28px;box-shadow:0 2px 14px rgba(0,0,0,.07);scroll-snap-align:start;border:1px solid rgba(0,0,0,.06)}
-.tst__stars{color:#F59E0B;font-size:14px;letter-spacing:2px;margin-bottom:16px}
-.tst__q{font-size:15px;line-height:1.6;color:var(--text);margin:0 0 24px;position:relative;padding-left:20px}
-.tst__q::before{content:'"';position:absolute;left:0;top:-4px;font-size:36px;line-height:1;color:rgba(29,150,72,.2);font-family:Georgia,serif}
-.tst__au{display:flex;align-items:center;gap:12px;border-top:1px solid rgba(0,0,0,.07);padding-top:20px}
-.tst__av{width:44px;height:44px;border-radius:50%;background:var(--green-light,#E8F5EE);border:2px solid rgba(29,150,72,.25);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:16px;color:var(--green);flex-shrink:0}
-.tst__info .name{font-weight:700;font-size:14px;color:var(--dark)}
-.tst__info .role{font-size:12px;color:var(--muted)}
-@media(max-width:767px){.tst{flex:0 0 85%}}
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+
+    {
+      "@type": "Organization",
+      "@id": "https://movemaquinas.com.br/#organization",
+      "name": "Move Maquinas",
+      "legalName": "Move Maquinas Ltda",
+      "url": "https://movemaquinas.com.br",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://pub-bd2efcc812524f54a8c492f90052f3bd.r2.dev/goiania-go/assets/logo-move-maquinas.webp",
+        "width": 120,
+        "height": 30
+      },
+      "telephone": "+55-62-3211-1515",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+55-62-9-8263-7300",
+        "contactType": "sales",
+        "contactOption": "TollFree",
+        "availableLanguage": "Portuguese"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Av. Eurico Viana, 4913",
+        "addressLocality": "Goiania",
+        "addressRegion": "GO",
+        "postalCode": "74000-000",
+        "addressCountry": "BR"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -16.6869,
+        "longitude": -49.2648
+      },
+      "areaServed": [
+        {"@type": "State", "name": "Goias"},
+        {"@type": "State", "name": "Distrito Federal"},
+        {"@type": "State", "name": "Tocantins"},
+        {"@type": "State", "name": "Mato Grosso"}
+      ],
+      "foundingDate": "2003",
+      "numberOfEmployees": {"@type": "QuantitativeValue", "minValue": 20},
+      "description": "Distribuidor exclusivo Clark Equipment em Goias ha mais de 20 anos. Venda, locacao e manutencao de empilhadeiras Clark. Suporte tecnico 24h, pecas originais em estoque.",
+      "sameAs": [
+        "https://www.instagram.com/movemaquinas",
+        "https://www.linkedin.com/company/movemaquinas"
+      ]
+    },
+
+    {
+      "@type": "LocalBusiness",
+      "@id": "https://movemaquinas.com.br/#localbusiness",
+      "name": "Move Maquinas",
+      "parentOrganization": {"@id": "https://movemaquinas.com.br/#organization"},
+      "url": "https://movemaquinas.com.br",
+      "telephone": "+55-62-3211-1515",
+      "priceRange": "$$$$",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Av. Eurico Viana, 4913",
+        "addressLocality": "Goiania",
+        "addressRegion": "GO",
+        "postalCode": "74000-000",
+        "addressCountry": "BR"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -16.6869,
+        "longitude": -49.2648
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+          "opens": "08:00",
+          "closes": "18:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Saturday",
+          "opens": "08:00",
+          "closes": "12:00"
+        }
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Catalogo Clark Equipment",
+        "url": "https://movemaquinas.com.br/venda-de-maquinas-clark"
+      }
+    },
+
+    {
+      "@type": "Brand",
+      "@id": "https://movemaquinas.com.br/#brand-clark",
+      "name": "Clark",
+      "alternateName": "Clark Equipment",
+      "url": "https://www.clarkmhc.com.br",
+      "logo": "https://www.clarkmhc.com.br/favicon.ico",
+      "sameAs": [
+        "https://en.wikipedia.org/wiki/Clark_Equipment",
+        "https://www.clarkmhc.com"
+      ]
+    },
+
+    {
+      "@type": "Product",
+      "@id": "https://movemaquinas.com.br/venda-de-maquinas-clark/clark-s25-s35/#product",
+      "name": "Empilhadeira Clark S-Series GLP/Diesel 2.500 a 3.500 kg",
+      "alternateName": ["Clark S25", "Clark S30", "Clark S35", "Clark S-Series"],
+      "description": "Empilhadeira a combustao GLP ou Diesel da Clark, Serie S. Capacidade de 2.500 a 3.500 kg. Freio a disco banhado em oleo (zero manutencao), transmissao split isolada (vibracao -50%), painel LCD SMART 5,6 polegadas, sistema ativo de estabilidade Clark CSS incluso de serie. Motor GLP Hyundai Theta 2.4L 70 cv ou Motor Diesel Yanmar 4TNE98 62 cv. Velocidade maxima 21,2 km/h, elevacao ate 7.000 mm, inclinacao de rampa ate 37,4%. Normas ANSI/ITSDF B56.1, OSHA e NR-12. Distribuido exclusivamente pela Move Maquinas em Goias.",
+      "brand": {"@id": "https://movemaquinas.com.br/#brand-clark"},
+      "manufacturer": {
+        "@type": "Organization",
+        "@id": "https://movemaquinas.com.br/#manufacturer-clark",
+        "name": "Clark Material Handling Company",
+        "alternateName": "Clark Equipment",
+        "url": "https://www.clarkmhc.com",
+        "sameAs": ["https://en.wikipedia.org/wiki/Clark_Equipment"]
+      },
+      "model": "S25/S30/S35",
+      "sku": "CLARK-S-SERIES-S25-S35",
+      "mpn": "S-Series",
+      "category": "Empilhadeira a Combustao",
+      "url": "https://movemaquinas.com.br/venda-de-maquinas-clark/clark-s25-s35",
+      "image": [
+        {
+          "@type": "ImageObject",
+          "url": "https://pub-bd2efcc812524f54a8c492f90052f3bd.r2.dev/goiania-go/venda-de-empilhadeira-clark/clark-s25-s35/clark-s25-s35-visao-geral.jpg",
+          "name": "Empilhadeira Clark S-Series — vista lateral, configuracao cushion GLP",
+          "caption": "Clark S25/S30/S35 — vista lateral studio",
+          "representativeOfPage": true
+        },
+        {
+          "@type": "ImageObject",
+          "url": "https://pub-bd2efcc812524f54a8c492f90052f3bd.r2.dev/goiania-go/venda-de-empilhadeira-clark/clark-s25-s35/clark-s25-s35-operacao-02.jpg",
+          "name": "Clark S-Series em operacao em armazem — GLP cushion"
+        },
+        {
+          "@type": "ImageObject",
+          "url": "https://pub-bd2efcc812524f54a8c492f90052f3bd.r2.dev/goiania-go/venda-de-empilhadeira-clark/clark-s25-s35/clark-s25-s35-operacao-03.jpg",
+          "name": "Clark S25L pneu pneumatico em patio externo"
+        },
+        {
+          "@type": "ImageObject",
+          "url": "https://pub-bd2efcc812524f54a8c492f90052f3bd.r2.dev/goiania-go/venda-de-empilhadeira-clark/clark-s25-s35/clark-s25-s35-mastro-triplex.jpg",
+          "name": "Clark S25L mastro triplex elevado"
+        }
+      ],
+      "additionalProperty": [
+        {"@type":"PropertyValue","name":"Capacidade de Carga","value":"2500 a 3500","unitCode":"KGM","unitText":"kg"},
+        {"@type":"PropertyValue","name":"Velocidade Maxima de Translacao","value":"21.2","unitCode":"KMH","unitText":"km/h"},
+        {"@type":"PropertyValue","name":"Elevacao Maxima (Mastro Triplex)","value":"7000","unitCode":"MMT","unitText":"mm"},
+        {"@type":"PropertyValue","name":"Altura Colapsada Mastro Triplex","value":"2115","unitCode":"MMT","unitText":"mm"},
+        {"@type":"PropertyValue","name":"Inclinacao Maxima em Rampa","value":"37.4","unitCode":"P1","unitText":"%"},
+        {"@type":"PropertyValue","name":"Potencia Motor GLP","value":"70","unitCode":"CV","unitText":"cv"},
+        {"@type":"PropertyValue","name":"Motor GLP","value":"Hyundai Theta 2.4L 4 cilindros"},
+        {"@type":"PropertyValue","name":"Potencia Motor Diesel","value":"62","unitCode":"CV","unitText":"cv"},
+        {"@type":"PropertyValue","name":"Motor Diesel","value":"Yanmar 4TNE98 4 cilindros"},
+        {"@type":"PropertyValue","name":"Torque Motor GLP","value":"196","unitCode":"N.m","unitText":"Nm a 1.800 rpm"},
+        {"@type":"PropertyValue","name":"Velocidade de Elevacao (livre)","value":"0.52","unitCode":"MTS","unitText":"m/s"},
+        {"@type":"PropertyValue","name":"Raio de Giro (cushion) — S25","value":"2020","unitCode":"MMT","unitText":"mm"},
+        {"@type":"PropertyValue","name":"Raio de Giro (cushion) — S30","value":"2060","unitCode":"MMT","unitText":"mm"},
+        {"@type":"PropertyValue","name":"Raio de Giro (cushion) — S35","value":"2120","unitCode":"MMT","unitText":"mm"},
+        {"@type":"PropertyValue","name":"Peso Operacional Cushion GLP — S25","value":"3785","unitCode":"KGM","unitText":"kg"},
+        {"@type":"PropertyValue","name":"Peso Operacional Cushion GLP — S30","value":"3920","unitCode":"KGM","unitText":"kg"},
+        {"@type":"PropertyValue","name":"Peso Operacional Cushion GLP — S35","value":"4100","unitCode":"KGM","unitText":"kg"},
+        {"@type":"PropertyValue","name":"Combustivel","value":"GLP ou Diesel"},
+        {"@type":"PropertyValue","name":"Tipo de Freio","value":"Disco banhado em oleo — zero manutencao"},
+        {"@type":"PropertyValue","name":"Transmissao","value":"Split isolada — vibracao reduzida 50%"},
+        {"@type":"PropertyValue","name":"Painel","value":"LCD SMART 5.6 polegadas — rastreio por operador"},
+        {"@type":"PropertyValue","name":"Sistema de Estabilidade","value":"Clark CSS (sensor ativo) — serie"},
+        {"@type":"PropertyValue","name":"Centro de Carga Padrao","value":"500","unitCode":"MMT","unitText":"mm"},
+        {"@type":"PropertyValue","name":"Consumo GLP","value":"2.5 a 3.5 kg/h"},
+        {"@type":"PropertyValue","name":"Consumo Diesel","value":"3.5 a 5.0 l/h"},
+        {"@type":"PropertyValue","name":"Normas","value":"ANSI/ITSDF B56.1, OSHA, NR-12"},
+        {"@type":"PropertyValue","name":"Garantia","value":"12 meses"},
+        {"@type":"PropertyValue","name":"Tipo de Pneu","value":"Cushion (macico) ou Pneumatico"}
+      ],
+      "hasVariant": [
+        {
+          "@type": "Product",
+          "@id": "https://movemaquinas.com.br/venda-de-maquinas-clark/clark-s25-s35/#variant-s25",
+          "name": "Clark S25 — Empilhadeira GLP/Diesel 2.500 kg",
+          "sku": "CLARK-S25",
+          "mpn": "S25",
+          "description": "Empilhadeira Clark S25 com capacidade nominal de 2.500 kg. Motor GLP Hyundai 70 cv ou Diesel Yanmar 62 cv. Freio a disco banhado em oleo, transmissao split isolada, painel LCD SMART. Raio de giro cushion 2.020 mm, peso operacional 3.785 kg.",
+          "additionalProperty": [
+            {"@type":"PropertyValue","name":"Capacidade Nominal","value":"2500","unitCode":"KGM","unitText":"kg"},
+            {"@type":"PropertyValue","name":"Raio de Giro Cushion","value":"2020","unitCode":"MMT","unitText":"mm"},
+            {"@type":"PropertyValue","name":"Peso Operacional Cushion GLP","value":"3785","unitCode":"KGM","unitText":"kg"},
+            {"@type":"PropertyValue","name":"Velocidade de Elevacao","value":"0.52","unitCode":"MTS","unitText":"m/s"},
+            {"@type":"PropertyValue","name":"Largura do Corredor Cushion","value":"3200","unitCode":"MMT","unitText":"mm"}
+          ],
+          "offers": {
+            "@type": "Offer",
+            "priceCurrency": "BRL",
+            "availability": "https://schema.org/InStock",
+            "itemCondition": "https://schema.org/NewCondition",
+            "url": "https://movemaquinas.com.br/venda-de-maquinas-clark/clark-s25-s35",
+            "seller": {"@id": "https://movemaquinas.com.br/#localbusiness"}
+          }
+        },
+        {
+          "@type": "Product",
+          "@id": "https://movemaquinas.com.br/venda-de-maquinas-clark/clark-s25-s35/#variant-s30",
+          "name": "Clark S30 — Empilhadeira GLP/Diesel 3.000 kg",
+          "sku": "CLARK-S30",
+          "mpn": "S30",
+          "description": "Empilhadeira Clark S30 com capacidade nominal de 3.000 kg. Motor GLP Hyundai 70 cv ou Diesel Yanmar 62 cv. Freio a disco banhado em oleo, transmissao split isolada, painel LCD SMART, mastro triplex serie. Raio de giro cushion 2.060 mm, peso operacional 3.920 kg.",
+          "additionalProperty": [
+            {"@type":"PropertyValue","name":"Capacidade Nominal","value":"3000","unitCode":"KGM","unitText":"kg"},
+            {"@type":"PropertyValue","name":"Raio de Giro Cushion","value":"2060","unitCode":"MMT","unitText":"mm"},
+            {"@type":"PropertyValue","name":"Peso Operacional Cushion GLP","value":"3920","unitCode":"KGM","unitText":"kg"},
+            {"@type":"PropertyValue","name":"Velocidade de Elevacao","value":"0.52","unitCode":"MTS","unitText":"m/s"},
+            {"@type":"PropertyValue","name":"Largura do Corredor Cushion","value":"3250","unitCode":"MMT","unitText":"mm"}
+          ],
+          "offers": {
+            "@type": "Offer",
+            "priceCurrency": "BRL",
+            "availability": "https://schema.org/InStock",
+            "itemCondition": "https://schema.org/NewCondition",
+            "url": "https://movemaquinas.com.br/venda-de-maquinas-clark/clark-s25-s35",
+            "seller": {"@id": "https://movemaquinas.com.br/#localbusiness"}
+          }
+        },
+        {
+          "@type": "Product",
+          "@id": "https://movemaquinas.com.br/venda-de-maquinas-clark/clark-s25-s35/#variant-s35",
+          "name": "Clark S35 — Empilhadeira GLP/Diesel 3.500 kg",
+          "sku": "CLARK-S35",
+          "mpn": "S35",
+          "description": "Empilhadeira Clark S35 com capacidade nominal de 3.500 kg. Motor GLP Hyundai 70 cv ou Diesel Yanmar 62 cv. Freio a disco banhado em oleo, transmissao split isolada, painel LCD SMART, mastro triplex serie. Raio de giro cushion 2.120 mm, peso operacional 4.100 kg.",
+          "additionalProperty": [
+            {"@type":"PropertyValue","name":"Capacidade Nominal","value":"3500","unitCode":"KGM","unitText":"kg"},
+            {"@type":"PropertyValue","name":"Raio de Giro Cushion","value":"2120","unitCode":"MMT","unitText":"mm"},
+            {"@type":"PropertyValue","name":"Peso Operacional Cushion GLP","value":"4100","unitCode":"KGM","unitText":"kg"},
+            {"@type":"PropertyValue","name":"Velocidade de Elevacao","value":"0.50","unitCode":"MTS","unitText":"m/s"},
+            {"@type":"PropertyValue","name":"Largura do Corredor Cushion","value":"3310","unitCode":"MMT","unitText":"mm"}
+          ],
+          "offers": {
+            "@type": "Offer",
+            "priceCurrency": "BRL",
+            "availability": "https://schema.org/InStock",
+            "itemCondition": "https://schema.org/NewCondition",
+            "url": "https://movemaquinas.com.br/venda-de-maquinas-clark/clark-s25-s35",
+            "seller": {"@id": "https://movemaquinas.com.br/#localbusiness"}
+          }
+        }
+      ],
+      "review": [
+        {
+          "@type": "Review",
+          "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"},
+          "name": "Zero paradas por defeito mecanico em tres anos",
+          "reviewBody": "Compramos a Clark S30 ha tres anos. Zero paradas por defeito mecanico. A equipe da Move Maquinas acompanhou a entrega, treinou nossos operadores e ainda faz a manutencao preventiva. Nao troco por outra marca.",
+          "author": {"@type": "Person", "name": "Ricardo Almeida"},
+          "publisher": {"@id": "https://movemaquinas.com.br/#organization"}
+        },
+        {
+          "@type": "Review",
+          "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"},
+          "name": "Sistema CSS — seguranca que vale o investimento",
+          "reviewBody": "O que mais me impressionou foi o CSS — sistema que trava a maquina antes de tombar. Ja tivemos incidente com marca anterior. Com a Clark, em dois anos de operacao, nenhuma ocorrencia. Seguranca que vale o investimento.",
+          "author": {"@type": "Person", "name": "Fernando Costa"},
+          "publisher": {"@id": "https://movemaquinas.com.br/#organization"}
+        },
+        {
+          "@type": "Review",
+          "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"},
+          "name": "Motor Hyundai nunca decepcionou no turno duplo",
+          "reviewBody": "Atendimento pos-venda diferenciado. Quando precisamos de peca, a Move Maquinas resolve rapido. O motor Hyundai da S25 nunca nos decepcionou no turno duplo. Ja indicamos para tres parceiros aqui de Goiania.",
+          "author": {"@type": "Person", "name": "Patricia Souza"},
+          "publisher": {"@id": "https://movemaquinas.com.br/#organization"}
+        }
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5.0",
+        "reviewCount": "3",
+        "bestRating": "5",
+        "worstRating": "1"
+      },
+      "offers": {
+        "@type": "AggregateOffer",
+        "priceCurrency": "BRL",
+        "offerCount": "3",
+        "availability": "https://schema.org/InStock",
+        "itemCondition": "https://schema.org/NewCondition",
+        "url": "https://movemaquinas.com.br/venda-de-maquinas-clark/clark-s25-s35",
+        "seller": {"@id": "https://movemaquinas.com.br/#localbusiness"}
+      },
+      "award": "Distribuidor Exclusivo Clark Equipment em Goias"
+    },
+
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://movemaquinas.com.br/venda-de-maquinas-clark/clark-s25-s35/#breadcrumb",
+      "itemListElement": [
+        {"@type":"ListItem","position":1,"name":"Inicio","item":"https://movemaquinas.com.br"},
+        {"@type":"ListItem","position":2,"name":"Venda Clark","item":"https://movemaquinas.com.br/venda-de-maquinas-clark"},
+        {"@type":"ListItem","position":3,"name":"Clark S25, S30 e S35","item":"https://movemaquinas.com.br/venda-de-maquinas-clark/clark-s25-s35"}
+      ]
+    },
+
+    {
+      "@type": "FAQPage",
+      "@id": "https://movemaquinas.com.br/venda-de-maquinas-clark/clark-s25-s35/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Clark S25, S30 e S35: qual modelo tem a capacidade de carga certa para minha operacao?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A unica diferenca entre os tres modelos e a capacidade de carga: Clark S25 vai ate 2.500 kg, Clark S30 ate 3.000 kg, Clark S35 ate 3.500 kg. Motor, transmissao, freio e painel sao identicos. Escolha pelo peso maximo da sua carga, com margem de 10 a 15%."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Clark S-Series GLP ou Diesel: qual combustivel escolher para minha operacao?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Seu ambiente define o combustivel. Operacao em ambiente fechado (armazem, frigorifico, farmacia): Clark S-Series GLP, sem emissoes visiveis e silencioso. Patio externo, rampa ou terreno irregular: Clark S-Series Diesel, com maior torque e vida util 30% maior nessas condicoes."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "A Clark S-Series tem freio a disco banhado em oleo de serie — o que isso significa na pratica?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "E um freio a disco banhado em oleo completamente encapsulado. Por ser selado, nao sofre com po, agua ou neblina de camara fria. Forca de frenagem 50% maior que freio a tambor e, principalmente, zero manutencao em toda a vida util da maquina. Concorrentes como Toyota e Hyster usam freio a tambor como padrao, que exige revisao anual."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Mastro duplex ou triplex na Clark S-Series: quando o triplex de 2.115 mm e necessario?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A escolha e sobre altura colapsada, nao altura maxima. Mastro triplex fecha em 2.115 mm e passa por portas de 2.100 mm com carga levantada. Mastro duplex fecha em 2.500 mm, nao entra em frigorifico ou camara fria com pe direito padrao. Se voce opera em frigorifico, camara fria ou qualquer espaco com portao baixo, a Clark S-Series triplex e obrigatoria."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Clark S-Series com pneu cushion ou pneumatico: qual escolher pelo tipo de piso?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A escolha e pelo piso, nao pelo peso da carga. Piso interno liso (concreto, ceramica, frigorifico): Clark S-Series cushion (borracha macica), sem manutencao, zero risco de furo e raio de giro menor. Piso externo irregular, paralelepipedo ou terreno de obra: Clark S-Series pneumatico, maior amortecimento e aderencia, mas exige calibragem mensal e corredor ligeiramente maior."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Qual o prazo de entrega da Clark S-Series pela Move Maquinas em Goiania?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Como distribuidor exclusivo Clark em Goias, a Move Maquinas tem acesso direto ao estoque Clark Brasil. O prazo depende da configuracao (cushion/pneumatico, GLP/Diesel, torre). Consulte disponibilidade pelo WhatsApp para prazo exato da sua configuracao."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "A Move Maquinas oferece financiamento FCO e FINAME para compra da Clark S-Series em Goias?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sim. A Move Maquinas trabalha com financiamento via FCO (Fundo Constitucional do Centro-Oeste), FINAME e leasing bancario. O FCO tem taxas especialmente competitivas para empresas em Goias. Nossa equipe auxilia na documentacao e simulacao de parcelas."
+          }
+        }
+      ]
+    },
+
+    {
+      "@type": "VideoObject",
+      "@id": "https://movemaquinas.com.br/venda-de-maquinas-clark/clark-s25-s35/#video-produto",
+      "name": "Clark S25, S30 e S35 em operacao real — freio a disco, painel LCD e transmissao split",
+      "description": "Empilhadeira Clark S-Series em operacao real demonstrando freio a disco banhado em oleo, painel LCD SMART 5,6 polegadas e transmissao split isolada. Tecnologia de serie que concorrentes cobram como opcional.",
+      "thumbnailUrl": "https://img.youtube.com/vi/wMzyw1pI6ig/maxresdefault.jpg",
+      "uploadDate": "2024-01-01",
+      "embedUrl": "https://www.youtube.com/embed/wMzyw1pI6ig",
+      "url": "https://www.youtube.com/watch?v=wMzyw1pI6ig",
+      "publisher": {"@id": "https://movemaquinas.com.br/#organization"},
+      "about": {"@id": "https://movemaquinas.com.br/venda-de-maquinas-clark/clark-s25-s35/#product"}
+    },
+
+    {
+      "@type": "VideoObject",
+      "@id": "https://movemaquinas.com.br/venda-de-maquinas-clark/clark-s25-s35/#video-institucional",
+      "name": "Move Maquinas — apresentacao institucional, distribuidor exclusivo Clark em Goias",
+      "description": "Apresentacao da Move Maquinas, distribuidor exclusivo Clark Equipment em Goias ha mais de 20 anos. Suporte tecnico 24h, pecas originais em estoque local, atendimento em GO, DF, TO e MT.",
+      "thumbnailUrl": "https://img.youtube.com/vi/nz21reej4UY/maxresdefault.jpg",
+      "uploadDate": "2024-01-01",
+      "embedUrl": "https://www.youtube.com/embed/nz21reej4UY",
+      "url": "https://www.youtube.com/watch?v=nz21reej4UY",
+      "publisher": {"@id": "https://movemaquinas.com.br/#organization"}
+    }
+
+  ]
+}
+</script>
 </head>
 <body>
 
@@ -933,7 +701,7 @@ ul,ol{list-style:none}
           <div class="mm-nav__panel" id="dd-locacao-panel" role="region">
             <div class="mm-mega">
               <div class="mm-mega__img">
-                <img class="mm-mega__img-photo" src="/assets/clark/empilhadeira-combustao/gts-25-30-33/gts20-33-application-1039443432.jpg" alt="Empilhadeira Clark em operação" loading="lazy">
+                <img class="mm-mega__img-photo" src="/assets/clark/empilhadeira-combustao/gts-25-30-33/gts20-33-application-1039443432.jpg" alt="Empilhadeira Clark em operação" width="300" height="200" loading="lazy">
                 <div class="mm-mega__img-overlay"></div>
                 <div class="mm-mega__img-bg">
                   <div class="mm-mega__img-content">
@@ -974,7 +742,7 @@ ul,ol{list-style:none}
           <div class="mm-nav__panel" id="dd-manutencao-panel" role="region">
             <div class="mm-mega">
               <div class="mm-mega__img">
-                <img class="mm-mega__img-photo" src="/assets/clark/empilhadeira-combustao/c60-70-75-80/clark_c60-80_detail_operator_compartment-for-web.jpg" alt="Manutenção de empilhadeira Clark" loading="lazy">
+                <img class="mm-mega__img-photo" src="/assets/clark/empilhadeira-combustao/c60-70-75-80/clark_c60-80_detail_operator_compartment-for-web.jpg" alt="Manutenção de empilhadeira Clark" width="300" height="200" loading="lazy">
                 <div class="mm-mega__img-overlay"></div>
                 <div class="mm-mega__img-bg">
                   <div class="mm-mega__img-content">
@@ -1009,7 +777,7 @@ ul,ol{list-style:none}
           <div class="mm-nav__panel" id="dd-clark-panel" role="region">
             <div class="mm-mega">
               <div class="mm-mega__img">
-                <img class="mm-mega__img-photo" src="/assets/clark/empilhadeira-combustao/l25-30-35/l20-launch-header.jpg" alt="Empilhadeira Clark nova para venda" loading="lazy">
+                <img class="mm-mega__img-photo" src="/assets/clark/empilhadeira-combustao/l25-30-35/l20-launch-header.jpg" alt="Empilhadeira Clark nova para venda" width="300" height="200" loading="lazy">
                 <div class="mm-mega__img-overlay"></div>
                 <div class="mm-mega__img-bg">
                   <div class="mm-mega__img-content">
@@ -1075,7 +843,7 @@ ul,ol{list-style:none}
           <div class="mm-nav__panel" id="dd-servicos-panel" role="region">
             <div class="mm-mega">
               <div class="mm-mega__img">
-                <img class="mm-mega__img-photo" src="/assets/clark/transpaleteira/wpio15/wpio15_einsatz_img_4275.jpg" alt="Curso operador de empilhadeira NR-11" loading="lazy">
+                <img class="mm-mega__img-photo" src="/assets/clark/transpaleteira/wpio15/wpio15_einsatz_img_4275.jpg" alt="Curso operador de empilhadeira NR-11" width="300" height="200" loading="lazy">
                 <div class="mm-mega__img-overlay"></div>
                 <div class="mm-mega__img-bg">
                   <div class="mm-mega__img-content">
@@ -1110,7 +878,7 @@ ul,ol{list-style:none}
           <div class="mm-nav__panel" id="dd-sobre-panel" role="region">
             <div class="mm-mega">
               <div class="mm-mega__img">
-                <img class="mm-mega__img-photo" src="/assets/clark/empilhadeira-combustao/gts-25-30-33/gts25_100years.jpg" alt="Movemáquinas 20 anos" loading="lazy">
+                <img class="mm-mega__img-photo" src="/assets/clark/empilhadeira-combustao/gts-25-30-33/gts25_100years.jpg" alt="Movemáquinas 20 anos" width="300" height="200" loading="lazy">
                 <div class="mm-mega__img-overlay"></div>
                 <div class="mm-mega__img-bg">
                   <div class="mm-mega__img-content">
@@ -1148,7 +916,7 @@ ul,ol{list-style:none}
           <div class="mm-nav__panel" id="dd-blog-panel" role="region">
             <div class="mm-mega">
               <div class="mm-mega__img">
-                <img class="mm-mega__img-photo" src="/assets/clark/empilhadeira-combustao/c60-70-75-80/clark_c60-80_application-for-web_01.jpg" alt="Guias e dicas técnicas de empilhadeiras" loading="lazy">
+                <img class="mm-mega__img-photo" src="/assets/clark/empilhadeira-combustao/c60-70-75-80/clark_c60-80_application-for-web_01.jpg" alt="Guias e dicas técnicas de empilhadeiras" width="300" height="200" loading="lazy">
                 <div class="mm-mega__img-overlay"></div>
                 <div class="mm-mega__img-bg">
                   <div class="mm-mega__img-content">
@@ -1337,7 +1105,7 @@ ul,ol{list-style:none}
       <!-- Gallery — imagem principal + thumbs abaixo -->
       <div class="gallery" id="galleryRoot">
         <div class="gallery-main" id="galleryMainClick">
-          <img id="galleryImg"
+          <img id="galleryImg" width="800" height="600"
             src="https://pub-bd2efcc812524f54a8c492f90052f3bd.r2.dev/goiania-go/venda-de-empilhadeira-clark/clark-s25-s35/clark-s25-s35-visao-geral.jpg"
             alt="Empilhadeira Clark S-Series 25-35 — vista lateral, configuracao cushion GLP" loading="eager">
           <div class="gallery-counter"><span id="gCount">1</span> / 4</div>
@@ -1347,16 +1115,16 @@ ul,ol{list-style:none}
         </div>
         <div class="gallery-sidebar">
           <div class="gallery-thumb active" data-idx="0">
-            <img src="https://pub-bd2efcc812524f54a8c492f90052f3bd.r2.dev/goiania-go/venda-de-empilhadeira-clark/clark-s25-s35/clark-s25-s35-visao-geral.jpg" alt="Clark S25 S30 S35 — vista lateral studio" loading="eager">
+            <img src="https://pub-bd2efcc812524f54a8c492f90052f3bd.r2.dev/goiania-go/venda-de-empilhadeira-clark/clark-s25-s35/clark-s25-s35-visao-geral.jpg" alt="Clark S25 S30 S35 — vista lateral studio" width="160" height="120" loading="eager">
           </div>
           <div class="gallery-thumb" data-idx="1">
-            <img src="https://pub-bd2efcc812524f54a8c492f90052f3bd.r2.dev/goiania-go/venda-de-empilhadeira-clark/clark-s25-s35/clark-s25-s35-operacao-02.jpg" alt="Clark S-Series em operacao em armazem — GLP cushion" loading="lazy">
+            <img src="https://pub-bd2efcc812524f54a8c492f90052f3bd.r2.dev/goiania-go/venda-de-empilhadeira-clark/clark-s25-s35/clark-s25-s35-operacao-02.jpg" alt="Clark S-Series em operacao em armazem — GLP cushion" width="160" height="120" loading="lazy">
           </div>
           <div class="gallery-thumb" data-idx="2">
-            <img src="https://pub-bd2efcc812524f54a8c492f90052f3bd.r2.dev/goiania-go/venda-de-empilhadeira-clark/clark-s25-s35/clark-s25-s35-operacao-03.jpg" alt="Clark S25L pneu pneumatico em patio externo" loading="lazy">
+            <img src="https://pub-bd2efcc812524f54a8c492f90052f3bd.r2.dev/goiania-go/venda-de-empilhadeira-clark/clark-s25-s35/clark-s25-s35-operacao-03.jpg" alt="Clark S25L pneu pneumatico em patio externo" width="160" height="120" loading="lazy">
           </div>
           <div class="gallery-thumb" data-idx="3">
-            <img src="https://pub-bd2efcc812524f54a8c492f90052f3bd.r2.dev/goiania-go/venda-de-empilhadeira-clark/clark-s25-s35/clark-s25-s35-mastro-triplex.jpg" alt="Clark S25L mastro triplex elevado alto" loading="lazy">
+            <img src="https://pub-bd2efcc812524f54a8c492f90052f3bd.r2.dev/goiania-go/venda-de-empilhadeira-clark/clark-s25-s35/clark-s25-s35-mastro-triplex.jpg" alt="Clark S25L mastro triplex elevado alto" width="160" height="120" loading="lazy">
           </div>
         </div>
       </div>
@@ -1429,7 +1197,7 @@ ul,ol{list-style:none}
       <p class="section-sub dark-sub" style="text-align:center;margin:12px auto 0">Freio a disco, painel LCD e transmissao split, tecnologia que a concorrencia cobra como opcional.</p>
 
       <div class="video-wrap" id="videoWrap" data-vid="wMzyw1pI6ig">
-        <img class="video-thumb" src="https://img.youtube.com/vi/wMzyw1pI6ig/maxresdefault.jpg" alt="Clark S25 S35 empilhadeira GLP em operacao — freio disco transmissao split">
+        <img class="video-thumb" src="https://img.youtube.com/vi/wMzyw1pI6ig/maxresdefault.jpg" alt="Clark S25 S35 empilhadeira GLP em operacao — freio disco transmissao split" width="1280" height="720">
         <div class="play-btn">
           <div class="play-inner">
             <svg viewBox="0 0 24 24" fill="#fff" width="28" height="28"><polygon points="5,3 19,12 5,21"/></svg>
@@ -1493,7 +1261,7 @@ ul,ol{list-style:none}
 
       <div class="overview-aside reveal reveal-d1">
         <div class="overview-photo">
-          <img src="https://pub-bd2efcc812524f54a8c492f90052f3bd.r2.dev/goiania-go/venda-de-empilhadeira-clark/clark-s25-s35/clark-s25-s35-visao-geral.jpg" alt="Clark S25 S30 S35 — empilhadeira GLP combustao, Move Maquinas distribuidor Clark em Goias" loading="lazy">
+          <img width="800" height="600" src="https://pub-bd2efcc812524f54a8c492f90052f3bd.r2.dev/goiania-go/venda-de-empilhadeira-clark/clark-s25-s35/clark-s25-s35-visao-geral.jpg" alt="Clark S25 S30 S35 — empilhadeira GLP combustao, Move Maquinas distribuidor Clark em Goias" loading="lazy">
         </div>
         <div class="overview-cta-box">
           <p>Duvida sobre o modelo certo para sua operacao? Nossa equipe responde em minutos pelo WhatsApp.</p>
@@ -1693,7 +1461,7 @@ ul,ol{list-style:none}
     <!-- GLP -->
     <div class="fuel-row reveal">
       <div class="fuel-photo">
-        <img src="https://pub-bd2efcc812524f54a8c492f90052f3bd.r2.dev/goiania-go/venda-de-empilhadeira-clark/clark-s25-s35/clark-s25-s35-operacao-01.jpg" alt="Clark S25L GLP — cilindro GLP visivel, operacao em ambiente fechado silencioso" loading="lazy">
+        <img width="800" height="600" src="https://pub-bd2efcc812524f54a8c492f90052f3bd.r2.dev/goiania-go/venda-de-empilhadeira-clark/clark-s25-s35/clark-s25-s35-operacao-01.jpg" alt="Clark S25L GLP — cilindro GLP visivel, operacao em ambiente fechado silencioso" loading="lazy">
       </div>
       <div class="fuel-text-block">
         <div class="section-tag">Motor GLP</div>
@@ -1722,7 +1490,7 @@ ul,ol{list-style:none}
         </ul>
       </div>
       <div class="fuel-photo">
-        <img src="https://pub-bd2efcc812524f54a8c492f90052f3bd.r2.dev/goiania-go/venda-de-empilhadeira-clark/clark-s25-s35/clark-s25-s35-operacao-03.jpg" alt="Clark S25L pneu pneumatico em patio externo — motor Diesel Yanmar 4TNE98, 62 cv, rampa e terreno irregular" loading="lazy">
+        <img width="800" height="600" src="https://pub-bd2efcc812524f54a8c492f90052f3bd.r2.dev/goiania-go/venda-de-empilhadeira-clark/clark-s25-s35/clark-s25-s35-operacao-03.jpg" alt="Clark S25L pneu pneumatico em patio externo — motor Diesel Yanmar 4TNE98, 62 cv, rampa e terreno irregular" loading="lazy">
       </div>
     </div>
 
@@ -1963,7 +1731,7 @@ ul,ol{list-style:none}
 
       <!-- Video de apresentacao -->
       <div class="sobre-video-wrap" id="sobreVideoWrap" data-vid="nz21reej4UY">
-        <img class="sobre-video-thumb" src="https://img.youtube.com/vi/nz21reej4UY/maxresdefault.jpg" alt="Move Maquinas — apresentacao institucional, distribuidor exclusivo Clark em Goias" loading="lazy">
+        <img class="sobre-video-thumb" src="https://img.youtube.com/vi/nz21reej4UY/maxresdefault.jpg" alt="Move Maquinas — apresentacao institucional, distribuidor exclusivo Clark em Goias" width="1280" height="720" loading="lazy">
         <div class="sobre-play" id="sobrePlay">
           <div class="sobre-play-inner">
             <svg viewBox="0 0 24 24" fill="#fff" width="26" height="26"><polygon points="6,3 20,12 6,21"/></svg>
@@ -2071,7 +1839,7 @@ ul,ol{list-style:none}
 
       <!-- Imagem esquerda -->
       <div class="faq-photo reveal">
-        <img src="https://pub-bd2efcc812524f54a8c492f90052f3bd.r2.dev/goiania-go/venda-de-empilhadeira-clark/clark-s25-s35/clark-s25-s35-operacao-01.jpg"
+        <img width="800" height="600" src="https://pub-bd2efcc812524f54a8c492f90052f3bd.r2.dev/goiania-go/venda-de-empilhadeira-clark/clark-s25-s35/clark-s25-s35-operacao-01.jpg"
              alt="Clark S25 S30 S35 em operacao — Move Maquinas distribuidor exclusivo Clark em Goias"
              loading="lazy">
       </div>
@@ -2378,7 +2146,7 @@ ul,ol{list-style:none}
 
       <div class="related-card">
         <div class="related-img">
-          <img src="https://pub-bd2efcc812524f54a8c492f90052f3bd.r2.dev/goiania-go/venda-de-empilhadeira-clark/clark-s25-s35/clark-s25-s35-visao-geral.jpg" alt="Clark L25 L30 L35 — empilhadeira combustao entrada de linha" loading="lazy">
+          <img width="800" height="600" src="https://pub-bd2efcc812524f54a8c492f90052f3bd.r2.dev/goiania-go/venda-de-empilhadeira-clark/clark-s25-s35/clark-s25-s35-visao-geral.jpg" alt="Clark L25 L30 L35 — empilhadeira combustao entrada de linha" loading="lazy">
         </div>
         <div class="related-body">
           <h3>Clark L25 / L30 / L35</h3>
@@ -2392,7 +2160,7 @@ ul,ol{list-style:none}
 
       <div class="related-card">
         <div class="related-img">
-          <img src="https://pub-bd2efcc812524f54a8c492f90052f3bd.r2.dev/goiania-go/venda-de-empilhadeira-clark/clark-s25-s35/clark-s25-s35-operacao-03.jpg" alt="Clark GTS25 GTS30 GTS33 — empilhadeira heavy duty" loading="lazy">
+          <img width="800" height="600" src="https://pub-bd2efcc812524f54a8c492f90052f3bd.r2.dev/goiania-go/venda-de-empilhadeira-clark/clark-s25-s35/clark-s25-s35-operacao-03.jpg" alt="Clark GTS25 GTS30 GTS33 — empilhadeira heavy duty" loading="lazy">
         </div>
         <div class="related-body">
           <h3>Clark GTS25 / GTS30 / GTS33</h3>
@@ -2406,7 +2174,7 @@ ul,ol{list-style:none}
 
       <div class="related-card">
         <div class="related-img">
-          <img src="https://pub-bd2efcc812524f54a8c492f90052f3bd.r2.dev/goiania-go/venda-de-empilhadeira-clark/clark-s25-s35/clark-s25-s35-operacao-02.jpg" alt="Clark LXE 25-35 Eletrica 80V Litio — zero emissao" loading="lazy">
+          <img width="800" height="600" src="https://pub-bd2efcc812524f54a8c492f90052f3bd.r2.dev/goiania-go/venda-de-empilhadeira-clark/clark-s25-s35/clark-s25-s35-operacao-02.jpg" alt="Clark LXE 25-35 Eletrica 80V Litio — zero emissao" loading="lazy">
         </div>
         <div class="related-body">
           <h3>Clark LXE 25-35</h3>
@@ -2433,84 +2201,84 @@ ul,ol{list-style:none}
     <div class="pgallery-grid reveal">
 
       <div class="pgallery-item featured" data-lb-index="0">
-        <img src="https://pub-bd2efcc812524f54a8c492f90052f3bd.r2.dev/goiania-go/venda-de-empilhadeira-clark/clark-s25-s35/clark-s25-s35-visao-geral.jpg"
+        <img width="800" height="600" src="https://pub-bd2efcc812524f54a8c492f90052f3bd.r2.dev/goiania-go/venda-de-empilhadeira-clark/clark-s25-s35/clark-s25-s35-visao-geral.jpg"
              alt="Empilhadeira Clark S-Series 25-35 — vista lateral, configuracao cushion GLP"
              loading="lazy">
         <div class="pgallery-caption"><span>Clark S25-S35 — vista lateral studio</span></div>
       </div>
 
       <div class="pgallery-item" data-lb-index="1">
-        <img src="https://pub-bd2efcc812524f54a8c492f90052f3bd.r2.dev/goiania-go/venda-de-empilhadeira-clark/clark-s25-s35/clark-s25-s35-mastro-triplex.jpg"
+        <img width="800" height="600" src="https://pub-bd2efcc812524f54a8c492f90052f3bd.r2.dev/goiania-go/venda-de-empilhadeira-clark/clark-s25-s35/clark-s25-s35-mastro-triplex.jpg"
              alt="Mastro triplex Clark S-Series — altura colapsada 2.115 mm para docas e frigorificos"
              loading="lazy">
         <div class="pgallery-caption"><span>Mastro triplex — colapsado 2.115 mm</span></div>
       </div>
 
       <div class="pgallery-item" data-lb-index="2">
-        <img src="https://pub-bd2efcc812524f54a8c492f90052f3bd.r2.dev/goiania-go/venda-de-empilhadeira-clark/clark-s25-s35/clark-s25-s35-painel-smart.jpg"
+        <img width="800" height="600" src="https://pub-bd2efcc812524f54a8c492f90052f3bd.r2.dev/goiania-go/venda-de-empilhadeira-clark/clark-s25-s35/clark-s25-s35-painel-smart.jpg"
              alt="Painel LCD SMART 5,6 polegadas Clark S-Series — monitoramento de bordo e controle por senha"
              loading="lazy">
         <div class="pgallery-caption"><span>Painel LCD SMART 5,6" — diagnostico de bordo</span></div>
       </div>
 
       <div class="pgallery-item" data-lb-index="3">
-        <img src="https://pub-bd2efcc812524f54a8c492f90052f3bd.r2.dev/goiania-go/venda-de-empilhadeira-clark/clark-s25-s35/clark-s25-s35-painel-smart.jpg"
+        <img width="800" height="600" src="https://pub-bd2efcc812524f54a8c492f90052f3bd.r2.dev/goiania-go/venda-de-empilhadeira-clark/clark-s25-s35/clark-s25-s35-painel-smart.jpg"
              alt="Cabine Clark S-Series com painel LCD SMART 5,6 pol. — transmissao split, assento ergonomico"
              loading="lazy">
         <div class="pgallery-caption"><span>Cabine — painel SMART, transmissao split</span></div>
       </div>
 
       <div class="pgallery-item" data-lb-index="4">
-        <img src="https://pub-bd2efcc812524f54a8c492f90052f3bd.r2.dev/goiania-go/venda-de-empilhadeira-clark/clark-s25-s35/clark-s25-s35-motor-diesel.jpg"
+        <img width="800" height="600" src="https://pub-bd2efcc812524f54a8c492f90052f3bd.r2.dev/goiania-go/venda-de-empilhadeira-clark/clark-s25-s35/clark-s25-s35-motor-diesel.jpg"
              alt="Motor Yanmar Diesel Clark S-Series — freio a disco banhado em oleo, zero manutencao"
              loading="lazy">
         <div class="pgallery-caption"><span>Motor Diesel Yanmar — freio a disco em banho de oleo</span></div>
       </div>
 
       <div class="pgallery-item gallery-hidden" data-lb-index="5">
-        <img src="https://pub-bd2efcc812524f54a8c492f90052f3bd.r2.dev/goiania-go/venda-de-empilhadeira-clark/clark-s25-s35/clark-s25-s35-operacao-02.jpg"
+        <img width="800" height="600" src="https://pub-bd2efcc812524f54a8c492f90052f3bd.r2.dev/goiania-go/venda-de-empilhadeira-clark/clark-s25-s35/clark-s25-s35-operacao-02.jpg"
              alt="Empilhadeira Clark S-Series movimentando carga em armazem — GLP cushion"
              loading="lazy">
         <div class="pgallery-caption"><span>Operacao em armazem — GLP cushion</span></div>
       </div>
 
       <div class="pgallery-item gallery-hidden" data-lb-index="6">
-        <img src="https://pub-bd2efcc812524f54a8c492f90052f3bd.r2.dev/goiania-go/venda-de-empilhadeira-clark/clark-s25-s35/clark-s25-s35-operacao-01.jpg"
+        <img width="800" height="600" src="https://pub-bd2efcc812524f54a8c492f90052f3bd.r2.dev/goiania-go/venda-de-empilhadeira-clark/clark-s25-s35/clark-s25-s35-operacao-01.jpg"
              alt="Clark S25 S30 S35 em operacao — Clark CSS ativo, Move Maquinas distribuidor Clark Goias"
              loading="lazy">
         <div class="pgallery-caption"><span>Operacao — Clark CSS ativo, Move Maquinas Goias</span></div>
       </div>
 
       <div class="pgallery-item gallery-hidden" data-lb-index="7">
-        <img src="https://pub-bd2efcc812524f54a8c492f90052f3bd.r2.dev/goiania-go/venda-de-empilhadeira-clark/clark-s25-s35/clark-s25-s35-operacao-02.jpg"
+        <img width="800" height="600" src="https://pub-bd2efcc812524f54a8c492f90052f3bd.r2.dev/goiania-go/venda-de-empilhadeira-clark/clark-s25-s35/clark-s25-s35-operacao-02.jpg"
              alt="Clark S25L GLP elevando carga em doca — operacao logistica multi-turno"
              loading="lazy">
         <div class="pgallery-caption"><span>Doca logistica — GLP, operacao multi-turno</span></div>
       </div>
 
       <div class="pgallery-item gallery-hidden" data-lb-index="8">
-        <img src="https://pub-bd2efcc812524f54a8c492f90052f3bd.r2.dev/goiania-go/venda-de-empilhadeira-clark/clark-s25-s35/clark-s25-s35-operacao-03.jpg"
+        <img width="800" height="600" src="https://pub-bd2efcc812524f54a8c492f90052f3bd.r2.dev/goiania-go/venda-de-empilhadeira-clark/clark-s25-s35/clark-s25-s35-operacao-03.jpg"
              alt="Clark S35 em operacao em patio externo — Move Maquinas Goiania Goias"
              loading="lazy">
         <div class="pgallery-caption"><span>Patio externo — Clark S35, Move Maquinas Goias</span></div>
       </div>
 
       <div class="pgallery-item gallery-hidden" data-lb-index="9">
-        <img src="https://pub-bd2efcc812524f54a8c492f90052f3bd.r2.dev/goiania-go/venda-de-empilhadeira-clark/clark-s25-s35/clark-s25-s35-mastro-triplex.jpg"
+        <img width="800" height="600" src="https://pub-bd2efcc812524f54a8c492f90052f3bd.r2.dev/goiania-go/venda-de-empilhadeira-clark/clark-s25-s35/clark-s25-s35-mastro-triplex.jpg"
              alt="Mastro triplex Clark S-Series — altura colapsada 2.115 mm para docas e frigorificos"
              loading="lazy">
         <div class="pgallery-caption"><span>Mastro Triplex — colapsado em 2.115 mm para frigorifico</span></div>
       </div>
 
       <div class="pgallery-item gallery-hidden" data-lb-index="10">
-        <img src="https://pub-bd2efcc812524f54a8c492f90052f3bd.r2.dev/goiania-go/venda-de-empilhadeira-clark/clark-s25-s35/clark-s25-s35-visao-geral.jpg"
+        <img width="800" height="600" src="https://pub-bd2efcc812524f54a8c492f90052f3bd.r2.dev/goiania-go/venda-de-empilhadeira-clark/clark-s25-s35/clark-s25-s35-visao-geral.jpg"
              alt="Clark S25L GLP em patio — visao lateral, chassi soldado e pneu cushion"
              loading="lazy">
         <div class="pgallery-caption"><span>Clark S25L GLP — patio, pneu cushion</span></div>
       </div>
 
       <div class="pgallery-item gallery-hidden" data-lb-index="11">
-        <img src="https://pub-bd2efcc812524f54a8c492f90052f3bd.r2.dev/goiania-go/venda-de-empilhadeira-clark/clark-s25-s35/clark-s25-s35-visao-geral.jpg"
+        <img width="800" height="600" src="https://pub-bd2efcc812524f54a8c492f90052f3bd.r2.dev/goiania-go/venda-de-empilhadeira-clark/clark-s25-s35/clark-s25-s35-visao-geral.jpg"
              alt="Clark S25 S30 S35 vista geral — garfos padrao ISO, largura de corredor 3.200 mm cushion"
              loading="lazy">
         <div class="pgallery-caption"><span>Vista geral — garfos ISO, corredor 3.200 mm cushion</span></div>
@@ -3370,5 +3138,6 @@ function toggleOverviewMobile(btn){
   });
 })();
 </script>
+<link rel="stylesheet" href="assets/styles-pdp.css">
 </body>
 </html>
