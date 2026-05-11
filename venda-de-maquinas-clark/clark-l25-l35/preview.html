@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Preview — Clark L25-L35</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; max-width: 960px; margin: 0 auto; padding: 24px; color: #1a1a1a; line-height: 1.7; }
+    h1 { font-size: 2rem; }
+    h2 { margin-top: 2.5rem; border-bottom: 2px solid #1D9648; padding-bottom: 8px; color: #111; }
+    h3 { color: #222; }
+    .hero-section { background: #111; color: #fff; padding: 40px; border-radius: 10px; margin-bottom: 32px; }
+    .hero-section h1 { color: #fff; margin-top: 0; }
+    .hero-section p { color: #bbb; }
+    .opening-scene { border-left: 4px solid #1D9648; padding-left: 16px; margin-bottom: 20px; }
+    .opening-scene p { color: #aaa; font-style: italic; }
+    .hero-delivery { background: #1D9648; color: #fff; display: inline-block; padding: 5px 14px; border-radius: 20px; font-weight: 600; font-size: 0.9rem; margin-bottom: 16px; }
+    .hero-bullets { list-style: none; padding: 0; margin: 16px 0; }
+    .hero-bullets li { padding: 5px 0 5px 24px; position: relative; color: #ccc; font-size: 0.95rem; }
+    .hero-bullets li::before { content: "✓"; color: #1D9648; position: absolute; left: 0; font-weight: 700; }
+    .hero-ctas { display: flex; gap: 12px; margin-top: 20px; flex-wrap: wrap; }
+    .hero-ctas a { padding: 11px 22px; border-radius: 6px; text-decoration: none; font-weight: 600; }
+    .btn-primary { background: #1D9648; color: #fff !important; }
+    .btn-secondary { background: transparent; color: #7fcc9b !important; border: 2px solid #1D9648; }
+    .hero-image img { width: 100%; max-height: 360px; object-fit: contain; margin-top: 24px; background: #222; border-radius: 8px; padding: 16px; }
+    .trust-strip { display: flex; gap: 10px; margin-top: 20px; flex-wrap: wrap; }
+    .trust-badge { background: rgba(29,150,72,0.2); color: #7fcc9b; padding: 5px 12px; border-radius: 4px; font-size: 0.82rem; font-weight: 600; }
+    .key-findings { display: flex; gap: 16px; margin: 32px 0; flex-wrap: wrap; }
+    .key-finding-card { background: #f4faf6; border: 1px solid #1D9648; border-radius: 8px; padding: 20px; flex: 1; min-width: 180px; text-align: center; }
+    .number { font-size: 2.4rem; font-weight: 800; color: #1D9648; line-height: 1; }
+    .label { font-size: 0.85rem; color: #555; margin-top: 6px; }
+    .decision-tree { background: #f0f7f2; border: 2px solid #1D9648; border-radius: 8px; padding: 24px; margin: 24px 0; }
+    .decision-tree h2 { color: #1D9648; margin-top: 0; border: none; padding: 0; }
+    .dt-step { background: #fff; border-left: 4px solid #1D9648; padding: 10px 16px; margin: 8px 0; border-radius: 0 4px 4px 0; font-weight: 500; }
+    .dt-final { font-weight: 700; color: #1D9648; margin-top: 16px; }
+    .info-box { background: #f5faf6; border-left: 4px solid #1D9648; padding: 16px 20px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+    .info-box h3 { margin-top: 0; color: #1D9648; font-size: 1rem; }
+    .info-box ul { margin: 8px 0; padding-left: 20px; }
+    .info-box li { margin: 6px 0; }
+    .pattern-break { background: #111; color: #fff; padding: 14px 20px; margin: 20px 0; border-radius: 6px; font-weight: 600; font-size: 1.05rem; }
+    .bucket-bridge { display: block; font-weight: 700; color: #1D9648; margin: 16px 0; }
+    .slippery-slide { background: #f0f7f2; padding: 12px 16px; border-radius: 4px; margin: 16px 0 24px; font-style: italic; color: #444; border-left: 3px solid #1D9648; }
+    .narrative-return { background: #111; color: #bbb; padding: 20px 24px; border-radius: 6px; margin: 20px 0; font-style: italic; line-height: 1.8; }
+    .comparison-table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 0.92rem; }
+    .comparison-table th { background: #1D9648; color: #fff; padding: 10px 14px; text-align: left; }
+    .comparison-table td { padding: 9px 14px; border-bottom: 1px solid #e5e5e5; }
+    .comparison-table tr:nth-child(even) td { background: #f9f9f9; }
+    .checklist { list-style: none; padding: 0; }
+    .checklist-item { padding: 6px 0 6px 28px; position: relative; }
+    .micro-cta { display: inline-block; background: #1D9648; color: #fff !important; padding: 12px 24px; border-radius: 6px; text-decoration: none; font-weight: 600; margin: 12px 0; }
+    article { margin-bottom: 48px; }
+    figure { margin: 0 0 20px; }
+    figure img { width: 100%; border-radius: 8px; }
+    p { margin: 0.8em 0 1em; }
+  </style>
+</head>
+<body>
+<section class="hero-section">
+  <div class="hero-content">
+    <div class="opening-scene">
+      <p><strong>São 15h em um galpão de distribuição no Setor Marista.</strong> Marcelo operou a mesma empilhadeira por 12 anos. A máquina antiga não levanta mais a carga de 3 toneladas sem vibração. A coluna dele dá aviso. Se pudesse escolher de novo, escolheria diferente. Mas agora sabe o quê.</p>
+    </div>
+
+    <p class="hero-delivery"><strong>Entrega em até 5 dias úteis em Goiânia.</strong></p>
+
+    <h1>Empilhadeira Clark L25-L35. GLP e Diesel de 2,5 a 3,5 Toneladas</h1>
+
+    <p class="hero-subtitle">A máquina mais alugada em Goiânia para operação real. Motor Hyundai 70 HP, transmissão anti-vibração e freio de segurança ativa que protege carga e operador.</p>
+
+    <ul class="hero-bullets">
+      <li><strong>Motor Hyundai Theta 2.4L:</strong> 70 HP @ 2.500 rpm. potência constante independente da carga.</li>
+      <li><strong>Transmissão Power-Shift:</strong> coxins de borracha anti-vibração. operador sente a diferença em 2 horas.</li>
+      <li><strong>Mástro Perfil I:</strong> 30% mais visibilidade, 6 rolamentos no carro. estrutura que dura 30-40% a mais.</li>
+      <li><strong>Clark CSS:</strong> detecção de tombamento em &lt;500ms, freio automático. segurança ativa, não passiva.</li>
+    </ul>
+
+    <div class="hero-ctas">
+      <a href="#solicitar" class="btn-cta btn-primary">Solicitar proposta de compra</a>
+      <a href="#especificacoes" class="btn-cta btn-secondary">Ver especificações</a>
+    </div>
+
+    <div class="trust-strip">
+      <div class="trust-badge">Motor Hyundai 70 HP</div>
+      <div class="trust-badge">Freio Auto-ajustável</div>
+      <div class="trust-badge">NR-11 Homologada</div>
+      <div class="trust-badge">Manutenção Inclusa</div>
+    </div>
+  </div>
+
+  <div class="hero-image">
+    <img src="images/clark-l25-fundo-branco-1.png" alt="Clark L25 empilhadeira de 2,5 toneladas">
+  </div>
+</section>
+
+<section class="key-findings">
+  <div class="key-finding-card">
+    <div class="number">70 HP</div>
+    <div class="label">Motor Hyundai Theta 2.4L</div>
+  </div>
+
+  <div class="key-finding-card">
+    <div class="number">3.300 kg</div>
+    <div class="label">Capacidade máxima (L33)</div>
+  </div>
+
+  <div class="key-finding-card">
+    <div class="number">79 dB(A)</div>
+    <div class="label">Operação silenciosa GLP</div>
+  </div>
+</section>
+
+<section class="decision-tree">
+  <h2>Qual modelo é o seu?</h2>
+
+  <div class="dt-step">
+    <p><strong>Se sua carga é até 2.500 kg:</strong> Clark L25</p>
+  </div>
+
+  <div class="dt-step">
+    <p><strong>Se sua carga é até 3.000 kg:</strong> Clark L30</p>
+  </div>
+
+  <div class="dt-step">
+    <p><strong>Se sua carga é até 3.300 kg:</strong> Clark L33</p>
+  </div>
+
+  <p class="dt-final"><strong>Dúvida? Ligue agora e um consultor identifica o modelo certo em 5 minutos.</strong></p>
+</section>
+
+<section class="main-content">
+
+  <article>
+    <h2>Por que a Clark L-Series é a empilhadeira mais vendida em Goiânia para 2,5 a 3,5 toneladas</h2>
+
+    <p>Porque a Clark L25-L35 foi projetada para não decepcionar. A Clark L25, L30 e L33 resolvem o problema real de quem trabalha em galpão: máquina parada é custo, máquina com problema é desastre, máquina certa é lucro.</p>
+
+    <p class="bucket-bridge">Entender por que a Clark L25-L35 domina esse segmento em Goiânia é entender a diferença entre comprar máquina e comprar confiabilidade.</p>
+
+    <p>Não é sobre capacidade nominal no catálogo. É sobre ciclo de operação. Uma empilhadeira que levanta 3 toneladas 200 vezes por dia, em 3 setores diferentes, com 2 operadores em turno. essa máquina vai usar cada cavalo de potência, cada mês do freio, cada porca do mástro.</p>
+
+    <p>A Clark L-Series usa o motor Hyundai Theta (não XinChai diesel barato). Usa transmissão Power-Shift integrada ao diferencial, não corrente. Usa mástro com perfil I e 6 rolamentos, não 4. Isso não é marketing.</p>
+
+    <div class="pattern-break">
+      <strong>Isso é a diferença entre máquina que dura 5 anos normal e máquina que dura 7 anos gerando lucro.</strong>
+    </div>
+
+    <p>Galpões em Goiânia que precisam mover carga entre 2,5 e 3,5 toneladas (distribuição, frigorífico, varejo, construção) rodam a Clark L-Series. Não porque é a mais barata. Porque é a que oferece menor custo operacional no ciclo completo.</p>
+
+    <p class="bucket-bridge">Mas qual é o custo real dessa escolha? Continue lendo para ver os números e decidir qual modelo faz sentido para sua operação.</p>
+
+    <p class="slippery-slide"><strong>Entender a diferença entre modelos te economiza R$ 1.200/mês.</strong> Porque a máquina errada vai vibrar, parar, custar manutenção fora do contrato. e você vai saber por quê.</p>
+  </article>
+
+  <article>
+    <h2>Motor Hyundai Theta 2.4L: o que significa na prática para sua operação</h2>
+
+    <p>70 cavalo-vapor @ 2.500 rpm, 4 cilindros DOHC, 16 válvulas, cilindrada de 2.359 cc. Isso soa como especificação de catálogo. Mas a verdade está embaixo.</p>
+
+    <div class="info-box">
+      <p><strong>O Hyundai Theta é projetado para potência constante em baixa rotação.</strong> A L25 não fica procurando rotação como um diesel XinChai. Ela entrega o torque que você pediu, sem lag, sem vibração, sem surpresa.</p>
+    </div>
+
+    <p>Compare com os modelos diesel. A Clark L25D usa motor XinChai 2.7L, 50 HP. menos potência, mesma capacidade nominal. Por quê? Porque diesel custa menos por litro. mas produz menos cavalo-vapor por cilindrada. A L30D? Mesma história. Até a L33D com Yanmar 4TNE98 (62 HP). motor robusto, mas injeção mecânica, menos feedback do operador.</p>
+
+    <p>Agora pense: você está em um galpão climatizado. Não é rodovia, não é obra de construção. Ar é limpo, temperatura é controlada. GLP nesse contexto? É a escolha ideal. Menos ruído (79 dB(A) vs 87 dB(A) diesel), menos emissão de calor, menos desgaste de componentes eletrônicos.</p>
+
+    <p>Marcelo (que citei no início) operou a mesma máquina por 7 anos com manutenção preventiva. No dia que ela saiu de operação, ainda levantava 3 toneladas sem oscilação. Motor Hyundai. Não é coincidência.</p>
+
+    <p class="bucket-bridge">Esse motor confiável é só a primeira razão pela qual a Clark L25-L35 se destaca. A transmissão é outra.</p>
+
+    <p class="slippery-slide"><strong>É por isso que muitos operadores pedem especificamente a L-Series.</strong> Não porque aprenderam a mecânica. Porque aprenderam no corpo: máquina que não vibra é máquina que dura.</p>
+  </article>
+
+  <article>
+    <figure style="margin: 0 0 24px;">
+      <img src="images/clark-l25-fundo-branco-2.png" alt="Clark L25 vista lateral — empilhadeira GLP 2,5 toneladas">
+    </figure>
+    <h2>Transmissão Power-Shift anti-vibração: tecnologia que o operador sente</h2>
+
+    <p>Transmissão Power-Shift é uma coisa. Transmissão Power-Shift integrada ao eixo diferencial com coxins de borracha anti-vibração é outra.</p>
+
+    <p>Grande parte dos concorrentes de 3 toneladas usa corrente ou transmissão acoplada direto ao chassi. Cada movimento de marcha, cada frenagem, cada curva carregada. o operador sente tudo na coluna. Depois de 8 horas (ou 8 anos), a coluna cobra a conta.</p>
+
+    <p>Os coxins de borracha absorvem essa energia. Você muda de marcha e a máquina não solta um pulo. Você faz curva carregada e o operador não sente aquele "hmpf" no abdômen que vem de 4 toneladas em dinâmica.</p>
+
+    <div class="pattern-break">
+      <strong>Operador em turno longo: é a diferença entre dor e conforto.</strong>
+    </div>
+
+    <p>Teste em operação: dirija uma Clark L-Series GLP por 30 minutos carregada. Depois dirija um modelo com transmissão acoplada direto. Seu corpo vai saber a resposta antes de sua mente processar o dado técnico.</p>
+
+    <p>A manutenção também é menor. Coxins de borracha duram. Eixo diferencial com Power-Shift integrada tem menos pontos de oscilação, menos óleo perde, menos coisa quebra.</p>
+
+    <p class="bucket-bridge">Agora que você conhece o conforto do operador, vamos falar da estrutura que sustenta essa máquina por décadas.</p>
+
+    <p class="slippery-slide"><strong>Para operadores em turnos longos, é a diferença entre dor e conforto.</strong> E em Goiânia, onde muitos galpões rodam 16h/dia com 2 operadores, isso significa zero faltas por lesão, zero rotatividade, zero custo invisível.</p>
+  </article>
+
+  <article>
+    <figure style="margin: 0 0 24px;">
+      <img src="images/clark-l25-fundo-branco-5.png" alt="Detalhe do mástro Perfil I da Clark L25 — visibilidade e estrutura">
+    </figure>
+    <h2>Mástro com Perfil I: 30% mais visibilidade, estrutura que dura</h2>
+
+    <p>Torre de empilhadeira tem 2 desenhos principais: perfil plano (H-beam) e perfil I intercalado.</p>
+
+    <p>Perfil plano? Mais barato. Menos visibilidade para o lado (o operador enxerga a viga horizontal bloqueando a linha de visão lateral). Estrutura enxuta.</p>
+
+    <p>Perfil I intercalado (que a Clark L-Series usa)? Mais caro. Muito mais visibilidade. Estrutura que distribui carga em mais pontos. E aqui vem o número que muda tudo: 6 rolamentos no carro porta-garfos contra 4 dos modelos mais baratos.</p>
+
+    <div class="info-box">
+      <p><strong>6 rolamentos vs 4 rolamentos = extensão de vida útil em 30-40% no carrinho porta-garfos.</strong> A carga se distribui em mais pontos, menos stress concentrado, menos desgaste por unidade de movimento.</p>
+    </div>
+
+    <p>Você está movimentando paletes 200 vezes por dia. 200 ciclos de carga, sobe, lateraliza, abaixa, volta. Por 5 anos. Isso não é detalhe cosmético. é inversão de capital a longo prazo.</p>
+
+    <p>Torre com Perfil I também permite variações de altura sem perder visibilidade. Triplex? Duplex? Simplex? Você escolhe a altura, não a altura escolhe você. A Clark L-Series deixa a escolha na sua mão.</p>
+
+    <p class="bucket-bridge">Com essa robustez estrutural em mãos, que tal conhecer o sistema de segurança que protege carga e operador?</p>
+
+    <p class="slippery-slide"><strong>Isso não é detalhe cosmético. é inversão de capital a longo prazo.</strong> Porque a máquina que dura 7 anos em vez de 5 é a máquina que você amortiza, não a máquina que você corre atrás.</p>
+  </article>
+
+  <article>
+    <figure style="margin: 0 0 24px;">
+      <img src="images/clark-l25-operacao-1.jpg" alt="Clark L25 em operação no galpão — segurança ativa CSS">
+    </figure>
+    <h2>Clark CSS: estabilidade ativa que protege carga e operador</h2>
+
+    <p>Clark Stability System (CSS) é o sistema de detecção de risco de tombamento que a Clark L-Series monta de série.</p>
+
+    <p>Como funciona? Sensor detecta inclinação anormal em curva ou levantamento lateral em &lt;500 milissegundos. Se o risco de tombamento cruza o limiar, o freio aciona automaticamente. Sem esperar ação do operador. Sem hesitação.</p>
+
+    <p>Isso é segurança ativa, não passiva. Passiva seria uma estrutura resistente mas que depende do operador não errar. Ativa é a máquina avisando "ei, você está no limite" e corrigindo antes do pior acontecer.</p>
+
+    <div class="pattern-break">
+      <strong>Zero acidentes por segurança significa zero paradas não programadas.</strong>
+    </div>
+
+    <p>Conformidade com NR-11? Sim. Mas além disso, o CSS reduz o custo invisível: seguro mais barato, zero sinistro, zero faltas por acidente. Galpão em Goiânia com manutenção preventiva (como a Move Máquinas oferece) + Clark CSS = operação que dorme segura.</p>
+
+    <p>Painel com microprocessador também marca cada evento. Você sabe quantas vezes o CSS acionou, em que hora, em qual operação. Dados para aprender, não para assustar.</p>
+
+    <p class="bucket-bridge">Agora que você conhece os sistemas mecânicos e de segurança da Clark L25-L35, vamos aos números técnicos que fundamentam cada escolha.</p>
+
+    <p class="slippery-slide"><strong>Zero acidentes por segurança significa zero paradas não programadas.</strong> Porque acidente é parada, investigação, documentação. tudo que mata a produtividade e o lucro.</p>
+  </article>
+
+  <article id="especificacoes">
+    <h2>Especificações técnicas: Clark L25, L30 e L33</h2>
+
+    <p>Aqui estão os números que definem o comportamento de cada modelo. Use esta tabela para escolher carga máxima real, raio de giro operacional e velocidade prática para seu galpão.</p>
+
+    <table class="comparison-table">
+      <thead>
+        <tr>
+          <th>Parâmetro</th>
+          <th>Clark L25L</th>
+          <th>Clark L30L</th>
+          <th>Clark L33L</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Capacidade nominal</strong></td>
+          <td>2.500 kg</td>
+          <td>3.000 kg</td>
+          <td>3.300 kg</td>
+        </tr>
+        <tr>
+          <td><strong>Motor</strong></td>
+          <td colspan="3">Hyundai Theta 2.4L, 70 HP @ 2.500 rpm, DOHC 16v</td>
+        </tr>
+        <tr>
+          <td><strong>Transmissão</strong></td>
+          <td colspan="3">Power-Shift integrada, coxins anti-vibração</td>
+        </tr>
+        <tr>
+          <td><strong>Raio de giro mín.</strong></td>
+          <td>2.380 mm</td>
+          <td>2.480 mm</td>
+          <td>2.480 mm</td>
+        </tr>
+        <tr>
+          <td><strong>Corredor mín. (AST)</strong></td>
+          <td>4.045 mm</td>
+          <td>4.145 mm</td>
+          <td>4.145 mm</td>
+        </tr>
+        <tr>
+          <td><strong>Velocidade avanço</strong></td>
+          <td>16,3 km/h</td>
+          <td>17,0 km/h</td>
+          <td>17,0 km/h</td>
+        </tr>
+        <tr>
+          <td><strong>Velocidade ré</strong></td>
+          <td>18,1 km/h</td>
+          <td>19,0 km/h</td>
+          <td>19,0 km/h</td>
+        </tr>
+        <tr>
+          <td><strong>Peso operacional</strong></td>
+          <td>3.680 kg</td>
+          <td>4.120 kg</td>
+          <td>4.240 kg</td>
+        </tr>
+        <tr>
+          <td><strong>Altura garfos padrão</strong></td>
+          <td>4.800 mm</td>
+          <td>4.800 mm</td>
+          <td>4.620 mm</td>
+        </tr>
+        <tr>
+          <td><strong>Pneus dianteiros</strong></td>
+          <td>7.00X12-14PR</td>
+          <td>28X9X15-14PR</td>
+          <td>28X9X15-14PR</td>
+        </tr>
+        <tr>
+          <td><strong>Ruído GLP</strong></td>
+          <td colspan="3">79 dB(A). dentro da NR-15</td>
+        </tr>
+        <tr>
+          <td><strong>Normas</strong></td>
+          <td colspan="3">NR-11, NR-12, ANSI/ITSDF B56.1, ISO 2631</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p><strong>Nota sobre diesel:</strong> Também oferecemos as versões L25D, L30D e L33D com motor diesel. L25D e L30D usam XinChai 2.7L 50 HP; L33D usa Yanmar 4TNE98 62 HP. Diesel é alternativa para operação externa ou por preferência de combustível.</p>
+
+    <p class="bucket-bridge">Os números da Clark L25-L35 falam sozinhos, mas o seu caso é único. Continue para ver qual modelo se encaixa no seu galpão.</p>
+
+    <p class="slippery-slide"><strong>A escolha correta depende do seu pico de carga. veja o mapa de decisão abaixo.</strong> Porque comprar L25 quando você precisa de L30 é economizar no preço de entrada e gastar R$ 2.000/mês em manutenção de componentes sobrecarregados.</p>
+  </article>
+
+  <article>
+    <figure style="margin: 0 0 24px; display: flex; gap: 12px;">
+      <img src="images/clark-l25-operacao-2.png" alt="Clark L30 em operação em frigorífico" style="flex:1; object-fit:cover; border-radius:6px;">
+      <img src="images/clark-l25-operacao-3.png" alt="Clark L33 movimentando carga em galpão de distribuição" style="flex:1; object-fit:cover; border-radius:6px;">
+    </figure>
+    <h2>Para que tipo de operação a Clark L25-L35 é indicada? (e quando não é)</h2>
+
+    <p>Existem máquinas para rodovia, máquinas para obra, máquinas para galpão. A Clark L-Series é máquina de galpão. Operação repetitiva, ciclo definido, ambiente controlado.</p>
+
+    <div class="checklist">
+      <div class="checklist-item">
+        <strong>Distribuição:</strong> movimentação de paletes em corredor, de 2,5 a 3 toneladas, 10h/dia. L25 ou L30 conforme pico real.
+      </div>
+      <div class="checklist-item">
+        <strong>Frigorífico:</strong> carga com umidade, temperatura controlada, altura variável. L30 ou L33 por segurança em ambiente hostil.
+      </div>
+      <div class="checklist-item">
+        <strong>Varejo/logística:</strong> carga heterogênea, zona de recebimento, 14h/dia. L30 padrão, L33 se pico ultrapassa 3 toneladas.
+      </div>
+      <div class="checklist-item">
+        <strong>Construção:</strong> movimentação em canteiro, piso irregular. Diesel recomendado (L25D ou L30D), ou GLP em ambiente fechado.
+      </div>
+    </div>
+
+    <p>Se você precisa mover carga acima de 3,5 toneladas regularmente, converse conosco sobre a série S (S25-S35, capacidade até 5 toneladas). Acesse <a href="/venda-de-maquinas-clark/clark-s25-s35/">Clark S25-S35 para operações pesadas</a> para entender a diferença.</p>
+
+    <p>Você também pode consultar <a href="/venda-de-maquinas-clark/">todas as empilhadeiras Clark disponíveis</a> em Goiânia ou iniciar uma conversa com nosso time sobre customizações e condições de pagamento.</p>
+
+    <p class="bucket-bridge">90% dos galpões em Goiânia rodam L25 ou L30. qual é o seu?</p>
+
+    <p class="slippery-slide"><strong>90% dos galpões em Goiânia rodam L25 ou L30. qual é o seu?</strong> Porque o modelo certo significa operação sem surpresa, custos previsíveis, e máquina que dura.</p>
+  </article>
+
+  <article>
+    <h2>Como comprar a Clark L25-L35 em Goiânia: Move Máquinas revendedora autorizada</h2>
+
+    <p>A Move Máquinas é revendedora Clark em Goiânia. A Clark L25-L35 sai do nosso pátio calibrada, testada, com documentação completa e suporte técnico pós-venda.</p>
+
+    <p>Quem compra a Clark L25-L35 pela Move Máquinas recebe a máquina pronta para operar. Tanque cheio, pneus calibrados, CSS verificado, mástro ajustado para a altura do seu galpão. Você não recebe uma caixa. Recebe uma operação funcionando.</p>
+
+    <div class="info-box">
+      <h3>O que acompanha cada Clark L25-L35 vendida:</h3>
+      <ul>
+        <li>Manual do operador em português</li>
+        <li>Documentação de conformidade NR-11 e NR-12</li>
+        <li>Garantia Clark com suporte técnico autorizado em Goiânia</li>
+        <li>Peças originais Clark disponíveis em estoque local</li>
+        <li>Primeira manutenção preventiva (250 horas) com desconto</li>
+      </ul>
+    </div>
+
+    <div class="info-box">
+      <h3>Custo real de propriedade em 5 anos (TCO)</h3>
+      <p>Quatro variáveis definem o custo total de uma empilhadeira. Use este framework antes de decidir:</p>
+      <ul>
+        <li><strong>Preço de aquisição</strong> — base do cálculo. Compare modelos equivalentes, não só o menor preço de entrada</li>
+        <li><strong>Manutenção preventiva</strong> — estimativa de 8-12% do valor da máquina por ano em operação intensiva</li>
+        <li><strong>Combustível</strong> — GLP rende 15-20% mais ciclos por litro equivalente vs diesel em galpão fechado</li>
+        <li><strong>Parada não programada</strong> — cada hora parada em 2 turnos tem custo real. A Clark L25-L35 com manutenção em dia tem índice de parada próximo de zero</li>
+      </ul>
+      <p>Solicite a planilha de TCO personalizada com a Move Máquinas. Preenchemos com os dados da sua operação e entregamos a comparação L25 vs L30 vs L33 em um único documento.</p>
+    </div>
+
+    <div class="narrative-return">
+      <p><em>Marcelo, aquele operador de 12 anos que começou neste texto parado porque a máquina não levantava. Comprou uma L30 pela Move Máquinas. Recebeu a máquina em 5 dias, calibrada, documentação em mãos. Três meses depois? Operando nos parâmetros originais, manutenção preventiva em dia, zero surpresa.</em></p>
+    </div>
+
+    <p>Também oferecemos locação para quem prefere capital de giro livre. Curto prazo (3 meses), médio ou longo prazo com manutenção inclusa. A decisão é sua.</p>
+
+    <a href="#solicitar" class="micro-cta">Solicitar proposta de compra</a>
+
+    <p class="slippery-slide"><strong>O compromisso da Move Máquinas não é com a venda. É com a sua operação funcionando.</strong> Porque máquina parada custa, máquina quebrada custa mais. Máquina que funciona? Isso é lucro seu.</p>
+  </article>
+
+  <article>
+    <h2>Perguntas frequentes sobre a Clark L25-L35</h2>
+
+    <h3>Qual a diferença entre a Clark L25 e a Clark S25?</h3>
+    <p>L25 é 2,5 toneladas, mástro com Perfil I, 6 rolamentos, otimizada para operação de galpão com piso regular. S25 é 2,5 toneladas também, mas mástro mais robusto, chassis mais pesado, indicada para canteiro de obra ou operação em terreno irregular.</p>
+    <p>Capacidade nominal é igual; robustez é diferente. Se você está em galpão com piso regular, a Clark L25 é a resposta. Se trabalha em canteiro ou piso acidentado, S25 é melhor investimento a longo prazo.</p>
+
+    <h3>GLP é mais caro para operar que diesel?</h3>
+    <p>Não. GLP custa mais por litro, mas o motor Hyundai Theta (GLP) consome menos e gera mais torque que o XinChai diesel (50 HP vs 70 HP). Custo/hora de operação na Clark L25-L35 é similar ou a favor do GLP em ambiente climatizado.</p>
+    <p>Além disso, GLP reduz manutenção (menos depósitos de carbono), menos ruído (79 dB vs 87 dB), menos desgaste de eletrônicos. A economia real aparece em 12 meses de operação.</p>
+
+    <h3>Qual o plano de manutenção recomendado para a Clark L25-L35?</h3>
+    <p>A manutenção preventiva padrão inclui: troca de óleo a cada 250 horas, filtro de ar, filtro hidráulico, inspeção de freio (tambor), revisão de mástro (rolamentos, corrente), teste de CSS, limpeza de sensor e calibração de assento.</p>
+    <p>A Move Máquinas oferece plano de manutenção preventiva pós-venda. Peças originais Clark em estoque local, técnicos treinados em Goiânia, atendimento em até 24h. Consulte condições na proposta de compra.</p>
+
+    <h3>Qual modelo escolher: L25, L30 ou L33?</h3>
+    <p>Use a carga máxima real (não média) do seu galpão. Se está entre 2,5 e 2,8 toneladas, L25 sobra. Entre 2,8 e 3,2, L30 é seguro. Acima de 3,2, L33. Margem de segurança é importante: máquina operando a 80% da capacidade nominal dura mais e custa menos em manutenção.</p>
+
+    <h3>A empilhadeira Clark L-Series atende à NR-11?</h3>
+    <p>Sim. Todas as Clark L-Series são homologadas conforme NR-11 (operação de empilhadeiras), NR-12 (segurança de máquinas) e normas internacionais ANSI/ITSDF B56.1 e ISO 2631. Clark CSS adiciona camada de segurança ativa (detecção de tombamento). Documentação completa enviada com a máquina.</p>
+
+    <h3>Quanto tempo leva para entregar a máquina em Goiânia?</h3>
+    <p>5 a 7 dias úteis. A máquina sai do nosso pátio calibrada, testada, com tanque cheio e documentação completa. Para modelos sob encomenda ou configurações especiais, o prazo pode variar. Entre em contato para data estimada exata.</p>
+
+    <h3>É possível alugar por curto prazo (eventos, obras)?</h3>
+    <p>Sim. Oferecemos locação a partir de 3 dias corridos até 12 meses. Curto prazo tem custo/dia acrescido, mas sem compromisso longo. Ideal para: eventos, picos sazonais, obras temporárias, testes de operação. Fale conosco sobre seu período exato.</p>
+
+    <h3>Qual a vida útil do freio tambor auto-ajustável?</h3>
+    <p>O tambor hidráulico com auto-ajuste da Clark L-Series tem vida média de 2.000-2.500 horas de operação (2-3 anos em ciclo normal).</p>
+    <p>Manutenção preventiva estende esse período: inspeção trimestral de desgaste, teste de pressão hidráulica, limpeza de poeira. Com manutenção inclusa (como oferecemos na Move Máquinas), você sabe sempre o estado real do freio.</p>
+  </article>
+
+</section>
+</body>
+</html>

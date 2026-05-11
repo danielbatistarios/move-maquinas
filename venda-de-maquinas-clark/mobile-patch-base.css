@@ -1,0 +1,196 @@
+/* ================================================
+   MOBILE PATCH BASE — PDPs Clark / Move Máquinas
+   Versão: 1.0 — Mai/2026
+   Origem: clark-s25-s35/mobile-patch.css + auditorias /mobile-review
+
+   USO: copiar este arquivo para a pasta do modelo
+   e renomear para mobile-patch.css. Adicionar no <head>:
+     <link rel="stylesheet" href="mobile-patch.css">
+
+   CLASSES ESPECÍFICAS DE PRODUTO: nenhuma.
+   Todas as regras usam classes do design system comum.
+   ================================================ */
+
+
+/* ── 1. SCROLL PADDING — âncoras não ficam atrás da nav fixa + tabs-nav ── */
+html {
+  scroll-padding-top: 110px; /* nav (~52px) + tabs-nav sticky (~50px) + folga */
+}
+
+
+/* ── 2. BURGER — área de toque mínima 44×44px (WCAG 2.5.5) ── */
+.nav-burger {
+  min-width: 44px;
+  min-height: 44px;
+  padding: 11px;
+  display: none;
+}
+@media (max-width: 1024px) {
+  .nav-burger {
+    display: flex;
+  }
+}
+
+
+/* ── 3. TIPOGRAFIA — tamanho mínimo legível em mobile ── */
+@media (max-width: 768px) {
+  .qs-label {
+    font-size: 12px; /* mínimo absoluto — abaixo disso ilegível em 320px */
+  }
+}
+
+
+/* ── 4. CANAL GRID — 2 colunas em tablet (769–900px) ── */
+@media (max-width: 900px) {
+  .canal-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+/* ── 5. FORM — altura mínima de input 48px (WCAG touch target) ── */
+@media (max-width: 768px) {
+  .orc-group input,
+  .orc-group select,
+  .orc-group textarea {
+    padding: 13px 14px; /* resulta em ~48px de altura com line-height padrão */
+  }
+}
+
+
+/* ── 6. FOOTER SOCIAL — área de toque 44×44px ── */
+@media (max-width: 768px) {
+  .footer-social {
+    width: 44px;
+    height: 44px;
+  }
+}
+
+
+/* ── 7. HOVER CONDICIONAL — elimina hover grudado em touch screens ── */
+/* Aplica transform/shadow apenas em dispositivos com ponteiro real */
+@media (hover: hover) {
+  .feature-box:hover {
+    box-shadow: 0 12px 48px rgba(0, 0, 0, .12);
+    transform: translateY(-3px);
+  }
+  .vid-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 28px rgba(0, 0, 0, .12);
+  }
+  .related-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 48px rgba(0, 0, 0, .12);
+  }
+  .gallery-main:hover img {
+    transform: scale(1.02);
+  }
+  .gallery-thumb:hover {
+    opacity: .82;
+  }
+  .fuel-photo:hover img {
+    transform: scale(1.03);
+  }
+  .sector-card:hover {
+    box-shadow: 0 12px 48px rgba(0, 0, 0, .12);
+    transform: translateY(-3px);
+    border-color: rgba(29, 150, 72, .25);
+  }
+  .factor-card:hover {
+    box-shadow: 0 12px 48px rgba(0, 0, 0, .12);
+    transform: translateY(-3px);
+  }
+  /* Adicionar aqui outros cards com hover se a PDP tiver */
+}
+
+/* Touch: desativa transition para não ficar estado preso após tap */
+@media (hover: none) {
+  .feature-box,
+  .vid-card,
+  .related-card,
+  .sector-card,
+  .factor-card {
+    transition: none;
+  }
+}
+
+
+/* ── 8. REDUCED MOTION — respeita preferência de acessibilidade ── */
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track {
+    animation: none;
+  }
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  * {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}
+
+
+/* ── 9. GALLERY SIDEBAR — scroll-snap nos thumbs em mobile ── */
+@media (max-width: 768px) {
+  .gallery-sidebar {
+    scroll-snap-type: x mandatory;
+  }
+  .gallery-thumb {
+    scroll-snap-align: start;
+  }
+}
+
+
+/* ── 10. PADDING FLUIDO — seções com padding fixo em px convertidas para clamp ── */
+/* Ajustar conforme as seções que a PDP tiver */
+@media (max-width: 768px) {
+  .fuel-compare-section {
+    padding: clamp(48px, 7vw, 80px) 0;
+  }
+  .decisoes-section {
+    padding: clamp(48px, 7vw, 80px) 0;
+  }
+}
+
+
+/* ================================================
+   NOTAS DE IMPLEMENTAÇÃO
+   ================================================
+
+   CARROSSÉIS (padrão cs-*)
+   -------------------------
+   Classes obrigatórias: .cs-head / .cs-nav / .cs-wrap / .cs-track
+   Função JS: scrollTrack(id, dir) — usar firstElementChild.offsetWidth + 14
+   CSS cascade fix obrigatório para cada grid que vira carrossel:
+     @media (max-width: 768px) {
+       .nome-grid:not(.cs-track) { grid-template-columns: 1fr; }
+     }
+   Adicionar também base rule:
+     .nome-grid.cs-track { margin-top: 0; }
+
+   H1 / HEADING HIERARCHY
+   -----------------------
+   - Apenas 1 <h1> por página — no .hero-info (desktop)
+   - No .mobile-hero-header usar <p class="hero-title"> (não heading)
+   - Em mobile, .hero-info .hero-title recebe clip visually-hidden:
+       position:absolute;width:1px;height:1px;overflow:hidden;
+       clip:rect(0,0,0,0);white-space:nowrap
+   - Nunca usar display:none no H1 — Google lê e penaliza
+
+   FAQ TRIGGERS
+   ------------
+   - Usar <h3 role="button" tabindex="0" aria-expanded="false" class="faq-trigger">
+   - Nunca <button><h3> — Google não rankeia headings dentro de button
+   - JS deve incluir: aria-expanded toggle + keydown Enter/Space handler
+
+   NAV LANDMARKS
+   -------------
+   - <nav aria-label="Principal"> na navbar
+   - <nav aria-label="Abas de produto"> no prod-tabs-nav
+   - <main id="conteudo-principal"> envolvendo tudo entre header e footer
+   - Header e footer usam âncoras <!-- HEADER --> / <!-- /HEADER -->
+     <!-- FOOTER --> / <!-- /FOOTER --> — sem HTML, injeção em massa depois
+
+   ================================================ */

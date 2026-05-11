@@ -1,0 +1,134 @@
+/* ================================================
+   MOBILE PATCH — index-v2.html (Clark S25-S35)
+   Gerado por /mobile-review em 2026-05-10
+   Score antes: 77/100 | Estimativa após: 89/100
+   P1: 7 fixes | P2: 2 fixes (scroll-snap + spacing)
+   ================================================ */
+
+/* ── P1: scroll-padding-top — âncoras cobertas pela nav fixa + tabs-nav ── */
+html {
+  scroll-padding-top: 110px;
+}
+
+/* ── P1: burger touch target 44×44px ── */
+.nav-burger {
+  min-width: 44px;
+  min-height: 44px;
+  padding: 11px;
+  display: none; /* mantém display controlado pelo breakpoint existente */
+}
+@media (max-width: 1024px) {
+  .nav-burger {
+    display: flex;
+  }
+}
+
+/* ── P1: qs-label font-size mínimo 12px ── */
+@media (max-width: 768px) {
+  .qs-label {
+    font-size: 12px;
+  }
+}
+
+/* ── P1: canal-grid 2 colunas em tablet ── */
+@media (max-width: 900px) {
+  .canal-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ── P1: form input altura mínima 48px ── */
+@media (max-width: 768px) {
+  .orc-group input {
+    padding: 13px 14px;
+  }
+}
+
+/* ── P1: footer social icons — área de toque 44px ── */
+@media (max-width: 768px) {
+  .footer-social {
+    width: 44px;
+    height: 44px;
+  }
+}
+
+/* ── P1: hover condicionado — elimina hover grudado em touch ── */
+@media (hover: hover) {
+  .feature-box:hover {
+    box-shadow: 0 12px 48px rgba(0,0,0,.12);
+    transform: translateY(-3px);
+  }
+  .vid-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 28px rgba(0,0,0,.12);
+  }
+  .related-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 48px rgba(0,0,0,.12);
+  }
+  .gallery-main:hover img {
+    transform: scale(1.02);
+  }
+  .gallery-thumb:hover {
+    opacity: .82;
+  }
+  .fuel-photo:hover img {
+    transform: scale(1.03);
+  }
+  .sector-card:hover {
+    box-shadow: 0 12px 48px rgba(0,0,0,.12);
+    transform: translateY(-3px);
+    border-color: rgba(29,150,72,.25);
+  }
+  .factor-card:hover {
+    box-shadow: 0 12px 48px rgba(0,0,0,.12);
+    transform: translateY(-3px);
+  }
+}
+
+/* Sem hover: remover transform para não ficar preso em touch */
+@media (hover: none) {
+  .feature-box,
+  .vid-card,
+  .related-card,
+  .sector-card,
+  .factor-card {
+    transition: none;
+  }
+}
+
+/* ── P1: prefers-reduced-motion — marquee e reveal para usuários sensíveis ── */
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track {
+    animation: none;
+  }
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  * {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}
+
+/* ── P2: scroll-snap no gallery-sidebar ── */
+@media (max-width: 768px) {
+  .gallery-sidebar {
+    scroll-snap-type: x mandatory;
+  }
+  .gallery-thumb {
+    scroll-snap-align: start;
+  }
+}
+
+/* ── P2: padding fluido em fuel-compare e decisoes ── */
+@media (max-width: 768px) {
+  .fuel-compare-section {
+    padding: clamp(48px, 7vw, 80px) 0;
+  }
+  .decisoes-section {
+    padding: clamp(48px, 7vw, 80px) 0;
+  }
+}
