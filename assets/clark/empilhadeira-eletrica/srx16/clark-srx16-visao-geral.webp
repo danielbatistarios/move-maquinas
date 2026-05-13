@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="de-de" dir="ltr">
+<head>
+    <meta charset="utf-8">
+	<meta name="generator" content="Joomla! - Open Source Content Management">
+	<title>Fehler: 404</title>
+<link href="/images/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" sizes="any">
+	<link href="/images/apple_touch_icon.png" rel="apple-touch-icon" type="image/png" sizes="any">
+	<link href="/media/astroid/assets/vendor/fontawesome/css/all.min.css" rel="stylesheet">
+	<link href="/media/uikit4/css/uikit.min.css" rel="stylesheet" version="auto">
+	<style>.readmore-link:lang(de):after, .readmore-desk-link:lang(de):after {
+  content: "Mehr lesen";
+}
+.readmore-link.expand:lang(de):after, .readmore-desk-link.expand::after {
+  content: "Weniger";
+}
+.readmore-link:lang(en):after, .readmore-desk-link:lang(en):after {
+  content:"Read more";
+}
+.readmore-link.expand:lang(en):after, .readmore-desk-link.expand:lang(en):after{
+  content:"Less";
+}
+.readmore-link:lang(es):after, .readmore-desk-link:lang(es):after {
+  content:"Seguir leyendo";
+}
+.readmore-link.expand:lang(es):after, .readmore-desk-link.expand:lang(es):after{
+  content:"Menos";
+}
+.readmore-link:lang(fr):after, .readmore-desk-link:lang(fr):after {
+  content:"Lire la suite";
+}
+.readmore-link.expand:lang(fr):after, .readmore-desk-link.expand:lang(fr):after{
+  content:"Moins de";
+}</style>
+	<style>@font-face { font-family: "Barlow Regular"; src: url("https://clarkmheu.com/media/templates/site/tp_medical/fonts/Barlow-Regular.ttf");}</style>
+	<style>@font-face { font-family: "Barlow Condensed Regular"; src: url("https://clarkmheu.com/media/templates/site/tp_medical/fonts/BarlowCondensed-Regular.ttf");}</style>
+	<style>@font-face { font-family: "Barlow Condensed Medium"; src: url("https://clarkmheu.com/media/templates/site/tp_medical/fonts/BarlowCondensed-Medium.ttf");}</style>
+	<style>@font-face { font-family: "Barlow Medium"; src: url("https://clarkmheu.com/media/templates/site/tp_medical/fonts/Barlow-Medium.ttf");}</style>
+<script type="application/json" class="joomla-script-options new">{"system.paths":{"root":"","rootFull":"https:\/\/clarkmheu.com\/","base":"","baseFull":"https:\/\/clarkmheu.com\/"}}</script>
+	<script src="/media/system/js/core.min.js?a3d8f8"></script>
+	<script src="/media/vendor/jquery/js/jquery.min.js?3.7.1"></script>
+	<script src="/media/astroid/js/script.min.js"></script>
+	<script src="/media/uikit4/js/uikit.min.js" version="auto" defer></script>
+	<script src="/media/uikit4/js/uikit-icons.min.js" version="auto" defer></script>
+	<script>const TEMPLATE_HASH = "7081ffb60818045caf3b5fbe91ba639c", ASTROID_COLOR_MODE ="light";</script>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" /><meta name="viewport" content="width=device-width, initial-scale=1" /><meta name="HandheldFriendly" content="true" /><meta name="mobile-web-app-capable" content="YES" /><link href="/templates/tp_medical/css/custom.css?3.4.0" rel="stylesheet" type="text/css" /><link href="/media/my_map_locations/css/MarkerCluster.css?3.4.0" rel="stylesheet" type="text/css" />
+<link href="/media/my_map_locations/css/leaflet.css?3.4.0" rel="stylesheet" type="text/css" />
+<link href="/media/templates/site/tp_medical/css/compiled-0fbd022b407e6466a7a17b856a955dc7.css?3.4.0" rel="stylesheet" type="text/css" />
+<link href="/media/my_map_locations/css/MarkerCluster.Default.css?3.4.0" rel="stylesheet" type="text/css" />
+<link href="/media/templates/site/tp_medical/css/compiled-d0d8565aa46d2c1bd9a8d702dfcf7682.css?3.4.0" rel="stylesheet" type="text/css" />
+<script type="text/javascript">
+    function CookiebotCallback_OnAccept() {
+          if (Cookiebot.consent.statistics) {
+			  enableStatisticsCookies();
+		  } 
+	}
+	function enableStatisticsCookies() {  
+		
+		  var _paq = window._paq = window._paq || [];
+		  _paq.push(['setCookieConsentGiven']);
+		  _paq.push(['trackPageView']);
+		  _paq.push(['enableLinkTracking']);
+		  (function() {
+			var u="https://piwik.clarkmheu-portal.com/";
+			_paq.push(['setTrackerUrl', u+'matomo.php']);
+			_paq.push(['setSiteId', '6']);
+			var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[3];
+			g.type='text/javascript'; g.async=true; g.setAttribute("data-cookieconsent", "statistics"); g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+		  })();
+		  
+		    var _mtm = window._mtm = window._mtm || [];
+            _mtm.push({'mtm.startTime': (new Date().getTime()), 'event': 'mtm.Start'});
+            var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+            g.async=true; g.src='https://piwik.clarkmheu-portal.com/js/container_lDyohfrV.js'; s.parentNode.insertBefore(g,s);         
+		
+       }  
+
+</script><meta name="google-site-verification" content="n4yfxT2j-K12BQqPqhz92xUYgqaDJ5ewLuaZ8cGzxsE" />
+<script type="text/javascript">
+    jQuery(document).ready(function($) {
+				
+		//$(document).ready(function () {
+			//$('#sticky-mobile-container').attr('uk-sticky', 'position: top');
+			/*UIkit.sticky($('#fixed-mobile-section'), {
+			position: top
+			});
+			var sticky = UIkit.sticky('#fixed-mobile-section', {
+			offset: 50,
+			top: 100
+			});*/
+		//});
+		
+
+		$(".scroll").click(function(event){
+			event.preventDefault();
+			$('html,body').animate({scrollTop:$(this.hash).offset().top-70}, 900);
+		});
+		
+		$(".hp-add-visible-at-l").addClass("uk-visible@l");
+		$(".hp-add-hidden-at-l").addClass("uk-hidden@l");
+		
+		/*var sBox = $(".searchbox-container");*/
+		
+		$('#renew-maps-gdpr').click(function() {
+            setTimeout(location.reload.bind(location), 7000);
+        });
+        
+        
+        $( "a.item-link-separator" ).click(function( event ) {
+          event.preventDefault();
+        });
+        
+
+		const language = navigator.language;
+		switch (language) {
+                case 'de' :
+				case 'de-DE' :
+				$("#fp_findmylocation").text($("#fp_findmylocation").text().replace("Find my location", "Meinen Standort finden"));
+				break;
+				case 'fr' :
+				case 'fr-FR' :
+				$("#fp_findmylocation").text($("#fp_findmylocation").text().replace("Find my location", "Trouver ma position"));
+				break;
+				case 'es' :
+				case 'es-ES' :
+				$("#fp_findmylocation").text($("#fp_findmylocation").text().replace("Find my location", "Encuentra mi ubicación"));
+				break;
+		}
+		//alert(language);
+
+		$(window).scroll(function() {    
+			var scroll = $(window).scrollTop();
+		
+			if (scroll >= 200) {
+				$(".absolute-right").addClass("hidden-side");
+			}
+			if (scroll <= 0) {
+				$(".absolute-right").removeClass("hidden-side");
+			}
+			
+			if (scroll <= 0) {
+				$(".hp-model-request-button").removeClass("uk-active");
+			}
+			
+			if (scroll >= 180) {
+				$(".hp-model-request-button").addClass("uk-active");
+			}
+			
+			/*if (scroll >= 100 ) {
+                sBox.addClass("hp-margin-top-sBox");
+            } else {
+                sBox.removeClass("hp-margin-top-sBox");
+            }*/
+			
+		});
+
+		// Produktnavigation umschalten und CTAs Anfrage ausblenden
+		const url = location.search;
+		if (url.includes('iframe=true')) {
+			$('.has-no-cabin .hp-product-navigation').addClass('uk-hidden');
+			$('.hp-iframe .uk-first-column:first-child()').addClass('uk-hidden');
+			$('.hp-no-iframe').addClass('uk-hidden');
+			$('.has-no-cabin .uk-button-group').removeClass('uk-hidden@l');
+			//alert("Huhu");
+		}
+		
+		var hpButton = $(".hp-model-request-button");
+		setTimeout( function(){ hpButton.removeClass("uk-active"); }, 1800 );
+		
+		$(".readmore-link, .readmore-desk-link").click( function(e) {
+		// record if our text is expanded
+		var isExpanded = $(e.target).hasClass("expand");
+		
+		//close all open paragraphs
+		$(".readmore.expand, .readmore-desk.expand").removeClass("expand");
+		$(".readmore-link.expand, .readmore-desk-link.expand").removeClass("expand");
+		
+		// if target wasn't expand, then expand it
+		if (!isExpanded){
+		$( e.target ).parent( ".readmore, .readmore-desk" ).addClass( "expand" );
+		$(e.target).addClass("expand");
+		}
+		});
+
+		
+		
+		/*$("i.closeme").click(function(){
+			$(".searchbox-container").hide();
+		});
+		$(function() { 
+		  $(".search-trigger").click(function(event) { 
+		  	event.preventDefault();
+			/*$(".search-help-height-trick").slideToggle(800,"linear");
+			$("aside.tm-sidebar-b, .tm-content").toggleClass("search-help-trick-margin");*/
+			/*$(".searchbox-container").fadeToggle( 800, "linear" ); 
+			$(".searchbox").fadeToggle( 800, "linear" ); 
+			return false;
+		  });
+		});*/
+	
+	});
+	
+	function printDiv(divName, imageID) {
+			 var printContents = document.getElementById(divName).innerHTML;
+			 //var image = document.getElementById(imageID).src;
+				
+			 var originalContents = document.body.innerHTML;
+		
+			 //document.body.innerHTML = '<img src="' + image + '" alt="" />' + '<br />' + printContents; //printcID + '<br />' +  + '<br />' + printDName + copy
+			 document.body.innerHTML = printContents; //printcID + '<br />' +  + '<br />' + printDName + copy
+		
+			 window.print();
+		
+			 document.body.innerHTML = originalContents;
+			 window.location.reload(false); 
+		}
+		
+</script></head>
+<body class="astroid-framework error-page" >
+   <div class="container">
+      <div class="row">
+         <div class="col-12 text-center align-self-center">
+                           <div class="py-3">
+                  <h2 class="display-1">404</h2>
+                  <p class="display-6">Seite nicht gefunden</p>
+               </div>
+                        <a class="btn btn-backtohome btn-lg" href="https://clarkmheu.com/" role="button">Go Home</a>
+         </div>
+      </div>
+               </div>
+   <script type="text/javascript">
+    $( document ).ready(function() {
+        
+        /*HP-first-box-uk-grid*/
+        /*DE*/
+        $(".item-4282").find('div.grid').addClass('uk-grid-match uk-grid-small uk-child-width-1-3@s uk-text-center uk-margin-large-bottom hp-first-nav-box').attr('uk-grid', '').attr('uk-height-match','target: > div > .uk-card');
+        $(".item-4282").find('a').addClass('uk-h2');
+        /*EN*/
+        $(".item-4539").find('div.grid').addClass('uk-grid-match uk-grid-small uk-child-width-1-3@s uk-text-center uk-margin-large-bottom hp-first-nav-box').attr('uk-grid', '').attr('uk-height-match','target: > div > .uk-card');
+        $(".item-4539").find('a').addClass('uk-h2');
+        /*FR*/
+        $(".item-4654").find('div.grid').addClass('uk-grid-match uk-grid-small uk-child-width-1-3@s uk-text-center uk-margin-large-bottom hp-first-nav-box').attr('uk-grid', '').attr('uk-height-match','target: > div > .uk-card');
+        $(".item-4654").find('a').addClass('uk-h2');
+        /*ES*/
+        $(".item-5181").find('div.grid').addClass('uk-grid-match uk-grid-small uk-child-width-1-3@s uk-text-center uk-margin-large-bottom hp-first-nav-box').attr('uk-grid', '').attr('uk-height-match','target: > div > .uk-card');
+        $(".item-5181").find('a').addClass('uk-h2');
+        /*HP-style-elements-after-first-box-uk-grid*/
+        //$(".grid:gt(0)").addClass('uk-card uk-card-default uk-card-body hp-wrap-grid uk-list uk-list-divider');
+        $(".grid:gt(0)").attr('uk-grid', '').addClass('hp-wrap-grid').addClass('uk-child-width-1-2@m').addClass('uk-grid-collapse');
+        $(".deeper.parent.uk-parent:gt(0)").wrapAll('<div class="uk-grid-small uk-child-width-1-2@m  uk-child-width-1-1@s uk-margin-large-bottom" uk-grid uk-height-match="target: > div > .uk-card"></div>');
+        $(".hp-wrap-grid span.nav-title").addClass('uk-h3 product-name');
+        //$(".grid:gt(0) .hp-add-uikt a").addClass('uk-position-cover uk-position-z-index');
+});
+</script></body>
+</html>
