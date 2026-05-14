@@ -92,9 +92,9 @@ html { scroll-behavior: smooth; }
   font-size: 14px; color: rgba(255,255,255,.55); flex-wrap: wrap;
 }
 .hero-meta .author-avatar {
-  width: 42px; height: 42px; border-radius: 50%; background: var(--color-primary);
-  border: 2px solid rgba(255,255,255,.15); display: flex; align-items: center;
-  justify-content: center; color: white; font-weight: 800; font-size: 16px; flex-shrink: 0;
+  width: 52px; height: 52px; border-radius: 50%;
+  border: 2px solid rgba(255,255,255,.25); flex-shrink: 0;
+  object-fit: cover; object-position: center top; display: block;
 }
 .hero-meta strong { color: rgba(255,255,255,.85); }
 
@@ -505,10 +505,8 @@ body {
 }
 @media (min-width: 961px) { .author-box { display: none; } }
 .author-box .ab-avatar {
-  width: 72px; height: 72px; min-width: 72px;
-  border-radius: 50%; background: var(--color-primary);
-  display: flex; align-items: center; justify-content: center;
-  color: white; font-size: 28px; font-weight: 700;
+  width: 88px; height: 88px; min-width: 88px;
+  border-radius: 50%; object-fit: cover; object-position: center top; display: block;
 }
 .author-box .ab-info h4 {
   font-size: 18px; font-weight: 700; color: var(--color-dark);
@@ -798,8 +796,8 @@ body {
   padding: 20px; margin-top: 24px; text-align: center;
 }
 .sidebar-author__avatar {
-  width: 72px; height: 72px; border-radius: 50%;
-  object-fit: cover; margin: 0 auto 12px;
+  width: 96px; height: 96px; border-radius: 50%;
+  object-fit: cover; object-position: center top; margin: 0 auto 12px;
   display: block; border: 3px solid var(--color-primary);
 }
 .sidebar-author__name {
@@ -836,8 +834,8 @@ body {
   display: flex; gap: 12px; align-items: center; margin-bottom: 12px;
 }
 .sb-author__avatar {
-  width: 56px; height: 56px; border-radius: 50%;
-  object-fit: cover; flex-shrink: 0;
+  width: 76px; height: 76px; border-radius: 50%;
+  object-fit: cover; object-position: center top; flex-shrink: 0;
   border: 2px solid var(--color-primary);
 }
 .sb-author__name {
@@ -1784,7 +1782,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <h1>Por que Andaime é o Maior Vilão do Cronograma da Sua Obra</h1>
     <p class="context-vector">O ciclo monta-desmonta do andaime consome de 2,5 a 3,5 dias por pavimento. Em prédio de 6 andares, isso representa até 21 dias do cronograma dedicados apenas à logística de tubo e braçadeira. A diferença entre entregar no prazo e pagar multa pode estar no método de acesso em altura, não na equipe.</p>
     <div class="hero-meta">
-      <a href="/author/marcio-lima"><div class="author-avatar" style="cursor:pointer;">M</div></a>
+      <a href="/author/marcio-lima"><picture><source srcset="/assets/authors/marcio-lima.webp" type="image/webp"><img src="/assets/authors/marcio-lima.jpg" alt="Márcio Lima" class="author-avatar" width="52" height="52" loading="eager" style="cursor:pointer;"></picture></a>
       <div>
         <strong style="color:rgba(255,255,255,.9)">Márcio</strong><span style="color:rgba(255,255,255,.6)"> · Diretor Comercial, MoveMáquinas</span><br>
         <span style="color:rgba(255,255,255,.5)">Abril 2026 · 7 min de leitura</span>
@@ -2009,7 +2007,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <!-- AUTHOR BOX (mobile) -->
     <div class="author-box reveal">
-      <div class="ab-avatar">M</div>
+      <picture><source srcset="/assets/authors/marcio-lima.webp" type="image/webp"><img src="/assets/authors/marcio-lima.jpg" alt="Márcio Lima" class="ab-avatar" width="88" height="88" loading="lazy"></picture>
       <div class="ab-info">
         <h4>Márcio</h4>
         <p>Diretor Comercial da MoveMáquinas. Mais de 20 anos ajudando construtoras a escolher o equipamento certo para cada obra.</p>
