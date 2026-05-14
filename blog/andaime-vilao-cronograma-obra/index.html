@@ -149,12 +149,42 @@ body {
   display: none;
 }
 
-/* ── LAYOUT 3 COLUNAS ── */
+/* ── LAYOUT 2 COLUNAS ── */
 .article-layout {
-  max-width: 1280px; margin: 0 auto;
+  max-width: 1200px; margin: 0 auto;
   display: grid;
-  grid-template-columns: 240px minmax(0, 1fr) 280px;
-  gap: 40px; padding: 40px 24px;
+  grid-template-columns: minmax(0, 1fr) 300px;
+  gap: 56px; padding: 40px 24px;
+}
+
+/* ARTIGOS RELACIONADOS (abaixo do layout) */
+.related-posts {
+  max-width: 1200px; margin: 0 auto; padding: 0 24px 56px;
+}
+.related-posts__title {
+  font-size: 13px; font-weight: 700; text-transform: uppercase;
+  letter-spacing: .08em; color: var(--color-text-muted); margin-bottom: 20px;
+}
+.related-posts__grid {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;
+}
+.related-card {
+  background: var(--color-surface); border-radius: 12px;
+  padding: 20px; text-decoration: none;
+  border: 1px solid var(--color-border); transition: box-shadow .2s, border-color .2s;
+  display: flex; flex-direction: column; gap: 8px;
+}
+.related-card:hover { box-shadow: 0 4px 16px rgba(0,0,0,.08); border-color: var(--color-primary); }
+.related-card__label {
+  font-size: 11px; font-weight: 700; text-transform: uppercase;
+  letter-spacing: .06em; color: var(--color-primary);
+}
+.related-card__title {
+  font-size: 15px; font-weight: 700; color: var(--color-dark); line-height: 1.4;
+}
+.related-card__meta { font-size: 12px; color: var(--color-text-muted); margin-top: auto; }
+@media (max-width: 700px) {
+  .related-posts__grid { grid-template-columns: 1fr; }
 }
 
 /* TOC */
@@ -1809,20 +1839,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- LAYOUT 3 COLUNAS -->
 <div class="article-layout">
 
-  <!-- TOC SIDEBAR -->
-  <aside class="toc-sidebar">
-    <div class="toc-wrapper">
-      <div class="toc-title">Neste artigo</div>
-      <ul class="toc-list" id="tocList">
-        <li><a href="#ciclo-monta-desmonta">O ciclo que come o cronograma</a></li>
-        <li><a href="#conta-do-caderno">Dias perdidos por pavimento</a></li>
-        <li><a href="#três-construtoras">O que três construtoras descobriram</a></li>
-        <li><a href="#quando-andaime-faz-sentido">Quando o andaime ainda é a escolha certa</a></li>
-        <li><a href="#faq">Perguntas frequentes</a></li>
-      </ul>
-    </div>
-  </aside>
-
   <!-- CONTEUDO PRINCIPAL -->
   <main class="article-content">
 
@@ -2045,6 +2061,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <aside class="right-sidebar">
     <div class="sidebar-sticky">
 
+      <!-- 0. TOC -->
+      <div class="sb-block" style="background:var(--color-surface);">
+        <div class="toc-title" style="margin-bottom:12px;">Neste artigo</div>
+        <ul class="toc-list" id="tocList">
+          <li><a href="#ciclo-monta-desmonta">O ciclo que come o cronograma</a></li>
+          <li><a href="#conta-do-caderno">Dias perdidos por pavimento</a></li>
+          <li><a href="#três-construtoras">O que três construtoras descobriram</a></li>
+          <li><a href="#quando-andaime-faz-sentido">Quando o andaime ainda é a escolha certa</a></li>
+          <li><a href="#faq">Perguntas frequentes</a></li>
+        </ul>
+      </div>
+
       <!-- 1. SOBRE O AUTOR -->
       <div class="sb-block sb-block--author">
         <div class="sb-block__title">Sobre o autor</div>
@@ -2059,26 +2087,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <a href="/author/marcio-lima" class="sb-author__link">Ver perfil completo →</a>
       </div>
 
-      <!-- 2. ARTIGOS RELACIONADOS -->
-      <div class="sb-block sb-block--related">
-        <div class="sb-block__title">Artigos relacionados</div>
-        <nav class="sb-related-list">
-          <a href="/blog/andaime-vs-plataforma-custo-real/" class="sb-related-item">
-            <span class="sb-related-dot"></span>
-            <span>Andaime vs Plataforma: Custo Real por Metro de Obra</span>
-          </a>
-          <a href="/blog/plataforma-nr35-responsabilidade/" class="sb-related-item">
-            <span class="sb-related-dot"></span>
-            <span>NR-35 e Trabalho em Altura: O que o Engenheiro Precisa Garantir</span>
-          </a>
-          <a href="/blog/alugar-ou-comprar" class="sb-related-item">
-            <span class="sb-related-dot"></span>
-            <span>Alugar ou Comprar Empilhadeira: Quando Vale Cada Opção</span>
-          </a>
-        </nav>
-      </div>
-
-      <!-- 3. CTA -->
+      <!-- 2. CTA -->
       <div class="sb-block sb-block--cta">
         <div class="sb-cta__eyebrow">MoveMáquinas · Goiânia</div>
         <div class="sb-cta__title">Plataforma para sua obra</div>
@@ -2094,6 +2103,28 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </aside>
 
 </div>
+
+<!-- ARTIGOS RELACIONADOS -->
+<section class="related-posts">
+  <div class="related-posts__title">Artigos relacionados</div>
+  <div class="related-posts__grid">
+    <a href="/blog/andaime-vs-plataforma-custo-real/" class="related-card">
+      <span class="related-card__label">Cronograma de Obra</span>
+      <span class="related-card__title">Andaime vs Plataforma: Custo Real por Metro de Obra</span>
+      <span class="related-card__meta">6 min de leitura</span>
+    </a>
+    <a href="/blog/plataforma-nr35-responsabilidade/" class="related-card">
+      <span class="related-card__label">NR-35</span>
+      <span class="related-card__title">NR-35 e Trabalho em Altura: O que o Engenheiro Precisa Garantir</span>
+      <span class="related-card__meta">8 min de leitura</span>
+    </a>
+    <a href="/blog/alugar-ou-comprar" class="related-card">
+      <span class="related-card__label">Locação</span>
+      <span class="related-card__title">Alugar ou Comprar Empilhadeira: Quando Vale Cada Opção</span>
+      <span class="related-card__meta">5 min de leitura</span>
+    </a>
+  </div>
+</section>
 
 <!-- NEWSLETTER -->
 <section class="newsletter-section">
