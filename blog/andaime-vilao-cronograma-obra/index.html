@@ -92,9 +92,8 @@ html { scroll-behavior: smooth; }
   font-size: 14px; color: rgba(255,255,255,.55); flex-wrap: wrap;
 }
 .hero-meta .author-avatar {
-  width: 52px; height: 52px; border-radius: 50%;
-  border: 2px solid rgba(255,255,255,.25); flex-shrink: 0;
-  object-fit: cover; object-position: center top; display: block;
+  width: 52px; height: 52px; border-radius: 50%; border: 2px solid rgba(255,255,255,.25);
+  object-fit: cover; object-position: center top; flex-shrink: 0; display: block;
 }
 .hero-meta strong { color: rgba(255,255,255,.85); }
 
@@ -149,42 +148,12 @@ body {
   display: none;
 }
 
-/* ── LAYOUT 2 COLUNAS ── */
+/* ── LAYOUT 3 COLUNAS ── */
 .article-layout {
-  max-width: 1200px; margin: 0 auto;
+  max-width: 1280px; margin: 0 auto;
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 300px;
-  gap: 56px; padding: 40px 24px;
-}
-
-/* ARTIGOS RELACIONADOS (abaixo do layout) */
-.related-posts {
-  max-width: 1200px; margin: 0 auto; padding: 0 24px 56px;
-}
-.related-posts__title {
-  font-size: 13px; font-weight: 700; text-transform: uppercase;
-  letter-spacing: .08em; color: var(--color-text-muted); margin-bottom: 20px;
-}
-.related-posts__grid {
-  display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;
-}
-.related-card {
-  background: var(--color-surface); border-radius: 12px;
-  padding: 20px; text-decoration: none;
-  border: 1px solid var(--color-border); transition: box-shadow .2s, border-color .2s;
-  display: flex; flex-direction: column; gap: 8px;
-}
-.related-card:hover { box-shadow: 0 4px 16px rgba(0,0,0,.08); border-color: var(--color-primary); }
-.related-card__label {
-  font-size: 11px; font-weight: 700; text-transform: uppercase;
-  letter-spacing: .06em; color: var(--color-primary);
-}
-.related-card__title {
-  font-size: 15px; font-weight: 700; color: var(--color-dark); line-height: 1.4;
-}
-.related-card__meta { font-size: 12px; color: var(--color-text-muted); margin-top: auto; }
-@media (max-width: 700px) {
-  .related-posts__grid { grid-template-columns: 1fr; }
+  grid-template-columns: 240px minmax(0, 1fr) 280px;
+  gap: 40px; padding: 40px 24px;
 }
 
 /* TOC */
@@ -1262,6 +1231,7 @@ body { padding-bottom: calc(64px + env(safe-area-inset-bottom, 0px)); }
 /* ── NAV MEGAMENU ── */
 .mm-nav { background: #fff; border-bottom: 3px solid #1D9648; box-shadow: 0 2px 16px rgba(0,0,0,.08); position: sticky; top: 0; z-index: 200; }
 .mm-nav__in { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; padding: 0 28px; height: 68px; gap: 8px; }
+.mm-nav__logo { min-width: 160px; flex-shrink: 0; }
 .mm-nav__logo img { display: block; height: 34px; width: auto; }
 
 /* Links desktop */
@@ -1319,7 +1289,7 @@ body { padding-bottom: calc(64px + env(safe-area-inset-bottom, 0px)); }
 .mm-mega__arrow:hover { gap: 12px; color: #5edf8a; }
 
 /* Ações direita */
-.mm-nav__actions { display: flex; align-items: center; gap: 10px; flex-shrink: 0; }
+.mm-nav__actions { display: flex; align-items: center; gap: 10px; flex-shrink: 0; min-width: 160px; justify-content: flex-end; }
 .mm-nav__wa { font-family: 'Inter', sans-serif; font-weight: 700; font-size: 0.8rem; letter-spacing: 0.4px; text-transform: uppercase; background: #1D9648; color: #fff; padding: 10px 20px; border-radius: 6px; display: inline-flex; align-items: center; gap: 6px; transition: transform 0.2s, box-shadow 0.2s; white-space: nowrap; text-decoration: none; }
 .mm-nav__wa:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(29,150,72,.45); }
 
@@ -1328,7 +1298,7 @@ body { padding-bottom: calc(64px + env(safe-area-inset-bottom, 0px)); }
 .mm-nav__hamburger span { width: 24px; height: 2px; background: #1a1a1a; border-radius: 2px; transition: transform 0.25s, opacity 0.25s; transform-origin: center; }
 
 /* Mobile overlay */
-.mm-mob { position: fixed; inset: 0; background: rgba(10,10,10,.98); z-index: 210; display: flex; flex-direction: column; opacity: 0; visibility: hidden; transition: opacity 0.3s ease, visibility 0.3s; overflow-y: auto; }
+.mm-mob { position: fixed; inset: 0; background: rgba(10,10,10,.98); z-index: 210; display: flex; flex-direction: column; opacity: 0; visibility: hidden; transition: opacity 0.3s ease, visibility 0.3s; overflow-y: auto; overflow-x: hidden; width: 100%; max-width: 100vw; }
 .mm-mob.open { opacity: 1; visibility: visible; }
 .mm-mob__head { display: flex; align-items: center; justify-content: space-between; padding: 20px 22px; border-bottom: 1px solid rgba(255,255,255,.08); flex-shrink: 0; }
 .mm-mob__logo img { height: 30px; width: auto; filter: brightness(0) invert(1); }
@@ -1380,6 +1350,8 @@ body { padding-bottom: calc(64px + env(safe-area-inset-bottom, 0px)); }
 @media (max-width: 960px) {
   .mm-nav__links { display: none; }
   .mm-nav__hamburger { display: flex; }
+  .mm-nav__logo { min-width: unset; }
+  .mm-nav__actions { min-width: unset; }
   .mm-ft__in { grid-template-columns: 1fr 1fr; gap: 36px; }
   .mm-ft__in > .mm-ft__brand { grid-column: 1 / -1; }
 }
@@ -1388,8 +1360,8 @@ body { padding-bottom: calc(64px + env(safe-area-inset-bottom, 0px)); }
 }
 
 .breadcrumb{background:var(--color-surface);border-bottom:1px solid var(--color-border);padding:10px 0}
-.breadcrumb .container{max-width:1200px;margin:0 auto;padding:0 24px}
-.breadcrumb__list{display:flex;align-items:center;gap:6px;list-style:none;flex-wrap:wrap;font-size:.78rem;color:var(--color-muted);max-width:1200px;margin:0 auto;padding:0 24px}
+.breadcrumb .container{max-width:1200px;margin:0 auto;padding:0 28px}
+.breadcrumb__list{display:flex;align-items:center;gap:6px;list-style:none;flex-wrap:wrap;font-size:.78rem;color:var(--color-muted)}
 .breadcrumb__list li:not(:last-child)::after{content:"›";margin-left:6px;color:var(--color-border)}
 .breadcrumb__list a{color:var(--color-primary);font-weight:600;text-decoration:none;transition:opacity .15s}
 .breadcrumb__list a:hover{opacity:.75}
@@ -1813,7 +1785,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <h1>Por que Andaime é o Maior Vilão do Cronograma da Sua Obra</h1>
     <p class="context-vector">O ciclo monta-desmonta do andaime consome de 2,5 a 3,5 dias por pavimento. Em prédio de 6 andares, isso representa até 21 dias do cronograma dedicados apenas à logística de tubo e braçadeira. A diferença entre entregar no prazo e pagar multa pode estar no método de acesso em altura, não na equipe.</p>
     <div class="hero-meta">
-      <a href="/author/marcio-lima"><picture><source srcset="/assets/authors/marcio-lima.webp" type="image/webp"><img src="/assets/authors/marcio-lima.jpg" alt="Márcio Lima" class="author-avatar" width="52" height="52" loading="eager" style="cursor:pointer;"></picture></a>
+      <a href="/author/marcio-lima"><picture><source srcset="/assets/authors/marcio-lima.webp" type="image/webp"><img src="/assets/authors/marcio-lima.jpg" alt="Márcio Lima" class="author-avatar" width="40" height="40" loading="eager" style="cursor:pointer;border-radius:50%;object-fit:cover;object-position:center top;"></picture></a>
       <div>
         <strong style="color:rgba(255,255,255,.9)">Márcio</strong><span style="color:rgba(255,255,255,.6)"> · Diretor Comercial, MoveMáquinas</span><br>
         <span style="color:rgba(255,255,255,.5)">Abril 2026 · 7 min de leitura</span>
@@ -1838,6 +1810,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <!-- LAYOUT 3 COLUNAS -->
 <div class="article-layout">
+
+  <!-- TOC SIDEBAR -->
+  <aside class="toc-sidebar">
+    <div class="toc-wrapper">
+      <div class="toc-title">Neste artigo</div>
+      <ul class="toc-list" id="tocList">
+        <li><a href="#ciclo-monta-desmonta">O ciclo que come o cronograma</a></li>
+        <li><a href="#conta-do-caderno">Dias perdidos por pavimento</a></li>
+        <li><a href="#três-construtoras">O que três construtoras descobriram</a></li>
+        <li><a href="#quando-andaime-faz-sentido">Quando o andaime ainda é a escolha certa</a></li>
+        <li><a href="#faq">Perguntas frequentes</a></li>
+      </ul>
+    </div>
+  </aside>
 
   <!-- CONTEUDO PRINCIPAL -->
   <main class="article-content">
@@ -2024,7 +2010,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <!-- AUTHOR BOX (mobile) -->
     <div class="author-box reveal">
-      <picture><source srcset="/assets/authors/marcio-lima.webp" type="image/webp"><img src="/assets/authors/marcio-lima.jpg" alt="Márcio Lima" class="ab-avatar" width="88" height="88" loading="lazy"></picture>
+      <picture><source srcset="/assets/authors/marcio-lima.webp" type="image/webp"><img src="/assets/authors/marcio-lima.jpg" alt="Márcio Lima" class="ab-avatar" width="56" height="56" loading="lazy" style="border-radius:50%;object-fit:cover;object-position:center top;"></picture>
       <div class="ab-info">
         <h4>Márcio</h4>
         <p>Diretor Comercial da MoveMáquinas. Mais de 20 anos ajudando construtoras a escolher o equipamento certo para cada obra.</p>
@@ -2061,23 +2047,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <aside class="right-sidebar">
     <div class="sidebar-sticky">
 
-      <!-- 0. TOC -->
-      <div class="sb-block" style="background:var(--color-surface);">
-        <div class="toc-title" style="margin-bottom:12px;">Neste artigo</div>
-        <ul class="toc-list" id="tocList">
-          <li><a href="#ciclo-monta-desmonta">O ciclo que come o cronograma</a></li>
-          <li><a href="#conta-do-caderno">Dias perdidos por pavimento</a></li>
-          <li><a href="#três-construtoras">O que três construtoras descobriram</a></li>
-          <li><a href="#quando-andaime-faz-sentido">Quando o andaime ainda é a escolha certa</a></li>
-          <li><a href="#faq">Perguntas frequentes</a></li>
-        </ul>
-      </div>
-
       <!-- 1. SOBRE O AUTOR -->
       <div class="sb-block sb-block--author">
         <div class="sb-block__title">Sobre o autor</div>
         <div class="sb-author">
-          <picture><source srcset="/assets/authors/marcio-lima.webp" type="image/webp"><img src="/assets/authors/marcio-lima.jpg" alt="Márcio Lima" class="sb-author__avatar" width="56" height="56" loading="lazy"></picture>
+          <picture><source srcset="/assets/authors/marcio-lima.webp" type="image/webp"><img src="/assets/authors/marcio-lima.jpg" alt="Márcio Lima" class="sb-author__avatar" width="76" height="76" loading="lazy"></picture>
           <div>
             <div class="sb-author__name">Márcio Lima</div>
             <div class="sb-author__role">Diretor Comercial · MoveMáquinas<br>Especialista em acesso em altura</div>
@@ -2087,7 +2061,26 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <a href="/author/marcio-lima" class="sb-author__link">Ver perfil completo →</a>
       </div>
 
-      <!-- 2. CTA -->
+      <!-- 2. ARTIGOS RELACIONADOS -->
+      <div class="sb-block sb-block--related">
+        <div class="sb-block__title">Artigos relacionados</div>
+        <nav class="sb-related-list">
+          <a href="/blog/andaime-vs-plataforma-custo-real/" class="sb-related-item">
+            <span class="sb-related-dot"></span>
+            <span>Andaime vs Plataforma: Custo Real por Metro de Obra</span>
+          </a>
+          <a href="/blog/plataforma-nr35-responsabilidade/" class="sb-related-item">
+            <span class="sb-related-dot"></span>
+            <span>NR-35 e Trabalho em Altura: O que o Engenheiro Precisa Garantir</span>
+          </a>
+          <a href="/blog/alugar-ou-comprar" class="sb-related-item">
+            <span class="sb-related-dot"></span>
+            <span>Alugar ou Comprar Empilhadeira: Quando Vale Cada Opção</span>
+          </a>
+        </nav>
+      </div>
+
+      <!-- 3. CTA -->
       <div class="sb-block sb-block--cta">
         <div class="sb-cta__eyebrow">MoveMáquinas · Goiânia</div>
         <div class="sb-cta__title">Plataforma para sua obra</div>
@@ -2103,28 +2096,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </aside>
 
 </div>
-
-<!-- ARTIGOS RELACIONADOS -->
-<section class="related-posts">
-  <div class="related-posts__title">Artigos relacionados</div>
-  <div class="related-posts__grid">
-    <a href="/blog/andaime-vs-plataforma-custo-real/" class="related-card">
-      <span class="related-card__label">Cronograma de Obra</span>
-      <span class="related-card__title">Andaime vs Plataforma: Custo Real por Metro de Obra</span>
-      <span class="related-card__meta">6 min de leitura</span>
-    </a>
-    <a href="/blog/plataforma-nr35-responsabilidade/" class="related-card">
-      <span class="related-card__label">NR-35</span>
-      <span class="related-card__title">NR-35 e Trabalho em Altura: O que o Engenheiro Precisa Garantir</span>
-      <span class="related-card__meta">8 min de leitura</span>
-    </a>
-    <a href="/blog/alugar-ou-comprar" class="related-card">
-      <span class="related-card__label">Locação</span>
-      <span class="related-card__title">Alugar ou Comprar Empilhadeira: Quando Vale Cada Opção</span>
-      <span class="related-card__meta">5 min de leitura</span>
-    </a>
-  </div>
-</section>
 
 <!-- NEWSLETTER -->
 <section class="newsletter-section">
